@@ -1,0 +1,37 @@
+\subsection{Question 8} 
+This question is a bit weird, because our discussion will include the effect of our measure $d^4 x $ that we have in our Lagrangian. Under the simultaneous scaling transformation, we'd like our action to transform, along with the transformation $x^\mu \rightarrow \lambda x^\mu$ as 
+\begin{align*}
+\int d^4 x \, \mathcal{L} (x) & \rightarrow \int d^4 (x')^\mu  \,  \mathcal{L }'(x' ) \\ 
+&= \lambda^4 \int d^4 x \,   \mathcal{L}' (x' ) 
+\end{align*} 
+Since we want our action to be invariant, the integrands here need be the same.
+Thus, our condition for invariance is 
+\[ 
+\mathcal{L} (x)  = \lambda^4 \mathcal{L}'( x') \implies \mathcal{L}'(x ' )  = \lambda^{ -4} \mathcal{L} (x) 
+\] 
+More generally, for $n + 1$ spacetime dimensions, we have that our condition changes to 
+\[ 
+\mathcal{L}' (x ' ) = \lambda^{ -(n + 1)  } \mathcal{ L } (x)
+\] 
+Since our field transforms like $\phi \rightarrow \lambda^{ -D } \phi$, and our derivative transforms like
+\[ 
+\partial_\mu '  = \frac{ \partial }{ \partial( x' )^\mu} = \frac{ \partial}{ \lambda \partial x^\mu } = \lambda^{ -1} \partial_\mu \] 
+Our condition that the partial derivative terms are invariant imply that 
+\[
+\lambda^{ -( n + 1)} \partial_\mu \phi \partial^\mu \phi = \lambda^{ - 2D - 2} \partial_\mu \phi \partial^\mu \phi 
+\]      
+For invariance, we thus require that in $n + 1$ space time dimensions, we have the condition\[ 
+2D + 2 = n + 1, \quad D = \frac{ n + 1}{2}  -1  \implies D = 1 \,  \text{for when } n = 3 
+\] 
+Now, for our mass term to be invariant, using the relation that we have above for the Lagrangian, we have the requirement that upon our transformation, we have \[
+\lambda^{  - (n + 1 ) } \frac{1}{2}m^2 \phi^2  = \frac{1}{2} m^2 \lambda^{ - 2D} \phi^2 
+\] which implies that $D = \frac{ n + 1}{ 2} $, which contradicts the above assertion for the derivative terms to be invariant. Hence, we have that $m = 0$ if we want a symmetry to appear. Similarly, comparing with our $\phi^p$ term we have the condition that $pD  =  n + 1 $, which upon substituting for our value of D, we yield the condition that 
+\[ 
+p = 2 \left( \frac{ n + 1}{ n - 1 }  \right) 
+\] 
+So in 4 spacetime dimensions, p = 4. 
+
+\subsubsection*{Constructing a Noether current} 
+Working in 4 space time dimensions with $D = 1$, our field changes like $\phi \rightarrow \lambda^{ -1} \phi  = ( 1 - \log \lambda ) \phi$ for $\lambda $ close to $1$. In the argument above, we asserted that $\mathcal{ L} \rightarrow \lambda^{ - 4} \mathcal{L }  = ( 1  - 4 \log \lambda ) \mathcal{ L} $.  
+Hence $\delta \phi  =  - \phi  \log \lambda \delta $.  
+\pagebreak 

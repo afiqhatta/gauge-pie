@@ -1,0 +1,60 @@
+\subsection{Question 5} 
+
+Given a matrix $A \in SU (2)$ we have that $\det U = 1 $, so we have a simplified expression for our matrix inverse. 
+\[ 
+A = \begin{pmatrix} a & b \\ c & d \end{pmatrix}, A^{ - 1}  = \begin{pmatrix} d & -b \\ - c& a \end{pmatrix}, \quad a, b, c, d \in \com
+\] However, the condition that $ A $ is unitary means that $ A^\dagger = A^{ -1 }$. Thus, comparing coefficients we have that 
+\[
+\begin{pmatrix} d & -b \\ - c& a \end{pmatrix} = \begin{pmatrix} a^* & c^* \\ b^* & d^* \end{pmatrix} \implies d = a^*, c  = - b^*
+\] Thus, a general unitary matrix looks like 
+\[ 
+U  = \begin{pmatrix} \al & \be \\  - \be^* & \al \end{pmatrix}, \quad  |\al|^2 + | \be|^2  = 1
+\] The condition on $\al $ and $\be $ comes from the fact that the determinant of this matrix should equal 1. 
+
+Since  $\al, \be \in \com$, we can write them as two real numbers.
+We set $ \alpha  = a_0 + i a_3 $, and set $ \beta = a_2 + i a_3 $. 
+This measn we can expand 
+\begin{align*}
+U &= \begin{pmatrix} a_0 + i a_3 & a_2 + i a_1 \\ - a_2 + i a_1 & a_0 - i a_3  \end{pmatrix} \\
+&= a_0 I + i a_3 \begin{pmatrix} 1 & 0 \\ 0 & -1  \end{pmatrix} + i a_2 \begin{pmatrix}  0 & -i \\ i & 0  \end{pmatrix} + i a_1 \begin{pmatrix}  0 & 1 \\ 1 & 0  \end{pmatrix}  \\
+&= I a_0 + i ( a_1 \sigma_{ x } + a_2 \sigma_{ y } + a_3 \sigma_{ z } ) \\
+&= I a_0 + i ( \mathbf{ a} \cdot  \sigma ) 
+\end{align*}
+Our condition that $ | \alpha | ^ 2 + | \beta | ^ 2  = 1 \implies a_0 ^ 2 + a_1 ^ 2 + a_2 ^ 2 + a_3 ^2 = 1 $. 
+
+If we set 
+\begin{align*}
+U_1 &=  a_0 I + i \mathbf{ a} \cdot  \sigma  \\
+U_2 &=  b_0 I + i \mathbf{ b} \cdot  \sigma  
+\end{align*}
+Multiplying these terms out gives
+\begin{align*}
+U_1 U_2 & = (a_0 I + i \mathbf{ a} \cdot  \sigma )( b_0 I + i \mathbf{b} \cdot \sigma ) \\
+&=  a_0 b_0 I + i b_0 \mathbf{ a} \cdot  \sigma + i a_0 \mathbf{ b } \cdot  \sigma - ( \mathbf{ a} \cdot \sigma) ( \mathbf{ b } \cdot  \sigma )  \\
+&= a_0 b_0 I + i (b_0 \mathbf{ a} \cdot  \sigma + a_ 0 \mathbf{ b } \cdot  \sigma ) - ( \mathbf{ a} \cdot  \sigma) ( \mathbf{ b } \cdot  \sigma )  
+\end{align*}
+Let's take a close look at what $ ( \mathbf { a} \cdot  \sigma ) ( \mathbf{ b } \cdot  \sigma) $ is
+\begin{align*}
+( \mathbf{ a} \cdot  \sigma ) ( \mathbf{ b } \cdot  \sigma ) &=  a_1 b_1 \sigma_x ^ 2 + a_2 b_2 \sigma_ y ^ 2 + a_3 b_3 \sigma_ z ^ 2  \\
+				     & +   a_1b_2 \sigma_ x \sigma _ y + a_1 b_3 \sigma_ x \sigma _ y + a_2 b_1 \sigma_ y \sigma _ x  \\
+& +   a_2 b_3 \sigma _ y \sigma _ z + a_3 b_1 \sigma_ z \sigma _ x + a_3 b_2 \sigma_ z \sigma_ y  
+\end{align*} 
+
+Now, we use the fact that $ \sigma_i^ 2 = I$ and our algebra $ [ \sigma_ i , \sigma _ j ] = i \epsilon_{ i j k } \sigma_ k $. 
+Hence, our term simplifies to 
+\[
+( \mathbf{ a} \cdot  \sigma )(  \mathbf { b } \cdot  \sigma) =  I \mathbf{ a} \cdot  \mathbf{ b }  + i ( a_1 b_2 \sigma_ z - a_1 b_3 \sigma_ y - a_2 b_1 \sigma_ z+ a_2 b_3 \sigma_ x + a_3 b_1 \sigma_ y - a_3 b_2 \sigma_ x )  
+\] This however is just 
+\[
+= I ( \mathbf{ a} \cdot  \mathbf{ b } ) + i ( \mathbf{ a} \times \mathbf{ b } ) \cdot  \sigma 
+\] Hence, our final expression for $ U_1 U_2 $ is 
+\[
+U_1 U_2 = I ( a_0 b_0 - \mathbf{ a} \cdot  \mathbf{ b } ) + i ( b_0 \mathbf{ a} + a_0 \mathbf{ b } - \mathbf{ a} \times \mathbf{ b } ) \cdot  \sigma
+\] 
+A slightly easier way to have shown 
+this would be via use of the Pauli matrix 
+identity 
+\[
+\sigma_ i \sigma_ j = \delta_{ ij } I + \epsilon_{ i j k} \sigma_ k 
+\]  
+\pagebreak 

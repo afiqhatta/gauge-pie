@@ -1,0 +1,103 @@
+\section{Representations}
+
+A representation is a map $ D $ from a group 
+to our set of matrices, which satisfies the property that 
+\[
+	D : G \to  GL_ n ( F ) \subset \text{Mat}_n (  F), \quad n \in \mathbb{ N }
+\] such that the image matrices 
+are non singular. In addition, this map 
+needs to be a homomorphism, so we have that 
+\[
+	D( g_1 )  D( g_2) = D ( g_1 g_2 ) , \quad \forall g_1, g_2 \in G 
+\] A representation is \textbf{faithful} if $ D $ is injective. 
+A Lie group $G$ representation $ D $ is a group representation 
+but our map $ D $ \textbf{must be smooth!}.
+
+The fact that this is a 
+group homomorphism means that 
+\[
+	D ( g ) D ( e) =  D( g), \quad \forall g \in G  \quad \implies D ( e ) = I_ n 
+\] In addition, 
+the representation of a group inverse is thae 
+same as the inverse of its representation. This is because 
+\[
+	\forall g \in G, D ( g ^{ -1  } ) D ( g) = I \implies D ( g ^{ -1  } )  = D ( g) ^{ -1 }
+\]  
+Let's go into a bit more detail about the representation
+of a matrix Lie group. If $ G $ is a matrix Lie group, 
+$ G \subset \text{Mat} _n ( F )  $, let $ D $ 
+be a representation of $ G$, with  $ \dim ( D ) = n \neq m \neq \dim ( G ) $. 
+Now, construct our representation of 
+the Lie algebra. 
+For each  $ X \in \mathcal{ L } ( G ) $, 
+construct a curve $ C : t \in \mathcal{ I } \subset \mathbb{ R} \to g ( t) \in G $. 
+We have the expansion 
+\[
+ g ( t) = I_m + Xt + O ( t ^ 2 ) 
+\] Now, we can apply our
+representation and construct an image curve
+\[
+	D ( g ( t ) ) \in GL( n, F ) \subset \text{ Mat }_n ( F) 
+\] By Taylor's theorem, 
+we have that 
+\[
+	D ( g ( t ) ) = D ( I _ m ) + \frac{d }{ dt } D ( g ( t) ) \mid_{ t = 0 } + O ( t^ 2 ) 
+\] Where in this case, $ D ( I _ m )  = I _ n $ in
+representation space. This motivates our definition 
+for a representation of the Lie algebra of  $ G $.
+We define 
+\[
+	d ( X) : = \frac{d }{ dt  }  D( g ( t ) ) \mid_{ t =0 }, \quad \forall X \in \mathcal{ L } ( G ) 
+\] 
+\begin{claim}
+	This is a valid representation 
+	of the Lie algebra. 
+
+\begin{proof}
+	For any $ X _ 1 , X _ 2 \in \mathcal{ L } ( G ) $, 
+	construct curves 
+	\begin{align*}
+		c_1 & : t \to g_ 1 ( t ) \subset G \quad g_1 ( 0 )  = I_ m, \dot{g }_ 1  ( 0 ) = X_ 1   \\
+		c_ 2 & : t \mapsto g _ 2 ( t) \subset G , \quad g _ 2 ( 0 ) = I _ m, \dot{ g } _ 2 ( 0 ) = X_ 2  
+	\end{align*}
+	We can then define a curve which we 
+	considered previously. We have that 
+	\[
+		h ( t) = g_1 ^{ - 1} ( t) g _ 2 ^{ - 1} ( t) g_ 1 ( t) g _ 2 ( t ) \in G, \quad h ( t) = I _ n + t ^ 2 [ X_1, X_2 ] + O ( t^ 3 ) 
+	\] Now, we need to use the fact 
+	that $ D $ is a representation of $ G $, which means 
+	we can factor things out smoothly. 
+	So, we have that 
+	\[ 
+		D ( h ) = D ( g_1 ^{ - 1 } g_2  ^{ -1 } g_1 g_2 ) = D ( g_1 )  ^{ - 1} D ( g_ 2 ^{ - 1} D ( g_1 ) D( g_2) \forall t 
+	\] We now use the representation expression which 
+	we derived earlier, that 
+	\[
+		D ( g_1 ( t ) ) = D ( I _ m + t X_1 + \dots ) = D ( I _ m ) + t d ( X_1 ) + O ( t ^ 2 ) 
+	\] We compare this with 
+	\begin{align*}
+		D ( h ( t ) ) & = D ( I _ m  + t ^ 2 [ X_1 , X_2 ] + O ( t ^ 3 ) ) \\
+			      &=  D ( I _ m ) + t ^ 2 \frac{ d }{ dt ^ 2 } D ( h ( t ) ) \mid_{ t = 0 } \\
+			      &=  I _ n + d ( [ X_1 , X_2 ] ) t ^ 2 + \dots  
+	\end{align*}
+	We have that since
+	\[
+		D ( h ) = D ( g_1 ) ^{ -1 } D ( g_2 ) ^{ - 1} D ( g_1) D ( g_2) 
+	\] multiplying this term out, and comparing sides, we get that 
+	\[
+		d ( [ X_1 , X_2 ] ) = [ d ( X_1 ) , d ( X_2 ) ] 
+	\] Also, we require that $ d  $ is linearity.  
+\end{proof}
+\end{claim}
+
+As an exercise, given a representation $d $ of 
+$ \mathcal{L  } ( G ) , \forall g \in G $  of
+from 
+\[
+	g = \text{ Exp } ( X ), X \in \mathcal{ L } ( G ) 
+\] If we define 
+\[
+	D ( g ) = D ( \text{Exp } X ) ;= \text{ Exp } ( d ( X) ) 
+\] This is a valid representation. 
+
+

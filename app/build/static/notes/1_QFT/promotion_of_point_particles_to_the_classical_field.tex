@@ -1,0 +1,68 @@
+\subsection{Promotion of Point Particles to the Classical Field} 
+Previously, we were formulating our problem in a point particle sense. We now alter the physics slightly. Instead of a point particle, suppose we assign a value to every point in spacetime, and work with that instead. This function $\phi = \phi(x) $, we call a \textbf{field}. We write $\phi( x)$ synonymously with $\phi ( \mathbf{x} , t) $. In this regime, much like how we previously viewed $i$ as a label for a spatial coordinate in $x^i$, we now have 
+\textbf{infinite degrees of freedom}, where now the $\mathbf{x}$ term in $\phi( \mathbf{x}, t)$ acts as a continuous, infinite label. In essense, fields are like coordinates but with infinite degrees of freedom. In fact, we don't have to stop there. 
+
+We can attach components to this field, thus adding a few more degrees of freedom, and indexing them like $\phi_a ( \mathbf{x}, t)$. So, if we have $a$ indexing over $a =0, 1, 2, 3$, then we've added an additional four degrees of freedom. 
+
+Our most familiar example of this are the electromagnetic fields (which yield 6 degrees of freedom in all). These are $E_i( \mathbf{x}, t)$ and $B_i( \mathbf{ x}, t)$ where our index labels spatial directions. These six fields are derived from the familiar electromagnetic vector potential $A_\mu  = (\phi, \mathbf{A} ) $, given by the following 
+\begin{align*}
+E_i &=  - \frac{ \partial A_i }{ \partial t }  - \frac{ \partial A_0 }{ \partial x^i} \\
+B_i & = \epsilon_{ ijk } \frac{ \partial A_k}{ \partial x_j } 
+\end{align*} 
+
+
+Since we have a field over space now, our Lagrangian itself needs to be an integral over space. So, we formulate our problem in terms of something we call the Lagrangian density. \[ L = \int d^3 x \, \mathcal{L} ( \phi, \partial_\mu \phi ) \] 
+where our density now is a function of both the field itself and also the first derivative (not so different from the point particle case). And, like the point particle case, our action is once again the integral over time so that \[ S = \int dt \, L  = \int dt \int d^3 x \, \mathcal{L } = \int d^4 x \, \, \mathcal{ L } \] 
+Our Euler Lagrange equations are derived in the same way, but in this case over the 4 space-time coordinates, not just the time coordinate like we did earlier. Our change in action is 
+\begin{align*} 
+\delta S &= \int d^4 x \, \delta \phi \frac{ \partial \mathcal{ L} }{ \partial \phi } + \delta \partial_\mu \phi \frac{ \partial \mathcal{ L }}{ \partial ( \partial_\mu \phi ) } \\ 
+&= \int d^4 x \, \delta \phi \frac{ \partial \mathcal{L } } { \partial \phi }   - \delta\phi  \partial_\mu \frac{\partial \mathcal{ L  }}{ \partial ( \partial_\mu \phi ) }
+\end{align*} 
+And since our variation $\delta S = 0$, we have the Euler-Lagrange equations 
+\[ \partial_\mu  \left( \frac{ \partial \mathcal{ L } }{ \partial (\partial_\mu \phi) } \right)  = \frac{ \partial \mathcal{ L } }{ \partial \phi }  \] 
+
+\subsubsection{The Klein Gordon field} 
+We'll now introduce one of the main equations for a free field theory, the Klein-Gordon field. The Klein-Gordon field looks roughly like a Lagrangian for a simple harmonic oscillator
+\[ 
+\mathcal{L}  = \frac{1}{2} \eta^{ \mu \nu} \partial_\mu \phi \partial_\nu \phi  - \frac{1}{2} m^2 \phi^2 
+\] 
+$\eta^{\mu \nu}$ denotes our Minkowski metric, which in the course of these notes we'll take to be the 'mostly negative' metric $\eta^{\mu \nu}  = diag ( +1, -1, -1, -1)$. In terms of time and spatial derivatives, our Lagrangian reads 
+\[ 
+\mathcal{ L }  = \frac{1}{2} \dot{ \phi}^2  - \frac{1}{2} ( \nabla \phi)^2  - \frac{1}{ 2} m^2 \phi^2 
+\]
+
+Which is reminiscent of our Lagrangian being of the form $L = T - V$, where $T = \frac{1}{ 2} \dot{ \phi}^2 $ is our kinetic term and the rest is our potential term. We can compute our equations of motion from this. We have that 
+\[ 
+\frac{ \partial \mathcal{L} }{ \partial \phi} = m^2  \phi, \quad \frac{ \partial \mathcal{ L }}{ \partial ( \partial_\mu \phi ) }  = \partial^\mu \phi 
+\] 
+where we've used the chain rule for differentiation both times. Substituting this into the Euler-Lagrange equations, we have the Klein-Gordon equation which reads 
+\[
+\partial_\mu \partial^\mu \phi  - m^2 \phi  = 0 
+\]
+If we have an ansatz for a plane wave solution, that $\phi(x)  = e^{ - i p \cdot x}$, then this yields the relataivistic dispersion relation that 
+\[
+p^\mu p_\mu = m^2 
+\] 
+which we know is true.
+
+\subsubsection{The Lagrangian for Electromagnetism} 
+Another important example of a Lagrangian we'll be encountering is the Lagrangian associated with electromagnetism. This is given by 
+\[ 
+\mathcal{L}  =  - \frac{1}{2} ( \partial_\mu A_\nu)( \partial^\mu A^\nu )   + \frac{1}{ 2} ( \partial_\mu A^\mu)^2 
+\] 
+where $A^\mu$ is our familiar vector potential we described earlier. Notice that this Lagrangian doesn't depend on $A^\mu$, so if we want to figure out the equations of motion we need to calculate the term $ \frac{ \partial \mathcal{L} } {\partial (\partial_\mu A_\nu) } $. Using the identity that 
+\[ 
+\frac{ \partial (\partial^\alpha A^\beta) }{ \partial_\mu A_\nu } = \eta^{ \alpha \mu} \eta^{ \beta \nu } 
+\] our use of the product rule gives us that 
+\begin{align*} 
+\frac{ \partial \mathcal{L}}{\partial ( \partial_\mu A_\nu ) } & = - \partial^\mu A^\nu + \partial_\rho A^\rho \frac{ \partial ( \partial_\alpha A^\alpha ) }{ \partial ( \partial_\mu A_\nu ) }   \\
+&=  -\partial^\mu A^\nu + \partial_\rho A^\rho \eta\indices{_\alpha^\mu} \eta\indices{^\alpha^\nu} \\
+&=  -\partial^\mu A^\nu + \partial_\rho A^\rho \eta^{ \mu \nu } 
+\end{align*} 
+
+Our Euler Lagrange condition implies that 
+\[ 
+0 = \partial_\mu (  - \partial^\mu A^\nu)  + \partial^\nu \partial_\rho A^\rho = \partial_\mu (  - \partial^\mu A^\nu + \partial ^\nu A^\mu ) 
+\] 
+where in the second term, we relabelled the summed over indices from $\rho \rightarrow \mu$ because they're dummy indices.  
+za

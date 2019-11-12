@@ -1,0 +1,28 @@
+\subsection{Question 2} 
+We're given that the map $\hat{ H }  : T_p (M) \rightarrow T_p^* ( M ) $ is a linear map. So, since $\hat{ H } $ is linear, 
+\begin{align*} 
+H ( X, \alpha Y + \beta Z ) & = \hat{H} ( \alpha Y + \beta Z) ( X) \\ &= ( \alpha \hat{ H} ( Y ) + \beta \hat{H} ( Z) ) ( X) \\
+&= \alpha \hat{H}( Y) ( X) + \beta \hat{H} (Z) ( X) \\
+&= \alpha H ( X, Y ) + \beta H ( X, Z) 
+\end{align*} 
+Thus, $H$ is linear in the second argument. The only fact that we've used here is that $\hat{H}$ is a linear map. For the linearity in the first argument, we use the fact that $\hat{H} (Y) \in T_p^* (M)$, which means that it's a linear map. So 
+\[ 
+H ( \alpha X + \beta Z, Y ) = \hat{H}( Y) ( \alpha X + \beta Z)  = \alpha \hat{H} (Y) X + \beta \hat{H} (Y) ( Z)  = \alpha H(X, Y ) + \beta H(Z, Y ) 
+\] Thus our map is linear in the first argument. Note that
+\[ 
+H : T_p ( M) \times T_p ( M) \rightarrow \mathbb{R} 
+\] and since the map is multilinear, we have a rank (0, 2) tensor.
+
+Similarly, if we had a linear map 
+\[ 
+\hat{G} : T_p( M ) \rightarrow T_p( M) 
+\]
+we could then define a new map 
+\[ 
+G : T_p^* ( M) \times T_p(M) \rightarrow \mathbb{ R}, \quad G( \omega, X)  = \omega ( \hat{G} ( X)) \] 
+which is also bilinear in both arguments, and hence is a rank (1, 1) tensor. If $G$ is the identity map, then our induced function 
+\[ 
+\delta : T_p^* ( M) \times T_p( M ) \rightarrow \mathbb{R}, \quad \delta ( \omega, X ) = \omega (X) 
+\] is indeed our standard Kronecker delta function. If we set $\omega = x^\mu, X = e_\nu$, then $\delta\indices{^\mu_\nu} = \partial_\mu(x^\mu) = \delta\indices{^\mu_\nu}$. 
+
+\pagebreak 

@@ -1,0 +1,51 @@
+\subsection{Question 5} 
+We show that our components $F_{\mu \nu}$ transform appropriately under a change of coordinates. This is done with the chain rule. 
+\begin{align*} 
+F_{ \mu \nu} & \rightarrow F_{ \mu \nu}' \\
+&= \frac{ \partial^2 f}{ \partial x'^\mu \partial x'^\nu} \\
+&= \frac{ \partial}{ \partial x '^\mu } \left( \frac{ \partial x^\rho }{ \partial x'^\nu } \frac{ \partial f }{ \partial x^\rho } \right) \\
+&= \frac{ \partial x^\sigma}{ \partial x'^\mu } \frac{ \partial }{ \partial x^\sigma} \left( \frac{ \partial x^\rho}{ \partial x'^\nu} \frac{ \partial f}{ \partial x^\rho } \right) \\
+&= \frac{ \partial x^\sigma}{ \partial x'^\mu} \frac{ \partial^2 x^\rho}{ \partial x^\sigma \partial x'^\nu } \frac{ \partial f }{ \partial x^\rho} + \frac{ \partial x^\sigma }{ \partial x'^\mu }\frac{\partial x^\rho}{\partial x'^\nu}\frac{\partial^2 f}{ \partial x^\rho \partial x^\sigma } \\
+&= \frac{ \partial x^\sigma}{ \partial x'^\mu } \frac{ \partial x^\rho}{ \partial x'^\nu } \frac{ \partial^2 f }{ \partial x^\sigma x^\rho } \\
+& =   \frac{ \partial x^\sigma}{ \partial x'^\mu } \frac{ \partial x^\rho}{ \partial x'^\nu } F_{\rho \sigma} 
+\end{align*} 
+
+There's a reason why we've taken the first term to zero going into the fifth line. 
+Since $ df = 0 $ at $ p$,  then for an arbitrary vector $ A$ in any basis, we
+have that at $ p \in \mathcal{ M } $,  
+\[
+df ( A) = A( f) = A^{\mu } \partial_\mu ( f) = 0, \implies \partial_\mu ( f) = 0 \text{ at } p, \quad \forall \mu = 1, \dots D
+\] 
+So this term goes to zero, since we only have a single derivative acting on $ f $. *
+Thus, the Hessian obeys the tensor transformation law. Since our components transform in the two lower indices with a change of coordinates, this object is basis invariant and hence is a rank (0, 2) tensor. 
+
+Since this is a rank (0, 2) tensor, our coordinate independent way of expressing this object would be 
+\[ 
+F: T_p( M ) \times T_p ( M ) \rightarrow \mathbb{R}
+\] 
+This specific representation is 
+\[ 
+F(V, W) = VW(f) 
+\] 
+We can show this by expanding with coordinates. 
+\begin{align*} 
+VW(f)  &= V^\mu \partial_\mu ( W^\nu \partial_\mu f ) \\
+&= (\partial_\mu W^\nu)( \partial^\mu V_\nu )f + V^\mu W^\nu \partial_\mu \partial_\nu f \\
+&= (V^\mu \partial_\mu W^\nu) \partial_\nu f + W^\nu V^\mu \partial_\mu \partial_\nu f \\
+&= W^\nu V^\mu \partial_\mu \partial_\nu f \\
+&= W^\nu V^\mu F_{\mu \nu}
+\end{align*} Here we've used the fact that $df=0$, which implies that for an arbitrary set of components $Z^\mu$, we have that $Z^\mu \partial_\mu f = 0 $. In the above, we identify this as $Z^\nu = V^\mu \partial_\mu W^\nu$, and hence the first term in the third line goes to zero.  
+
+This implies that $F_{\mu \nu}$ are indeed the components of $F$. Multi linearity in both arguments is just inherited 
+from the linearity of $ V , W $ as vector fields. 
+
+* 
+A different argument would be that one can note that the first term is of the form 
+\[
+( G_{ \mu' \nu' })^\rho \partial _\rho f  
+\] Where we can view $ G_{\mu' \nu' } $ as $D ^ 2 $ separate vectors indexed by $ \mu' $ and $ \nu' $. 
+Thus, since  $df = 0 $, this term goes to zero. (I like this way since it's manifestly 
+a bit more basis invariant!) 
+
+\pagebreak
+

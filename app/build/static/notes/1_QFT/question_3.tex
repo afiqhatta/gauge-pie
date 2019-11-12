@@ -1,0 +1,41 @@
+\subsection{Question 3}
+
+\subsubsection*{Showing invariance}
+Our Lagrangian density is the Klein-Gordon field 
+\[ 
+\mathcal{L}  = \frac{1}{ 2} \partial_\mu \phi \partial^\mu \phi  - \frac{1}{2} m^2 \phi^2 \] 
+This question is about symmetries under \textbf{rotations}, transformations which infinitesimally take the form, to first order in $\theta$,  
+\[ 
+\phi_a \rightarrow \phi_a + \theta \epsilon_{abc} \eta_b \phi_c 
+\] 
+Our Lagrangian changes as 
+\[ 
+\mathcal{L } \rightarrow \mathcal{L} + \theta \epsilon_{abc} \eta_b \partial^\mu \phi_a \partial_\mu \phi_c - m^2 \epsilon_{abc} \eta_b \phi_a \phi_c 
+\] 
+The important thing to notice here is that the two terms added on go to zero, since $\epsilon_{abc} $ is antisymmetric in $(a, c)$, yet $\partial^\mu \phi_a \partial_\mu \phi_c$ are symmetric in $(a, c)$! Antisymmetric objects contracted with symmetric objects go to zero. 
+
+\subsubsection*{Constructing conserved quantities}
+Since $\mathcal{L } $ is invariant under our transformation our Noether current is reduced to \[ j^\mu =  - \delta \phi_a \frac{ \partial \mathcal{L} }{ \partial ( \partial_\mu \phi_ a) }  \propto \epsilon_{ abc} \eta_b \phi_c \partial^\mu \phi_a \] 
+Now, to get a conserved quantity in integral form, we write out the space and time components separately. Our condition that $\partial_\mu j^\mu = 0 $ implies that 
+\[ 
+\frac{\partial j^0}{ \partial t}  - \nabla \cdot \mathbf{j}  = 0 \implies \frac{ \partial }{ \partial t} \int d^3 x \, j^0 = \int d^3 x \, \nabla \cdot \mathbf{ j } \] 
+Where we've simply integrated the equation and moved the spatial part to the left, and took the partial derivative out of the integral. However, using divergence theorem, we have that 
+\[ \int d^3 \, \nabla \cdot \mathbf{ j}  = \int d \mathbf{ S} \cdot \mathbf{j} \rightarrow 0 \] since currents should decay at infinity. Hence our conserved quantity is just 
+\[ 	
+\int d^3 x \, j^0  = \int d^3 x \epsilon_{ abc} \eta_b \phi_c \partial^0 \phi_a  = \eta_b \int d^3 x \epsilon_{abc} \phi_c \dot{ \phi}_a \] 
+However, there was freedom in our choice of $\epsilon_b$ this whole time, so we can 'strip' out this component such that $\int d^3 x \, \epsilon_{ abc} \phi_c \dot{\phi}_a$ is our conserved quantity, which is what the question asks for up to relabelling of indices. 
+
+\subsubsection*{Verifying our conserved quantity with our field equations} 
+It's easy to check that the Euler-Lagrange equations yield the Klein-Gordon equation \[(\partial_\mu \partial^\mu  - m^2 ) \phi = 0 \] which with time and spatial derivatives gives 
+\[ \ddot{ \phi_a}  - \nabla^2 \phi_a  + m^2 \phi_a  = 0 \] 
+Differetiating our conserved quantity with respect to time, and then applying our Klein-Gordon equation gives 
+\begin{align*} 
+\dot{Q }_a & = \int d^3 x \epsilon_{ abc } \dot{ \phi}_b \dot{ \phi}_c + \epsilon_{ abc} \ddot{ \phi }_b \phi_c   \\ 
+& = \int d^3 x \, \epsilon_{ abc} \ddot{ \phi}_b \phi_c \\
+&= \int d^3x  \, \epsilon_{ abc} ( m^2 \phi_b   - \nabla^2 \phi_b ) \phi_c \\
+&= \int d^3 x \, \epsilon_{abc} m^2 \phi_b \phi_c + \epsilon_{abc} ( \nabla \phi_b) \cdot ( \nabla \phi_c ) \\
+&= 0 
+\end{align*} 
+Going into the second line, we have symmetric time derivatives in $( b, c)$. Going into the penultimate line, we've integrated by parts to shift one derivative in the Laplacian to the other side. The result is zero because both terms have $\phi_i $ expressions which are symmetric in $( b, c) $. 
+
+\pagebreak 

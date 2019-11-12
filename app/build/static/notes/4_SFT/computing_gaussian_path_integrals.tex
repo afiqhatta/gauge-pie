@@ -1,0 +1,144 @@
+\subsection{Computing Gaussian Path Integrals}
+
+\subsubsection{Our correlation function is just a Green's function} 
+The point of this whole section is to drive the point home 
+that diagonalising in Fourier space makes things easier!
+
+Our total free energy, including the magnetic field, was
+ \[
+	 \int d^ d x \, \frac{\gamma}{2 } ( \nabla \phi ) ^ 2 + \frac{1}{2 }\mu^ 2 \phi ^ 2 + B ( \vec{x} ) \phi 
+ \] Now, we already know that the Fourier expansion of the first two terms gives us an intergal in Fourier space which is equal to 
+ \[
+	 \int \frac{ d^ d k}{ ( 2 \pi ) ^ d } \left[  \frac{1}{2 } \left(  \gamma k^ 2 + \mu^ 2  \right) \phi_{ \vec{k} } \phi_{  - \vec{k} }   \right] 
+ \] Now, to incorporate our magentic field, we just expand out $ \phi $ in Fourier modes 
+ and sub in our definition for what a Fourier mode is for $ B $. 
+ So, 
+ \[
+	 F_{ mag } = \int d^ d x \, \frac{ d^ d  k }{ ( 2 \pi ) ^ d } e^{  - i \vec{k} \cdot  \vec{x} } \phi_{ \vec{k}  } B ( x )
+ \] Defining 
+ \[
+	 B_{ \vec{k}}  = \int d^d x \, e^{  i \vec{k} \cdot  \vec{x} } B ( \vec{x} ) \implies F_{ mag } = \int \frac{ d ^ d k }{ ( 2 \pi ) ^ d  } \, B_{ - \vec{k} } \phi_{ \vec{k}}
+ \] Hence, our whole expression for our free energy in terms of 
+ Fourier modes is 
+ \[
+	 F  = \int \frac{ d^ d k }{ ( 2 \pi ) ^ d } \left[  \frac{1}{2 }( \gamma k ^ 2 + \mu ^ 2 ) \phi_{\vec{k} } \phi_{  - \vec{k} } + B_{ - \vec{k} } \phi_{ \vec{k}} \right] 
+ \] To evaluate this, we can define a translated integral as 
+\[
+ \tilde{\phi}_{\vec{k}} = \phi_{ \vec{k} } + \frac{B_{ \vec{k} }}{\gamma k ^  2+ \mu^ 2 } 
+\] With this transformation, we can write 
+\[
+F [ \tilde{ \phi_{ \vec{k} } }] = \int \frac{ d^ d k }{ ( 2 \pi ) ^ d } \left[  \frac{1}{2 } ( \gamma k^ 2 + \mu ^ 2 ) | \tilde{\phi }_{ \vec{k}} |^ 2 - \frac{1}{2 } \frac{ | B_{ \vec{k} } | ^ 2  }{ \gamma k ^ 2 + \mu ^ 2 }  \right]   
+\] Since we have that our partition function is given in terms of Fourier modes 
+\[
+ \mathcal{ Z } = \prod_{ \vec{k}} d \phi_{ \vec{k} } d\phi_{ - \vec{k} } e^{  - \beta F_{ thermo}}
+\] Our Jacobian doesn't change because we're just changing by a constant. 
+\[
+	\mathcal{ Z } [ B_{ { k } } ] = e^{  - \beta F_{ thermo } }e^{ \frac{\beta}{2 } \int \frac{ d^ d k }{ ( 2 \pi ) d } \frac{ | B_{ \vec{k} } | ^ 2 }{\gamma k^ 2 + \mu ^ 2 }}
+\] However, we can do an inverse Fourier transform 
+\[
+	\mathcal{ Z  } [ B ( \vec{x} ) ] = e^{  - \beta F_{ thermo }} e^{ \frac{\beta}{2} \int d^ d x d^ d y  B ( \vec{x} ) G ( \vec{x} - \vec{y} ) B ( \vec{y} )  } 
+\]  We define our Green's function as 
+\[
+	G ( \vec{x} - \vec{y} ) = \int \frac{ d ^ d k }{ ( 2 \pi ) ^ d } \frac{e^{  - i \vec{k} \cdot ( \vec{x} - \vec{y} ) }}{\gamma k^ 2 + \mu ^ 2 } 
+\] Differentiating twice, we get that
+\[
+	\left< \phi ( \vec{x} ) \phi ( \vec{y} )  \right>_{ B = 0 } = \frac{1}{\beta } G ( \vec{x} - \vec{y} )	
+\]This is because
+\[\frac{1}{\beta } \frac{\delta \log \mathcal{ Z}}{\delta B ( \vec{x} ) } =  \frac{1}{ B \mathcal{ Z } }e^{  - \beta F_{ thermo } } \frac{\beta}{2 } \left(  \frac{ \delta }{ \delta B ( \vec{x} ) } \int d^ d x d^ d y \, B ( \vec{y} ) G( \vec{x} - \vec{y} ) B ( \vec{x} )   \right) \text{exp} ( K ( B ( \vec{x} ) ) )  \]
+Where we have defined for brevity that 
+\[
+	K ( B ( \vec{x} ) ) = \frac{\beta  }{2 }\int d^ d x d^ d y \, B ( \vec{x} ) G ( \vec{x} - \vec{y} ) B ( \vec{y} ) 
+\] 
+\subsubsection{An aside on functional integrals} 
+Our functional derivative with respect to $ B ( \vec{x} ) $ kind of looks like if we were differentiating
+$ B ^2 G $. 
+Let's recall how to do a functional integral, from the persepctive of deriving the 
+Euler-Lagrange equations from a quadratic free integral. Suppose we had 
+an expression 
+\[
+	F ( B ( \vec{x} ) ) = \int d^ d z f ( B ( \vec{z} ) ) 
+\] Then, our functional integral in the function $ g ( B ( \vec{x} ) ) $ 
+that we get when we vary $ F $ with respect to $ B \to B + \delta B $, such that 
+ \[
+	 \delta F = \int d^ d z \delta B ( \vec{z} ) ( g ( B ( \vec{z} ) ) ) 
+\] We did this before in deriving our equations of motion associated 
+with our quadratic terms of our free energy. Varying with respect to 
+$ \phi $, 
+\begin{align*}
+	\frac{ \delta F }{ \delta \phi } &=  \int d^ d x \, \gamma ( \nabla  \phi ) \delta ( \nabla  \phi ) +\mu ^ 2   \phi \delta \phi  \\
+					 &=  \int d^ d x \, \gamma ( \nabla  \phi ) \nabla  ( \delta \phi ) + \mu ^ 2  \phi \delta \phi \\
+					 &= \int d^ d x  - \gamma \delta \phi \nabla ^ 2 \phi + \mu ^ 2 \phi \delta \theta \\
+					 &=  \int d^ d x \, \delta \phi ( - \gamma \nabla  ^ 2 \phi + \mu ^ 2 \phi ) 
+\end{align*} Thus, in this case 
+we have that our functional derivative is given by 
+\[
+ \frac{ \delta F  }{ \delta \phi } = - \gamma \nabla  ^ 2 \phi + \mu ^ 2 \phi 
+\] 
+As we shown in the previous section, solving this equation for 
+$ \frac{ \delta F }{ \delta \phi }  = 0 $, gives us the most likely field configuration.
+Thus, applying this to our previous problem an setting 
+\[
+	F = \int d^ d x \, \int d^ d y \, B ( \vec{x} ) G ( \vec{x} - \vec{y} ) B ( \vec{y} ) \implies \delta F = 2 \int d^ d x \,  \delta B ( \vec{x} ) \int d^ d y \, G ( \vec{x} - \vec{y} ) B ( \vec{y} )  
+\] So, taking our functional derivative has left us 
+with the term, relablleling variables, that  
+\[
+	\frac{ \delta F }{ \delta B ( \vec{x} ) } = 2 \int d^ d z \, G ( \vec{x} - \vec{z}) B ( \vec{z} )  
+\] Hence, our expression for our first derivative of the log of the 
+partition function simplifies to 
+\[
+	\frac{1}{ \beta } \frac{ \delta \log \mathcal{ Z } }{ \delta B ( \vec{x} ) } = \int d^ d z \, G ( \vec{z} - \vec{x} ) B ( \vec{z} ) 
+\] If we differentiate this object using a functional derivative with respect to 
+$ B $ again, we get that 
+\[
+	\frac{1}{ \beta ^ 2 } \frac{ \delta ^ 2 \log \mathcal{ Z } }{ \delta B ( \vec{x} ) \delta B ( \vec{y} ) } = \frac{1}{ \beta } G ( \vec{x} - \vec{y} ) = \left< \phi ( \vec{x} ) \phi ( \vec{y} )  \right> 
+\] So, our correlation is a Green's function 
+with a factor of $ \frac{1}{ \beta  }$. This 
+is reminiscnent of quantum field theory, where our Feynman propagator 
+was also essentially a Green's function. 
+So, to calculate this correlation function, all we have to do 
+is calculate this Green's function explicity. 
+
+
+\subsubsection{Evaluating our Green's function} 
+In the section that follows, we'll use symmetry arguments 
+as well as a saddle point approximation to calculate the Green's function 
+\[
+	G ( \vec{x} ) = \int \frac{ d^ d k }{ ( 2 \pi ) ^ d } \frac{ e^{ i \vec{k} \cdot  \vec{x}  }}{ \gamma k^2 + \mu ^ 2 }
+\] By rotational symmetry we can evaluate this Green's function as 
+a function of $ r $, the magnitude of our vector 
+\[
+	G ( r)  =\frac{1}{\gamma } \int \frac{ d^ d k }{ ( 2 \pi ) ^ d } e^{  - i \vec{k} \cdot  x } \frac{1}{ k^ 2 + \frac{1}{ \zeta ^ 2 }}
+\] We've defined our correlation length $ \zeta^ 2 = \frac{ \gamma }{ \mu^ 2 }$, which 
+is a convenient scaling parameter, which we'll analyse the properties of later.  
+We now use a fairly obvious identity to help us evaluate this intergal; we use 
+the simple fact that 
+\[
+	\frac{1}{ k ^ 2 + \frac{1}{ \zeta ^ 2} } = \int_0^\infty dt e^{  - t ( k^ 2 + \frac{1}{\zeta ^ 2} ) }
+\] The upshot of writing things this way allows us 
+to nest the integrals within one another. Hence, we have that  
+\begin{align*}
+	G ( r) &=  \frac{1}{\gamma} \int \frac{d^ d k }{ ( 2 \pi ) ^ d } \int_0^\infty e^{  - t ( k^ 2 + \frac{1}{\zeta ^ 2 }) - i \vec{k} \cdot  \vec{x} } \\
+	       &=  \frac{1}{\gamma } \int \frac{d^ d k }{ ( 2 \pi ) ^ d } \int_0^\infty dt \, dt e^{  - t ( k + \frac{ i x }{2t  })^ 2 }e^{  - \frac{r^ 2 }{ 4t }  - \frac{t}{\zeta^ 2 }} \\
+	       &=  \frac{1}{\gamma } \frac{1}{4 \pi )^{ d / 2}} \int_0^\infty dt \, t ^{  - \frac{d}{2 } } e^{  - \frac{r^ 2 }{ 4t }  - \frac{t}{\zeta^ 2 }} \\
+\end{align*}
+Here we've used the fact that 
+\[
+	\frac{ d^ d k }{ ( 2\pi ) ^ d } \to \frac{ d \Omega_d }{ ( 2 \pi ) ^ d} k^{ d - 1 } dk, \int \frac{ d \Omega_d }{ ( 2 \pi ) ^ d }  = 2 \pi^{ \frac{d}{ 2}} \Gamma^{ -1} ( \frac{d}{2 } ) 
+\] We can now employ the saddle point approximation 
+\[
+	G ( r) \simeq \int_0^\infty dt e^{ - S( t ) }, \quad S( t ) = \frac{r^ 2 }{ 4t } + \frac{t}{\zeta^ 2 }+ \frac{d}{ 2 }\log ( t) 
+\]  Now, expanding the exponential about the minimum point, 
+\[
+	S( t) = S( t^* ) + \frac{ S'' ( t^ * ) t^ 2 }{ 2 } + \dots, \quad t^ * = \frac{\zeta^ 2 }{2 } ( - \frac{d}{2 } + \sqrt{ \frac{d^2}{4 } + \frac{r^2}{\zeta}} 
+\] So, we have that 
+\[
+	G ( r) \simeq \sqrt{ \frac{ \pi }{ 2 S'' ( t^ * ) }}e^{  - S( t^ * ) } 
+\] We now examine the limits in two regimes. 
+\[
+	r \gg \zeta, t^ * \simeq r \frac{\zeta}{2 } \implies G ( r) \sim \frac{1}{\zeta^{ \frac{d - 3 }{2 }}} \frac{ e^{  -\frac{r}{2 }}}{r^{ \frac{d - 1 }{ 2}}}
+\] On the other hand, in the other regime 
+\[
+	r \ll \zeta, t^ * \simeq \frac{r^ 2 }{ 4 d } \implies G ( r) \sim \frac{1}{r^{ d - 2 }}
+\] Recall, $ G( r) = \left< \phi( \vec{y} ) \phi ( \vec{x} )  \right> $
+\pagebreak 
+

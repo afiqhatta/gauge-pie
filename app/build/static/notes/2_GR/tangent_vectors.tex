@@ -1,0 +1,62 @@
+\subsection{Tangent vectors}
+Throughout our whole lives, we've been thinking of a 'vector' as a way to denote some position in space. However, this idea of a vector is only really unique to the manifold $\mathbb{R} ^n $. A much more universal concept of a vector is the idea of 'velocity', the idea of movement and direction at a given point.  A tangent vector is a 'derivative' form at a given point in the manifold. This means that we define it to obey properties that one might expect in our usual notion of a derivative for functions in $\mathbb{R}$. We denote a vector at a point $ p \in \mathcal{M}$ as $X_p$. 
+This means that a vector is simply a map $X_p : C^\infty \rightarrow \mathbb{R} $, which satisfies  
+\begin{itemize} 
+\item Linearity: 
+\[ X_p( \alpha f + \beta g ) = \alpha X_p ( f) + \beta X_p (g), \quad \forall f, g \in C^\infty (\mathcal M ), \, \, \alpha, \beta \in \mathbb{R} \]
+\item  $X_p( f)  = 0$ for constant functions on the manifold.
+\item Much like the product rule in differentiation, tangent vectors should also obey the Leibniz rule where 
+\[ 
+X_p(fg) = f(p ) X_p (g) + g(p) X_p (f) 
+\] 
+Remember that with the Leibniz rule, the functions which are not differentiated are evaluated at $p$! This is useful for our theorem afterwards.  
+\end{itemize} 
+This next proof is about showing that tangent vectors can be built from differential operators in the $n$ dimensions of the manifold. 
+We will now show that all tangent vectors $X_p$ have the property that they can be written out as 
+\[ 
+X_p = X^\mu  \left. \frac{ \partial }{ \partial x^\mu } \right\vert_{p} 
+\] What we're saying here is that $ \partial_\mu $ at the point $p \in \mathcal{M} $ forms a basis for the space of tangent vectors at a point. 
+To do this, take your favourite arbitrary function $f: \mathcal{ M} \rightarrow \mathbb{R} $. Since this is defined on the manifold, to make our lives easier we'll define $F = f \circ \phi^{ -1}: \mathbb{R}^n \rightarrow \mathbb{R} $, which we know how to differentiate. The first thing we'll show is that we can locally move from $F(x(p)) \rightarrow F(x(q)) $ by doing something like a Taylor expansion: 
+\[ 
+F( x(q)) = F(x(p))    + ( x^\mu (q)  - x^\mu (p) ) F_\mu ( x( p)) 
+\] 
+Here, we're fixing $p \in \mathcal{ M} $ and $F_\mu$ is some collection of $n$ functions. One can easily verify that $F$ can be written in this way by precisely doing a Taylor expansion then factorising out the factors of $(x^\mu (q)  - x^\mu (p) )$. We can find an explicit expression for $F_\mu ( x(p ))$ by differentiating both sides and then evaluating at $x( p)$. We have that 
+\[ 
+\left. \frac{ \partial F}{ \partial x^\nu } \right\vert_{ x(p)}  = \delta\indices{^\mu_\nu} F_\mu + (x^\mu (p)  - x^\mu( p) ) \left. \frac{ \partial F_\mu}{ \partial x^\nu } \right\vert_{ x( p)}  = F_\nu \] 
+The second term goes to zero since we're evaluating at $x(p)$, and our delta function comes from differentiating a coordinate element. Our initial $F(x(p))$ term goes to zero since it was just a constant. Recalling that $\phi^{ -1} \circ x^\mu ( p )  = p$, we can just rewrite this whole thing as 
+\[ 
+f(q) = f(p) + (x^\mu (q) - x^\mu ( p)) f_\mu (p ) 
+\] 
+where in this case we've defined that $f_\mu (p ) = F_\mu \circ \phi^{ - 1} $. However, we can figure out what this is explicitly
+\[ 
+f_\mu ( p ) = F_\mu \circ \phi ( p )  = F_\mu ( x(p)) =  \frac{\partial F (x(p)) }{ \partial x^\mu } = \frac{ f \circ \phi^{ -1 } ( x (p))}{ \partial x^\mu } : = \left. \frac{ \partial f}{ \partial x^\mu } \right\vert_{ p } 
+\] 
+Now, its a matter of applying our tangent vector to our previous equation, recalling that $X_p (k ) = 0 $ for constant $k$, and that all functions are evaluated at the point $ p$. We have that, upon application of the Leibniz rule 
+\begin{align*} 
+X_p ( f(q)) & = X_p ( f(p)) + X_p ( x^\mu (q) - x^\mu (p) ) f_\mu (p) + ( x^\mu (p) - x^\mu(p) )X_p ( f_\mu ( p)) \\
+& = X_p ( x^\mu (p)) f_\mu ( p) \\
+&= X^\mu f_\mu ( p) \\
+&= X^\mu \left. \frac{ \partial f }{ \partial x^\mu } \right\vert_p 
+\end{align*} 
+In the first line we've replaced $q$ with $p$ in the last term since Leibniz rule forces evaluation at $p$. We've declared $X^\mu = X_p (x^\mu) $ as our components. Since $f$ was arbitrary, we have now written that 
+\[ 
+X_p = X^\mu \frac{ \partial }{ \partial x^\mu } 
+\] 
+To show that $\{ \partial_\mu \} $ forms a basis for all tangent vectors, since we've already shown that they span the space we need to show they're linearly independent. Suppose that 
+\[ 
+0 = X^\mu \partial_\mu
+\] 
+Then, this implies that if we take $f = x^\nu$, then $0 = X^\nu$ for any value of the index $\nu$ we take. So, we have linear independence.   
+
+\subsubsection*{Tangent vectors should be basis invariant objects} 
+A tangent vector is a physical thing. However, so far we've expressed it in terms of the basis objects $ \{ \partial_\mu \} $ which are chart dependent.So, suppose we use a different chart which is denoted by coordinates $ \tilde{x}^\mu$. This means that our new tangent vector needs to satisfy the condition that 
+\[ 
+X_p = X^\mu \left.  \frac{ \partial}{ \partial x^\mu } \right\vert_{ p}   = \tilde{X}^\mu \left. \frac{ \partial }{ \partial \tilde{x}^\mu} \right\vert_p
+\] 
+This relation allows us to appropriately relate the components $X^\mu$ to that of $\tilde{X}^\mu$, in what is called a contravariant transformation. Using the chain rule, we have that 
+\[ 
+X^\mu \left. \frac{\partial}{ \partial x^\mu} \right\vert_p  = X^\mu \left. \frac{ \partial \tilde{ x}^\nu}{ \partial x^\mu} \right\vert_{ \phi(p )} \left. \frac{ \partial}{ \partial \tilde{x}^\nu } \right\vert_p 
+\] Notice that when differentiating a coordinate chart with respect to another, we're evaluating at the coordinate chart of the point. This is why we subscript with $\phi( p)$ in the terms. Comparing coefficients, we have that 
+\[ \tilde{X}^\nu = X^\mu \left. \frac{ \partial \tilde{x}^\nu }{ \partial x^\mu } \right\vert_{ \phi(p) } \] 
+
+

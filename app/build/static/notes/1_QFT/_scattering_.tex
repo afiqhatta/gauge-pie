@@ -1,0 +1,139 @@
+\subsection{ Scattering } 
+The time evolution used in scattering theory is called 
+the 'S-matrix', where
+\[
+S= \lim_{t  \to \infty, t_0 \to  - \infty}U ( t, t_0 )   
+\] The initial state $ \ket{i } $ and final state $ \ket{ \phi }  $ 
+are some sense 'far away' form each other and the interaction. 
+We assume that $ \ket{ i } , \ket{ f  } $ behave like free particles; 
+they're eigenstates of $ H_0 $ . 
+THe amplitude is 
+\[
+\lim_{ t  \to \infty, t_0 \to  - \infty } \bra{  f} U ( t, t_0 )\ket { i }  = \bra{ f} S \ket{ i }   
+\] The latter expression is called the 'S-matrix' matrix element.
+
+\subsubsection{An example with Yukawa theory} 
+Going back to scalar Yukawa theory, the interaction Hamiltonian is
+\[
+H_ I = g \psi _ I ^ * \psi _ I \phi _ I 
+\] We model the creation of mesons with $ \phi $, and the creation of nucleons or anti nucleons with $ \psi $. 
+Concentrating on the creation and annihilation operators in the 
+Fourier mode expansion,
+\[
+\phi \sim a_{ \vec{p} } + a_{ \vec{p} }^ \dagger 
+\] These things destroy and create mesons respectively. 
+We have that 
+\begin{itemize}
+\item $ \psi \sim b_{ \vec{p} } + c_{ \vec{p} }^\dagger $ which destroys a nucleon and create an anti nucleon respectively. 
+\item $ \psi ^ *  \sim b_{ \vec{p} } ^ \dagger + c_{ \vec{p} } $ which creates a nucleon and destroys an anti nucleon. 
+\end{itemize}
+With this interaction, we have the commutation 
+relations 
+\[
+[ a_{ \vec{p} } , a_{ \vec{p} ' }^\dagger ] = [ b_{ \vec{p} }, b_{ \vec{p} ' }^ \dagger ] = [ c_{\vec{p} } , c_{ \vec{p}' }^\dagger ]  = ( 2 \pi ) ^ 3 \delta ( \vec{p} - \vec{p} ' ) 
+\] All other commutation relations are zero. 
+To our first order our interaction, expanding out 
+our interaction Hamiltonian in $ g$, we might have an 
+integral term like 
+\[
+\int dp' dp'' dp'''  b_{\vec{p}}^\dagger c_{\vec{p} ' }^\dagger a_{ }
+\] How we we interpret this? 
+Well, we could interpret this as a term which destroys 
+a meson, then creates a nucleon and anti-nucleon. 
+
+If we expand to second order in $ g$, 
+we find more involved terms which stem from our integral. 
+For example, we could have the term 
+\[
+\int ( c^ \dagger b^\dagger a ) ( b c  a^ \dagger ) 
+\] This is a two stage process. 
+First, from our first bracket term we annihilate a nucleon and an anti-nucleon, 
+and then create a scalar meson. 
+Then, we annihilate that scalar meson an then create a nucleon and anti-nucleon. 
+Thus, this is nucleon and anti-nucleon scattering, and is 
+represented by the process
+\[
+\psi \overline{\psi } \to \phi \to \psi \overline{\psi }
+\] Thus, this term \textbf{specifically } contributes 
+to nucleon and anti-nucleon scattering. 
+
+\subsubsection{First order term in meson decay}
+In this part, we will be focusing on probability 
+amplitudes that arise from certain processes. 
+Let's focus specifically on the case 
+of our first order interaction with a meson  $ \phi $ 
+decaying into a nucleon and anti-nucleon
+\[
+\phi \to \psi \overline{ \psi }
+\] Let's give a momentum to our meson, $ \vec{p}$. 
+Treating this as an initial state, we assume that 
+we can use the ground state of our free theory, $ \ket{ 0 } $, 
+as a springboard to excite states from. Thus, we write down 
+the momentum eigenstate for our initial state as 
+\[
+\ket{ i } = \sqrt{ 2E_{ p   } } a_{ \vec{p} }^ \dagger \ket{ 0 }  
+\] If we assign our final state $ \ket{ f  } $ to be  
+a nucleon and anti nucleon with momenta $ \vec{q}_1,  \vec{q}_ 2 $, 
+then we have 
+\[
+\ket{ f  }  = \sqrt{ 4 E_{ q_1 } E_{ q _ 2 } }  b_{ \vec{q}_ 1 }^ \dagger c_{ \vec{q}_ 2 }^\dagger \ket{ 0 } 
+\]  
+Our scattering amplitude is given by 
+\[\bra{ f } S \ket{ i } = \bra{ 0 } bc a ^ \dagger \ket{ 0 } - ig \bra{ f }  \int d^4 x \, \psi_I^* ( x) \psi_I  ( x) \phi_I ( x) \ket{ 0 }  + O ( g ^ 2 ) \] The zeroth order term is just zero, because $ a^ \dagger , c $ commute. 
+Once we commute the $c $ past $ a ^ \dagger $, it hits our vacuum 
+state and sends it to zero. 
+The form of the first order term deserved some explanation. 
+Since we're taking the limit as $ t \to \infty $ and $ t_0 \to  - \infty $, 
+the form of our first order term is 
+\[
+\bra{ f} \int_{ - \infty }^\infty dt \int d^ 3 x \psi^ *_ I  ( x) \psi_ I  ( x) \phi_I  ( x)  \ket{ i } 
+\] we can compose the integrals together to get $ \int d^4 x $.
+Let's go slowly. We expand on the right hand side our $ \ket{ i } $ term 
+to get that 
+\begin{align*}
+\bra { f} S \ket{ i } & = - i g \bra{f} \int d^ 4 x \, \psi ^ * ( x) \psi ( x) \int \frac{ d^ 3 k }{ ( 2 \pi ) ^ 3  \sqrt{ 2 E_{ k  } }  	 } \left(  a_{ \vec{k} } a_{ \vec{p} } ^ \dagger e ^{  - i k \cdot  x } + a_{ \vec{k} } ^ \dagger a_{ \vec{p} } ^ \dagger e^{ - k \cdot  x } \right) \ket{ 0 }  \\
+      & =    \int d^ 4 x \, d^ 3 k  \, \bra{f} \psi ^ * ( x) \psi ( x) \frac{ 1 }{ ( 2 \pi ) ^ 3  \sqrt{ 2 E_{ k  } }  	 } \left(  a_{ \vec{k} } a_{ \vec{p} } ^ \dagger e ^{  - i k \cdot  x } + a_{ \vec{k} } ^ \dagger a_{ \vec{p} } ^ \dagger e^{ - k \cdot  x } \right) \ket{ 0 }
+\end{align*} Now, since our $ a_{ \vec{k} } ^ \dagger $ commutes with $ b, c, b ^ \dagger, c^ \dagger $, 
+we have that the second term trivially commutes past the $ \psi $ and $ \psi ^ * $ term, and it 
+the part goes to zero. As for the first term, 
+we commute $ a_{ \vec{k} } $ past and $ a_{ \vec{p} }^ \dagger $, to pick up 
+a $ ( 2 \pi ) ^ 3 \delta ( \vec{k} - \vec{p} ) $. 
+Thus we replace 
+\[
+a_{ \vec{k} } a_{ \vec{p}  }^\dagger \ket{ 0 } = [ a_{ \vec{k} }, a_{ \vec{p} } ^ \dagger ] \ket{ 0 }  = ( 2 \pi ) ^ 3 \delta ( \vec{p}  - \vec{k} ) \ket{ 0 }  
+\] This means that our term above is 
+\begin{align*}
+\bra{ f} S \ket{ i } &= - ig \int \frac{ d^ 4 x d^  3 k_1 d^ 3 k_ 2  }{ ( 2 \pi ) ^ 6} \sqrt{ 4 E_{ q_1 } E_{ q_2 }} \bra{ 0 }\frac{1}{ \sqrt{ 4 E_{ k_1 } E_{ k_2 } }} c_{ \vec{q}_2 } b_{ \vec{q}_1 } \left(  b_{\vec{k}_ 1 } ^ \dagger e^{ i k_1 \cdot  x } + c_{ \vec{k}_1 } e^{  - i k_1 \cdot  x } \right) \\
+& \left( b_{ \vec{k}_ 2  } e^{ - i k_2 \cdot  x  } + c_{\vec{k}_ 2 }^\dagger e^{ i k_2 \cdot  x } \right) e^{ - i p \cdot  x } \ket{ 0 }  
+\end{align*}
+
+We can create a caricature of this product by ignoring the 
+momenta and integrals. We get a string of operators 
+that look like 
+\[
+\sim c b b ^\dagger b + c b b ^\dagger c^ \dagger + c  b c b + c b c c^\dagger 
+\] Now, all strings ending with $ b $ vanish since they 
+operate on the $ \ket{ 0 } $ term to the right. 
+
+We're left with the terms 
+\[
+\sim c b b ^ \dagger c ^ \dagger + c b c c^ \dagger 
+\] Now, in the second term, if we commute $ c $ past  $ c ^ \dagger$, 
+we pick up a delta function. But this leaves a term of the form  $ \delta c b $, 
+and the  $b  $ still annihilates. So, our only surviving term is 
+\[
+\sim c b b ^ \dagger c ^ \dagger = c_{ \vec{q} _ 2 } b_{ \vec{q}_ 1 }b_{ \vec{k} _ 1}^\dagger c_{ \vec{k} _ 2 }^\dagger  
+\] Commuting $ b $ past $ b^ \dagger$ gives the following term in our integral!
+\[
+( 2 \pi ) ^ 3 \delta ( \vec{q}_ 1 - \vec{k}_ 1 ) c_{ \vec{q}_ 2 } c_{ \vec{k} _ 2 } ^ \dagger e^{ i x\cdot   ( k_1 + k_2 - p)  }
+\] Once again, commuting $ c $ past $ c ^ \dagger $ gives us another delta function to include. 
+So the only term preserved in our integral is 
+\[
+( 2 \pi ) ^ 6  \delta ( \vec{q}_ 1 - \vec{k}_ 1 ) \delta( \vec{q}_ 2 - \vec{k}_ 2 )  e^{ i x\cdot   ( k_1 + k_2 - p }
+\] Thus, performing our integrals over $ \vec{k}_ 1 $ and $ \vec{k}_ 2 $ gives us our only term 
+at first order which contributes to our scattering. 
+\[
+\bra{ f} S \ket{ i } =  - i g \bra{ 0 } \int d^ 4 x \, e^{ i ( q_1 + q_2 - p ) \cdot  p } \ket{ 0 }  = - ig \delta ^ 4 ( q_ 1 + q_ 2 - p ) 
+\] But, this gives a final amplitude which is a delta function in 4 space. 
+This means that for a non zero scattering amplitude, we require our four momentum to be conserved!
+

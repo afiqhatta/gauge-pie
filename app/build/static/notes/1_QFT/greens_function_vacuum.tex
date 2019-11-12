@@ -1,0 +1,143 @@
+\subsection{Green's function vacuum} 
+Let's delve into the 
+nuts and bolts of the vacuum state in our interacting 
+theory. We denote vacuum state of our interacting 
+theory as $ \ket{ \Omega } $. This is a 
+different state from our vacuum state in our free theory, 
+where we have that 
+\[
+ H _ 0 \ket{ 0 } = 0 
+\] However when we move to our interaction picture, 
+we get that $ H = H_0 + H_{ \text{ int } } $ satisfies 
+\[
+	H \ket{ \Omega } = 0 , \quad \bra { \Omega } \ket { \Omega } 
+\] We define 'Green's functions' as 
+\[
+	G ^{ ( n )  } =  \bra{ \Omega } T \left\{  \phi _ H ( x_ 1 ) \dots 
+	\phi _ H ( x_ n ) \right\} \ket{ \Omega } 
+\] which can be interpreted as our n point correlator 
+but this time, in our interaction picture. Notice that 
+this is time dependent, and that our states are in the Heisenberg 
+picture.
+Now, interaction picture vacuum states are difficult 
+to deal with. The goal of this section is to be able to 
+write them as a function of our free theory vacuum state 
+$ \ket{ 0 } $.  
+Our claim is that 
+\[
+	\bra{ \Omega } T \left\{  \phi_{ 1H  } \dots \phi _{ m H }  \right\} \ket{ \Omega } 
+	= \frac{ \bra{ 0 } T \left\{  \phi_{ 1I  } \dots \phi_{ m I }  S \right\} \ket{ 0 }   }{ \bra{ 0 } S \ket{ 0 } }
+\] Let's explain some of the notation here. Recall, that 
+$ S $ is merely our time evolution operator and since 
+we are considering initial and final state scattering this 
+is 
+\[
+	S = \lim _{ T \to \infty } U ( T , -T ) = \lim _{ T \to \infty }
+		\exp \left( \int _{ - T } ^ T  dt H _ I ( x )  \right)  
+\] 
+We denote states in the Heisenberg picture (on the left hand side), 
+as $ \phi _{ i H } $, and states in the interaction 
+picture as $ \phi _{ i I  }$. From the previous section, 
+we showed that the numerator on the right has side is 
+\[
+  \bra{ 0 } T \left\{  \phi_{ 1I  } \dots \phi_{ m I }  S \right\} \ket{ 0 }  = 
+  \sum \left(  \text{ connected diagrams with m external points } \right) 
+  \bra{ 0 } S \ket{ 0 } 
+\] 
+In other words, our Green's function 
+is \textbf{the sum of connected diagrams} with $ m $ external points. 
+To prove this, we take, without loss of generality, 
+that $ x_1 ^ 0 > x_2 ^ 0 > \dots > x_{ m } ^ 0 $. This means, 
+we can employ a trick to parition the integral and reorder things in 
+the expression. 
+\begin{align*}
+	\mathcal{T } \big (  \phi _{ 1I  } \phi _{ 2 I  } \dots \phi _{ m I }  & \exp 
+	\left(   - i \int_{ - \infty } ^ \infty dt H _ I ( t)  \right) \big ) =  
+	\mathcal{ T } \big \{ \phi _{ 1I  } ( x _ 1 ^ 0 ) \phi _{ 2 I  } ( x _ 2 ^ 0 ) \dots 
+	\phi _{ m I  } ( x_ m ^ 0 ) \\ 
+	 & \exp \left(  
+- i \int_{ - \infty } ^{ x_ m ^ 0   } dt H _I ( x )  - i \int_{  x_ m ^ 0 } ^{ x _{ m - 1 } ^ 0  } 
+dt H _ I ( x )  - \dots  -i \int _{ x_ 1 ^ 0  } ^{ \infty } dt H_ I ( t)  \right) \big \} 
+\end{align*}
+The uposhot of writing this that we can now we apply to time 
+ordering operator, which shuffles around the terms 
+in the exponential. Thus, the expression above reads 
+\begin{align*} 
+	\dots  & = \exp \left(   - i \int _{ x _ 1 ^ 0 } ^ \infty dt H _ I ( t)  \right)  
+	\phi _{ 1 I } ( x_ 1 ) \exp \left(  - i \int _{ x_2 ^ 0 } ^{ x_ 1 ^ 0 } dt H _ I ( t)  \right)
+	\dots \\
+	       & ... \exp \left(  -i  \int _{ x ^ 0 _{ n - 1 } } ^{ x _ n ^ 0 } dt H _I ( t) \right) 
+	\phi _{ I m } \exp \left(  - i \int_{ - \infty } ^{ x _ n ^ 0 } dt H _ I ( t)   \right)  
+\end{align*}  Now, from our definition of $ U ( t, t' ) $, we have that finally
+\[
+	\mathcal{ T } \left\{  \phi _{ 1 I } \dots \phi _{ m I }  \right\} = 
+	U ( \infty, t _ 1 ) \phi _{ 1 I } U ( t_1 , t_ 2 ) \phi _{ I 2 } \dots
+	U ( t _{ m - 1 } , t _ m ) \phi _{ I m } U ( t_ m , - \infty ) 
+\] where we've cleaned up our notation above by writing
+$ t _ 1 = x_{ i } ^ 0 $.
+
+Recall that $U ( t, t_0 ) = e ^{ i H_0 t } e^{ i H (  t- t_0 ) } e ^{  - i H_0 t_0 }$. 
+From our discussion, we sandwich the above expression with 
+$ \ket{ 0 } $, so we have that 
+\[
+\bra{ 0 } T \left\{  \phi_{ 1 I } \dots \phi _{ m I } S  \right\} \ket{ 0 } =  
+\bra{ 0 } U ( \infty, t_1 ) \phi_{ I 1 } U ( t_1, t_2 ) \phi _{ 2 I } \dots U ( t_{ m-1 } , t _{ n } ) 
+\phi _{ m I } U ( t_{ m } , - \infty ) \ket{ 0 } 
+\] Now, we split up the unitary operator terms 
+to wrangle this expression to a form 
+which is in the Heisenberg picture. The above term 
+is 
+\[
+	\dots = \bra{ 0 } U ( \infty, 0 ) U ( 0 , t_1 ) 
+	\phi _{ 1 I } U ( t_1, 0 ) U ( 0 , t_2 ) \phi _{ 2 I } \dots 
+	U ( 0 , t_m ) \phi _{ m I  } U ( t_ m , 0 ) U ( 0 , \infty ) \ket{ 0 } 
+\]
+Now, we use this to switch to the Heisenberg picture 
+by observing that the above expression is equal to 
+\[
+	\bra{ 0 } T \left\{  \phi_{ 1 I } \dots \phi _{ m I } S  \right\} \ket{ 0 }  = \bra{ \psi} U ( 0 , - \infty ) \ket{0} = \bra{ 0 } U ( \infty, 0 ) \phi _{ 1H } \dots \phi _{ m H } U ( 0 ,  - \infty ) \ket{ 0 }
+\] Here, we've defined 
+the state $ \bra{ \psi } $ as
+\[
+	\bra{ \psi } = \bra{ 0 } U ( \infty, 0 ) \phi _{ 1H } \dots \phi _{ m H }
+\] From the right hand side, this 
+is just 
+\begin{align*}
+	\dots &=  \lim_{ t_0 \to - \infty } \bra{ \psi } U ( 0 , t_0 ) \ket{ 0 }  \\
+	      &=  \lim_{ t_0 \to - \infty } \bra{ \psi } e ^{ -  i H t_0 } \ket{ 0 }, \text{ since } 
+	      U ( 0 , t_0 ) \ket{ 0 } = e ^{ - i H t_0 } e ^{ - i H_0 t_0 } \ket{ 0 } = e ^{ - i H t_0 } \ket{ 0 }  \\
+	&=  \lim_{ t_0 \to - \infty } \bra{ \psi } e^{ i H t_0 } \left[  \ket{ \Omega } 
+	\bra{ \Omega } + \sum_{n=1}^{ \infty} \prod_{ j = 1 } ^ n \int \frac{d ^ 3 p_{ j} }{
+2 E_{ p_{ j } } ( 2 \pi ) ^ 3  } \ket{ p_1 , \dots p_n } \bra{ p_1, \dots p_n }  \right] \ket{ 0 }  \\
+	&=  \bra{ \psi }\ket{ \Omega } \bra{ \Omega }\ket{ 0 }  + \lim_{ t_0 \to - \infty } \sum_n \int \left( 
+	\prod_ j \frac{ d^ 3 p _ j }{ ( 2 \pi ) ^ 3 2 E_{ p _{ j } } }  \right) 
+	e^{ - i \sum_{ j = 1 } ^ n E_{ p _{ j } }  t_0 } \bra{ \psi }\ket{ p_1, \dots p_n }\bra{ p_1 , \dots p_n }\ket{ 0 } \\
+\end{align*}
+Going into the third line, we've applied our completeness 
+relation for Fock space, where we sum over all momentum 
+eigenstates for every number of particle we can have. 
+Now, the second term in the last line goes to zero due to the Riemann-lebesgue 
+lemma
+\[
+	\lim_{ \mu \to \infty } \int _ a ^ b f( x) e ^{ i \mu x } dx  =0 
+\] Hence, the above expression reads 
+\[
+	\dots = \bra{ 0 } U ( \infty, 0 ) \phi_{ 1H } \dots \phi_{ m H } \ket{ \Omega }\bra{ \Omega }\ket{ 0 } 
+\] Similar to the above, we haev that 
+\begin{align*}
+	\bra{ 0 } U ( \infty, 0 ) \ket{ \psi } &=  \lim_{ t_0 \to \infty } 
+	\bra{ 0 } e ^{ i H t_0 } \ket{\psi }  \\
+	&=  \bra{ \Omega } \phi_{ 1H } , \dots \phi_{ m H } \ket{ \Omega } 
+	\bra{ \Omega }\ket{ 0 } \bra{  0 }\ket{ \Omega } \\ 
+\end{align*}
+Our denominator is $ \bra{ 0 } S \ket{ 0 } = \bra{ 0 } \ket{ \Omega } \bra{ \Omega } \ket{ 0 } $, 
+by setting $ m = 0 $. 
+This means we ( insert previous example ) discounting connected diagrams 
+
+\subsubsection{LSZ Reduction} 
+To describe scattering in interacting theory, with external states (eg 
+ $ \ket{ p_1 , p_2 } $, should be from interacting theory. This means we 
+ exclude loops on external legs. 
+THe above diagram is banned since it's absorbed into 
+the definition of an initial interacting state. See AQFT or look up 
+amputated diagrams. 

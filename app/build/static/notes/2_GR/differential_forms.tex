@@ -1,0 +1,65 @@
+\subsection{Differential forms} 
+Differential forms are totally antisymmetric $ ( 0 , p )  $ tensors, and are denoted $ \Lambda^ p ( M ) $. 
+0 -forms are functions. If  $ dim ( M )  = n$, then p-forms have n choose p components by anti-symmetry. 
+n-forms are called top-forms. 
+
+\subsubsection{Wedge products} 
+Given a $ \omega  \in \Lambda^ p ( M ) $ and $ \epsilon \in \Lambda^ q ( M ) $, we can form a  $ ( p + q ) $ form 
+by taking the tensor product and antisymmetrising. 
+This is the wedge product. 
+Our components are given by 
+\[
+( \omega \wedge  \epsilon )_{ \mu_1 \dots \mu_{ p } \nu_1 \dots \nu_{ q }} = \frac{ ( p + q ) ! }{p ! q ! } \omega _{ [ \mu_1 \dots \mu_p } \epsilon_{ \nu_1 \dots \nu_q ] }
+\] An intuitive way to thing about this is that 
+we are simply just adding anti-symmetric combinations of 
+forms, without dividing (other than to make up for the previous 
+anti-symmetry). So, we have that, for example, when 
+we wedge product the forms $ dx ^ 1  $ with $dx^ 2 $, that 
+\[
+dx^ 1 \wedge  dx^ 2 = dx^ 1 \otimes dx^ 2 - dx^ 2 \otimes dx^ 1 
+\] In terms of components one can check that, for example, for one forms we have that 
+\[
+( \omega \wedge  \epsilon )_{ \mu \nu } = \omega_{ \mu } \epsilon_{ \nu } - \omega_{ \nu } \epsilon_{ \mu }
+\] We can iteratively wedge the basis of forms $\left\{  dx^ \mu  \right\}  $
+together to find that 
+\[
+dx ^ 1 \wedge  \dots dx^ n = \sum_{ \sigma \in S_n } \epsilon ( \sigma)  dx^{ \sigma ( 1) } \otimes \dots \otimes dx^{ \sigma( n ) }
+\] To show this, we use an example. Note that the 
+components of $ dx^ 1 \wedge  dx^ 2 $ are 
+\[
+dx^ 1 \wedge  dx^ 2 = 2 \delta^ 1 _{ [ \mu } \delta^ 2 _{ \nu ] } dx^ \mu dx^ \nu 
+\]  Now, this means that wedging this with $ dx^ 3 $ gives 
+components  \[
+( dx^ 1 \wedge  dx^ 2 ) \wedge  dx^ 3 = \frac{3!}{2 } 2 \delta^1_{ [ [ \mu } \delta^ 2_{ \nu ] } \delta^ 3 _{ \rho ] } dx^ \mu dx^ \nu dx^ \rho 
+\] But this is the sum of all permutations multiplied 
+by the sign, since a set of antisymmetrised indices nested 
+in a bigger set it the original set.
+
+\subsubsection{Properties of wedge products} 
+Our antisymmetry property of forms 
+gives it properties we might expect. 
+One of these is that switching a $ p $ and $ q $ form 
+picks up a sign:  we have that 
+\[
+\omega \wedge \epsilon  = ( - 1) ^{ p q } \epsilon \wedge  \omega    
+\] In general, for an odd form we have that 
+\[
+\omega  \wedge  \omega = 0 
+\] For the manifold $ M = \mathbb{ R} ^ 3 $, with $ \omega  , \epsilon \in \Lambda^ 1 ( M) $, 
+we have that 
+\[
+( \omega  \wedge  \epsilon ) = ( \omega_1 dx^1 + \omega_2 dx^ 2 + \omega_3 dx^ 3 ) \wedge  ( \epsilon_1 dx^1 + \epsilon_2 dx^2 + \epsilon_3 dx^3 ) 
+\] expanding this thing, we have that 
+\begin{align*}
+\omega  \wedge  \epsilon & = ( \omega_1 \epsilon_2  - \epsilon_2 \omega_1 ) dx^1 \wedge  dx^ 2 \\
+			 & + ( \omega_2\epsilon_3 - \omega_3 \epsilon_2 ) dx^ 2 \wedge  dx^ 3 \\
+			 & + ( \omega_3\epsilon_1  -\omega_1 \epsilon_3 ) dx^3 \wedge  dx^1 
+\end{align*}
+These are the components of the cross product. The cross product 
+is really just a wedge product between forms. 
+In a coordinate basis, we write that 
+\[
+\omega  = \frac{1}{p ! } w_{ \mu_1 \dots \mu_{ p }} dx^{ \mu_1 } \wedge  \dots \wedge  dx^{ \mu_{ p }}, \quad \omega =  w_{ \mu_ 1 \dots \mu_{ p  } } dx^{ \mu_ 1 } \otimes \dots \otimes dx^{ \mu_{ p } }  
+\] This is useful because writing out forms in terms of wedge 
+products as their basis turns out to make calculations a lot easier. 
+

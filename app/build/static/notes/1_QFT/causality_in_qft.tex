@@ -1,0 +1,120 @@
+\section{Causality in QFT} 
+We still have that potentially, a hint of Lorentz variance because 
+the commutation relations of $ \phi$ and $\pi $ are 
+equal time relations. If we shift to a differed time, this
+may not hold. Our previous fixed time commutation relations involved expressions of the form 
+\[
+[ \mathcal{ O}_2( \vec{x}, t ) , \mathcal{O}_1 ( \vec{y}, t ) ]
+\] but, if we transform the coordinates with a Lorentz transformation, we would get this turning into
+\[
+[ \mathcal{ O }_1 ( \vec{x}' , t' ) , \mathcal{ O }_2 ( \vec{y}', t'' ) ]  
+\] where $ t' ,  t'' $ are not necessarily the same since $ \vec{x}, \vec{y}$ are different. 
+What about arbitrary space time separations? 
+The real requirement of causality is that all 
+space like separated operators commute 
+\[ 	[ \mathcal{ O }( x_1 ) , \mathcal{ O }( x_2) ] = 0 , \quad \forall ( x- y)^2 < 0 
+\] The reason why commutation is synonymous 
+with the fact that operators don't affect one another, 
+comes from the fact that they have a shared eigenbasis. 
+Suppose we have $A, B  $, hermitian operators which commute. 
+Then, we have that they share an eigenbasis which we label as $ \left\{  \ket{ i }  \right\} $, with the property that 
+\begin{align*}
+A \ket{ i }  & = \lambda_i \ket{ i }, \quad \lambda_i \in \mathbb { R} \\
+B \ket{i } &=  \mu_i \ket{ i }, \mu_i \in \mathbb{ R}  
+\end{align*} In particular, this means that 
+if we expand a given quantum state in terms of the eigenbasis, we get 
+\[
+\ket{ \psi }  = \sum_{ i } a_{ i } \ket{ i } \implies \bra{ \psi }BA\ket{\psi}  = \sum_i a_{ i } \lambda_{ i } \mu_{ i}
+\] where in the last sum we used the orthogonality property 
+of the eigenstates. However, notice that this is the same by symmetry of 
+calculating $ \bra{ \psi }AB\ket{ \psi}$. Hence, applying an operator 
+in the process of measuring the other one doesn't change our 
+outcomes. Thus, we have no causality.
+
+If we define $ \Delta( x -y )  = [ \phi ( x), \phi ( y ) ] $, we'd like to check if this holds for space-time separation.  
+\[ [ \phi ( x), \phi ( y ) ]  = 
+\int \frac{d^{ 3 } p \, d^ 3 p' }{ ( 2 \pi )^6 \sqrt{ 4 E_p E_p' } } \left\{ [a_{\vec{p}}, a_{\vec{p}'}^\dagger ] e^{ i ( p \cdot  x  - p' \cdot  y) } + [ a_{\vec{p}}^\dagger , a_{\vec{p}'} ] e^{ i ( p \cdot  x - p ' \cdot  y) }   \right\} 
+\] which is just 
+\[ [ \phi ( x) , \phi ( y ) ] 
+= \int \frac{ d^3 p }{ 2 E_p ( 2 \pi )^3 } \left\{ e^{  - i p \cdot  ( x - y ) } - e^{ i p \cdot  ( x - y ) } \right\} 
+\] Well, what do we know about this function? 
+We know that this is Lorentz invariant because the measure is, and so is the 
+integrand. 
+If  $ x - y $ is space-like, it vanishes because we can take
+a Lorentz transformation to $ y - x$ in the first term, 
+giving 0. Another way to say this is that if we have space-like separated events, 
+then we don't care about breaching causality in time, so we can freely 
+transform events in this way. We can't however do this for 
+time like events because that would mean time reversal. 
+This integral doesn't vanish, however, 
+for timelike separations. If we have time like separated events, we 
+can Lorentz transform them such that they're constant in space. 
+\[
+[ \phi ( \vec{x}, 0 ) , \phi ( \vec{x}, t ) ] = \int \frac{d^3 p }{ ( 2\pi ) ^3 2 E_p }\, ( e^{  - i E_p t }  - e^{ i E_p t } ) \neq 0 
+\]
+We assert that this is non-zero.
+To show that this is non-zero, we can evaluate this expression explicitly. Let's do the 
+first term. 
+\begin{align*}
+\int \frac{d^ 3 p }{( 2 \pi )^  3 2E_p }e^{  - i E_p t } & \sim \int dp \, \frac{p^ 2 }{ \sqrt{ p ^2 + m^2 }  }e^{  -i \sqrt{ p^2 + m^ 2 }  t} \\
+& = \int_m^\infty dE \sqrt{ E^2  - m^ 2 } e^{  - i E t }
+\end{align*}
+In the second line, we expressed the integral  in polar form using $ p $ as a radial coordinate. 
+In the second line, we used a change of variables and 
+set $ E = \sqrt{ p^ 2 + m^2 } $. To evaluate the final integral, 
+we need to analytically continue it to $ \mathbb{ C} $. 
+Since we have a square root, this induces a branch cut at 
+$ E = m $. By the residue theorem, our whole contour evaluates to zero. 
+However, the part on the x-axis is what we'd like to calculate. 
+To do this, we calculate the arc, as well as the contour which is show as the vertical line. 
+Our integral along the arc is given by 
+\[
+C_R  = 	\int dz \sqrt{ z^2  - m^2 }  e^{ - i z t }, z = m + Re^{ i \theta }  
+\] If we do this integral in polars, for large $ R $ this 
+integral goes like
+\begin{align*}
+C_R  & \sim i \int d \theta e^{ i \theta } R \sqrt{ R^ 2 } e^{  - i mt } e^{ R  e^{ i \theta } t } \\
+& \sim  e^{  - i m t } i \int d \theta R^2 e ^{ i R \cos \theta t } e ^{ R \sin \theta t } 
+\end{align*} Now, since we're taking the contour in 
+$  -  \frac{\pi}{2 } <  \theta < 0$, and ignoring
+our oscillating $ e ^{  i R \cos \theta t }$ term, 
+this integral goes like 
+\[
+\sim e^{  - i m t } i  \int  d  \theta e^{ - \theta } R^2 e^{  - \epsilon R t }
+\] The negative epsilon comes from the fact that 
+we're taking a negative contour. Due to 
+the negative in the exponential, this term is bounded. So, 
+$ C_R \sim e^{  - i m t}$. A similar analysis of the 
+downwards vertical contour shows that it grows in the same way. Hence, we have that 
+\[
+\int \frac{ d^ 3 p }{ ( 2 \pi )^2 2 E_{ p }} e^{  - E_{ p } t } \sim e^{ - i m t } 
+\] Thus, our time-like separated integral goes like 
+\[
+[ \phi ( \vec{x}, 0), \phi ( \vec{x}, t ) ] \sim e^{  - i m t }  - e^{ i m t }
+\] This is non-zero. 
+\begin{figure}[h]
+\centering 
+\begin{tikzpicture}
+
+% arcs for tikz 
+\draw[help lines, ->]  ( - 0.5, 0) -- ( 4, 0)  node [above left]  {$ Re ( E) $}; 
+\draw[help lines, ->] ( 0, - 4) -- ( 0, 1) node [below left] { $Im ( E) $} ;
+\draw[blue] (3.5, 0) arc (0:-90:2.5);  
+\draw[blue] (1, -2.5) -- (1, -0.5);
+\draw[blue] (1.5, 0) -- (3.5, 0); 
+\draw[blue] (1, -0.5) arc (-90:0:0.5);
+\draw[dotted] (1, 0) node [below] {$m$}; 
+\draw [->,decorate,decoration=snake] (1, 0) -- (1,1);
+
+\end{tikzpicture} 
+\caption{Our contour integral which we use to calculate our timelike integrals}
+\end{figure}
+
+At equal times, we have 
+\[
+[ \phi ( \vec{x}, t ) , \phi ( \vec{y}, t ) ] = \int \frac{d^ 3 p }{ ( 2 \pi )^3 2E_p }\, ( e^{ i \vec{p} \cdot  ( \vec{x} - \vec{y}) }  - e^{  - i \vec{p} \cdot  ( \vec{x} - \vec{y}) } )  = 0  
+\] where in the second term we apply a Lorentz transformation put $\vec{x - y } \to  - \vec{y - x}$. We can do a Lorentz transformation from within this integral because the whole 
+integral was Lorentz invariant in the first place. 
+Thus, the second term cancels, which agrees with equal time
+commutation relations, since it goes to zero. 
+

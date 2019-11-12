@@ -1,0 +1,75 @@
+\BOOKMARK [1][-]{section.1}{Why do we care about Quantum Field Theory? }{}% 1
+\BOOKMARK [2][-]{subsection.1.1}{The Problem of Locality}{section.1}% 2
+\BOOKMARK [2][-]{subsection.1.2}{Particle indistinguishability and Particle conservation}{section.1}% 3
+\BOOKMARK [2][-]{subsection.1.3}{Problems with QFT}{section.1}% 4
+\BOOKMARK [2][-]{subsection.1.4}{Scaling in QFT}{section.1}% 5
+\BOOKMARK [1][-]{section.2}{Classical Field Theory}{}% 6
+\BOOKMARK [2][-]{subsection.2.1}{Euler Lagrange equations for a point particle}{section.2}% 7
+\BOOKMARK [2][-]{subsection.2.2}{Promotion of Point Particles to the Classical Field}{section.2}% 8
+\BOOKMARK [3][-]{subsubsection.2.2.1}{The Klein Gordon field}{subsection.2.2}% 9
+\BOOKMARK [3][-]{subsubsection.2.2.2}{The Lagrangian for Electromagnetism}{subsection.2.2}% 10
+\BOOKMARK [2][-]{subsection.2.3}{Lorentz invariance}{section.2}% 11
+\BOOKMARK [2][-]{subsection.2.4}{Symmetries and Noether's theorem}{section.2}% 12
+\BOOKMARK [3][-]{subsubsection.2.4.1}{The Energy-Momentum Tensor}{subsection.2.4}% 13
+\BOOKMARK [2][-]{subsection.2.5}{Switching over to the Hamiltonian Formalism}{section.2}% 14
+\BOOKMARK [2][-]{subsection.2.6}{Promoting discrete operators to fields}{section.2}% 15
+\BOOKMARK [2][-]{subsection.2.7}{Reviewing the Harmonic Oscillator in One Dimension in Quantum Mechanics}{section.2}% 16
+\BOOKMARK [2][-]{subsection.2.8}{Promoting fields to operators}{section.2}% 17
+\BOOKMARK [3][-]{subsubsection.2.8.1}{Calculating the Hamiltonian}{subsection.2.8}% 18
+\BOOKMARK [3][-]{subsubsection.2.8.2}{Infinity issues with the Hamiltonian}{subsection.2.8}% 19
+\BOOKMARK [2][-]{subsection.2.9}{Creating particle states}{section.2}% 20
+\BOOKMARK [3][-]{subsubsection.2.9.1}{Relativistic normalisation}{subsection.2.9}% 21
+\BOOKMARK [2][-]{subsection.2.10}{Quantising the free complex scalar field}{section.2}% 22
+\BOOKMARK [2][-]{subsection.2.11}{Introducing time with the Heisenberg picture}{section.2}% 23
+\BOOKMARK [1][-]{section.3}{Causality in QFT}{}% 24
+\BOOKMARK [2][-]{subsection.3.1}{Propagators}{section.3}% 25
+\BOOKMARK [2][-]{subsection.3.2}{The Feynman Propagator}{section.3}% 26
+\BOOKMARK [1][-]{section.4}{Interacting fields and the approach with perturbation theory}{}% 27
+\BOOKMARK [2][-]{subsection.4.1}{Why do we need interacting fields and what are 'valid' conditions for perturbation expansions?}{section.4}% 28
+\BOOKMARK [2][-]{subsection.4.2}{The interaction picture}{section.4}% 29
+\BOOKMARK [3][-]{subsubsection.4.2.1}{The Heisenberg and Schrodinger Picture}{subsection.4.2}% 30
+\BOOKMARK [3][-]{subsubsection.4.2.2}{The Interaction picture is a hybrid!}{subsection.4.2}% 31
+\BOOKMARK [3][-]{subsubsection.4.2.3}{We can Fourier expand Interaction picture states!}{subsection.4.2}% 32
+\BOOKMARK [3][-]{subsubsection.4.2.4}{Operators defined from the Interaction picture obey the same commutation relations}{subsection.4.2}% 33
+\BOOKMARK [3][-]{subsubsection.4.2.5}{Introducing the time unitary operator}{subsection.4.2}% 34
+\BOOKMARK [2][-]{subsection.4.3}{ Scattering }{section.4}% 35
+\BOOKMARK [3][-]{subsubsection.4.3.1}{An example with Yukawa theory}{subsection.4.3}% 36
+\BOOKMARK [3][-]{subsubsection.4.3.2}{First order term in meson decay}{subsection.4.3}% 37
+\BOOKMARK [2][-]{subsection.4.4}{Wick's theorem}{section.4}% 38
+\BOOKMARK [3][-]{subsubsection.4.4.1}{Why we need Wick's theorem}{subsection.4.4}% 39
+\BOOKMARK [3][-]{subsubsection.4.4.2}{An example with scalar fields}{subsection.4.4}% 40
+\BOOKMARK [3][-]{subsubsection.4.4.3}{Contractions and Wick's Theorem}{subsection.4.4}% 41
+\BOOKMARK [3][-]{subsubsection.4.4.4}{Consequences of Wick's theorem}{subsection.4.4}% 42
+\BOOKMARK [3][-]{subsubsection.4.4.5}{Nucleon to Nucleon Scattering}{subsection.4.4}% 43
+\BOOKMARK [2][-]{subsection.4.5}{Feynman Diagrams}{section.4}% 44
+\BOOKMARK [2][-]{subsection.4.6}{Scattering revisited}{section.4}% 45
+\BOOKMARK [2][-]{subsection.4.7}{Amplitudes}{section.4}% 46
+\BOOKMARK [2][-]{subsection.4.8}{ Computing the two point correlation function for the ground state of our perturbed Hamiltonian }{section.4}% 47
+\BOOKMARK [2][-]{subsection.4.9}{Wick's theorem}{section.4}% 48
+\BOOKMARK [2][-]{subsection.4.10}{Applying Wick's theorem for the interaction term}{section.4}% 49
+\BOOKMARK [3][-]{subsubsection.4.10.1}{Symmetry factors}{subsection.4.10}% 50
+\BOOKMARK [1][-]{section.5}{The Dirac Equation}{}% 51
+\BOOKMARK [2][-]{subsection.5.1}{What does the Dirac equation give us?}{section.5}% 52
+\BOOKMARK [2][-]{subsection.5.2}{Warming up with spinors from the SO\(3\) rotation group}{section.5}% 53
+\BOOKMARK [3][-]{subsubsection.5.2.1}{Rotations in Euclidean space}{subsection.5.2}% 54
+\BOOKMARK [3][-]{subsubsection.5.2.2}{Transformations with Unitary matrices}{subsection.5.2}% 55
+\BOOKMARK [2][-]{subsection.5.3}{Lorentz tranformations and spinors}{section.5}% 56
+\BOOKMARK [2][-]{subsection.5.4}{Constructing the Chiral representation for the Dirac equation}{section.5}% 57
+\BOOKMARK [2][-]{subsection.5.5}{Motivating Lorentz invariance of the Dirac equation}{section.5}% 58
+\BOOKMARK [2][-]{subsection.5.6}{Constructing boosts and rotations in block diagonal form}{section.5}% 59
+\BOOKMARK [2][-]{subsection.5.7}{The Weyl equations}{section.5}% 60
+\BOOKMARK [2][-]{subsection.5.8}{Constructing Plane-Wave solutions to the Weyl equation}{section.5}% 61
+\BOOKMARK [1][-]{section.6}{Example sheet 1}{}% 62
+\BOOKMARK [2][-]{subsection.6.1}{Question 1}{section.6}% 63
+\BOOKMARK [2][-]{subsection.6.2}{Question 2}{section.6}% 64
+\BOOKMARK [2][-]{subsection.6.3}{Question 3}{section.6}% 65
+\BOOKMARK [2][-]{subsection.6.4}{Question 4}{section.6}% 66
+\BOOKMARK [2][-]{subsection.6.5}{Question 5}{section.6}% 67
+\BOOKMARK [2][-]{subsection.6.6}{Question 6}{section.6}% 68
+\BOOKMARK [3][-]{subsubsection.6.6.1}{Gauge invariance}{subsection.6.6}% 69
+\BOOKMARK [3][-]{subsubsection.6.6.2}{Constructing the energy-momentum tensor}{subsection.6.6}% 70
+\BOOKMARK [2][-]{subsection.6.7}{Question 7}{section.6}% 71
+\BOOKMARK [2][-]{subsection.6.8}{Question 8}{section.6}% 72
+\BOOKMARK [1][-]{section.7}{Example Sheet 2}{}% 73
+\BOOKMARK [2][-]{subsection.7.1}{Question 1}{section.7}% 74
+\BOOKMARK [2][-]{subsection.7.2}{Question 2}{section.7}% 75

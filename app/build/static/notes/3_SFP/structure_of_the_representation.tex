@@ -1,0 +1,423 @@
+\subsection{The structure of our representation} 
+To quickly recap what we did before, we'll just 
+go back over our argument on why our highest 
+weight $ \Lambda $ is indeed some non-negative integer.
+Since we assumed that our representation 
+had finite dimension, this means that there exists 
+a lowest weight $ \Lambda  - 2N $, 
+for some  $ N \in \mathbb{N } $. 
+Let's assign the vector which gives this lowest weight 
+as $ \vec{v}_{ \Lambda  - 2N }$, with 
+the property that 
+\[
+	R ( H ) \vec{v}_{ \Lambda - 2N } = ( \Lambda  - 2N ) \vec{v}_{ \Lambda - 2N }, 
+	\quad \vec{v} _{\Lambda - 2N } \neq 0 
+\] Here we've made an important 
+qualification that the lowest weight vector 
+is assumed of course, to be non-zero. When we act on this lowest 
+weight vector with our lowering operator, 
+we have that 
+\[
+	R ( E_{ - } ) \vec{v}_{ \Lambda - 2N }  =0 \implies \vec{v}_{ \Lambda - 2N - 2 } = 0 
+\] This means that when we act on this state by the raising
+operator again, we have that 
+\[
+ R( E_ + ) \vec{v}_{ \Lambda- 2 N -2 } = r_{ N + 1 } \vec{v}_{ \Lambda - 2N }
+\] But this implies that we must have 
+$ r _{ N  + 1 }  = 0 $. 
+Our formula for our recursion coefficients thus
+gives us the condition which fixes $ \Lambda $, since
+ \[
+	 r_{ N + 1 } = ( \Lambda - N ) ( N + 1 ) = 0 
+\] Thus, this means that our highest weight 
+$\Lambda $ must be an integer, $ \Lambda = N $. 
+
+\subsection{Conclusion}
+We have thus found finite dimensional 
+irreducible representations which we call  $R_{\Lambda}$, 
+which are labelled by our highest weight $ \Lambda \in \mathbb{ N} $. 
+In each of these representations, our weights in 
+ $ R _{ \Lambda } $ are given by 
+ \[
+  S_{ \Lambda } = \left\{   - \Lambda, - \Lambda + 2 , \dots , \Lambda - 2 
+  \Lambda \right\} \subset \mathbb{ Z}  
+ \] This implies that the 
+ dimension of our representation $ \dim ( R _{ \Lambda } ) = \Lambda + 1$. 
+ Note that, when deriving the structure 
+ of these representations, we made no other 
+ assumptions of how these representations 
+ were derived. Thus, for each representation of a given dimension, 
+ it must be unique. Hence, by uniqueness of these representations, we can 
+ relate what we did here to some of the canonical representations
+ we mentioned earlier. 
+\begin{itemize}
+	\item $ R_0 = d_0 $, our trivial representation with dimension 1 
+	\item $ R_1 = d_ f $, our fundamental representation with dimension 2 
+	\item $ R_2 = d _\text{ adj } $, our adjoint representation with dimension 3 (where 
+		$ \ad _ H  $ is represented by $ \text{ diag }( 2 , 0 , -2 ) $, from
+		acting on $ H , E _ \pm $ with the commutator. 
+\end{itemize} 
+For each representation, 
+our Cartan element is represented by a diagonal matrix 
+of weights 
+\[
+ R_\Lambda ( H ) = \text{diag} ( \Lambda, \Lambda - 2, \dots , - \Lambda + 2, - \Lambda ) 
+\]
+
+\subsubsection{Linking this to Angular momentum in Quantum Mechanics} 
+We can apply this to 
+what we know by identifying objects in representation 
+theory with operators in quantum mechanics. 
+Let's review some basic angular momentum theory. 
+Our total angular momentum is given by the sum of our 
+orbital angular momentum and our spin. 
+
+Our angular momentum operator $ \mathbf{ J } = ( J_1, J_2, J_3 ) $
+has eigenstates labelled by $ j \in \mathbb{ Z} / 2 , j \geq 0 $.
+This set of eigenstates is the representation space we're playing 
+with. We denote them in their familiar form of 
+bra and ket vectors. 
+\begin{align*}
+	J ^ 2 \ket{ j ; m } &=  j (  j + 1 ) \ket{ j ; m }  \\
+	J_3 \ket{ j ; m } &=  m \ket{ j ; m } 
+\end{align*}
+In the language or representation theory. we can identify 
+this with 
+\[
+	J_3 = \frac{1}{2 } R ( H ) , \quad
+	J_{ \pm }  = J_1 \pm i J _2 = R ( E_{ \pm } ) 
+\] Note that as a matter of convention, we're 
+dividing our representation matrix by 2. This is because, in this case our highest weight is 
+$ \Lambda =  2j \in \mathbb{ Z} _{ \geq 0 }$, and 
+our other weights are given by $ \lambda = 2m \in \mathbb{ Z} $. 
+Our vectors are given by  $ \vec{v}_{ \Lambda } \sim \ket{ j ; j }$, 
+and $ \vec{v} _{ \lambda } \sim \ket{ j ; m } $. Hence, 
+when we apply $ J _ 3 $ to our eigenstate, we recover 
+\[
+	J _ 3 \ket{ j ; m } = \frac{1}{2 } R ( H ) \ket{ j ; m }  = m \ket{ j ;  m } 
+\] 
+
+\subsection{$SU ( 2) $ representations from $\mathcal{ L } ( SU ( 2) ) $}
+In this section, we'll go over how 
+to obtain representations of our Lie group from representations 
+of our Lie algebra. 
+If we'd like to recover our lie group 
+representation, we can locally parametrise $ A \in SU ( 2) $ 
+from our Lie algebra as 
+\[
+	A = \text{Exp}( X) , \quad X \in \mathcal{ L } ( SU ( 2) ), A \in SU ( 2)  
+\] Now, motivated by this definition, we 
+can define a representation of $ SU ( 2) $ itself 
+by exponentiating the representation of 
+the Lie algebra. If we start from an irreducible representation $ R_{ \Lambda }$ 
+of $ \mathcal{ L }( SU ( 2) ) $, we define the corresponding 
+representation of the Lie group $ D _{ \Lambda  } $ as 
+\[
+	D _{ \Lambda } ( A) : = \text{Exp} ( R_{ \Lambda } ( X) ) , \quad \Lambda \in \mathbb{ Z}_{ \geq 0}
+\] Now, we ask how we 
+might obtain a representation of $ SO ( 3)  \sim SU ( 2)  / \mathbb{ Z}_ 2 $ from this. 
+$SO ( 3) $ is just $ SU ( 2) $ but 
+with antipodal points identified, meaning that 
+\[
+ A \sim - A, \quad  \forall A \in SU ( 2) 
+\] . Thus, to obtain a valid representation of 
+$ SO ( 3 ) $ that works, naturally we need that our representation 
+satisfies \[
+ D_\Lambda ( A )  = D _ \Lambda ( - A ), \quad  \forall A \in SU ( 2) 
+\] The aim of the game now is to check that this actually works 
+for the representation we've already presented here 
+for $ SU ( 2)  $. There's a simple trick to check this. 
+Notice that by the linearity property of representations, 
+the condition above is equivalent to just checking that 
+\[
+	D_ \Lambda ( I ) = D _ \Lambda ( - I ), \Lambda \in \mathbb{ Z } _{ \geq 0 } 
+\] 
+Let's check this. What follows is a clever proof that
+hinges on looking at what happens when we exponentiate $ H $. 
+From our definition of $H$, we have that 
+\[
+	\text{ Exp}(i \pi H ) =  \text{Exp}(\text{diag}( e ^{ i \pi } , e ^{  - i \pi  }  ) ) = - I_ 2
+\] This implies that 
+\[
+	D _{ \Lambda } ( - I _ 2) = \text{Exp} ( i \pi R _{ \Lambda } ( H ) )  = \text{Exp} (\text{diag} ( 
+	e^{ i \pi \Lambda } , e ^{ i \pi ( \Lambda - 2 ) }, \dots, e ^{ - i \pi \Lambda } ) ) 
+\] This implies that $ D _{ \Lambda } ( - I _  2) $  has 
+eigenvalues $ \exp( i \pi \lambda )  = ( - 1) ^ \lambda  = ( - 1) ^{ \Lambda}$. 
+Hence, we have that 
+\[
+	D_{ \Lambda } ( - I _ 2 ) = D _ \Lambda ( I _ 2 ) = I _{ \Lambda + 1 }, \quad \Lambda \in 2 \mathbb{ Z} 
+\] The last equality comes from the property 
+of representations where the identity element in the 
+base space is sent to the identity 
+element in the representation space. Since, 
+we need $ D _ \Lambda ( - I _ 2 ) $ to be the identity 
+element, we must have that all of its eigenvalues are 
+$ 1 $. 
+This means 
+that we have a representation of $ SO ( 3 ) $ only 
+under certain conditions. If  $ \Lambda $ is even, we have a representation 
+of both  $ SU ( 2) $ and $ SO ( 3) $. But otherwise, we only
+have a representation of $ SU ( 2) $ ! This is and interesting fundamental fact.
+
+\subsection{New representations from old} 
+Given $ R $, a representation of a real lie algebra $ \lalg $, we can 
+define a conjugate representation by conjugating our existing representation. 
+\[
+	\overline{R } ( X) = R( X) ^ * , \forall X \in \lalg
+\]  Sometimes, we have that $ \overline{R } \simeq R $. 
+We can also glue two representations together. 
+Given representations $ R_1 $ and $ R_2 $, any representation 
+spaces $ V _ 1 , V _ 2 $ of dimensions $ d_ 1 $ and $ d _  2$, we
+can define the direct sum of representations. 
+We denote this as $ R_1 \oplus R_2 $. 
+ \[
+ V _ 1 \oplus V_ 2 = \left\{  v_1 \oplus v_ 2 \mid v_ 1 \in V_1 , v_2 \in V _ 2 \right\} 
+\] In this formalism, we have that acting on a Lie algebra 
+gives us 
+\[
+ ( R_ 1 \oplus R_ 2 ) ( X) ( v_ 1 \oplus v_ 2 )  = ( R _ 1 ( X) ) \oplus ( R_ 2 ( X)) 
+\] This is represented by 2 block diagonal matrices. In 
+the representation space of our direct sum, our matrix is 
+\[
+C=
+\left[
+\begin{array}{c|c}
+	R_1 ( X)  & \mathbf{ 0 }  \\
+\hline
+	\mathbf{ 0 }  & R_ 2 ( X) 
+\end{array}
+\right]
+\]
+
+Now let's break this down for a physical system of multiparticle states. 
+Suppose that we have two particles represented as 
+\begin{align*}
+	\ket{ \uparrow } _ 1 , \ket{ \downarrow } _ 1 &  \in \mathcal{ H } _ 1 \\
+	\ket{ \uparrow } _ 2 , \ket{ \downarrow } _ 2 & \in \mathcal{H } _ 2
+\end{align*}
+We can compose this to get two particle states, 
+for example 
+\[
+	\ket{ \uparrow } _ 1 \ket{ \downarrow } _ 2 - \ket{ \downarrow } _ 1 \ket{ \uparrow } _ 2 
+\] We discussed earlier that if we had 
+two representations $ R_ 1 $ and $ R _ 2 $ of $ \lalg$, 
+with representation spaces $ V _ 1 $ and $ V _ 2 $ , and 
+dimensions $ d_ 1 $ and $ d_ 2 $ , we can represent 
+an element in the direct sum representation as 
+$ ( R _ 1 \oplus R _ 2 ) ( X) $, represented as a block 
+diagonal matrix with dimension  $ d_1 + d_2 $.  
+
+\subsection{Tensor products} 
+In addition to doing a direct sum to 
+combine two representations of a Lie algebra, 
+we can also do a tensor product. 
+Given vector spaces $ V_1 $ and $ V_ 2 $, we can define the
+tensor product space as 
+\[
+ V _ 1 \otimes V _ 2 =span_ F  \left\{ v _1 \otimes v _ 2 : v_1 \in V_1 , v_2 \in V_2  \right\} 
+\] Formally, we have the rules of linearity in 
+both arguments, as well as scalar multiplcation, giving the 
+properties 
+\begin{align*}
+	( v_1 + w_1 ) \otimes ( v_2 + w_2 ) & = v_1 \otimes v_2 + w_ 1 \otimes v _ 2 + 
+	v_1 \otimes w_2 + w_1 \otimes w_2 \\
+	\alpha ( v_1 \otimes v_2 ) & = ( \alpha v_1 ) \otimes v_2 + v_1 \otimes ( \alpha v_2) 
+\end{align*} Just note 
+that the scalar multiplcation property may look a bit weird, 
+but this is really the only definition that we can think
+of which makes senses with regards to symmetry. 
+Where the above properties hold for $ v_ i , w_ i \in V _ i $. 
+We can also define 
+the tensor products of two linear maps, 
+$ M_1 : V_ 1 \to V _ 1  , M _ 2 : V _ 2 \to V _ 2 $, 
+we can define a new map, the tensor product map 
+\[
+ M _ 1 \otimes M _2 : V _ 1 \otimes V _ 2 \to V _ 1 \otimes V _2
+\] which is defined by acting the linear map 
+on each of their respective spaces 
+\[
+ ( M _ 1 \otimes M _ 2 ) ( v_ 1 \otimes v _ 2 )  = ( M _ 1 v _ 1 ) \otimes ( M _ 2 v _ 2) \in 
+ V _ 1 \otimes V  _ 2 
+\] where we can calcukate this thing explicitly by extending it 
+via linearity. 
+Now, we can do this given representations $ R _ 1 $ and $ R  _ 2 $ of 
+$ \lalg $ with representations $ V  _1 $ and $ V  _ 2 $ . 
+If we have, for all $ X \in \lalg$, 
+\begin{align*}
+	R _ 1 ( X ) & : V_1 \to V_1 \\
+	R_2 ( X) & : V _ 2 \to V _ 2 
+\end{align*}
+we can now define a new representation $ R _ 1 \otimes ( R_ 2) $ 
+with representation space  $ V _ 1 \otimes V _ 2 $ so that, 
+for all  $ X \in \lalg$
+ \begin{align*}
+	 ( R_ 1 \otimes R _ 2 ) ( X) &: V _ 1 \otimes V _ 2 \to V _ 1 \otimes V _  2\\
+	 ( R _ 1  \otimes R_ 2 ) ( X) &= R _ 1 ( X) \otimes I _ 2 + I _ 1 \otimes R_ 2 ( X) 
+ \end{align*} Note, this is not equal to the map $ R _ 1 ( X) \otimes R _ 2 ( X) $. 
+We can start calculating things explicity. 
+If we have two bases 
+ \[
+ B _ 1 = \left\{ V ^ j _ 1 : j = 1 , \dots d _ 1  \right\}, \quad B_ 2  = \left\{  
+ V _ 2 ^ \alpha, \alpha = 1 , \dots d_ 2  \right\}   
+\] we can represent these things as a matrix 
+for $ R _ 1 \otimes R_ 2 $, with $ i , j =  1, \dots d_ 1  $,
+and $ \alpha , \beta = 1, \dots d_ 2 $. 
+Our matrix index is given by 
+\[
+	( R  _1 \otimes R_ 2 ) _{ ij , \alpha \beta } ( X) =
+	R _ 1 ( X) _{ ij } I _{ \alpha  \beta } + I _{ ij } R _ 2 ( X) _{ \alpha \beta }
+\] This representation $ R _ 1 \otimes R _2 $ has dimension 
+$ d_1d_2 $ . We should check that this is actually a valid representation, 
+and one can prove this easily by verifying that the Lie bracket is 
+preserved. The only non-trivial thing to recall is that 
+in the proof, $ R_ 1 \otimes I $ and  $ I \otimes R _ 2 $ commute 
+since they act on different spaces. 
+
+\subsection{Reducibility} 
+A representation $ R $ with representation space $ V $ 
+has an invariant subspace $ R ( X) u \in U , \quad \forall X \in \lalg , u 
+\in U , U \subset V $. 
+An irreducible representation has no non trivial subspaces. 
+We define a \textbf{fully reducible} representation as a representation 
+which can be written as the direct sum of irreducible 
+representations.
+
+On other words, if $ R $ has a non trivial invariant subspace, then we 
+can find a basis such that 
+
+\[
+	R ( X) = \begin{pmatrix} A ( X) & B ( X) \\ 0 & C ( X)  \end{pmatrix} , 
+	\quad \forall X \in \mathcal{ \lalg}
+\] In this case, elements of $ U $ correspond do vectors of the form 
+$ ( \vec{u}, 0 ) $. We can see that when we act on a vector of this type 
+by the matrix above, it stays in this form. 
+If $ R $ is fully reducible, then 
+$ R = R _ 1 \oplus R _ 2 \dots \oplus R _l $. This means
+that we have a basis where,  $ \forall X \in \lalg$,  $ R( X) $ 
+is represented by a block diagonal matrix where 
+$ R ( X) = diag ( R_ 1 ( X) , R_ 2 ( X)  , \dots R_ l ( X)  $, 
+where  $ R _ i ( X) $ are the matrix representations
+of each. 
+
+\begin{theorem}{(Tensor product irreducible representations of a simple Lie algebra)} 
+Now, we will state an important fact, which we will not prove. 
+If $ R_ i = 1 , \dots m $ are finite dimensional 
+irreducible representations of a simple Lie algebra, then the tensor 
+product $ ( R_ 1 \otimes \dots \otimes R _ m ) $ is fully reducible (we 
+can express this as the direct sum of In other words, we 
+have that 
+ \[
+ R_ 1 \otimes R_ 2 \otimes \dots \otimes R_ m \simeq 
+ \tilde{ R } _ 1 \oplus \tilde{ R} _ 2 \oplus \dots \tilde{ R  }_{ m ' }   
+\] 
+\end{theorem}
+ 
+\subsection{Tensor products of the $\mathcal{ L } ( SU ( 2) ) $ Representations} 
+Let $ R _ \Lambda $ and $ R _{ \Lambda ' } $ be irreducible representations 
+of $ L ( SU ( 2 ) )$, where  $ \Lambda , \Lambda ' $ are the highest weights 
+in $ \mathbb{ N } $. Hence our dimensions of these representations
+are $ \dim ( R _ \Lambda ) = \Lambda + 1 $, and 
+$ \dim ( R _{ \Lambda ' } ) = \Lambda ' + 1 $, with representations 
+$ V _\Lambda $ and $ V _ \Lambda' $.
+We can form tensor product representation space 
+$ R _ \Lambda \otimes R _{ \Lambda ' }$ 
+\[
+ V _{ \Lambda } \otimes V _{ \Lambda ' } 
+ = \text{span } _{ \mathbb{ C } } \left\{ v \otimes v ' : 
+ v \in V _{ \Lambda } , v ' \in V _{ \Lambda ' }\right\}  , \quad 
+ X \in  \mathcal{ L } ( SU ( 2) ) 
+\] Our representations 
+act on $ X $ as 
+\[
+	R _{ \Lambda } \otimes R _{ \Lambda ' } ( X) ( v \otimes v ' ) 
+	= ( R _ \Lambda ( X) v ) \otimes v ' + v \otimes ( R _{ \Lambda ' } ( X) v ') 
+\] This yields a fully reducible representation 
+of $ \mathcal{ L } ( SU ( 2) ) $. Since our 
+basis for this tensor product representation 
+was every possible tensor product 
+of $ v _ \lambda $ and $ v _{ \lambda ' } $ in 
+the weight set, we have that our dimension of 
+this representation is 
+\[
+	\dim ( R _{ \Lambda } \otimes R_{ \Lambda ' } ) = ( \Lambda + 1 ) ( \Lambda '  +1 ) 
+\] We appeal to the theorem that we mentioned 
+in the previous section. Since $ R _ \Lambda $ and 
+$ R _{ \Lambda ' } $ are, by construction, irreducible 
+representations, we can then say that 
+\[ R _ \Lambda \otimes R_{ \Lambda ' } = \bigoplus_{ \Lambda ''  \in \mathbb{ Z }_{ \geq 0 }}
+	\mathcal{ L } ^{ \Lambda '' } _{ \Lambda \Lambda ' } R _{ \Lambda '' }	
+\] we call $ \mathcal{ L } ^{ \Lambda '' } _{ \Lambda , \Lambda ' } \in \mathbb{ Z}  $ 
+the Littlewood coefficients. 
+We have that $ v _{ \Lambda } $ has a basis $ \left\{  v _{ \Lambda}  \right\}  $
+which are all eigenvectors of $ R _{ \Lambda } ( H ) $, 
+this has weights in the weight set $ S_{ \Lambda } = \left\{   - \Lambda \dots \Lambda  \right\} $
+In addition, we denote the weight set for $ V _{ \Lambda ' }$
+as $ S _{ \Lambda ' } = \left\{  - \Lambda ' , \dots , \Lambda'  \right\} $
+Our aim is to now construct a basis of our 
+tensor product space $ V _{ \Lambda } \otimes V _{ \Lambda ' }$. 
+This basis is just the tensor product of the 
+basis vectors from each individual space. 
+ \[
+ \mathcal{ B } =\left\{  v_{ \lambda } \otimes v_\lambda ' : \quad 
+ \lambda \in S _{ \Lambda },  \lambda' \in S_{ \Lambda ' } \right\}
+\] To find the weights, 
+we apply the representation matrix of our Cartan element. 
+\begin{align*}
+	( R _{ \Lambda } \otimes R _{ \Lambda ' })  ( H ) ( v _ \lambda \otimes v _{ \lambda } ' ) 
+	&=  ( R _ \Lambda ( H ) ) \otimes v ' _{ \lambda '   } + v _ \lambda \otimes ( R _{ \Lambda ' 
+	} ( H ) v ' _{ \lambda ' } ) \\
+					&=  ( \lambda + \lambda ' ) ( v _ \lambda \otimes v _{ \lambda ' } )
+\end{align*}
+Thus, the tensor 
+product of the eigenvectors is also an eigenvector 
+of the tensor product of the representations. 
+We thus deduce that the tensor product representation 
+$ R_{ \Lambda } \otimes R _{ \Lambda ' } $ has weight set 
+$ S _{ \Lambda , \Lambda ' }  = \left\{  \lambda + \lambda ' 
+: \lambda \in S _{ \Lambda } , \lambda ' \in S _{ \Lambda ' } \right\} $. 
+This notation is a little funny, because we don't strictly 
+mean the \textbf{set} of these objects, but the set including multiplicities. 
+We now aim to decompose this weight set 
+into the irreducible weight sets of lower dimensional representations.  
+We can see here that the highest weight need be $ \Lambda   + \Lambda ' $, 
+(it's just the sum of the highest weights). This has multiplicity one since 
+this is the only way to add the two things to get the weight. 
+This implies that $ R _{ \Lambda + \Lambda ' } $ appears only 
+once in our irreducible representation. This means 
+that our Littlewood coefficient 
+\[
+ L ^{ \Lambda + \Lambda ' } _{ \Lambda , \Lambda }  =1 
+\] Thus, we can factor this out to get 
+\[
+ R_{ \Lambda } \otimes R_{ \Lambda ' } = R _{ \Lambda + \Lambda ' } \oplus \tilde{ R } _{ \Lambda , \Lambda ' } 
+\] The remainder representation 
+$ \tilde{ R  } _{ \Lambda, \Lambda ' }  $ has weight set 
+$  \tilde{ S } _{ \Lambda , \Lambda ' }  $ where 
+the whole weight set is the union of this and the highest weight set 
+\[
+ \tilde{ S } _{ \Lambda , \Lambda ' }  = S _{ \Lambda + \Lambda'   }  \cup \tilde{ S  } _{ \Lambda, \Lambda ' }
+\] where we have that 
+the weight set 
+\[
+ S _{ \Lambda + \Lambda'  }  = \left\{   - \Lambda - \Lambda ' , \dots , \Lambda + \Lambda '  \right\} 
+\]  Now we find the highest weight of $ \tilde{ R  } _{ \Lambda , \Lambda ' }  $, 
+and so on. 
+
+\begin{example}
+	Consider adding the representations $ \Lambda  = 1, \Lambda ' = 1 $ , with 
+	$ S _ 1= \left\{  - 1, + 1  \right\} $. 
+	When we add these weight sets together, we get that 
+	\[
+	 S _{ 1, 1, } = \left\{  - 1, + 1 \right\}  + \left\{  -1, + 1  \right\}   = \left\{  - 2 , 
+	 0 , 0 , 2 \right\}  
+	\] Generating the weight set associated with the highest weight representation, 
+	we decompose this thing as 
+	\[
+	 \dots = \left\{  - 2, 0 , 2  \right\} \cup \left\{  0  \right\}  \implies 
+	 R_ 1 \otimes R_ 1  = R_ 2 \oplus R _ 0 
+	\] As exercise, try to decompose general $ \Lambda' = M , \Lambda = N $ , 
+
+\end{example}
+ 
+
+\pagebreak 

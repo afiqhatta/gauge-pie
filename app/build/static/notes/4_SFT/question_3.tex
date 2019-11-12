@@ -1,0 +1,75 @@
+\subsection{Question 3}
+Setting $m = \frac{1}{N} \sum_i s_i$, our expression for $E$ is 
+\[ 
+	E =  - B \sum_i s_i  - \frac{J}{2N} \left( \sum_i s_ i \right) \left( \sum_j s_j \right)  = - BNm - \frac{J q Nm^2}{2}
+\]
+If the extra divisor of $N$ wasn't there, we'd have a factor of $N^2$ in our second term, which means that our expression for our free energy $f(m)$ would depend on N. 
+
+As before, we apply mean field theory and remove small terms quadratic in $s_i - m$ to find that 
+\[ 
+	E = - B \sum_i s_i +  \frac{JNm^2}{2} - J m \sum_i s_i  = - (B + Jm ) \sum_i s_i + \frac{JNm^2}{2}. 
+\] 
+so our partition function is reduced to the partition function for the neighbour Ising model with $q = 1$: 
+\[
+	Z =  e^{ - \beta J N m^2 / 2}2^N \cosh^N(\beta(J m + B)). 
+\]
+We verify the identity in the question by completing the square in the exponent 
+\begin{align*}
+	\sqrt{\frac{N \beta J }{2 \pi}} \int_{ -\infty}^{\infty} e^{ - N \beta J x^2 / 2 + \alpha \beta J x } dx&= \sqrt{\frac{N \beta J }{2 \pi}} \int_{- \infty}^{\infty} e^{ - \frac{N \beta J }{2} ((x - \frac{\alpha}{N})^2 - \frac{\alpha^2}{N^2})}dx \\ 
+		&= \sqrt{\frac{N \beta J }{2 \pi}} e^{\frac{\alpha^2 \beta J }{2 N }} \int_{ - \infty}^{\infty} e^{ -\frac{N \beta J }{2} (x - \frac{\alpha}{N})^2} \\
+		&= e^{\frac{\alpha^2 \beta J }{2 N }}
+\end{align*}
+
+
+
+Our energy is of the form 
+\[
+	E = - B\sum_i s_i - \frac{J}{2N}\left( \sum_i s_i \right) \left( \sum_j s_j \right)  
+\]
+but to use mean field theory, we set 
+\[
+	\sum_i s_i = Nm \implies E = - BNm - \frac{JNm^2}{2} 
+\]
+so we have that for a given magnetisation $m$, 
+\[
+	e^{ - \beta E(m) } = \exp(\beta B Nm + \frac{\beta JNm^2}{2}) 
+\]
+From the previous identity, we have that setting $\alpha = 0$ gives us the identity 
+\[
+	1 = \sqrt{\frac{N \beta J}{2 \pi}} \int_{ - \infty}^{\infty} \, dx \exp( - N \beta J \frac{x^2}{2}) 
+\]
+We do a clever translation by the constant $m$ so that 
+\[
+	1 = \sqrt{\frac{N\beta J}{2 \pi}} \int_{-\infty}^\infty dx \, e^{ - N \beta J (x - m)^2 / 2}
+\]
+and once we translate this, we can multiply this expression by $e^{ - \beta E(m)}$
+\[
+	e^{ - \beta E(m)} = \int_{ - \infty}^\infty dx \, e^{ - N \beta J (x - m)^2  / 2}e^{\beta B N m}e^{\beta J N m^2 / 2}.
+\]
+which simplifies to 
+
+
+\[
+e^{ - \beta E(m)} = \sqrt{\frac{N \beta J}{2 \pi}} \int_{ - \infty}^{\infty} dx \, e^{ - \frac{N \beta J x^2}{2}}e^{ - \beta Nm(J x + b)}  
+\]
+We rewrite this in terms of our decoupled spin sums to get 
+\[
+e^{ - \beta E} = \sqrt{\frac{N \beta J }{2 \pi}} \int_{ - \infty}^\infty e^{ - N \beta J x^2 / 2}e^{ - \beta \left(  \sum_i s_i \right) (Jx + B)}
+\]
+
+Our partition function $Z$ comes from all possible configurations of our spins. 
+\[	
+Z = \sqrt{\frac{N \beta J}{2 \pi}} \int_{-\infty}^{\infty} dx \, e^{ - N \beta J x^2  / 2} \sum_{\{ s_i \}} e^{ - \beta \sum_i s_i (Jx +B)} 
+\]
+We can use the fact that we have a separable form here to factor out the sum over all possible spin configurations. 
+\[	
+\sum_{\{ s_i \}} e^{ - \beta \sum_i s_i (Jx + B) } = \prod_{i}\sum_{s_i = \pm 1} e^{ - \beta \sum_i s_i (Jx + B)} = (2 \cosh (Jx  +B))^N 
+\]
+Substituting this into out integral gives us the result that we want.
+Items:
+\begin{itemize}
+\item Tried expanding the exponential representation of cosh binomially. 
+\item Messing around with substitutions?
+\end{itemize}
+
+\pagebreak 

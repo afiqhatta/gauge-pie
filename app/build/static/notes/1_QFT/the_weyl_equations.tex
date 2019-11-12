@@ -1,0 +1,24 @@
+\subsection{The Weyl equations} 
+Let's go back to our Dirac equation, but this time let's view it in the context of our spinor which we split up. We have that \[ 
+\left( i \gamma^0 \partial_0 - \gamma^i \partial_i - m  \right) \psi  = 0 \] 
+
+Now, we can write this in the form of a matrix equation, bearing in mind that $m$ acts as a scalar multiple of the identity. Thus, we have the matrix equation \[ 
+\begin{pmatrix} 
+-m & i (\partial_0 + \sigma \cdot \nabla ) \\
+i(\partial_0 - \sigma \cdot \nabla) & -m 
+\end{pmatrix} 
+\begin{pmatrix} 
+\psi_L \\ \psi_R \end{pmatrix} = 0 
+\]
+In this case, we've mixed the components $\psi_R$ and $\psi_L $. However, we can separate out the mixing by exploring the massless case with $m = 0$, which reduces us to the equations 
+\begin{align*}  
+( \partial_0 + \sigma \cdot \nabla ) \psi_R & = 0 \\ 
+( \partial_0 - \sigma \cdot \nabla ) \psi_L & = 0 
+\end{align*} 
+We can simplify this notation even further by 'extending' out $\sigma$, and defining the objects 
+\[ \sigma^\mu = (1, \sigma ), \quad \bar{ \sigma}^\mu = ( 1,  - \sigma ) \] 
+Which gives us a condensed form of the equations to read \begin{align*}  
+\sigma^\mu \partial_\mu \psi_R & = 0 \\
+\bar{\sigma}^\mu \partial_\mu \psi_L & = 0 
+\end{align*} 
+

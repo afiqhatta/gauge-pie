@@ -1,0 +1,68 @@
+\subsection{Question 11} 
+The point of this question is to show that a basis which 
+is coordinate induced is equivalent to it's commutator vanishing. 
+Showing one way is straightforward, we have that 
+\[
+	[ e_\mu, e_\nu ] = \frac{\partial ^ 2 }{\partial x^\nu x^\mu  } - \frac{\partial ^ 2 }{\partial  x^\mu x^\nu} = 0   
+\] This is by the symmetry of mixed partial derivatives. 
+
+Now we go the other way. From the condition that 
+\[
+	[ e_\mu, e_\nu ] = \gamma \indices{^\rho _{\mu \nu }} e_{ \rho } 
+\] We expand this out 
+\[
+	[ e \indices{ _\mu^\rho} \frac{\partial }{\partial x^\rho}, e \indices{_\nu^\lambda} \frac{\partial }{\partial  x^\lambda} ] = \gamma \indices{ ^\rho_{ \mu \nu } } e \indices{ _ \rho ^ \lambda } \frac{\partial }{\partial x ^\lambda}        
+ \] Writing this out explicitly and cancelling cross terms
+ give 
+ \[
+  e \indices{ _ \mu ^ \rho } \frac{\partial e \indices{ _ \nu ^ \lambda }  }{\partial x ^ \sigma }  \frac{\partial }{\partial x ^ \lambda }  - e \indices{ _ \nu ^ \lambda } \frac{\partial e \indices{ _ \mu ^ \sigma }  }{\partial x ^ \sigma }  \frac{\partial }{\partial x ^ \sigma } = \gamma \indices{ ^ \sigma _{ \mu \nu } } e \indices{ _\sigma ^ \lambda } \frac{\partial }{\partial x ^ \lambda }      
+ \] 
+ Upon relabelling dummy indices (for example replacing $ \sigma \to \lambda $ in the second term), we end up 
+ with the expression 
+   \[
+  e \indices{ _ \mu ^ \sigma } \frac{\partial  e \indices{ _ \nu ^ \lambda }  }{\partial  x^ \sigma  }\frac{\partial }{\partial x^ \lambda }  - e \indices{ _ \nu ^ \sigma } \frac{\partial  e \indices{ _ \mu ^ \lambda }  }{\partial x ^ \sigma }  \frac{\partial }{\partial  x^ \lambda } = \gamma \indices{ ^ \sigma _{ \mu \nu } } e \indices{ _ \sigma ^ \lambda } \frac{\partial }{\partial  x^ \lambda }     
+\]  But, we can just factor out our partials $ \frac{\partial }{\partial  x^ \lambda } $ to get our required expression.  Now, we appeal to the fact that 
+\[
+e \indices{ _ \mu ^ \rho } f \indices{ ^ \nu _ \rho } = \delta \indices{ _ \mu ^ \nu }   
+\] Differentiating both sides, we have that 
+\[
+f \indices{ ^ \nu _ \rho } \frac{\partial  e \indices{_ \mu ^ \rho }  }{\partial x^ \gamma }  + e \indices{ _ \mu ^ \rho } \frac{\partial f \indices{ ^ \nu _ \rho }   }{\partial x^ \sigma }  = 0   
+\] Hence, 
+\begin{align*}
+  f \indices{ ^ \nu _ \rho } \frac{\partial e \indices{_ \mu ^ \rho }  }{\partial  x ^ \sigma 	 } &=  e \indices{ _ \mu ^ \rho } \frac{\partial f \indices{ ^ \nu _ \rho }  }{\partial x^ \sigma }   \\
+  e \indices{ _ \nu ^ \tau } f \indices{ ^ \nu _ \rho } \frac{\partial  e \indices{_ \mu ^ \rho }  }{\partial x^ \sigma } &=  - e \indices{_ \nu ^ \tau } e \indices{ _ \mu ^ \rho } \frac{\partial f \indices{ ^ \nu _ \rho }  }{\partial x^ \sigma }     \\
+  \frac{\partial  e \indices{ _ \mu ^ \tau }  }{\partial x^ \sigma  }  &=  - e \indices{_ \nu ^ \tau  } e \indices{ _ \mu ^ \rho } \frac{\partial  f \indices{ ^ \nu _ \rho }  }{\partial x^ \sigma }    \\ 
+\end{align*}
+Substituting this into the above, 
+\[
+ - e \indices{_ \mu ^ \sigma  } e \indices{_ \alpha ^ \lambda  } e \indices{ _ \nu ^ \beta } \frac{\partial f \indices{ ^ \alpha _ \beta  }  }{\partial x^ \sigma }  + e \indices{ _ \nu ^ \sigma } e \indices{ _ \alpha ^ \lambda } e \indices{ _ \mu ^ \beta } \frac{\partial f \indices{ ^ \alpha _ \beta }  }{\partial x^ \sigma }  = \gamma \indices{ ^ \alpha _ \mu _  \nu } e \indices{ _ \alpha ^ \lambda }       
+\] We can cancel out the $ e \indices{ _ \alpha ^ \lambda } $. 
+We get the 
+\[
+ - e \indices{ _ \mu ^ \sigma } e \indices{ _ \nu ^ \beta } \frac{\partial f \indices{ ^ \alpha _ \beta  }  }{\partial x^ \sigma }  + e \indices{ _ \nu ^ \alpha } e \indices{ _ \mu ^ \beta } \frac{\partial  f \indices{ ^ \alpha _ \beta }  }{\partial x^ \sigma } = \gamma \indices{ ^ \alpha _ \mu _\nu }      
+\] Contraction with $ f \indices{ ^ \mu _ \lambda } f \indices{ ^ \nu  _ \sigma}   $, 
+gives the result, 
+\[
+	\frac{\partial  f \indices{ ^ \rho _ \sigma  }  }{\partial x^ \lambda } - \frac{\partial f \indices{ ^ \rho_ \lambda  }  }{\partial  x^ \sigma }  = - \gamma \indices{ ^ \rho _{ \mu \nu } } f \indices{ ^ \mu _ \lambda } f \indices{ ^ \mu _ \sigma }    
+\] However, this implies that 
+each of $ f ^ \mu $ is closed since if we have $ [ e_\mu, e_\nu] = 0 $, 
+then $ \gamma  =0 $ for all indices. 
+So, we get that  $ d f^\mu = 0 $ for all  $ \mu $ by 
+the above formula. 
+Hence, the Poincare lemma states that we can write 
+ \[
+ f \indices{ ^ \mu _ \nu }  = \partial  _ \nu \eta ^ \mu  
+\] Hence, $ \eta ^ \mu $ are a set of functions.  Our condition that 
+\[
+	\delta \indices{ _ \mu ^ \nu } =  e \indices{_ \mu ^ \alpha } f \indices{^ \nu _ \alpha } = e \indices{_ \mu ^ \alpha } \partial  _ \alpha \eta ^ \nu    = e_{ \mu } ( \eta ^ \nu ) 
+\]  Hence, relabelling $ \eta ^ \nu = x^ \nu $ gives us a set of coordinates 
+given that  $ \eta  ^ \nu $ are independent. 
+However, we know this is the case since if we have a linear sum 
+\[
+ \sum_{ \mu }   \lambda _ \mu \eta ^ \mu = 0 
+\] contracting with $ e $ gives each coefficient $ 0$. 
+Hence, we have that  $ n  $ of these are linearly independent. Thus, 
+the collection $ \eta ^ i $ is a map from  $ \mathcal{ M } \to \mathbb{ R} ^ n$ is
+injective, and since we have $ n $ of these maps, they span (by the Steinitz exchange lemma) they also span. Hence, we have a homeomorphism, and thus $ \left\{  \eta ^ i  \right\} $ is a set of coordinates. 
+Thus, the corresponding $ e_ \nu $ are a set of coordinate induced basis vectors. 
+

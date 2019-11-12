@@ -1,0 +1,132 @@
+\subsection{Question 8} 
+The components of the exterior derivative of a $ p-$ form consists of the antisymmetrisation of 
+$ p + 1 $ indices. Suppose that m $ \omega $ is a $ p- $ form. Then 
+\[
+( d\omega  )_{\mu_{1} \mu_2 \dots \mu_{p + 1 }} = ( p + 1 ) \partial_{[  \mu_1} \omega_{ \mu_2 \dots \mu_{ p + 1} ] } 	
+\] Thus, we can expand the components of the exterior derivative of this object as 
+\[
+	( d ( d \omega  ))_{ \mu_1 \dots \mu_{p + 1}} = ( p + 2 )( p + 1) \partial_{ [ \mu_1 } \partial_{ [  \mu_2 } \omega _{\mu_3 \dots \mu_{ p + 2 } ]]  }
+\] Now, we have a tricky thing to deal with here. 
+We have an antisymmetrisation nested inside of an antisymmetrisation. 
+We claim that nesting an antisymmetrisation inside an antisymmetrisation 
+is just the larger antisymmetrisation: 
+\[
+X_{ [ \mu_1 [ \mu_2 , \dots \mu_{ p } ]] } = X_{[ \mu_1 \mu_2 \dots \mu_{ p}]}
+\] We can prove this by expanding out an antisymmetrisation based on 
+just the $ \mu_1 $ index first. 
+
+\begin{align*}
+X_{[ \mu_1 \dots \mu_{p } ] } &=    \frac{1}{ p ! } \big (  \sum_{\sigma \in S_{p - 1}} \epsilon ( \sigma ) X_{\mu_1 \mu_{ \sigma ( 2)  } \dots \mu_{ \sigma ( p ) } } \\
+&- \sum_{ \sigma \in S_{ p - 1}} \epsilon( \sigma ) X_{ \mu_{ \sigma ( 2 ) } \mu_1  \mu_{ \sigma ( 3)  } \dots \mu_{ \sigma ( p ) }} \\
+      & \vdots \\
+      & + ( - 1)^{p + 1 } \sum_{ \sigma \in S_{ p + 1  } } \epsilon ( \sigma ) X_{ \mu_{ \sigma ( 2)  } \mu_{ \sigma( 3)  }  \dots \mu_{ \sigma ( p ) } \mu_1 }  \big )  
+\end{align*}
+So, when we nest antisymmetrisations, we have terms in the sum 
+that look like
+\[
+X_{ [ \mu_1 [ \mu_2 \dots \mu_{p } ]]} =\sum_{ \text{ similar sum as above but of } } \frac{1}{ p ! } \sum_{ \sigma \in S_{ p - 1}  } \epsilon ( \sigma ) X_{ \mu_1 [ \mu_{ \sigma ( 2)  } \dots \sigma ( p )  ] } 
+\] But, expanding out the definition, we have that this term 
+is just equal to 
+\[
+= \frac{1}{ p ! } \frac{1}{ ( p - 1 )! } \sum_{ \sigma' \in S_{ p - 1 }  } \sum_{ \sigma \in S_{ p - 1  } } \epsilon( \sigma' ) \epsilon ( \sigma )   X_{ \mu_1  \mu_{ \sigma' \sigma ( 2)  } \dots \mu_{  \sigma' \sigma ( p )   }  } 
+\] But, we can compose each pair of permutations and write $ \sigma '' = \sigma' \sigma $, and since 
+the sign operator for permutations is a homomorphism, 
+we can write that  $ \epsilon ( \sigma ) \epsilon ( \sigma ' ) = \epsilon ( \sigma'' ) $. But, 
+we have to be careful to make sure to count twice. Hence the term above is 
+\[
+\frac{1}{p ! } \frac{1}{ ( p - 1) ! } \sum_{ \sigma'  } \sum_{ \sigma } \epsilon ( \sigma'') X_{ \mu_1 \mu_{ \sigma '' ( 2) } \mu_{ \sigma'' ( 3 ) } \dots \mu_{ \sigma '' ( p ) }}
+\] Now, we can relabel the $ \sigma $ index as $ \sigma''$, and so we're just summing 
+over and extra $ \sigma' $. This gives
+\[
+ \frac{1}{p ! } \frac{1}{ ( p - 1 ) ! } \sum_{ \sigma '  } \sum_{ \sigma'' } \epsilon( \sigma '' )  X_{ \mu_1 \mu_{ \sigma '' ( 2) } \mu_{ \sigma'' ( 3 ) } \dots \mu_{ \sigma '' ( p ) }} = \frac{1}{p ! } 
+\sum_{ \sigma '' } X_{ \mu_1 \mu_{ \sigma '' ( 2) } \mu_{ \sigma'' ( 3 ) } \dots \mu_{ \sigma '' ( p ) }} 
+\] But this just removes the effect of an antisymmetric tensor! Hence, given a set of indices, we have
+\[
+[ [ \mu_1 \mu_2 \dots \mu_{ p } ] ] = [ \mu_1 \mu_2 \dots \mu_{p } ] 
+\] So, the nested indices have no effect. 
+Thus we have that 
+\[
+d ( d \omega  )_{ \mu_1 \dots \mu_{ p + 2 }  } = ( p + 2) ( p + 1 ) \partial_{ [ \mu_1  } \partial_{ [ \mu_2  } \omega _{ \mu_3 \dots \mu_{ p + 2  } ] ] }  = ( p + 2 )( p + 1) \partial _{ [ \mu_1 } \partial_{ \mu_2  } \omega _{ \mu_3 \dots \mu_{ p + 2 }  ] } = 0
+\] By antisymmetry of mixed partial derivatives. 
+
+
+Now, we'd like to show a 'product rule for the exterior  
+derivatives and one forms. 
+\[
+d (\omega  \wedge  \epsilon )  = d\omega  \wedge  + ( -1) ^{ p } \omega  \wedge  d \epsilon  
+\] The right hand side in components, 
+by definition is 
+\[
+	d (  \omega  \wedge  \epsilon)_{\gamma \mu_1 \dots \mu_{p } \nu_1 \dots \nu_{ q } } = \frac{ ( p + q + 1 ) ( p + q ) ! 	 }{ p ! q ! } \left( \partial_{ [ \gamma } \omega _{ \mu_1 \dots \mu_{ p } } \epsilon_{ \nu_1 \dots \nu_{ q } ] }  + \omega _{ [ \gamma \mu_1 \dots \mu_{ p - 1 } } \partial_{ \mu_{ p  }  } \epsilon_{ \nu_1 \dots \nu_{ q   } ]  } \right)   
+\] Let's see what we've done here. 
+We used the product rule to expand out the derivatives, 
+but when doing this we need to preserve our order of 
+our indices, which is why we kept it in this form. 
+
+Now, we reorder the indices $ \gamma, \mu_1 , \dots \mu_{ p} $. 
+We do the procedure 
+\[
+( \gamma, \mu_1, \mu_2 , \dots , \mu_{p } ) \to ( -1 ) ( \mu_1 , \gamma , \mu_2 , \dots \mu_{ p } ) \to \dots \to ( -1)^{ p } ( \mu_1 , \mu_2 \dots \mu_{ p }, \gamma ) 
+\] 
+So, we've picked up a factor of $ ( - 1)^{ p }$. 
+Thus, when we stick in an extra set of antisymmetric 
+indices (which doesn't change things as we showed earlier), 
+we get that our expression above is equal to  
+\[
+\frac{ ( p + q + 1 )! }{ p ! q !  } \partial_{ [ \gamma  } \omega  _{ \mu_1 , \dots \mu_{ p }   } \epsilon_{ \nu_1 \dots \nu_{ q } ] } + ( -1)^{ p } \frac{ ( p + q + 1 )! }{ p ! q !  } \omega _{ [ \mu_1 , \dots \mu_{ p } } \partial_{  \gamma  } \epsilon_{ \nu_{1 }, \dots \nu_{q } ]} 
+\] Now, we substitute our expression for an 
+exterior derivative. 
+The above expression is equal to 
+\begin{align*}
+ & = \frac{ ( p + q + 1 )! }{ p ! q ! } \frac{1}{ ( p + 1 ) } d\omega _{  [ \gamma \mu_1 \dots \mu_{ p } } \epsilon_{ \nu_1 \dots \nu_{ q } ] } +  ( - 1) ^{ p }\frac{ ( p + q + 1 ) !}{ p ! q ! } \frac{1}{ ( p + 1 ) ! } \omega _{ [ \mu_1 \dots \mu _{ p } } d \epsilon_{ \nu 1 \dots \nu _{ q } ]    } \\
+ &= \frac{ ( p + q + 1 )! }{ ( p  + 1 ) ! q ! } ( d \omega)_{ [ \gamma \mu_1 \dots \mu_{ p } } \epsilon_{ \nu_1 \dots \nu_{ q  } ]  }  +  ( - 1)^ p \frac{ ( p + q + 1 ) ! }{ p ! ( q + 1 ) ! } \mu_{ [ \mu_1 \dots \mu _{ p }  } d \epsilon_{ \gamma \nu_1 \dots \nu_{ q } ] }
+\end{align*} 
+But these are explicitly the components of what we 
+are looking for. Hence, we've shown that 
+\[
+d ( \omega  \wedge  \epsilon )  = d \omega \wedge  \epsilon + ( - 1)^ p  \omega  \wedge  d \epsilon 
+\] 
+Finally, we wish to show that a pull back of the 
+one form $ \omega  $ , denoted as $\psi^* \omega $ from 
+the manifold $ M $ to $ N $ commutes with our exterior derivative. 
+In other words, we wish to show that 
+\[
+d ( \psi^* \omega  ) = \psi^ * ( d \omega)   
+\] We do this by expanding the components explicitly  first. We have 
+that 
+\begin{align*}
+d ( \psi ^* \omega  )_{ \nu \mu_1 \dots \mu_{ p } } &= \partial_{ [ \nu }( \psi^* \omega  )_{ \mu_1 \dots \mu_{ p ] }} \\
+						    &= \frac{\partial  }{\partial x^{ [ \nu }} \frac{\partial y^{ \alpha 1 } }{\partial x^{ \mu_1 }} \dots \frac{\partial  y^{ \alpha_{ p }}}{\partial  x ^{ \mu_{ p } ] }} \omega _{ \alpha_1 \dots \alpha_{ p }}   
+\end{align*}
+
+We were careful here to ensure that, since $ \psi^* \omega  $ lives in 
+the manifold $M $, we need to differentiate with respect to the coordinates 
+$ x^{ \alpha }$. 
+Now, here we used the fact that for a general p-form, our components 
+change like
+\[
+( \psi^* \omega  )_{ \mu_1 \dots \mu_{p }} = \frac{\partial  y^{\alpha_1 } }{\partial x^{ \mu_1 }} \dots \frac{\partial y^{\alpha_{p } } }{\partial  x^{ \mu_{ p }}}  \omega _{ \alpha_1 \dots \alpha_{ p }} 
+\] Since we have one differential as $ \frac{ \partial }{ \partial x^{ \nu  }}$,
+we can use the chain rule to expand this term out, giving that 
+the above expression is equal to 
+\[
+\frac{\partial  }{\partial  y ^{ \beta   }  } \frac{\partial  y^{ \beta  }  }{\partial x^{ [ \nu  }  }  \frac{\partial  y ^{ \alpha_1   }  }{\partial  x^{ \mu_1   }} \dots  \frac{\partial y^{ \alpha_{ p   } }}{\partial x^{ \mu_{ p } }  } \omega _{ \alpha_1 \dots \alpha_{ p } ]} = \frac{\partial y ^{ \beta   }}{\partial x^{ [ \nu  } } \frac{\partial  y^{ \alpha_1  }}{\partial x^{ \mu_1  } }  \dots \frac{\partial  y ^{ \alpha_{ p  }}}{\partial x^{ \mu_{ p   } ]  }} \frac{\partial }{\partial  y ^{ \beta   }  }  \omega _{ \alpha_1 \dots \alpha_{ p }}    
+\] Now, this step deserves some 
+explanation. By symmetry of mixed 
+partial derivatives, 
+we're allowed to commute the  $ \frac{\partial  }{\partial y^{ \beta  } } $ term past everything. Because even though the product rule dictates that this has to differentiate each term in this big product, the first terms are derivatives, so by symmetry of mixed partial derivatives inside an antisymmetric tensor, all these extra terms go to zero. 
+
+Finally, due to our ability to relabel dummy indices, one can show that for a vector contraction of the form 
+\[
+	X \indices{ ^{ \mu_1 }_{ \nu_1 }} \dots X \indices{ ^{ \mu_{ n  } }_{ \nu_{ n }  }} Y_{ [  \mu_1 \dots \mu_{ n  } ] }  = X \indices{ ^{ \mu_1 }_{ [ \nu _{ 1 }}} \dots X \indices{ ^{ \mu_1 } _{ \mu_{ n } ] } } Y_{ \mu_1 \dots \mu_{ n }}   
+\] 
+This means that indeed, we can shift the antisymmetric terms to the right most indices, giving 
+\[
+	d ( \psi ^ * \omega  )_{ \nu \mu_1 \dots \mu_{ p }  } = \frac{\partial  y ^{ \beta } }{\partial x^{ \nu  } } \frac{\partial  y ^{ \alpha_1   }}{\partial x^{ \mu 1 }} \dots \frac{\partial  y ^{ \alpha_p  }}{\partial x^{ \mu_{ p  } }} \frac{\partial  }{\partial y ^{ [\beta   }} \omega _{ \alpha_1 \dots \alpha_{ p } ]}  
+\] But indeed, these are the components  
+of the pulled back one form 
+\[
+	\psi^ * d( \omega  ) 
+\] So we're done! 
+
+

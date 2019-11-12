@@ -1,0 +1,100 @@
+\subsection{The Landau-Ginzburg approach} 
+Now that we've covered using $m$ with the Ising model as an order parameter in Landau theory, we can generalise this a bit further. How do we modify this argument to move away from lattices and into a continuous space with some dimension say $\mathbb{R}^d$? If we could achieve this, then we would be able to make sense of expressions such as $m(\mathbf{x}), \quad \mathbf{x} \in \mathbb{R}^n$. 
+\[ 
+m \rightarrow m(\mathbf{x} ) 
+\] 
+
+To get started, we use something called a coarse-graining approach. Imagine we divide up the space $\mathbb{R}^d$ into a tiny gridframe work, and then assign some value $m_{\mathbf{i}}$ to each point in this tiny grid. We can then define 
+\[
+m(\mathbf{x}) = \frac{1}{N} \sum_{\mathbf{i}} m_\mathbf{i}
+\] where we specifically average over the nearest neighbours, close to $\mathbf{x}$. Thus, our magnetisation is from $m \in ( -1, 1 )$. To this, we can come up with a heuristic for a partition function. We can sum up our field configurations to give our partition functions
+\[ 
+Z = \sum_{m ( \mathbf{x} )} \sum_{ \{ s_i \} | m ( \mathbf{x} ) } e^{  - \beta [ s_i ] }  = \sum_{ m ( \mathbf{x} )}  e^{ - \beta F ( m ( \mathbf{x} )) } 
+\] The difference with this and what we did before is that we've added a local dependence on $m$, called this a function, and then summed over all field configurations which give this particular configuration. For this approximation to be valid, we require that these tiny grids which divide up our space are large enough to cover a large amount of atoms, but small enough so that we still have a notion of continuity when we move from grid to grid. 
+
+We're ready to promote this concept tot he path integral formulation of the partition function, by replacing the sum with an integral. 
+\[
+\mathcal{Z} = \int \mathcal{D}m(\mathbf{x})e^{ - \beta F(m)}
+\]
+In line with our usual expressions for probabilities with partition functions, we can then calculate the probability of obtaining a certain field configuration as 
+\[ 
+\mathcal{P} ( m ( \mathbf{x} ) )  = \frac{ e^{  - \beta F( m ) } }{ \mathcal{Z} } 
+\] 
+The measure
+\[
+\int \mathcal{D}m 
+\] is meant to denote an integral over all possible field configurations $m(\mathbf{x})$, is called doing a functional integral. Intuitively, this notation is justified because the sum we're doing can be rewritten as follows, where in the second sum we're summing over all points instead, and then configurations
+\[ 
+\sum_{ m ( \mathbf{x} )}   \simeq \sum_{ \mathbf{x}_i }  \sum_m m_i ( \mathbf{x}_i )  = \int dm_1( \mathbf{x}_1 ) dm_2 ( \mathbf{x}_2 ) \dots dm_m ( \mathbf{x}_m ) 
+\] 
+We can extend this even more to include $m$ being an n-dimensional vector instead of the scalar we've presented it to be here. In this case, it would our partition function would be of the form 
+\[
+\mathcal{Z} = \int \mathcal{D}  \mathbf{m}(\mathbf{x}) e^{ - \beta F(\mathbf{m})} 
+\]
+
+Okay great. Now, we're ready to try an 'construct' a theory based on some restrictions we have gained from our intuition about physical systems. by constructing a theory, we mean that we would like to construct a sensible $F ( m ( \ve{x } ) ) $, which is an integral of something.  We'll list out some guiding principles in this section. 
+
+\subsubsection*{Locality} 
+In our theory, we would only like to consider short range interactions between points in space. This means that essentially, magnetisations at different points in space shouldn't correlate with each other. This is the principle of \textbf{locality}. It means that essentially, our free energy can integrate over one variable at each specific point. This means that an expression of the form 
+\[ 
+F ( m ( \ve{x})) = \spint   f( m ( \ve{ x} )) 
+\] are  allowed, but a function that integrates over different points simultaneously like 
+\[ 
+F( m ( \ve{x}) ) = \int d^d x d^d y  \, \, f ( m ( \ve{ x} ), m ( \ve{ y} ) ) 
+\] is not allowed. Now, we did say that we can allow \textit{short range} interactions. How are these incorporated in the theory? Well, we can include gradients of $m  $, such as terms like $ \nabla m$, to encode nearest neighbour interactions. This is because philosophically, taking a gradient is like looking at the difference in magnetisation at close points on a lattice which has small spacing; 
+\[ 
+\pdif{ m }{ \ve{ x} }  = \lim_{ a \rightarrow 0 } \frac{ m ( \ve{ x} + a \hat{ \ve { x} })  - m ( \ve{ x} )  }{ a } 
+\] 
+
+\subsubsection*{Translational and Rotational Invariance} 
+Physical systems should be agnostic of whether we move them around in a translation sense, or if we rotate them about. Physical quantities should remain the same; systems shouldn't have a preferred vector or orientation. With this in mind, a condition we impose is that our form of $F(\mathbf{m})$ should be \textbf{invariant} under transformations of the type 
+\[
+\mathbf{m} \rightarrow \mathbf{m}' = R \mathbf{m} 
+\] where $R$ is some rotation or reflection in the group $O(n)$. This is because the nature of our critical phenomena should be invariant of the orientation it's in. We can't allow terms like $ \ve{ n} \cdot \nabla \ve{ m } $, for a fixed $\ve{ n} $, for example. 
+
+Since we have that $R^T R = 1, \forall R \in O(n)$, it's likely that we're permitted terms of the form 
+\[
+\mathbf{m} \cdot \mathbf{m}, \quad \nabla \mathbf{m} \cdot \nabla \mathbf{m}, \quad m^4 \dots 
+\]
+
+\subsubsection*{$\mathbb{ Z}_2 $ invariance}
+In the Ising model, we have that intuitively, our physics doesn't change if we swapped $\uparrow \rightarrow \downarrow$ and $\downarrow \rightarrow \uparrow$. This means that $\mathbb{ Z}_2 $ symmetry is manifest in our physical systems, which implies that terms in $F$ should be invariant under the transformation 
+\[ 
+m ( \ve{ x} ) \rightarrow  - m( \ve{   x} ) 
+\]
+\subsubsection*{Analyticity} 
+In physics, we rarely have to deal with functions which are not well behaved everywhere. A function is \textbf{analytic} if it has a well behave Taylor expansion in our region of interest. This means that nice polynomial functions of our order parameter such as 
+\[ 
+m ( \ve{ x} )^2, \, ( \nabla m ( \ve{ x} ) )^2, \dots 
+\] are okay. However, a term like 
+\[ 
+ \log ( m ( \ve{ x} ) ) 
+\] is not since the Taylor expansion is not well defined at $m = 0$. 
+
+\subsubsection*{The final form of a plausible free energy} 
+
+This motivates us to write an expression for our free energy as 
+\[	
+F(m) = \int d^d x\,  \alpha_2 m^2 + \gamma (\nabla m)^2 + \alpha_4 m^4
+\] where we're working to just quadratic order. 
+We have a $\mu^2$ coefficient beside $m^2 $ since, comparing with our mean field approximation we worked through earlier, we need this to me positive for the quadratic cutoff to remain valid. I'll go into more detail about this later. If our coefficient was negative then we'd have an unstable point for our magnetisation. 
+
+So far, we have a free energy which is a function of a function. Can we think of an 'extremal' function which minimises this quantity? Well, we can employ a similar approach we used in deriving the Euler-Lagrange equations, by perturbing the configuration $ m ( \ve{ x} ) \rightarrow m ( \ve{ x} ).  + \delta m  $. Doing this with our expression for free energy above, we get that 
+\begin{align*} 
+\delta F & = \spint 2 \alpha_2 m ( \delta m ) +  2\gamma \nabla m \cdot ( \delta \nabla m ) + 4 \alpha_4 m^3 ( \delta m ) \\
+	&= \spint \delta m \left( \alpha_2 m + \alpha_4 m^2  - \gamma \nabla^ 2  m \right) 
+\end{align*} 
+Thus our functional derivative of the integrand is of the form 
+\[ 	
+\frac{ \delta f }{ \delta m } = \alpha_2 m + \alpha_4 m^3  - \gamma \nabla^2 m 
+\] Thus, we have that if we want to find the field configuration $m ( \ve{ x} )$ which minimises the free energy, we need to solve the equation 
+\[ 
+\gamma \nabla^2 m = \alpha_2 m + \alpha_4 m^3 
+\] One can easily check if we assume that $m $ is constant, we 3 possible solutions depending on the sign of $\alpha_2$. 
+\[ 
+\begin{cases} 
+m = 0 & \alpha_2 > 0 \\
+m = \pm \sqrt{ \frac{  - \alpha_2 }{ \alpha_4 } } & \alpha_2< 0  
+\end{cases}
+\] 
+

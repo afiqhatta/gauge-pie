@@ -1,0 +1,24 @@
+\subsection{Question 8} 
+Given the matrices $\{T^{ij} \}_{ i, j = 1, 2 .. n}$ where the components of $T^{ij}$ is simply an 1 in the ith row and jth column (with a zero elsewhere), we want to find a set of constants $g^{ ij, kl }_mn$ such that 
+\[ 
+	[ T^{ij}, T^{kl} ] = \sum_m \sum_n g^{ ij, kl}_{mn} T_{mn} 
+\] 
+where in the left hand side, this is simply the matrix commutator. We have that in components, 
+\[ 
+ 	(T^{ij})_{\alpha \beta} = \delta^i_\alpha \delta^j_\beta
+\] 
+So, taking the components of the equation above we have the condition that 
+\[ 
+	(T^{ij})_{\alpha\gamma} (T^{kl})_{\gamma \beta}  - (T^{kl})_{\alpha \gamma} (T^{ij})_{\gamma \beta} = \sum_m \sum_n g^{ij, kl}_{mn} (T^{mn})_{\alpha \beta} \]
+In this question, we don't care about whether indices are raised or lowered, so in what follows we'll use the Einstein summation convention with all lowered indices. We find that the right hand side is just
+\begin{align*} 
+	\delta_{i \alpha} \delta_{j \gamma} \delta_{k \gamma} \delta_{ l \beta}  - \delta{k \alpha} \delta_{ l \gamma} \delta_{i \gamma } \delta_{j \beta} & = \delta_{i \alpha} \delta_{j k} \delta_{ l \beta}  - \delta_{ k \alpha} \delta_{ li } \delta_{ j \beta} \\
+	&= (T^{ il} )_{\alpha \beta} \delta^{ j k}  - (T^{ kl})_{\alpha \beta} \delta^{li} \\
+\end{align*} 
+Going into the first line on the left hand side, we've summed over $\gamma$ to contract coefficients. Comparing this with our expression for the structure constants, we find that 
+\[ 
+ g^{ ij, kl}_{ mn} = \delta_{ im} \delta_{ ln} \delta_{jk}  - \delta_{km}\delta_{jn}\delta_{ li}  = (T^{il})_{mn} \delta^{jk}  - (T^{jk})_{mn} \delta^{li} 
+\] 
+Note: we can't re-express the structure constants in terms of $ T $!  
+\pagebreak 
+

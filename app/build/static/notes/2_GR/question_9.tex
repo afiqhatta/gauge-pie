@@ -1,0 +1,38 @@
+\subsection{Question 9}
+This question shows the advantage of coming up with a 
+tensorial definition of objects first, to simplify calculations for
+components. In the case when $ p = 1 $, we set the basis  $ X_1 = e_\mu$, $ X_2 = e_\nu$. 
+Then, our definition in tensorial form gives 
+\[
+	( d\omega ) _{ \mu \nu } = d\omega( e_\mu, e_\nu ) =  e_\mu ( \omega ( e_\nu ) ) - e_\nu ( \omega ( e_\mu ) ) - \omega ( [ e_\mu, e_\nu ] ) 
+\] Now note that $ e_\mu , e_\nu $ aren't indexed components per say, 
+they're just our choice of basis vector. 
+The upshot of doing this is that by symmetry of mixed partial derivatives, 
+we have 
+\[
+ [ e_\mu , e_ \nu ] = \frac{\partial^ 2 }{\partial x^ \mu \partial x^ \nu } - \frac{\partial ^ 2 }{\partial  x^ \nu x ^ \mu }  = 0  
+\] Hence, the last term vanishes and thus 
+\[
+	( d \omega)_{ \mu \nu } = \partial _ \mu ( \omega_ \nu ) - \partial  _ \nu ( \omega _ \mu ) 
+\] In the above line we've used the fact that
+$ \omega ( e _ \mu ) = \omega_ \mu $ , which can be shown by expanding $ \omega  $ into 
+its components and covector basis. 
+Once again, when $ p = 3 $, we can still use this trick of using
+ the vector basis  $ \left\{  e_\mu  \right\}$, to forget about the 
+ commutator terms in the definition. This is because our definition of $ d \omega $ contains terms like 
+  \[
+	  \omega ( [ e_\mu , e_ \nu ] , e _ \alpha ) 
+  \] but since the commutator vanishes and $ \omega $ is multilinear, $ \omega ( 0 , e_ \alpha ) = 0 $. 
+  Thus, the only terms that are preserved from 
+  the definition is that 
+   \[
+   d\omega ( e_\mu , e_ \nu , e_ \rho ) = e _ \mu \omega ( e_ \nu , e _ \rho ) - e _ \nu \omega( e _ \rho , e_ \mu ) + e_ \rho \omega ( e_ \mu , e_ \nu ) 
+  \] Using the fact that the basis vectors are derivative terms this becomes
+  \[
+   ( d \omega)_{ \mu \nu \rho } = \partial _ \mu \omega_{ \nu \rho } - \partial _ \nu \omega _{ \rho \mu } + \partial  _ \rho \omega_{ \mu \nu } 
+  \] This is consistent with our definition that 
+  \[
+	  ( d\omega ) _{ \mu \nu \rho } = 3 \partial  _{ [ \mu } \omega_{ \nu \rho ] } = \frac{1}{2 } \sum_{ \text{anti symmetric perms }} \partial _ \mu \omega_{ \nu \rho }
+  \] Note the seemingly extraneous factor of two here, but this cancels our since 
+  $ \omega $ is a two form and therefore we count twice the number of permutations. 
+

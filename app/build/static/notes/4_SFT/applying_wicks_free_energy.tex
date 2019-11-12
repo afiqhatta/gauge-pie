@@ -1,0 +1,45 @@
+\subsection{Applying Wick's thoerem for the Free Energy} 
+
+(Change terms here since they vanish) 
+Wick's theorem gives us a way to expand out our four point
+correlation function into the symmetric sum of choices 
+of two fields. The first term non-vanishing term in the symmetric sum is 
+\[
+ \int \prod_{ j = 1 } ^ 4 d ^ d q_ j \left< \phi_{ \vec{q} _ 1 } ^ + 
+ \phi _{ \vec{q} _ 2 } ^ + \right>_ + + 
+ \left< \phi _{\vec{q} _ 3 } ^ + \phi _{ \vec{q} _ 4 } ^ +  \right>_ + 
+ \delta ^ d ( \vec{k} _ 1 + \vec{k} _ 2 + \vec{q} _ 1 + \vec{q} _ 2 ) 
+ \delta ^ d ( \vec{k} _ 3 + \vec{k}_ 4 + \vec{q} _ 3 + \vec{q} _ 4 ) 
+\]  However, the first two terms combined with the delta functions 
+yield a Green's function so that the above is 
+\[
+ \sim \int d^ d q_ 2 d ^  d q_ 4 \, 
+ G_0 ( q_ 2 ) G_0 ( q_ 4 ) \delta ^ d ( \vec{k} _ 1 + \vec{k} _ 2 ) 
+ \delta ^ d ( \vec{k} _ 3 + \vec{k} _ 4 ) 
+\] Now, integrating over the delta function this gives us 
+\[
+	\sim \int d ^ d q G_0 ( q) G_0 ( \| \vec{k} _ 1 + \vec{k} _ 2 + \vec{q} \|
+	\delta ^ d ( \vec{k} _ 1 + \vec{k} _ 2 + \vec{q} ) 
+\] This finally gives us a term for the average value $ \left< F _ I ^ 2  \right>$. 
+Substituting this into our expression, 
+\[
+ \left< F _ I ^ 2  \right> _ + \sim 
+ \begin{pmatrix} 4 \\ 2   \end{pmatrix} ^ 2 g_0 ^ 2 
+ \int 0 ^{ \Lambda  / \zeta } \prod_{ i =  1 } ^ 4 \left[  \frac{ d ^ d k _{ i } }{( 2 \pi ) ^ d  } \phi^ -_{ \vec{k} _ i } \right]
+ f ( \vec{k} _ 1+ \vec{k} _ 2 ) ( 2 \pi ) ^ d \delta ^ d ( \sum_ i \vec{k} _ i ) 
+\] By symmetry, this function $ f $ must be a function of the 
+modulus of our vectors so that 
+\[
+	f ( \vec{k} ) = \int_{ \Lambda  / \zeta } ^ \Lambda \frac{ d ^ d q }{ ( 2 \pi ) ^ d } 
+	\left[  \frac{1}{ q ^ 2 + \mu _0 ^ 2 } \frac{1}{ ( \vec{k} + \vec{q}) ^ 2 + \mu _ 0 ^ 2 } \right] 
+\] Now, we Taylor expand $ f $ to first order in $ O ( \| \vec{k} \| ) $, 
+the upshot of which makes us recover a constant term. 
+\[
+	f ( \vec{k} ) \simeq \int_{ \Lambda / \zeta  } ^ \Lambda 
+	\frac{ d ^ d q }{  ( ( 2 \pi ) ^ d } \frac{1}{ ( q ^ 2 + \mu _ 0 ^ 2 ) ^ 2 } 
+	\left[  1 + O ( \|k ^ 2 \| \right] 
+\]  This implies that our $ g_0 $ coupling constant goes like 
+\[
+	g_0 = g_0' = g_0 - 36 g_0 ^ 2 \int_{ \Lambda / \zeta } ^ \Lambda \frac{ d ^ d q }{ ( 2 \pi ) ^  d } \, 
+	\frac{1}{ ( q ^ 2 + \mu _ 0 ^ 2 ) ^ 2}
+\] 

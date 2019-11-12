@@ -1,0 +1,44 @@
+\subsection{Question 9} 
+For the first part of the question, we appeal to 
+the exact definition of what the exponential map is of a matrix. 
+
+\[
+	\text{ Exp } ( i H ) = \sum_{n=1}^{\infty} \frac{( i H ) ^ n }{ n ! }
+\] When we take the Hermitian conjugate of this object, 
+we pick up a minus sign from the $ i $, but since $ H $ is Hermitian that part 
+remains unchanged. 
+Hence, we have that 
+\begin{align*}
+	( \text{Exp} i H ) ^ \dagger &=  \sum_{ n \geq 0 } \frac{ ( - i H^\dagger ) ^ n }{ n ! } \\
+				     &=  \sum_{ n \geq 0 } \frac{  ( - i H ) ^ n }{ n ! } \\
+				     &=  \text{Exp } ( - i H )  \\
+				     &=  ( \text{ Exp } i H )^{ - 1 }
+\end{align*}
+Thus we have that $ U^ \dagger = U ^{ - 1}$. 
+Since $ H $ is Hermitian, its diagonalisable. 
+So, we can write $ H = \text{diag} ( \lambda_1 , \dots \lambda_ n ) $ 
+where $ \lambda_ i $ are eigenvalues. 
+But then, we have that since $ U = \text{Exp} ) i H ) $, 
+we have that $ U = \text{diag} ( e^{ i \lambda_1  } , \dots , e^{ i \lambda_n } ) $. 
+Hence, since our determinant is just the product of this, we
+have that 
+\[
+ \det U = \prod_{ j } e^{  i \lambda_j  } = e^{ i \sum \lambda_ j } = 1 
+\] since traceless-ness implies $ \sum \lambda_ j = 0 $. 
+Since  $ i H $ is anti-Hermitian and traceless, we have that the set 
+\[
+ \mathcal{ L } = \left\{  i H \mid H  = H^\dagger, \tr H = 0 \right\} 
+\] forms the Lie algebra $ \mathcal{ L } ( S U ( n ) ) $. 
+Moreover, the exponential map maps it to a subset of $ SU ( n ) $. 
+Thus, the inverse map takes our Lie algebra to a subset of  $ SU ( n ) $. 
+To relate this to our exponential map, 
+we have that $ \text{ Exp } : \mathcal{ L } ( U ( n ) )  $ is okay, since, 
+\begin{align*}
+	\mathcal{ L } ( U ( n ) )  & \to U ( n ) \\
+	\mathcal{ L } ( SL ( n ) ) & \to SL ( n ) \\
+\end{align*}
+
+Also: we can't pile up more
+conditions from our det condition for tracelssness since 
+our dimensions line up; so we're done. 
+\pagebreak 

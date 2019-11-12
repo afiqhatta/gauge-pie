@@ -1,0 +1,111 @@
+\subsection{Representations of Lie algebras} 
+If we let $ \lalg$ be a lie algebra of 
+dimension $ D $, we can pull out some obvious representations. 
+\begin{defn}{(Trivial Representation).} 
+	The trivial representation $ d_0 $ is the 
+	representation 
+	\[
+		d_ 0 ( X )  = 0 \quad \forall X \in \lalg \implies \dim ( d_0 ) = 1
+	\] 
+\end{defn}
+
+\begin{defn}{(Fundamental representation)}
+	If $ g   = \mathcal{ L } ( G ) $ for some
+	matrix Lie group $ G \subset \text{Mat}_n ( F) $, we define our 
+	fundamental representation 
+	\[
+	 d _ f ( X) = X, \quad \forall X \in \lalg \implies \dim ( d_ f ) = n 
+	\] 
+\end{defn}
+
+All Lie algebras have an adjoint representation, $ d_{ \text{Adj }}$. 
+Our dimension of this representation is 
+\[
+	\dim ( d_{ \text{ Adj } } ) = \dim ( \lalg )  = D
+\]  For all $ X \in \lalg  $ we define a linear map 
+\[
+	\ad_X : \lalg \to \lalg, \quad Y \in \lalg \mapsto \ad_ X( Y ) = [ X, Y ] \in \lalg
+\] We have that $ \ad_ X$ is equivalent to a $ D \times D $ matrix. 
+We can choose a basis 
+\[
+ \mathcal{ B } = \left\{  T ^ a , a = 1 , \dots d  \right\} 
+\] Expanding out Lie algebra components 
+in terms of this basis, 
+\[
+ X = X_ a T ^ a , \quad Y = Y _ a T ^ a 
+\] Expanding out our Lie algebra components 
+in terms of structure constants 
+gives us 
+\[
+ [ X, Y ] = X_ a Y _ b [ T ^ a, T ^ b ] = X_ a Y _ b f ^{ ab } _ c T ^ c 
+\] then, we have that 
+\[
+ [ \ad _ X ( Y ) ] _ c  = ( R_ X ) ^ b _ c Y _ b \implies ( R_ X ) ^ b _ c = X_ a f ^{ ab } _ c 
+\] Our adjoint representation 
+is hence defined by 
+\[
+	d_{ \text{ adj } } ( X) = \ad _ X \forall X \in \lalg
+\] This is given by components 
+\[
+	[ d_{ \text{ Adj } } ( X) ] ^ b _ c = ( R_ X ) ^ b _ c \forall X \in \lalg 
+\] 
+For a Lie algebra $  \mathcal{ g}$ is a representation $ d $ 
+ \[
+	 d : \mathcal{ g  } \to \text{Mat}_n ( F )
+\]  such that 
+\begin{enumerate}
+	\item $ [ d( X_1 ) , d ( X_2 ) ] = d ( [ X_1 , X_2 ] ) , \quad \forall X_1, X_2 \in \mathcal{ g }$ 
+	\item linearity such that $ d ( \alpha X_1 + \beta X_ 2 ) = \alpha d ( X_1 ) + \beta d ( X_2 ) , \quad \forall X_1, X_2 \in \mathcal{ g } , \alpha , \beta \in F $
+\end{enumerate}
+The dimension of our representation is just the 
+dimension of our matrices involved. 
+As above, they'll both be $ n $ dimensional representations.
+Our representations (matrices) act as linear maps on a vector space 
+\[
+ V \simeq F^ n 
+\]  and this is known as our representation space. 
+Every representation comes with a representation space. 
+Now, if we have a representation of our Lie group, 
+there is a direct relation between representations of $ G $ and of 
+$ \mathcal{ L } ( G ) $. Take a representation $ \mathcal{ D } $of a
+matrix Lie group $ G $, and for  $ X in \mathcal{ L } ( G ) $, define a curve
+\[
+	C_ X : \mathcal{ J } \subset \mathbb{ R} \to G, t \in \mathbb{ R} \mapsto g_X ( t) 
+\] with 
+\[
+ g_X ( t) = I + t X + \dots 
+\] Using this, 
+\[
+	d ( X) = \frac{d }{ dt } ( D ( g ( t ) ) \mid_{ t = 0 } \in \text{Mat}_n ( F) 
+\] 
+
+
+Representations are maps from groups (in this context we'll be talking about Lie groups), to some set of maps which act on a vector space. Representations respect group structure, and can be viewed as group actions on a vector space, but they have the additional condition that these maps must be \textbf{linear} maps on the vector space. Representations are important because they allow us to write down possible matrix representations of Lie groups or Lie algebras, giving us a conduit to study their properties further. We denote a representation $D$ of some group $G$ as $D(G)$, and for elements $g \in G $ their corresponding representation is denoted $D(g) \in D(G)$. 
+
+Since representations are group actions, we have that $D(G) V = V $ for any given vector space $V $. More importantly, we require that representations respect group structure by asserting that
+\[
+D(g_1 g_2) = D(g_1)D(g_2), \quad \forall g_1, g_2 \in G  
+\]
+With this property once can show that, as is true of group actions, that $D(g)^{-1} = D(g^{-1}) $ and that $D( e) = I$, the identity matrix acting on the vector space. 
+The fact that a representations of a group element are linear maps on a given vector space $V$, imposes the condition that \[ D(g)(\alpha \mathbf{v} + \beta \mathbf{u} ) = \alpha D(g) \mathbf{v} + \beta D(g) \mathbf{u} \quad  \forall g \in G, \, \forall \mathbf{u}, \mathbf{v} \in V \] 
+We call the dimension of $V$ the dimension of the representation. Thus if a representation is $N$ dimensional, then $D( G) \leq GL(N ) $, the group of invertible matrices over a vector field. 
+
+A representation can also be interpreted as a group homomorphism from the original group $G$ to the space of linear maps on the vector space $GL (N) $. If this map is injective, then we call the representation a \textbf{ faithful } representation. In other words, a group representation is faithful when $D(g) = I \iff g = e \in G$. 
+
+To summarise, a representation is a linear group action on a vector space. It has a dimension (which may be finite or infinite), corresponding to the dimension of the associated vector space $V$. 
+
+\subsubsection{ Examples of representations of the additive group on the reals $\left( \mathbb{R}, + \right) $} 
+We'll now cover some examples of representations of the group of real numbers $\mathbb{R}$, under addition. Since it's a group action, we require that $D$, the representation, satisfies $D( \alpha + \beta ) = D( \alpha) \cdot D( \beta ) \,\, \forall \alpha, \beta \in \mathbb{ R} $.  Our first example would be the representation 
+\begin{align*} 
+D:\, &  \mathbb{R} \rightarrow \mathbb{ R} \\ 
+& \alpha \mapsto \exp ( \alpha )    
+\end{align*} 
+This is a 1-dimensional representation because we've respected the group structure, and the vector space $\mathbb{ R} $ is one dimensional. The action is also faithful since $\exp (\alpha ) = 1$ (the multiplicative identity) when $\alpha = 0$. On the other hand, one can check that even though
+\begin{align*} 
+D: \, \, &  \mathbb{ R} \rightarrow SL_2 ( \mathbf{R} ) \\
+& \alpha \rightarrow \begin{pmatrix} \cos \alpha & - \sin \alpha \\ 
+\sin \alpha & \cos \alpha \end{pmatrix}  
+\end{align*} 
+is a valid representation (which one can check using double angle formulae), it's not faithful because $D(2 \pi n )  = I_2 \, \,  \forall n \in \mathbb{Z} $. This representation is two dimensional.  
+
+

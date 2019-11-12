@@ -1,0 +1,187 @@
+\subsection{Examples of derived Lie Algebras}
+Throughout this section examples, we will derive examples of 
+the Lie algebras we can farm from Lie groups. 
+We will follow the same recipe. We take our favourite 
+matrix Lie group, and generate a smooth curve $ g ( t) $ 
+in this group. 
+
+Then, we take a condition or equation from our definition of 
+our Lie group, then differentiate this at $ t = 0$. 
+This should give us a sufficient condition on our corresponding 
+Lie algebra.
+
+Before we go into this, we'll prove an important identity. 
+This is the fact that the derivative of the determinant 
+function of a matrix is the trace.
+More explicitly, we prove the claim that 
+\[
+ \det ( I + t A ) = I + t \tr A + O ( t^ 2 ) 
+\] where $ I, A \in \text{ Mat } _ n  ( F) $.
+This can be shown by recalling the definition of the determinant,
+that 
+\[
+	\det B = \sum_{ \sigma \in S _ n } \epsilon ( \sigma ) \prod_{ i = 1 } ^ n A _{ i \sigma ( i ) }
+\] In components, 
+we have that 
+\[
+ ( I + t A)_{ ij } =  \delta_{ ij } + t A_{ ij }
+\] Substituting this into our expression above, 
+we have that 
+\[
+	\det ( I + tA )  = \sum_{ \sigma \in S_n } \epsilon ( \sigma) \prod_{ i =1 } ^ n ( \delta_{ i \sigma ( i ) } + t A_{ i \sigma ( i ) } ) 
+\] The trick here is to now separate from the sum our 
+identity permutation, and leave everything else. 
+Hence, our expression reads 
+\[
+	\det ( I + t A )  = \prod_{ i = 1 } ^ n ( 1 + t A_{ ii } ) + \sum_{ \sigma \neq e } \prod_{ i = 1 } ^ n ( \delta_{ i \sigma ( i ) } + t A_{ i \sigma ( i ) } ) 
+\] Now, in the latter sum, we have that 
+if a permutation is not the identity, it must 
+contain a transposition. That means at least two terms in the product 
+have $ \delta_{ i \sigma ( i ) }  $ vanishing. This means that 
+everything in this product is at least $ O ( t^ 2 ) $. 
+Furthermore, expanding out the first product, our only term 
+of order  $ t $ is $ \sum A_{ ii } $. Hence we have that 
+\[
+ \det ( I + t A ) = I + t \tr A + O ( t^ 2 )
+\] 
+
+\subsubsection{$ SO ( n ) $ to $ \mathcal{ L } ( SO ( n ) ) $} 
+Consider the group $ SO ( n ) $. Take a curve 
+\[
+g ( t)  = R( t) \in SO ( n ), \quad \forall t \in \mathcal{ I } \subset \mathbb{ R}, \quad  R ( 0 ) = I_n
+\] A thing to note: everywhere on this smooth curve, $R( t) $, through 
+our Lie group, we have that $ \det (R( t) )  = 1$. This is because of continuity.
+We have that  $ \det ( R ( 0 ) )  = 1$. Hence, if there
+exists a  $ t^ * $ such that  $  \det ( R( t^ * ) ) = - 1$, this means that the 
+smooth curve
+ \[
+ \det \circ R : I \rightarrow \{ -1 , + 1 \} 
+\] jumps from $ 1 $ at $ t = 0  $  to $ -1 $ at $ t = t ^ * $. 
+This is a contradiction since  $ \det  $ and $ R $ are smooth. 
+
+By our orthogonality condition we have that
+\[
+R ( t) ^ T R( t)  = 1_, \quad \forall t \in \mathcal{ I }
+\] Now, the trick to get the Lie algebra from this is
+to differentiate with respect to our parameter $ t$. 
+\[
+\dot { R} ^ T ( t) R( t) + R^ T ( t) \dot{ R} ( t)  =0, \quad  \forall t \in \mathcal{ I }
+\] If we set this equation at $ t = 0 $, and $ X = \dot{ R} ( 0 )  $, then we get
+\[
+X^ T + X = 0 
+\] Notice that the only condition 
+we've used so far is that of orthogonality. There's no further constraint that from $ \det ( R) = 1$, 
+by continuity since we're guaranteed that this would hold true anyway from our above argument. 
+Another way to see this is that if we set expand out 
+\[
+	\det ( R( 0) + t \dot{ R  } ( 0 ) + \dots )  = 1 + t  \tr X  + \dots 
+\] Then, we have that $ \tr X  = 0 $, but this is automatically 
+satisfied since our anti-symmetry condition automatically ensures 
+that a matrix is traceless. 
+
+Now, let's do the associated case for $ O ( n ) $. 
+Our condition for orthogonality yields 
+the same anti-symmetric condition on our Lie algebra. In addition, 
+by continuity, we also have that matrices on  $ R ( t) $ have determinant $ 1 $. 
+Hence, our Lie algebras are the same. 
+
+Thus, 
+\[
+	\mathcal{ L } ( O ( n ) ) \simeq \mathcal{L }( SO ( n ) )  = \left\{ X \in Mat_n ( \mathbb{ R} ) \mid X^T =  - X \right\} 
+\] The dimension of $ \mathcal{ L } ( SO ( n ) )  = \frac{1}{2 } n ( n - 1) 	$, since this is the number of parameters to uniquely define an antisymmetric matrix (diagonal elements are set to zero, and we are free to define the elements on the upper triangle). Now, notice that this is the 
+same as $ \dim SO ( n ) $. This of course is not a coincidence: the dimension of a tangent space will
+always be the same as the dimension of the underlying manifold. 
+This is because our coordinates induce a basis of partial derivatives
+that we work with in the tangent space of the same size. 
+
+\subsubsection{ $ SU ( n ) $ to $ \mathcal{ L } ( U ( n ) ) $}
+Let's repeat this form of analysis with matrices in 
+$ U ( n ) $ and $ SU ( n ) $. 
+If we look at $ G = SU ( n ) $, 
+again we define a curve 
+\[
+g ( t) = U ( t) \in SU ( n ), \quad U ( 0 ) = I_n  
+\] Differentiating again, our condition that 
+\[
+ U ( t)^\dagger U ( t )  = I_n \implies Z + Z^\dagger = 0, \quad Z = \dot{ U } ( 0 ) \in \mathcal{ L }( SU ( n ) ) 
+\] We require that $ det ( U ) = 1 , \quad \forall t \in \mathbb{ R} $. 
+This time, it's perfectly possible for elements in 
+$ R (t)$ to have  $ \det  R( t) \neq 1 $, since 
+our determinant operation is a phase. 
+This means that for the Lie algebra of $ SU ( n ) $, 
+we require 
+\[
+ \det U ( t) = 1 + t \tr Z   + O ( t^2)  = 1, \quad  \forall t \in \mathcal{ I  }
+\] 
+The higher order terms in $ O ( t^2 ) $ don't place 
+any extra additional conditions because we have a lot of freedom. For example. 
+expanding out our terms and setting $ t = 1 $, we have
+that 
+ \[
+ 1 + \tr Z  + A_2 + \dots A_n + \dots = 1
+\] We can set the coefficients $ A_i $ to 0 
+by freedom in choice of our curves. Thus, 
+we have an extra condition on our Lie algebra element:
+our first order term $ Tr Z $ is forced to be zero. 
+Our Lie algebra for $ SU ( n ) $ is therefore 
+\[
+ \mathcal{ L }( SU ( n ) ) = \left\{  z \in Mat_n ( \mathbb{ C} ) \mid Z^\dagger  = - Z, tr Z  \right\} 
+\] Our dimension, counting matrices of this type, comes from anti hermitian and traceless conditions.
+First we count the dimension of 
+anti-hermitian matrices. We can freely 
+choose our elements in our upper left triangle 
+of this matrix not including diagonal. Since we have complex numbers, 
+we need to double the amount of parameters. The number 
+of placeholders on our diagonal is $\frac{1}{2 } n ( n - 1) $, 
+so since they can be complex, this our number of 
+free parameters are $ n ^ 2 - n $. Now, in an anti-Hermitian matrix 
+our elements on the diagonal can be imaginary, so this adds another 
+$ n $ degrees of freedom. Taking into account that our matrix need be traceless, 
+we subtract a degree of freedom as well 
+\[
+ \dim \mathcal{ L } (  SU ( n ) )  =  n ^ 2 - n + n - 1 = n^ 2 - 1 = \dim (  SU ( n ) )   
+\] 
+Notice that in this case, we have that 
+\[
+\dim ( SU ( 2) ) = \dim ( SO ( 3) ) = 3 
+\] We can exhibit a basis for $ SU ( 2) $ and $ SO ( 3) $, 
+which both have 3 elements. These bases are 
+useful to remember as well. Let's examine this more closely 
+If we consider $ G = SU ( 2) $, 
+then  \[
+	\mathcal{ SU ( 2) } = \left\{ \text{2 by 2 traceless antihermitian matrices}  \right\} 
+\] We know that our Pauli matrices $ \sigma_ a $ obeys $ \sigma_ a = \sigma  _a ^ \dagger$,  $ tr \sigma_ a = 0$. 
+Thus, we can provide a basis from 
+ \[
+ T ^ a = - \frac{1}{2 } i \sigma_ a , \quad a = 1,2, 3 
+\] We can now compute the structure constants. The Pauli matrices obey the algebra 
+\[
+ \sigma_a \sigma_ b = \delta_{ ab } I + i \epsilon_{ abc } \sigma_ c
+\] This means that 
+\[
+	[ T ^ a , T ^ b ] = - \frac{1}{ 4 } [ \sigma_ a , \sigma_ b ] = - \frac{1}{2 } i \epsilon_{ abc } \sigma_ c = f \indices{ ^ { ab } _ c } T ^ c  
+\] Hence, we have that $ f \indices{^ { ab } _ c }  = \epsilon_{ abc } $. 
+
+Now, for $ G = SO ( 3) $, 
+we have that 
+ \[
+	 \mathcal{ B  } ( SO ( 3) )  = \left\{  \text{ 3 by 3 real anti Hermitian matrices }  \right\} 
+\]  We can take the basis
+\[
+	\tilde{ T }^ 1 = \begin{pmatrix} 0 & 0 & 0 \\ 0 & 0 & - 1 \\ 0 & 1 & 0  \end{pmatrix}, \quad \tilde { T }^ 2 = \begin{pmatrix} 0 & 0 & 1 \\ 0 & 0 & 0 \\ -1 & 0 & 0  \end{pmatrix}, \quad \tilde{ T } ^ 3 = \begin{pmatrix} 0 & -1 & 0 \\ 1 & 0 & 0 \\ 0 & 0 & 0  \end{pmatrix}   
+\] We have that 
+\[
+[ \tilde{ T }^ a , \tilde { T  } ^ b ] =  f \indices{ ^ { ab } _ c }, \quad f \indices{ ^{ ab } _ c } = \epsilon_{ abc }  
+\] Thus we have that, since the structure constants are same,
+these vector spaces are isomorphic (they're also isomorphic 
+by the fact that vector spaces with the same dimension are isomorphic). 
+\[
+	\mathcal{ L  } ( SO ( 3 )) \simeq \mathcal{ L } ( SU ( 2) ), \quad SO ( 3) \neq SU ( 2) 
+\] We've written here that the actual Lie groups underlying them 
+are not isomorphic, because for one $ SO ( 3) $ 
+is not a connected manifold. $ SU ( 2) $ however, 
+is connected. 
+Thus, different lie groups can correspond to the same Lie algebra. In fact, $ SO ( 3) \simeq SU ( 2) / \mathbb{ Z }_2 $
+
+
+\pagebreak

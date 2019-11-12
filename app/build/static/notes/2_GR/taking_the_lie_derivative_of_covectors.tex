@@ -1,0 +1,87 @@
+\subsection{Taking the Lie Derivative of Covectors} 
+We would like to repeat what we did for vectors, and take derivatives of covectors. 
+To do this, we need to define pull-backs for covectors.
+Suppose we had a covector $\omega$ living in the tangent space 
+of some manifold $N$, in $T_p^*( N)$. 
+We can then define the pull back of this vector field based on first pushing forward 
+the vector field $X$. Thus, if $\phi : M \to  N$, then we define the pullback 
+$\phi^ * \omega $ as the covector field in $T_p ( M ) $ as 
+\[
+( \phi^* \omega ) ( X)  = \omega ( \phi_* X ) 
+\] What information can we glean from this? 
+Well, we can try to figure out what the components of $\phi^ * \omega $ are. 
+If we let $\{ y ^ \alpha \} $ to be coordinates on $N$, 
+then we expand this covector as 
+\[
+\omega = \omega_\mu  dy^\mu  
+\] Also recall that the components of a pushed forward vector field are 
+\[
+( \phi_* X )^ \mu   = X^\nu \frac{\partial y ^ \mu  }{ \partial x^\nu }
+\] Now, if we take the equation 
+\[
+( \phi ^ * \omega )  = \omega ( \phi_* X ) 
+\] Then, expanding out in terms of components, we have that 
+\[
+( \phi^* \omega ) ^\mu  dx_\mu  ( X^\nu  e_\nu  )  = w^\mu  dy_\mu  ( \phi_* X)^\nu  \frac{\partial }{\partial y ^\nu  }
+\] Remember, we have to expand in the correct coordinates. The object $ \phi^* \omega $ lives in 
+the space $M $ so we expand in the $ dx^ \mu  $ basis. On the other hand
+we have that $\omega $ originally lives in $N $ so we expand in 
+$ dy^ \mu  $. 
+Substituting our expression for our push forward vector field, 
+and we get that 
+\[
+( \phi^ * \omega )_\mu  X^\mu  = \omega_\nu  \frac{\partial y^\nu  }{\partial x^\mu }X^\mu  
+\] This step requires a bit of explanation. 
+After we substitute in the components for the pushed forward vector field, 
+we then use the fact that on both manifolds, our basis vectors and 
+our basis covectors contract to give a delta function 
+\[
+dx^\mu  \left(  \frac{\partial }{\partial x^ \nu } \right)= \delta \indices{^\mu  _\nu }, \quad dy^\mu  \left( \frac{\partial }{\partial y^\nu  }  \right) = \delta \indices{^\mu _\nu }						  
+\] This implies that the components of our pulled back vector field are 
+\[
+( \phi^* \omega )_\mu  = \omega_\nu  \frac{\partial y^\nu }{\partial x^\mu  }
+\] 
+As in the case of vectors, we can also make rigourous the definition of a Lie derivative 
+with respect to a covector field. 
+This is denoted $\mathcal{L}_X \omega$, where $X$ is our underlying vector field
+we're differentiating with. 
+If our vector field $X$ imposes a flow map which we label as 
+$\sigma_ t$, then our corresponding Lie derivative is derivative is defined as 
+\[
+\mathcal{ L }_X \omega  =\lim_{t \to 0} \frac{( \sigma_t^* \omega)   - \omega }{t }	 
+\]There's an important point to be made here. 
+In our previous definition of a Lie derivative for a vector field, 
+we took the inverse diffeomorphism $\sigma_{ - t} $. 
+But in this case, we need to take $t $ positive since 
+we're doing a \textbf{pull-back} instead of a pushforward, like we did 
+with vector fields. 
+
+Let's go slow and try to compute 
+the components of this derivative. 
+Recall that for a flow map, we have that infinitesimally, 
+\[
+y^\nu  = x^\nu  + t X^\nu , \implies \delta \indices{^\nu _\mu  } + t \frac{dX^\nu }{dx^\mu  }	  
+\] Thus for a general covector field, our components for the pull back 
+are 
+\[
+( \sigma_t \omega )_\mu  = \omega_\mu  + t \omega_\nu \frac{dX^\nu }{dx^\mu  }
+\] Hence, the components of a basis element under this flow becomes 
+\[
+( \sigma_t^* dx^\nu )  = dx^ \nu  + t dx^\mu  \frac{dX^\nu  }{dx^\mu  }
+\] So, taking the limit, we have that our components of our 
+Lie derivative are given by 
+\[
+\lim_{t \to 0  } \frac{\sigma^*_t dx^\nu   - dx^\nu  }{ t }  = dx^\mu  \frac{dX^\nu }{dx^\mu  }		 
+\] Now, as before, we impose the 
+Liebniz property of Lie derivatives, and expand out a general covector. 
+Hence, we have that 
+\begin{align*}
+\mathcal{L}_X( \omega_\mu  dx^\mu  ) &= \omega_\mu  \mathcal{L}dx^\mu  + dx^\mu  \mathcal{L}_X( \omega_\mu  )  \\
+ &= \omega_\mu  dx^ \nu  \frac{dX^\nu  }{dx^\mu  } + dx^ \nu  X^\mu   \frac{d \omega_\nu }{dx^ \mu  }
+\end{align*} This implies that 
+our components of our Lie derivative can be written nicely as 
+
+
+\[
+\mathcal{L }_X( \omega )_\mu   = ( X^\nu \partial_\nu \omega _\nu + \omega _\nu \partial_\mu X^\nu ) 
+\]  

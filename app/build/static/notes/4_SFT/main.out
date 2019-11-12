@@ -1,0 +1,47 @@
+\BOOKMARK [1][-]{section.1}{Useful resources}{}% 1
+\BOOKMARK [1][-]{section.2}{Introduction}{}% 2
+\BOOKMARK [1][-]{section.3}{Why Statistical Field Theory?}{}% 3
+\BOOKMARK [2][-]{subsection.3.1}{Phase transitions and critical exponents}{section.3}% 4
+\BOOKMARK [2][-]{subsection.3.2}{Universality}{section.3}% 5
+\BOOKMARK [2][-]{subsection.3.3}{Explaining universality with the renormalization group flow}{section.3}% 6
+\BOOKMARK [3][-]{subsubsection.3.3.1}{Fixed points}{subsection.3.3}% 7
+\BOOKMARK [1][-]{section.4}{The Ising Model and Critical Exponents}{}% 8
+\BOOKMARK [2][-]{subsection.4.1}{The problems with just mean-field theory}{section.4}% 9
+\BOOKMARK [2][-]{subsection.4.2}{Setting up the Ising model}{section.4}% 10
+\BOOKMARK [2][-]{subsection.4.3}{Reformulating the above in terms of free energy}{section.4}% 11
+\BOOKMARK [3][-]{subsubsection.4.3.1}{Calculating our free energy via the mean field approximation.}{subsection.4.3}% 12
+\BOOKMARK [2][-]{subsection.4.4}{Using the Landau approach}{section.4}% 13
+\BOOKMARK [2][-]{subsection.4.5}{A Brief look at Universality}{section.4}% 14
+\BOOKMARK [2][-]{subsection.4.6}{The Landau-Ginzburg approach}{section.4}% 15
+\BOOKMARK [2][-]{subsection.4.7}{Domain Walls}{section.4}% 16
+\BOOKMARK [1][-]{section.5}{Evaluating Path Integrals and Gaussian Path Integrals }{}% 17
+\BOOKMARK [2][-]{subsection.5.1}{Correlation functions}{section.5}% 18
+\BOOKMARK [2][-]{subsection.5.2}{Computing Gaussian Path Integrals}{section.5}% 19
+\BOOKMARK [3][-]{subsubsection.5.2.1}{Our correlation function is just a Green's function}{subsection.5.2}% 20
+\BOOKMARK [3][-]{subsubsection.5.2.2}{An aside on functional integrals}{subsection.5.2}% 21
+\BOOKMARK [3][-]{subsubsection.5.2.3}{Evaluating our Green's function}{subsection.5.2}% 22
+\BOOKMARK [1][-]{section.6}{Green's functions}{}% 23
+\BOOKMARK [2][-]{subsection.6.1}{Connection to Susceptibility}{section.6}% 24
+\BOOKMARK [2][-]{subsection.6.2}{Critical exponents}{section.6}% 25
+\BOOKMARK [3][-]{subsubsection.6.2.1}{Upper critical dimension}{subsection.6.2}% 26
+\BOOKMARK [3][-]{subsubsection.6.2.2}{Translating to Quantum Field Theory}{subsection.6.2}% 27
+\BOOKMARK [1][-]{section.7}{The Renormalisation Group}{}% 28
+\BOOKMARK [2][-]{subsection.7.1}{Basic Introduction}{section.7}% 29
+\BOOKMARK [2][-]{subsection.7.2}{Flowing to the 'IR' \(long distances\)}{section.7}% 30
+\BOOKMARK [2][-]{subsection.7.3}{A Second Look at Universality}{section.7}% 31
+\BOOKMARK [3][-]{subsubsection.7.3.1}{The Ising model}{subsection.7.3}% 32
+\BOOKMARK [2][-]{subsection.7.4}{Classifying fixed points}{section.7}% 33
+\BOOKMARK [2][-]{subsection.7.5}{Scaling}{section.7}% 34
+\BOOKMARK [2][-]{subsection.7.6}{Relation to critical exponents}{section.7}% 35
+\BOOKMARK [2][-]{subsection.7.7}{Relevant, Irrelevant or Marginal?}{section.7}% 36
+\BOOKMARK [2][-]{subsection.7.8}{The Gaussian fixed point}{section.7}% 37
+\BOOKMARK [3][-]{subsubsection.7.8.1}{Around the fixed point}{subsection.7.8}% 38
+\BOOKMARK [3][-]{subsubsection.7.8.2}{ \040Z \0402 \040Symmetry breaking }{subsection.7.8}% 39
+\BOOKMARK [1][-]{section.8}{Example Sheet 1}{}% 40
+\BOOKMARK [2][-]{subsection.8.1}{Question 1}{section.8}% 41
+\BOOKMARK [2][-]{subsection.8.2}{Question 2}{section.8}% 42
+\BOOKMARK [2][-]{subsection.8.3}{Question 3}{section.8}% 43
+\BOOKMARK [2][-]{subsection.8.4}{Question 4}{section.8}% 44
+\BOOKMARK [2][-]{subsection.8.5}{Question 5}{section.8}% 45
+\BOOKMARK [2][-]{subsection.8.6}{Question 5}{section.8}% 46
+\BOOKMARK [2][-]{subsection.8.7}{Question 7}{section.8}% 47

@@ -1,0 +1,23 @@
+\subsection{Invariant subspaces and reducibility}  
+\subsubsection{ Invariant subspaces} 
+Since we think of representations group actions on a vector space, we are interested in portions of this vector space which are permuted just amongst themselves. In other words, orbits which are not the entire vector space. With this in mind, we define the concept of a \textbf{invariant subspace} $W \subset V$ associated with a representation $D( G) $ and the associated vector space $V$. An invariant subspace is a subspace which satisfies \[ D(G) W  = W \] 
+Think of this as a vector subspace which doesn't 'care' about other vector subspaces when acted on by representations. Suppose we have an invariant subspace $W$ satisfying $D(G)W = w$, where $D(G)$ is some finite orthogonal representaiton. Then, $W^ { \perp} $ is also an invariant subspace. To show this, observe that since $D(G)$ is a finite representation, we can represent any element $D(g)$ as a matrix. Take an arbitrary element of $D(G)$ and call this matrix $A$. Now take vectors $w, v $ in $W$ and $W^{\perp} $ respectively. In index notation, 
+\begin{align*} 
+(A v ) \cdot w & = A_{ij} v_j w_i \\
+&= A_ij w_i v_j \\
+&= (A^T)_{ji} w_i v_j \\ 
+&= (A^T)_{ji} w_i v_j \\ 
+&= (A^{-1})_{ji} w_i v_j 
+\end{align*} 
+where in the last line we used the fact that we're using an orthogonal representation. 
+Since $A^{-1} \in D(G)$ by properties of representations, and since $W$ is an invariant subspace, the last line can be read as $u \cdot v$ where $u \in W$. And since $ v \in W^{\perp}$, the above line is equal to zero, for arbitrary $A$. Hence, for an orthogonal representation, $W^{\perp} $ is an invariant subspace. 
+If we have an invariant subspace, we can 'break' this off from the rest of representation and package it as a separate representation. 
+
+It is a natural thing to do for us to construct a basis around which these vector subspaces are written. For example, if $W \in V $ was an invariant subspace of finite dimension $M$ say, then we could construct the basis $\{ w_1, w_2, \dots, w_m \} $ which is a basis for $W$ and then extend this to the whole vector space with vectors to make the basis \[ \mathcal{B} = \{ w_1, \dots, w_M, v_{ M+1} , \dots v_{N} \} \]  
+
+
+
+
+
+\subsubsection{Irreducible representations and total irreducibility } 
+With this in mind, we define the concept of an irreducible representation. An irreducible representation is a representation with no invariant subspaces. In other words, the orbit of any given element under $D(G) $ is the entire vector space itself. 

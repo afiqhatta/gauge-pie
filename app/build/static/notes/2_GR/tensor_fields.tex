@@ -1,0 +1,77 @@
+\subsection{Tensor fields} 
+Now, we can combine both maps from tangent and cotangent spaces to create tensors. 
+A tensor of rank $( r, s) $ is a \textbf{multilinear} map from 
+\[
+T: T_p^* ( M ) \times \dots T_p^*( M )  \times T_p(M) \times \dots T_p( M) \to  \mathbb{ R}  
+\] where we have $r  $ copies of our cotangent field and $ s$ copies of our tangent field. 
+We define the total rank of this multilinear map as $ r + s$. 
+Since a cotangent vector is a map from vectors to the reals, 
+this is a rank  $ ( 0, 1 ) $ tensor. 
+Also, a tangent vector has rank $ ( 1, 0 ) $ since it's a map from the
+cotangent space. 
+A tensor field is the smooth assignment of a rank $ ( r, s) $ tensor to a point
+on the manifold $ p \in M $. 
+We can write the components of a tensor object 
+by writing down a basis, then sticking this into the object. 
+If $ \left\{  e_\nu \right\} $ was a basis of $ T_{p }( M ) $, and 
+$ \left\{  f^\nu \right\} $ was the basis of the dual space, then 
+the tensor has components 
+\[
+T \indices{^{\mu_1 } ^{\mu_2} ^{\dots } ^{\mu_r}_{\nu_1 }_{\nu_2 } _{\dots }_{\nu_s}} = T(f^{\mu_1 }, f^{\mu_2}, \dots, f^{\mu_r}, e_{\nu_1 }, \dots e_{\nu_s} )  
+\]
+For example, a $ ( 2 , 1) $ tensor acts as 
+\[
+T ( \omega , \epsilon; X) = T ( \omega_{\mu } f^\mu, \epsilon_{ \nu }f^\nu, X^\rho e_{ \rho }) 
+\] We have that the covectors $ \omega  , \epsilon \in \Lambda^ 1 ( M ) $, and $  X\in \mathcal{ X }( M ) $. 
+The object above is then equal by multilinearity to 
+\[
+= \omega _{ \mu } \epsilon_{\nu } X^\rho T \indices{ ^\mu ^ \nu _\rho }  
+\] Under a change of coordinates, we have that 
+\[
+\tilde{ e}_{ \nu } = A \indices{^\mu _ \nu } e_{ \mu }, \quad A \indices{ ^ \mu _ \nu } = \frac{\partial  x^\mu }{\partial \tilde{ x}^\nu}   
+\] 
+Similarly, we have that for covectors we transform as 
+\[
+\tilde{ f} ^\rho = B \indices{ ^\rho _\sigma } f^\sigma, \quad B \indices{ ^\rho _\sigma } \frac{\partial  \tilde{ x}^\rho}{\partial x^\sigma}    
+\] Thus, a rank $ ( 2, 1 ) $ tensor transforms as 
+\[
+\tilde{ T } \indices{^\mu^\nu_\rho}  = B \indices{^\mu_\sigma } B \indices{^\nu _\tau} A \indices{^\lambda _\rho} T \indices{^\sigma ^\tau _ \lambda}     
+\] There are a number of operations which we can perform on tensors. 
+We can add or subtract tensors. We can also take the tensor product. 
+If $ S $ has rank $ ( p , q) $, and $  T $ has rank $ ( r, s ) $, then 
+we can constrict $ T \otimes S $, which has rank $ ( p + t , q + s ) $. 
+\[
+S \otimes T ( \omega_1, \dots \omega_p, \nu_1 , \dots \nu_{ r }, X_1, \dots X_q , Y_1, \dots Y_s )  = S( \omega_1 , \dots , \omega_p, X_1, \dots, X_q ) T ( \nu_1 , \dots,  \nu_r, Y_1 , \dots Y_s) 
+\] 
+Our components of this are 
+\[
+(  S\otimes T )\indices{ ^{ \mu_1 } ^{ \dots \mu_{ p }} ^{ \nu_{1 } \dots \nu_{ r }} _{ \rho_1 \dots \rho_{ l } \sigma_1 \dots \sigma _{ s}}} = S \indices{^{ \mu_1 \dots \mu_{ p}}_{ \rho_1 \dots \rho_{ q}}} T \indices{ ^{ \nu_1  \dots \nu_{ q }} _{ \sigma_{ 1} \dots \sigma_{ s}}}   
+\] We can also define a contraction.
+We can turn a $ ( r, s $ tensor into an  $ ( r - 1, s - 1) $ tensor. If we have
+$ T $ a $ \left( 2, 1  \right) $ tensor, then we can define a 
+\[
+S( \omega  ) = T ( \omega  , f^\mu, e_\mu ) 
+\] The sum over $ \mu $ is basis independent. 
+This has components 
+\[
+S^\mu = T \indices{ ^\mu ^\nu _\nu }  
+\] This is different from $ ( S ') ^\mu = T \indices{ ^\nu ^\mu _\nu} $ 
+We can also symmetrise and anti symmetrise. Given a $ ( 0 , 2 ) $ tensor, 
+we can define 
+\[
+S( X, Y ) = \frac{1}{ 2 } ( T ( X, Y ) + T ( Y , X) ), \quad A( X, Y ) = \frac{1}{2 } ( T ( X, Y ) - T ( Y , X) ) 
+\] This has components which we write as 
+\begin{align*}
+T_{ ( \mu \nu ) } : = & \frac{1}{2 } ( T \indices{ _\mu_\nu} + T \indices{ _\nu_\mu} ) \\
+T_{ [ \mu \nu ] } : = & \frac{1}{2 } ( T \indices{ _\mu_\nu} - T \indices{ _\mu_\nu}) 
+\end{align*}
+We can also symmetrise or anti symmetrise over multiple indices. 
+So 
+\[
+T \indices{ ^\mu _{ ( \nu \rho \sigma  )  }}  = \frac{1}{ 3 ! } ( T \indices{^\mu _\nu _\rho _\sigma } + \text{ 5 perms } )  
+\] We can also anti symmetrise by multiplying by the sign of permutations. 
+\[
+T \indices{ ^\mu _{ [  \nu \rho \sigma  ]   }}  = \frac{1}{ 3 ! } ( T \indices{^\mu _\nu _\rho _\sigma } + sgn ( perm)  \text{ for 5 perms } )
+\]
+
+\pagebreak

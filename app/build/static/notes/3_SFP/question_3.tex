@@ -1,0 +1,35 @@
+\subsection{Question 3}
+In this question we verify why
+\[ 
+R(\mathbf{n}, \theta)_{ij} = \cos \theta \delta_{ij} + (  1 - \cos \theta )n_i n_j  + \sin \theta \epsilon_{ijk} n_k
+\] 
+for a chosen unit vector $\mathbf{n}$ and some $\theta \in [0, 2\pi)$ is a geometrically sensible element of $SO(3)$. 
+
+First we construct a natural basis for this mnatrix. $\mathbf{n}$ itself is an eigenvector with eigenvalue 1 because 
+\begin{align*}
+R_{ij}n_j  &= \cos \theta n_i + (1 - \cos\theta )n_j n_j n_i + \sin\theta \epsilon_{ijk} n_k n_j\\ 
+&= n_i 
+\end{align*}
+where the last term vanishes due to symmetric and antisymmetric contraction in the $j, k$ indices, and $n_j n_j  = 1$ since $\mathbf{n}$ is a unit vector. 
+
+To construct an orthonornal basis from this, we do a Grahm-Schmidt like procedure with $\mathbf{n}$ and $\mathbf{e}_1$, the standard $x$ coordinate. It's not hard to see that 
+\[
+\mathbf{m} = \frac{\mathbf{e}_1 - \mathbf{n}( \mathbf{e}_1 \cdot \mathbf{n})}{|\mathbf{e}_1 - \mathbf{n} (\mathbf{e}_1 \cdot \mathbf{n}) |} 
+\]
+satisfies our condition that $\mathbf{m} \cdot \mathbf{n} = 0$.
+
+To find the third vector which is perpendicualr to both of thesebasis vectors, just observe that both are in the span of $\{ \mathbf{n}, \mathbf{e}_1 \} $ so we can simply take the cross product of these objects to find 
+\[ 
+\mathbf{k} = \frac{\mathbf{n} \times \mathbf{e}_1 }{|\mathbf{n} \times \mathbf{e}_1|}
+\]  is our third basis vector. 
+
+A straight forward calculation with index notation shows that \[ 
+R_{ij} k_j = \cos\theta k_i + \sin \theta m_i
+\] and similarly we have that 
+\[ 
+R_{ij} m_j = \cos\theta m_i - \sin \theta k_j 
+\]
+which implies that this is indeed a rotation of the angle $\theta$ about the $\mathbf{n}$ axis!
+
+
+\pagebreak 

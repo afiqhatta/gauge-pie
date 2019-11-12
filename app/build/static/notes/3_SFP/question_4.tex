@@ -1,0 +1,54 @@
+\subsection{Question 4} 
+To find the manifold of this thing, 
+we define 
+\[
+	F ( \vec{x} ) = | \alpha | ^ 2 - \ \beta | ^ 2 = \alpha_ 1 ^ 2 + \alpha_ 2 ^ 2 - \beta _ 1^ 2  - \beta _ 2 ^ 2
+\] Our group is defined by the surface $ F = 1 $. 
+Our Jacobian is 
+ \[
+	 \frac{\partial F  }{\partial x^ i }  = ( 2 \alpha_ 1 , 2 \alpha_ 2 , - 2 \beta _ 1 , - 2\beta _ 2 ) \neq 0 \text{ on } F = 1
+\] Hence our dimension is $ 4 -1  = 3$. To show that 
+our group is unbounded, we can take explicitly 
+that $ \alpha _ 2 = \beta _ 2 = 0 $, and  $ \alpha_ 1 ^ 2 = \beta _ 2^ + 1 $, then 
+the modulus of this object is 
+ \[
+ | \vec{x} | ^ 2 = 2 \beta_ 1 ^  2 + 1 \to \infty, \text{ as } \beta _ 1 \to \infty
+\] So the manifold is unbounded.
+
+
+Closure is the property we would like to check here. The other group properties follow easily from the definition.
+We set \[
+U_i = \begin{pmatrix}
+\alpha_i & \beta_i \\
+\beta_i^* & \alpha_i^*
+\end{pmatrix} 
+\] 
+It's easy to check that 
+\[ 
+U_1 U_2 = \begin{pmatrix} 
+\alpha_1\alpha_2 + \beta_1 \beta_2^* & \alpha_1\beta_2  +\beta_1\alpha_2^* \\
+\beta_1^*\alpha_2 + \alpha_1^* \beta_2^* & \beta_1^* \beta_2 + \alpha_1^*\alpha_1^* 
+\end{pmatrix}
+\]
+To fulfil the condition above we then require that 
+\[
+|\alpha_1\alpha_2 + \beta_1\beta_2^*|^2 - |\alpha_1 \beta_2 + \beta_1 \alpha_2^*|^2 = 1
+\] 
+Cancelling out the cross terms, we write this in terms of its conjugates and we're left with the above equalling 
+\[ 
+\left( |\alpha_1|^2 - |\beta_1^2|^2 \right)\left( |\alpha_2|^2 - |\beta_2|^2 \right) = 1
+\] 
+
+This is a Lie group because clearly matrix multiplication and matrix inversion depend smoothly on the defining parameters $\alpha, \beta$. since addition, multiplcation, division and complex conjugation are smooth operations.
+The dimension of a general $U$ over the reals is 3. This is becasue $\mathbb{C}$ is a two dimensional vector space over the reals, and writing $\alpha = a + ib, \beta = c + id$, our constraint that $a^2 + b^2 - c^2 - d^2 = 1$ gives us a 3 dimensional manifold.
+
+Thus, we can map this object into $\mathbb{R}^4$ as 
+\[ 
+U \mapsto \begin{pmatrix}
+a \\ b \\ c \\ \pm \sqrt{a^2 + b^2 - c^2 - 1} \end{pmatrix}
+\] 
+The norm of this vector is $\sqrt{2 a^2 + 2b^2 - 1}, a, b \in \mathbb{R}$. This is clearly unbounded and therefore the corresponding manifold is non compact.   
+
+
+
+\pagebreak

@@ -1,0 +1,33 @@
+\subsection{Question 1} 
+If we're given compoonents of a vector field and want to solve for its integral curve, then we need to solve the equation
+\[ 
+\left. \frac{ d x^\mu(t) }{ dt} \right\vert_{\phi(p)} = \left. X^\mu( x^\nu(t) ) \right\vert_{ \phi( p)}
+\] 
+
+So for the first integral curve, we need to solve the system 
+\begin{align*} 
+\frac{dx}{dt}  &= y \\
+\frac{dy}{dt}  &= -x 
+\end{align*} 
+This is made a lot easier by writing out the system in polar coordinates (which is indeed a different cart for the manifold $\mathbb{R}^2$, and writing $(x , y)  = ( r \cos \theta, r \sin \theta)$ with the chain rule gives us 
+\begin{align*} 
+\dot{r} \cos \theta  - r \dot{\theta} \sin \theta  &= r \sin \theta \\
+\dot{r} \sin \theta  + r \dot{\theta} \cos \theta &=  - r \cos \theta 
+\end{align*} 
+If we multiply the first equation by $\sin \theta$ and the second equation by $\cos \theta$, and then subtract the first equation from the second equation, we've eliminated the $\dot{ r}$ term. We're left wwith 
+\[ 
+\dot{\theta} =  -1 \implies \theta  =  - t + C
+\] 
+for some constant $C$. Substituting in $\dot{\theta} = - 1$ in our first equation gives the condition that $\dot{r} = 0 \implies r = R$ for $R$ constant. Hence our integral curves are merely circles of arbitrary radius about the origin. 
+
+For our second vector field 
+\[ 
+X^\mu  = ( x - y, x +y ) 
+\] 
+we proceed exactly as before, with polar coordinates. One finds instead that $\dot{\theta} = 1$, and hence that $\dot{r}  = r$. Thus, we have that 
+\[
+\theta = t + A, \quad r = Be^t 
+\] 
+for arbitrary constants $A, B$. These curves are spirals. 
+
+\pagebreak

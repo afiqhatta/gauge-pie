@@ -1,0 +1,300 @@
+\subsection{Reconstructing Lie Groups from Lie Algebras} 
+
+\subsubsection{Actions: a natural maps on Lie groups} 
+So far, we've learnt about defining tangent spaces at $e \in G$, or if we're working in a $D$ dimensional Lie group, we can define a set of coordinates $\{ \theta_i \}_i$ for $i = 1, \dots, D$, we would identify this $e \in G$ with $\theta = 0$. But, what about tangent spaces at other points on the manifold?
+
+For this reason, we define left and right actions. A Lie group is a very special type 
+of manifold in that we
+can define smooth maps which 
+correspond to group mutliplication by an element. 
+This is akin to having the Lie group $G$ act on itself by shuffling the group elements around by a fixed $h \in G$. This can be done either from the left or from the right. Define 
+\begin{align*} 
+	L_h: \quad & G \rightarrow G \\
+	&	g \mapsto hg \\
+	R_h: \quad & G \rightarrow G \\
+	& g \mapsto gh
+\end{align*}
+We will now show that these maps are diffeomorphisms on our group manifold. 
+First we show surjectivity. That is, we wish to show that 
+\[
+	\forall g' \in G, \exists g \in G , \text{such that } L_h ( g )  = g'  
+\] Clearly, setting $ g = h ^ { -1 } g '$, satisfies this condition. 
+These maps are also injective because
+ \[
+ \forall g , g' \in G, L_h( G ) = L _ h  ( g' ) \implies g = g' 
+\] This is because $ L_h ( g) = L _ h ( g ' ) \implies hg = hg' \implies g = g $. 
+Surjectivity and injectivity implies that this map is bijective. This means there's
+an inverse map 
+ \[
+	 ( L _ h ) ^ { - 1}  = L _{ h ^ { - 1} }
+\] which exists. Now, we appeal to the fact 
+that group multiplication on a Lie group is a smooth operation 
+to show that left actions are a diffeomorphism on $ \mathcal{ M }( G  ) $ . 
+Now, this can be shown by introducing coordinates $ \left\{  \theta ^ i, \quad i = 1 , \dots D   \right\}  $ 
+If we set $ g = g ( \theta ) \subset G $, and $ g ( 0 ) = e $, 
+Let 
+ \[
+	 g ' = L_h ( g ) = h \cdot  g ( \theta ) = g ( \theta' ) 
+\] assuming the same coordinate patch for $ g ' $. 
+In coordinates,  $ L_ h$ is specified by
+\[
+	\theta^{ ' i  } = \theta ^{ 'i } ( \theta) , \quad i = 1, \dots D , \mathbb{ R} ^ D \to \mathbb{ R} ^  D
+\] But this is just group multiplication 
+on our Lie group, which was one of our starting 
+axioms. Thus, we have a diffeomorphism. 
+The fact that our left action has an inverse also implies 
+that the Jacobian matrix 
+\[
+J \indices{ ^ i _ j } ( \theta)  = \frac{\partial \theta ^{ ' i } }{\partial \theta ^  j }  
+\] is invertible. The inverse $ J ^ { -1 } $ exists, so $ det J \neq 0 $. 
+There's more stuff which we an get out of this. 
+
+\subsubsection{Actions move us between tangent spaces} 
+This diffeomorphism 
+also induces another map $ L^ * _{ h } $ from $ \mathcal{ T }_ g ( G ) $
+to another tangent space $ \mathcal{ T }_{ hg } ( G ) $. So, 
+we are 'moving' our tangent space along this line. 
+This map is given by 
+\begin{align*}
+	L^*_{ h } & : \mathcal{T }_ g ( G ) \to \mathcal{ T }_{hg } ( G ) \\
+	L^*_{ h } & : v = v^{ i } \frac{\partial }{\partial \theta ^ i } \in \mathcal{ T }_ g ( G ) \mapsto v' = v^{ ' i } \frac{\partial }{\partial \theta'^{i } } \in \mathcal{ T }_{ hg }( G ) 
+\end{align*} In the above, we have from the chain rule that 
+\[
+	v^{' i }  = \mathcal{ J }( \theta )^ i _j v ^ j 
+\]  We refer to the map $ L_ h ^ * $ as the differential map of 
+$ L _ h $. We identify a left action diffeomorphism 
+as a \textbf{change of coordinates}, and hence 
+the motivation from this map is a chain rule transformation. 
+
+
+From this, we define an object called a \textbf{vector field}. 
+A vector field on $ G $ specifies a tangent vector
+\[
+	v ( g) \in \mathcal{ T }_g ( G ) , \quad g = g( \theta ) 
+\] So, given a point on the manifold we get a tangent vector. 
+In coordinates, we write $ v $ as an object parametrised with $ \theta $ 
+so that 
+\[
+	v ( \theta) = v ^ i ( \theta) \frac{\partial }{\partial \theta^ i} \in \mathcal{ T }_{ g ( \theta) }( G )  
+\] Now, $ v  $ is smooth if $ v^ i ( \theta) $ are continuous and differentiable: 
+(when we move across our Lie group manifold, our 
+tangent vector $ v $ doesn't change abruptly. 
+We can take a vector $w$ in our Lie algebra, $ w  \in \mathcal{ T }_ e( G ) $, 
+and from this we can define a vector field 
+\[
+	v ( g ) = L^ *_g ( w ) \in \mathcal{ T }_ g ( G ), \quad \forall g \in G 
+\] As $ L ^ * _ g $ is smooth and invertible, we 
+have that $ v ( g ) $ is smooth and invertible, and non vanishing. Our matrix
+$ \mathcal{ J }  $ has no zero eigenvalues and so $ v ( g ) $ is non vanishing. 
+Starting from a basis  $ \left\{  \omega_ a  \right\} , a = 1 , \dots D $ for $ \mathcal{ T }_ e ( G ) $, 
+we have $ D $ independent, non vanishing vector fields 
+\[
+ v_a ( g)  = L ^ * _ g ( \omega_ a ) 
+\] The Lefschetz fixed point theorem, or 'hairy ball theorem' 
+states that any smooth vector field on $ S^ 2 $ has at least $  2$ zeros. 
+Thus for our manifold, we have $ \mathcal{ M } ( G ) \neq S^ 2 $. In fact, 
+out of two manifolds which are compact, the only manifold possible for a 
+Lie group is that 
+\[
+	\mathcal{ M } ( G )  = T ^2, \quad G = U ( 1) \times U ( 1) 
+\] In fact, this technology of left invariant of vector fields 
+is enough technology to define Lie groups, without resorting to matrix groups 
+as we have done previously.
+
+\subsubsection{Left actions on Matrix Lie Algebras} 
+Now let's think about a matrix Lie group, and apply this technology 
+of left and right multiplication maps. Suppose we had a matrix 
+Lie group $ G \subset Mat_n ( F) $ for  $ n \in \mathbb{ N } $ 
+with our field $ F = \mathbb{ R} $ or  $ \mathbb{ C} $, 
+then our left multiplcation map induces a differential map which is 
+matrix multiplication. 
+So,  $ \forall h \in G, X \in \mathcal{ L }( G ) $, we have that 
+\[
+	L^ * _ h  ( X ) = h X \in \mathcal{ T }_h ( G ) 
+\]
+Note that this only works in the language of matrix
+Lie groups and Lie algebras because everything is a matrix, 
+so $ h X $ makes sense. 
+To show the above, we apply our usual recipe of finding a curve whose tangent
+vector gives $ X $. So, take any curve 
+\[
+	 	C : t \in \mathcal{ J } \subset \mathbb{ R} \mapsto g ( t) \in G  , \quad g( t) = g( 0 ) + t \dot{g }( 0 ) + O ( t^ 2 )  
+\] By definition, we have that 
+\[
+	\dot{ g }( 0 ) = \left. \frac{ dg ( t)  }{dt } \right\vert_{ t =0 } \in \mathcal{ T }_{ g ( 0 ) }( G )  
+\]
+We have by construction that $ g ( 0 ) = e = I $, and that $ \dot{g }( 0)  = X  $, with 
+$ X \in \mathcal{ L } ( G ) \simeq \mathcal{ T }_e ( G )  $, since our Lie algebra is defined to be the set of tangent vectors at the origin. 
+Now we can define a new curve, which is our original curve but 
+with the left action $ L _ h  $  applied to it. 
+\[
+	C' : t \in \mathbb{ R} \mapsto h ( t) =  h \cdot g( t) \in G 
+\] which is given by our left multiplication map. So, taking a Taylor 
+expansion here we have that 
+near $ t = 0$, 
+\[
+	h ( t) = h +  th X + O ( t^ 2) \implies h X \in \mathcal{ T }_ h ( G )  
+\] This is the tangent space at $ h $ because our leading order 
+term is $ h \in G$. Hence, since we've exhibited 
+a curve whose vector is $ h X $ at $ h  $, we've shown that 
+\[
+	h X \in \mathcal{ T }_ h ( G) 
+\] 
+We can apply this idea to a smooth curve in general. 
+Equivalently, we have that 
+a smooth curve in general
+\[
+ C  : t \in \mathbb{ R} \mapsto g( t) \subset G 
+\] for matrix lie groups we have that 
+\[
+	\dot{ g }( t) \in \mathcal{ T }_{ g ( t) } ( G ) \implies g ^{- 1} ( t) \dot{ g }( t)  = L ^ * _{ g ^{ -1 } ( t) } ( \dot{g }( t) ) \in \mathcal{ T }_{ g ^{ - 1  } ( t) g ( t) } =  \mathcal{ T } _ e ( G ) \simeq \mathcal{ L } ( G )   
+\]
+We use this fact to show that we 
+can reconstruct Lie groups from Lie algebras. Working in the 
+opposite direction, if we have a vector $ X \in \mathcal{ L } ( G ) $, 
+we can reconstruct the curve 
+\[
+	C : \mathcal{ J } \subset \mathbb{ R} \rightarrow G 
+\] by solving the ordinary differential equation that we derived earlier
+\[
+	g ^{ -1 } ( t) \frac{ d g( t) }{ dt } =  X, \quad g ( 0 ) = I  
+\]  To solve this, we define the exponential of a matrix 
+$ M \in Mat_ n ( F) $ as 
+\[
+	\text{Exp} M : = \sum_{n=0}^{\infty} \frac{1}{l ! } M ^ l \in Mat_n ( F) 
+\] 
+We solve our differential equation above by 
+setting 
+\[
+	g ( t) = \text{Exp } ( tX) 
+\] We check that this indeed solves the equation. 
+We have that $ g ( 0 ) = \text{ Exp } ( 0 ) = 1$. 
+\[
+	\frac{dg ( t) }{ dt }  =  \sum_{n=1}^{\infty} \frac{1}{( l - 1 ) ! } t ^{ l - 1} X^ l = \text{ Exp } ( tX) \cdot X = g ( t) X 
+\] Thus, it must be the case that 
+$ \text{ Exp } ( tX ) \in G, \forall t \in \mathbb{ R} , \forall X \in \mathcal{ L } ( G )$. 
+So we know a group determines a Lie algebra, but 
+to what extent does a Lie algebra determine a Lie group? 
+An exercise, we should check that 
+if $ X \in \mathcal{ L } ( SU ( n ) ) $, we check that 
+\[
+	\text{ Exp } ( t X ) \in SU ( N ) \forall t \in \mathbb{ R} 	
+\] 
+
+\subsubsection{Reconstructing $ G $ from  $ \mathcal{ L } ( G ) $} 
+If we set $ t = 1$, 
+we have that 
+ \[
+	 \text{Exp } : \mathcal{ L  }( G ) \to G 
+\]
+This means that if we have a map $ X \in \mathcal{ L } ( G ) $ , 
+exponentiating a this thing gives us an element in the Lie group, so $ \text{Exp} ( X) \in G $. 
+If we think of exponential map as a map on the complex numbers, 
+the inverse is the logarithm function which has branch points. 
+So, we can't expect this map to be globally bijective! 
+However, we can make a slightly weaker statement that the exponential map 
+\[
+	\text{Exp} L \mathcal{ L } ( G ) \to G 
+\]  is bijective in some neighbourhood of the 
+identity element $ e $ in our Lie group. 
+The point is that given some knowledge of our Lie bracket, 
+we can then locally reconstruct the Lie group. 
+Hence, given $ X, Y \in \mathcal{ L } ( G)  $, we can 
+construct 
+\[
+	g_{ X }  = \text{Exp} ( X) , g_Y  = \text{Exp} (Y) \in G 
+\] We have that 
+\[
+	g_X g_Y  = g_Z = \text{Exp} ( Z ) \in G, \text{for some } Z \in \mathcal{L }(G ) 	 
+\] near the identity. 
+By the Baker-Campbell-Hausdorff formula, 
+we have that $ Z $ is related to our vectors $ X, Y $ by 
+\[
+	Z = X + Y + \frac{1}{2 } [ X, Y ] + \frac{1}{12 } \left( [ X, [ X, Y ] ] - [ Y , [ X, Y ] ]  \right) 
+\] Under a rescaling, we have that 
+$ X \to \epsilon  X , Y \to \epsilon Y $  gives a small series in which 
+our formula above is valid. 
+Note that the formula is given purely in terms of sums of nested commutators, 
+and the sum of these expressions. This means that $ Z $ \textbf{will be } in the 
+Lie algebra. 
+This reflects the fact that the formula is given in terms of the Lie algebra. 
+This means we can apply this to all Lie algebras, 
+not just matrix Lie algebras. 
+Using the jacobi identity, we have that the BCH formula is 
+not a unique expression. 
+
+Now, what about away from the identity? 
+Our conclusion from the previous part was that $ \mathcal{ L } ( G ) $ 
+only determines $ G $ in the identity, in other words within the 
+radius of convergence of our BCH formula. 
+An example that the exponential map is not surjective is that 
+ $ \text{Exp  } $ clearly is not surjective when $ G $ is not connected. 
+ As an example, consider $ G = O ( n ) $. Our Lie algebra is 
+ \[
+	 \mathcal{ L } ( G )  = \left\{  X \in \text{Mat}_m ( \mathbb{ R }) \mid X^ T + X = 0  \right\} 
+ \]   Now, $ X \in \mathcal{ L } O ( n ) \implies \tr X = 0 $. Now 
+ examine $ \text{Exp} ( X)  $ for $ X \in \mathcal{ L } ( O ( n ) ) $. 
+ We have that 
+ \[
+	 \det ( \text{Exp} ( X) ) = \text{exp} ( \tr X )  = + 1 
+ \] This means that $ \text{Exp } ( X) \in SO ( n ) $. 
+ In full generality, when $ G $ is compact, the image of 
+ the lie algebra $ \mathcal{ L } ( G ) $ under the exponential map 
+ is the \textbf{connected component} of the identity. 
+This breaks down when $ G $ is not compact. 
+
+Also, the exponential map is not 
+injective either. This is always the case when $ G $ has a $ U ( 1) $ 
+subgroup. Our trivial example is $ U ( 1 ) $ itself. 
+Consider 
+\[
+	\mathcal{ L } ( U ( 1) )  = \left\{  X \in i x \in \mathbb{ C} \mid x \in \mathbb{ R}  \right\} 
+\] We have that  $ g  = \text{Exp}( X )  = \text{exp}( i x ) \in U ( 1)  $. 
+Our Lie algebra elements $ i x $ and $ i x + 2 \pi i $ yield 
+the same group element. 
+
+Let's explore the relationship between $ SU ( 2 )  $ and $ SO ( 3  ) $ 
+some more. We've shown that their Lie algebras are isomorphic. 
+\[
+	\mathcal{ L } ( SU ( 2 ) ) \simeq \mathcal{ L } ( SO ( 3) ) 
+\] Now, even though $ SU (2 )$ is not isomorphic to $ SO ( 3)$, 
+We can construct a double-covering, or a globally 2: 1 map. 
+We call this map $ d : SU ( 2 ) \to SO ( 3) $. 
+It's constructed by 
+ \[
+ A \in SU ( 2) \mapsto d ( A ) \in SO ( 3 ) 
+\] We represent $ A $ as a matrix so that 
+ \[
+	 d ( A)_{ ij }  = \frac{1}{2 } \tr_{2 } ( \sigma_i A \sigma_{ j } A^ \dagger 
+ \]  We need to first establish that our right hand side is indeed in 
+ $ SO ( 3)  $. We also need to establish that 
+ $ d ( A )  = d ( - A ) $, therefore establishing that this is 
+ indeed a double cover. 
+
+ This map provides an isomorphism between $ SO ( 3)  $ 
+ and our quotient 
+ \[
+  SO ( 3) \simeq SU ( 2 ) / \mathbb{ Z}_2 
+ \] We quotient by the centre $ \mathbb { Z} _ 2  = \left\{  I_2 , - I_ 2  \right\}  $, 
+ which is the set of matrices which commute with everything. 
+
+ Let's think about this in terms of group manifolds. 
+ We identify $\mathcal{ M } ( SU ( 2) ) \sim S^ 3 $, where we write this out as 
+ \[S^ 3 \sim \left\{  \vec{x} \in \mathbb{ R}  ^ 4 \mid  \| x \| ^ 2 = 1 , x_1^ 2 + x_2 ^ 2 + x_3 ^ 2 + x_4 ^ 2 = 1  \right\} 
+\] Our corresponding manifold $ \mathcal{ M } ( SO ( 3) ) $ is $ S^ 3 $ on the surface 
+with antipodal points on the three sphere identified, $ \vec{x} \sim  - \vec{x}$. 
+This is the same thing as $ S^ 3 _ +  $, which is our upper hemisphere with $ x_4 \geq 0 $, 
+along with our equator with antipodal points in our equator. So, we have that
+\[
+	\mathcal{ M } ( SO ( 3) ) \simeq S^3 _ + \cup \text{Equator with antipodal points identitified} 
+\] 
+ However, this is the same thing as our three-ball with points on
+the boundary identified.
+
+( Insert figure here ) 
+
+
+
+
+
+\pagebreak 

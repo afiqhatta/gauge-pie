@@ -1,0 +1,119 @@
+\subsection{Why do we need interacting fields and what are 'valid' conditions for perturbation expansions?}
+\textit{This section follows David Tong's notes, and some of Peskin and Schroesder}
+
+
+
+\par 
+So far our Lagrangian $ \mathcal{ L }$ has only been quadratic in the field
+$ \phi $. We've referred to this as our free theory; it gives rise to 
+the second order, linear PDE 
+\[
+\partial _\mu \partial ^\mu \phi + m^2 \phi = 0 
+\] which we can solve and quantise exactly. 
+However, even though our analysis of this has considered multi particle states, 
+we have yet to consider theories in which there particles interact. 
+For example, scattering scenarios. 
+
+Interaction terms can be written as higher order terms to our 
+free Lagrangian; 
+\[
+\mathcal{ L } = \frac{1}{2 } \partial _\mu \phi \partial ^\mu \phi  - \frac{1}{2 }m^ 2 \phi ^ 2 - \sum_{n=3 } \frac{ \lambda _n \phi ^ n }{ n !}
+\] The $ \lambda _{ n }  $ coefficients are called coupling constants, 
+because they couple our free theory with interaction terms. 
+For example, we could choose our constants to give rise to what we call 
+$ \phi ^ 4 $  theory, with $ \lambda_ 4 = \lambda  $ and  $ \lambda _ n $ zero otherwise: 
+\[
+\mathcal{ L } = \frac{1}{2 } \partial _\mu \phi \partial  ^ \mu \phi - \frac{1}{2 } m ^ 2 \phi ^ 2 - \frac{ \lambda }{ 4 ! } \phi ^ 4 
+\] However, if we have hopes of trying to solve our 
+theory for expansions like this in a perturbative fashion, 
+we then need to ensure that the $ \lambda_ n $ terms are small. 
+In other words, $ \lambda _ n  \ll 1 $. But what does this even mean? 
+For something to be smaller than a number, it better first be dimensionless. 
+So, let's try figure out what the dimensions of our objects in question are. 
+
+Our action is 
+\[
+S = \int d^ 4 x \, \mathcal{ L }, \quad [ S]  =0 
+\] Our action should be dimensionless. We've denoted our 
+\textbf{mass dimension} of a quantity $ Q $ as $ [ Q] $,
+which is why we wrote $ [ S] = 0 $ as the above. 
+$ d^4 x $ is an integral, which means it has dimensions of $ 4 $
+in length terms. But, in natural units, we have that 
+$ [ M ] = [ L ] ^ { - 1} $. 
+So, we have that  $ [ d^ 4 x ] = - 4$. 
+This implies that our Lagrangian must have dimensions  $ [ \mathcal{ L } ] = 4$
+so compensate. 
+
+So, what is $ [ \phi ] $ ? To find this out, 
+we look at our kinetic term $ \partial _\mu \phi \partial  ^\mu \phi$. 
+Since we have two length differentials which contribute a $ - 2$ to the dimension, we 
+can then infer that $ [ \phi ] = 1 $. 
+
+This means that since $ [ \mathcal{ L } ]  = 4$, our dimension of $ [ \lambda_ n ] $
+must satisfy  $ [ \lambda_n ] + n = 4 \implies $
+\[
+[ \lambda _ n ] = 4 - n
+\] Let's go case by case 
+\begin{itemize}
+\item  If we have $ n = 3$, our dimension of  $ \lambda_3  $ is 1. 
+This means, to force a dimensionless parameter what we actually require is that 
+$ \lambda_3 / E  \ll 1 $, since $ E $ has the same dimensions as mass. 
+This means that a perturbation of this form is only valid at high energies! 
+High energy scattering is one case where we could apply this theory. This is 
+called a \textbf{relevant} perturbation, 
+because the perturbation is significant at low energies.
+\item In the case where $ d = 4$, our mass dimensions $ [ \lambda_4 ]  =0 $, so we 
+require that the perturbation is small when $ \lambda_4 \ll 1 $. 
+This, the boundary case, is called a \textbf{marginal} operator.
+We can deal with the infinities that come from this perturbation, 
+so we call it a renormalisable theory. 
+\item The perturbation $ \lambda_{ n } \phi^ n / n! $ are called \textbf{irrelevant} 
+operators. This is because their associated dimensionless parameter is 
+$ \lambda E^{ n - 4}$, so the perturbation expansion is only valid at low energies. 
+Their effect is only significant at high energies. These are non re normalisable theories.   
+\end{itemize}
+Let's look at some of the properties of $ \phi^ 4 $ theory. 
+This has Lagrangian 
+\[
+\mathcal{ L } = \frac{1}{2 } \partial _\mu \phi \partial  ^\mu \phi - \frac{1}{2 } m ^2 \phi ^ 2 - \frac{ \lambda \phi^ 4 }{4 !}, \lambda \ll 1 
+\] We can already see from first glance that our Hamiltonian is going to contain 
+a bunch of extra terms which are inherited from the last term. 
+This means that our number operator 
+\[
+N = \int \frac{ d^ 3 p }{ ( 2 \pi ) ^ 3 } a_{ \vec{p} }^ \dagger a_{ \vec{p}}
+\]  will satisfy $ [ H , N ] \neq 0 $. 
+This already tells us that particle number will not be conserved. 
+We can see this explicitly by expanding the last term, which will yield combinations
+of the form 
+\[
+\dots \int a^\dagger_{ \vec{p}} a^\dagger_{\vec{p}'} a^\dagger_{\vec{p}''}a^\dagger_{ \vec{p}'''}
+\] and other terms which create or destroy particles. 
+
+Another example is scalar Yukawa theory. 
+THis is what we get when we lump together a 
+a $ \mathbb{ C} $ scalar field, a real scalar field, as well as an interaction term. 
+\[
+\mathcal{ L } = \partial _\mu\psi \partial ^ \mu \psi - \mu ^ 2 \psi \psi ^ * + \frac{1}{2 } \partial _\mu \phi \partial  ^ \mu \phi - \frac{m^2}{ 2 } \phi ^ 2 - g \psi \psi ^ * \phi  
+\] This Lagrangian has been used for example in 
+the interaction of mesons.
+Now, our $ g $ term here is combined with three fields. 
+This means that it's like a $ \lambda _ 3  $ term. 
+
+This means it's a relevant operator. Hence, working perturbatively works 
+for low energies. In a relativistic setting, 
+$ E > m$. So, we can make perturbations small by taking 
+$ g \ll m $. 
+We can start to make preliminary statements about this Lagrangian by 
+observing that  its invariant under the transformation 
+\[
+\psi \to e^{ i \theta } \psi, \quad \psi^ * \to e^{ - i \theta }\psi^ *  , \quad \phi \to \phi 
+\] This means that our Noether current 
+for this symmetry exists. This Noether current $ Q $ is our
+particle minus anti particle number, and we have that $ [ Q, H ] = 0 $. 
+Thus, with this Lagrangian the number of particles minus the number of antiparticles
+stays constant. 
+
+We have no conservation however, for scalar particles generated by  $ \phi$. 
+
+\pagebreak 
+

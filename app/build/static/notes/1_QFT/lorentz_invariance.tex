@@ -1,0 +1,62 @@
+\subsection{Lorentz invariance} 
+In QFT and special relativity, theories should be invariant under Lorentz transformations. In this section, we will consider active transformations, where we're changing the direction of the field under a Lorentz boost. Under a Lorentz boost, our scalar field $\phi$ changes like 
+\[
+\phi(x) \rightarrow \phi'(x)  = \phi (x')  = \phi(\Lambda^{ - 1} x ) 
+\] 
+This is what we call an \textbf{active transformation} since our field is actually, physically shifted.
+We're shifting our field by a Lorentz boost in our frame, with $x \rightarrow \Lambda x  $ which induces a change $\phi(x) \rightarrow \phi' (x)$, but this change is equivalent to rotation our frame of reference in the opposite direction first (I'll show a diagram below). 
+Our Lorentz boosts are defined by the property that 
+\[
+\Lambda\indices{^\mu_\rho} \eta^{\rho \tau} \Lambda \indices{_\tau^\nu} = \eta^{ \mu \nu } 
+\] 
+Lorentz boosts can simultaneously represent rotations in 3-space, as well as boosts in a particular axis in which mixes time and space. For a rotation, our boost is represented as 
+\[ 
+\Lambda\indices{^\mu_\rho} = \begin{pmatrix} 
+1 & 0 & 0 & 0 \\
+0 & 1 & 0 & 0 \\
+0 & 0 & \cos \theta &  - \sin \theta \\
+0 & 0 & - \sin \theta & \cos \theta 
+\end{pmatrix} 
+\]  
+and for a boost, Lorentz transformations are represented by 
+\[ 
+\Lambda\indices{^\mu_\rho}  = \begin{pmatrix} 
+\gamma &  - \gamma v & 0 & 0 \\
+- \gamma v & v & 0 & 0 \\
+0 & 0 & 1 & 0 \\
+0 & 0 & 0 & 1 
+\end{pmatrix} 
+\] 
+
+In terms of group theory, Lorentz transformations are representations of the Lie group $SO( 3, 1)$ on scalar fields. Let's look at Lorentz invariant theories, which are theories where our physical action $S$ is unchanged by Lorentz transformations. Consider the action 
+\[ 
+S = \int d^4 x \, \partial_\mu \phi \partial^\mu \phi + U ( \phi(x) ) 
+\]
+We've declared here that $U ( \phi (x) )$ is some polynomial of $\phi(x)$.  
+How does this object change under transformations of our field $\phi( x)  \rightarrow \phi ' ( x) $? Let's do the polynomial term first. Under the active transformation $ \phi(x) \rightarrow \phi' (x) = \phi ( x' )$, we have that 
+\[ 
+U ( x)  = U ( \phi (x) ) \rightarrow U ( \phi' (x) ) = U ( \phi (x') ) = U ( x') 
+\]
+This means that $U (x) \rightarrow U ( x')$. Now, to do the kinetic part of the Lagrangian.  
+To do this, we observe that our partial derivative of a field transforms as 
+\[ 
+\partial_\mu \phi \rightarrow \partial_\mu \phi'( x ) = \partial_\mu \phi(x' )  = (\Lambda^{-1} )\indices{^\rho_\mu} \partial'_\rho \phi(x'), \quad x'  =\Lambda^{ -1} x 
+\] 
+Something important to note here is that we're \textbf{ not} transforming $x$ simultaneously here as well, since this is an active transform of the actual field. We've only expressed $x$ diffferently to express our change in our field in terms of new coordinates, but the same function. 
+Thus, our Kinetic term transforms as 
+\begin{align*}
+\frac{1}{2} \eta^{ \mu \nu} \partial_\mu \phi \partial_\nu \phi & \rightarrow \frac{1}{2} \eta^{ \mu \nu} \partial_\mu \phi' \partial_\nu \phi' \\
+&= \frac{1}{2} \eta^{ \mu \nu} ( \Lambda^{ -1})\indices{^\sigma_\mu} ( \Lambda^{ -1} ) \indices{^\tau_\nu} \partial'_\rho ( x' ) \partial'_\tau ( x' ) \\
+& = \frac{1}{ 2} \eta^{ \rho \tau} \partial_\rho' \phi(x') \partial_\tau'(x') 
+\end{align*} 
+where we've used the transformation property of the Minkowski metric. Thus, every term in our Lagrangian density has replaced $x$ with a modified $ x '  = \Lambda^{ -1} x $. We thus have that our action changes like 
+\[ 
+S = \int d^4 x \, L (x) \rightarrow  S'  = \int d^4 x \, L ( x' ), \quad x' = \Lambda^{ -1}  x 
+\] 
+However, since the determinant (associated Jacobian) of our Lorentz boost is 1 (as Lorentz boosts are part of the special group $SO(3,1)$, we have that our measure doesn't change: 
+\[ 
+d^4 x  = det ( \Lambda ) d^4 x'  = d^4 x' \implies S' = \int d^4 x' \, L ( x' )  \implies S = S'
+\] 
+In the last step we have equality since we're integrating over a dummy variable! Thus, Lagrnagians of this form are Lorentz invariant. 
+
+\pagebreak 

@@ -1,0 +1,75 @@
+\section{Lie Algebras}
+
+Lie algebras are 'infinitesimal versions' of Lie groups, and they should be interpreted as such. A Lie algebra $\mathcal{g}$ is a vector space $\mathcal{G}$ (for example, a set of matrices) over some field $\mathbb{ R} $ or $\mathbb{ C }$. which has a special structure defined on it called a 'bracket', which is a bilinear map. 
+\[
+	\_ \dot \_ : \mathcal{G} \times \mathcal{G} \rightarrow \mathcal{G}. 
+\]
+This should obey some special properties. 
+\begin{enumerate}
+	\item Antisymmetry: $[X, Y] = - [Y, X] \quad \forall X, Y \in \mathcal{G}$
+	\item Linearity: $[X, \alpha Y + \beta Z] = \alpha [X, Y] + \beta [X, Z] \quad \forall X, Y, Z \in \mathcal{G }, \quad \alpha, \beta \in F$. 
+	\item Jacobi Identity: $[X, [Y, Z]] + [Y, [Z, X]] + [Z, [X, Y]] = 0  \quad \forall X, Y, Z \in \mathcal{G}$. 
+\end{enumerate}
+Note, the Jacobi identity is a non trivial property inherited from the associativity of group multiplication in the underlying Lie group. 
+For an example of a valid Lie algebra, we can define the vector field of all matrices $Mat_n(\mathbb{R})$, and simply define the Lie bracket as the anti-commutator of these matrices. It's easy to check that it satisfies the properties above. 
+
+If a vector space $V$ has an associated product 
+\[ * : V \times V \rightarrow V \]
+which satisfies 
+\[ 
+ ( X * Y) * Z  = X * ( Y * Z ), \quad Z * ( \alpha X + \beta Y ) = \alpha Z * X + \beta Z * Y, \quad  \forall X, Y Z \in V, \forall \alpha, \beta \in F \] 
+We can get a Lie algebra straight from this by setting 
+\[ 
+	 [ X , Y ] = X * Y - Y * X, \quad \forall X, Y \in V 
+\] Lot of examples with $ V $ being the vector space of matrices, with the operation $ * $ being matrix multiplication. The dimension of $\lalg$ is the dimension of the vector space. We can choose a basis $\mathcal{ B }$ for $\lalg$, denoted as the set 
+\[ 
+	 \mathcal{ B} = \{ T^ a, a = 1, \dots, n = dim ( \mathcal{ g } ) \} 
+\] Since we have a vector space, we have that for any $X \in \lalg$, we can write this as 
+\[ 
+ 	X  = X_a T^a  : = \sum_{ a = 1}^n X_a T^a, \quad X_a \in F 
+\] Now, if we take the Lie bracket of elements $ X, Y \in \lalg$, by linearity we have that 
+\[
+	[X, Y ] = X_a Y_b [ T^a , T^b ]
+\] Hence it's in our interest to know what the values of the brackets of the basis elements are. These characterise the Lie algebra, given by 
+\[ 
+	 [ T^a, T^b ] = f^{ ab }_c T^c 
+\] If the structure constants are the same in two Lie algebras, we have an isomorphism. These structure constants are elements of the underlying field $ F$. Our properties of the Lie bracket imposes conditions on the structure constants. We have that 
+\begin{itemize} 
+	\item Antisymmetry $ \implies f^{ ab}_c =  - f^{ ba }_c $. 
+	\item The Jacobi identity obeys the quadratic like identity that 
+	\[ 
+		 f^{ ab}_c f^{ cd}_e + f^{da}_c f^{ cb}_e + f^{ bd}_c f^{ ca}_e  =0 
+	\] 
+\end{itemize} 
+Two Lie algebras are isomorphic if there's a bijective linear map $ f: \lalg \rightarrow \lalg' $ such that our \textbf{Lie bracket structure is preserved}. In other words, we require the condition that 
+\[
+	 [ f( X), f( Y) ] = f ( [ X, Y ] ), \quad X, Y \in \lalg
+\] 
+A subalgebra $h \subset \lalg $ is a vector subspace which itself is also a Lie algebra. 
+
+\subsubsection{Properties of Lie algebras}
+Like groups in the usual sense, we have derived objects from Lie algebras. The most obvious of these would be a sub-algebra $\mathcal{H}$ We define the important concept, an ideal. This is a sub-algebra $\mathcal{I} \triangleleft \mathcal{G} $, where 
+\[ 
+	[X, Y] \in \mathcal{I} \quad \forall Y \in \mathcal{I}, \forall X \in \mathcal{G}
+\] This is roughy the same as a normal subgroup in a group. We'll now give some examples. Every $\lalg$ has two trivial ideals, which are 
+\[ 
+ 	h = \{ 0 \}, \quad h = \lalg
+\] 
+The next example is called the \textbf{derived algebra} which may not be a trivial ideal. This is 
+\[ 
+ 	\mathcal{I } = [ \lalg, \lalg ] : = span_F \{ [ X, Y ] : X, Y \in \lalg \} 
+\] This is the linear sum of all possible Lie brackets of elements in our Lie algebra. 
+\textbf{The Centre}
+
+The centre $C(\mathcal{G})$of a Lie algebra is the ideal whose elements commute with all other elements. 
+
+\[ 
+	C(\mathcal{G}) = \{ X \in \mathcal{G} \mid [X, Y] = 0 \forall Y \in \mathcal{G} \}.  
+\]  An abelian Lie algebra is such that 
+\[
+	 [X, Y]= 0, \quad \forall X, Y \in \lalg
+\] In this case, the derived algebra is simple the set with identity, and the centre is the whole group. We say that a Lie algebra $\lalg$ is simple if it is non-abelian and has no non trivial ideals. For simple Lie algebras, the derived ideal is the whole group, and the centre is 0. 
+
+\subsubsection{Cartan classification} 
+We can classify all finite dimensional simple Lie algebras over the complex field. 
+

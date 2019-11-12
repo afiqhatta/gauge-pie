@@ -1,0 +1,40 @@
+\subsection{Setting up the Ising model}
+Our simplest physical model to begin with is an array of particles situated on a lattice, each with an individual spin, $s_i = \pm 1 $. From this, the Ising model gives us an expression for the energy of the system:
+\[ 
+	E = - B \sum_i s_i - J \sum_{<ij>} s_i s_j. 
+\]
+B is a magnetic field which is applied. We want to minimise the energy of this expression, and this leads to different behaviours depending on $J$ 
+\begin{itemize} 
+	\item $J > 0$ means that our spins align (ferromagnet) 
+	\item $J < 0$ Misaligned (anti-ferromagnet) 
+\end{itemize}  
+The sums are over all possible configurations of spins in the lattice. The first term arises from the magnetisation of the material, and the second term is an energy penalty applied due to the interaction of neighbouring atoms having the same or different spins. 
+Keeping track of spins motivates us to define an idea of some average value of spin over the whole system, which ranges from $-1$ to $1$. 
+\[
+	m = \frac{1}{N} \sum_{i} s_i. 
+\]
+
+
+With this expression, we can calculate the probability of having a certain configuration of spins. 
+\[
+	\mathbb{P}(\text{configuration is } \{ s_i \}) = \frac{e^{ - \beta E[s_i]}}{Z}
+\]
+where $Z$ is our partition function 
+\[ 
+	Z = \sum_{\{ s_i \}} e^{ - \beta E[s_i] }. 
+\]
+
+Our expression for the partition function $Z$ is quite important. It encodes on its own quite a lot of information we have about the physical system. Suppose we wish to compute a value for our average magnetisation $\langle m \rangle$. Well, this is the weighted sum of the magnetisation of all possible contributions to spin, which is
+\[ 
+	 \langle m \rangle  = \sum_{s_i} \frac{e^{- \beta E[s_i]}}{Z} \times \frac{1}{N} \sum_{s_i \in \{ s_i\} } s_i. 
+\] 
+Of course, given are previous expression for $E$ we can condense this down to the compact expression 
+\[ 
+	\langle  m \rangle = \frac{1}{\beta N} \frac{\partial \log Z}{\partial B}. 
+\] 
+
+We can also calculate the thermodynamic free energy 
+\[ 
+	F_{thermo} (T, B)  = \langle E \rangle  - TS  = - T log Z 
+\] 
+

@@ -1,0 +1,129 @@
+\subsection{Cross sections and decay rates} 
+
+\subsubsection{Kinematics} 
+Let's use handy variables called Mandelstam variables. 
+
+Consider $ 2 \to 2 $ scattering. 
+Due to conservation of momentum, we have that 
+\[
+ p_1 ^ \mu + p_2 ^ \mu = q_ 1 ^ \mu + q_2 ^ \mu 
+\] if we define the Mandelstam variables 
+\begin{align*}
+	s  & := (p_1 + p_2 ) ^ 2 \\
+	t & : = ( p_1 - q_1 ) ^ 2 \\
+	u & : = ( p_1 - q_2 ) ^ 2 
+\end{align*} 
+Exercise: show that 
+\[
+	s + t + u = m_1 ^ 2 + m_2 ^ 2 + ( m_1' )  ^ 2 + ( m_2' )  ^ 2
+\] (Insert diagram of scattering here) 
+\begin{align*}
+	i \mathcal{ M } &=  ( - i g ) ^ 2 \left\{  \frac{1}{ 
+	( p_1 - q_1 ) ^2 - m ^ 2 } + \frac{1}{ ( p_1 - q_2) ^ 2 - m^ 2 } \right\}  \\
+			&=  ( - i g ) ^ 2 \left\{  \frac{1}{t - m ^ 2 } + \frac{1}{ u - m ^ 2 } \right\}  \\
+\end{align*}
+
+\subsubsection{Decay rates} 
+Our probability of scattering 
+is expressed in terms of 
+\[
+	\bra{ \phi } S- 1 \ket{ i } = i \mathcal{ M } ( 2 \pi ) ^ 4 
+	\delta ^ 4 ( \sum_ i p_ i - \sum_i q_i ) 
+\] Our initial and final states 
+are in terms of definite momenta. 
+Our probability is given by 
+\[
+	P = \frac{ \| \bra { f} ( S -  1 ) \ket { i } \| ^ 2 }{
+	\bra { f} \ket { f} \bra{ i } \ket{ i } }
+\] The language of probability in this space is 
+given by 
+\[
+	d \sigma = \frac{ ( 2 \pi ) ^ 4 \delta ^ 4 ( p_1 + p_2 - \sum_ i q _ i ) | \mathcal{M } | ^ 2 }{
+	\mathcal{ F }}
+\] Here, $ \mathcal{ F } $ is our flux factor with 
+\[
+	\mathcal{ F } = 4 \sqrt{ ( p_1 \cdot  p_2 ) ^ 2 - m_1^ 2 m_2 ^ 2} 
+\] To find our total cross section from $ i \to f $, 
+we integrate over our final state momentum in the usual 
+Lorentz invariant way. 
+ \[
+ \sigma = \int \frac{1}{ \mathcal{ F } } d p_{ f } | \mathcal{ M } | ^ 2 
+\] Our measure is given by 
+\[
+	\int d p _{ f } = ( 2 \pi ) ^ 4 \int \left( 
+	\prod_{ r = 1 } ^ n \frac{ d^ 3 q }{ ( 2 \pi ) ^ 3 2 E_{ r } }\right) 
+	\delta ^ 4 ( \sum_ i p _ i - \sum_ i q_i ) 
+\]
+\subsubsection{$ 2 \to 2 $ scattering} 
+We write our mandelstam variable 
+\[
+	t =  ( p_1 - q_1) ^ 2 = m_1 ^ 2 + m_2 ^ 2 - 2 E_{ p _ 1 } E _{ q _ 1 } + 2 
+	\vec{p} _ 1 \cdot  \vec{q} _ 1 
+\] We have that 
+\[
+\frac{ d t }{ d \cos \theta } = 2 | \vec{p} _ 1 | | \vec{q} _ 1 | 
+\] where  $ \cos \theta $ is the angle between $ \vec{q}  _ 1 $ and $ \vec{p} _ 1 $. 
+It's convinient for us to work in the center of mass frame, 
+the frame where our total momenum is $ 0 $. 
+Our second Mandelstam variable is 
+$ s= ( p_1 + p_2 ) ^ 2 $, which we can work out to be the centre 
+of mass energy. This quantity is a constant of the scattering. 
+We write 
+\[
+	\frac{ d ^ 3 q_2 }{ 2 E _{ q_ 2 } } = d ^ 4 q _ 2 \delta ( q_2 ^ 2 - ( m_2 ') ^ 2 ) \theta ( q_2 ^ 0 ) 
+\] where we've defined $ \theta $ as the Heaviside step function. 
+For the other variable, we write
+\[
+	\frac{ d ^ 3 q_1 }{ 2 E _{ q_1 } } = \frac{ | \vec{q} _ 1 | ^ 2 d | \vec{q} _1 | d ( \cos \theta ) 
+	d \phi }{ 2 E_{ q_{1 } }} = \frac{1}{ 4 | \vec{p} _ 1 | } d E_{ q_ 1 } d \phi dt 
+\] Now, putting this together, 
+we have an expression 
+\[
+ \frac{ d \sigma }{ dt } = \frac{1}{8 \phi \mathcal{ F } | \vec{p}_ 1  | } 
+ \int d E_{ q_ 1 } | \mathcal{ M } | ^ 2 \delta ( s - m_2 ^ 2  -  ( m_1')  ^ 2 - 2 \vec{q} _ 1 
+ \cdot  ( \vec{p} _ 1 + \vec{p} _ 2 ) ) 
+\] Now, if we boost back to the centre of mass fram, we have that 
+\begin{align*}
+	p_1 ^\mu & = ( \sqrt{| \vec{p} _ 1 | ^  2 - m_1 ^ 2 }, \vec{p} _ 1 )  \\
+	p_2 ^ \mu &=  ( \sqrt{ | \vec{p} _ 1 | ^ 2 + m_2 ^ 2 }, - \vec{p} _ 1 )   \\
+\end{align*}
+This means we compute th $ s $ mandelstam variable 
+\[
+	s = ( \sqrt{ | \vec{p} _1 | ^ 2 + m_1 ^ 2  } + \sqrt{ | \vec{p} _ 2 |^ 2 + m_2 ^ 2  } ) ^ 2  
+\] This implies that we can rewrite 
+\[
+	| \vec{p} _ 1 | = \lambda ^{ \frac{1}{2 } } ( S, m_1 ^ 2 , m_2 ^ 2 ) / 2 \sqrt{ s }  
+\] where we have defined 
+\[
+ \lambda ( x, y , z ) = x^ 2 + y ^ 2 + z ^ 2 - 2xy - 2xz - 2yz
+\] From this, we have that 
+\[
+	\mathcal{ F } = 2 \sqrt{ \lambda ( s , m_1 ^ 2 , m_2 ^ 2 ) } \implies 
+	\frac{ d \sigma }{ d t } = \frac{ | \mathcal{ M } | ^ 2 }{ 16 \pi \lambda ( s , m_1 ^ 2 , m_2 ^ 2 ) }
+\] 
+\subsubsection{Decay rates} 
+We defime a partial decay rate for $ \ket{ i } \to \ket{ f } $, 
+or partial width, as 
+\[
+\Gamma _f = \frac{1}{ 2 E_ p } \int d p _ f | \mathcal{ M } | ^ 2  
+\] Note that this is not a Lorentz invariant 
+quantity due to time dilation. 
+Hence, our convention is to quote this in terms 
+of the res frame of the initial particle, 
+where the energy $E _{ p _ i } $ is equal to 
+the mass $ m _ i $. 
+We define the total decay with whcih we write as  $ \Gamma $. 
+This is the sum of all possible states 
+ \[
+\Gamma = \sum _ f  \Gamma _ f  
+\]
+The branching ratio for $\ket{ i } \to \ket { f} $ is denoted as 
+\[
+ BR ( i \to f )  = \frac{\Gamma_ f }{ \Gamma}
+\] If we look at the units, we notice that the average 
+lifetime is 
+\[
+	\tau = 6.6 \times 10 ^{ - 25 } \times ( 1 \text{GeV } ) / \Gamma \text{ seconds }
+\]
+
+\pagebreak

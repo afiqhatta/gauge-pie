@@ -1,0 +1,60 @@
+\subsection{Question 1}
+
+Our group axioms are identity, closure, inverses and associativity. 
+We go about proving the first three, and in the case of matrix groups 
+we can say that associativity is inherited from matrix multiplication. 
+
+
+We check closure, since associativty is inherited from matrix multiplication.
+\begin{align*}
+C^T C = (AB)^T AB = B^T A^T A B = B^T B = I. 
+\end{align*}
+Finally, if $A \in O(n)$, then by inverting both sides, 
+\[
+A^T A = I \implies A^{-1} (A^T)^{-1} = A^{-1} (A^{-1})^T = I. 
+\]
+The case for the unitary group is entirely similar except that we replace transposition by Hermitian conjugation. 
+To show that $O(n)$ is a subgroup of $U(n)$, we must first show that it's a subset of $U(n)$. Since $O(n)$ is defined for just matrices over the reals, Hermitian conjugation is equivalent to transposition over the reals. Thus, matrices in $O(n)$ are also unitary. Since $O(n)$ is a group in its own right, it's a subgroup. 
+
+$SO(n)$ consists of matrices in $O(n)$ which have determinant 1. Thus, we have that $SO(n) \subset O(n) \subset U(n)$. Thus, $SO(n) \subset U(n)$. But since its matrices have determinant 1, $SO(n) \subset SU(n)$. 
+
+\subsubsection*{Showing that $U(n)$ is a subgroup of $SO(2n)$} 
+A complex vector $\mathbf{c} \in \mathbb{C}^n$ and be represented as the sum of a real and imaginary vector, where 
+\[ 
+\mathbf{c} = \mathbf{a} + i \mathbf{b}, \quad \mathbf{a}, \mathbf{b} \in \mathbb{R}^n 
+\] 
+Similarly, a unitary matrix $U \in U ( n) $ can be represented as the sum of a real and imaginary matrix. 
+\[ 
+U  = A + i B, \quad A, B \in Mat_n (\mathbb{R} ) 
+\] 
+Our condition of unitarity however imposes conditions on $A, B$. By comparting real and imaginary parts, we can extract these conditions from 
+\[ 
+U^\dagger U = (A^\dagger - i B^\dagger)( A + iB ) = (A^\dagger A  + B^\dagger B ) + i ( A^\dagger B - B^\dagger A ) = I \implies A^\dagger A + B^\dagger B = I, \quad A^\dagger B - B^\dagger A  = 0 
+\] 
+In addition, we can act on vectors in this notation, still treating the real and imaginary components separately. We find that 
+\[ 
+( A + iB)( \mathbf{a} + i \mathbf{b}) =  A\mathbf{a} - B\mathbf{b} + i (B \mathbf{a}  + A \mathbf{b} ) 
+\] 
+This whole system can be represented as a map on $\mathbb{R}^{2n}$ by stacking up $\mathbf{a}$ and $\mathbf{b}$. 
+\[ 
+\begin{bmatrix} \mathbf{a} \\ \mathbf{b} \end{bmatrix} \mapsto \begin{bmatrix} A & -B \\ B & A \end{bmatrix} \begin{bmatrix} \mathbf{a} \\ \mathbf{b} \end{bmatrix} 
+\] 
+In this step, we're representing the matrix $U$ as an operator on $\mathbb{R}^{ 2n}$ instead of the usual, fundamental representation. All that's left to show is that a matrix of this form is in $SO ( 2n)$. We compute the sum and use the conditions above to show that 
+\[ 
+\begin{pmatrix} A^T & B^T \\  - B^T & A^T \end{pmatrix} \begin{pmatrix} A & - B \\ B & A \end{pmatrix}  = \begin{pmatrix} A^T A + B^T B & B^T A - A^T B \\  - B^T  A + A^T B & A^T A + B^T B \end{pmatrix}  = I 
+\] 
+We've replaced the daggers in the above conditions with transposes since the matrices are real! 
+
+More simply, we could argue from the fact that if $ v = ( v_1 , \dots, v_{ n  }) \in \mathbb{ C} ^ n$, 
+then $ U ( n ) $ preserves our norm $ \| v \|^ 2   = \sum_i \| v_ i  \|^ 2  $. 
+If we write $ v_{i } = x_ i + i y_ i $, then $ | v| ^ 2 = \sum_i x_i ^ 2 + y_i ^ 2 $, 
+which is preserved by  $ O ( 2n ) $. Thus, $ U ( n ) \leq O ( 2n ) $. 
+Thus, we've shown $ U ( n ) \leq O ( 2n ) $. 
+Note that $ U ( n ) $ is connected, so it must be embedded in the 
+connected component of the identity as $ I $ is sent to $ I $. 
+$ U ( n ) $ is connected as we can diagonalise it as $ diag ( e^{ i \theta _ 1 }, \dots e^{ i \theta_ n } ) $, 
+and take a path from any element to any element by parametrising $ \theta_ i $
+with  $ t$. 
+
+\pagebreak
+

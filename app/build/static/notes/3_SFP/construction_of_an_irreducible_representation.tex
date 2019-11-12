@@ -1,0 +1,126 @@
+\subsubsection{Construction of an irreducible representation}
+
+Our next thing to do in building a representation 
+of $ \mathcal{ L } ( SU ( 2) ) $ is to then use 
+our finite dimensionality constraint to construct 
+our whole set of eigenvectors. A quick outline of these steps is 
+\begin{enumerate}
+	\item Declare a highest weight vector. 
+	\item Step down with $ E_- $
+	\item Show that we have no other vectors 
+		the same eigenvalue 
+\end{enumerate}
+
+Since we have a finite dimensional representation, 
+there must be a point where raising our vector 
+with $ R ( E _ + ) $ terminates. This implies that 
+there exists a vector $ \vec{v} _ \Lambda$ with 
+$ \Lambda $ our highest weight, such that 
+\[
+ R ( H ) \vec{v} _ \Lambda = \Lambda \vec{v} _ \Lambda, \quad
+ R ( E_ + ) \vec{v} _ \Lambda  = 0 
+\] Now, from this object, let's see what we can do. 
+Well, we can repeatedly apply a lowering 
+operator on $ \vec{v} _ \Lambda$, and we use this 
+procedure to build a set of eigenstates which we 
+index as 
+\[
+	\vec{v}_{ \Lambda - 2k } = [ R ( E- ) ] ^ k  \vec{v} _ \Lambda 
+\] This procedure is shown in the figure. 
+\begin{figure}[h]
+	\centering
+	\begin{tikzpicture}[scale=0.7]
+		\begin{scope}[very thick,decoration={
+    				markings,
+    				mark=at position 0.5 with {\arrow{>}}}] 
+		\filldraw (0,0) circle (2pt) node[align=left,   below] {$ \vec{v}_\Lambda$}  ; 
+		\filldraw (0, -2) circle (2pt) node[align=left, below] {$ \vec{v}_{ \Lambda - 2}$}; 
+		\filldraw (0, -4) circle (2pt) node[align=left, below] {$ \vec{v}_{ \Lambda - 4}$}; 
+		\filldraw (0, - 6) circle (2pt)  node[align=left, below] {$ \vec{v}_{ \Lambda - 4}$};
+
+		\draw [postaction={decorate}] (0, 0) to [out=180,in=180] (0 , -2);
+		\draw [postaction={decorate}] (0, -2) to [out=180,in=180] (0 , -4);
+		\draw [postaction={decorate}] (0, -4) to [out=180,in=180] (0 , -6);
+
+		\node[draw] at (-2.5,  -1) {$ R ( E_- ) $};
+		\node[draw] at (-2.5,  -3) {$ R ( E_- ) $};
+		\node[draw] at (-2.5,  -5) {$ R ( E_- ) $};
+		\end{scope} 
+	\end{tikzpicture}
+\end{figure}
+
+Our final goal for this section will be to show 
+that these states are non-degenerate in their weights. 
+This means that, for every given weight, we only have one associated vector. 
+To show this, we use the assumption that our representation is 
+\textbf{irreducible}. This assumption is important because 
+it implies that every state in our representation space 
+can be obtained by composing strings of 
+$ R ( E_- ) , R ( E _ + ) $ and  $ R (H ) $. 
+Using this assumption, if we prove that 
+\[
+ R ( E_ + ) \vec{v} _{ \Lambda - 2k } \propto \vec{v} _{ \Lambda - 2k + 2 }
+\] then we are done, because this means 
+that at we cannot access any other states other 
+than the set $ \left\{  \vec{v}_{ \Lambda - 2 k }, k \in \mathbb{ Z}  \right\} $. 
+We can prove this via induction. 
+The base case is straight forward. If we assume that 
+the above relation holds, then extending to the case 
+$k \to k + 1 $, we get 
+\begin{align*}
+	R ( E_ + ) \vec{v}_{ \Lambda - 2 k - 2 } &=  R ( E_ + ) R( E _-) \vec{v}_{ \Lambda - 2k } \\
+						 &=  \left( [ R ( E_ + ) , R ( E _ - ) ] + R ( E_-) R( E_ + ) 
+						 \right) \vec{v} _{ \Lambda - 2k } \\
+						 &=  \left(   R( H ) + R ( E_ - ) R ( E _ + )  \right) \vec{v}
+						 _{ \Lambda - 2k }\\
+						 &=  R( H ) \vec{v} _{ \Lambda - 2k } 
+						 + R ( E_ - ) K \vec{v}_{ \Lambda - 2k + 2 }\\
+						 &=  R( H ) \vec{v}_{ \Lambda - 2k } + K \vec{v}_{ \Lambda - 2k } \\
+						 &=  \left(  \Lambda - 2k   + K \right)  \vec{v}_{ \Lambda - 2k } \\ 
+\end{align*}
+In this induction step we used $ K $ as the constant 
+of proportionality here. We can do even better than this 
+and determine this constant of proportionality.
+Let's define our constant of proportionality 
+recursively as 
+\[
+ \vec{v}_{ \Lambda - 2k } = r_ k \vec{v}_{ \Lambda - 2k + 2 }
+\] Now, to get to the next term in the series, 
+we apply our lowering operator to both sides. Once
+we apply the appropriate commutation relations, we can 
+obtain the relations as follows 
+\begin{align*}
+	R ( E_- ) R( E_ + ) \vec{v}_{ \Lambda - 2k } &=  r_ k R ( E _- ) \vec{v} _{ \Lambda - 2k + 2} \\
+	\left(  [ R ( E_- ) ,R ( E _ + ) ] + R ( E _ + ) R ( E _ - )  \right) 
+	\vec{v}_{ \Lambda - 2k } &=  r_ k \vec{v}_{ \Lambda - 2k } \\
+	\left( - R ( H ) \vec{v}_{ \Lambda - 2k } + R ( E _ + ) \vec{v}_{ \Lambda - 2k - 2} \right) &=  
+	r_ k \vec{v}_{ \Lambda - 2k }\\  
+\end{align*} 
+Now, substituting our expression for our recursion constant with $ k + 1 $, 
+ \begin{align*}
+	 - ( \Lambda - 2k ) \vec{v}_{ \Lambda - 2k } + r_{ k + 1 } \vec{v}_{ \Lambda - 2k } 
+	 &=  r_ k \vec{v}_{ \Lambda - 2k } \\
+\end{align*}
+This yields the recursion relation that 
+\[
+ r_{ k +1 } = r_ k + \Lambda - 2k, \quad r_ 0 = 0  
+\]  The boundary condition for $ r_0 $ can be 
+obtained by just considering what happens at $ k = 0 $, 
+we have that  $ R ( E_ + ) $ annihilates $\vec{v} _\Lambda$. 
+Writing out the first few terms explicitly, 
+one can easily be convinced that 
+\[
+ r_k = k ( \Lambda - k + 1 ) 
+\] Now, our condition that  $ R $ is a 
+finite dimensional representation gives us another 
+condition that $ R ( E _) \vec{v}_{ \Lambda - 2N }  = 0 $
+for some non-zero $ \vec{v}_{ \Lambda - 2 N } $. This implies that, going 
+one step down, that we have 
+\[
+	0 = R ( E_ + ) \vec{v}_{ \Lambda - 2 (  N+ 1 ) } =  r_{ N + 1 } \vec{v}_{ \Lambda - 2N }
+\] This implies that $ r_{N + 1 } = 0$. Using our previous 
+recursion relation 
+\[
+	r_{ N + 1 } = ( N + 1 ) ( \Lambda - N - 1+ 1 ) = 0 \implies \Lambda = N, N \in \mathbb{ N } 
+\] 
+\pagebreak 

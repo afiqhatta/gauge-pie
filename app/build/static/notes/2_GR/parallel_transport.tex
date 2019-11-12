@@ -1,0 +1,159 @@
+\subsection{Parallel Transport} 
+Now that we have a connection $\nabla $, we will show
+that we can use this
+object to make vectors 'travel' along the surface of a manifold. 
+This means that our connection has given us a map from the vector space at 
+a point $p \in \mathcal{ M } $, to another point $ q \in \mathcal{ M } $. 
+To set up this map, we take our favourite vector field $ X$ and 
+then generate integral curves. At a specific point $p \in \mathcal{ M }$, 
+this specifies a unique curve $ \mathcal{ C } $. This curve is given by 
+\[
+	X^\mu \mid_C = \frac{ d x^\mu ( \tau ) }{ d \tau } 
+\] 
+A vector field  $\mathcal{ X } ( \mathcal{ M } )  $ is said to 
+be \textbf{parallel transported} along this curve if at every point, 
+we have that the covariant derivative of $ Y $ with respect to 
+$ X $ is zero. 
+\[
+ \nabla _ X Y = 0 , \quad \text{ at all } p \in \mathcal{ C } 
+\] From this object 
+we have an equation which specifies the components 
+$ Y ^ \mu $ at each point on the curve. Our initial 
+condition here is what $ Y ^ \mu ( \tau = 0  ) $ is. 
+The above condition reads 
+\[
+ X^ \mu \left(  \partial  _ \mu Y ^ \nu + \Gamma^ \nu _{ \mu \rho } Y ^ \rho   \right) 
+ = \frac{d Y ^ \nu ( \tau ) }{ d\tau } + X ^ \mu Y ^ \rho \Gamma^\nu _{ \mu \rho } = 0 
+\] 
+\subsubsection{Geodesics}
+From our idea of parallel transport which 
+we introduced above, we shall talk about a very special type 
+of curve called a \textbf{geodesic}. Suppose we 
+have a curve $ C $. Now, this curve $ C $ has a tangent vector 
+$ X( \tau )  $ at every point, where $ \tau $ is some parameter 
+we have used to construct the curve. If the tangent vector $ X $ 
+is parallel transported along this curve, that is, we have that 
+\[
+ \nabla_ X X = 0 , \quad \text{for all } p \in C 
+\] then, we call this object a geodesic. 
+Our equation for our tangent vector component $ X^ \mu$
+is 
+\[
+ \frac{d X^ \nu }{ d \tau } + X ^ \mu X ^ \rho \Gamma ^ \nu _{ \mu \rho } = 0 
+\] However, we can go a bit further here 
+since we're on an integral curve of $X ^ \mu $. 
+ \[
+	 X ^ \mu = \frac{d x ^ \mu ( \tau ) }{ d \tau } \implies \frac{d ^ 2 x ^ \mu ( \tau ) }{ d \tau ^ 2 } + \frac{d x ^ \nu }{ dt } 
+	 \frac{d x ^ \rho  }{ d \tau } \Gamma^\mu_{ \nu \rho }  =0 
+\] This specifies a unique geodesic given 
+a set of initial conditions on $ x ^ \mu ( 0 ) $ and $ \dot{ x} ^ \mu ( 0 ) $, 
+and is determined from our connection on our manifold. 
+
+
+\subsection{Normal coordinates}
+Working with metrics is difficult, because they can 
+be verbose and involved. What if, there was some way to change our 
+basis such that we can work with a simple (diagonal) and flat metric at 
+a given point. Lucky for us, there is a way! 
+This is called switching to normal coordinates. In this bit 
+we'll show that at a point $ p \in \mathcal{ M } $, we 
+can always choose coordinates $ \left\{  x ^\mu   \right\} $ such that 
+\[
+ g_{ \mu \nu }  = \delta_{ \mu \nu  }, \quad  g_{ \mu \nu, \rho }  = 0 
+\] In this context our tensor $ \delta $ can be either 
+the standard Euclidean or Minkowski metric depending on 
+whether we're on a Riemannian or Lorentzian manifold. 
+
+To show this, we count degrees of freedom (which in my opinion 
+I think is a bit of a weird technique). Suppose we're in a coordinate system 
+$ \left\{  \tilde{ x } ^ \mu   \right\}  $ at a point $ p $. We 
+can, without loss of generality, set $ \tilde{ x } ^\mu ( p ) = 0 $. 
+Our aim then is to find a change of basis which yields a new coordinate 
+system $ \left\{  x^\mu   \right\} $ (without loss of generality 
+we also have that $ x ^ \mu ( p ) = 0 $, such that in 
+this basis, the above conditions on 
+the metric are satisfied. 
+
+This means that our change of basis satisfies
+\[
+ g_{ \mu \nu } = \frac{\partial  \tilde{x } ^ \alpha  }{\partial  x ^ \mu }  
+ \frac{\partial  \tilde{ x } ^ \beta  }{\partial  x ^ \nu }  \tilde{ g } _{ \alpha \beta } 
+\] Now, we employ a trick. 
+We Taylor expand $ \tilde{ x } ^ \alpha  $ in terms of $ x ^ \mu $
+about the point $ p$, which gives us the expansion 
+ \[
+ \tilde{ x } ^ \mu = \left. \frac{\partial \tilde{x } ^ \mu  }{\partial  x ^ \nu }  \right\vert_{ x = 0 }
+	 x ^ \nu + \frac{ x ^ \rho x ^ \nu }{ 2 } \left. \frac{\partial  ^ 2 \tilde{x } ^ 2 }{\partial 
+		 x ^ \rho   x ^ \nu } \right\vert_{ x= 0 } 
+	 \] When we differentiate this 
+Taylor expansion we get that, 
+\[
+ \frac{\partial  \tilde{ x } ^ \mu  }{\partial  x ^ \nu }  = \left.
+	 \frac{\partial  \tilde{ x  } ^ \mu  }{\partial  x ^ \nu }  \right\vert_{ x =0 }
+\] Now, when we substitute this into 
+our change of basis formula and evaluate at the point 
+$ p = 0 $, we find that we need to solve the system 
+ \[
+	 \delta _{ \mu \nu } = \left( \left. \frac{\partial  \tilde{x } ^ \alpha  }{\partial  x ^ \mu } 
+			 \right\vert_{  x=0 }
+	 \left. \frac{\partial  \tilde{ x } ^ \beta  }{\partial  x ^ \nu }
+	 \right\vert_{ x =0 }  \tilde{g  }_{ \alpha \beta } ( p )  \right) 
+\] This equation looks like 
+\[
+ I = A G A ^ T 
+\] where $ A $ represents our change of basis, and $ G $ our
+metric. From our change of basis, we are free to choose 
+$n ^ 2 $ different components for each element. Now, since 
+this equation is symmetric upon taking a transpose, 
+we only have $ \frac{1}{2 } n ( n + 1)  $  constraints. 
+Thus, it's possible to choose a change of basis such that this works. 
+Now, to second order, we have to expand further.
+We find that 
+\[
+	g_{ \mu \nu }  = x ^ \gamma \left( \left. \frac{\partial ^ 2 \tilde{x } ^ \alpha   }{\partial x ^ \mu x ^ \gamma  }
+		\right\vert_{ x = 0 } \frac{\partial \tilde{x } ^ \beta  }{\partial  x ^ \nu }
+		 + \left. \frac{\partial^ 2  \tilde{ x } ^ \beta  }{\partial x ^ \gamma x ^ \nu  }
+		 \right\vert_{ x = 0} \frac{\partial  \tilde{x } ^ \alpha  }{\partial  x ^ \mu }
+		 \tilde{g}_{ \alpha \beta }
+		\right) 
+\] Our condition for our metric to be flat means 
+we need to differentiate this to get 
+\[
+	g_{ \mu \nu , \rho  } = \left(  \left. \frac{\partial ^ 2 \tilde{x } ^ \alpha  }{\partial x ^ \mu 
+	x ^ \rho }  \right\vert_{ x= 0 }  \left. \frac{\partial  \tilde{ x } ^ \beta  }{\partial  x ^ \nu }
+\right \vert_{  x=0}  + \left. \frac{\partial ^ 2 \tilde{x }^ \beta   }{\partial x ^ \mu x ^ \rho }
+\right\vert_{ x =0  } \left. \frac{\partial  \tilde{ x }^ \alpha  }{\partial  x ^ \mu }  
+\right\vert_{ x = 0 }\right)  
+\] From this equation, we 
+need to make sure we have enough components
+to specify our change of basis. Now, let's do some counting of our available degrees of freedom. 
+$ g_{ \mu \nu } $ is symmetric and hence has $ \frac{1}{2 } n ( n -1 ) $
+free components. The addition of our derivative gives us a 
+further $ n $ free components for each element of $ g $. Thus, 
+we have $ \frac{1}{2 } n ^ 2 ( n - 1) $ components. 
+Furthermore, our second derivative term $ \partial  ^ 2 \tilde{ x } ^ \alpha / \partial x ^ \mu 
+\partial  x ^ \rho $, due to symmetry of mixed partials, has 
+$ \frac{1}{ 2} n ( n -1 )  $ for each index $ \alpha$. Thus, 
+we have in total also  $ \frac{1}{2 } n ^ 2 (  n- 1) $ 
+free components to choose from. This is enough to specify our 
+change of basis!
+
+\subsubsection{Constructing Normal Coordinates} 
+This section is going to 
+be a short one. We basically will pull a cat 
+of the bag and construct a set of normal 
+coordinates with a map. 
+The tangent space associated at a point on a manifold 
+has a canonical map to recover points on the manifold. 
+Consider the exponential map 
+\[
+	\text{Exp } : \mathcal{ T }_ p ( \mathcal{ M } ) \to \mathcal{ M }
+\] This map is given by picking a vector, then following
+the geodesic curve there for one unit of parameter 
+distance $ \tau = 1$. This means we will arrive at some point $ q $. 
+Now, that this point $ q $ , we define our coordinates to be 
+\[
+ x ^ \mu ( q) = X^ \mu 
+\] where  $ X ^ \mu $ was the vector we had originally chosen. 
+
+ 

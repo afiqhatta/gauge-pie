@@ -1,0 +1,98 @@
+\section{The Killing Form} 
+Given a vector-space like Lie algebras, 
+it is of interest for us to define a scalar product 
+on the Lie algebra, which takes two vectors and returns a scalar. 
+
+Let's first define an inner product first. 
+\begin{defn}{(Inner product)} 
+	Gven a vector space $ V $ over a field $ F $, an inner product is 
+	a bilinear map 
+	\[
+	 i : V \times V \to F 
+	\] where this map is symmetric. 
+\end{defn}
+Right now, we'll define the inner product in this way. 
+However, we'll want to make an extra definition 
+to constrain things a map. 
+\begin{defn}{(Non-degeneracy)} 
+	 We say that the inner product $ i $ is non-degenrate 
+	 if for all $ v \in V ( v \neq  0 ) $, there 
+	 is a $ w \in V $ such that $ i ( v, w ) \neq 0$. 
+	 This is somewhat similar to our definition of a metric! 
+\end{defn}
+The question is, is there a natural inner product which we can 
+write down for a Lie algebra? What does the term 'natural' 
+even mean? The answer is yes; our answer is the \textbf{killing form}. 
+\begin{defn}{(Killing form)} 
+	Our Killing form is a map from the Lie algebra $ \lalg $
+	 \[
+	 \kappa : \lalg \times \lalg \to F 
+	\] defined as the map which takes two $ X , Y  \in \lalg $, 
+	which takes 
+	\[
+	 K ( X, Y )  = \tr ( \ad_ X \circ \ad _ Y ) 
+	\] By the cyclicity of trace, we have that 
+	this object is symmetric since we 
+	can switch the ad maps around. 
+	In addition, since the adjoin maps are linear in both arguments, 
+	we have that this map is linear. 
+\end{defn}
+Since
+\[
+ ( \ad_ X \circ \ad_ Y ) : \lalg \to \lalg 
+\] we map some $ Z $ like 
+\[
+ Z \in \lalg \to [ X , [ Y , Z ] ] \in \lalg
+\] What is the matrix representation of this map? 
+To do this, we construct a basis $ \left\{  T ^ a : a = 1, \dots , D  \right\} $ 
+for $ \lalg$. 
+Writing out our components explicitly, 
+ \[
+ X  = X_ a T ^ a , Y = Y  _a Y ^ a , Z = Z_ a T ^ a, [ T ^ a , T ^ b ] = f ^{ ab } _ c T ^ c 
+\] Multiplying components out, 
+we find that 
+\begin{align*}
+	[ X. [ Y , Z ] ] &=  X_a Y _ b Z_ c [ T ^ a , [ T ^ b , T ^ c ]] \\
+	&=  X_ a Y _ b Z _ c f ^{ ad } _ e f ^{ bc } _ d T ^ e  \\
+	&=  M ( X, Y ) ^ c _ e  Z_ c T ^ e  \\
+\end{align*} 
+In this expression, we have that 
+\[
+ M ( X , Y ) ^ c _ e  = X_ a Y _ b f^{ ad } _ e f ^{ bc } _ d 
+\] Taking the trace of this map, we 
+find the components explicitly by 
+taking the trace 
+\[
+ K ( X, Y ) = \tr _ D [ M ( X, Y ) ] = K ^{ ab } X_ a Y _ b 
+\] where $ \kappa ^{ ab } = f ^{ ad } _ c f ^{ bc } _  d$. 
+
+What does the term natural mean? 
+It means that the map $ \kappa $ should be invariant under the 
+adjoint action $ \lalg $. This action condition 
+is given by 
+ \[
+ \kappa ( [ Z, X] , Y ) + \kappa ( X, [ Z, Y ] )  = 0, \forall X, Y , Z \in \lalg 
+\]
+We now prove this invariance condition. 
+\begin{thm}{($ \kappa $ is invariant under the adjoint action ) } 
+	Writing out the term on the left explicitly, 
+	\[
+		\kappa ( [ Z, X] , Y ] )  = \tr [ \ad _{ [ Z , X ] } \circ \ad_Y ] 
+	\] the defining property of our adjoint 
+	representation is that 
+	\[
+		\ad_{ [ Z, X ] }  = ( \ad _ Z \circ \ad_ X - \ad _ X \circ \ad _ Z ) 
+	\] This means that the above reads 
+	\[
+	 \dots = \tr [ \ad_ Z \circ \ad_ X \circ \ad_ Y ] - \tr [ \ad_ X \circ 
+	 \ad_ Z \circ \ad_ y ] 
+	\] Similarly, applying this to the second term, 
+	we find that 
+	\[
+	 \kappa ( X, [ Z, y ] )  = 
+	 \tr [ \ad_ X \circ \ad _ Z \circ \ad_ Y ] - \tr [ \ad_ X \circ \ad_ Y \circ \ad_ Z ] 
+	\] By cyclicity of the trace, this evaluates to zero. 
+
+\end{thm}
+
+\pagebreak 

@@ -1,0 +1,69 @@
+\subsection{Question 7} 
+
+\subsubsection*{Lie derivative of 1-form} 
+Using the Leibniz rule for our Lie derivative, we consider the Lie derivative 
+for $ \mathcal{ L }_X ( \omega Y ) $; 
+\[
+\mathcal{ L }_X ( \omega( Y) ) = \omega ( \mathcal{ L }_X Y ) + ( \mathcal{ L }_ X \omega) ( Y) 	
+\] This expression is basis independent. 
+Now, observe that $ \omega ( Y ) $ is a function in  $ C^ \infty ( \mathcal{ M }) $. 
+Thus, the Lie derivative for this term is just given by $ X ( \omega ( Y) )  $. 
+We also know that $ \mathcal{  L }_X ( Y )  = [ X, Y ] $. 
+Thus, 
+\begin{align*}
+X^\mu\partial _\mu ( \omega_\nu Y ^\nu) & = (\mathcal{L }_X \omega)_\nu Y ^\nu + \omega_\nu [ X, Y ] ^\nu  \\
+Y_\nu X^\mu \partial _\mu \omega^\nu + \omega_\nu X^\mu \partial _\mu Y^\nu  &= ( \mathcal{ L }_ X \omega)_\nu Y ^\nu + \omega_\nu X^\mu \partial_\mu Y^\mu  - \omega_\nu Y^\mu \partial _\mu X^\nu
+\end{align*} Up to index relabelling of the dummy indices, the last term of the LHS 
+and the second term of the RHS are the same, so they cancel out. 
+Moving the negative term on the LHS to the right hand side and relabelling gives 
+\[
+Y_\nu ( X^\mu \partial_\nu \omega^\nu + \omega_\mu \partial_\nu X^\mu ) = ( \mathcal{ L }_X \omega) _\nu Y ^\nu
+\] However, since $ Y $ was arbitrary we can just read off the 
+basis independent components here. 
+\[
+( X^\mu \partial_\nu \omega^\nu + \omega_\mu \partial_\nu X^\mu ) = ( \mathcal{ L }_X \omega) _\nu 
+\]
+\subsubsection*{Lie derivative for a 2-tensor} 
+We play exactly the same game with 
+the rank $ ( 0 , 2) $ tensor as well. 
+ \[
+	 \mathcal{L }_ X  ( g ( V , W) ) = (\mathcal{L }_{X } g ) ( V, W) + g ( \mathcal{L }_X V, W ) + g ( V, \mathcal{L }_X W )  
+\] In components, and multiplying out with the product rule, 
+this term is 
+\begin{align*}
+	X^\nu (\partial  _\mu g_{ \alpha \beta }) V^\alpha W^\beta & + X^\mu g_{ \alpha \beta } W ^ \beta \partial _\mu V ^\alpha + X^\mu g _{ \alpha \beta } V^\alpha \partial _\mu W^ \beta  = \\ 																	    & = ( \mathcal{ L }_X g ) _{ \alpha \beta } V^ \alpha W ^ \beta + g_{ \alpha \beta } [ X , V]^ \alpha \partial _\mu W^ \beta + g_{ \alpha \beta } V ^ \alpha [ X, W ] ^ \beta 	    
+\end{align*} The right hand side 
+is just equal to, expanding the commutators in terms of components, 
+\[
+	= ( \mathcal{ L }_X g ) _{ \alpha \beta } V ^ \alpha W ^ \beta + g_{ \alpha \beta } X^\nu \partial  _\nu V ^ \alpha W ^ \beta  -g _{ \alpha \beta } V ^\nu \partial _\nu X ^ \alpha W ^ \beta + g_{ \alpha \beta } V ^ \alpha X ^ \nu \partial  _\nu W ^ \beta - g_{ \alpha \beta } V ^ \alpha W ^ \beta \partial  _\nu X  ^ \beta 
+\] Now up to index relabelling $ \mu $ and $ \nu $, the second and fourth 
+terms of this equation cancel out with the second and third terms on the LHS of our first equation. 
+Thus, we're left with 
+\[
+X^\mu \partial _\mu g_{ \alpha \beta } V ^ \alpha W ^ \beta + g_{ \alpha \beta } V ^ \nu ( \partial  _\nu X ^ \alpha ) W ^ \beta + g _{ \alpha \beta } V ^ \alpha W^\nu ( \partial  _\nu X ^ \beta ) = ( \mathcal{ L }_ X g )_{ \alpha \beta } V ^ \alpha W ^ \beta 
+\] Now, as before, relabelling $ \nu , \alpha$ in the second term and $ \nu , \beta $ in the third term 
+recovers the expression in the question (after factorising out  $ V , W $).
+
+\subsubsection*{Last part} 
+The last part of the question is just a matter of 
+substituting in definitions. 
+\begin{align*}
+	( \iota_X d \omega ) _ \mu &=  X^\nu ( d \omega) _{ \nu\mu } \\
+				   &=  X ^ \nu 2 \partial  _{ [ \nu } \omega _{ \mu ] } \\
+				   &=  X^\nu \partial  _\nu \omega_{ \mu } - X ^ \nu \partial  _{ \mu } \omega _{ \nu } 
+\end{align*}
+Also, we have 
+\begin{align*}
+	d ( \iota _{ X  } \omega) _{ \mu }  &=  \partial  _\mu ( \iota _ X \omega )  \\
+					    & =  \partial _ \mu ( X^\nu \omega_\nu) \\
+					    &=  \omega_ \nu \partial  _{ \mu } X ^ \nu + X ^ \nu \partial _ \mu \omega _ \nu 
+\end{align*}
+Adding these terms together gives 
+\[
+ ( \iota _ X d \omega ) _ \mu + d ( \iota _ X \omega )_\mu  = X^ \nu \partial  _ \nu \omega _ \mu - X ^ \nu \partial  _ \mu \omega _ \nu + \omega _ \nu \partial  _ \mu X ^ \nu + X ^ \nu \partial  _ \mu \omega _ \nu  = X^ \nu \partial  _ \nu  \omega _ \mu + \omega _ \nu X ^ \nu 
+\] since we have cancellation with the second and last term. 
+
+
+
+\pagebreak 
+

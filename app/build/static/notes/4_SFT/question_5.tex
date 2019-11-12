@@ -1,0 +1,43 @@
+\subsection{Question 5} 
+
+\subsubsection*{A rough physical model} 
+In this question, we're exploring the phase transitions one has with an Ising model which takes our whole range of unit vectors as spins. We define an average magnetisation with the vector $\mathbf{m} $ with magnitude $m$, which obeys 
+\[ 
+	\mathbf{ m }  = \frac{ 1}{N} \sum_i \mathbf{s}_i
+\] Substituting this into our energy, much like we did for the Ising model, we have that 
+\begin{align*} 
+	E &= - Jq \sum_{ \langle ij \rangle} \mathbf{s}_i \cdot \mathbf{s}_j + g \sum_i \left( ( s_z )^2_i - \frac{ 1}{2} ( (s_x)^2_i + ( s_y)^2_i )  \right) \\
+	& \sim - JqN^2m^2 + N^2  g \left( m_z^2 - \frac{1}{2} ( m_y^2 + m_x^2 ) \right) 
+\end{align*} 
+Heuristically, and without much thought, we can identify the form of this model to the free energy that we get with the Ising model. Our best guess is that 
+\[ 
+	f(m, g, T) = \alpha_2 (  - 2g, T ) m_z^2  + \alpha_2( g, T) (m_x^2 + m_y^2 ) + \alpha_4 m^4 + \dots 
+\] 
+We've put in a factor of $ - 2$ in the first coefficient to account for the different proportions that each component has. Now, at first glance we have that (assuming the temperature is not too high such that magnetisations become disordered); 
+\begin{itemize} 
+	\item For $g > 0$ it is energetically favourable for magnetisations to lie in the $( x, y)$ plane due to the negative $ ( m_y^2 + m_x^2 )$ term, and hence our set of states which minimise free energy is a contour in the plane is the limit as $g \rightarrow \infty$. This is completely analogous to the $XY$ ordered case that we encountered in the previous question, where we can identify $m_x, m_y$ with a complex order parameter 
+	\[ 
+		\psi = m_x + i m_y 
+	\] In the previous question, we showed that in the XY model, heat capacity is discontinuous as a result of differentiation twice with respect to $\beta$. This means that we have a second order phase transition when we increase the temperature. 
+	\item For $g  < 0$ it is energetically favourable for our spins to lie in the $z$ direction, and, ignoring magnetisations $m_x, m_y$, we have that our energy is of the form 
+	\[ E \sim   N^2 ( g - Jq)m_z^2, \text{ akin to the Ising model but without a magnetic field } \] Thus, we have an Ising type order here, and thus we again have a second order phase transition when we increase the temperature. 
+\end{itemize} 
+We can explicitly calculate that our transition is a first order phase transition when we move from $g< 0$ to $g > 0$. In the regime with $g > 0$, ignoring $m_z$, we have that 
+\[ 
+	f(m, g, T) = \alpha_2( g, T) (m_x^2 + m_y^2) + \alpha_4 ( m_x^2 + m_y^2)^2 \implies m_{min} = \sqrt{ \frac{  - \alpha_2 ( g, T ) }{ 2 \alpha_4 } } 
+\] Thus, our free energy with $g > 0 $ is given by 
+\[ 
+	f_{min} = \begin{cases}  - \frac{ \alpha_2^2 ( g, T ) }{ 4 \alpha_4 }  & g > 0 \\
+	         - \frac{ \alpha_2^2 (  - 2 g, T ) }{ 4 \alpha_4 } & g < 0 
+	         \end{cases}
+\] To get the order of our phase transition, we differentiate the free energy with respect to the parameter $g$, so that 
+\[ 
+	\frac{ df}{ dg} = \begin{cases} 
+		 - 2 \frac{ \alpha_2 (g, T ) \alpha_2' ( g, T ) }{ 4 \alpha_4 } & g > 0 \\
+		  4 \frac{ \alpha_2 (g, T ) \alpha_2' ( -2g, T ) }{ 4 \alpha_4 } & g < 0 \\
+\end{cases} 
+\] 
+Now, as $g \rightarrow 0$, this is discontinuous in general since we have a factor of $2$ multiplier in the $g < 0$ regime. 
+
+\pagebreak 
+

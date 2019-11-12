@@ -1,0 +1,223 @@
+\subsection{ The metric}
+
+\begin{defn}{(The metric tensor). } 
+We'll now do introduce a tensor object which 
+turns our tangent space into an inner product space. 
+We do this by introducing an object called a metric, 
+which intuitively has been a way in which we define 
+the notion of 'distance' in a space. 
+A metric $ g $ is a $ ( 0, 2 ) $ tensor that is
+\begin{itemize}
+\item  symmetric $ g ( X, Y )  = g ( Y , X) $
+\item non-degenerate: $ g ( X, Y )_ p = 0, \quad \forall Y_p \in T_p ( \mathcal{ M }) \implies X_p = 0$ 
+\end{itemize}
+\end{defn}
+Notice that our condition for non-degeneracy is \textbf{not}
+the same as having a point where  $ g ( X, X )_p = 0 $ as we
+shall soon see. 
+In a coordinate basis, $ g = g_{ \mu \nu } dx ^ \mu  \otimes dx^ \nu $.
+The components are obtained by our standard way of 
+subbing in basis vectors into our tensor. 
+\[
+	g _{\mu \nu  } = g \left( \frac{\partial }{\partial  x^ \mu } , \frac{\partial }{\partial x^ \nu } \right)  
+\]  We often write this as 
+a line element which we call 
+\[
+ds^ 2 = g_{ \mu \nu } dx^ \mu dx ^ \nu 
+\] This is something that perhaps we're more 
+familiar with. 
+Since our metric is non-degenerate, it is 
+a theorem in linear algebra that we can diagonalise this thing, and furthermore 
+we have no zero eigenvalues. 
+If we diagonalise $ g _{ \mu \nu }$, 
+it has positive and negative elements (non are zero). 
+The number of negative elements is called the 
+signature of the metric. 
+There's a theorem in linear algebra (Sylvester's law of inertia) 
+which says that the signature is invariant, which means that 
+it makes sense to talk about signatures in a well defined sense. 
+
+\subsubsection{Riemannian Manifolds} 
+A Riemannian manifold is a manifold with metric 
+with signature all positive. 
+For example, Euclidean space in $ \mathbb { R} ^ n $ endowed with 
+the usual Pythagorean metric. 
+\[
+g = dx^ 1 \otimes dx ^ 1 + \dots + dx^ n \otimes dx^ n 
+\]  A metric gives us a way to measure the
+length of a vector $ X \in \mathcal{ X } ( \mathcal{ M } ) $. 
+Since our signature is positive, we have that $ g ( X, X ) $ is a 
+positive number, and hence we can take a square root to 
+define a norm. 
+\[
+| X | = \sqrt{ g ( X, X ) } 
+\] We can also find the angle between vectors, where
+\[
+g ( X, Y ) = | X| | Y | \cos \theta 
+\] It also gives us a way to measure the distance between two points, 
+$ p $, $ q $. Along the curve 
+\[
+\sigma : [ a, b ] \to \mathcal{ M }, \quad \sigma ( a) = p, \sigma ( b ) = q
+\] our distance is given by the integral of the metric at 
+that point where $ X $ is the tangent to the curve' 
+\[
+s = \int_ a ^ b dt \, \sqrt{ g ( X, X) } \mid_{ \sigma( t) }  
+\] where at each point $ X $ is our tangent to the curve. 
+If our curve has the coordinates $ x^ \mu ( t ) $, 
+then our distance is 
+\[
+ s = \int_ a ^ b dt\, \sqrt{ g_{ \mu \nu } ( x) \frac{dx^ \mu }{ dt } \frac{ dx^ \nu }{ dt }} 
+\]
+Note that this notion of distance still makes sense since and 
+is well defined since it's easy to check that 
+$ s $ is invariant under re-parametrisations of our curve. 
+
+\subsubsection{Riemannian Geometry} 
+A Lorentzian manifold is a manifold equipped with 
+a metric of signature $ ( - + + ... ) $. 
+For example, Minkowski space is  $ \mathbb{ R} ^ n $
+but our metric is 
+\[
+\eta = - dx^ 0 \otimes dx^ 0 + dx^ 1 \otimes dx^ 1 + \dots + dx^{ n-1 } \otimes dx^{ n- 1}
+\] with components
+\[
+\eta_{ \mu \nu  } = diag ( - 1, 1 \dots, 1 )  
+\]  This is slightly different to our Riemannian manifold 
+case since now we can have vectors with negative or zero length. 
+We classify vectors $ X_ p \in T_p ( \mathcal{ M } ) $
+as 
+\[
+g ( X_p , X_p ) = \begin{cases}
+ < 0 & \text{ timelike} \\
+ = 0 & \text{null} \\
+ > 0 & \text{spacelike}
+\end{cases}
+\] At each point $ p \in \mathcal{ M } $, we draw null tangent vectors called lightcones, 
+and as we'll soon see, this region outlines our area of possible causality.
+
+A curve is called timelike if it's tangent 
+vector at every point is timelike. We can see this in the figure 
+where we have two light-cones for future and past time. 
+\begin{figure}[h]
+	\centering
+	\hspace*{3cm}\includegraphics[width=0.5\linewidth]{figures/lightcone.png}
+	\caption{Here we show timelike vectors with negative norm!}%
+	\label{fig:figures / lightcones}
+\end{figure}
+In this case, we can measure the distance between two points. 
+\[
+\tau = \int_{ a} ^ b dt \sqrt{  - g_{ \mu \nu } \frac{dx^ \mu }{ dt } \frac{ dx ^ \nu }{ dt }} 
+\] This object $ \tau $ is called the proper time 
+between two points. Philosophically, this is a parameter which is 
+invariant in all frames. 
+If we were to reparametrise this curve, our 
+definition of $ \tau $ remains invariant. 
+
+\subsubsection{The Joys of a metric}
+
+\begin{claim}{Metrics induce a natural isomorphism from vectors to 1-forms.} 
+The metric gives a natural (basis independent) isomorphism 
+\[
+g : T_p ( \mathcal{ M }) \to T_p ^ * ( \mathcal{ M } ) 
+\] Given $ X \in \mathcal{ X } \left( M  \right) $, we can construct 
+$ g ( X , \cdot  ) \in \Lambda^ 1 ( \mathcal{ M }) $. 
+If $ X = X^ \mu \partial _ \mu $, our corresponding one form is 
+\[
+g_{ \mu \nu } X^ \mu dx^ \nu : = X_\nu dx^ \nu 
+\] In this formula, we've written the index on $ X $ downstairs!
+The metric provides a natural isomorphism between 
+our vector space and our one-forms. Hence, 
+this metric allows us to raise and lower indices ,
+which means that our metric switches the mathematical space 
+we are working in. 
+Lowering an index is really the statement that there's a natural 
+isomorphism. 
+Because $ g $ is non-degenerate, there's an inverse
+\[
+g ^{ \mu \nu } g _{ \nu \rho } = \delta \indices{ ^ \mu _ \rho } 
+\] This defines a rank $ ( 2, 0 ) $ tensor $ \hat{g} = g^{ \mu \nu } \partial  _\mu \otimes \partial  _ \nu  $, and 
+we can use this to raise indices. We have 
+\[
+X^\mu = g ^{ \mu \nu } X_ \nu  
+\]
+\end{claim} 
+
+\begin{claim}{Metrics induce volume forms to integrate with.}
+There's something else that the metric gives us. 
+We also get a natural volume form. On a Riemannian manifold, our 
+volume form is defined to be 
+\[
+v = \sqrt{ det g_{ \mu \nu } }  dx^ 1 \wedge  \dots \wedge  dx^ n 
+\] We write $ g = det g_{ \mu \nu }$
+On a Lorentzian manifold, $ v = \sqrt{ - g }  dx^ 0  \wedge  \dots \wedge  dx^{ n- 1}$
+This is independent of coordinates. 
+In new coordinates, 
+\[
+dx ^ \mu = A \indices{ ^ \mu _ \nu } \quad, A \indices{ ^ \mu _ \nu } \frac{\partial x^ \mu }{\partial  x^ \nu }    
+\] 
+We see how they change. 
+\begin{align*}
+dx^ 1 \wedge  \dots \wedge  dx^ n & = A \indices{ ^ 1 _{ \mu _ 1 }} \dots A \indices{^ n _{ \mu _ n } } d \tilde{x} ^{ \mu _ 1} \wedge  \dots \wedge  d \tilde{x }^{ \mu _ n }   \\
+				  &=  \sum_{ \text{ perms } \pi } A \indices{ ^ 1 _{ \pi ( 1)  } } \dots A \indices{ ^ n _{ \pi ( n ) } } d \tilde{x }^ 1 \wedge  \dots \wedge  d \tilde{x  }^ n      \\
+		& = det ( A) d \tilde{x  }^ 1 \wedge  \dots \wedge  d \tilde{x } ^ n   
+\end{align*} If we have that $ det A > 0 $ , coordinate change preserves 
+orientation. 
+Meanwhile, 
+\begin{align*}
+g_{ \mu \nu } &=  \frac{\partial  \tilde{x } ^ \rho  }{\partial  x ^ \mu }  \frac{\partial  \tilde{x } ^ \sigma  }{\partial  x^ \nu }  \tilde{ g }_{ \rho \sigma }  \\ 
+       &=  ( A^{ - 1} ) \indices{ ^ \rho _  \mu } ( A ^{ - 1}) \indices{ ^ \sigma _ \nu } \tilde{g }_{ \rho \sigma }    \\
+\end{align*} 
+Hence, 
+\[
+det g _{ \mu \nu } = ( det A^{ - 1} ) ^ 2 det \tilde{ g } _{ \rho \sigma } 
+\] Thus we have that 
+\[
+v = \sqrt{ | \tilde{ g } |  } d \tilde{x }^ 1 \wedge  \dots \wedge  d \tilde{ x }^ n    
+\] in components, 
+we have that 
+\[
+v = \frac{1}{ n ! } v_{ \mu_1 \dots \mu_ n } dx^{ \mu _ 1 } \wedge  \dots \wedge  dx^{ \mu _ n }
+\] where our components are given by 
+\[
+v _{ \mu _ 1 \dots \mu _ n } \epsilon_{ \mu _ 1 \dots \mu _ n }
+\] we can integrate functions as 
+\[
+\int_{ \mathcal{ M } } fv = \int_{ \mathcal{ M } } d^ n x \sqrt{ | g | } f (x)  
+\] 
+
+The metric provides a map from $ \omega  \in \Lambda^p ( \mathcal{ M } ) $
+to $ ( * \omega ) \in \Lambda ^{ n - p } ( \mathcal{ M } ) $  defined by
+\[
+ ( * \omega )_{ \mu_1 \dots \mu_{ n - p }  } = \frac{1}{p! } \sqrt{  | g ! | }  \epsilon_{ \mu_1 \dots \mu_{ n - p } \nu_1 \dots \nu_{ p } } \omega^{ \nu_1 \dots \nu_{ p } }
+\] This object is called Hodge dual. We can check that 
+\[
+	* ( * \omega ) = \pm ( -1) ^{ p ( n - p ) } \omega 
+\] with $ + $ used in with a Riemannian metric, and $ - $ used 
+with a Lorentzian metric. 
+We can then define an inner product on forms. 
+Given $ \omega, \eta \in \Lambda ^ p ( \mathcal{ M } ) $, let
+\[
+ \left< \eta , \omega  \right>  = \int_{ \mathcal{ M } } \eta \wedge  * \omega 
+\] The integrand is a top form so this is okay. 
+This allows us to introduce a new object. 
+If we have a p-form $ \omega \in \Lambda ^ p ( \mathcal{ M } ) $, and a 
+p-1 form $ \alpha \in \Lambda ^{ p - 1 }( \mathcal{ M } )  $, then 
+\[
+ \left< d\alpha, \omega    \right> = \left< \alpha, d^ \dagger \omega \right>
+\] when $ d ^ \dagger : \Lambda ^ p ( \mathcal{ M } ) \to \Lambda ^{ p -1 } ( \mathcal{ M } ) $, is 
+\[
+ d^ \dagger  = \pm ( - 1)^{ np + n - 1 } * d * 
+\] where again our $ \pm $ signs depend on whether we have 
+a Riemannian or Lorentzian metric. 
+To show this, on a closed manifold Stokes' theorem implies that 
+\[
+	0 = \int_{ \mathcal{ M } } d ( \alpha \wedge  * \omega )  = \int_{ \mathcal{ M } } d \alpha \wedge  * \omega + ( - 1) ^{ p - 1 }\alpha \wedge  d * \omega 
+\] But the term on the right is just 
+\[
+	= \left< d\alpha , \omega  \right> + ( - 1 ) ^{ p - 1 } \text{sign} \left<\alpha, * d * \omega  \right>
+\] When we fix our sign, we 
+get the result. 
+There's actually a close relationship between forms in differential 
+Geometry and fermionic antisymmetric fields in quantum field theory.
+\end{claim} 
+

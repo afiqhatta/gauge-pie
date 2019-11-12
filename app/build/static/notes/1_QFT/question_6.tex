@@ -1,0 +1,58 @@
+\subsection{Question 6}
+\subsubsection{Gauge invariance}  
+To show that $\mathcal{L}$ is invariant under gauge transforms, is suffices to show that $F_{\mu \nu}$ itself is invariant. The gauge transform we're doing is $A_\mu \rightarrow A_\mu + \partial_\mu \xi $, so $F_{ \mu\nu}$  transforms as 
+\begin{align*}  
+F_{ \mu \nu} & \rightarrow \partial_\mu ( A_\nu + \partial_\nu \xi)  - \partial_\nu ( A_\mu + \partial_\mu \xi ) \\
+& = \partial_\mu A_\nu + \partial_\mu \partial_\nu \xi  - \partial_\nu A_\mu  - \partial_\nu \partial_\mu \xi \\ 
+&= \partial_\mu A_\nu - \partial_\nu A_\mu 
+\end{align*} 
+In the second line, we've applied symmetry of second partial derivatives. 
+
+\subsubsection{Constructing the energy-momentum tensor}
+From our section earlier, we derived that our four conserved currents which satisfy $ \partial_\mu T^{ \mu \nu} = 0 $, for a scalar field with multiple components $ \phi_a$, are given by 
+\[
+T\indices{^\mu_\nu} = \mathcal{L} \delta \indices{^\mu_\nu}  - \partial_\nu \phi_a \left( \frac{ \partial \mathcal{L} }{ \partial ( \partial_\mu \phi_a ) } \right) 
+\] 
+In EM field theory, this scalar field is simply replced with our four-vector potential $A_\rho$! Also, we raise the indices so that the delta function in the first term becomes a Minkowski metric term $\eta^{ \mu \nu } $. Our expression for the energy-momentum tensor is EM theory is therefore 
+\[ 
+T^{ \mu \nu} = \mathcal{L} \eta^{ \mu\nu}  - \partial^\nu A_\rho \left( \frac{ \partial \mathcal{ L}}{ \partial ( \partial_\mu A_\rho ) } \right) 
+\] 
+Now, we have a bit of a tricky term to deal with here. How do we compute the term $ \frac{ \mathcal{L} }{ \partial ( \partial_\nu A_\rho) } $? We bear in mind that since we're in phase space, each of our degrees of freedom mean that $\partial_\mu A_\nu $ represents a separate variable for each index (so we have 16 variables here).Hence, we assert the following about derivatives with these terms
+\[ 
+\frac{ \partial ( \partial_\mu A_\beta) }{ \partial (\partial_\nu A_\alpha) }  = \delta\indices{^\nu_\mu} \delta \indices{^\alpha_\beta} 
+\] 	
+To assist us as well, we apply product rule and antisymmetry. We'll now calculate this thing 
+\begin{align*} 
+\frac{ \partial \mathcal{ L} }{ \partial ( \partial_\nu A_\rho ) } & =  - \frac{1}{4} \frac{ \partial ( F_{\mu \sigma} F^{ \mu \sigma} )}{ \partial ( \partial_\nu A_\rho ) } \\
+&=  - \frac{1}{2} F^{\mu \sigma} \frac{ \partial F_{ \mu \sigma } }{ \partial ( \partial_\nu A_\rho) } \\
+&=  - F^{ \mu \sigma} \frac{ \partial ( \partial_\mu A_\sigma) }{ \partial ( \partial_\nu A_\rho ) } \\
+& =  - F^{ \mu \sigma} \delta \indices{^\nu_\mu} \delta\indices{^\rho_\sigma} \\
+&=  - F^{ \nu \rho} 
+\end{align*} 
+From this, we get something for free. Since our Lagrangian has no dependence on $A_\mu$ on it's own, our Euler-Lagrange equations dictate that 
+\[ 
+\partial_\mu F^{ \mu \nu}  =0 
+\]
+We'll use this fact later on. Now, it's just a matter of substituting this in to the expression for energy-momentum to get
+\[ 
+T^{ \mu\nu } = F^{ \mu \rho } \partial^\nu A_\rho - \frac{1}{4} \eta^{ \mu \nu} F_{ \rho \sigma} F^{ \rho \sigma} 
+\] 
+Now, let's add on our extra component $ - F^{ \mu \rho } \partial_\rho A^\nu$. We check that this is conserved under differentiation: 
+\[ 
+\partial_\mu (F^{\mu \rho} \partial_\rho A^\nu ) = (\partial_\mu F^{ \mu \nu}) \partial_\rho A^\nu  + F^{ \mu \rho} \partial_\mu \partial_\rho A^\nu  = 0 \] 
+the first term goes to zero as a result of the Euler-Lagrange equations. The second term goes to zero since we're contracting the antisymmetric $F^{ \mu \rho} $ with the symmetric $\partial_\mu \partial_\rho$.  
+Hence, we've shown that $\Omega^{ \mu \nu} $ is a conserved current! 
+
+To show symmetry, observe that 
+\[ 
+\Omega^{ \mu \nu} = -  \frac{1}{4} \eta^{ \mu \nu} F_{ \sigma\rho} F^{ \sigma \rho} + F^{ \mu \rho} ( \partial^\nu A_ \rho - \partial_\rho A^\nu) = 
+- \frac{1}{4} \eta^{ \mu \nu} F_{ \sigma\rho} F^{ \sigma \rho} + F^{ \mu \rho}F\indices{^\nu_\rho} \] 
+But this is clearly symmetric in indices $\mu, \nu$! Furthermore, since this tensor is composed entirely from $F_{\mu \nu}$, it's gauge invariant. 
+
+Finally, taking the trace of this object, we have that the trace of $\eta^{\mu \nu} = 4 $, so 
+\[ 
+\Omega^{ \nu \nu} =  - F_{\rho\sigma} F^{ \rho\sigma} + F^{ \nu \rho} F_{\nu \rho} = 0
+\] 
+Thus, this object is traceless! It's a much more natural form of the energy momentum tensor than what we had before. 
+
+\pagebreak 

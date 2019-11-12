@@ -1,0 +1,689 @@
+\documentclass[11pt, a4paper]{article}   	% use "amsart" instead of "article" for AMSLaTeX format
+\usepackage[margin = 1.0in]{geometry}            		% See geometry.pdf to learn the layout options. There are lots.
+\geometry{letterpaper}                   		% ... or a4paper or a5paper or ... 
+\usepackage[parfill]{parskip}    		% Activate to begin paragraphs with an empty line rather than an indent
+\usepackage{graphicx}				% Use pdf, png, jpg, or eps§ with pdflatex; use eps in DVI mode
+								% TeX will automatically convert eps --> pdf in pdflatex	
+\usepackage{adjustbox}	
+\usepackage[section]{placeins}
+
+
+
+%% LaTeX Preamble - Common packages
+\usepackage[utf8]{inputenc}
+\usepackage[english]{babel}
+\usepackage{textcomp} % provide lots of new symbols
+\usepackage{graphicx}  % Add graphics capabilities
+\usepackage{flafter}  % Don't place floats before their definition
+\usepackage{amsmath,amssymb}  % Better maths support & more symbols
+\usepackage[backend=biber]{biblatex}
+\usepackage{amsthm}
+\usepackage{bm}  % Define \bm{} to use bold math fontsx
+\usepackage[pdftex,bookmarks,colorlinks,breaklinks]{hyperref}  % PDF hyperlinks, with coloured links
+\usepackage{memhfixc}  % remove conflict between the memoir class & hyperref
+\usepackage{mathtools}
+\usepackage[T1]{fontenc}
+\usepackage[scaled]{beramono}
+\usepackage{listings}
+\usepackage{physics}
+\usepackage{tensor}
+\usepackage{tikz}
+\usepackage{multicol} 
+
+%% Commands for typesetting theorems, claims and other things. 
+\newtheorem{theorem}{Theorem}
+\newtheorem*{thm}{Theorem}
+\newtheorem*{claim}{Claim}
+\newtheorem*{example}{Example}
+\newtheorem*{defn}{Definition}
+
+\newcommand{\Lagr}{\mathcal{L}}
+\newcommand{\vc}[1]{\mathbf{#1}}
+\newcommand{\pdrv}[2]{\frac{\partial{#1}}{\partial{#2}}}
+\newcommand{\thrint}[1]{\int d^3 \vc{x} \left( {#1} \right)}
+\newcommand{\R}{ \mathbb{R}}
+
+\author{Afiq Hatta} 
+\title{Cool stuff in General Relativity}
+\begin{document}
+\maketitle
+
+\section{Starting off with non-relativistic particles} 
+Deriving the Euler Lagrange equations. We perturb our action \[ S = \int_{t_1}^{t_2} dt \, L \] 
+If we perturb our action slightly, 
+\begin{align*} 
+	 S[x^i + \delta x^i ]& = \int_{t_1}^{t_2} dt \, L( x^i + \delta x^i, \dot{x}^i + \delta  \dot{x}^i ) \\ 
+	& = S[x^i ] + \int_{t_1}^{t_2} dt \, \left( \frac{ \partial L}{\partial x^i } \delta x^i + \frac{ \partial L }{ \partial \dot{x}^i } \delta \dot{x} ^i \right) \\
+ 	& = S[x^i] + \int_{ t_1 }^{t_2} dt \, \delta x^i \left( \frac{ \partial L }{ \partial x^i }  - \frac{d}{dt} \left( \frac{ \partial L }{ \partial \dot{x}^i } \right) \right ) 
+\end{align*} 
+This implies that the integrand goes to zero. 
+
+\subsection{Exploring different Lagrangians} 
+Consider the Lagrangian in Euclidean coordinates 
+\[ L = \frac{1}{2} m ( \dot{x}^2 + \dot{y}^2 + \dot{z}^2 ) 
+\] 
+The E-L equations imply that $\ddot {x} = 0 $. So we have a constant velocity. Now in different coordinates, 
+\[ L = \frac{ 1}{2} g_{ ij } (x) \dot{x}^i \dot{x}^j \] 
+This is a metric. Our distance in these general coordinates between $x^i \rightarrow x^i + \delta x^i $ is now 
+\[ 
+	ds^2 = g_{ij} dx^i dx^j \] 
+Some $g_{ij} $ do not come from $\mathbb{R}^3 $, and these spaces are \textbf{curved}. This means there is no smooth map back into $\mathbb{R}^3$. Our equations of motion that comes from the Euler Lagrange equations are the geodesic equations.  
+
+Observe that 
+\begin{align*} 
+	\frac{d}{dt} \left( \frac{ \partial L}{\partial \dot{x}^i } \right) &= \frac{d}{dt} g_{ ik}\dot{x}^k \\
+ 	&= g_{ik} \ddot{x}^k + \dot{x}^k \dot{x}^l \partial_l g_{ ik}\end{align*} 
+
+And, differentiating the lagrangian with $\partial_i$, we get
+\[ 
+	\frac{ \partial L}{ \partial x^i} = \frac{ 1}{2} \partial_i g_{kl} \dot{x}^k \dot{x}^l \]
+Substiting this into the EL equations, this reads 
+\[ 
+	g_{ik} \ddot{x}^k + \dot{x}^k \dot{x}^l \partial_l g_{ ik}  - \frac{1}{2} \partial_i g_{kl} \dot{x}^k \dot{x}^j  =0 
+\]  
+Now, the second term is symmetric in $k, l$, so we can split this term in two. We also multiply by the inverse metric to cancel out this annoying factor of $g$ that we have in front of everything. This gives us the final expression that 
+\[ 
+	\ddot{x}^i + \frac{1}{2} g^{il} \left( \partial_k g_{lj} + \partial_j g_{lk}  - \partial_l g_{jk} \right) \dot{x}^j \dot{x}^k = 0
+\] 
+
+\section{Special relativity} 
+We'll now put time and space on the same 'footing' per se, and talk about special relativity. In special relativity, instead of time being its own separate variable, we have that dynamic events take place in 4 spacetime coordinates denoted $x^\mu  = (t, x, y, z)$, where we now use greek indices to denote four components $\mu = 0, 1, 2 , 3$. Now, we wish to construct an action and extremize this path, but since our $t$ variable is already taken, we need to parametrise paths in spacetime by a different parameter. We'll call this parameter $\sigma$, and show that there's a natural choice for this, something called 'proper time', later. 
+
+We define our metric, the Minkowski metric, on this spacetime to be $\eta^{ \mu\nu} = diag( -1, +1, +1, +1) $. Thus, distances in Minkwoski spacetime are denoted as \[ 
+	ds^2  = \eta_{ \mu \nu} dx^\mu dx^\nu  =  -dt^2 + dx^2 + dy^2 + dz^2 \] 
+
+We have names for different events based on their infinitesimal distance. Since our metric is no longer positive definite, we have that events can have a distance of any sign. 
+
+\begin{itemize} 
+	\item If $ds^2 < 0$, events are called timelike. 
+	\item If $ds^2 = 0$, events are called null. 
+	\item If $ds^2 > 0$, events are called spacelike. 
+\end{itemize} 
+
+
+Our action, then, should look like (now with the use of an alternate parameter $\sigma$ to parametrize our paths) 
+\[ 
+	S[ x^\mu ( \sigma) ] = \int_{ \sigma_1}^{\sigma_2} \sqrt{ - ds^2 } \]
+Now, we can parametrise the integrand with sigma to get 
+\[ 
+	S[x^\mu (\sigma) ] = m \int_{\sigma_1}^{ \sigma_2 } d\sigma \, \,  \sqrt{ - \eta_{ \mu \nu} \frac{ d x^\mu}{ d \sigma} \frac{ dx^\nu}{ d \sigma} } 
+\] 
+In this case, our Lagrangian $L = 
+ m \sqrt{ - \eta_{ \mu \nu} \frac{ d x^\mu}{ d \sigma} \frac{ dx^\nu}{ d \sigma} }$. Now, before we begin analysing what this equation gives us, there are two symmetries we'd like to take note of. One of our symmetries is invariance under Lorentz transformations. This means, if we boost our frame with a Lorentz transformation $x^\mu \rightarrow \Lambda\indices{^\mu_\nu} x^\nu $, one can easily verify, using the condition that \[ 
+	\Lambda\indices{^\alpha_\mu} \Lambda\indices{^\beta_\nu} \eta_{\alpha\beta} = \eta_{ \mu \nu} 
+\] 
+that the Lagrangian remains invariant under this. One can also verify that this action is invariant under reparametrisation of the curve via a new function $\sigma' = \sigma' ( \sigma)$.  
+
+Using the chain rule, we reparametrise by rewriting the action as 
+\[ 
+	S = m \int \frac{d \sigma}{ d \sigma' } d\sigma' \, \quad \sqrt{  - \eta_{ \mu\nu} \left( \frac{ d \sigma' }{ d\sigma} \right)^2 \frac{ dx^\mu}{ d \sigma' } \frac{ dx^\nu}{ d \sigma' } } = \int d \sigma'\,  \sqrt{  - \eta_{ \mu\nu} \frac{ d x^\mu}{ d \sigma'} \frac{ dx^\nu}{ d\sigma'} } \] 
+
+In this case, we're just applying the chain rule but factoring out the the $\frac{ d \sigma ' }{ d \sigma} $ term. But this is exactly the same as what we had before. Thus, we have reparametrisation invariance.In analogy with classical mechanics, we compute the conjugate momentum \[ 
+	p_\mu = \frac{ \partial L }{ \partial \dot{x}^\mu }  
+\] 
+
+
+\pagebreak 
+\section{Introducing Differential Geometry for General Relativity} 
+Our main mathematical objects of interest in general relativity are manifolds. Manifolds are topological spaces which, at every point, has a neighbourhood which is homeomorphic to a subset of $\mathbb{R}^n$, where we call $n$ the dimension of the manifold. In plain English, manifolds are spaces in which, locally at a point, look like a flat plane. This can be made more rigourous by the creation of maps, which we call 'charts', that take an open set around a point (a neighbourhood), and mapping this to a subset of $\mathbb{R}^n$. 
+
+Precisely, for each $p \in \mathcal{M}$, there exists a map $\phi : \mathcal{O} \rightarrow \mathcal{U} \subset \mathbb{R}^n$, where $p \in \mathcal{ O} \subset \mathcal{M}$, and $\mathcal{ O} $ is an open set of $M$ defined by the topology. Think of $\phi$ as a set of local coordinates, assigning a coordinate system to $ p$. We will write $\phi(p) = (x_1, \dots x_n) $ in this regard.   
+
+This map must be a 'homeomorphism', which is a continuous, invertible map with a continuous inverse. In this sense, our idea of assigning local coordinates to a point in $\mathcal{M}$ becomes even more clear. 
+
+We can define different charts to different regions, but we need to ensure that they're we'll behaved on their intersections. Suppose we had two charts and two open sets defined on our manifold, and looked at how we transfer from one chart to another. For charts to be compatible, we require that the map 
+\[ 
+	\phi_\alpha \circ \phi_\beta^{ -1}: \phi_\beta ( \mathcal{ O}_\alpha \cap \mathcal{O}_\beta ) \rightarrow \phi_\alpha (\mathcal{ O}_\alpha \cap \mathcal{O}_\beta )
+\] is also smooth (infinitely differentiable). 
+
+A collection of these maps (charts) which cover the manifold is called an atlas, and the maps taking one coordinate system to another ($\phi_\alpha \circ \phi_\beta^{ -1} $), are called transition functions. 
+
+Some examples of manifolds include 
+\begin{itemize} 
+	\item $\mathbb{R}^n$ and all subsets of $\mathbb{R}^n$ are n-dimensional manifolds, where the identity map serves as a sufficent chart. 
+	\item $S^1, S^2$ are manifolds, with modified versions of polar coordinates patched together forming a chart (as we'll see in the case of $S^1$. 
+\end{itemize}
+Let's start simple and try to construct a chart for $S^1$. Our normal intuition would be to use a single chart $S^1 \rightarrow [0, 2 \pi) $, which indeed covers $S^1 $ but doesn't satisfy the condition that the target set is an open subset of $\mathbb{R}$. This yields problems in terms of differentiation functions at the point $0 \in \mathbb{R}$, because the interval is closed there, not open. One way to remedy this is to define two coordinate charts then path them together to form an atlas. Our first open set will be the set of points on the circle which exclude the rightmost point on the diameter, a set denoted by $\mathcal{O}_1$, and our second open set is the whole sphere excluding the leftmost point. We'll denote this $\mathcal{ O}_2 $. 
+
+We assign the following charts which are inline with this geometry
+\begin{align*} 
+	\phi_1 : \mathcal{O}_1 &\rightarrow \theta_1 \in (0, 2 \pi ) \\
+	\phi_2 : \mathcal{O}_2 &\rightarrow \theta_2 \in ( - \pi , \pi ) 
+\end{align*} 
+
+It's easy to verify that if we take a point on the manifold, our transition matrix reads that 
+\[ 
+	\theta_2 = \phi_2 ( \phi_1^{ -1} ( \theta_1) )  = \begin{cases} 
+	\theta_1, \, \theta_1 \in (0 , \pi ) \\
+	\theta_1  - 2 \pi,  \, \theta_1 \in ( \pi, 2 \pi ) 
+\end{cases} 
+\] 
+Now that we have coordinate charts, we can do things that we usually do on functions described in $\mathbb{ R}^n $, like differentiate. 
+Furthermore, we can define maps between manifolds (which don't necessarily have the same dimension), where smoothness is defined via smoothness on coordinate charts. These are called diffeomorphisms. A function 
+\[
+	f: \mathcal{ M} \rightarrow \mathcal{ N } 
+\]
+is a diffeomorphism if the corresponding map between $\mathbb{R}^{ dim \mathcal{M} } $ and $\mathbb{R}^{ dim \mathcal{N } } $ is smooth: 
+\[ 
+	\psi \circ f \circ \phi^{ -1} : U_1 \rightarrow U_2 
+\] for all coordinate charts $\phi : \mathcal{O}_1 \rightarrow U_1$ and $\psi: \mathcal{O}_2 \rightarrow U_2$ defined on the manifolds $\mathcal{M}$ and $\mathcal{N}$ respectively. 
+
+\subsection{Tangent vectors}
+Throughout our whole lives, we've been thinking of a 'vector' as a way to denote some position in space. However, this idea of a vector is only really unique to the manifold $\mathbb{R} ^n $. A much more universal concept of a vector is the idea of 'velocity', the idea of movement and direction at a given point.  A tangent vector is a 'derivative' form at a given point in the manifold. This means that we define it to obey properties that one might expect in our usual notion of a derivative for functions in $\mathbb{R}$. We denote a vector at a point $ p \in \mathcal{M}$ as $X_p$. 
+This means that a vector is simply a map $X_p : C^\infty \rightarrow \mathbb{R} $, which satisfies  
+\begin{itemize} 
+	\item Linearity: 
+	\[ X_p( \alpha f + \beta g ) = \alpha X_p ( f) + \beta X_p (g), \quad \forall f, g \in C^\infty (\mathcal M ), \, \, \alpha, \beta \in \mathbb{R} \]
+	\item  $X_p( f)  = 0$ for constant functions on the manifold.
+	\item Much like the product rule in differentiation, tangent vectors should also obey the Leibniz rule where 
+\[ 
+	X_p(fg) = f(p ) X_p (g) + g(p) X_p (f) 
+\] 
+Remember that with the Leibniz rule, the functions which are not differentiated are evaluated at $p$! This is useful for our theorem afterwards.  
+\end{itemize} 
+This next proof is about showing that tangent vectors can be built from differential operators in the $n$ dimensions of the manifold. 
+We will now show that all tangent vectors $X_p$ have the property that they can be written out as 
+\[ 
+	X_p = X^\mu  \left. \frac{ \partial }{ \partial x^\mu } \right\vert_{p} 
+\] What we're saying here is that $ \partial_\mu $ at the point $p \in \mathcal{M} $ forms a basis for the space of tangent vectors at a point. 
+To do this, take your favourite arbitrary function $f: \mathcal{ M} \rightarrow \mathbb{R} $. Since this is defined on the manifold, to make our lives easier we'll define $F = f \circ \phi^{ -1}: \mathbb{R}^n \rightarrow \mathbb{R} $, which we know how to differentiate. The first thing we'll show is that we can locally move from $F(x(p)) \rightarrow F(x(q)) $ by doing something like a Taylor expansion: 
+\[ 
+	F( x(q)) = F(x(p))    + ( x^\mu (q)  - x^\mu (p) ) F_\mu ( x( p)) 
+\] 
+Here, we're fixing $p \in \mathcal{ M} $ and $F_\mu$ is some collection of $n$ functions. One can easily verify that $F$ can be written in this way by precisely doing a Taylor expansion then factorising out the factors of $(x^\mu (q)  - x^\mu (p) )$. We can find an explicit expression for $F_\mu ( x(p ))$ by differentiating both sides and then evaluating at $x( p)$. We have that 
+\[ 
+	\left. \frac{ \partial F}{ \partial x^\nu } \right\vert_{ x(p)}  = \delta\indices{^\mu_\nu} F_\mu + (x^\mu (p)  - x^\mu( p) ) \left. \frac{ \partial F_\mu}{ \partial x^\nu } \right\vert_{ x( p)}  = F_\nu \] 
+The second term goes to zero since we're evaluating at $x(p)$, and our delta function comes from differentiating a coordinate element. Our initial $F(x(p))$ term goes to zero since it was just a constant. Recalling that $\phi^{ -1} \circ x^\mu ( p )  = p$, we can just rewrite this whole thing as 
+\[ 
+	f(q) = f(p) + (x^\mu (q) - x^\mu ( p)) f_\mu (p ) 
+\] 
+where in this case we've defined that $f_\mu (p ) = F_\mu \circ \phi^{ - 1} $. However, we can figure out what this is explicitly
+\[ 
+	f_\mu ( p ) = F_\mu \circ \phi ( p )  = F_\mu ( x(p)) =  \frac{\partial F (x(p)) }{ \partial x^\mu } = \frac{ f \circ \phi^{ -1 } ( x (p))}{ \partial x^\mu } : = \left. \frac{ \partial f}{ \partial x^\mu } \right\vert_{ p } 
+\] 
+Now, its a matter of applying our tangent vector to our previous equation, recalling that $X_p (k ) = 0 $ for constant $k$, and that all functions are evaluated at the point $ p$. We have that, upon application of the Leibniz rule 
+\begin{align*} 
+	X_p ( f(q)) & = X_p ( f(p)) + X_p ( x^\mu (q) - x^\mu (p) ) f_\mu (p) + ( x^\mu (p) - x^\mu(p) )X_p ( f_\mu ( p)) \\
+	& = X_p ( x^\mu (p)) f_\mu ( p) \\
+	&= X^\mu f_\mu ( p) \\
+	&= X^\mu \left. \frac{ \partial f }{ \partial x^\mu } \right\vert_p 
+\end{align*} 
+In the first line we've replaced $q$ with $p$ in the last term since Leibniz rule forces evaluation at $p$. We've declared $X^\mu = X_p (x^\mu) $ as our components. Since $f$ was arbitrary, we have now written that 
+\[ 
+	X_p = X^\mu \frac{ \partial }{ \partial x^\mu } 
+\] 
+To show that $\{ \partial_\mu \} $ forms a basis for all tangent vectors, since we've already shown that they span the space we need to show they're linearly independent. Suppose that 
+\[ 
+	0 = X^\mu \partial_\mu
+\] 
+Then, this implies that if we take $f = x^\nu$, then $0 = X^\nu$ for any value of the index $\nu$ we take. So, we have linear independence.   
+
+\subsubsection*{Tangent vectors should be basis invariant objects} 
+A tangent vector is a physical thing. However, so far we've expressed it in terms of the basis objects $ \{ \partial_\mu \} $ which are chart dependent.So, suppose we use a different chart which is denoted by coordinates $ \tilde{x}^\mu$. This means that our new tangent vector needs to satisfy the condition that 
+\[ 
+	X_p = X^\mu \left.  \frac{ \partial}{ \partial x^\mu } \right\vert_{ p}   = \tilde{X}^\mu \left. \frac{ \partial }{ \partial \tilde{x}^\mu} \right\vert_p
+\] 
+This relation allows us to appropriately relate the components $X^\mu$ to that of $\tilde{X}^\mu$, in what is called a contravariant transformation. Using the chain rule, we have that 
+\[ 
+	X^\mu \left. \frac{\partial}{ \partial x^\mu} \right\vert_p  = X^\mu \left. \frac{ \partial \tilde{ x}^\nu}{ \partial x^\mu} \right\vert_{ \phi(p )} \left. \frac{ \partial}{ \partial \tilde{x}^\nu } \right\vert_p 
+\] Notice that when differentiating a coordinate chart with respect to another, we're evaluating at the coordinate chart of the point. This is why we subscript with $\phi( p)$ in the terms. Comparing coefficients, we have that 
+\[ \tilde{X}^\nu = X^\mu \left. \frac{ \partial \tilde{x}^\nu }{ \partial x^\mu } \right\vert_{ \phi(p) } \] 
+
+   
+\subsection{Treating tangent vectors as derivatives of curves on the manifold}
+We present a different way to think of tangent vectors, which is viewing them as 'differential operators along curves'. Consider a smooth curve along our manifold, which we can parametrise from on an open onterval $I = (0 , 1)$, and define the starting point of this curve at $p \in \mathcal { M} $; 
+\[ 
+	\lambda: ( 0, 1) \rightarrow \mathcal{ M}, \quad \lambda( 0 ) = p 
+\]  
+We now ask the question, how do we differentiate along this thing? To do this, we'll have to apply coordinate charts so that we can make sense of differentiation. So, suppose we would like to differentiate a function $f$ along this manifold. We apply our chart $\phi$ to $\lambda$ to get a new function $ \phi \circ \lambda : \mathbb{R} \rightarrow \mathbb{R}^n$, which we'll suggestively write as $x^\mu ( t) $. In addition, to be able to differentiate $f$ in a sensible way we also construct the function $F = f \circ \phi^ { -1} $ . Thus, differentiating a function along a curve $x^\mu ( t) = \phi \circ \lambda ( t) $ should look like 
+\begin{align*} 
+	\frac{ d}{ dt} f(t) &= \frac{ d}{ dt} \left( F \circ \phi^{ -1} \circ \phi \circ \lambda (t) \right) \\
+	& = \left. \frac{d}{ dt} \left( F \circ \phi^{ -1} \circ x^\mu ( t) \right) \right\vert_{ t = 0} \\
+	&= \frac{ dx^\mu}{ dt} \left. \frac{ \partial F \circ \phi^{ -1} }{ \partial x^\mu } \right\vert_{ \phi( p ) } \\
+	&= \left. \frac{dx^\mu}{dt} \right\vert_{t =0} \left. \frac{ \partial f}{ \partial x^\mu } \right\vert_{ p } \\
+	&= X^\mu \partial_\mu (f) \\	
+	&= X_p (f)
+\end{align*} 
+Thus, differentiating along a curve gives rise to a tangent vector acting on $f$. 
+
+\subsection{Vector fields} 
+Thus far we've defined tangent spaces at only a specific point in the manifold, but we'd like to know how we can extend this notion more generally. A vector field $X$ is an object which takes a function, and then assigns it avector at any given point $p \in \mathcal{M}$. So, we're taking 
+\[ 
+	X: C^\infty ( \mathcal{ M} ) \rightarrow C^\infty( \mathcal{M} ), \quad f \mapsto X(f) 
+\]
+$X(f)$ is a function on the manifold which takes a point, and then differentiates $f$ according to the tangent vector at that point. 
+\[ 
+	X(f)( p) = X_p ( f), X = X^\mu \partial_\mu 
+\] 
+In this case, $X^\mu$ is a smooth function which takes points on the manifold to the components of the tangent vector $X_p^\mu$ at $p$. We call the space of vector fields $X$ as $\mathcal{ X} (\mathcal{M}) $.  
+So, since $X(f)$ is now also a smooth function on the manifold, we can apply another vector field $Y$ to it, for example. However, is the object $XY$ a vector field on it's own? The answer is no, because vector fields also have to obey the Liebniz identity at any given point, ie the condition that 
+\[ 
+	X(fg) = f X(g) + g X( f) 
+\] 
+However, the object $ XY$ does not obey this condition since 
+\begin{align*} 
+	XY( fg )& = X ( f Y (g) + g Y ( f) ) \\
+		&= X(f) Y(g) + f XY ( g) + X( g) Y(f) + g XY( f) \\ 
+		& \neq g XY ( f) + f XY ( g) 
+\end{align*} 
+We do get from this however, that 
+\[ 
+	XY  - YX := [ X, Y ] 
+\]  
+does obey the Leibniz condition, because it removes the non-Leibniz cross terms from our differentiation. The commutator acts on a function $f$ by 
+\[ 
+	X( Y (  f))  - Y( X( f)) = [ X, Y] f 
+\] One can check that the components of the new vector field $[ X, Y]^\mu $ are given by 
+\[ 
+	[ X, Y]^\mu = X^\nu \frac{\partial Y^\mu}{ \partial x^\mu }  - Y^\nu \frac{ \partial X^\mu }{ \partial x^\nu } 
+\]
+The commutator obeys the Liebniz rule, where 
+\[ 
+ 	[X , [ Y, Z]] + [ Y, [ Z, Z]] + [Z, [ X, Y]] = 0
+\] 
+
+\subsection{Integral curves} 
+We'll now do an interesting diversion to discuss flows on a manifold. Think of a body of water moving smoothly on a surface, where each point on the manifold moves to a different point after some amount of time. This is a what a flow is. More specifically, it is a smooth map $\sigma_t : \mathcal{M} \rightarrow \mathcal{M} $ on the manifold (which makes it a diffeomorphism), where $t$ is our 'time' parameter that we were talking about. As such, these flow maps actually form an abelian group, where 
+\begin{itemize} 
+	\item $\sigma_0 = I_\mathcal{M} $. So, after time $t = 0$ has passed, nothing has moved so we have that this is the identity map. 
+	\item If we compose the same flow after two intervals in time, we should get the same flow when we've let the sum of those times pass over. So, 
+	\[ \sigma_s \circ \sigma_t  = \sigma_{ s + t } \] 
+\end{itemize} 
+If we take a flow at a given point $p \in \mathcal{M}$, we can define a curve on the manifold by setting: 
+\[ 
+	\gamma(t): \mathbb{R} \rightarrow \mathcal(M), \quad \gamma(t) = \sigma_t ( p ) 
+\] where without loss of generality we have $\gamma(0) = p$. Since this is a curve, we can define it's associated curve in $R^n$ space with a given coordinate chart, and hence associate with it a tangent vector $X_p$. We can also work backwards. From a given vector field, we can solve the differential equation 
+\[ 	
+	X^\mu ( x(t) )  = \frac{ d x^\mu ( t) }{ dt} 
+\] with the initial condition that $x^\mu ( 0 )  = \psi ( p ) $ at some point in the manifold, and have that this defines a unique curve. The set of curves then together form a flow. 
+Thus, we've seen a one to one correspondence between vector fields and flows. 	
+\pagebreak 
+
+\subsection{Differentiating vector fields with respect to other vector fields}
+
+\subsubsection{Push-forwards and Pull-backs} 
+A sensible question to now as is that, since we have these smooth vector fields, how do we differentiate a vector field with respect to another one? For example, if we have $X, Y \in \mathcal{M}$, what constitutes the notion of a change in $X$ with respect ot $Y$. The notion of derivatives on manifolds is difficult because we can't compare tangent spaces at different points in the manifold, for example $T_p(M )$ and $T_q(M) $ are tangent spaces at different points, and we could define different charts for each space, hence we have some degrees of freedom (and our derivative  wouldn't make sense).  To make sense of comparing different tangent spaces, we need to create way to compare the same functions, but on different manifolds. These are called push forwards and pull backs. 
+
+Let's start by defining a smooth map between manifolds $\phi : M \rightarrow N$ ($\phi$ is not a chart here). We're not assuming that $M$ and $N$ are even the same dimension here, and so we can't assume $\phi^{ -1} $ doesn't even exists. 
+
+Suppose we have a function $f: N \rightarrow \mathbb{R} $. How can we define a new function based on $f$ that makes sense, which goes from $M \rightarrow \mathbb{ R} $? We define the pull back of a function $f$, denoted $(\psi^* f) : M \rightarrow \mathbb{R} $ as 
+\[
+ 	( \psi^* f ) ( p )  = f ( \psi ( p ) ), \quad p \in \mathbb{ M } 
+\] So, we've converted this thing nicely. 
+
+Our next question then is how, from a vector field $Y \in \mathcal{X} ( M )$, can we make a new vector field in $X \in \mathcal{X} ( M ) $? We can, and this is called the push-forward of a vector field, denoted $ \phi_* Y \in \mathcal{ X} ( N )$. We define that object as the vector field which takes 
+\[ 
+	(\phi_*  Y ) ( f)  = Y ( \phi^* f ) 
+\] 
+This makes sense because $\phi^* f \in C^{\infty} ( M )$, so applying $Y$ makes sense. Now, to show $\phi_* Y \in \mathcal{X} ( N )$, we should verify that 
+\[ 
+	\phi_* Y : C^\infty ( N ) \rightarrow C^\infty( N ), \quad f \mapsto C^{\infty} 
+\] 
+Well, this object philosophically maps 
+\[ 
+	 f \mapsto \phi_* Y ( f)  = Y ( \phi^* f ) 
+\]  But the object on the left hand side is a vector field ready to be turned into a tangent vector when we assign it to a point on the manifold: 
+\[ 
+	p \mapsto Y_p ( \phi^* f ) 
+\] Hence this object agrees with our definition. The fact that we have a map $\phi: M \rightarrow N$ and are pushing the vector field from $\mathcal{ X} ( M ) $ to $\mathcal{ X} ( N )$ is the reason why we call this new mapping a push forward. 
+
+\subsubsection{Components for Push-forwards and Pull-backs} 
+Now, since $\psi_* Y $ is a vector field, it's now in our interest to find out about what the components are for this thing. We want to find that the components $( \psi_*Y )^\nu$ such that 
+\[ 
+	\psi_* Y  = ( \psi_* Y )^\nu \partial_\nu 
+\]
+We can work first by assigning coordinates to $\phi( x )$, which we denote by $y^\alpha  ( x) = \phi( x), \quad x\in M,  \alpha = 1, \dots dim(N)$. 
+If we write out our vector field $Y$ as $Y  = Y^\mu\partial_\mu$, then our push-forward map in summation convention looks like 
+\[ 
+(\phi_* Y ) f = Y^\mu \frac{\partial f ( y ( x))}{ \partial x^\mu}  = Y^\mu \frac{ \partial y^\alpha }{ \partial x^\mu } \frac{ \partial f}{ \partial y^\alpha } 
+\] 
+In the second equality, we've applied the chain rule. Remember, $y$ pertains to coordinates in the manifold $N$, so on our push-forward, we have that our new components on the manifold $N$, we have that 
+\[ 
+	(\phi_* Y )^\alpha  = Y^\mu \frac{ \partial y^\alpha }{ \partial x^\mu } 
+\] 
+
+\subsubsection{Introducing the Lie derivative} 
+In what we've just presented, some objects are naturally pulled back and some are naturally pushed forward. However, things become when our map between manifolds is a diffeomorphism and hence invertible; which means we can pull back and push forward with whatever objects we want. 
+We can use this idea to differentiate vector fields now. Recall that if we've given a vector field, $X \in \mathcal{X} (M )$, we can define a flow map $\sigma_t : M \rightarrow M$ This flow map diffeomorphism allows us to push vectors along flow lines in the manifolds, from the tangent spaces 
+\[ 
+	T_p ( M ) \rightarrow T_{\sigma_t ( p )} ( M ) 
+\] 
+
+This is called the Lie derivative $\mathcal{L}_X$, a derivative which is induced by our flow map generated by $X$. For functions. we have that 
+\[ 
+	\mathcal{L}_X f = \lim_{ t \rightarrow 0 } \frac{ f( \sigma_t ( x ))  - f( x) }{ t }  = \left. \frac{ df ( \sigma_t( x) ) }{ dt } \right\vert_{ t =0 } 
+\] However, the effect of doing this is exactly the same as if we were to apply the vector field $X$ to the function: 
+\[ 
+	\frac{ df}{ dx^\mu } \left. \frac{ dx^\mu } { dt } \right\vert_{ t = 0 }  = X^\mu \frac{ \partial f }{ \partial x^\mu }  = X( f)
+\] Thus, a Lie derivative specialised to the case of functions just gives us $\mathcal{L}_X ( f)  = X( f) $. 
+Now, the question is about how we can do this differentiation on vector fields. What we need to do is to 'flow' vectors at a point back in time to where they originally started, and look at this difference. 
+\[ 
+	( \mathcal{L}_X Y )_p  = \lim_{ t \rightarrow 0 } \frac{ ( \sigma_{-t }^* (Y)_p - Y_p )  }{ t } 
+\] 
+
+Let's try and compute the most basic thing first, the Lie derivative of a basis element of the tangent space  $\partial_\mu$: 
+\[
+	\sigma_{ -t}^* \partial_\mu = (\sigma_{ -t}^* \partial_\mu)^\nu \partial_\nu
+\] Let's try and figure out what $ (\sigma_{ -t}^* \partial_\mu)^\nu$ is. Because of the fact that the diffeomorphism is induced by the vector field $X$, we have that 
+\[
+	( \sigma_{ -t}^* (x))^\nu = x^\nu  - t X^\nu + \dots
+\] Thus our components of a push-forward of an arbitrary vector field are given by 
+\[ 
+	( \sigma_{ -t}^*  Y )^\nu  = Y^\sigma \frac{ \partial ( \sigma_{ -t } ( x) )^\nu}{ \partial x^\sigma } , \quad \text{ in our case }  Y^\sigma = \delta\indices{^\sigma_\mu} 
+\] 
+Substituting the expressions above with one another gives us that 
+\[ 
+	( \sigma_{ -t} ( x) \partial_\mu )^\nu  = \delta\indices{^\nu_\mu}  - t \frac{ \partial X^\nu }{ \partial x^\mu } + 
+\] Contracting this with $\partial_\nu$, and then subtracting off $\partial_\mu$, we have that
+\[ 
+	\mathcal{L}_X \partial_\mu =  - \frac{ \partial X^\nu}{ \partial x^\nu} \partial_\nu 
+\] We require that a Lie derivative obeys the Leibniz rule, so we have that applying on a general vector field $Y$, 
+\begin{align*}
+	\mathcal{L}_X (Y)  & = \mathcal{L}_X( Y^\mu \partial_\mu ) \\
+					&= \mathcal{L}_X ( Y^\mu ) \partial_\mu + Y^\mu \mathcal{L}_X ( \partial_\nu ) \\
+					&= X^\nu \frac{ \partial Y^\mu }{ \partial x^\nu } \partial_\mu - Y^\mu \frac{ \partial X^\nu } { \partial x^\mu } \partial_\nu 
+\end{align*} 
+We realise that this however are just components of the commutator! So
+\[
+	L_X ( Y ) = [ X, Y ] 
+\] 
+
+\section{Tensors} 
+
+\subsection{A note about dual spaces}
+In linear algebra, if we have a vector space which we call $ V$, then we can define a natural object which we call it's dual space, denoted by $V^* $. The dual space is the space of linear functions which takes $V \to  \R$: 
+\[
+	V^* = \{ f \mid f : V \to  \R, \quad \text{ f is linear } \} 
+\] 
+Now it may seem from first glance that the space of all functions is a lot larger than our original vector space, so it's counter intuitiveto call it the 'dual'. However, we can prove that these vector spaces are isomorphic. Suppose that $\{ e_\mu \} $ is a basis of $V$. Then we pick what we call a dual basis of $V^*$, by choosing the 
+\[
+	\mathcal{B}( V ^* ) = \{ f^\mu \mid f^\mu ( e_\nu )  =\delta \indices{^\mu_\nu} \}  
+\] 
+One can show that this set indeed forms a basis of $V^* $.
+\begin{thm}
+	The above basis forms a basis of $V^* $. 
+	 \begin{proof}
+		First we need to show that the linear maps above, span our space. 
+		This means we need to be able to write any linear map, say $ \omega $, as a linear combination 
+		\[
+			\omega = \sum \omega_\mu  f^\mu , \omega_\mu  \in F  
+		\] 
+		To do this, we appeal to the fact that if two linear maps agree on the vector space's basis, 
+		then they agree. 
+		So, let the values that $ \omega $ takes on the basis be $\omega_\mu  = \omega (e_\mu  ) $. Then, taking 
+		\[
+		 \Omega  = \sum \omega_\mu  f^\mu  
+	 \] We find that $ \Omega$ also satisifes $ \Omega( e_\mu  )  = \omega_\mu  $. 
+	 Thus, the maps are the same. 
+	 Hence, $\omega$ can be written as the span of our dual basis vectors. 
+	 To show that these basis vectors are linearly independent, 
+	 we assume that there exists a non trivial sum such that they add to the zero map.  
+	 	\[
+	 	 0  = \sum \lambda_\mu  f^\mu  
+	 	\] If we apply this map to an arbitrary basis vector $ e_i$, then we get  \[
+		0 = \sum \lambda_\mu  f^\mu  ( e_i ) = \lambda_i 				
+	 	\] for arbitrary $i $. Hence, we must have that all $\lambda_i$ are zero. 
+		Thus the basis vectors are independent. 
+	\end{proof}
+\end{thm}
+Now, assuming that our original vector space $ V$ had finite dimension, the way we've defined the basis of $V^* $
+means that we had the same number of basis elements. 
+This means that $V $ and $V^* $ have the same dimesion. 
+One can prove that vector spaces with the same dimension are isomorphic, so we have that 
+\[
+V \simeq V^* 
+\] Think of a dual space as a 'flip' of a vector space. 
+We can identify the dual of a dual space as the original space itself, so that 
+\[
+    \left( V^*  \right)^ * = V 
+\] This is because given an object in the dual space $\omega$, we can define a natural map from 
+$V: V^* \to  \R $ given by
+\[
+	V \left( \omega  \right)  = \omega \left( V  \right) \in \R
+\] 
+\subsubsection{Vector and Covector spaces} 
+Now, since we've identified tangent spaces as vector spaces, we can proceed to construct its dual. 
+If we have a tangent space $ T_p ( \mathcal{ M}) $ with a basis $\{ e_\mu  \}$, our natural dual basis is 
+given by 
+\[
+	\mathcal{B }( T_p^* ( \mathcal{M})) = \{ f^\mu  \mid f^\mu  ( e_\nu  ) = \delta \indices{^\mu _\nu  } 
+	\] The corresponding dual space is denoted as $T_p^* ( \mathcal{ M}) $, and is known as 
+	the cotangent vector space. 
+For brevity, elements in this space are called \textbf{ covectors}. 
+In this basis, the elements $ \{ f^\mu  \}$ have the effect of 'picking' out components of a vector $ V = V^\mu e_\mu  $. 
+\[
+	f^\nu  ( V )  =f^\nu  ( V^\mu  e_\mu  )  = V^\mu  f^\nu  ( e_\mu )  = V^\nu  
+\] There's a different way to pick elements of this dual space in a smooth way. 
+They're chosen by picking elements of a set called the set of 'one forms'. 
+We denote the set of one forms, with an index $1 $ as $ \Lambda^{1}( \mathcal{M }) $. 
+We can construct elements form this set by taking elements from $ C^\infty ( \mathcal{M} )$. 
+Suppose that we have an $ f \in C^\infty ( \mathcal{ M } ) $, then the corresponding one-form is a map 
+\[
+	df : T_p ( \mathcal{ M}) \to  \R \quad V \mapsto V( f) 
+\] From one the set of one forms, we then have an obvious way to get the dual basis. 
+The dual basis is obtained by just taking the coordinate element of the manifold, so that our one form is 
+\[
+	dx^\nu  : T_p ( \mathcal{ M }) \to  \R
+\] This satisfies the property of a dual basis, since 
+\[
+	dx^\nu ( e_\mu  )  = \frac{\partial x^\nu  }{\partial x^\mu  } = \delta \indices{^\nu _\mu  } 
+\] Now, as with basis elements in our vector space, 
+we need to determine how these objects transform under a change of basis. 
+*Need to finish this section on basis transformations for covectors* 
+
+\subsection{Taking the Lie Derivative of Covectors} 
+We would like to repeat what we did for vectors, and take derivatives of covectors. 
+To do this, we need to define pull-backs for covectors.
+Suppose we had a covector $\omega$ living in the tangent space 
+of some manifold $N$, in $T_p^*( N)$. 
+We can then define the pull back of this vector field based on first pushing forward 
+the vector field $X$. Thus, if $\phi : M \to  N$, then we define the pullback 
+$\phi^ * \omega $ as the covector field in $T_p ( M ) $ as 
+\[
+	( \phi^* \omega ) ( X)  = \omega ( \phi_* X ) 
+\] What information can we glean from this? 
+Well, we can try to figure out what the components of $\phi^ * \omega $ are. 
+If we let $\{ y ^ \alpha \} $ to be coordinates on $N$, 
+then we expand this covector as 
+\[
+ \omega = \omega_\mu  dy^\mu  
+\] Also recall that the components of a pushed forward vector field are 
+\[
+ ( \phi_* X )^ \mu   = X^\nu \frac{\partial y ^ \mu  }{ \partial x^\nu }
+\] Now, if we take the equation 
+\[
+ ( \phi ^ * \omega )  = \omega ( \phi_* X ) 
+\] Then, expanding out in terms of components, we have that 
+\[
+	( \phi^* \omega ) ^\mu  dx_\mu  ( X^\nu  e_\nu  )  = w^\mu  dy_\mu  ( \phi_* X)^\nu  \frac{\partial }{\partial y ^\nu  }
+\] Remember, we have to expand in the correct coordinates. The object $ \phi^* \omega $ lives in 
+the space $M $ so we expand in the $ dx^ \mu  $ basis. On the other hand
+we have that $\omega $ originally lives in $N $ so we expand in 
+$ dy^ \mu  $. 
+Substituting our expression for our push forward vector field, 
+and we get that 
+\[
+	( \phi^ * \omega )_\mu  X^\mu  = \omega_\nu  \frac{\partial y^\nu  }{\partial x^\mu }X^\mu  
+\] This step requires a bit of explanation. 
+After we substitute in the components for the pushed forward vector field, 
+we then use the fact that on both manifolds, our basis vectors and 
+our basis covectors contract to give a delta function 
+\[
+	dx^\mu  \left(  \frac{\partial }{\partial x^ \nu } \right)= \delta \indices{^\mu  _\nu }, \quad dy^\mu  \left( \frac{\partial }{\partial y^\nu  }  \right) = \delta \indices{^\mu _\nu }						  
+\] This implies that the components of our pulled back vector field are 
+\[
+	( \phi^* \omega )_\mu  = \omega_\nu  \frac{\partial y^\nu }{\partial x^\mu  }
+\] 
+
+\subsection{Taking the Lie Derivative of Covectors}
+As in the case of vectors, we can also make rigourous the definition of a Lie derivative 
+with respect to a covector field. 
+This is denoted $\mathcal{L}_X \omega$, where $X$ is our underlying vector field
+we're differentiating with. 
+If our vector field $X$ imposes a flow map which we label as 
+$\sigma_ t$, then our corresponding Lie derivative is derivative is defined as 
+\[
+	\mathcal{ L }_X \omega  =\lim_{t \to 0} \frac{( \sigma_t^* \omega)   - \omega }{t }	 
+\]There's an important point to be made here. 
+In our previous definition of a Lie derivative for a vector field, 
+we took the inverse diffeomorphism $\sigma_{ - t} $. 
+But in this case, we need to take $t $ positive since 
+we're doing a \textbf{pull-back} instead of a pushforward, like we did 
+with vector fields. 
+
+Let's go slow and try to compute 
+the components of this derivative. 
+Recall that for a flow map, we have that infinitesimally, 
+\[
+y^\nu  = x^\nu  + t X^\nu , \implies \delta \indices{^\nu _\mu  } + t \frac{dX^\nu }{dx^\mu  }	  
+\] Thus for a general covector field, our components for the pull back 
+are 
+\[
+	( \sigma_t \omega )_\mu  = \omega_\mu  + t \omega_\nu \frac{dX^\nu }{dx^\mu  }
+\] Hence, the components of a basis element under this flow becomes 
+\[
+	( \sigma_t^* dx^\nu )  = dx^ \nu  + t dx^\mu  \frac{dX^\nu  }{dx^\mu  }
+\] So, taking the limit, we have that our components of our 
+Lie derivative are given by 
+\[
+	\lim_{t \to 0  } \frac{\sigma^*_t dx^\nu   - dx^\nu  }{ t }  = dx^\mu  \frac{dX^\nu }{dx^\mu  }		 
+\] Now, as before, we impose the 
+Liebniz property of Lie derivatives, and expand out a general covector. 
+Hence, we have that 
+\begin{align*}
+	\mathcal{L}_X( \omega_\mu  dx^\mu  ) &= \omega_\mu  \mathcal{L}dx^\mu  + dx^\mu  \mathcal{L}_X( \omega_\mu  )  \\
+	 &= \omega_\mu  dx^ \nu  \frac{dX^\nu  }{dx^\mu  } + dx^ \nu  X^\mu   \frac{d \omega_\nu }{dx^ \mu  }
+\end{align*} This implies that 
+our components of our Lie derivative can be written nicely as 
+\[
+	\mathcal{L }_X( \omega )_\mu   = 
+\] 
+\[
+
+\] 
+
+\section{Example Sheet 1} 
+
+
+\subsection{Question 1} 
+If we're given compoonents of a vector field and want to solve for its integral curve, then we need to solve the equation
+\[ 
+	\left. \frac{ d x^\mu(t) }{ dt} \right\vert_{\phi(p)} = \left. X^\mu( x^\nu(t) ) \right\vert_{ \phi( p)}
+\] 
+
+So for the first integral curve, we need to solve the system 
+\begin{align*} 
+	\frac{dx}{dt}  &= y \\
+	\frac{dy}{dt}  &= -x 
+\end{align*} 
+This is made a lot easier by writing out the system in polar coordinates (which is indeed a different cart for the manifold $\mathbb{R}^2$, and writing $(x , y)  = ( r \cos \theta, r \sin \theta)$ with the chain rule gives us 
+\begin{align*} 
+	\dot{r} \cos \theta  - r \dot{\theta} \sin \theta  &= r \sin \theta \\
+	\dot{r} \sin \theta  + r \dot{\theta} \cos \theta &=  - r \cos \theta 
+\end{align*} 
+If we multiply the first equation by $\sin \theta$ and the second equation by $\cos \theta$, and then subtract the first equation from the second equation, we've eliminated the $\dot{ r}$ term. We're left wwith 
+\[ 
+	\dot{\theta} =  -1 \implies \theta  =  - t + C
+\] 
+for some constant $C$. Substituting in $\dot{\theta} = - 1$ in our first equation gives the condition that $\dot{r} = 0 \implies r = R$ for $R$ constant. Hence our integral curves are merely circles of arbitrary radius about the origin. 
+
+For our second vector field 
+\[ 
+	X^\mu  = ( x - y, x +y ) 
+\] 
+we proceed exactly as before, with polar coordinates. One finds instead that $\dot{\theta} = 1$, and hence that $\dot{r}  = r$. Thus, we have that 
+\[
+	\theta = t + A, \quad r = Be^t 
+\] 
+for arbitrary constants $A, B$. These curves are spirals. 
+
+\pagebreak
+\subsection{Question 2} 
+We're given that the map $\hat{ H }  : T_p (M) \rightarrow T_p^* ( M ) $ is a linear map. So, since $\hat{ H } $ is linear, 
+\begin{align*} 
+	H ( X, \alpha Y + \beta Z ) & = \hat{H} ( \alpha Y + \beta Z) ( X) \\ &= ( \alpha \hat{ H} ( Y ) + \beta \hat{H} ( Z) ) ( X) \\
+	&= \alpha \hat{H}( Y) ( X) + \beta \hat{H} (Z) ( X) \\
+		&= \alpha H ( X, Y ) + \beta H ( X, Z) 
+\end{align*} 
+Thus, $H$ is linear in the second argument. The only fact that we've used here is that $\hat{H}$ is a linear map. For the linearity in the first argument, we use the fact that $\hat{H} (Y) \in T_p^* (M)$, which means that it's a linear map. So 
+\[ 
+	H ( \alpha X + \beta Z, Y ) = \hat{H}( Y) ( \alpha X + \beta Z)  = \alpha \hat{H} (Y) X + \beta \hat{H} (Y) ( Z)  = \alpha H(X, Y ) + \beta H(Z, Y ) 
+\] Thus our map is linear in the first argument. Note that
+\[ 
+ 	H : T_p ( M) \times T_p ( M) \rightarrow \mathbb{R} 
+\] and since the map is multilinear, we have a rank (0, 2) tensor.
+
+Similarly, if we had a linear map 
+\[ 
+	\hat{G} : T_p( M ) \rightarrow T_p( M) 
+\]
+we could then define a new map 
+\[ 
+	G : T_p^* ( M) \times T_p(M) \rightarrow \mathbb{ R}, \quad G( \omega, X)  = \omega ( \hat{G} ( X)) \] 
+which is also bilinear in both arguments, and hence is a rank (1, 1) tensor. If $G$ is the identity map, then our induced function 
+\[ 
+	\delta : T_p^* ( M) \times T_p( M ) \rightarrow \mathbb{R}, \quad \delta ( \omega, X ) = \omega (X) 
+\] is indeed our standard Kronecker delta function. If we set $\omega = x^\mu, X = e_\nu$, then $\delta\indices{^\mu_\nu} = \partial_\mu(x^\mu) = \delta\indices{^\mu_\nu}$. 
+
+\pagebreak 
+\subsection{Question 3} 
+In this question, we show that only symmetric (antisymmetric) parts of a tensor are 'conserved' whe contracted with symmetric (antisymmetric) tensors over the same indices. If $S^{ \mu \nu} $ is symmetric, then 
+\begin{align*} 
+	V^{ ( \mu \nu) } S_{\mu \nu}  & = \frac{1}{2} \left( V^{ \mu \nu} + V^{ \nu \mu} \right)S_{ \mu \nu} \\
+	&= \frac{1}{2} V^{\mu \nu}S_{ \mu \nu} + \frac{1}{2} V^{ \nu \mu} S_{\mu \nu} \\
+	&= \frac{1}{2} V^{\mu \nu}S_{ \mu \nu} + \frac{1}{2} V^{\nu \mu}S_{ \nu \mu } \\
+	&= \frac{1}{ 2} V^{\mu_\nu} S_{ \mu \nu} + \frac{1}{2} V^{\mu \nu}S_{ \mu \nu} \\
+ 	&= V^{ \mu \nu} S_{ \mu \nu} 
+\end{align*} 
+Going into the second last line we've just relabelled over summed indices. Going into the third line we've used the fact that $S$ is a symmetric tensor.The case for when we contract $V^{\mu \nu}$ for an antisymmetric tensor is entirely similar. 
+
+
+\pagebreak 
+\subsection{Question 5} 
+We show that our components $F_{\mu \nu}$ transform appropriately under a chang of coordinates. This is done with the chain rule. 
+\begin{align*} 
+	F_{ \mu \nu} & \rightarrow F_{ \mu \nu}' \\
+	&= \frac{ \partial^2 f}{ \partial x'^\mu \partial x'^\nu} \\
+	&= \frac{ \partial}{ \partial x '^\mu } \left( \frac{ \partial x^\rho }{ \partial x'^\nu } \frac{ \partial f }{ \partial x^\rho } \right) \\
+	&= \frac{ \partial x^\sigma}{ \partial x'^\mu } \frac{ \partial }{ \partial x^\sigma} \left( \frac{ \partial x^\rho}{ \partial x'^\nu} \frac{ \partial f}{ \partial x^\rho } \right) \\
+	&= \frac{ \partial x^\sigma}{ \partial x'^\mu} \frac{ \partial^2 x^\rho}{ \partial x^\sigma \partial x'^\nu } \frac{ \partial f }{ \partial x^\rho} + \frac{ \partial x^\sigma }{ \partial x'^\mu }\frac{\partial x^\rho}{\partial x'^\nu}\frac{\partial^2 f}{ \partial x^\rho \partial x^\sigma } \\
+	&= \frac{ \partial x^\sigma }{ \partial x'^\mu } \left( \frac{ \partial }{ \partial x'^\nu} \delta\indices{^\rho_\sigma} \right) \frac{ \partial f }{ \partial x^ \rho}  + \frac{ \partial x^\sigma }{\partial x'^\mu} \frac{ \partial x^\rho}{ \partial x'^\nu} \frac{ \partial^2 f }{ \partial x^\rho \partial x^\sigma} \\
+	&= \frac{ \partial x^\sigma}{ \partial x'^\mu } \frac{ \partial x^\rho}{ \partial x'^\nu } \frac{ \partial^2 f }{ \partial x^\sigma x^\rho } \\
+ & =   \frac{ \partial x^\sigma}{ \partial x'^\mu } \frac{ \partial x^\rho}{ \partial x'^\nu } F_{\rho \sigma} 
+\end{align*} 
+Thus, the Hessian obeys the tensor transformation law. Note that the derivative of the delta function goes to zero since it's constant, which is why that term disappears going into the second last line. Since our components transform in the two lower indices with a change of coordinates, this object is basis invariant and hence is a rank (0, 2) tensor. 
+
+Since this is a rank (0, 2) tensor, our coordinate independent way of expressing this object would be 
+\[ 
+	F: T_p( M ) \times T_p ( M ) \rightarrow \mathbb{R}
+\] 
+This specific representation is 
+\[ 
+	F(V, W) = VW(f) 
+\] 
+We can show this by expanding with coordinates. 
+\begin{align*} 
+	VW(f)  &= V^\mu \partial_\mu ( W^\nu \partial_\mu f ) \\
+		&= (\partial_\mu W^\nu)( \partial^\mu V_\nu )f + V^\mu W^\nu \partial_\mu \partial_\nu f \\
+	&= (V^\mu \partial_\mu W^\nu) \partial_\nu f + W^\nu V^\mu \partial_\mu \partial_\nu f \\
+	&= W^\nu V^\mu \partial_\mu \partial_\nu f \\
+	&= W^\nu V^\mu F_{\mu \nu}
+\end{align*} Here we've used the fact that $df=0$, which implies that for an arbitrary set of components $Z^\mu$, we have that $Z^\mu \partial_\mu f = 0 $. In the above, we identify this as $Z^\nu = V^\mu \partial_\mu W^\nu$, and hence the first term in the third line goes to zero.  
+This implies that $F_{\mu \nu}$ are indeed the components of $F$.  
+
+\pagebreak
+
+\subsection{Question 6} 
+This question explores how the determinant of a metric transfors under coordinate transformations. For this question, we denote the determinant of a change of basis as the Jacobian: 
+\[ 
+	\mathcal{ J } = det \left( \frac{ \partial x^\rho }{ \partial x'^\nu } \right) 
+\]  
+Hence, when we do a coordinate transform, since $det( AB ) = det( A ) det( B) $, we have that
+\begin{align*} 
+	g' &= det (g_{ \mu \nu }' ) \\
+	   &= det \left( \frac{ \partial x^\sigma}{ \partial x'^\mu } \frac{ \partial x^\rho }{ \partial x'^\nu } g_{ \rho \sigma } \right) \\
+	  &= det(g) J^{ -2 } 
+\end{align*} 
+This is becasue the expression in the determinant is the inverse of what we've defined the Jacobian to be. 
+  
+\end{document}

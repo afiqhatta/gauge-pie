@@ -1,0 +1,34 @@
+\subsection{Motivating Lorentz invariance of the Dirac equation}
+In this section, we'll present the Dirac equation and show that it's Lorentz invariant. The way to do this is slightly more convoluted than showing the Lorentz invariance of the Klein-Gordon equation, like we did in the previous section. It involves exploring how $\gamma^\mu$ transforms under both the $S_{ \mu \nu } $ and $ J_{ \mu \nu} $ representations of the Lorentz transformations, and how these representations relate to one another. 
+
+But first, we present the Dirac equation. A field $\psi(x)$ satisfying the Dirac equation satisfies the equation \[ ( i \gamma_\mu \partial^\mu  - m ) \psi( x) = 0  \]
+Note that, as opposed to the Klein-Gordon equation, we have a $m$ as the constant term instead of $m^2$. Also notice the fact that we're not taking two derivatives in this equation, we instead contract the derivative $\partial^\mu$ with $\gamma_\mu$. Now, under the Lorentz transformation where $x^\mu \rightarrow x^\nu \Lambda\indices{^\mu_\nu} $, recall our field transforms as \[ 
+\psi(x)  \mapsto \Lambda_{ \frac{ 1 }{2 }} \psi( \Lambda^{ -1} x ) \] 
+To show that the Dirac equation is invariant under this specific transformation, we require that (for reasons we will show later) \[ 
+\Lambda_{ \frac{ 1}{ 2}}^{ -1} \gamma^\mu \Lambda_{ \frac{ 1}{2}}  = \Lambda\indices{ ^\mu_\nu } \gamma^\nu \] 
+One can see that if this condition is satisfied, then, upon transforming the equation
+\begin{align*} 
+( i \gamma^\mu \partial_\mu  -m) \psi & \rightarrow ( i \gamma^\mu \partial_\mu  - m) \Lambda_{ \frac{ 1}{2} } ( \phi \Lambda^{ -1} x )  \\ 
+& = \Lambda_{ \frac{1}{ 2} } \Lambda_{ \frac{1}{2} }^{ -1}  ( i \gamma^\mu ( \Lambda^{-1 })\indices{_\mu^\nu} \partial_\nu  - m ) \Lambda_{ \frac{ 1}{2} } \psi( \Lambda^{-1} x ) \\ 
+& = \Lambda_{ \frac{ 1}{ 2} } ( i \Lambda_{ \frac{ 1}{2}}^{ -1} \gamma^\mu \Lambda_{ \frac{ 1}{2} } ( \Lambda^{ -1} )\indices{_\mu^\nu} \partial_\nu - m ) \psi( \Lambda^{ -1} x) \\
+&= \Lambda_{ \frac{ 1}{2}} ( i \gamma^\mu \partial_\mu  -m ) \psi( \Lambda^{-1} x)    \\ 
+&= 0  
+\end{align*} 
+Let's review carefully what we've done here. In the first line, we've transformed $\psi( x) $ appropriately according to our Lorentz transformation. In the second line, we've done two things. First, we multiply on the left by $\Lambda_{ \frac{1}{2}} \Lambda_{\frac{1}{2}}^{ -1} $ since it's just the identity. In addition, we also pull out a factor of $\Lambda^{-1} $ due to the chain rule. Now, in the third line, we used the identity we've derived above to switch out our expression for $\Lambda_{ \frac{ 1}{2}}^{ -1}  \gamma^\mu \Lambda_{ \frac{1}{2} } $ with just $\Lambda \gamma^\nu $. In doing this, the factors of $\Lambda $ have cancelled each other out. 
+The final expression is zero, which means that we've successfully shown that the Dirac equation is Lorentz invariant. 
+
+Now, we'll prove the expression above, by using the infinitesimal generators instead. Observe that the above condition is equivalent to \[ 
+( 1 + \frac{ i \omega_{ \rho \sigma} }{ 2} S^{ \rho \sigma} ) \gamma^\mu (1 - \frac{ i \omega_{ \rho \sigma }}{ 2} S^{ \rho \sigma} = ( 1 - \frac{ i \omega_{ \rho \sigma}}{ 2} ( J^{ \rho \sigma} )\indices{ _\mu^\nu}\gamma_nu \] So in turn, if we can show that \[ [\gamma^\mu, S^{\rho \sigma}] = \gamma^\nu (J^{\rho \sigma})\indices{^\mu_\nu} \] we've proven the identity above. We do this as follows 
+\[ (J^{\mu \nu} )\indices{_\alpha_\beta}  = i \left( \delta\indices{^\mu_\alpha} \delta\indices{^\nu_\beta} - \delta\indices{^\mu_\beta}\delta\indices{^\nu_\alpha} \right)\]  
+When we raise the index on a delta function, we get our metric back. So our expression is 
+\[ (J^{\mu\nu})\indices{_\alpha^\beta} = i \left( \delta\indices{^\mu_\alpha} g^{\nu\beta} - g^{\mu\beta}\delta\indices{^\nu_\alpha} \right) \]
+Thus \[ \gamma^\alpha (J^{\mu\nu} )\indices{_\alpha^\beta} = i \left( \gamma^\mu g^{\nu\beta} - \gamma^\nu g^{\mu\beta} \right) \]
+
+
+As for the left hand side \begin{align*} [\gamma^\beta, S^{\mu\nu}] &= [\gamma^\beta, \frac{i}{4} [\gamma^\mu, \gamma^\nu]] \\ &= \frac{i}{4}\left( \gamma^\beta \gamma^\mu \gamma^\nu - \gamma^\beta \gamma^\nu \gamma^\mu - \gamma^\mu \gamma^\nu \gamma^\beta + \gamma^\nu \gamma^\mu \gamma^\beta \right) \end{align*} but we can use the identity that \[ \{ \gamma^\mu , \gamma^\nu \} = - g^{\mu\nu} \] and commute index pairs which are either $( \nu, \beta) $ or $ ( \mu, \beta ) $, to give 
+\[ \frac{i} { 4} \left( - \gamma^\mu \gamma^\beta \gamma^\nu - 2g^{\mu \beta } \gamma^\nu  + \gamma^\nu \gamma^\beta \gamma^\mu + 2 g^{\beta \nu} \gamma^\mu + \gamma^\mu \gamma^\beta\gamma^\nu + 2 g^{ \nu \ beta } \gamma^\mu - \gamma^\nu \gamma^\beta \gamma^\mu - 2 \gamma^\nu g^{\mu \beta} \right) \] 
+but the terms above cancel to give the correct expression. Hence we've proven the identity above, and have shown that Dirac's equation is Lorentz invariant.  
+
+So we've done all this work - but let's remind ourselves what it's for. This commutation relation is important because it gives us an equation relating the generators $J^{\mu\nu}$ and $S^{ \mu \nu } $. This commutation relation is equivalent to saying, with $\omega_{\rho \sigma} $ as a parameter, that infinitesimally we have \[ \left(  1 + \frac{ i \omega_{ \rho \sigma } S^{ \rho \sigma} }{ 2} \right) \gamma^\mu \left( 1 - \frac{ i \omega_{ \rho\sigma} S^{ \rho \sigma }}{2} \right)  = ( 1 - i ( J^{ \rho \sigma } )\indices{^\mu_\nu})  \gamma^\nu \implies \Lambda_{ \frac{1}{2}}^{ -1} \gamma^\mu \Lambda_{ \frac{1}{2}}  = \Lambda\indices{^\mu_\nu}\gamma^\nu \]  
+And with this identity, we've shown that the Dirac equation is Lorentz invariant. 
+

@@ -1,0 +1,59 @@
+\subsection{Question 7} 
+We want to derive the equations of motion for the Lagrangian \[ 
+\mathcal{L} =  - \frac{1}{4} F_{ \mu \nu}F^{ \mu\nu} + \frac{1}{2} m^2 C_\mu C^\mu 
+\] 
+Instead of looking at the Euler-Lagrange equations, it's slightly easier to do this by varying the action directly instead. With the product rule, one can convince themselves pretty easily that the varied action is 
+
+\begin{align*} 
+\delta S &  = \int - \frac{1}{2} F_{ \mu \nu} \delta F^{ \mu \nu}  + m^2 C_\mu \delta C^\mu \\ 
+& = \int  - \frac{1}{2} F_{\mu \nu} \delta \left( \partial^\mu C^\nu - \partial^\nu C^\mu \right)  + m^2 C_\mu \delta C^\mu  \\ 
+& = \int   - F_{ \mu \nu} \delta \left( \partial^\mu C^\nu \right)  + m^2 C_\mu \delta C^\mu  \\ 
+&= \int  \delta C^\nu \left( \partial^\mu F_{ \mu \nu} + m^2 C_\nu \right) \\ 
+\end{align*} 
+This implies that the equation of motion is 
+\[\partial^\mu  F_{ \mu \nu} + m^2 C_\nu = 0  \]
+When $m \neq 0$, if we differentiate both sides by $\partial_\nu$, we have that 
+\[ 
+m^2 \partial_\nu C^\nu  = \partial_\nu \partial_\mu F^{ \nu\mu} = 0 
+\] 
+Since, the second term as $F^{ \mu\nu }$ which is antisymmetric in $\mu \nu$, and $\partial_\mu \partial\nu$ which is symmetric. Contracting this antisymmetric object with this symmetric one reduces the term to zero. 
+
+Our equation of motion dictates that, setting $\nu = 0$, 
+\[ 
+\partial_\mu F^{ \mu 0 } = m^2 C^0 
+\] 
+The trick now is to expand this separately in terms of derivatives with respect to time and space. We have that 
+\begin{align*} 
+\partial_\mu \partial^\mu C^0  - \partial_\mu \partial^0 C^\mu  &= m^2 C^0 \\
+\ddot{C}^0  - \partial_i \partial^i C^0  - \partial_\mu \dot{C}^\mu &= m^2 C^0 \\
+\ddot{C}^0 - \partial_i \partial^i C^0  - \ddot{C}^0 + \partial_i\dot{C}^i &= m^2 C^0
+\end{align*} 
+Rearrangement gives our required result. 
+Up to relabelling of indices, our Lagrangian is given by 
+\[ 
+\mathcal{L }  = - \frac{ 1}{ 2} ( \partial_\mu C_\nu \partial^\nu C^\nu  - \partial_\nu C_\mu \partial^\mu C^\nu ) 
+\] 
+To keep track of minus signs from contracting with up and down indices, we go slow and sum one index at a time. We find that 
+\begin{align*} 
+\mathcal{L} & = - \frac{1}{ 2}( \partial_0 C_\nu \partial^0 C^\nu  - \partial_i C_\nu \partial^i C^\nu  - \partial_\nu C_0 \partial^0 \partial^\nu +  \partial_\nu C_i \partial^i C^\nu \\
+&=  - \frac{1}{2}(\dot{C}_0 \dot{C}^0 - \dot{C}_i \dot{C}^i  - \partial_i C_0 \partial^i C^0 + \partial_i C_j \partial^i C^j - \dot{C}_0 \dot{C}^0 + \partial_i C_0 \dot{C}^ i + \dot{C}_i \partial^i C^0  - \partial_j C_i \partial^i C^j )  
+\end{align*} 
+Note that here, the $\dot{C}_0\dot{C}^0$ terms cancel. After some algebra, we get that 
+\[ 
+\mathcal{ L } = \frac{1}{ 2}( \dot{ C}^i \dot{C}_i + \partial_i C_0 \partial^i C^0  - (\partial_i C_j)^2 - 2\dot{C}^i \partial_i C_0 + \partial_j C_i \partial^i C^j ) + \frac{1}{ 2} m^2 C_\mu C^\mu  
+\] 
+Since there's no dependence on $\dot{C}^0 $, our conjugate momentum to $C^0$ vanishes. Differentiating, we have that 
+\[ 
+\pi_i  = \frac{\partial \mathcal{L}}{ \partial \dot{C}^i }  = \dot{C}_i - \partial_i C_0
+\] 
+
+Our Hamiltonian density is given by by 
+\[ 
+\mathcal{H}  = \pi_i \dot{C}^i - \mathcal{L} 
+\] 
+Since we have an expression for $\pi_i$, we substitute this expression in favour of $\dot{ C}_i$ terms in both the first term in the expression as well as the Lagrangian. After a significant amount of algebra, we have that\[ 
+\mathcal{H} = \frac{1}{2} (\pi_i \pi^i ) + \frac{1}{2} (\partial_i C_j)^2 + \frac{1}{2} \partial_j C_i \partial^i C^j - \frac{ 1}{ 2} m^2 C^\mu C_\mu 
+\] 
+This expression is positive definite!  
+\pagebreak 
+

@@ -1,0 +1,81 @@
+/* The side navigation menu */
+.sidebar {
+  margin: 0;
+  padding: 20px;
+  width: 170px; 
+  position: fixed;
+  height: 100%;
+  overflow: auto;
+}
+
+/* Sidebar links */
+.sidebar a {
+  display: block;
+  color: black;
+  padding: 16px;
+  text-decoration: none;
+  font-family: sans-serif;
+  color: rgba(0, 0, 0, 0.8);
+  font: 17px/1.55em: HoeflerText-Regular, Cochin, Georgia, serif;
+  font-style: normal;
+  font-variant-ligatures: normal;
+  font-variant-caps: normal;
+  font-variant-numeric: normal
+  font-family: HoeflerText-Regular, Cochin, Georgia, serif;
+  font-weight: 400;
+}
+
+/* Links on mouse-over */
+.sidebar a:hover:not(.active) {
+  font-size: large; 
+}
+
+h1 {
+  font-size: 46px;
+  font-weight: normal; 
+}
+
+h2 {
+  font-weight: normal; 
+}
+
+
+
+body {
+  font-family: HoeflerText-Regular, Cochin, Georgia, serif;
+}
+
+/* This is a thin line */
+hr.thin {
+height: 1px;
+border: 0;
+color: rgba(0, 0, 0, 0.1);
+background-color:  rgba(0, 0, 0, 0.1); 
+width: 100%;
+}
+
+/* Page content. The value of the margin-left property should match the value of the sidebar's width property */
+div.main{
+  font-size: 23px;
+  color: rgba(0, 0, 0, 0.8);
+  font: 17px/1.55em: HoeflerText-Regular, Cochin, Georgia, serif;
+  font-style: normal;
+  font-variant-ligatures: normal;
+  font-variant-caps: normal;
+  font-variant-numeric: normal; 
+  font-weight: 50;
+  margin-left: 170px;
+  padding: 1px 16px;
+  height: 1000px;
+}
+
+div.subheader {
+  font-size: 20px;
+  margin-top: 40px; 
+  margin-bottom: 40px:   
+} 
+
+div.mast { 
+  font-family: sans-serif; 
+  margin-left: 50px;
+} 

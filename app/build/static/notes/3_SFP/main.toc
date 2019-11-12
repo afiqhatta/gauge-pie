@@ -1,0 +1,126 @@
+\boolfalse {citerequest}\boolfalse {citetracker}\boolfalse {pagetracker}\boolfalse {backtracker}\relax 
+\babel@toc {english}{}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {1}What is a symmetry?}{3}{section.1}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {1.1}Groups to represent symmetries}{3}{subsection.1.1}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {1.2}Symmetries correspond to conserved quantities}{4}{subsection.1.2}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {2}Manifolds and Tangent Spaces}{5}{section.2}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {2.1}Manifolds}{5}{subsection.2.1}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {2.2}Functions on manifolds}{5}{subsection.2.2}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {2.3}Tangent vectors}{6}{subsection.2.3}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {2.4}Embedding manifolds in $\mathbb {R}^n$}{6}{subsection.2.4}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{\numberline {2.4.1}The Embedding Theorem}{6}{subsubsection.2.4.1}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {2.5}Classifying manifolds}{7}{subsection.2.5}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {3}Lie Groups}{8}{section.3}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {3.1}What is a Lie Group?}{8}{subsection.3.1}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {3.2}Matrix groups}{9}{subsection.3.2}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{\numberline {3.2.1}Matrix groups in $GL(n, \mathbb {R} )$}{10}{subsubsection.3.2.1}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{\numberline {3.2.2}General properties of $O(n)$ }{11}{subsubsection.3.2.2}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{\numberline {3.2.3}SO(2)}{12}{subsubsection.3.2.3}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{\numberline {3.2.4}SO(3)}{13}{subsubsection.3.2.4}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{\numberline {3.2.5}Non compact groups; the Lorentz group and more general metrics}{15}{subsubsection.3.2.5}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{\numberline {3.2.6}Subgroups of $GL(n, \mathbb { C}) $}{15}{subsubsection.3.2.6}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {4}Lie Algebras}{18}{section.4}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{\numberline {4.0.1}Properties of Lie algebras}{19}{subsubsection.4.0.1}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{\numberline {4.0.2}Cartan classification}{19}{subsubsection.4.0.2}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {4.1}Construction of Lie algebras from Lie groups}{19}{subsection.4.1}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{\numberline {4.1.1}Preliminaries}{20}{subsubsection.4.1.1}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {4.2}The Lie Algebra $ \mathcal { L } ( G ) $ }{21}{subsection.4.2}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{\numberline {4.2.1}Constructing the Lie Algebra for Matrix Lie Groups}{21}{subsubsection.4.2.1}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {4.3}Examples of derived Lie Algebras}{24}{subsection.4.3}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{\numberline {4.3.1}$ SO ( n ) $ to $ \mathcal { L } ( SO ( n ) ) $}{24}{subsubsection.4.3.1}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{\numberline {4.3.2} $ SU ( n ) $ to $ \mathcal { L } ( U ( n ) ) $}{25}{subsubsection.4.3.2}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {4.4}Reconstructing Lie Groups from Lie Algebras}{28}{subsection.4.4}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{\numberline {4.4.1}Actions: a natural maps on Lie groups}{28}{subsubsection.4.4.1}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{\numberline {4.4.2}Actions move us between tangent spaces}{29}{subsubsection.4.4.2}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{\numberline {4.4.3}Left actions on Matrix Lie Algebras}{30}{subsubsection.4.4.3}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{\numberline {4.4.4}Reconstructing $ G $ from $ \mathcal { L } ( G ) $}{31}{subsubsection.4.4.4}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {5}Representations}{34}{section.5}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {5.1}Representations of Lie algebras}{35}{subsection.5.1}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{\numberline {5.1.1} Examples of representations of the additive group on the reals $\left ( \mathbb {R}, + \right ) $}{37}{subsubsection.5.1.1}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {5.2}A canonical representation of Lie Groups with Lie Algebras}{38}{subsection.5.2}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {5.3}Classifying representations}{38}{subsection.5.3}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {5.4}Invariant subspaces and reducibility}{39}{subsection.5.4}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{\numberline {5.4.1} Invariant subspaces}{39}{subsubsection.5.4.1}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{\numberline {5.4.2}Irreducible representations and total irreducibility }{39}{subsubsection.5.4.2}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {5.5}A canonical representation of Lie algebras}{40}{subsection.5.5}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {5.6}Constructing a natural map of between representations of Lie groups to representations of Lie algebras}{40}{subsection.5.6}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{\numberline {5.6.1}Remark on alternate representations}{41}{subsubsection.5.6.1}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {6} Representations of SU(2) in Quantum Mechanics}{42}{section.6}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {6.1}Our choice of basis}{42}{subsection.6.1}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {6.2} Constructing representations of $SU (2) $}{42}{subsection.6.2}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {6.3}Construction of an irreducible representation}{43}{subsection.6.3}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {7}Example sheet 1}{44}{section.7}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {7.1}Question 1}{44}{subsection.7.1}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {7.2}Question 2}{46}{subsection.7.2}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {7.3}Question 3}{48}{subsection.7.3}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {7.4}Question 4}{49}{subsection.7.4}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {7.5}Question 5}{50}{subsection.7.5}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {7.6}Question 6}{52}{subsection.7.6}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {7.7}Question 7}{53}{subsection.7.7}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {7.8}Question 8}{55}{subsection.7.8}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {7.9}Question 9}{56}{subsection.7.9}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {8}Example Sheet 2}{57}{section.8}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {8.1}Question 2}{57}{subsection.8.1}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {9}Problems left to contribute}{57}{section.9}

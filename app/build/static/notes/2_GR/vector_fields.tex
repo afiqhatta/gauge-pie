@@ -1,0 +1,36 @@
+\subsection{Vector fields} 
+Thus far we've defined tangent spaces at only a specific point in the manifold, but we'd like to know how we can extend this notion more generally. A vector field $X$ is an object which takes a function, and then assigns it avector at any given point $p \in \mathcal{M}$. So, we're taking 
+\[ 
+X: C^\infty ( \mathcal{ M} ) \rightarrow C^\infty( \mathcal{M} ), \quad f \mapsto X(f) 
+\]
+$X(f)$ is a function on the manifold which takes a point, and then differentiates $f$ according to the tangent vector at that point. 
+\[ 
+X(f)( p) = X_p ( f), X = X^\mu \partial_\mu 
+\] 
+In this case, $X^\mu$ is a smooth function which takes points on the manifold to the components of the tangent vector $X_p^\mu$ at $p$. We call the space of vector fields $X$ as $\mathcal{ X} (\mathcal{M}) $.  
+So, since $X(f)$ is now also a smooth function on the manifold, we can apply another vector field $Y$ to it, for example. However, is the object $XY$ a vector field on it's own? The answer is no, because vector fields also have to obey the Liebniz identity at any given point, ie the condition that 
+\[ 
+X(fg) = f X(g) + g X( f) 
+\] 
+However, the object $ XY$ does not obey this condition since 
+\begin{align*} 
+XY( fg )& = X ( f Y (g) + g Y ( f) ) \\
+	&= X(f) Y(g) + f XY ( g) + X( g) Y(f) + g XY( f) \\ 
+	& \neq g XY ( f) + f XY ( g) 
+\end{align*} 
+We do get from this however, that 
+\[ 
+XY  - YX := [ X, Y ] 
+\]  
+does obey the Leibniz condition, because it removes the non-Leibniz cross terms from our differentiation. The commutator acts on a function $f$ by 
+\[ 
+X( Y (  f))  - Y( X( f)) = [ X, Y] f 
+\] One can check that the components of the new vector field $[ X, Y]^\mu $ are given by 
+\[ 
+[ X, Y]^\mu = X^\nu \frac{\partial Y^\mu}{ \partial x^\mu }  - Y^\nu \frac{ \partial X^\mu }{ \partial x^\nu } 
+\]
+The commutator obeys the Liebniz rule, where 
+\[ 
+[X , [ Y, Z]] + [ Y, [ Z, Z]] + [Z, [ X, Y]] = 0
+\] 
+

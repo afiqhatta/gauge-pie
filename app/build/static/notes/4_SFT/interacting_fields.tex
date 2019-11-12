@@ -1,0 +1,279 @@
+\subsection{Renormalisation with Interacting Fields} 
+
+\subsubsection{A quick review of finding the effective free energy} 
+
+In the case of a 'free theory',
+our energy is written in terms of quadratic terms in 
+$ \phi $. Free energy cases are important, because when we split
+Fourier modes, we saw earlier that we could split up 
+the free energy into a high frequency part and a low frequency part. 
+\[
+	F_0 [ \phi ] = F_0 \left[  \phi ^ +  \right]  + F_ 0 \left[  \phi ^ -  \right] 
+\] However, much like we do in quantum field theory,
+these cases, while easy, are not very interesting. In this article, 
+we'll explore how to use Wick's theorem to look at the 
+behaviour of energies that look like
+\[
+	F [ \phi ] = \int d^ d x \frac{1}{2 } \left(  \nabla \phi  \right) ^ 2 
+	 + \frac{1}{2 } \mu _ 0 ^ 2 \phi ^ 2 + g \phi ^ 4 
+\] We've added a $ \phi ^ 4 $ term on the end here. 
+This is completely similar to $ \phi ^ 4 $ theory 
+in quantum field theory. Now, we ask what happens when we split 
+this up into higher and low Fourier modes. In real space, 
+we expect that our free energy splits into free terms and 
+an interaction term. 
+\[
+	F [ \phi ] = F_0 [ \phi ^ + ] + F _ 0 [ \phi ^ - ] 
+	+ F _ I  [ \phi ^ + , \phi ^ - ] 
+\] The presence of the interaction term mean that there
+will be some mixing of high and low frequency modes. 
+Note the odd notation here. Since we have that 
+$ \phi = \phi ( \phi ^ + , \phi ^ - ) $, we write 
+ \[
+	 F[ \phi ] = F_0 [ \phi ^ + ] + F_0 [ \phi ^ - ] 
+	 + F _ I ( \phi ), \quad F _ I ( \phi ) = \int d^ d x \, g \phi ^ 4 
+\] So far we've looked at how things look 
+in $ \phi $ space, but let's have a quick look as well 
+about how things evolve from the perspective of Fourier 
+space variables $ \phi_{ \vec{k}}$. Starting 
+from our partition function 
+\[
+	\mathcal{ Z } = \int \mathcal{ D } \phi e ^{ - F [ \phi ] }  
+\] We rewrite our measure in terms of a product of Fourier 
+coefficients. In this product, we separate high and low frequency 
+terms, and 'integrate' out our high frequency terms. This 
+then prompts us to write our partition function as 
+\[
+ \mathcal{ Z } = \int \prod_{ 0 < k < \Lambda ' } d \phi _{ \vec{k} } ^ - d \phi_{ - \vec{k}  } ^ + e ^{ - F_0 [ \phi_{ \vec{k} }^ 
+  - ] } \int \prod_{ \Lambda ' < k < \Lambda } dd \phi_{ \vec{k} } ^ + \phi _{ - \vec{k} } ^ + 
+  e^{  - F_0 [ \phi _{ \vec{k} } ^ +] } e^{  - F_ I [ \phi _{ \vec{k} } ^ + , \phi _{ \vec{k} } ^ - ]  }
+\] This means we define an 'effective' free energy 
+by writing our whole sum as just an integral 
+over the lower Fourier modes. We rewrite the 
+above term as 
+\[
+  \mathcal{ Z } = \int \prod_{ 0 < k < \Lambda } d \phi _{ \vec{k} } ^ -  d \phi _{  - \vec{k} } ^ - 
+  e ^{ - F ' [ \phi _{ \vec{k} }  ] }
+\] Comparing coefficients, our 
+new effective free energy from the above expression is given by 
+\[
+	e ^{  - F ' [ \phi_{ \vec{k} } ^ -  } = e^{  - F_0 \left[  \phi _{ \vec{k} } ^ -  \right]  }
+	\int \prod_{ \Lambda ' < k \Lambda } d \phi _{ \vec{k}  } ^ + d_{ \phi _{ - \vec{k} } } ^ + 
+	e ^{  - F_{I } [ \phi_{ \vec{k} } ^ + , \phi _{ \vec{k} } ^ - ] }
+\] We can write this 
+as more familiarly as a functional integral over 
+just the positive Fourier modes, so that 
+\[
+	e ^{  - F ' [ \phi _{ -\vec{k} } ^ - ] } = 
+	e^{  -F_0 [ \phi _{ \vec{k} } ^ - ]  } \int \mathcal{ D } \phi_{ \vec{k} } ^ + 
+	e^{  - F_0 [ \phi _{ \vec{k} } ^ + ]} e^{ i F_I }
+\] Let's stare hard at the nature of the term on 
+the right hand side. We're integrating $ F _ I $ over high frequency 
+Fourier modes but with a pre-faction of $ e ^{  - F _0 }$. 
+This precisely is an expression for the expectation of 
+$ F _ I $ but over high frequency Fourier modes instead. 
+So, we write that 
+\[
+ 	e ^{  - F ' [ \phi _{ -\vec{k} } ^ - ] } = 
+	e^{  -F_0 [ \phi _{ \vec{k} } ^ - ]  }  \left< e ^{ - F_I [ \phi_{ \vec{k} } ^ + , 
+	\phi _{ \vec{k} } ^ - ] } \right>_+ 
+\] 
+\subsubsection{Logarithmic expansion of the Interaction Term} 
+Now, a quantity immediately 
+of interest is what the average value $ \left< F _ I  \right> $ is, 
+and how it can give us an expression for 
+our effective free energy $ F ' $. 
+Now, there's not much we can do about finding 
+this average value other than to attempt to 
+Taylor expand the equation above 
+upon taking logs. 
+\[
+	F ' [ \phi_{ \vec{k} }  - ] = F_0 [ \phi _{ \vec{k} } ^ - ]  - \log \left< e^{  - F_I } \right>
+\] employing the Taylor expansion for $ \log$, 
+something special happens because we get 
+an expression for the cumulant of $ F _ I $; 
+ \[
+	 F ' = F _ 0 + \left< F _ I  \right> + \frac{1}{2 } \left( \left< F _ I  \right> ^ 2 - 
+	 \left< F _ I  ^ 2  \right> \right) 
+\]
+
+\subsubsection{Computing moments of the Interaction Free energy} 
+Now, the name of the game is to actually compute 
+quantities like $ \left< F _ I  \right>$
+Let's do this explicitly for an interaction 
+term which has its analogue in $ \phi ^ 4 $ theory 
+in quantum field theory. We set 
+\[
+	F_ I = g \int d^ d x \, \phi ^ 4 ( x ) 
+\] where $ g $ is our small perturbation order term. 
+The first thing to do is to expand out 
+$ F _ I $ in terms of Fourier modes. 
+This gives a product of a bunch of Fourier modes
+which we need to sort through.
+\begin{align*}
+	F_ I [ \phi ] &=  \int d ^ d x \int \prod^ 4 _{ i = 1 }
+	\frac{ d ^ d k _ i }{ ( 2 \pi ) ^ d } 
+	e ^{ - i \vec{k}_ i \cdot  \vec{x} } \phi _{ \vec{k} _ i } \\
+		      &=  \int \prod_{ i = 1 } ^ 4 \frac{d ^ d k _ i }{ ( 2 
+		      \pi ) ^ d } \,  
+		      \phi _{ \vec{k} _ i } ( 2 \pi ) ^ d 
+		      \delta ( \sum _ i \vec{k} _ i ) \\ 
+\end{align*}
+In this step, we mutliplied out the Fourier modes and then 
+moved the $ \int d ^ d x $ inside to get the delta function. 
+This delta function has the physical interpretation of 
+imposing momentum conservation. Now, 
+let's do what we did with RG and split our Fourier modes 
+$ \phi_{ \vec{k} _ i}  $ into high frequency and 
+low frequency parts. 
+Our product looks like 
+\[
+ \prod_{ k = 1 } ^ 4 \phi_{ \vec{k} _ i } = 
+ ( \phi _{ \vec{k}_ 1  }^ + + \phi _{ \vec{k} _ 1 } ^ - ) 
+ \dots ( \phi _{ \vec{k} _ 4 } ^ + + \phi_{ \vec{k} _ 4 } ^ - ) 
+\] Now, 
+let's think about what kind of terms we get from 
+this product. We count these by considering how many 
+low frequency versus high frequency modes there are 
+in the expansion. 
+
+\begin{enumerate}
+	\item We have terms whose all four factors 
+		are low frequency modes. There is only 
+		one term of this type, and it's 
+		$ \phi _{ \vec{k} _ 1 } ^ - \phi _{ \vec{k} _  2  } ^ - 
+		\phi _{ \vec{k} _ 3 } ^ - \phi _{ \vec{k} _ 4 } ^ - $.
+		This means that when we compute our 
+		average value $ \left< F _ I  \right>_ + $, 
+		since this an average over $ \phi ^ + $, 
+		this term just factors out of our intergal. 
+		We then observe that this is just, in real space, 
+		our original interaction term but
+		this time with just low frequency modes. 
+		Thus, we have a  $ \int d ^ 4 x \, \phi ^ - $ 
+		contribution. 
+	\item If we have just one factor of $ \phi _{ \vec{k} } ^ +  $
+		with the rest of the terms being 
+		$ \phi _{ \vec{k} } ^ - $ (we have 
+		4 of these in total), then, since we are 
+		averaging over an odd number of $ \phi _{ \vec{k} } ^ + $, 
+		this vanishes since our Gaussian integral is an 
+		even function. Terms like this 
+		look like $ \phi_{ \vec{k} _ 1 } ^ - 
+		\phi _{ \vec{k} _ 2 } ^ - \phi _{ \vec{k} _ 3 } ^ - 
+		\phi _{ \vec{k} _ 4 } ^ + $. When we take the 
+		average, we're including a factor 
+		of 
+		\[
+		\left< \phi _{ \vec{k}} ^ +  \right>_ + 
+		 = \int \mathcal{ D } \phi_{ \vec{k}} ^ + e ^{ - 
+		 F _ 0 [ \phi _{ k } ^ +  ] } \phi_{ \vec{k} } ^ + 
+		\] This goes to zero since we have an 
+		odd term and an even term integrated together. 
+	\item Our only interesting term are terms 
+		which look like $ \phi _{ \vec{k} _ 1} ^ - 
+		\phi _{ \vec{k} _ 2}  ^- \phi _{ \vec{k} _ 3 } ^ + 
+		\phi _{ \vec{k} _ 4} ^ +  $. This contribution is 
+		non-trivial and we'll do some work to compute this 
+		explicitly in the following section. There 
+		are 6 of these terms in the expansion. 
+	\item By the same logic with just one $ \phi _{ \vec{k} } ^ + $
+		terms that contain things like $
+		\phi _{ \vec{k} _ 1 } ^ + \phi _{ \vec{k} _ 2 }^ + 
+		\phi _{ \vec{k} _ 3} ^ + \phi _{ \vec{k} _ 4 } ^ -  $
+		vanish since we have an odd number of terms 
+	\item Terms with just $ \phi _{ \vec{k} } ^ + $ are integrated 
+		out and contribute a constant. Let's 
+		go through why this 
+		is the case, slowly. Recall that our quantity 
+		of interest to compute as 
+		\[
+		 F ' [ \phi ^ -  ] = F_ 0 [ \phi ^ - ] 
+		   - \log \left< e ^{ - F _ I } \right>_ +  = 
+		   F_ 0 [ \phi ^ - ] + \left< F _ I  \right>_ +  
+		\] Now, since this term \textbf{doesn't } have 
+		any dependence on $ \phi _ k ^ -   $,
+		we don't care about it because our 
+		effective free energy is only a function 
+		of  $ \phi _ k ^ - $. Hence, this 
+		term is only an extraneous constant addition to 
+		our effective free energy, and hence 
+		doesn't contribute. 
+\end{enumerate}
+ 
+
+Thus we focus on the only interesting term, with two 
+$ \phi _ \vec{k} ^ + $  factors. This term looks like 
+\[
+ \left< \phi_{ \vec{k} } ^ + \phi_{ \vec{k} ' } ^ +  \right> _ + 
+\] How do we calculate this? Well, forgetting about 
+factors of $ \beta $, we showed earlier that the 
+correlation function in \textbf{position space} looks 
+like
+\[
+	\left< \phi ( \vec{x} ) \phi (  \vec{y} )   \right> = 
+	\int \frac{ d ^ d k }{ ( 2 \pi ) ^ d } 
+	\frac{ e ^{  - i \vec{k} \cdot  ( \vec{x} - \vec{y} ) }}{k ^ 2 + \mu _ 0 ^ 2 }
+\] Now, one can convince themselves quite easily 
+that when we Fourier expand out, then wrangle out $ \vec{x} $ and $ \vec{y}$
+by integrating over them, to find that 
+\[
+ \left< \phi_{ \vec{k} } ^ + \phi_{ \vec{k} ' } ^ +  \right> 
+ = \frac{ ( 2 \pi ) ^ d  \delta ^ d ( \vec{k} + \vec{k} ' ) }{
+ k ^ 2 + \mu _ 0 ^ 2 }
+\] 
+Hence, all together, the only term which contributes 
+to the correction $ \left< F_I  \right> _ + $ is 
+\begin{align*}
+	\left< F _ I  \right> _ + &= 6  
+	\int \prod_{ i = 1 } ^ 4 \frac{ d ^ d k_ i }{ ( 2 \pi ) ^ d } 
+	\left< \phi _{ \vec{k} _ 1 } ^ + \phi _{ \vec{k} _ 2 } ^ +  \right> _ + 
+	\phi _{ \vec{k} _ 3 } ^ - \phi _{ \vec{k} _ 4 } ^ - 
+	( 2 \pi ) ^ d \delta ^ d ( \sum _ i \vec{k} _ i  ) \\
+				  &= 6 \int \prod_{ i = 1 } ^ 4 \frac{ d ^ d k _ i }{ ( 2 \pi ) ^ d } \frac{ ( 2 \pi ) ^{ 2d } \delta ^ d ( 
+				  \vec{k} _ 1 + \vec{k} _ 2 + \vec{k} _ 3 + \vec{k} _ 4 ) \delta ^ d ( \vec{k} _ 1 + \vec{k} _ 2 ) \phi _{ \vec{k} _4 } \phi _{\vec{k} _ 4 } }{ k_  1 ^ 2 + \mu _ 0 ^ 2 } \\
+	 &=  6\int d ^ d k_ 1 d ^ d k_ 2 d ^ d k _ 3 
+	 \frac{1}{( 2 \pi ) ^ {2d} } \frac{ \delta ( \vec{k} _ 3 + \vec{k} _ 4 ) 
+	\phi _{ \vec{k} _ 3 } \phi _{ \vec{k} _ 4 } }{k_ 1 ^ 2 + \mu _ 0 ^ 2}\\
+				  &= 6 \int \frac{d ^ d k _3 }{ ( 2 \pi ) ^ d }
+				  \phi _{ \vec{k} _ 3 }^ -  \phi _{  - \vec{k} _ 3 } ^ - \int \frac{ d ^ d k _ 1 }{ ( 2 \pi ) ^ d } \frac{1}{k _ 1 ^ 2 + 
+				  \mu _ 0 ^ 2 } \\
+				  &= 6 \int_ 0 ^{ \Lambda / \zeta } \frac{d ^ d k }{ ( 2 \pi ) ^ d } \phi_{ \vec{k} } \phi _{  - \vec{k} } \int_{ \Lambda / \zeta } ^ \Lambda   \frac{d ^ d q }{ ( 
+				  2 \pi ) ^ d } \frac{ 1 }{ q ^ 2 + \mu _ 0 ^ 2 }
+\end{align*}
+In the last step, we've taken into account the 
+ranges of integration for the high and low frequency modes.
+Now, we can look at the impact this on our 
+effective free energy. 
+
+This means in our effective free energy, 
+\begin{align*}
+	F ' [ \phi ] &=  F_ 0 [ \phi _ - ] + \left<  F _ I \right>_+ \\
+		     & = \int _ 0 ^{ \Lambda / \zeta } \frac{d ^ d k }{ ( 2 \pi ) ^ d } \frac{1}{2 } 
+		     \left(  k ^ 2 + \mu _ 0 ^ 2  \right)  \phi_{ \vec{k} } \phi _{  - \vec{k} } + 6 \int ^{ \Lambda / \zeta } _ 0  \frac{d ^ d k }{ ( 2 \pi ) ^ d }
+		     \phi_{ \vec{k} } \phi _{  - \vec{k} } 
+		     \int _{ \Lambda / \zeta } ^ \Lambda 
+		     \frac{ d ^ d q }{ ( 2 \pi ) ^ d } \frac{1}{ q ^ 2 + \mu_ 0 ^ 2 } 
+\end{align*}
+
+This is equivalent however to remapping $ \mu _ 0 ^ 2 $ to 
+itself plus some correction term that 
+we get from the interacting theory which incorporates high 
+energies. 
+\[
+ \mu _ 0 ^ 2 \to \mu _ 0 ^ 2 + 12 \int_{ \Lambda / \zeta } ^ \Lambda 
+ \frac{ d ^ d q }{ ( 2 \pi ) ^ d } \frac{1}{q ^ 2 + \mu _ 0 ^ 2 }
+\] 
+What's the point in doing all this? Well, 
+we saying that when we turn on an interaction 
+term in $ \phi ^ 4 $, we're inducing 
+a change in how the $ \phi ^ 2 $ coupling term changes.
+In particular, we induce a RG flow. The $ \mu ^ 2 $ 
+coefficient flows as 
+\[
+ \mu ^ 2 ( \zeta ) \to \zeta ^ 2 ( \mu _ 0 ^ 2 + 12 \int_{ \Lambda / \zeta } ^ \Lambda 
+ \frac{ d ^ d q }{ ( 2 \pi ) ^ d } \frac{1}{q ^ 2 + \mu _ 0 ^ 2 }
+\]
+
+\subsubsection{Second order corrections} 
+

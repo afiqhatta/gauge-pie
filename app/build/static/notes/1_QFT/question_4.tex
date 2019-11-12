@@ -1,0 +1,42 @@
+\subsection{Question 4} 
+
+
+\subsubsection*{Minkowski metric is invariant under Lorentz transformations} 
+We're also exploring invariance under Lorentz transformations $x^\mu \rightarrow x'^\mu \Lambda\indices{^\mu_\nu}x^\nu$. Our most basic quantity that we can make Lorentz invariant is simply our 'length' of our 4-vector, which is our Minkwoski metric contracted with our vectors 
+\[ 
+L = \eta_{ \mu \nu} x^\mu x^\nu = \eta_{\mu \nu} x'^\mu x'^\nu 
+\]
+This implies that, expanding out the Lorentz transforms with slightly different summation indices, that 
+\[ 
+\eta_{ \mu \nu} x^\mu x^\nu  = \eta_{\rho \sigma} \Lambda \indices{^\rho_\mu} x^\mu \Lambda\indices{^\rho_\nu}x^\nu x^\mu  \] 
+However, since our choice for $x^\mu$ was arbitrary, we must have that identically 
+\[ 
+\eta_{ \mu \nu}  = \eta_{\rho \sigma} \Lambda\indices{^\rho_\mu} \Lambda\indices{^\sigma_\nu} 
+\]  
+
+\subsubsection*{Conditions on an infinitesimal Lorentz transformation} 
+Our condition that the Minkowski metric is invariant under Lorentz transformations infinitesimally yields the condition that 
+\begin{align*}
+\eta _{\rho \alpha} & = \eta_{\rho \alpha} + \alpha \left( \delta\indices{^\nu_\alpha} \omega\indices{^\nu_\rho} \eta_{\nu \mu}  + \delta\indices{^\mu_\rho} \omega\indices{^\nu_\alpha} \eta_{\mu \nu}\right)  \\
+&= \eta_{\rho\alpha} + \alpha \left( \eta_{\mu \alpha} \omega\indices{^\mu_\rho} + \eta_{\rho\nu}\omega\indices{^\mu _\alpha}  \right) \\
+&= \eta_{\rho\alpha}  + \alpha\left(  \omega_{\rho \alpha} + \omega_{\alpha \rho} \right) 
+\end{align*}
+Thus the tensor $\omega$ is antisymmetric here. The matrix which corresponds to rotations about the $x_3 $ direction is a basis element for antisymmetric 4 by 4 matrices, and is 
+\[ 
+\omega\indices{^\nu_\mu} = \begin{pmatrix} 0 & 0 & 0 & 0 \\
+0 & 0 & 1 & 0 \\
+0 & - 1 & 0 & 0 \\
+0 & 0 & 0 & 0 
+\end{pmatrix} 
+\] 
+Similary, for boosts, whilst $\omega_{ \mu \nu } $ is antisymmetric, $\omega\indices{^\mu_\nu} $ isn't since we're contracting with a Minkwoski metric. Thus, a boost in the x direction is given by 
+\[ 
+\omega\indices{^\nu_\mu} = \begin{pmatrix} 0 & -1 & 0 & 0 \\
+			-1 & 0 & 0 & 0 \\
+			0 & 0 & 0 & 0 \\
+			0 & 0 & 0 & 0 
+\end{pmatrix} 
+\] 
+
+
+\pagebreak  

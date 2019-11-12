@@ -1,0 +1,176 @@
+\pagebreak
+\section{The Einstein Equations} 
+Space time is a manifold $\mathcal{ M } $ equipped 
+with a Lorentzian metric $ g$. We view 
+our metric as some matrix which varies from 
+point to point on the manifold. The right way 
+to write things down here is to write down an 
+action principle, then vary the actions to get our 
+equations of motion. 
+
+\subsubsection{The Einstein-Hilbert Action} 
+The dynamics is governed by the Einstein-Hilbert 
+action. 
+There's not very much we can write here. 
+The only object we have to play with is our metric  $ g $, 
+and from this we have our natural volume form we can use. 
+The only one we have is the square root of our determinant 
+of our metric. Our action must precede 
+\[
+ S = \int d^ 4 \sqrt{ - g }  
+\] Now, what scalar function can we put here? 
+The only thing we can do is to pull out our Ricci scalar, 
+so that 
+\[
+ S = \int d^ 4 x \, \sqrt{  - g }  R 
+\] Note that schematically, $ R \sim \partial  \Gamma + \Gamma  \Gamma $, 
+and $ \Gamma \sim g ^{ - 1} \partial  g $. 
+Thus, $ R $ is a function of two derivatives 
+of our metric. Note, this 
+means that the only connection we 
+could cook up is the Levi-Civita connection. This is the simplest thing we can do!
+Now, to derive the equations of motion, we need to vary this field. 
+We take the metric and push it wish a small change 
+\[
+ g _{\mu \nu  } \to g _{ \mu \nu } + \delta g _{ \mu \nu }
+\] Now, from this we can also deduce how 
+the inverse metric changes with this infinitesimal change. 
+\[
+ g_{ \rho \mu } g ^{ \mu \nu } = \delta \indices{ ^ \nu _ \rho } \implies 
+ \delta g_{ \rho \mu } g ^{ \mu \nu } + g _{ \rho \mu  } \delta g ^{ \mu \nu } = 0 
+\]  This means 
+we can read off our change $ \delta g ^{ \mu \nu }  $ as 
+\[
+ \delta g ^{ \mu \nu }  =  - g ^{ \mu \rho } g ^{ \nu \sigma } \delta g_{ \rho \sigma}
+\] When we vary the whole thing, 
+the trick is to write out the Ricci 
+scalar in terms of the Ricci tensor 
+contracted with the metric. Then, we 
+apply the product rule when looking at a small variation.
+When we do the small variation, we have to remember 
+to hit the colume form as well. 
+\[
+ \delta S  = \int d ^4  x \, 
+ \left[  \delta ( \sqrt{  - g } ) g ^{ \mu \nu } R _{ \mu \nu } + 
+ \sqrt{ - g }  \left(  \delta g ^{ \mu \nu } R_{ \mu \nu } + g^{ \mu \nu } \delta R _{ \mu \nu } \right) \right] 
+\] We need to figure out 
+what $ \delta \sqrt{ - g }   $  is. To do this, 
+we prove a claim that 
+\begin{claim}
+	We claim that 
+	\[
+	 \delta \sqrt{ - g }   = - \frac{1}{2 } \sqrt{ - g }  g _{ \mu \nu } \delta g ^{ \mu \nu }
+	\] 
+\begin{proof}
+	We use the fact that $ \log \det A = \tr \log A $, which implies 
+	that 
+	 \[
+		 \frac{1}{\det  A } \delta ( \det  A)  = \tr  = \tr ( \delta \log A )  = \tr ( 
+		 A^{ - 1} \delta A ) = \tr ( A ^{ - 1 } \delta A ) 
+	 \] Now, susbtituting in our metric $ g $ as 
+	 the matrix $ A $ in our identity above, this finally implies that 
+	 \begin{align*}
+		 \delta \sqrt{ - g} &  = \frac{1}{2 } \frac{1}{\sqrt{ - g}  } ( - g ) 
+		 g ^{\mu \nu } \delta g_{ \mu \nu } \\
+		 &=  \frac{1}{2 } \sqrt{ -g }  g ^{ \mu \nu } \delta g _{ \mu \nu } 
+	 \end{align*} 
+\end{proof}
+\end{claim}
+
+Now, we compute the variation of our Ricci tensor. 
+\begin{claim}
+	We have that our variation is 
+	\[
+	 \delta R_{ \mu \nu } = \nabla _ \rho \delta \Gamma ^ \rho _{ \mu \nu } - \nabla_{ \nu  }
+	 \delta \Gamma ^ \rho _{ \mu \rho }
+	\]  with 
+	\[
+	 \delta \Gamma ^ \rho _{ \mu \nu } = \frac{1}{2 } 
+	 g ^{ \rho \sigma } ( \nabla _ \mu \delta g _{ \sigma \nu } + 
+	 \nabla _ \nu \delta g _{ \sigma \mu } - \nabla _ \sigma \delta g_{ \mu \nu } ) 
+	\] 
+\begin{proof}
+	First note that importantly, $ \Gamma ^ \mu _{ \rho \nu } $ is not a tensor. 
+	However, the difference $ \delta \Gamma ^ \mu _{ \rho \nu } $ 
+	is a tensor since its the difference between two connections. This means that it is a well defined action 
+	to take the covariant derivative of the objects
+	In normal coordinates, at some point 
+	\begin{align*}
+		\delta \Gamma^ \rho _{ \mu \nu } &= \frac{1}{2 }  g ^{ \rho  \sigma }\left( 
+		\partial  _ \mu \delta g _{ \sigma \nu } + \partial  _ \nu 
+	g _{ \sigma \mu } - \partial  _ \sigma \delta g _{ \mu \nu } \right)   \\
+						 &=  \frac{1}{2 } g ^{ \rho\sigma } \left(  
+						 \nabla _ \mu \delta g _{ \sigma \nu } 
+					 + \nabla _ \nu \delta g _{ \sigma \mu } 
+				  - \nabla _{ \sigma } \delta g _{ \mu \nu }\right)  
+	\end{align*}
+	Since we're in normal coordinates, we can now replace our partial 
+	derivatives $ \partial $ with covariant derivatives $ \nabla $. 
+	This gives us a tensorial relation, and hence this 
+	holds true in all coordinate frames. We can play the same 
+	game with our Riemann tensor, 
+	\[
+	 R \indices{ ^ \sigma _{ \rho \mu \nu } }  = \partial  _ \mu \Gamma ^ \sigma _{ \nu \rho } 
+	  - \partial  _ \nu \Gamma ^ \sigma _{ \mu \rho }
+	\]  This implies that our small change 
+	is given by 
+	\begin{align*}
+		\delta R \indices{ ^ \sigma _{ \rho \mu \nu } } &=  \partial  _ \mu  
+		\delta \Gamma ^ \sigma _{ \mu \rho }  - \partial  _ \nu \delta \Gamma 
+		^ \sigma _{ \mu \rho }\\
+		&=  \nabla _ \mu \delta \Gamma ^ \sigma _{ \nu \rho } - 
+		\nabla _ \nu \delta \Gamma ^ \sigma _{ \mu \rho } \\
+	\end{align*} Since $ \Gamma  =0 $ in normal coordinates.  
+\end{proof}
+\end{claim}
+
+Now we have that, after all the dust has settled, 
+that 
+\[
+ \delta S = \int d ^ 4 x \, \sqrt{ - g }  \left[  
+ R _{ \mu \nu }  - \frac{1}{2 } R g _{ \mu \nu } \right] \delta g ^{ \mu \nu } + \nabla _ \mu X ^ \mu  
+\] Where we've written 
+\[
+ X ^ \mu = g ^{ \rho \nu } \delta \Gamma ^ \mu _{ \rho \nu }  - g ^{ \mu \nu } \delta \Gamma ^ \rho _{ \nu \rho }
+\] When we impose that 
+\[
+ \delta S = 0 , \forall g ^{ \mu \nu } \implies 
+ G _{ \mu \nu } = R _{ \mu \nu } - \frac{1}{2 } R g _{ \mu \nu } =0 
+\] Multiplying this quantity by $ g ^{ \mu \nu } $, we have that 
+$ R = 0 $, which implies the vacuum Einstein equations 
+\[
+ R_{ \mu \nu } = 0 
+\]
+\subsubsection{Dimensional analysis} 
+We can use dimensional analysis to fill out the 
+constants here. Our action $ S $ has dimension 
+$ M L ^{ 2 } T ^{ - 1}  $, Our metric is dimensionless, and 
+$ R $ has units of $ L ^{ - 2} $. This implies that 
+our full action is 
+\[
+ S = \frac{ c ^ 3  }{  16 \pi G} \int d ^ 4 x \, \sqrt{ -g }  R
+\]  Our Planck mass
+is $ \mathcal{ M } _{ pl } ^ 2  = \frac{ \planck c }{8 \pi G }$ and 
+this is approximately $ \mathcal{ M } _{ pl } \propto 10 ^{ 18 } G eV $. 
+Work with units with $ c = 1 $, and $ \planck = 1 $. 
+
+\subsubsection{The Cosmological Constant} 
+We could add a further term to the action 
+ \[
+	 S = \frac{1}{2 } \mathcal{ M  }_{ pl } \int d ^ 4 x \, \sqrt{ - g}  ( R - 2 \Lambda ) 
+\] We will study these. 
+We have the equation 
+\[
+ R_{ \mu \nu } - \frac{1}{2 } R g _{ \mu \nu } = - \lambda g _{ \mu \nu } \implies 
+ R = 4 \Lambda \implies R_{ \mu \nu }  = \Lambda g _{ \mu \nu }
+\]
+
+\subsection{Diffeomorphisms Revisited} 
+Our metric has $ \frac{1}{2 } 4 \cdot  5  = 10 $ components. 
+But two metrics related by $ x ^ \mu \to \tilde{x } ^ \mu ( x)  $ 
+are physically equivalent. 
+This means that actually we only have $ 10 - 4  = 6 $ degrees of freedom.
+The change of coordinates can be viewed as a diffeomorphism 
+\[
+ \phi : \mathcal{ M } \to \mathcal{ M }
+\] such 'diffeos' are the 'gauge symmetry' of general relativity. 

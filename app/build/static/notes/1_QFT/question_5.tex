@@ -1,0 +1,54 @@
+\subsection{Question 5} 
+Our corresponding active transformation in the field it given by 
+\begin{align*} 
+\psi(x^\mu)  & \rightarrow \psi(x^\mu  - \alpha \omega\indices{^\mu_ \nu}x^\nu)  = \psi( x)  - \alpha \omega\indices{^\mu_\nu} x^\nu  \partial_\mu \psi (x) \\
+& =  \psi( x)  + 0  - \alpha \omega\indices{^\mu_\nu} x^\nu  \partial_\mu \psi (x)\\
+&= \psi( x)  - \omega_{ \mu \nu } \eta^{\mu \nu} \psi ( x) - \alpha \omega\indices{^\mu_\nu} x^\nu  \partial_\mu \psi (x)\\
+&=  \psi( x)  - \alpha \omega\indices{^\mu_\nu} \partial_\mu  (  x^\nu \psi (x)) 
+\end{align*} 
+where in the last equality we're just performing a standard Taylor expansion. 
+Since our Lagrangian is a function of $L ( \phi) = L ( \phi(x) ) = L (x) $, our transformation on $x$ induces exactly the same transformation on $L$, and since $\omega_{ \mu\nu} $ is constant we can pull the derivative out: 
+\[ 
+L \rightarrow L - \alpha \partial_\mu (\omega\indices{^\mu_\nu}x^\nu ) L 
+\] 
+Putting this together, this implies that our Noether current is 
+\[ 
+j^\mu  =  \omega\indices{^\mu_\nu} x^\nu L - (\omega\indices{^\rho_\nu} \partial_\rho x^\nu \phi) \frac{ \partial L }{ \partial ( \partial_\mu \phi ) } 
+\] 
+But observe that this is 
+\[ 
+j^\mu = \omega\indices{^\rho_\nu} \left( \delta\indices{^\mu_\rho} x^\nu L  -  \partial_\rho x^\nu  \frac{ \partial L }{ \partial ( \partial_\mu \phi )} \right) 
+\] 
+Our expression in the brackets is exactly the energy momentum tensor with one index contracted down, with an extra factor of $x^\nu$. Hence, our Noether current is 
+\[ 
+j^\mu  =  \omega\indices{^\rho_\nu} x^\nu T\indices{^\mu_\rho} 
+\] 
+Our conserved current is given by 
+\[ 
+Q = \int d^3 x \, j^0 = \omega_{ \rho \nu } \int d^3 x \, T^{ 0 \rho } x^\nu 
+\] 
+Since we shown earlier that $\omega_{ \mu \nu } $ is antisymmetric, if we consider indices only in the spatial part, we can write this thing as 
+\[ 
+\omega_{ij}  = \epsilon_{ijk} n_k \implies Q = n_k \epsilon_{ijk} \int d^3 x\,  T^{0i} x^j 
+\] 
+Since $n_k$ is free, we can choose, relabelling indices, that 
+\[ 
+Q_i =  \epsilon_{ ijk} \int d^3 x \, T^{ 0j} x^k = \frac{1}{2} \epsilon_{ ijk} \int d^3 x \, T^{ 0j} x^k - T^{ 0k } x^j 
+\] 
+where we've added the extra term due to antisymmetry in $j, k$. 
+Similarly, we can do this with boosts by looking at $\omega_{ 0i} =  - \omega_{ i0} $ components, which gives our conserved current 
+\[ 
+Q = \omega_{ 0i} \int d^3 x \, T^{ 00} x^i - T^{ 0i }x^0 
+\] 
+Again, since $\omega_{ i0} $ is free, the quantity 
+\[ 
+Q_i = \int d^3 x \, T^{ 00} x^i - T^{ 0i }x^0 
+\]
+is conserved. If we differentiate with respect to time, the LHS is zero and thus 
+\begin{align*} 
+\frac{d}{ dt} \left( \int d^3 x \, T^{ 00} x^i \right) &= \frac{ d}{ dt } \left( \int d^3 x x^0 T^{ 0i } \right) \\
+& = \int d^3 T^{ 0i } + t \frac{d}{ dt } \int d^3 x T^{0i} \\
+& = const
+\end{align*} 
+This is because we already know that $\int d^3 x T^{ 0i  } $ is already a conserved quantity, so is constant. The second term is zero since the derivative of a conserved quantity with respect to time is zero. (Also recall that $x^0 = t $. 
+\pagebreak 

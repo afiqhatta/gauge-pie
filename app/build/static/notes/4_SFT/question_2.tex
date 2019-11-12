@@ -1,0 +1,45 @@
+\subsection{Question 2}
+Our energy expression for the Ising model is
+\[
+	E = - B \sum_i s_i - J\sum_{\langle i j \rangle} s_i s_j
+\]
+where in the last term we sum across neighbouring pairs of atoms on the lattice. Writing out 
+\[ 
+	s_i  = (s_i - m) + s_i
+\]
+where we now assume $(s_i - m)$ is small, we have that 
+\begin{align*}
+	s_i s_j &= \left( s_i - m + m \right) \left( s_j - m + m \right) \\
+		   &= (s_i -m)(s_j - m) + m^2  + m (s_ j - m  + s_i  - m ) \\
+		   &\approx m (s_i + s_j) - m^2. 
+\end{align*}
+Thus we have 
+\begin{align*}
+	\sum_{\langle ij \rangle} s_i s_j = \sum_{\langle i j \rangle} \left( m (s_i + s_j) - m^2 \right)  = q m \sum_i {s_i}- \frac{m^2 q N }{2}
+\end{align*}
+Hence we have that 
+\[ 
+	E = - (B + J qm )\sum_i s_i  + \frac{J q m N^2}{2}
+\]
+Since we've gotten rid of our interaction term and can factor this expression out in $s_i$, all we have to do is calculate $Z$ for a single particle only, then take this to the power $N$. This is because the partition function is factorable. For a single particle, we sum over both spin configurations
+\[ 
+	Z_i = e^{ -\beta J q m^2 / 2} \left( e^ { - \beta B_{\text{eff}}} + e^{\beta B_{\text{eff}}} \right) = 2 e^{ -\beta J q m^2 / 2} \cosh (\beta B_{\text{eff}}), \quad B_{\text{eff}} = B + J q m
+\]
+For the whole system we get that 
+\[ 
+	Z = e^{ -\beta J N q m^2 / 2}2^N \cosh^N  (\beta B_{\text{eff}})
+\]
+Using our expression that the partition function is well approximated by 
+\[ 
+	Z \approx e^{- \beta N f(m_{\min})}
+\]
+we equate this to our expression above and find that our free energy as a function of magnetisation is 
+\[ 
+	f(m) = \frac{1}{2}J q m^2 + \frac{1}{\beta} \log{2 \cosh ( {\beta J qm + \beta B }) }
+\]
+Minimising this function gives us the self-consistency equation 
+\[ 
+	\frac{\partial f }{\partial m } = 0 \implies m = \tanh (\beta(J qm + B)). 
+\]
+
+\pagebreak 

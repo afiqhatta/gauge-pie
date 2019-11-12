@@ -1,0 +1,45 @@
+\subsection{Reviewing the Harmonic Oscillator in One Dimension in Quantum Mechanics} 
+Going back to the problem of the QM harmonic oscillator, our Lagrangian and Hamiltonian are given by 
+\[ 
+H  = \frac{1}{2}  p^2 + \frac{1}{2} m \omega^2 q^2, \quad L = \frac{1}{ 2} \dot{ q} ^2  - \frac{1}{ 2} \omega^2 q^2 
+\]
+Recall that we can reduce our description of the discrete Hamiltonian via creation and annihilation operators, with their important commutation relation 
+\[ 
+a = \left( \sqrt{\frac{\omega}{2}}  q + i \sqrt{\frac{1}{2 \omega}} p \right), \quad a^{\dagger} = \left( \sqrt{\frac{\omega}{2}}  q - i \sqrt{\frac{1}{2 \omega}} p \right), \quad [a, a^\dagger] = 1 
+\] 
+We can invert these to give expressions for momentum and position as 
+\[ 
+q = \frac{1}{ \sqrt{ 2 \omega} } ( a + a^\dagger) \quad, p =  - \frac{ i}{ \sqrt{ 2 \omega} } ( a - a^\dagger) 
+\] 
+The whole point of the exercise we've done above is to write our Hamiltonian in terms of $a, a^\dagger$, and hence make use of our commutation relations. We can write our Hamiltonian as follows, with the raising and lowering commutation relations
+\[ 
+H = \omega \left( a^\dagger a + \frac{1}{2} \right), \quad [ H, a^\dagger]  = \omega a^\dagger, \quad [ H, a ] = - \omega a  
+\] 
+This has the effect of raising and lowering energy eigenstates, which can be shown by applying the Hamiltonian to a raised or lowered state and then using our commutation relations which we derived earlier. 
+\begin{align*} 
+H a^\dagger\ket{ E} & = ( E+ \omega ) a^\dagger \ket{E} \\
+H a \ket{ E}  & = ( E - \omega ) a \ket{E} 
+\end{align*} 
+Since we can step up or step down energy in this way, we've given rise to a ladder of energy values
+\[ 
+\dots, E - 2 \omega, E - \omega, E, E + \omega, E+ 2 \omega, \dots 
+\] 
+There's a caveat here because we can have infinite negative energy! Thus, lowering by $a$ has to stop somewhere. This means that there's a unique state  $\ket{0} $such that 
+\[ 	
+a \ket{0}  =0 \implies H \ket{ 0 }  = \frac{\omega}{ 2} \ket{ 0 } 
+\] We hence have a unique ground state with energy $\omega / 2 $! We call this the zero point energy. Ignoring normalisation, we can step energy up $n$ amount of times by applying raising operators, so that 
+\[ 	
+\ket{n} = ( a^\dagger)^n \ket{ 0}, \implies H\ket{n}  = (n + \frac{ 1}{ 2})\omega\ket{n} 
+\]
+In physics however, we usually only care about energy differences, so this non-zero zero point energy is a bit annoying. We apply a procedure called normal ordering, where we reorder terms in an expression so that lowering terms are shoved to the right and raising terms are shoved to the left. The has the notation $: A:$, so in the case of the Hamiltonian 
+\[ 	
+:H: = \frac{ 1}{ 2} ( : a^\dagger a : + : a a^\dagger: )  \omega  = \omega a^\dagger a 
+\]
+We now have the effect that our zero point energy is set to zero, with $H\ket{ 0 }  =0 $. We get for free that we can solve for this wavefunction. Since our momentum operator in position space is represented as $p = - i \frac{ \partial}{ \partial q } $, substituting this into $a \ket{0}  = 0$ gives us a differential equation for the state $\ket{0}$ one we contract this in the position basis. 
+
+Rearranging, our expressions for the operators $x, p$ are 
+\[ 
+x = \frac{1}{\sqrt{2 \omega}} \left( a + a^\dagger \right), p = - i \sqrt{\frac{\omega}{2}} \left( a - a^\dagger \right). 
+\] 
+This gives rise to commutation relations, which we will show below. 
+

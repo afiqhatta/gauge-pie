@@ -1,0 +1,50 @@
+\subsection{Amplitudes} 
+In the above, we will always have a factor 
+to impose momentum conservation 
+between final and initial states. Hence, 
+this fact helps us simply things a bit. 
+We will define the matrix element $ \mathcal{ M } $ by 
+\[
+\bra { f} ( S - 1 ) \ket{ i }  = i \mathcal{ M } ( 2 \pi ) ^ 4 \delta ( \sum_{ \text{ final state particles }}  p_i  - \sum_{ \text{ initial state particles }} p_ i ) 
+\] Our factor of $ i  $ in our expression 
+is done to match conventions with non-relativistic quantum mechanics. 
+Our delta function expression follows from translation invariance, and 
+is common to all S-matrix elements we compute. 
+
+We now can define a new set of Feynman rules to compute $ i \mathcal{ M  }$, 
+which makes things slightly easier. 
+\begin{enumerate}
+\item We draw all possible diagrams with appropriate external legs, 
+and impose 4 momentum conservation at each vertex with appropriate use of delta functions. 
+\item We assign a factor of $ ( - ig) $ at each vertex to take into account 
+the order of our expansion. 
+\item We integrate over closed loops in the diagram, since they give rise
+to dummy variables which we can integrate over. So, for closed loops, we 
+do the integral $ \int \frac{d^ 4 k }{ ( 2 \pi ) ^ 4 }$. 
+\end{enumerate}
+
+We'll now do an example with meson scattering. 
+
+For example, for meson-meson scattering $ \phi \phi \to \phi \phi $, 
+we need to draw diagrams. Our lowest order diagram is 
+a bit tricky and our requirement that our vertex has to be a 
+meson, nucleon and anti-nucleon trio 
+means that there'll be a loop. This is shown in figure \ref{fig:mesonLoop}. 
+
+\begin{figure}[htpb]
+\centering
+\includegraphics[width=0.5\linewidth]{figures/feyn6.png}
+\caption{Our lowest order scattering term for $ \phi \phi \to \phi \phi $ decay}%
+\label{fig:mesonLoop}
+\end{figure}
+In the loop, we build up our momentum labels by picking a side as $ k$, 
+then just working around whilst using conservation 
+of momentum.
+This is
+\begin{align*} 
+\mathcal{ M }  &= \int \frac{ d^ 4 k  }{ ( 2 \pi ) ^ 4  }( - i g ) ^ 4 \frac{i ^ 4 }{ ( k ^ 2 - \mu ^ 2 + i \epsilon ) ( ( k + p_1 ) ^ 2  - \mu ^ 2 + i \epsilon )} \\
+	       & \times \frac{1}{( ( k + p_1  - p_1' ) ^ 2 - \mu ^  2+ i \epsilon ) ( k + p_1 ) ^ 2 - \mu ^ 2 + i \epsilon  }
+\end{align*} The integrand goes as $ \frac{1}{ k ^ 8 } $, so 
+we're sure that this thing converges. 
+
+\pagebreak

@@ -1,0 +1,59 @@
+\subsection{What is a Lie Group?}
+A Lie group is a group of continuous transformations, which depends smoothly on $n$ given parameters, say. Since it takes $n$ parameters to define a transformation in this group, we could also interpret this as an $n$ dimensional manifold. Thus, we define a Lie group as a group which is also a smooth manifold. Thus, multiplication between group elements: 
+\[ 
+	G \times G \rightarrow G
+\]
+must respect the manifold's structure and must be a smooth map. In addition, inverses of elements must also be smooth maps. 
+Since an n dimensional Lie group is homeomorphic around $e$ to an open subset of $R^n$, we can re-parametrize the elements of the group $G$ to depend on $n$ different coordinates, say $\{ \theta_i \mid i = 1, \dots, n\} $. 
+
+Let's have an example of maps which respect group structure. On a Lie group (or equivalently, a manifold), we can construct a 'left action' induced by an element $g \in G$, which in the context of a Lie group is simply multiplicaiton by that element on the left 
+\[ 
+	L_g: \, G \rightarrow G, \quad h \in G \mapsto gh \in G 
+\] 
+However, in the context of viewing a Lie group as a manifold, this map represents 'translating' a member $g$ on a manifold to it's new place. It turns out, that due to this translation map we've defined above, we can actually characterise most of our Lie group based on what happens infinitesimally at $e \in G$. We'll go over this later, but infinitesimal behavour at defines a tangent space which we call a \textbf{Lie algebra}. This notion is useful because Lie groups and manifolds are complicated, but defining the tangent space is handy because it's a \textbf{vector space}. This tangent space, you guessed it, is exactly what we've defined abpve.  
+
+\subsubsection*{Smoothness of group multiplication on manifolds} 
+Our condition that group multiplication and inversion should be smooth maps on the manifold is a statement about smoothness of coordinate maps. Since we can define a coordinate chart on an open set in the manifold, we can denote group elements $g \in G$ by their coordinates. So, we can write 
+\[ 
+	g  = g (\theta) \in G 
+\] 
+where $\theta  = ( \theta_1 , \dots, \theta_n)$, and our identity $e \in G$ lies at $g ( 0 )$. 
+Group multiplication in $G$ is a map 
+\[ 
+	G \times G \rightarrow G, \quad g \times g' \mapsto g''  
+\] but since we can assign coordinates to elements in a Lie group, we can write this multiplication as 
+\[  
+	g(\theta) \times g(\theta') \rightarrow g(\theta'') 
+\] 
+where we assume that $\theta''$ lies in the image of the same coordinate path $\mathcal{P}$ that we used to assign coordinates to $\theta, \theta' $. This implies that we've induced a map between coordinates on the manifold, and we express the function $\theta''$ as a function of the other coordinates. 
+\[ 
+	\theta''  = \theta''( \theta, \theta' )
+\] 
+Thus, one of the conditions for a group to be a Lie group is that this induced map $\mathbb{R}^n \times \mathbb{R}^n \rightarrow \mathbb{R}^n $ must be smooth (differentiable). More specifically, each of the components of this function $(\theta'')^i  = (\theta'')^i ( \theta, \theta' ) $ must be smooth. 
+
+\subsubsection*{Smoothness of inversion of Lie Groups} 
+In a group, taking an inverse is the operation 
+\[ 	
+	G \rightarrow G, \quad g \mapsto g^{ -1} \text{ where we have } g g^{ -1}  = e
+\] 
+Just as in the case of group multiplication, we can write in terms of coordinates on our manifold where we have 
+\[ 
+	g(\theta) \rightarrow g(\hat{\theta})  = (g(\theta))^{-1} 
+\] 
+This induces a map between coorinates 
+\[ 
+	\theta \mapsto \hat{ \theta} 
+\] Our condition that this group is a Lie group is that this operation between coordinates is also differentiable. 
+
+As an example, the additive group of vectors on $\mathbb{R}^d$, denoted $( \mathbb{R}^d, + )$, is a lie group. Group operations on this space between vectors are 
+\begin{itemize} 
+	\item Addition: $\mathbf{x}_1  + \mathbf{x}_2 = \mathbf{x}_3 $ 
+	\item Inversion: $\mathbf{x} \mapsto  - \mathbf{x} $
+\end{itemize} 
+The corresponding coordinates are just their Euclidean coordinates $\mathbf{x} = (x_1, \dots, x_n ) $, and addition is represented by the usual way to add coordinates in $\mathbb{R}^n$, which is obviously continuous and differentiable. In addition, inversion is just attaching a minus sign to map $(x_1, \dots, x_n ) \mapsto  - ( x_1, \dots, x_n ) $, which is also a smooth map. 
+
+
+\subsubsection*{A remark on classifying Lie algebras}
+
+It turns out, we can classify all finite semi-simple Lie algebras over $\mathbb{C}$. into four infinite families denoted $A_n, B_n, C_n, D_n$, where $n \in \mathbb{N}$ with five exceptional cases: Lie algebras denoted $E_6, E_7, E_8, G_2$ and $G_4$. This is called the Cartan classification for Lie algebras and we'll cover it further later.  
+

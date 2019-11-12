@@ -1,0 +1,20 @@
+\subsection{Groups to represent symmetries}
+Intuitively, symmetries should follow a group structure if we represent them as maps. For example, if we compose two symmetries together we should expect to obtain another symmetry. Similarly, we also expect symmetries to have inverses. This is where the notion of groups becomes useful for us. A group is a set $G$ with an operation $\_ \,  \cdot \,  \_ : G \times G  \rightarrow G $ which obeys the following axioms
+
+\begin{itemize} 
+	\item \textbf{Existence of a group identity }  $ \exists e \in G $ such that for all $g \in G$, multiplication satisfies 
+	\[ e \cdot g = g \cdot e = g \] 
+	\item \textbf{Existence of unique group inverses } for all $g \in G$we have a unique group inverse denoted $g^{ -1}$ such that 
+\[ g^-1 \cdot g = g \cdot g^{ -1}  = e \] 
+	\item \textbf{Associativity } this means that we don't care about the order in which we multiply things things in the group. So, for all $g_1, g_2, g_3 \in G$, we have that 
+\[ 
+	g_1 \cdot (g_2 \cdot g_3)  = (g_1 \cdot g_2 ) \cdot g_3 
+\] 
+\end{itemize} 
+If the ordering of multiplication doesn't matter, in other words if, for all elements $g, h \, \in G$ we have 
+\[ 
+	g \cdot h  = h \cdot g 
+\] 
+then our group is called \textbf{Abelian}. Otherwise, it's called a non-abelian group. Our group of rotations is non-abelian, because the order in which you compose operations matters. For example, rotating something about the x-axis 90 degrees clockwise and then about the z-axis 90 degrees clockwise is different to rotating first about the z-axis, then rotating about the x-axis. 
+
+In the case of rotations in three dimensions, we have a group which we'll call the special orthogonal group in three dimensions, or $S0(3) $. 

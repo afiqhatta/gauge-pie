@@ -1,0 +1,64 @@
+%% Creator: Inkscape inkscape 0.92.2, www.inkscape.org
+%% PDF/EPS/PS + LaTeX output extension by Johan Engelen, 2010
+%% Accompanies image file 'drawing.pdf' (pdf, eps, ps)
+%%
+%% To include the image in your LaTeX document, write
+%%   \input{<filename>.pdf_tex}
+%%  instead of
+%%   \includegraphics{<filename>.pdf}
+%% To scale the image, write
+%%   \def\svgwidth{<desired width>}
+%%   \input{<filename>.pdf_tex}
+%%  instead of
+%%   \includegraphics[width=<desired width>]{<filename>.pdf}
+%%
+%% Images with a different path to the parent latex file can
+%% be accessed with the `import' package (which may need to be
+%% installed) using
+%%   \usepackage{import}
+%% in the preamble, and then including the image with
+%%   \import{<path to file>}{<filename>.pdf_tex}
+%% Alternatively, one can specify
+%%   \graphicspath{{<path to file>/}}
+%% 
+%% For more information, please see info/svg-inkscape on CTAN:
+%%   http://tug.ctan.org/tex-archive/info/svg-inkscape
+%%
+\begingroup%
+  \makeatletter%
+  \providecommand\color[2][]{%
+    \errmessage{(Inkscape) Color is used for the text in Inkscape, but the package 'color.sty' is not loaded}%
+    \renewcommand\color[2][]{}%
+  }%
+  \providecommand\transparent[1]{%
+    \errmessage{(Inkscape) Transparency is used (non-zero) for the text in Inkscape, but the package 'transparent.sty' is not loaded}%
+    \renewcommand\transparent[1]{}%
+  }%
+  \providecommand\rotatebox[2]{#2}%
+  \ifx\svgwidth\undefined%
+    \setlength{\unitlength}{340.52628937bp}%
+    \ifx\svgscale\undefined%
+      \relax%
+    \else%
+      \setlength{\unitlength}{\unitlength * \real{\svgscale}}%
+    \fi%
+  \else%
+    \setlength{\unitlength}{\svgwidth}%
+  \fi%
+  \global\let\svgwidth\undefined%
+  \global\let\svgscale\undefined%
+  \makeatother%
+  \begin{picture}(1,0.68494459)%
+    \put(0,0){\includegraphics[width=\unitlength,page=1]{drawing.pdf}}%
+    \put(0.10826603,0.69193104){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\begin{minipage}{0.35041104\unitlength}\raggedright $ Im z$\end{minipage}}}%
+    \put(0.54738476,0.78116384){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{}}}%
+    \put(0.85164347,0.43819519){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\begin{minipage}{0.66452038\unitlength}\raggedright $ Re z$\end{minipage}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=2]{drawing.pdf}}%
+    \put(0.50372889,0.52797066){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\begin{minipage}{0.66452038\unitlength}\raggedright $ I_R $\end{minipage}}}%
+    \put(0.28021363,0.52631661){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\begin{minipage}{0.66452038\unitlength}\raggedright $ m$\end{minipage}}}%
+    \put(0.41212431,0.20271641){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{$0$ inside }}}%
+    \put(0.31369669,0.4009484){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{x}}}%
+    \put(0.30951015,0.31408646){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{$\epsilon$}}}%
+    \put(0.64214181,0.11275069){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{$R$}}}%
+  \end{picture}%
+\endgroup%

@@ -1,0 +1,60 @@
+\subsection{Our choice of basis}  
+In quantum mechanics, particles have a property called spin which is quantised in units of $\mathbb{ N} / 2 $. In this section, we learn how this property is related to the representations of the Lie Group $SU(2)$, and how this gives rise to the familiar concept of ladder operators in angular momentum. First, let's figure out a sensible basis for $\mathcal{ L }( SU(2) ) $. We know already that the Pauli Sigma matrices \[ 
+\sigma_z = \begin{pmatrix} 1 & 0 \\ 0 & - 1 \end{pmatrix}, \quad \sigma_y  = \begin{pmatrix} 0 & -i \\ i & 0 \end{pmatrix}, \quad \sigma_x =  \begin{pmatrix} 0  & 1 \\ 1 & 0 \end{pmatrix} \]   
+make a good basis, when we set 
+\[
+ \mathcal{ B  } = \left\{  T_a \mid T_a = - \frac{i }{ 2 } \sigma_a , a = 1, 2, 3 \right\} 
+\] Recall that this yields the structure constants 
+\[
+ [ T_a , T_ b ] = \epsilon_{ ab c } T_c
+\]  
+This basis is over the field of the reals, to construct 
+elements of $ \mathcal{ L } ( SU ( 2) ) $, which we can perhaps 
+write in a more clear manner as $ \mathcal{ L }_{ \mathbb { R} } ( SU ( 2) ) $ 
+(we're writing out the base field explictly here. 
+However, we can choose instead the following basis which has some nice properties which we'll make use of later. We will \textbf{complexify} our
+basis of $\mathcal{ L } ( SU ( 2) ) $, and denote 
+this complxification explicitly by writing $ \mathcal{ L }_\mathbb{ C} ( SU ( 2) ) $. 
+This basis we call the Cartan-Weyl basis of the complexfied $ \mathcal{ L }_\mathbb{ C} ( SU ( 2) ) $
+and is denoted by 
+\begin{align*}
+H & = \begin{pmatrix} \frac{ 1} {2} & 0 \\ 0 & \frac{1}{2} \end{pmatrix} = \frac{1}{2} \sigma_z  \\ 
+E_+ &= \begin{pmatrix} 0 & 1 \\ 0 & 0 \end{pmatrix} = \frac{1}{2} ( \sigma_x + i \sigma_y )  \\ 
+E_- &= \begin{pmatrix} 0 & 0 \\ 1 & 0 \end{pmatrix} = \frac{1}{2} ( \sigma_x - i \sigma_y)  
+\end{align*} 
+These matrices obey the commutation relations \begin{align*} [h, e_+ ] & = e_+ \\ 
+[H, E_- ] & = - E_- \\ 
+[E_+, E_- ] &= 2 H 
+\end{align*} We have in interesting 
+change of picture here. Previously, we wrote $ \mathcal{ L } ( SU ( 2) ) $ 
+in terms of complex matrices but with real vector coefficients. 
+In this case, we are writing things in terms of real matrices but 
+with complex coefficients! 
+\[
+	\mathcal{ L }_{ \mathbb { C} } ( SU ( 2) ) = span_{ \mathbb{ C} } \left\{  T ^ a, a = 1, 2, 3 \right\} 
+\] For a general Lie algebra element, 
+we can expand this thing as 
+\[
+ X = X_ H H + X_ + E_+ + X_ - E ^ - 
+\] Now, the fact that $ X $ is anti-Hermitian imposes 
+conditions on these coefficients, 
+\[
+ X_H = i \mathbb{ R} , \quad X_ + = \overline{ X } _ - 
+\] For reasons we will discover later, 
+we have that $ H $ is a little special in this basis 
+and we will dub it the 'Cartan' element. 
+
+The fact that we computed our commmutators 
+means that we can view things a little differently, 
+in terms of our $ \ad $ map. 
+We have that 
+\begin{align*}
+	\ad_H ( E_{ \pm }) & = \pm 2 E_{ \pm } \\
+	\ad _ H ( H) &=  0 
+\end{align*}
+Hence, we can view the Cartan basis as an eigenbasis 
+of $ \ad _ H $, with eigenvalues $ 0 , - 2, 2 $. 
+
+
+We we ewhich are reminiscent of ladder operators we use in quantum mechanics in representing angular momentum states. We want to analyse this problem from a representation theory point of view. Our task that we want to do now is come up with a finite $N$-dimensional representation of this Lie group. 
+

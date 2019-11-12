@@ -1,0 +1,173 @@
+\subsection{Integration} 
+On a manifold, we integrate functions 
+\[
+	f : \mathcal{ M } \to \mathbb{ R } 
+\] with the help of a special kind of 
+a special kind of top form. 
+The kind of form we need is called a volume form or orientation. 
+This is a nowhere vanishing top form. Locally, 
+it can be written as 
+\[
+v = v ( x) dx^ 1 \wedge  \dots \wedge  dx^ n , \quad v ( x) \neq 0 !
+\] For some manifolds, globally we may not be able to glue
+volume forms together over the whole manifold. 
+If such a form exists, the manifold is said to be orientable. 
+Not all manifolds are orientable, for example the Mobius strip. 
+This says that $ v( x) $ must change direction and hence be zero. 
+Or, $ \mathbb { RP } ^ n $. 
+Given a volume form, we can integrate 
+any function  $f: M \to \mathbb{ R} $ over  $ \mathcal{ M } $. 
+In chart $ \mathcal{ O } \subset \mathcal{ M } $, we define
+\[
+\int_{ \mathcal{ O } } f v =  \ \int_{\mathcal{ U } } dx^ 1 \dots dx^ n f( x) v( x) 
+\] Now, this tells us how to integrate a patch. 
+Then, summing over patches gives us the whole integral. 
+$ v ( x) $ can be thought of as our measure - ' the volume of some part of 
+the manifold'. There is freedom in our choice of volume form here, 
+we could've chosen lots of different volume forms which 
+satisfy our condition above.
+
+\subsubsection{Integrating over submanifolds} 
+
+We haven't defined how to integrate, say a function 
+over a $ p $-form on an 
+$ n $ dimensional manifold, where $ p < n $ 
+(since so far our definition of integration 
+has only pertained to top forms. 
+
+So to do things like this, we need to 
+find a way to 'shift down' into a lower dimensional 
+subspace and do things there. This is why we define the concept of a submanifold.
+
+A new manifold $ \Sigma $ of dimension $ k < N $ is called a submanifold
+of $ \mathcal{ M  }$ if there exists an injective map $ \phi : \Sigma \to \mathcal{ M }$ 
+such that $ \phi^ * : T_p ( \Sigma ) \to T_p ( \mathcal{ M } ) $, the 
+\textbf{pullback} of $ \phi $, is also 
+injective. We require the condition of injectivity 
+so that our submanifold doesn't intersect itself 
+when we embedded it in our larger manifold.
+The first condition is so that there are no crossings. 
+The second condition is there so that we have no cusps in our tangent space.
+
+We're now fully equipped to integrate over 
+some portion of a submanifold of $ \mathcal{ M } $. 
+You can think of this as a 'surface' or 'line' of 
+some sort embedded in our manifold. 
+We can integrate any $ \omega  \in \Lambda^ k ( \mathcal{ M } ) $ over  $\Sigma $ 
+by first identifying it with the embedded portion of $ \Sigma $
+in  $ \mathcal{ M } $, and then pulling it back into $\Sigma $
+itself. Now, we're in a  $ p $ dimensional space, 
+and we know how to integrate here since $ \phi ^ * \omega $ is 
+now a top-form
+\[
+\int_{ \phi ( \Sigma ) } \omega = \int_{ \Sigma } \phi^ * \omega
+\]  
+Let's do an example where we integrate say over a line 
+embedded in a bigger manifold. 
+We define an injective map $ \sigma $ which 
+takes our line $ C $ into our manifold. 
+\[
+\sigma : C\to \mathcal{ M }
+\] defines a non intersecting curve in M. Then, for 
+$ A \in \Lambda ^ 1 ( \mathcal{ M } ) $, we have, 
+integrating over our embedding of our line in $\mathcal{ M } $, 
+\[
+\int_{ \sigma ( C) } A = \int_{ C } \sigma^ * A = \int d \tau A_{ \mu } ( x) \frac{ dx^ \mu }{d \tau }
+\] 
+The last equality comes from the fact that the 
+components of a one-form pulled back transforms as
+\[
+ ( \sigma ^ * A )_\nu = A_\mu  \frac{ d x ^ \mu  }{ dt ^ \nu }
+\] where in this case, since 
+we're pulling back to a one dimensional 
+manifold, we only have $ \nu = 0 $  (which we write
+for brevity as $ \tau $). 
+
+\subsubsection{Stokes' theorem}
+
+\textit{How does this tie in to the bigger picture? }  
+\textit{What use does Stoke's theorem have in general relativity?} 
+\textit{How do we prove Stoke's theorem?} 
+
+
+\begin{defn}{(Boundaries).} 
+So far we've only considered manifolds which are smooth. 
+However, we can 'chop off' a portion of 
+our manifold to make a slightly different map that what we 
+are used to, a new map 
+\[
+\phi_\alpha : \mathcal{ O }_\alpha \to \mathcal{ U }_\alpha \subset \frac{1}{2 } \mathbb{R}^n  = 
+\left\{ (x_1, \dots x_ n ), \mid x_1 \geq 0  \right\} 
+\] Our boundary of our manifold is the
+set of points on $ \mathcal{ M }  $ which are mapped to 
+$ ( 0 , x_2 , \dots x_ n ) $. 
+Boundaries are $ n - 1 $ dimensional manifolds 
+of our original manifold which has dimension $n$
+
+\end{defn}
+
+\begin{figure}[h]
+	\centering
+	\includegraphics[width=0.5\linewidth]{figures/submanifold.png}
+	\caption{Here we have a manifold with boundary.}%
+\end{figure}
+
+\begin{thm}{Stokes' Theorem.}
+Let $ \mathcal{ M } $ be a manifold with boundary. 
+This is a manifold which just stops and gets cutoff somewhere. 
+If we call the manifold $ \mathcal{ M } $, we call the boundary 
+$ \partial  \mathcal{ M }$. 
+If we take $ \omega  \in \Lambda^{ n - 1} ( \mathcal{ M } ). $
+Our claim is that
+\[
+\int_{ \mathcal{ M } } d \omega = \int_{ \partial  \mathcal{ M }} \omega
+\] This Stokes' theorem. It's 
+presented in a more general form 
+than what we're used to, but we'll see in the 
+examples that this way of expressing this 
+gives us both Stokes' theorem in three dimensions 
+as well as Green's theorem. 
+
+\end{thm}
+
+\begin{example}{Stokes' theorem in one dimension. } 
+Take $ \mathcal{ M } $ as the interval $ I $ with $ x \in [ a, b ] $. 
+$ \omega ( x)  $ is a function and 
+\[
+d \omega = \frac{ d \omega }{ dx  } \cdot  dx
+\] We have that 
+\[
+\int_{ \mathcal{ M } } d \omega = \int_a^ b \frac{ d \omega }{ dx } dx \quad \int_{ \partial  \mathcal{ M } } \omega = \omega( b ) - \omega ( a) 
+\] In one dimension, we've
+recovered integration by 
+parts on a line. 
+
+\end{example}
+
+\begin{example}{Stokes' theorem in two dimensions. } 
+In the second case, we have that 
+\[
+M \subset \mathbb{ R} ^ 2, \omega \in \Lambda^ 1 ( \mathcal{ M } ) 
+\] This recovers 
+\[
+\int_{ \mathcal{ M } } d \omega = \int_{ \mathcal{ M } } \left( \frac{\partial \omega_2 }{\partial  x^ 1 }  - \frac{\partial  \omega_1 }{\partial  x^ 2}  \right) dx^ 1 \wedge  dx^2  
+\] By Stokes theorem this is 
+\[
+\int_{ \partial  \mathcal{ M  } } \omega = \int_{ \partial  M } \omega_1 dx^ 1 + \omega_2 dx^ 2  
+\] This equality is Green's theorem in a plane. 
+
+\end{example}
+
+\begin{example}{Stokes' theorem in three dimensions.} 
+Finally, take $ \mathcal{ M } \subset \mathbb{ R}^ 3 $ and $ \omega \in \Lambda^ 2 ( \mathcal{ M } ) $
+\begin{align*}
+\int_{ \mathcal{ M } } d \omega & = \int dx^ 1 dx^ 2 dx^ 3 ( \partial_1 \omega_1 + \partial_2 \omega_2 + \partial  _ 3 \omega _ 3 ) \\
+\int_{ \partial  M   } \omega  &= \int_{ \partial  M  } \omega_1 dx^ 2 dx^ 3 + \omega_ 2 dx^ 3 dx^ 1 + \omega_3 dx^ 1 dx^ 2 
+\end{align*}
+
+Equating the two expressions above 
+gives us our usual notion of Stokes' theorem in three dimensions, which 
+is disguised as Gauss' divergence theorem. 
+\end{example}
+
+\pagebreak 

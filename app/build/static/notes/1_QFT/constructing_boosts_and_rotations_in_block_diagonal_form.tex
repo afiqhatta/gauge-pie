@@ -1,0 +1,26 @@
+\subsection{Constructing boosts and rotations in block diagonal form} 
+This spinor representation is reducible, which means that we can write out our transformations in block diagonal form. For example, we write out the components of $S^{ \mu \nu } $ explicitly in terms of boosts and rotations, and discover that both the boost and rotations are parametrised by three parameters ( hence we can encode them as vectors). In the boost case, we have that \[ S^{ 0i } = \frac{ i }{2} \begin{pmatrix} 0 & I \\ I & 0 \end{pmatrix} \begin{pmatrix} 0 & \sigma \\ - \sigma_i & 0 \end{pmatrix}  = \frac{i}{2} \begin{pmatrix} - \sigma_i & 0 \\ 0 & \sigma_i \end{pmatrix} \] But, as a tranformation, contracting with $ \omega_{ \mu \nu} $, we're only summing to get $\exp ( \frac{i }{2} \omega_{ 0i }S^{ 0i } )$, and so reparametrising $\omega_{ 0i } = \alpha_i$, we find that our transformation takes the form 
+\[ \Lambda_{ \frac{1}{2}}  = \exp \left(i \frac{ \omega_{ \mu \nu} S^{\mu \nu}}{2} \right)  = \begin{pmatrix} e^{ \alpha \cdot \frac{ \sigma}{2} } & 0 \\ 0 & e^{  - \alpha \cdot \frac{\sigma}{2}} \end{pmatrix} \] 
+Bear in mind that since we're summing over all the indices, we have an extra factor of $2$. Now, notice that we have a switch in sign under boosts.   
+
+Now we explore what happens when we transform under rotations. Rotations are represented by $S^{ij} $, where $i, j = 0, 1, 2, 3$. Let's compute these matrix representations explicitly - this is also good revision for remembering our Pauli Sigma matrix commutation relations. We have that 
+\begin{align*} 
+S^{ij}  & = \frac{ i}{4} [\gamma^i, \gamma^j ] \\ 
+& = \frac{ i}{ 2} \gamma^i \gamma^j \\
+& = \frac{ i}{2} \begin{pmatrix} 0 & \sigma_i \\ - \sigma_i & 0 \end{pmatrix} \begin{pmatrix} 0 & \sigma_j \\ - \sigma_j & 0 \end{pmatrix} \\ 
+&= \frac{i}{2} \begin{pmatrix}  - \sigma_i \sigma_j & 0 \\ 0 &  - \sigma_i  \sigma_j \end{pmatrix} 
+\end{align*} 
+
+Now, we make use of our Pauli-sigma relations to simplify this expression. One can easily verify that \[ \sigma_i \sigma_j = i \epsilon_{ ijk} \sigma_k  \implies S^{ ij } = \frac{1}{ 2} \epsilon_{ ijk} \begin{pmatrix} \sigma_k & 0 \\ 0 & \sigma_k \end{pmatrix} \]
+Now, when we want to contract $S^{ ij }$ with $\omega_{ ij } $ we have that 
+\[ 
+\omega_{ ij} S^{ ij } = \frac{1}{ 2} \epsilon_{ ijk } \omega_{ ij} \begin{pmatrix} \sigma_k & 0 \\ 0 & \sigma_k \end{pmatrix} \]
+But the cool thing abou this is that we can write $\beta_k = \epsilon_{ ijk} \omega_{ij }  $, which gives us the final result for a rotatation transformation, which is 
+\[ \Lambda_{\frac{ 1}{ 2} }  = \begin{pmatrix}  \exp^{ - \frac{i}{2} \sigma \cdot \beta } & 0 \\ 0 & \exp^{ - \frac{ i}{ 2} \sigma \cdot \beta } \end{pmatrix} \] 
+Where we have a noticable difference with respect to boosts in that there's no sign change between the block diagonal matrices. The fact that we've broken down this spinor representation of Lorentz transformations into two block diagonal matrices is super useful because now we can also split up the spinor vector $ \psi $ into two parts, which we call the left and right handed parts of our spinor. 
+\[ \psi = \begin{pmatrix} \psi_L \\ \psi_R \end{pmatrix} \] 
+So infinitesimally, we have that \begin{align*} 
+\psi_L & \mapsto \left( 1 + \alpha \cdot \frac{ \sigma}{2}  - i  \beta \cdot \frac{\sigma}{2} \right)  \psi_L \\ 
+\psi_R & \mapsto \left(  1  -  \alpha \cdot \frac{\sigma}{2}  - i \beta \cdot \frac{\sigma}{ 2} \right)  \psi_R 
+\end{align*} 
+

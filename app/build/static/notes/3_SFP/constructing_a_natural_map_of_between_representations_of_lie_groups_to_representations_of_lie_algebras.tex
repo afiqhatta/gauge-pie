@@ -1,0 +1,30 @@
+\subsection{Constructing a natural map of between representations of Lie groups to representations of Lie algebras}
+
+Suppose we're given a representation $D$ of a particular Lie group $G$. Then, given an element $X \in \mathcal{L}(G) $, what's a natural way to construct a representation of the corresponding Lie algebra? If we let $g(t)$ be the associated curve which gives rise to $X$, then we let\[ d(X) = \left. \frac{D(g(t))}{dt}\right\vert_{t = 0} \]
+
+Does this obey property 2? If we let $g(t), h(t)$ be curves corresponding to the vectors $X, Y$, then by linearity of representations we have that 
+\begin{align*}
+D(g(t)) &= I + t D(\dot{g}(0)) + \dots \\ &= I + t d(X) + \dots  
+\end{align*}
+and similarly \[ D(h(t)) = I + t D(\dot{h}(0)) + \dots \]
+If we set 
+\[
+f(t) = ghg^{-1}h^{-1}(t) \implies D(f) = D(g)D(h)D(g)^{-1}D(h)^{-1} 
+\]
+If we substitute our above expressions for $D(g), D(h)$, then our expansion is 
+\[
+D(f) = 1 + t^2 [d(X), d(Y)] + \dots 
+\]
+However, from our previous analysis we know that 
+\[ f(t) = 1 + t^2 [X, Y] + \dots \] 
+and applying our representation here, as well as a change of variables, we have \[ Df(t) = 1 + t^2 \left. \frac{d}{d(t^2)} D([X, Y]) \right\vert_{t = 0} + \dots \]
+
+Comparing coefficients gives us the identity \[ d([X, Y]) = [d(X), d(Y)] \]
+
+\subsubsection{Remark on alternate representations}
+For a given Lie algebra, we have a range of possible representations which satisfy our required properties. We have the trivial representation \[ d_T(X) = 0, \quad \forall X \in \mathcal{L}(G) \]
+If the Lie algebra is already a matrix vector space, we can just leave things as they are. This is called the fundamental representation
+\[ d_f(X) = X, \quad \forall X \in \mathcal{L}(G) \]
+
+\pagebreak 
+

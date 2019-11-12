@@ -1,0 +1,18 @@
+\subsection{A canonical representation of Lie Groups with Lie Algebras}
+The Lie algebra $L( G )$ of a Lie group $G $ is a vector space, as we've shown earlier. Since it's a vector space, we can construct a natural represntation of the Lie group $G $, that acts as a linear group action on it's associated Lie algebra $L( G )$. This representation is called the adjoint representation for Lie groups and is given by sending a group element $g \in G$ to a map on the Lie algebra as follows. 
+
+If we have a group element $g$, the adjoint representation of that element, denoted $\text{Ad}_g$, is 
+\begin{align*} 
+\text{Ad}_g :&  \, \, L(G) \rightarrow L(G)  \\ 
+& X \mapsto g X g^ { -1 }  
+\end{align*} 
+For this to a valid representation, we need to check that the term is indeed $gXg^{-1} \in L(G)$. For this, observe that since $X \in L(G)$, there is a curve $h(t) \in G$ where $t$ is a real parameter, that when expanded infinitesimally around $1$ yields the tangent vector $X$ \[ h(t) = 1 + tX + \frac{ t^2 X^2}{ 2} \dots \] 
+Since we have Lie group, \textbf{conjugating} this group on either side by $g$, to construct the curve $g  h(t) g^ { -1}  \in L(G) $, gives us a new smooth curve, which has infinitesimal expansion \[ g h(t) g^{-1}  = g g^{-1}  + t g X g^ {-1}  + \dots = I + t g X g^ {-1}  + \dots \]
+We also need to verify that this is a representation, and that it's linear. We have to show that \[ \text{Ad}_{g_1 g_2} = \text{Ad}_{ g_1} \text{Ad} _{g_ 2} \]. To do this, we apply this map to an arbitrary vector $X$ and show that
+\begin{align*} 
+\text{Ad}_{g_1 g_2} X & = (g_1 g_2) X (g_1 g_2)^ { -1} \\
+	& = g_1 g_2 X g_2^{-1} g_1^{-1} \\ 
+	& = g_1 ( g_2 X g_2^{-1} ) g_1^{-1} \\ 
+	& = \text{Ad}_{g_1} \text{ Ad} _{g_2} X 
+\end{align*}  
+

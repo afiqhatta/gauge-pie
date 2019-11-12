@@ -1,0 +1,256 @@
+\subsection{Feynman Diagrams} 
+
+Previously we were calculating an expansion \[
+	\log \left< e ^{ - F _ I [ \phi _ k ^ - , \phi _ k ^ + ] } \right>_ + 
+\] This yields a sum of terms
+which look like $ g _ 0 ^ p ( \phi ^ - ) ^ a ( \phi ^ + ) ^ b  $.
+We would like an efficient way of computing this 
+object once it's averaged in the Gaussian ensemble.
+In an almost perfect analogy with quantum field theory, we 
+construct a diagrammatic way to calculate
+these expansions. These diagrams are called Feynman diagrams.  
+We'll outline the rules to construct them below 
+ \begin{enumerate}
+	 \item Each $ \phi _{ \vec{k} } ^ - $ is represented by 
+		 an external solid line. Contributions from 
+		 these external lines can be written as 
+		 just a factor of $ \phi ^ - $ integrated 
+		 over position space. 
+	\item Each $ \phi_{ \vec{k} } ^ + $ is represented by 
+		an internal dotted line. These lines each contribute 
+		to adding a propagator $ \left< \phi_{ \vec{k} '  } ^ + \phi _{ \vec{k} } ^ +  \right>$ 
+		in the integral expression. 
+	\item Dotted lines are always connected at both ends. The fact that we 
+		used Wick's theorem to give us all possible pairwise contractions 
+		is the reason for the requirement that all the dotted lines need to be 
+		paired up an connected in all possible different ways. 
+	\item Each vertex joins 4 lines with $ g_0 $ . When we have a vertex, we need to 
+		impose momentum conservation b y
+	\item Each line has some momentum $ \vec{k} $, 
+		conserved at vertices, which comes from the delta function 
+		we get by integrating with respect to the spatial variables first. 
+	\item Momenta which are not determined explicitly (for example internal 
+		loops), are integrated over with a factor $ \int  d^ d q / ( 2 \pi ) ^ d $. 
+	\item Divide by symmetry factors. 
+\end{enumerate}
+Now, once we've drawn these diagrams, we are in shape to write 
+down the integrals that they correspond to. 
+At lowest order we have something called a tree diagram 
+where 4 momenta go into a single vertex. These are represented 
+by $ g_0 \int  d ^ 4 x \, ( \phi ^ - ) ^ 4  $. 
+\begin{equation*} 
+	\feynmandiagram [small] {
+		a [particle = {\(k _ 1 \)}] -- [fermion] e; 
+		b [particle = {\(k _ 2 \)}]  -- [fermion] e; 
+		 c [particle = {\(k _ 3 \)}]  -- [fermion] e; 
+		 d [particle = {\(k _ 4 \)}]  -- [fermion] e; 
+};
+	= g \int d ^ d x \, ( \phi ^ - ) ^ 4 
+\end{equation*}
+We then have something called a loop diagram, which 
+contributes an overall constant since we integrate over 
+high modes. 
+The interesting connection is when we have a 
+loop attached to two external vertices. This gives us an 
+extra term 
+\begin{equation*}
+	\feynmandiagram [small] {
+		a [ particle =\( k _ 1 \) ] -- [fermion] b 
+		-- [ghost, half left, momentum=\( q \) ] c 
+		-- [ghost, half left] b,
+		d [ particle =\( k _ 2 \) ] -- [fermion] b 
+	}; =   6 g_0 \int _{ \Lambda / \zeta } ^ \Lambda 
+\frac{ d ^ d q }{ q ^ 2 + \mu _ 0 ^ 2 } \int d ^ d x ( \phi ^ - ) ^ 4
+\end{equation*}
+You can convince yourself that these are the only possible diagram 
+one can get at first order. 
+Now, if we move up to second order, we need to consider diagrams 
+which contain two vertices, but whose ends are connected. 
+We shall consider a \textbf{connected} diagram first, 
+whose contribution looks like 
+\begin{equation*}
+	
+\end{equation*}
+Now, to second order we have a term 
+given by 
+\[
+ 36 g_0 ^ 2 \int_ 0 ^{ \Lambda / \zeta } \prod_{ i =1 } ^ 4 
+ \left[  \frac{ d ^ d k_ i }{ ( 2 \pi ) ^ d } \phi ^ -_{ \vec{k} _ i}  \right] 
+ f ( \vec{k} _ 1 + \vec{k} _ 2 ) ( 2 \pi ) ^ d \delta ^ d ( \sum_ i \vec{k} _ i  )
+\]  
+Multiples of diagrams get cancelled out by cumulant terms.
+
+Now, we can write things as general functions of $ \vec{k}  $ and $\Lambda $
+when dealing with more complicated terms. 
+This means that a diagram of the below form gives us a term like 
+\[
+	g_0 ^ 2 \int \frac{ d ^ d k }{ ( 2 \pi ) ^ d } \frac{1}{2 } A( \Lambda , k) \phi_{\vec{k} } ^ - 
+	\phi _{  - \vec{k} } ^ -  
+\] We can now Taylor expand out our general function 
+$ A ( k, \Lambda ) $ as 
+ \[
+	 A ( k , \Lambda ) \simeq A ( 0 ) + \frac{1}{2 } k ^ 2 A'' ( 0 ) + \dots
+ \] Now, the first term here
+ gives us a correction to $\mu ^ 2  $, and the second term 
+ gives us a correction to $ ( \nabla \phi ) ^ 2 $. 
+ So, in our full effective field theory we have that 
+ \[
+	 F ' [ \phi ] = \int d^ d x \, \frac{1}{2 } \gamma ' ( \nabla \phi ) ^ 2, 
+	 \quad \gamma ' =  1- 2 g_0 ^ 2 A'' ( 0 , \Lambda ) 
+ \] Hence, our rescaled momenta is given by 
+ \[
+	 \phi_{ \vec{k} } ' = \frac{ \zeta ^{  - \frac{ d + 2 }{ 2 } } }{1 - g_0 ^ 2 A'' ( 0 
+	 , \Lambda ) } \phi_{ \frac{ \vec{k} }{ \zeta } } ^ - 
+ \]
+ \subsection{$ \beta$ - functions}
+ Our new cutoff in RG flow is given by the relation 
+\[
+ \Lambda ' = \frac{ \Lambda }{ \zeta  } = \Lambda e^{ - s }
+\] We define our beta functions to be the 
+solutions to the differential equation 
+\[
+	\frac{ d g_ n }{ ds } = `\beta_ n ( g _ n ) , \quad \begin{cases}
+		\beta_ n > 0 & \text{ in the IR } \\
+		\beta _ n < 0 & \text{ otherwise }
+	\end{cases}
+\] Recall, that our leading order 
+contributions for our coupling constants are given by 
+\[
+ \mu ^ 2 ( \zeta ) = \zeta ^ 2 ( \mu _ 0 ^ 2  + ag_0 ), \quad
+ g ( \zeta ) = \zeta ^{ 4 - d  } ( g_0 - b g_0^ 2 ) 
+\] where our constants are given by 
+\[
+	a = 12 \int_{ \Lambda / \zeta } ^ \Lambda \frac{  d^ d q }{ ( 2 \pi ) ^ d }
+	\frac{1}{q ^ 2 + \mu _ 0 ^ 2}, \text{ and } , \quad
+	b = 36 \int _{ \Lambda / \zeta } ^  \Lambda \frac{ d ^ d q }{ 
+	( 2 \pi ) ^ d  } \frac{1}{( q ^ 2 + \mu _ 0 ^ 2 ) ^ 2 }
+\] We differentiate these things with resepct to $ \zeta $. 
+\[
+	\int _{ \Lambda e ^{ - s} } ^ \Lambda dq \, f ( q) 
+	\simeq \left[  \Lambda - \Lambda e^{ - s}  \right] f ( \Lambda ) 
+	\simeq \Lambda f ( \Lambda ) s \implies 
+	\frac{ d }{ ds } \int _{ \Lambda e ^{ - s} } ^ \Lambda 
+	dq \, f ( q ) = \Lambda f ( \Lambda ) 
+\] In four dimensions, we integrate this 
+thing in terms of spherical polars so that 
+we have that our coupling constants are solved by 
+\[
+ \frac{d \mu ^ 2 }{ ds } = 2 \mu ^ 2 + \frac{ 3g }{ 2 \pi ^ 2 } 
+ \frac{ \Lambda ^ 4 }{ \Lambda ^ 2 + \mu ^ 2  } \text{ and } \quad
+ \frac{ dg }{ ds } = \frac{ - 9 }{ 2 \pi ^ 2 } \frac{ \Lambda ^ 4 }{
+ ( \Lambda ^ 2 + \mu ^ 2 ) } g ^ 2  
+\] This gives us differential equations that 
+we can solve. 
+
+\subsection{$ \epsilon $ Expansions} 
+We learned that our $ \phi ^ 4 $ interaction 
+is irrelevant for $ d \geq 4 $ and relavant otherwise. 
+Now, lets employ a strange trick and perturb our
+dimensions, for example by setting 
+\[
+ d  = 4 - \epsilon  
+\] Returning to our previous beta functions 
+which we calculated in four dimensions, generalising 
+these to beta functions in $ d $ dimensions gives us 
+new differential equations 
+\begin{align*}
+	\frac{ d \mu ^ 2 }{ ds } &=  2 \mu ^ 2 + 
+	\frac{ 12 \Omega_{ d- 1 } }{ ( 2 \pi ) ^ d } \frac{ \Lambda ^ 4  }{ 
+	\Lambda ^ 2 + \mu ^ 2  }  \tilde{ g } + \dots  \\
+	\frac{ d \tilde{ g }  }{ds } = 
+	\epsilon \tilde{ g } - \frac{ 36 \Omega_{ d- 1 } }{ ( 2 \pi ) ^ d }
+	\frac{ \Lambda ^ 4 }{ ( \Lambda ^ 2 + \mu ^ 2 ) ^ 2 } \tilde{ g } ^ 2 + \dots 
+\end{align*}
+We use the approximation $ \Omega_ 3  = 2 \pi ^ 2 + O ( \epsilon ) $ 
+to give approximate equations 
+ \begin{align*}
+	 \frac{ d \mu ^ 2 }{ds } \simeq & 2 \mu ^ 2 + \frac{3}{2 \pi ^ 2 } \frac{
+	 \Lambda ^ 4 }{ \Lambda ^ 2 + \mu ^ 2 } \tilde{ g } \\
+	 \frac{ \tilde{g }  }{ds  } \simeq & 
+	 \epsilon g  - \frac{ 9 }{ 2 \pi ^ 2 } \frac{ \Lambda ^ 4 }{
+	 ( \Lambda ^ 2 + \mu ^ 2 ) ^ 2 } \tilde{g } ^ 2  
+\end{align*}
+From these things, we have the Gaussian 
+fixed point we derived before, but 
+we also have a new fixed point given by 
+\[
+ \mu _{ * } ^ 2 = - \frac{3 }{ 4 \pi ^ 2 } \frac{ \Lambda ^ 4 }{ 
+ \Lambda ^ 2 + \mu _ * ^ 2 } \tilde{ g } _ * , \quad 
+ \tilde{ g } _ * = \frac{ 2 \pi ^ 2 }{ 9 } \frac{ ( \Lambda ^ 2 + \mu _ * ^ 2 ) ^ 2 }{
+ \epsilon } 
+\] To leading order in $\epsilon $, our solutions for these 
+fixed points are 
+\[
+ \mu _ * ^ 2 =  - \frac{1}{6 } \Lambda  ^2 \epsilon , \quad 
+ \tilde{ g } _ *  = \frac{ 2 \pi ^ 2  }{ 9 }  \epsilon 
+\] 
+\subsubsection{Wilson-Fisher Fixed Point} 
+We now work perturbatively 
+to understand flows near this fixed point. 
+We write out 
+\[
+ \mu ^ 2 = \mu ^ 2 _ * , \quad 
+ \tilde{ g } = \tilde{ g } _ * + \delta \tilde{ g }    
+\]  We use 
+the matrix method to expand this out 
+as 
+\[
+ \frac{d }{ ds } \begin{pmatrix} \delta \mu ^ 2 \\ 
+ d \tilde{ g } \end{pmatrix}  = \begin{pmatrix}  
+ 2 - \frac{\epsilon}{3  } & \frac{ 3 }{ 2 \pi ^ 2 } \Lambda ^ 2 
+ ( 1 + \frac{\epsilon }{ 6 } )  \\ 
+ 0 & - \epsilon  \\ \end{pmatrix} \begin{pmatrix} \delta \mu ^ 2 \\
+ \delta \tilde{ g } \end{pmatrix} 
+\] This gives us that 
+our scaling dimension coefficients 
+are, to first order in $ \epsilon $, 
+that 
+\[
+	\Delta _ t = 2 - \frac{ \epsilon }{ 3 } + \mathcal{ O } ( \epsilon ^2 ) , 
+	\quad \Delta _g = - \epsilon + \mathcal{ O  } ( \epsilon ^ 2 )  
+\] 
+
+\subsubsection{Revisiting critical exponents} 
+Expanding out our critical exponents, 
+we have that 
+\begin{align*}
+	t \to \zeta ^{ \Delta _ t  }  t & = e^{ s \Delta _ t } t  \\
+	\xi \sim t ^{ - \nu } & \nu = \frac{1 }{ \Delta _ t } = \frac{1}{2 } 
+	+ \frac{ \epsilon }{ 12 } 
+\end{align*}
+From our old scaling relations, we have that 
+\[
+ c \sim t ^{ - \frac{ \epsilon }{ 6}  }, \quad 
+ \Delta _{ \phi } \sim \frac{ d - 2}{2 }  = 1 - \frac{ \epsilon   }{ 2 }, 
+ \quad \beta = \frac{1}{2 } - \frac{ \epsilon }{ 6 }, \quad 
+ \gamma =  1 + \frac{ \epsilon }{ 6 } , \quad
+ \delta = 3 + \epsilon 
+\] We've made a small perturbation, set this perturbation 
+to be one, themn recovered our exponents. 
+Now, in the case when $ d =  2 $, there's 
+no price to be paid for adding $ \phi $ since 
+$ \phi $ has zero dimension. 
+Our free energy looks like 
+\[
+ F [ \phi ] = \int d ^ d x \left[  
+ \frac{1}{2 } ( \nabla \phi ) ^ 2  + g_{ 2 ( n + 1 )} \phi ^{ 2 ( n + 1 ) }\right] 
+\]
+This gives us something called conformal symmetry. 
+This means that our theory is scale invariant, 
+under transformations 
+\[
+ \vec{x} \to \lambda \vec{x}
+\] We can enhance this type of symmetry 
+from 
+\[
+	\vec{X} \to \tilde{\vec{X} } ( \vec{x} )  , \quad 
+	\frac{\partial \tilde{ x } ^ i  }{\partial  x_ k }
+	\frac{\partial  \tilde{ x } _ j  }{\partial  x _ l } \delta _{ ij }
+	= \phi ( \vec{x} ) \delta _{ kl }
+\]  This motivates the idea of 
+conformal transformations 
+\[
+	\tilde{ x } ^ i = \frac{x ^ i - ( \vec{x} \cdot  \vec{x} ) a ^ i }{
+	1 - 2 ( \vec{x} \cdot  \vec{a} ) + ( \vec{a} \cdot  \vec{a} ) ( \vec{x} \cdot  \vec{x} )  } 
+\] 
+

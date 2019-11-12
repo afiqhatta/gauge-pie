@@ -1,0 +1,24 @@
+\subsection{Switching over to the Hamiltonian Formalism} 
+In quantum mechanics, we're already used to using the Hamiltonian $H$ to investigate the energy spectrum and energy eigenstates of a system. Right now, we'll build a way to switch over from our current Lagrangian understanding of a scalar field to a derivation of the associated Hamiltonian. To do this, we need to define what conjugate momenta, $ \pi $ is. Conjugate momenta is defined as 
+
+\[ \pi  = \frac{ \partial \mathcal{L} } { \partial \dot{ \phi} } \] 
+where $\dot{ \phi } $ is the partial derivative of our field with respect to time. Perhaps some of our intuition about this is as follows. If we were given the Lagrangian $L = \frac{ 1}{ 2} \mathbf{ x} \cdot \mathbf{ x}  - V ( \mathbf{ x} ) $ in the discrete particle case, then our conjugate momenta is given by \[ \pi = \frac{ \partial \mathcal{ L } }{ \partial \dot{\mathbf{x}}} \] which is in this case is $ \dot{\mathbf{x}} $, the expression for our standard notion of momentum with unit mass. 
+
+In the discrete particle case, our Hamiltonian is related to our Lagrangian by a Legendre transform, where \[ 
+H = \sum_i \mathbf{\pi} \cdot  \dot{ \mathbf{ x}} - L \] Our sum over $i$ 
+denotes the sum of over particles in the system. However, in field theory, we make this continuous by integrating over space instead, and then writing in the Lagrangian density in the integrand. Thus, our expression for the Hamiltonian in field theory is \[ H = \int d^3 x \, \, \pi( x) \phi(x)  - \mathcal{ L } \] 
+
+In the case of the Lagrangian density, we can calculate our conjugate momenta 
+\[ 
+\mathcal{L}  = \frac{ 1} {2} \dot{\phi}^2  - \frac{1}{ 2} (\nabla \phi)^2  - V( \phi ), \quad \phi  = \dot{\phi} 
+\] 
+This gives ys an expression for our Hamiltonian density $\mathcal{H}$, which is defined as the integrand of $H = \int d^3 x \mathcal{H} $. 
+\[ 
+\mathcal{H} = \frac{1}{ 2} ( \pi^ 2 + ( \nabla \phi)^ 2 ) + V(\phi ) 
+\] 
+
+Completely analogously to Hamilton's equations in classical dynamics, we have Hamilton's equations defined in terms of partial field derivatives of our Hamiltonian density. 
+\[ 
+\dot{\phi} = \frac{ \partial  \mathcal{H}}{ \partial \pi }, \quad \dot{\pi} =  - \frac{ \partial \mathcal{H}}{ \partial \phi} 
+\] Our Hamiltonian formalism is not obviously a Lorentz invariant theory, but it is!
+

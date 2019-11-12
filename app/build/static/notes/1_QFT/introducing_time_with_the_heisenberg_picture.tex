@@ -1,0 +1,61 @@
+\subsection{Introducing time with the Heisenberg picture}
+So far, in the Schrodinger picture, we aren't entirely confident that our operators are manifestly Lorentz invariant. In the Schrodinger picture, operators don't depend on time but states do since the evolve according to the equation 
+\[	 
+i \frac{ d \ket{ \ve{ p } } }{ dt }  = H \ket { \ve{ p} }  = E_\ve{ p } \ket{ \ve{ p } } 
+\] This however, is entirely equivalent to placing time dependence on operators instead of states, and force operators to evolve according to 
+\[ 	
+O_H( t )  = e^{ i H t } O_s   e^{ - i H t } 
+\] where $ O_s $ is our Schrodinger picture operator which coincides with our Heisenberg picture operator at $t = 0$. At a fixed time, substituting this expressions now give us fixed time commutation relations. Recall that 
+\[ 	
+[ U A U^{ - 1}, U BU^{ - 1} ] = U[ A , B ] U^{ -1 } 
+\] Application of this identity yields us the fixed time commutation relations 
+\[
+[ \phi ( \ve { x} , t ), \phi( \ve{ y } , t ) ]  = [ \pi ( \ve{ x} , t ) , \pi ( \ve{ y}, t ) ] = 0, \quad  [ \phi( \ve{ x}, t ), \pi ( \ve{ y }, t ) ] = i \delta ( \ve{ x -y } ) 
+\] 
+Taylor expanding out we have 
+\[
+O_H(t + \delta t ) = 1 + \delta t i[H, O_\mathcal{H} ( t) ] + \dots
+\]
+so operators obey the Heisenberg equations of motion, that 
+\[ 	
+i \frac{ d O_H}{ dt }  = i [ H, O_H ] 
+\] We can use this to calculate our time derivatives of our operators, to get $\dot{ \pi}$ and $\dot{ \phi } $. We can then relate $\pi = \dot{ \phi } $ to obtain the Klein Gordon equation. For notation purposes, we write 
+\[ 
+\psi ( x) := \phi( \ve{ x} , t ) \] 
+We can check, by computing the commutator $[ a_\ve{ p }, e^{ -i H t } ] $, and $[ a_\ve{ p }^\dagger, e^{ -i H t } ] $, that 
+\begin{align*} 
+e^{i H t} a_\ve{ p } e^{ - iH t } &= e^{ - i E_\ve{ p} t } a_\ve{ p} \\
+e^{i H t} a_\ve{ p }^\dagger  e^{ - iH t } &= e^{ i E_\ve{ p} t } a_\ve{ p} 
+\end{align*}   Hence, we have 
+\[
+\phi ( x)  = \intp \frac{ 1 }{ \sqrt { 2 E_\ve{ p } } } (\ann{p}e^{ -i p \cdot x }  + \crea{ p } e^{ i p \cdot x } ) 
+\] 
+
+
+with this we can calculate $\dot{\phi}$ amd $\dot{\pi}$. (Insert section to check that this recovers the relativistic Klein Gordon equation). 
+We promote $\phi(\mathbf{x}), \pi(\mathbf{x})$
+to adopt time dependence, so we write 
+\[
+\phi(\mathbf{x}, t) = \phi(x) 
+\] and similiarly with $\pi(x)$. 
+
+Our Hamiltonian which didn't depend on time was\[ H = \int \frac{d^3 x }{(2 \pi)^3} a_{\mathbf{p}}e^{i \mathbf{p} \cdot \mathbf{x}}+ a_{\mathbf{p}}^\dagger e^{-i \mathbf{x} \cdot \mathbf{p}}
+\] 
+but to calculate the time dependent Hamiltonian we'd need to calculate 
+\[ e^{i H t }a_\mathbf{p} e^{ - i H t}, \quad e^{iHt} a_\mathbf{p}e^{ - i H t} \]
+
+The first operator is only non-zero when we contract it on both sides for the configuration 
+\[ \bra{0}e^{i H t}a_{\mathbf{p}} e^{ - iHt} \ket{\mathbf{p}},\]  and this gives us 
+\[ \bra{0}e^{iH t }a_{\mathbf{p}}e^{- iH t }\ket{\mathbf{p}} = e^{ - i E_{\mathbf{p}} t} \] 
+thus our conjugated operator is 
+\[ e^{iHt}a_\mathbf{p}e^{ - iHt}  = a_{\mathbf{p}}e^{ -i E_\mathbf{p}t} \] and similarly we have that 
+\[ e^{ iHt}a_\mathbf{p}^\dagger e^{ - iHt}  = a_{\mathbf{p}}^\dagger e^{i E_\mathbf{p} t} \] 
+
+Since $ p  = (E_\mathbf{p}, \mathbf{p})$, altogether this gives our expression for our scalar field 
+\[
+\phi (x) = \int \frac{d^3 x }{(2 \pi)^3} \frac{1}{\sqrt{E_\mathbf{p}}} \left( a_\mathbf{p}e^{ -i p \cdot x} + a_\mathbf{p}^\dagger e^{i p \cdot x} \right) 
+\]
+
+
+\pagebreak 
+

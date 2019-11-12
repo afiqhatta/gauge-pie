@@ -1,0 +1,117 @@
+\subsection{Promoting fields to operators} 
+From our definitions for position and momentum operators in the one dimensional case, we can generalise this notion to scalar and conjugate momentum fields. We do this by expanding over all modes, in what looks like a Fourier decomposition. Another motivation for the following definitions is the fact that our operators should be hermitian, which is an extra reason for why we've included terms for both operators.
+\[ 
+\scal{x}  = \intp \frac{ 1 }{  \sqrt{ 2 \freq{ p}}  } \left( \ann{p} \mode{p}  + \crea{ p} \nmode{p} \right) 
+\] 
+Again using the form of momentum in 1 dimensional quantum mechanics to motivate definitions, we have a definition for conjugate momentum in terms of Fourier modes as well. This is given by 
+\[ 
+\mom{x} = \intp ( -i )  \sqrt{ \frac{ \freq{p} }{ 2 } } \left( \ann{p} \mode{p} - \crea{p} \nmode{p} \right) 
+\] This procedure is called second quantization, we've reconstructed the scalar and momentum fields completely in terms of and infinite amount of simple harmonic oscillators in momentum space. Again, just as in quantum mechanics, we should impose the commutation relations that 
+\[ 
+[ \scal{ x}, \scal{y} ] = [ \mom{x},  \mom{y}  ]  = 0, \quad [ \scal{ x}, \mom{y} ] =i  \delta^3 ( \ve{x - y } ) 
+\]
+However, there's an equivalence here which we'll prove, which is that if we impose that our commutation relations in terms of $\ann{p}$ and $\crea{p}$ as 
+\[ 
+[ \ann{ p}, \ann{q } ] = [ \crea{p}, \crea{q} ] = 0, \quad [ \ann{p}, \crea{q} ] = ( 2 \pi)^3 \delta^3 ( \mathbf{p - q} ) 
+\] then this induces the commutation relations in terms of $\scal{x}$ and $\mom{x}$, and vice versa. 
+
+\begin{thm} 
+The commutation relations above are equivalent to each other. 
+
+\begin{proof} 
+We'll prove first that the commutation relations on our scalar and momentum fields imply the commutation relations on the annihilation and creation operators. To do do this, we need sensible expansions of these. One can verify with our standard delta function identity that 
+\begin{align*} 
+\int d^3 x \,  \scal{x} \nmode{p}  &= \frac{ 1}{ \sqrt{ 2 \freq{p } } } \ann{p} +  \frac{ 1}{ \sqrt{ 2 \freq{p } } } \crea{ -p} \\
+\int d^3 x \,  \mom{x} \nmode{p} &=  - i \sqrt{ \frac{ \freq{ p}}{ 2} } \ann{p}  + i \sqrt{ \frac{ \freq{ p}}{ 2} }\crea{ p } 
+\end{align*} 
+Solving this system gives us an expression for $\ann{ p} $. Then, contracting the integral but with $ \mode{p} $ instead gives us $\crea{ p }$. Hence, we have the expressions: 
+\begin{align*} 
+\ann{p }  &= \sqrt{ \frac{ \freq{ p } }{2} } \int d^3 x   \, \scal{ x} \nmode{ p }  + i \frac{ 1} { \sqrt { 2 \freq{p}}}  \int d^3 x \, \mom{x} \nmode{ p }  \\
+\crea{p} &= \sqrt{ \frac{ \freq{p}}{ 2} } \int d^3 x \, d^3 x \, \scal{x} \mode{p}  - i \sqrt{ \frac{ 1}{ 2 \freq{ p }}} \int d^3 x \, \mom{x} \mode{ p } 
+\end{align*} 
+Now we integrate these over two variables to get 
+\begin{align*} 
+[\ann{p}, \crea{q} ] & = [  \sqrt{ \frac{ \freq{ p } }{2} } \int d^3 x   \, \scal{ x} \nmode{ p }  + i \frac{ 1} { \sqrt { 2 \freq{p}}}  \int d^3 x \, \mom{x} \nmode{ p }  \\
+&, \sqrt{ \frac{ \freq{q}}{ 2} } \int d^3 y \, \scal{y} e^{  i \mathbf{y } \cdot \mathbf{q} }  - i \sqrt{ \frac{ 1}{ 2 \freq{ q }}} \int d^3 y \, \mom{y} e^{i \mathbf{ y} \cdot \mathbf{ q} }  ] 
+\end{align*} 
+We pull the commutators by linearity into the integral. Now, to make our lives easier, since the scalar fields commute with other scalar fields, and since the momentum fields commute with other momentum fields, we have that the above expression 
+\begin{align*} 
+[\ann{p}, \crea{q} ]  & =  - \frac{ i }{ 2} \sqrt{ \frac{ \freq{p}}{ \freq {q} } } \int d^3 x d^3 y \,  \nmode{p} e^{ i \mathbf{q} \cdot \mathbf{ y } } [ \scal{x}, \mom{y } ]  + \frac{ i }{ 2} \sqrt { \frac{ \freq{q} } { \freq{p}}} \int d^3 x d^3 y \, e^{ i \mathbf{q} \cdot \mathbf{y } }  \nmode{p} [ \mom { x} , \scal{y} ] \\
+&= - \frac{ i }{2}  \sqrt{ \frac{ \freq{p}}{ \freq {q} } } \int d^ 3 x d^3 y\,  i \delta ( \ve{ x - y} ) \nmode{p} e^{  i \mathbf{q} \cdot \mathbf{y } }  + \frac{ i }{ 2} \sqrt { \frac{ \freq{q} } { \freq{p}}} \int d^ 3 x d^ 3 y\,   - i \delta ( \ve{ x -y } ) e^{ i \mathbf{q} \cdot \mathbf{y } } \nmode{p } \\
+& = \frac{ 1} { 2} \sqrt { \frac{ \freq{ p } } { \freq{q}}} \int d^3 x\,  \mode{ (q-p)} + \frac{ 1} {2} \sqrt { \frac{ \freq{q}}{ \freq{p}}} \int d^3 x \, \nmode{(p-q)  } \\
+&= \frac{ 1}{ 2} \sqrt{ \frac{ \freq{p}} { \freq{q}}} \delta( \ve{ q - p  } ) ( 2 \pi ) ^3  + \frac{ 1}{ 2} \sqrt{ \frac{ \freq{q} } { \freq{p }}} \delta ( \ve{ p - q } ) ( 2 \pi ) ^  3 \\
+& = \delta ( \ve{ p - q } ) ( 2 \pi )^ 3, \quad \text{ since } \freq{q} = \freq{ p} \text { when } \ve{p}  = \ve{ q } 
+\end{align*} 
+
+Similarly, in the opposite direction, we have that 
+\begin{align*} 
+[ \scal{x}, \mom{y} ] &= \int \frac{ d^ 3 p d^3 q } { ( 2\pi) ^ 3 } \, ( -i ) \sqrt{ \frac{ \freq{ q } } { \freq{ p } } } \left( - [ \ann{p}, \crea{ q} ] e^{ i \mathbf{ x} \cdot \mathbf{p}  - i \mathbf{ q} \cdot \mathbf{ y } } + [ \crea{ p } , \ann{ q} ] e^{  - i \mathbf{ p } \cdot \mathbf{ x } + i \mathbf{ q} \cdot \mathbf{ y}} \right) \\
+& = \intp (  - \frac{ i } { 2} ) \left(  - e^{ i \mathbf{p } \cdot ( \ve{ x - y} ) } - e^{ i \mathbf{ p } \cdot ( \ve{ x -y}  )   } \right) \\
+&= i \delta ( \ve{x - y } )  
+\end{align*} 
+\end{proof} 
+\end{thm} 
+
+\subsubsection{Calculating the Hamiltonian} 
+Now that we've promoted our scalar and momentum fields as an infinite expansion of annihilation and creation operators, we can start computing objects of interest in terms of Fourier expansions of these operators as well. We'll start by calculating the most important quantity, our Hamiltonian. This is given by, as we calculated earlier, 
+\[ H  = \int d^3 x \left( \frac{1}{2} \Pi^2 + \frac{1}{2} \left( \nabla \phi \right)^2 + \frac{1}{2}m^2 \phi^2  \right) \] 
+We go term by term, and first calculate the most tricky term
+\begin{align*} 
+\int d^3 x \, (\nabla \phi)^2 &= \int \frac{d^3 x d^3 p d^3 q}{(2 \pi )^3 } - \frac{1}{2\sqrt{\omega_\mathbf{p} \omega_\mathbf{q}}} \mathbf{p} \cdot\mathbf{q} \left( a_\mathbf{p} e^{i \mathbf{p} \cdot \mathbf{x}} - a_\mathbf{p}^\dagger e^{-  i \mathbf{x} \cdot \mathbf{p}} \right)\left(a_\mathbf{q}e^{i \mathbf{q} \cdot \mathbf{x}} - a_\mathbf{q}^\dagger e^{ - i \mathbf{q} \cdot \mathbf{x}}\right) \\
+& = \int \frac{d^3 x d^3 p d^3 q}{(2 \pi )^3 } - \frac{1}{2\sqrt{\omega_\mathbf{p} \omega_\mathbf{q}}} \mathbf{p} \cdot \mathbf{q} (a_\mathbf{p} a_\mathbf{q} e^{i (\mathbf{q} + \mathbf{q}) \cdot \mathbf{x}} \\
+& + a_\mathbf{p}^\dagger a_\mathbf{q}^\dagger e^{ - i (\mathbf{p} + \mathbf{q}) \cdot \mathbf{x}}  - a_\mathbf{p}^\dagger a_\mathbf{q}e^{i ( \mathbf{q} - \mathbf{p}) \cdot \mathbf{x}} - \mathbf{q}^\dagger a_\mathbf{p}e^{i (\mathbf{p} - \mathbf{q}) \cdot \mathbf{x}} ) 
+\end{align*} But recall that we can integrate over $\mathbf{x}$ first, and make use of the identity 
+\[
+\int d^3x e^{i \mathbf{a} \cdot \mathbf{x}} = (2 \pi )^3 \delta ( \mathbf{a})
+\]
+This means that the above expression is equal to 
+\begin{align*}
+\int d^3 x \, (\nabla \phi)^2&= \int \frac{d^3 p}{(2 \pi )^3} ( - 1) \frac{\mathbf{p} \cdot \mathbf{p}}{2 \omega_\mathbf{p}} \left( a_\mathbf{p} a_{ - \mathbf{p}}  - a_\mathbf{p}^\dagger a_{\mathbf{p}}  - a_{\mathbf{p}}^\dagger a_\mathbf{p} + a_\mathbf{p}^\dagger a_{ - \mathbf{p}}^\dagger \right) \\
+&= \int \frac{d^3 p}{(2 \pi)^3 } \frac{ \mathbf{p}^2}{ 2 \freq{ p } }  \left( a_{\mathbf{p}}^\dagger a_{\mathbf{p}} + a_\mathbf{p} a_\mathbf{p}^\dagger \right)
+\end{align*}
+Going into the second line, we've vanished the first and last terms since the function depends on just the modulus of $p$, but taking the change of variables from $\mathbf{ p} \rightarrow \ve{p} $ means that the expression is equal to the negative of itself. It's easy to show that 
+\[\int d^3 \Pi^2  = 0, \quad \int d^3  x \, \frac{ 1}{ 2} m^2 \phi^2 =  \int \frac{d^3 p}{(2 \pi)^3 } \frac{ m^2}{ 2 \freq{ p } }  \left( a_{\mathbf{p}}^\dagger a_{\mathbf{p}} + a_\mathbf{p} a_\mathbf{p}^\dagger \right)  \]
+Hence our final expression for our full Hamiltonian is, using the equation for our dispersion relation and commuting the annihilation and creation operators, 
+\[
+H =  \int \frac{d^3 p}{(2 \pi)^3 } \frac{ \mathbf{p}^2 + m^2 }{ 2 \freq{ p } }  \left( a_{\mathbf{p}}^\dagger a_{\mathbf{p}} + a_\mathbf{p} a_\mathbf{p}^\dagger \right) = \int d^3 p \frac{\omega_\mathbf{p}}{(2 \pi)^3 } \left( a_\mathbf{p}^\dagger a_\mathbf{p} + \frac{1}{2}(2 \pi )^3 \delta (0) \right)
+\] 
+
+\subsubsection{Infinity issues with the Hamiltonian} 
+Let's calculate the ground state of this Hamiltonian by letting it hit zero, to get $H \ket{ 0 } $. When we hit the annihilation operator in the first term, the term vanishes. Thus, we're only left with the second term. Since $\delta^ 3 ( 0 ) $ is constant, we naively pull this out of the integral to get 
+\[ 
+H \ket{0 }  = 4 \pi^3 \delta ( 0 ) \int d^3 p\,  \freq{p }, \quad \freq{ p }  = \sqrt{ | \mathbf{ p } |^2 + m^2 }
+\] 
+However, since we're integrating over all momentum space, we get that $\freq{p} \rightarrow \infty $, and hence the integral diverges (let's ignore the problems associated with the delta function for now)! This is called a high-frequency, or ultraviolet, divergence. However, since we're doing non-gravitational physics, all we care about are energy differences. So, to subtract of this infinity, we could've naively wrote (as similar in the case of the one dimensional harmonic oscillator), that upon reordering of our indices we have that 
+\[ 
+H = \intp \freq{p } \crea{p} \ann{p} \implies H \ket{ 0 } = 0 
+\] So with reordering, we have that zero point energy is just zero. One way to interpret this is that in QFT, we have 'operator ambiguity' in a sense that all operators are defined up to a reordering. Now, we're in a place to properly define normal ordering. 
+
+\begin{defn} 
+We denote a normal ordered string of operators, denoted 
+\[ 
+: \scal{ x_1 } \scal{x_2 } \dots \scal{x_n} : 
+\] to be the same operator but with all annihilation operators pulled to the right. 
+\end{defn} 
+Applying normal operators has the effect of \textbf{removing unwanted infinities} in our expression. It's easy to check that 
+\[ 
+: H :  =\intp \freq{p } \crea{p} \ann{ p } 
+\] 
+
+\begin{thm} 
+Our normal ordered Hamiltonian raises and lowers energy as in QM. 
+With this definition, our commutation relations with raising and lowering operators are now completely analogous to the case we saw in 1 dimensional QM. 
+\[ 
+[ H,  \crea{ p } ]  = \freq{p} \crea{ p }, \quad [ H, \ann{ p } ] = - \freq{p } \ann{ p } 
+\] 
+\begin{proof} 
+We substitute in our definitions to find that 
+\begin{align*} 
+[ H, \crea{ p } ] &= \int \frac{ d^3 q }{ ( 2 \pi )^ 3 } \freq{ q} [ \crea{ q } \ann{q} , \crea{ p } ] \\
+& =  \int \frac{ d^3 q }{ ( 2 \pi )^ 3 } \freq{q} \crea{q} [ \ann{ q}, \crea{ p} ] \\
+&=   \int \frac{ d^3 q }{ ( 2 \pi )^ 3 } \freq{ q } \crea{ q} ( 2 \pi )^3  \delta ( \ve{ q - p } ) \\
+&= \freq{ p } \crea{ p } 
+\end{align*} 
+The other case is completely similar!
+\end{proof} 
+\end{thm} 
+

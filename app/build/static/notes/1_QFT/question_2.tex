@@ -1,0 +1,21 @@
+\subsection{Question 2} 
+In this question we're trying to derive the Klein-Gordon equation, but via the Heisenberg picture for operators. This is when operators evolve in time instead of states. In the Heisenberg picture, our equation for time evolution for an operator $\mathcal{O}_H$ is 
+\[ 
+\frac{ d \mathcal{O}_H}{dt}  = i [H, \mathcal{O}_H] 
+\] 
+
+First, let's look at computing 
+\[ \dot{\phi}(x)  = i [ H, \phi(x) ] \] 
+The Hamiltonian associated with our free field Lagrangian is \[ H = \int d^3 y \, \frac{1}{2]} \pi(y)^2 + \frac{1}{2} ( \nabla \phi(y))^2 + \frac{1}{2} m^2 \phi(y)^2 \] 
+So, to compute the commutator required, we need to remind ourselves of the commutation relations between the our scalar field $\phi(x)$ and our conjugate momentum field $\pi(x)$.  This our entirely analogous to those we know from quantum mechanics: 
+\begin{align*} 
+[\phi(x), \phi(y) ] &= [ \pi(x), \pi(y) ] = 0 \\
+[\phi(x), \pi(y) ] & = \delta^3 (\mathbf{x} - \mathbf{y}) 
+\end{align*} 
+I just wanted to note that here, when we write $\phi( x)$, this is condensed notation for $\phi( \mathbf{x}, t )$, where $\mathbf{x}$. Now, when we bring the commutator inside the integral to calculate $[H, \phi(x) ] $, all functions which are functions of $\phi (x) $ disappear under the commutator. The only expression we're left with is 
+\[ \dot{\phi}(x) = \frac{i}{2} \int d^3 y \, [ \pi(y)^2, \phi(x) ] \] 
+However, we can apply the 'product rule' for operator commutators which is \[ [AB, C] = A[B, C] + [A, C]B \] 
+so that the above expression reads as follows: 
+
+
+

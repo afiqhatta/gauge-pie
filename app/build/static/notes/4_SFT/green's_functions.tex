@@ -1,0 +1,37 @@
+\section{Green's functions} 
+Consider a multi-dimensional Gaussian integral: 
+\[
+I = 	\int_{ - \infty } ^ \infty d^ n y \, e^{ - \frac{1}{2 } y^ T  \cdot   G^{ - 1 } \cdot  y  }
+\] Notice that we can diagonalise this object 
+in the eigenbasis to give that 
+\[
+	I = det ^{ \frac{1}{ 2}  } ( 2\pi G ) 
+\] Similarly, we can add a 'source' term to the integral and shift the variables to get
+\[
+	I_{ B } = \int_{ - \infty } ^ \infty d^ n y \, e ^{ - \frac{1}{2 } y \cdot  G^{ -1 } \cdot  y + \vec{B} \cdot  y } = det ^{ \frac{1}{2 } } ( 2 \pi G ) e^{ \frac{1}{2 } \vec{B} ^ T \cdot  G \cdot  \vec{B}}
+\] From this result our expression for free energy 
+\[
+	F [ \phi ( \vec{x} ) ] = \int d^ d x\, \left[  \frac{1}{2 } \gamma ( \nabla \phi ) ^  2 + \frac{1}{2 } \mu ^ 2 \phi ^ 2 + \vec{B} \phi  \right]  
+\] can be rewritten by parts with a dummy integral so that 
+\[
+	F [ \phi ( x) ] = \int d^ d x \, d^ d y \, \frac{1}{2 } \phi ( \vec{x} ) G ^{ -1 } ( \vec{x}, \vec{y} ) \phi ( \vec{y} ) + \int d^ d x\, \vec{B} ( \vec{x} ) \phi ( \vec{x} ) 
+\] where we in this expression 
+\[
+	G ^{ -1 } ( \vec{x} , \vec{y} ) = \delta ^ d ( \vec{x} - \vec{y} ) ( - \gamma \nabla ^ 2_y + \mu ^ 2)  
+\] We also have 
+\[
+	( - \gamma \nabla ^ 2 _ x + \mu ^ 2 ) G ( \vec{x}, \vec{y} ) = \delta^ d ( \vec{x} - \vec{y} ) , \quad G ( \vec{x}, \vec{y} ) = \int \frac{ d^ d k }{ ( 2 \pi ) ^ d } \frac{ e^{ - i \vec{k} \cdot ( \vec{x} - \vec{y} ) } }{\gamma k ^ 2 + \mu ^ 2 }
+\] Be careful with inverting things! We need to integrate over them. 
+Hence our correlation function satisfies a differential equation 
+\[
+	( - \gamma \nabla ^ 2 _ x + \mu ^ 2 ) \left< \phi ( \vec{x} ) \phi ( 0 )  \right> = \frac{1}{\beta } \delta^ d ( \vec{x} ) 
+\] Away from the origin, this differential equation tells us that away from
+the origin our fluctuations satisfy the Euler Lagrange equations. 
+An aside on using Green's functions. 
+If we have 
+\[
+	\mathcal{ O }( x) F( x) = H ( x) 
+\] If we can solve $ \mathcal{ O } ( x) G ( x, y) = \delta ( x - y ) $, then setting
+\[
+	F ( x) = \int dy H ( y ) G ( x - y ) \implies \mathcal{ O }( x) F( x) = H ( x) 
+\]

@@ -1,0 +1,48 @@
+\subsection{Relation to critical exponents} 
+Recall that our correlation length 
+was derived as a function of our critical temperature 
+\[
+ \xi \sim t ^{  - `v }
+\] However, since $ \xi $ is a length scale, this 
+means it has scaling coefficient $ \Delta_\xi = - 1$. 
+Assuming that our temperature scales like 
+ \[
+ t \to \xi^{ \Delta_t } t
+\] we have that $ \Delta_t = \frac{1}{`v }$. 
+Now consider the free energy without a magnetic field. 
+At leading order, we have that 
+\[
+	F_{ \text{thermo } } ( t)  = \int d^ d x f( t) \implies f( t)  \sim t ^{ d \nu }
+\] From this we can read off variables of interest. 
+We have that 
+\[
+ c = \frac{\partial ^ 2 f }{\partial  t ^ 2 }  \sim t ^{ d \nu - 2 } \sim t ^{ - \alpha }
+\]
+
+So in summary, we have the following 
+critical exponents, 
+\begin{align*}
+	c &=  \frac{\partial  ^ 2 f }{\partial   t^ 2 } \sim t ^{ - \alpha } \implies \alpha = 2 - d \nu  \\
+	\phi  & \sim t ^ \beta \implies \beta = \left(  \frac{ d - 2 + \eta }{2} \right) \nu    \\
+	\chi & \sim t ^{ - \gamma } \implies \gamma = \nu ( 2 - \eta ) \\
+	\phi & \sim B ^{ \frac{1}{ \delta } } \implies \delta = \frac{ d + 2 - \eta }{ d - 2 + \eta }
+\end{align*}
+
+This is great because we've reduced the 
+number of parameters which we need to measure! We have 
+four observables but only need to determine $ \eta $ and $ \nu $. 
+Hence, 
+our theory is useful!
+
+\begin{table}[htpb]
+	\centering
+	\caption{caption}
+	\label{tab:label}
+	\begin{tabular}{c | c c c c c c }
+		MF & $ \frac{ 4 - d }{ 2 } $ & 1 & 3 & 0 & $\frac{1}{2 } $ \\
+		$ d =  2 $ & 0  & $ \frac{1}{8 } $  & $ \frac{7}{4 } $ &  $ 15 $ & $\frac{1}{4 } $ & 1 \\
+		$ d = 3 $ & 0.11 & 0.33 & 1.24 & 4.79 & 0.04 & 0.63 \\ 
+	\end{tabular}
+\end{table}
+
+

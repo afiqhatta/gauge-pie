@@ -1,0 +1,103 @@
+\documentclass[11pt, a4paper]{article}   	% use "amsart" instead of "article" for AMSLaTeX format
+ 
+\usepackage[margin = 1.0in]{geometry}            		% See geometry.pdf to learn the layout options. There are lots.
+\geometry{letterpaper}                   		% ... or a4paper or a5paper or ... 
+\usepackage[parfill]{parskip}    		% Activate to begin paragraphs with an empty line rather than an indent
+\usepackage{graphicx}				% Use pdf, png, jpg, or eps§ with pdflatex; use eps in DVI mode
+							% TeX will automatically convert eps --> pdf in pdflatex	
+\usepackage{adjustbox}	
+\usepackage[section]{placeins}
+
+
+%% LaTeX Preamble - Common packages
+\usepackage[utf8]{inputenc}
+\usepackage[english]{babel}
+\usepackage{textcomp} % provide lots of new symbols
+\usepackage{graphicx}  % Add graphics capabilities
+\usepackage{flafter}  % Don't place floats before their definition
+\usepackage{amsmath,amssymb}  % Better maths support & more symbols
+\usepackage[backend=biber]{biblatex}
+\usepackage{amsthm}
+\usepackage{bm}  % Define \bm{} to use bold math fontsx
+\usepackage[pdftex,bookmarks,colorlinks,breaklinks]{hyperref}  % PDF hyperlinks, with coloured links
+\usepackage{memhfixc}  % remove conflict between the memoir class & hyperref
+\usepackage{mathtools}
+\usepackage[T1]{fontenc}
+\usepackage[scaled]{beramono}
+\usepackage{listings}
+\usepackage{physics}
+\usepackage{tensor}
+\usepackage{tikz}
+\usepackage{multicol}
+\usepackage{subfiles} 
+
+%% Commands for typesetting theorems, claims and other things.
+\newtheoremstyle{slplain}% name
+  {.5em} % Space above
+  {.8em} % Space below
+  {} % Body font
+  {} % Indent amount
+  {\bfseries} % Theorem head font
+  {.} % Punctuation after theorem head
+  {.1em} % Space after theorem head
+  {} % Theorem head spec (can be left empty, meaning `normal')
+
+\theoremstyle{slplain}
+\newtheorem{theorem}{Theorem}
+\newtheorem*{thm}{Theorem}
+\newtheorem*{claim}{Claim}
+\newtheorem*{example}{Example}
+\newtheorem*{defn}{Definition}
+\newtheorem*{tech}{Technique}
+\newtheorem*{question}{Questions} 
+
+\newcommand{\Lagr}{\mathcal{L}}
+\newcommand{\vc}[1]{\mathbf{#1}}
+\newcommand{\pdrv}[2]{\frac{\partial{#1}}{\partial{#2}}}
+\newcommand{\thrint}[1]{\int d^3 \vc{x} \left( {#1} \right)}
+\newcommand{\R}{ \mathbb{R}}
+\newcommand{\planck}{\hbar} 
+\author{Afiq Hatta} 
+\title{Cool stuff in General Relativity}
+\begin{document}
+\maketitle
+
+\tableofcontents
+
+\subfile{starting_off_with_non-relativistic_particles.tex}
+\subfile{exploring_different_lagrangians.tex}
+\subfile{special_relativity.tex}
+\subfile{introducing_differential_geometry_for_general_relativity.tex}
+\subfile{tangent_vectors.tex}
+\subfile{treating_tangent_vectors_as_derivatives_of_curves_on_the_manifold.tex}
+\subfile{vector_fields.tex}
+\subfile{integral_curves.tex}
+\subfile{differentiating_vector_fields_with_respect_to_other_vector_fields.tex}
+\subfile{tensors.tex}
+\subfile{a_note_about_dual_spaces.tex}
+\subfile{taking_the_lie_derivative_of_covectors.tex}
+\subfile{tensor_fields.tex}
+\subfile{differential_forms.tex}
+\subfile{the_exterior_derivative.tex}
+\subfile{integration.tex}
+\subfile{introducing_riemannian_geometry.tex}
+\subfile{_the_metric.tex}
+\subfile{connections_and_curvature.tex}
+\subfile{the_levi-civita_connection.tex}
+\subfile{parallel_transport.tex} 
+\subfile{path_deviations_and_curvature.tex}
+\subfile{derived_tensors.tex}
+\subfile{einstein_equations.tex}
+\subfile{example_sheet_1.tex}
+\subfile{question_1.tex}
+\subfile{question_2.tex}
+\subfile{question_3.tex}
+\subfile{question_5.tex}
+\subfile{question_6.tex}
+\subfile{question_7.tex}
+\subfile{question_8.tex}
+\subfile{question_9.tex}
+\subfile{question_10.tex}
+\subfile{question_11.tex}
+\subfile{example_sheet_2.tex}
+\end{document} 

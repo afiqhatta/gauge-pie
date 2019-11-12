@@ -1,0 +1,104 @@
+This is pdfTeX, Version 3.14159265-2.6-1.40.19 (TeX Live 2018) (preloaded format=latex 2019.1.15)  6 NOV 2019 00:29
+entering extended mode
+ restricted \write18 enabled.
+ %&-line parsing enabled.
+**\makeatletter\def\HCode{\futurelet\HCode\HChar}\def\HChar{\ifx"\HCode\def\HCo
+de"##1"{\Link##1}\expandafter\HCode\else\expandafter\Link\fi}\def\Link#1.a.b.c.
+{\g@addto@macro\@documentclasshook{\RequirePackage[#1,html]{tex4ht}}\let\HCode\
+documentstyle\def\documentstyle{\let\documentstyle\HCode\expandafter\def\csname
+ tex4ht\endcsname{#1,html}\def\HCode####1{\documentstyle[tex4ht,}\@ifnextchar[{
+\HCode}{\documentstyle[tex4ht]}}}\makeatother\HCode .a.b.c.\input
+
+*^^[[A^^[[A^^[[A^^[[A^^[[B^^[[B^^[[B^^[[A^^[[A
+(/usr/local/texlive/2018/texmf-dist/tex/latex/tools/.tex File ignored)
+
+! Package inputenc Error: Unicode character ^^[ (U+1B)
+(inputenc)                not set up for use with LaTeX.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+<*> ^^[
+       [A^^[[A^^[[A^^[[A^^[[B^^[[B^^[[B^^[[A^^[[A
+? 
+
+! LaTeX Error: Missing \begin{document}.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+<*> ^^[[
+        A^^[[A^^[[A^^[[A^^[[B^^[[B^^[[B^^[[A^^[[A
+? 
+Missing character: There is no [ in font nullfont!
+Missing character: There is no A in font nullfont!
+
+! Package inputenc Error: Unicode character ^^[ (U+1B)
+(inputenc)                not set up for use with LaTeX.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+<*> ^^[[A^^[
+            [A^^[[A^^[[A^^[[B^^[[B^^[[B^^[[A^^[[A
+? 
+Missing character: There is no [ in font nullfont!
+Missing character: There is no A in font nullfont!
+
+! Package inputenc Error: Unicode character ^^[ (U+1B)
+(inputenc)                not set up for use with LaTeX.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+<*> ^^[[A^^[[A^^[
+                 [A^^[[A^^[[B^^[[B^^[[B^^[[A^^[[A
+? 
+Missing character: There is no [ in font nullfont!
+Missing character: There is no A in font nullfont!
+
+! Package inputenc Error: Unicode character ^^[ (U+1B)
+(inputenc)                not set up for use with LaTeX.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+<*> ^^[[A^^[[A^^[[A^^[
+                      [A^^[[B^^[[B^^[[B^^[[A^^[[A
+? 
+Missing character: There is no [ in font nullfont!
+Missing character: There is no A in font nullfont!
+
+! Package inputenc Error: Unicode character ^^[ (U+1B)
+(inputenc)                not set up for use with LaTeX.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+<*> ^^[[A^^[[A^^[[A^^[[A^^[
+                           [B^^[[B^^[[B^^[[A^^[[A
+? 
+Missing character: There is no [ in font nullfont!
+Missing character: There is no B in font nullfont!
+
+! Package inputenc Error: Unicode character ^^[ (U+1B)
+(inputenc)                not set up for use with LaTeX.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+<*> ^^[[A^^[[A^^[[A^^[[A^^[[B^^[
+                                [B^^[[B^^[[A^^[[A
+? 
+Missing character: There is no [ in font nullfont!
+Missing character: There is no B in font nullfont!
+
+! Package inputenc Error: Unicode character ^^[ (U+1B)
+(inputenc)                not set up for use 

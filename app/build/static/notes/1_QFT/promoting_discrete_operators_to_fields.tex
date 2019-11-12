@@ -1,0 +1,27 @@
+\subsection{Promoting discrete operators to fields}
+We know from standard quantum mechanics how to find the spectrum of the quantum harmonic oscillator $H$ for unit mass, given by 
+\[
+H  = \frac{1}{2}  p^2 + \frac{1}{2} m \omega^2 q^2. 
+\]
+$p, q$ represent our momentum and position operators respectively. Last year, we promoted generalised coordinates involving position and momentum to operator values obeying commutation relations. One recalls that we have our canonical commutation relations (which we can derive by examining infinitesimal transformations)
+\[ 
+[p_a, p_b] = [q_a, q_b] = 0, \quad [q_a, p^b] = i \delta \indices{_a^b}. 
+\] 
+We can intuitively promote our scalar and momentum fields in the same way, where now a field is an operator valued function of space and time. For simplicity's sake, let's work in the Schrödinger picture where these operators don't depend on time but just space (and we push all our time dependence on states instead)
+\begin{align*}
+[\phi_a(\mathbf{x}), \pi^b(\mathbf{y})] & = i \delta^3 (\mathbf{x} - \mathbf{y}) \delta\indices{_a^b} \\ 
+[\phi_a(\mathbf{x}), \phi^b(\mathbf{y})] &= [\pi_a(\mathbf{x}), \pi^b ( \mathbf{y} ) ] = 0. 
+\end{align*}
+
+Our final goal is to compute the spectrum from our Hamiltonian derived from quantum fields. However, this is a hard thing to do. In a free theory however, at any given point in space time, the field evolves independently on other points, and so one useful thing to do is find a basis where we can diagonalise this Hamiltonian. One thing we could do is to Fourier transform $\phi(\mathbf{x} ) $ into momentum space, so that (where we'll put back in our time dependence) 
+\[
+\phi( \mathbf{x}, t ) = \int \frac{ d^3 x }{ ( 2 \pi )^3 } e^{ i \mathbf{p} \cdot \mathbf{ x} }  \phi( \mathbf{ p }, t ) 
+\]
+Substituting this into the Klein-Gordon equation by differentiating from within the integrand gives us a simple harmonic oscillator with a momentum dependent frequency, we have the equation 
+\[
+\left( \frac{ \partial}{ \partial t^ 2 } + ( \mathbf{p}^ 2 + m^2 ) \right) \phi( \mathbf{p}, t ) = 0 
+\] This is a simple harmonic oscillator vibrating at frequency 
+\[ 
+\omega_\mathbf{p} = \sqrt{ \mathbf{p}^2 + m^2 } 
+\] So, we have that for a field satisfying the free theory, at every point, we have an infinite superposition of simple harmonic oscillators!
+

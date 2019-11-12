@@ -1,0 +1,6 @@
+Quantum field theory is humanity's most successful attempt 
+(so far) to combine quantum mechanics with Einstein's theory of special relativity. 
+It solves a host of problems in quantum mechanics such as the issues of causality and
+action at a distance. 
+In quantum field theory, we don't treat particles as solid objects, but instead as 
+excitations of an oscillator. 

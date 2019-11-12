@@ -1,0 +1,6 @@
+Nature exhibits an amazing phenomena called universality, which is the 
+principle that seemingly unrelated phase transitions actually exhibit very similar 
+behaviour near critical points. The canonical example are the critical exponents in 
+magnetism and the phase transition between liquids and gases. This set 
+of notes attempts to explain this via the language of the renormalisation group - a method 
+which describes how physics changes at different length scales. 

@@ -1,0 +1,106 @@
+%! TeX program = lualatex
+\documentclass[11pt, oneside]{article}   	% use "amsart" instead of "article" for AMSLaTeX format
+\usepackage[margin = 1.1in]{geometry}            		% See geometry.pdf to learn the layout options. There are lots.
+\geometry{letterpaper}                   		% ... or a4paper or a5paper or ... 
+\usepackage[parfill]{parskip}    		% Activate to begin paragraphs with an empty line rather than an indent
+\usepackage{graphicx}				% Use pdf, png, jpg, or eps§ with pdflatex; use eps in DVI mode
+						% TeX will automatically convert eps --> pdf in pdflatex	
+\usepackage{adjustbox}	
+\usepackage[section]{placeins}
+
+%% LaTeX Preamble - Common packages
+\usepackage[utf8]{inputenc}
+\usepackage[english]{babel}
+\usepackage{textcomp} % provide lots of new symbols
+\usepackage{graphicx}  % Add graphics capabilities
+\usepackage{flafter}  % Don't place floats before their definition
+\usepackage{amsmath,amssymb}  % Better maths support & more symbols
+\usepackage[backend=biber]{biblatex}
+\usepackage{amsthm}
+\usepackage{bm}  % Define \bm{} to use bold math fontsx
+\usepackage[pdftex,bookmarks,colorlinks,breaklinks]{hyperref}  % PDF hyperlinks, with coloured links
+\usepackage{memhfixc}  % remove conflict between the memoir class & hyperref
+\usepackage{mathtools}
+\usepackage[T1]{fontenc}
+\usepackage[scaled]{beramono}
+\usepackage{listings}
+\usepackage{physics}
+\usepackage{tensor}
+\usepackage{tikz}
+\usepackage{pgfplots} 
+\usepackage{subfiles} 
+\usepackage{helvet}
+\usepackage{float}
+
+\usepackage{tikz-feynman}
+\tikzfeynmanset{compat=1.1.0}
+
+
+%% Commands for typesetting theorems, claims and other things. 
+\newtheorem{theorem}{Theorem}
+\newtheorem*{thm}{Theorem}
+\newtheorem*{claim}{Claim}
+\newtheorem*{example}{Example}
+\newtheorem*{defn}{Definition}
+
+\newcommand{\Lagr}{\mathcal{L}}
+\newcommand{\vc}[1]{\mathbf{#1}}
+\newcommand{\pdrv}[2]{\frac{\partial{#1}}{\partial{#2}}}
+\newcommand{\thrint}[1]{\int d^3 \vc{x} \left( {#1} \right)}
+\newcommand{\ve}[1]{ \mathbf{#1} } 
+\newcommand{\spint}{ \int d^d x \, } 
+\newcommand{\pdif}[2] { \frac{ \partial #1 }{ \partial #2 } } 
+\newcommand{ \R}{ \mathbb{ R} } 
+\renewcommand\vec{\mathbf}
+
+
+\title{Part III Statistical Field Theory}
+\author{Notes taken by Afiq Hatta, based on Part III lectures by Matthew McCullough}
+\begin{document}
+\maketitle
+\tableofcontents
+
+\pagebreak 
+
+\subfile{useful_resources.tex}
+\subfile{introduction.tex}
+\subfile{why_statistical_field_theory.tex}
+\subfile{phase_transitions_and_critical_exponents.tex}
+\subfile{universality.tex}
+\subfile{explaining_universality_with_the_renormalization_group_flow.tex}
+\subfile{the_ising_model_and_critical_exponents.tex}
+\subfile{the_problems_with_just_mean-field_theory.tex}
+\subfile{setting_up_the_ising_model.tex}
+\subfile{reformulating_the_above_in_terms_of_free_energy.tex}
+\subfile{using_the_landau_approach.tex}
+\subfile{a_brief_look_at_universality.tex}
+\subfile{the_landau-ginzburg_approach.tex}
+\subfile{domain_walls.tex}
+\subfile{evaluating_path_integrals_and_gaussian_path_integrals_.tex}
+\subfile{correlation_functions.tex}
+\subfile{computing_gaussian_path_integrals.tex}
+\subfile{green's_functions.tex}
+\subfile{connection_to_susceptibility.tex}
+\subfile{critical_exponents.tex}
+\subfile{the_renormalisation_group.tex}
+\subfile{basic_introduction.tex}
+\subfile{flowing_to_the_'ir'_(long_distances).tex}
+\subfile{a_second_look_at_universality.tex}
+\subfile{classifying_fixed_points.tex}
+\subfile{scaling.tex}
+\subfile{relation_to_critical_exponents.tex}
+\subfile{relevant,_irrelevant_or_marginal.tex}
+\subfile{the_gaussian_fixed_point.tex}
+\subfile{interacting_fields.tex}
+\subfile{applying_wicks_free_energy.tex}
+\subfile{feynman_diagrams.tex}
+\subfile{example_sheet_1.tex}
+\subfile{question_1.tex}
+\subfile{question_2.tex}
+\subfile{question_3.tex}
+\subfile{question_4.tex}
+\subfile{question_5.tex}
+\subfile{question_5.tex}
+\subfile{question_7.tex}
+\subfile{example_sheet_2.tex} 
+\end{document} 

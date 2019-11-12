@@ -1,0 +1,102 @@
+\subsection{Symmetries and Noether's theorem}
+We'll now take a look at the role of symmetries in this formalism. In physics, we can have multiple types of symmetries, including Lorentz symmetries, internal symmetries, gauge symmetries and supersymmetries. In terms of Lagrangians, we'll now show that every continuous symmetry of a Lagrangian density gives rise to a conserved current $j^\mu$, which satisfies the conservation condition 
+\[ 
+\partial_\mu j^\mu = 0 
+\]
+It's easy to check that, from this quantity, we can construct a conserved charge given by 
+\[ 
+Q = \int d^3 x \, j^0 
+\] 
+This is converved with respect to changes in time since 
+\[ 
+\dot Q = \int d^3 x \, \frac{ \partial j^0 }{ dt }  =  - \int d^3 x \, \nabla \cdot \mathbf{ j } \rightarrow 0 
+\] 
+where the final term goes to zero, since the divergence theorem allows us to re-express this as a surface integral. We're assuming that $j^\mu (x) \rightarrow 0 $ as $ x^\mu \rightarrow 0$. 
+What do we mean by a symmetry? An infinitesimal transformastion of our scalar field 
+\[ 
+\phi(x) \rightarrow \phi( x)  + \alpha \delta \phi( x) 
+\] 
+where $\alpha $ is small is a symmetry provided that the Lagrangian only changes by a total four derivative: 
+\[ 
+\mathcal{L} \rightarrow \mathcal{L } + \partial_\mu F^\mu 
+\] 
+for some function $F^\mu$. This is a symmetry because since our action integrates over our Lagrangian density, due to the divergence theorem this extra term vanishes, leaving our action $S$ invariant. 
+We can now derive Noether's theorem. If we Taylor expand out our Lagrangian, 
+\[ 
+L(x) \rightarrow L(x) + \alpha \frac{ \partial L }{ \partial \phi} \delta \phi + \alpha \frac{ \partial L}{ \partial ( \partial_\mu \phi ) } \partial_\mu ( \delta \phi )  
+\] 
+We can rewrite the above term as 
+\[ 
+L (x) + \alpha \partial_\mu \left( \frac{ \partial L }{ \partial ( \partial_\mu \phi ) }\right)  \delta \phi + \alpha \delta \phi \left( \frac{ \partial L }{ \partial \phi } \right)   - \partial_\mu \left( \frac{ \partial L }{ \partial ( \partial_\mu \phi ) } \right) 
+\] 
+But, from the Euler Lagrange equations the final term vanishes, and comparing with our total derivative term we find that a conserved current is 
+\[ 
+j^\mu = \frac{ \partial L }{ \partial ( \partial_\mu \phi ) } \delta \phi  - F^\mu
+\] 
+Let's consider a Lagrangian with a complex scalar field $\psi$ given by 
+\[ 
+\psi( x)  = \frac{ 1}{ \sqrt{ 2} } ( \phi_1 ( x) + \phi_2 ( x) ) 
+\] 
+We treat $\psi ( x)$ and $\psi ( x)^* $ as separate fields, and write a complex scalar lagrangian as 
+\[ 
+\mathcal{ L } = \partial_\mu \psi \partial^\mu \psi^*  - m^2 \psi^* \psi  - \frac{ \lambda}{2} ( \psi^* \psi)^2 
+\] 
+It's clear that this Lagrangian is invariant under the phase symmetry 
+\[ 
+\psi \rightarrow e^{ i \alpha} \psi, \quad \psi^* \rightarrow e^{ - i \alpha} \psi^* 
+\] 
+This induces the infinitesimal symmetry 
+\[ 
+\delta \psi = i \alpha \psi, \quad \delta psi^*  = - i \alpha \psi^* 
+\] 
+With Noether's theorem, one can verify that the conserved current is 
+\[ 
+j^\mu  = i ( \psi \partial^\mu \psi^ * - \psi^* \partial^\mu \psi )  
+\] 
+
+Physically, conserved charges could be anything from conserved electric charge, or conserved particle number such as baryon or lepton number. 
+\subsubsection{The Energy-Momentum Tensor} 
+In this subsection, we'll be constructing important conserved quantities from Noether's theorem. These conserved quantities will arise specifically from translational symmetry in spacetime. In classical mechanics, energy conservation arose from time translational symmetry, and momentum conservation arose from spatial translational symmetry. In classical field theory, this is no different. Our concept of conserved energy and momentum arise from translational symmetry in our Lagrangian, and we'll combine them to form a single conserved tensor. 
+Consider a translation transformation in our spacetime coordinates 
+\[
+x^\nu \rightarrow x^\nu + \alpha \epsilon^\nu 
+\]
+We expect that our symmetry here will give rise to a higher rank tensor because we have 4 linearly independent directions arising from $\epsilon^\nu$. Taylor expanding out, we have 
+\[
+\phi_a(x) \rightarrow \phi_a(x) - \alpha \epsilon^\nu\partial_\nu \phi_a(x)
+\]
+And this induces a similar transformation on our Lagrangian, since $\mathcal{L} = \mathcal{L} (\phi ( x))  = \mathcal{L}( x)$, so we can Taylor expand our expression in exactly the same way. 
+\[ 
+\Lagr(x) \rightarrow \Lagr(x)  - \alpha \epsilon^\nu\partial_\nu \Lagr(x) = \Lagr(x) - \alpha \epsilon^\nu \partial_\mu (\delta\indices{^\nu_\mu}\mathcal{L} ) 
+\]
+In the second expression, we've written things in a slightly weird yet more suggestive manner. Our rationale is as follows. Since $\epsilon^\nu$ has four degrees of freedom, we can write this out as four separate conserved currents as written in the bracket, where the distinct currents are indexed by $\nu$. 
+Hence, with Noether's theorem, we can construct four different Noether currents using this form of $\delta \mathcal{L}$. 
+\[ 
+T\indices{^\mu_\nu} = (j^\mu)_\nu = \partial_\nu \phi_a \frac{ \partial \Lagr }{ \partial_\mu \phi_a}  - \delta\indices{^\mu_\nu}\mathcal{L} , \quad \partial_\mu T^{\mu \nu} = 0 
+\] 
+Different components of this tensor correspond to different quantities. We have 
+\begin{align*} 
+\text{Total Energy } & E = \int d^ 3 x T^{ 00} \\
+\text{Total momentum } & P^i = \int d^3 x T^{ i0 } 
+\end{align*} 
+We apply this to our Klein-Gordon field. 
+\[ 
+\mathcal{L}  = \frac{1}{ 2} \partial_\mu \phi \partial^\mu \phi  - \frac{1} {2}  m^2 \phi^2 
+\] 
+This has an associated energy-momentum tensor, where raising the index on the delta function yields the Minkowski 
+\[ 	
+T^{\mu\nu}  = \partial^\mu \phi \partial^\nu \phi  - \eta^{\nu\mu} \mathcal{L } 
+\]
+Substituting our expression for conserved energy, and momentum 
+\[ 
+E = \int d^3 x T^{00}  =  \frac{1}{ 2}  \int d^3 x \dot{\phi}^2 + (\nabla \phi)^2 + m^2 \phi^2, \quad P^i  = \int \dot{\phi} \partial^i \phi 
+\] 
+If $T^{ \mu \nu }$ is non-symmetric, we can massage it into a form that's symmetric which makes it easier to deal with by adding an arbitrary, antisymmetric 'gauge' term 
+\[ 
+T^{\mu \nu} \rightarrow T^{\mu \nu} + \partial_\rho \Gamma^{ \rho \mu \nu}, \quad  \Gamma^{(\rho \mu) \nu }  = 0
+\] This doesn't affect our conservation law, because we have
+\[ 
+\partial_\mu \partial_\rho \Gamma^{\rho \mu \nu} = 0 
+\] 
+
+

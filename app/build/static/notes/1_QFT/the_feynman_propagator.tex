@@ -1,0 +1,62 @@
+\subsection{The Feynman Propagator} 
+Our Feynman propagator is given by 
+\[
+\Delta_F( x - y )  = \bra{0}T \phi ( x) \phi( y ) \ket{0}  = \begin{cases}
+\braket{0}{\phi ( x) \phi( y )} & x^{ 0 } > y^ 0 \\
+\bra{0}\phi(y)\phi(x)\ket{0} & x^ 0 < y^0  
+\end{cases}
+\] Our claim is that we can write this propagator in the compact form 
+\[
+\Delta_F = \int \frac{d^4 p }{( 2 \pi )^4 } \, \frac{i }{p^2  - m^2 }e^{  - i p \cdot  ( x - y ) }
+\] This is Lorentz invariant. Note that this is ill defined 
+because for each $p $, the integral over $p^0 $ has 
+a pole where $ ( p^0 )^2 = \vec{p}^2 + m^2 $. We need a prescription here, which means that we \textbf{resolve the ambiguity of the integral} by choosing a specific contour. 
+In our case, we need a contour that recovers the exact expression above. 
+We define the integration contour to be a straight line which gues under the residue at $ - E_p$ and above the residue at $ E_ p $.  
+(draw diagram here). Notice that 
+\[
+\frac{1}{ p^2  - m^2 } = \frac{1}{ ( p^0)^ 2 - E_p^2}  = \frac{1}{( p^0 - E_p )(p^0 + E_p ) }
+\] The residue of the pole at $ p^0 = \pm E_p $ is $ \pm \frac{1}{2 E_p}$. 
+When $ x^ 0 > y ^0 $, we close the contour in the 
+lower half plane. When $ p^0 \to  - i \infty $, $e^{  -i p^0 \cdot ( x^ 0 - y ^ 0 )} \to e^{  - \infty} \to 0 $. So, the lower contour doesn't 
+contribute.  Hence, we have
+\[
+\Delta_F ( x - y )  = \int \frac{d^ 3 p }{ ( 2 \pi )^3 2 E_p } \, ( -  2  \pi i ) i e^{ - i E_p ( x^ 0 - y ^0 ) + i \vec{p} \cdot  ( \vec{x} - \vec{y} ) } = \int \frac{d^3 p }{ ( 2 \pi )^3 2 E_p } e^{  - i p \cdot  ( x -y ) }
+\] This is $ D( x -y ) $, which agrees which what we want. We had the minus sign due to clockwise. 
+
+When $ x^0  < y^0 $, we close the contour in the upper half place to get
+\[
+\Delta_F( x -y)  = \int \frac{d^ 3 p }{ ( 2 \pi )^ 4 } \frac{ ( 2 \pi i ) }{ (  - 2 E_p } i e^{ i E_p ( x^ 0 - y ^ 0 ) + i \vec{p} \cdot  ( \vec{x} - \vec{y} ) }
+\] We flip the sign in the second term to get this as 
+\[
+= \int \frac{d^ 3 p }{ ( 2 \pi )^ 3 } \frac{1}{ 2 E_p } e^{ - i E_p ( y^0 - x^0 )  - i \vec{p} \cdot  ( \vec{y} - \vec{x} ) } = \int \frac{d^ 3 p }{ ( 2 \pi ) ^ 3 } \frac{1}{2 E_p } e^{  - i p \cdot  ( y - x ) } = D( y - x) 
+\] Instead of this laborious process of specifying the contour, 
+we can instead do the $ i \epsilon $ prescription where we set 
+\[
+\Delta_F ( x -y )  = \int \frac{d^ 4 p }{ ( 2 \pi )^ 4 } i \frac{ e^{  - i p \cdot  ( x - y ) }}{p^ 2 - m^2 + i \epsilon }
+\] This propagator $ \Delta_ F$ is the Green's function of the Klein Gordon operator. 
+We should get that 
+\[
+( \partial_t^ 2  - \nabla^2 + m^2 ) \Delta( x - y )   = \int \frac{d^4 p }{ ( 2 \pi )^ 4} \, \frac{i}{p^2 - m ^2 } ( - p^2  - m^ 2 ) e^{  -i p \cdot  ( x- y ) } 	
+\] which is 
+\[
+= - i \int \frac{d^ 4 p }{ ( 2 \pi ) ^ 4 } e^{  - p \cdot  ( x -y ) } = - i \delta ( x- y ) 
+\] It can be useful in some circumstances to pick other contours. 
+For example, the retarded Green's function (diagram of camel humps) 
+over both poles. This is when 
+\[
+\Delta_F( x -y )  = \begin{cases}
+[ \phi ( x), \phi( y ) ] & x^0 > y ^ 0 \\
+0 & y^0 < x^0 
+\end{cases}
+\] This is useful if we start with an initial field configuration and look 
+at the evolution in the presence of a 
+source 
+\[
+\partial_\mu \partial^\mu \phi + m^2 \phi = J ( x) 
+\] The Feynman propagator $\Delta_F$ is the most useful object in QFT.    
+
+
+
+
+\pagebreak 

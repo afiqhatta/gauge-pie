@@ -1,0 +1,45 @@
+\subsection{Critical exponents} 
+We say from our earlier argument that $ \zeta \sim \frac{1}{ | T - T _ c |^ \nu } , \nu = \frac{1}{2 } $ And, our correlation goes like
+\[
+	\left< \phi ( \vec{x} ) \phi ( \vec{y} )  \right> \sim \frac{1}{ r^{ d - 2 + \eta }} \quad \eta  =0 
+\] So far, this agrees with our predictions for mean-field theory, 
+but we still have some errors. 
+
+\subsubsection{Upper critical dimension} 
+In mean field theory, $ \left< \phi ( \vec{x} )  \right> = \pm m_0 $. 
+But going into our path integral formulation, 
+we ask how big are the fluctuations relative to $ m_0 $. 
+If our fluctuations are very big, we shouldn't
+expect our calculations to match our 
+predictions from mean field theory. 
+We look at our ratio
+\[
+	R = \frac{\int _ 0 ^\zeta d^ d x \, \left< \phi ( \vec{x} ) \phi ( \vec{y} )   \right>  }{\int_0 ^ \zeta d^ d x \, m_0 ^ 2 } \sim \frac{1}{m_0 ^ 2 \zeta ^ d } \int_0 ^ \zeta dr \, \frac{ r^{ d- 1} }{r^{ d - 2 } } \sim \frac{ \zeta^{ 2 -d } }{m_0 ^ 2 }
+\]  
+Now substituting in our critical exponents, 
+\[
+ m_0 \sim | T - T_c |^{ \frac{1}{ 2 } }, \zeta \sim | T -T _c|^{- \frac{1}{2 } } \implies R = | T -T_c | ^{ \frac{ d - 4 }{ 2 } }
+\]
+
+\subsubsection{Translating to Quantum Field Theory} 
+We have many links between statistical field theory and
+quantum field theory. 
+\[
+	\text{ SFT:  } \mathcal{  Z} = \int \mathcal{ D } \phi e^{ - \beta \int d^ d x \, F [ \phi ] }
+\]  Here we have $ d $ spatial dimensions. 
+In quantum field theory, 
+we have that 
+\[
+	\mathcal{ Z } = \int \mathcal{ D } e^{ \frac{i}{\overline{h} } \int d^ d x \mathcal{ L ( \phi ) }}
+\] Here we have $ d $ spactime dimensions, with an $ \frac{i}{\overline{h} }$ factor. 
+We do a wick rotation $ \tau = i t $, 
+so that our differential operator 
+ \[
+ \partial  _ t^ 2 +  \nabla ^ 2 \to \partial _ \tau ^ 2 - \nabla ^ 2 
+\] Similarly, our path integrals transform as 
+\[
+	\mathcal{ Z  } = \int \mathcal{ D } \phi e^{ \frac{i}{\overline{h} } S [ \phi ]  } \to \mathcal{ Z } = \int \mathcal{ D } \phi e ^{ - \frac{1}{\overline{h}  } S_{ E } [ \phi ] }
+\] So our quantum fluctuations are identified with thermal fluctuations.
+$QFT_{ d -1 } \sim SFT_d $. 
+\pagebreak 
+

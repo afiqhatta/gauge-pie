@@ -1,0 +1,22 @@
+\section{What is a symmetry?}
+Let's ask ourselves what is a symmetry? A symmetry is an operator we can do on variables (either dynamical variables or the coordinate frame or otherwise), which leaves physical laws invariant. This is completely analogous to the idea of spatial symmetries, where operators in space leave structures invariant. 
+
+Let's analyse one of our most simple symmetries useful for physics - the rotation. We can motiavate what rotations look like based on how they act on vectors. A rotation would look like the map: 
+\[ 
+	\mathbf{v} \rightarrow \mathbf{v}' =  M \mathbf{v} 
+\] 
+But, we have extra restrictions on this. Firstly a rotation should preserve our length of vectors and hence our squared legnth $\mathbf{v}^T \mathbf{v} $. This means that 
+\[ 
+	\mathbf{v}'^T \mathbf{v}' = \mathbf{v}^T  M^T M \mathbf{v}  = \mathbf{v}^T \mathbf{v} 
+\]
+Which implies that $M^T M = I$. In addition, the orientation of vectors should be preserved, which means that we can't 'flip' vectors. This imposes the condition that $\det M = 1$.  
+There's more reason to be had that $M^T M  =1$, owing to the fact that since physical laws are preserved, our Lagrangian should be preserved as well. 
+This means that since our Lagrangian contains a kinetic term
+\[ 
+	\mathcal{L }  = \frac{1}{ 2} m \mathbf{v}^T \mathbf{v} + V( |\mathbf{x}|^2 ) \] 
+we also have imposed the condition that $M^T M = I$, since this is the only way to make Lagrangians invariant. As a sanity check, physical laws of motion should transform under these rotations as well. This is trivial to check in the case of linear transforms (which includes rotations)
+\[ 
+	\mathbf{F}  = m \ddot{ \mathbf{x} } \implies \mathbf{F}' = m \ddot{x}  ' 
+\]  
+This result is achieved by just multiplying both sides by $M$. 
+

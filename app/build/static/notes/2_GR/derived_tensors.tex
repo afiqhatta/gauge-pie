@@ -1,0 +1,156 @@
+\pagebreak
+\subsection{Derived tensors from the Riemann Tensor} 
+From our Riemann tensor, we 
+can easily build new tensors by contracting over some indices. 
+In this bit, we'll define some really important 
+tensors given by our curvature. 
+
+\begin{defn}{(Ricci Tensor)} 
+	Our Ricci tensor is given by contracting our first 
+index with our third component of the Riemann tensor. 
+\[
+ R_{ \mu \nu } = R \indices{ ^ \rho _{ \mu \rho \nu } } 
+\] This obeys the symmetry property that $  R_{ \mu \nu  }  = 
+R_{ \nu \mu } $. 
+\end{defn} 
+
+\begin{defn}{(Ricci Scalar)} 
+From this object, we can then 
+get our Ricci scalar which is given by 
+\[
+ R = g^{ \mu \nu } R _{ \mu \nu }
+\] 
+\end{defn} 
+Applying our Bianchi identity to the Riemann tensor, we have 
+that 
+\[
+ \nabla ^ \mu R_{ \mu \nu } = \frac{1}{2 } \nabla _ \nu  R 
+\] This can be shown by considering 
+the Bianchi idenity 
+\[
+	\nabla _{ [ \rho } R _{ \alpha \beta ] \gamma \delta }  = 0 , 
+	\implies
+	\nabla _ \rho R_{ \alpha \beta \gamma \delta } + 
+	\nabla _\alpha R_{ \beta \rho \gamma \delta } + 
+	\nabla _ \beta R_{ \rho \alpha \gamma \delta } = 0 
+\] Now, raising and lowering 
+indices, and making use of the symmetries 
+of the Riemann tensor should make 
+the above result pop out. 
+In this spirit, we define the Einstein tensor
+\[
+ G_{ \mu \nu } = R _{ \mu \nu } - \frac{1}{2 } R g_{ \mu \nu }
+\] This obeys the rule that the covariant derivative 
+is 
+\[
+ \nabla ^ \mu G _{ \mu \nu } = 0 
+\] 
+\subsection{Connection 1-forms} 
+We now will introduce a handy technology to compute 
+our Riemann tensor, which will make it easier to do instead of 
+computing all the Christoffel components. 
+If we had a basis $ \left\{  e _ \mu  \right\}  = \left\{  \partial  _ \mu  \right\}  $, 
+we can always introduce a different basis which is a linear 
+sum of the coordinate induced basis. We call this 
+basis 
+\[
+ \hat{e}_a = e \indices{ _ a ^ \mu } \partial  _ \mu  
+\] The upshot of this is that on a
+Riemannian manifold, we can pick a basis such that 
+\[
+	g ( \hat{e }_a , \hat{e}_b ) = g_{ \mu \nu } e \indices{ _ a ^ \nu } e \indices{ _ b ^ \nu } = \delta _{ ab }  
+\] We call the components 
+$ e \indices{ _ a ^ \mu }  $ are called vielbeins. 
+We can raise and lower indices using $ g_{ \mu \nu } $ and a, b using $ \delta _{ a b } $
+The basis of one forms $ \left\{  \hat{\theta } ^ a   \right\} $ obey 
+our standard dual basis relation 
+\[
+	\hat{\theta } ^ a ( \hat{e } _ b ) = \delta \indices{ ^ a _ b }  
+\]  They are $ \hat{ \theta } ^ a = e \indices{ ^ a _ \mu } dx ^ \mu  $, 
+with $ e \indices{ ^ a _ \mu } e \indices{ _ b ^ \mu }  = \delta \indices{ ^ a _ b }  $. 
+This property satisfies $ e \indices{ ^ a _ \mu } e \indices{ _ a ^ \nu } = \delta \indices{ _ \mu ^ \nu } $. 
+Our metric is 
+\[
+ g = g_{ \mu \nu } dx ^ \mu \otimes dx ^ \nu = \delta _{ ab } \hat{\theta } ^ a \otimes \hat{ \theta } ^ b 
+\] This means that 
+\[
+ g_{ \mu \nu } = e \indices{ ^ a _ \mu } e ^{ ^ b _ \nu } \delta _{ ab }  
+\] An example would be to consider the metric 
+(Schwarzchild metric) 
+\[
+	d s ^ 2 = - f ( r ) ^ 2 dt ^ 2 + f ( r) ^{ - 2} dr ^ 2 
+	+ r ^ 2 ( d \theta ^ 2 + \sin ^2 \theta d \phi ^ 2 ) 
+\] This is $ ds ^ 2   = \eta ^{ ab  } \hat{ \theta } ^ a \otimes \hat{ \theta } ^ b $, 
+with non-coordinate 1 forms 
+\[
+ \hat{ \theta } ^ 0 = f dt , \quad \hat{ \theta  } ^ 1 = f ^{ -  1 } dr, \quad \hat{ \theta } ^ 2 = r d \theta , 
+ \hat{ \theta  } ^ 3 = r \sin \theta d \phi 
+\] In the basis $ \left\{  \hat{ e } _ a  \right\}  $, the components 
+of our connection are defined as (not to be confused with our usual 
+connection) that 
+\[
+ \nabla _{ \hat{ e } _ c } \hat{ e } _ b : = \Gamma ^ a _{ b c } \hat{ e } _a 
+\] We define the connection 
+1-form to be $ \omega  \indices{ ^ a _ b } = \Gamma ^ a _{ bc } \hat{ \theta } ^ c  $, 
+this is called the spin connection. 
+
+We have the first Cartan structure equation. 
+\[
+ d \hat{ \theta } ^ a + \omega  \indices{ ^ a _ b } \wedge  \hat{ \theta } ^ b = 0  
+\]
+In addition, we have for the Levi-Civita connection, that 
+our Cartan structure components $ \omega_{ ab } = - \omega _{ b a}$. 
+In the Vielbein basis, we set 
+\[
+	R \indices{ ^ a _{ bcd } } = R ( \hat{ \theta } ^ a ; \hat{ e } _ c , \hat{ e } _ d , \hat{ e } _ b )  
+\] with $ R \indices{ ^ a _{ b cd } }   = - R \indices{ ^ a _{ b d c } }  $. We 
+define the curvature 2 form to be 
+\[
+ R \indices{ ^ a _ b } = \frac{1}{2 } R \indices{ ^ a _{ b cd  } } \hat{ \theta } ^ c 
+ \wedge  \hat{ \theta } ^  d
+\] This gives our second structure equation. 
+\[
+ R \indices{ ^ a _ b } = d \omega \indices{ ^ a _ b } + \omega \indices{ ^ a _ c } \wedge  \omega \indices{ ^ c _ b}    
+\] We should think about what information is compressed and what is not.
+
+Let's go back to our example. We compute 
+$ d \hat{ \theta } ^ a $, which gives us 
+\begin{align*}
+	d \hat{ \theta } ^ 0 &= f' dr \wedge  dt \\
+	d \hat{ \theta } ^ 1 &=  f' dr \wedge  dr =  0  \\
+	d \hat{ \theta } ^ 2 &=  dr \wedge  d \theta  \\ 
+	d \hat{ \theta } ^ 3 &=  \sin \theta dr \wedge  d \phi - r \cos d \theta \wedge  d \phi  \\
+\end{align*} 
+Now, we use our Cartan structure equation to get 
+\[
+ d \hat{ \theta } ^ 0 = 0 \omega \indices{ ^ 0 _ b } \wedge  \hat{ \theta } ^ b 
+ \implies \omega \indices{ ^ 0 _ 1 } = f'  f dt = f ' \theta ^ 0  
+\] But, we use our anti-symmetry and the Minkowski 
+metric to get that 
+\[
+ w \indices{ ^ 0 _ 1 } = - \omega _{ 0 1} = \omega _{ 10 } = \omega \indices{ ^ 1 _ 0 }  
+\] To check the consistency of this system, 
+we check that our equation for 
+\[
+ d \hat{ \theta } ^ 1 = 0 
+\] Proceeding like this, we find that 
+\begin{align*}
+	\omega \indices{ ^ 0 _ 1 } &=  \omega \indices{ ^ 1 _ 0 } = f ' \hat{ \theta  } ^ 0   \\
+	\omega \indices{ ^ 2 _ 1 } &= - \omega \indices{ ^ 1 _ 2  } = \frac{ f }{ r } \hat{ \theta }^ 2 \\
+	\omega \indices{ ^ 3 _  1 }   &= - \omega \indices{ ^ 1 _ 3 } = \frac{f}{r } \hat{ \theta } ^ 3 \\
+	\omega \indices{ ^ 3 _ 2 } &= - \omega \indices{ ^ 2 _ 3 }   = \frac{ \cot \theta }{ r  } \hat{ \theta } ^ 3 
+\end{align*}
+Now the curvature tensor 
+\begin{align*}
+	\mathcal{ R } \indices{ ^ 0 _ 1 } &=  d \omega \indices{ ^ 0 _ 1 }  + \omega \indices{ ^ 0 _ c 
+	} \wedge  \omega \indices{ ^ c _ 1 }     \\
+	&=  f ' d \hat{ \theta } ^ 0 + f'' dr \wedge  \hat{ \theta } ^ 0  \\
+	&=  ( ( f ' ) ^ 2 + f '' f ) dr \wedge  dt  \\
+	&=   - ( ( f ' ) ^ 2 + f '' f ) \hat{ \theta } ^ 0 \wedge  \hat{ \theta } ^ 1  \\
+	& \implies R_{ 0101 }  = ( f f '' + f '' f ) 
+\end{align*} 
+We can convert back by using 
+\[
+	R_{ \mu \nu \rho \sigma } = e \indices{ ^ a _ \mu } e ^{ ^ \beta _ \nu } e \indices{ ^ c _ \rho } 
+	e \indices{ ^ d _ \sigma } R _{ abc d} 
+\] This means that $ R _{ trtr }  = f f'' + ( f' ) ^ 2$. 

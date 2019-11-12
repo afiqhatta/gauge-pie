@@ -1,0 +1,62 @@
+\subsection{Question 1}
+In this question, we're examining the partition function of a one dimensional, periodic $N$ atom lattice in the Ising model. 
+Summing over all possible states $s_i = \pm 1$, with the boundary condition that $s_0 = s_N$, it's easy to see that the partition function takes the form 
+\[ 
+	Z = \sum_{s_1 = \pm 1} \dots \sum_{s_N = \pm 1} \prod_{i} \exp\left( \beta J s_i s_{i + 1} + \beta B (s_i + s_{i + 1}) \right). 
+\]
+Note that we've transferred the inner sum for our expression of $E$ into the outer product of exponentials to make this object easier to deal with. 
+
+Given that the transfer matrix is 
+\[ 
+	T= \begin{pmatrix}
+		e^{\beta J  - \beta B} & e^{ - \beta J} \\
+		e^{ - \beta J} & e^{\beta J + \beta B}. 
+	\end{pmatrix}
+\]
+we can index this matrix in a slightly different way which reflects spins. We index the elements in the array with ${\pm 1}$ instead of perhaps what we're used to with $\{ 0, 1\} $. Using the indices $s_i, s_{i + 1}$, we can write that 
+\[ 
+	T_{s_i, s_{i + 1}} = \exp \left (\beta s_{i} s_{i + 1} + \frac{\beta B}{2} (s_i + s_{i + 1}) \right) 
+ \] 
+ If we're trying to find out what $T^N$ is then in standard index notation, 
+ \[ 
+ 	\left(  T^N \right)_{s_{1}, s_{N + 1}}= T_{s_1, s_2} T_{s_2, s_{3}} \dots T_{s_N, s_{N + 1}}
+ \] 
+ where we sum implicitly over pairs of identical indices. 
+ Due to our periodicity condition, we have that $s_1= s_{N + 1}$, and since we're taking the trace we have 
+ \[ 
+ 	Tr (T^N) = \left( T^N \right)_{s_1, s_1} = \sum_{s_1 = \pm 1} T_{s_1, s_2} T_{s_2, s_{3}} \dots T_{s_N, s_{1}}
+ \] 
+where we've kept the sum over $s_1$ explicit here. Making the sum over the rest of the terms explicit, and substituting in our expressions, for $T_{s_i, s_{i + 1}}$, gives the required result. 
+
+Our characteristic equation for $ T $ is 
+ \[
+	 0 = ( e^{ \beta J - \beta B } - \lambda )( e^{\beta J + \beta B } - \lambda ) - e^{  - 2 \beta J }
+\] Expanding out, we have the equation
+\[
+	0 = \lambda^ 2 - \lambda e^{ \beta J } ( e^{ \beta B } + e ^{ - \beta B } ) + e^{ 2\beta J }  - e^{  - 2 \beta J }
+\] Using cosh and sinh expresions, and the quadratic formula, this is 
+\[
+	0 = \lambda^ 2 - 2 \lambda \cosh ( \beta B ) + 2 \sinh ( \beta B ) \implies \lambda_\pm = e^{ \beta J }\cosh ( \beta B ) \pm \sqrt{ e ^{ 2 B J } \cosh^ 2 ( \beta B ) - 2 \sinh ( \beta B ) } 
+\] Now note that, if $ \lambda  $ is an eigenvalue of $ A$, then  $ \lambda^ n $ is an 
+eigenvalue of  $ A^ n $, since repeated application of  $A $ on an
+eigenvector pulls out  $n $ factors of $ \lambda $. 
+
+Since the matrix $ T ^ n $ is two dimensional, it has at most 2 eigenvectors. 
+We know that, for the previous reason, that $ \lambda_+ ^ n $ and  $ \lambda_-^ n $ 
+are eigenvalues of  $ T ^n $, so they're all of the eigenvalues. 
+Since the trace of a matrix is the sum of its eigenvalues, 
+ \[
+	 Tr ( T ^ N ) = \lambda_+^ N + \lambda_- ^ N  = \lambda_+^N ( 1 + (\frac{\lambda_-}{\lambda_+ })^ N) \to \lambda_+^N , \quad N \to \infty 
+\] The term in the bracket goes to 1 since in this case $  \mid \lambda_-  \mid $ is less than $  \mid  \lambda_+  \mid $. 
+Asymptotically as $ N \to \infty$, we have that 
+\[
+ m  = \frac{1}{N \beta } \frac{\partial \log Z}{\partial B } \sim \frac{1}{N \beta } N \frac{\partial \log \lambda_+ }{\partial B } 
+\] But we have that 
+\[
+	\frac{\partial  \lambda_+ }{\partial B }  = e^{ B J }\beta \sinh ( \beta B ) + \frac{\beta e^{ 2 \beta J } \cosh ( \beta B ) \sinh ( \beta B ) }{\sqrt{ e ^{ 2 B J } \cosh ^ 2 ( \beta B ) - 2 \sinh ( \beta B ) } }
+\] But this is just $0 $ at $ B = 0 $ since we can factor out $ \sinh ( \beta B ) $. 
+Hence, our magnetisation at equilibrium is  $ 0 $ regardless of temperature. 
+So our free energy is fixed at $ f( 0 )$, which is constant and therefore continuous. So, 
+we have no phase transitions based on temperature. 
+
+\pagebreak 

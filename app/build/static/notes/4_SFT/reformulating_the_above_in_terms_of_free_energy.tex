@@ -1,0 +1,72 @@
+\subsection{Reformulating the above in terms of free energy}
+We can repose the model above in a slightly different way. Instead of formulating the sums as sums over all possible spin configurations, could we possibly reformulate this as a function it terms of $m$? We can rethink the sum as summing over all possible spin states \textbf{given} a particular  magnetisation, and then summing over all possible magnetisations. 
+\[ 
+	Z = \sum_m \sum_{s_i | m} e^{- \beta E[s_i]}. 
+\] 
+where we rewrite the final product in the sum as 
+\[  
+\	 Z = \sum_m e^{ - \beta F(m)}, \quad \sum_{s_i | m}e^{ - \beta E[s_i]} = e^{ - \beta F(m)} = e^{ - \beta N f(m)}. 
+\] 
+where we define $F(m) = N f(m)$. $F(m)$ is our effective free energy (which may also be temperature dependent). Since our increments for $m$ are very small, we can rewrite this as an integral 
+\[ 
+	Z = \frac{N}{ 2}  \int_{-1}^{1} dm \left(  e^{ - \beta N f(m)} \right) . 
+\] 
+We've added a $\frac{ N}{ 2} $ here since we're summing in steps of $2 / N$, and we need this factor to cancel out these steps. 
+This integral is nicely approximated by our method of steepest descent; 
+\[ 
+	Z \approx e^{- \beta N f(m_{min})}. 
+\]
+We've dropped the factor of $\frac{N}{ 2} $ since scaling our partition function doesn't affect our physics. Thus, our thermodynamic free energy given by the eqution above means that \[ 
+	F_{thermo} \simeq F(m_{min}) 
+\] 
+ 
+\subsubsection{Calculating our free energy via the mean field approximation.}
+We now employ an approximation to make our lives a whole lot easier. This is called the mean field approximation. For a given spin configuraiton $\{ s_i \} $, we can replace \[ 
+	s_i  \rightarrow \langle s \rangle  = m, \quad 
+	m = \sum_i s_i, 
+\] 
+so we can write our energy approximately as 
+\[
+	E = - BNm - \frac{1}{2} JN q m^2 \implies \frac{E}{N} =  - Bm - \frac{1}{2} J qm^2 
+\]
+We want to figure out an expression for $f(m)$. 
+We would like to find out 
+\[ 
+	\sum_{s_i | m} e^{ - \beta E[s_i]} = e^{ - \beta N f(m)}. 
+\] 
+The next step is to count the number of spin representations we can have given a certain magnetisation  $m$. If we denote $N_{\uparrow}$ and $N_{\downarrow}$ as the number of spin up and spin down atoms in our lattice, then we have 
+\[ 
+	N  = N_{\uparrow} + N_{\downarrow}, 
+ \] 
+ \[ 
+ 	m = \frac{N_{\uparrow} - N_{\downarrow}}{N}  = \frac{2N_{\uparrow}  - N}{ N} 
+  \] 
+ We would like to figure out a function to express the number of spin configurations in a system given the magnetisation. We reduce the problem in terms of finding an expression of the number of configurations given a $N_{\uparrow}$ instead. 
+Since $N_{\uparrow}$ is a determined function of $m$ (by solving the system of equations above), we find that the number of states is 
+\[
+	\Omega(N_{\uparrow}) = \frac{N !}{N_{\uparrow}! N_{\downarrow} !} = \frac{ N!}{ N_\uparrow ! ( N  - N_\uparrow)! }  
+\]
+Stirling's formula allows us to approximate logarithms of $N!$ as 
+\[ 
+	\log N!  = N \log N   - N 
+\]
+One can show that, with Stirling's approximation, that 
+\[ 
+ 	\frac{ \log \Omega}{ N }  = \log 2  - \frac{1}{2} (1  +m) \log ( 1 + m)   - \frac{1}{2}(  1 - m ) \log (1 - m) 
+\] 
+Our aim to to calculate our effective free energy, 
+\[ 
+	e^{ - N\beta  f(m) } = \sum_{ \{ s_i \} | m } e^ { - \beta E [ s_i ]}\] 
+But this expression, with the mean field approximation, is the given energy at magnetisation $m$, counted over the number of states with that magnetisation. Hence, 
+\[ 
+	e^{ - N \beta f( m) }  = \Omega(m) e^ { - \beta E( m ) } \simeq e^{ \frac{ N \log \Omega ( m) }{ N } } e^{  - \beta ( - B m - \frac{ 1}{ 2} J q m^2 }) \] 
+Comparing the coefficients on the exponentials, we have that our free energy is then given by 
+\[ 
+	f(m) = - Bm  - \frac{1}{ 2} Jqm^2  -T \left( \log 2 - \frac{1}{2} ( 1 + m ) \log ( 1 + m ) - \frac{ 1}{2} ( 1- m ) \log ( 1- m ) \right) 
+\] 
+Our system lies in the state where \textbf{free energy is minimised} with respect to magnetisation. Hence, our equilibrium state lies where $\frac{ \partial f }{ \partial m }  = 0 $. 
+This condition gives rise to something that we call a self consistency condition, which is an equation that $m$ satisfies on both sides. In this case it is given by 
+\[ 
+	\beta ( B + Jqm ) = \frac{ 1}{2} \log \frac{ ( 1+ m )}{ ( 1- m ) }, \quad \implies m = \tanh ( \beta B + \beta J q m ) \]
+One can see graphically that at low temperatures, we see an emergence of two solutions $m_{ \pm  } \neq 0$, meaning that at low temperatures are system does have a non-trivial magnetisation. At high temperatures, this have a solution at $m = 0$, and our state is disordered since we have no average magnetisation. 
+ 

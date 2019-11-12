@@ -1,0 +1,42 @@
+\subsection{Roots and Weights}
+In representation theory, for our purposes, roots and weights will be
+terms to describe the eigenvalues associated with a certain 
+basis element in our Lie algebra and its corresponding
+representation. 
+
+\subsubsection{Roots} 
+So, in our previous discussion we found that 
+the Cartan basis diagonalised the map $\ad_ H $, 
+with eigenvalues $0 , -2 , +2$. We shall refer 
+to this as the roots of this system.
+
+\subsubsection{Weights} 
+Now, let's consider a finite representation of $\mathcal{ L } ( SU ( 2) ) $
+with the Cartan basis as a backdrop. Recall that a finite 
+representation is a representation whose vector space we're 
+acting on is of finite dimension. 
+For this analysis, we will make a big simplifying assumption that 
+our Cartan element $ H $ has a \textbf{diagonalisable} representation. 
+This means, when we map $ H $ into representation space as a 
+$ \dim R \times \dim R $ matrix, then $ R ( H ) $ is diagonalisable. 
+
+In other words, there's a basis set of eigenvectors such that 
+\[
+	R ( H ) \vec{v}_ \lambda = \lambda \vec{v}_{ \lambda } , \lambda \in \mathbb{ C}  
+\]  We have that 
+$ \lambda \in \mathbb{ C}  $  since we're working 
+in complexified space. In addition, these set of eigenvectors $ \vec{v} _ \lambda$ should
+also serve as a basis of our representation space $ V$.
+
+Now, the fact that representations of Lie algebras
+preserve the Lie bracket becomes very useful here. 
+Since we have already worked out our commutation relations, 
+we can deduce that 
+\begin{align*}
+	R ( H ) R ( E_{\pm } ) \vec{v}_{ \lambda } &=  
+	\left( R( H ) R ( E_{\pm } ) + [ R ( H ) , R ( E_{ \pm } ) ] \right) \vec{v}_\lambda   \\
+						   &=  ( \lambda \pm 2 ) \vec{v}_ \lambda  
+\end{align*}
+This means that given a weight, we can step up or down to get a new 
+eigenvector $ R ( E_{ \pm } ) $ with a new weight 
+$ \lambda \pm 2 $. 

@@ -1,0 +1,27 @@
+\subsection{A Brief look at Universality} 
+Right now we'll explore a very strange phenomena in physics - the concept of universality which we mentioned in the introduction. Let's take a look at a different example of a phase transition - liquid and gas phase transitions given governed by the Van der Waals equation. We have the phase transition diagram as follows. 
+
+From the Van der Waals equation, we also can look at limiting behaviour as $T \rightarrow T_c $, and we can derive critical exponents
+\begin{align*} 
+v_{gas}  - v_{liquid} & \sim (T - T_c)^\beta \\
+v_{gas}  - v_{liquid } &  \sim (P - P_c)^{\frac{ 1}{ \delta } } \\
+\end{align*} We can define compressiblity, 
+\[ 
+\kappa =  - \frac{1}{ \nu } \left.  \frac{ \partial \nu }{ \partial p } \right\vert_p 
+\] 
+We can show that \[ 
+\kappa \sim \frac{1}{ (T - T_c)^{ \gamma} } , \quad \gamma  = 1 
+\]
+One can notice that these are the same exponents one can find from the Ising model, which is an interesting phenomenon! We say that in this case, the theory magnetisation and liquid-gas phase transitions are in the same universality class. To gain a rough intuition of why this might be true, we can also model gases as a lattice, where the energy cost of a particle being in a position costs an energy potential $\mu$, and the energy cost from a Van der Waals force of neighbouring particles is given by a coupling constant $J$. In this case, our energy is given by 
+\[ 
+E =  - 4J \sum_{ \langle ij \rangle} n_i n_i  - \mu \sum_i n_i
+\] 
+The variable 
+\[ 
+n_i = \begin{cases} 
+	0 & \text{ if the lattice space isn't occupied } \\
+	1 & \text{ if the lattice space is occupied } 
+	\end{cases} 
+\] can be mapped to spins with the map $ s_i = 2n_i - 1$, so that when $n_i = 1, s_i =1 $ and when  $n_i   = 0, s_i = -1$. 
+
+\pagebreak 

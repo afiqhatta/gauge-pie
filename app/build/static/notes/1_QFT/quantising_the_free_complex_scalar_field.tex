@@ -1,0 +1,43 @@
+\subsection{Quantising the free complex scalar field} 
+Let's explore what we get when we play around with a complex, free-like Lagrangian. We have the Lagrangian attached with a mass term
+\[ 
+\Lagr = \partial^\mu \psi^* \partial _\mu \psi - \mu^2 \psi^* \psi 
+\] This Lagrangian is associated with the following Euler-Lagrange equations 
+\begin{align*} 	
+\partial_\mu \partial^\mu \psi + \mu^2 \psi &= 0 \\
+\partial_\mu \partial^\mu \psi^* + \mu^2 \psi^* = 0 
+\end{align*} 
+Now since the complex conjugate of our field $\psi$ is not the same as $\psi^*$, when we promote $\psi$ to a Schrodinger picture operator there's no notion which suggests that the operator should be Hermitian. So, we write out a normalised expansion that's similar to what we had for a scalar field but, add different operators inside. We have 
+\begin{align*} 
+\psi( \ve{ x} ) = \intp \frac{ 1 }{ \sqrt{ 2 E_\ve{p} } } ( \anop{ b }{ p } \mode{p}  + \crop{c}{ p } \nmode{p}) \\
+\psi(\ve{ x} )^\dagger  = \intp \frac{ 1 }{ \sqrt{ 2 E_\ve{p} } } ( \crop{b}{ p} \nmode{p}  + \anop{c}{ p} \mode{p} ) \\
+\end{align*} In addition, we motivate the same expressions for our conjugate momenta. Our conjugate momenta classically is found by differentiating the Lagrangian: 
+\[ 	
+\pi = \frac{ \partial \Lagr }{ \partial \dot{ \psi } }  = \dot{ \psi}^* 
+\] With the same Heuristic we applied to find conjugate momenta for our scalar field, we tentatively write that 
+\begin{align*} 
+\pi & = \intp i \sqrt{ \frac{ E_\ve{ p } }{ 2 } } ( \crop{ b }{ p } \nmode{p}  - \anop{c}{ p } \nmode{ p })  \\
+\pi^\dagger &= \intp ( -i ) \sqrt{ \frac{ E_\ve{ p} } { 2} } ( \anop{b}{ p} \mode{p}  - \crop{c}{ p} \mode{ p} ) 
+\end{align*} Here, we've defined two operators $b, c$, which have the interpretation of creating and annihilating a particle and antiparticle respectively. 
+With this expansion one can check that the commutation relations 
+\[ 
+[ \scal{ x}, \mom{ y } ] = i \delta( \ve{ x - y } ), \quad [ \scal{x}, \mom{ y }^\dagger ]  = 0, \quad \text{ all other relations derived from this } 
+\] are equivalent to the commutation relations 
+\[ 	
+[ \anop{ b }{ p}, \crop{ b }{ q}]  = ( 2\pi) ^3 \delta ( \ve{ p -q } ), \quad [ \anop{ c }{ p}, \crop{ c }{ q}]  = ( 2\pi) ^3 \delta ( \ve{ p -q } ), \quad \text{ all other relations 0 } 
+\] We interpret the operators as particle and anti particle creation. These particles have spin 0, and the same mass since we have a $\mu^2 $ coupling term in there. Since a real scalar field obeys $\psi^* = \psi $, our interpretation of a particle created by a real scalar field is that it its' own antiparticle. Using Noether's theorem, one can show that our conserved charge which is obtained by the symmetry of a phase rotation 
+\[	
+\psi \arr e^{ i \theta} \psi 
+\] gives rise to the conserved charge 
+\[
+Q  = i \int d^3 x \,  \dot{ \psi}^* \psi - \psi^* \dot{ \psi }  
+\] Using the relation we derived earlier for conjugate momentum, this can be written as 
+\[ 
+Q = \int d^3 x\, \pi \psi - \psi^\dagger \pi^\dagger 
+\] Expanding this in terms of the creation and annihilation operators $b,c$, with normal ordering we have that a conserved charge is 
+\[ 	 
+Q  = \intp ( \crop{ c}{ p} \anop{c}{ p } - \crop{ b }{ p } \anop{ b }{ p } ) = N_c - N_b 
+\] This counts the number of of particles minus the number of anti-particles. 
+
+\pagebreak
+

@@ -1,0 +1,16 @@
+\subsection{Treating tangent vectors as derivatives of curves on the manifold}
+We present a different way to think of tangent vectors, which is viewing them as 'differential operators along curves'. Consider a smooth curve along our manifold, which we can parametrise from on an open onterval $I = (0 , 1)$, and define the starting point of this curve at $p \in \mathcal { M} $; 
+\[ 
+\lambda: ( 0, 1) \rightarrow \mathcal{ M}, \quad \lambda( 0 ) = p 
+\]  
+We now ask the question, how do we differentiate along this thing? To do this, we'll have to apply coordinate charts so that we can make sense of differentiation. So, suppose we would like to differentiate a function $f$ along this manifold. We apply our chart $\phi$ to $\lambda$ to get a new function $ \phi \circ \lambda : \mathbb{R} \rightarrow \mathbb{R}^n$, which we'll suggestively write as $x^\mu ( t) $. In addition, to be able to differentiate $f$ in a sensible way we also construct the function $F = f \circ \phi^ { -1} $ . Thus, differentiating a function along a curve $x^\mu ( t) = \phi \circ \lambda ( t) $ should look like 
+\begin{align*} 
+\frac{ d}{ dt} f(t) &= \frac{ d}{ dt} \left( F \circ \phi^{ -1} \circ \phi \circ \lambda (t) \right) \\
+& = \left. \frac{d}{ dt} \left( F \circ \phi^{ -1} \circ x^\mu ( t) \right) \right\vert_{ t = 0} \\
+&= \frac{ dx^\mu}{ dt} \left. \frac{ \partial F \circ \phi^{ -1} }{ \partial x^\mu } \right\vert_{ \phi( p ) } \\
+&= \left. \frac{dx^\mu}{dt} \right\vert_{t =0} \left. \frac{ \partial f}{ \partial x^\mu } \right\vert_{ p } \\
+&= X^\mu \partial_\mu (f) \\	
+&= X_p (f)
+\end{align*} 
+Thus, differentiating along a curve gives rise to a tangent vector acting on $f$. 
+

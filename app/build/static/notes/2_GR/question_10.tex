@@ -1,0 +1,27 @@
+\subsection{Question 10} 
+For now we'll just show that $ d\sigma _ 1  = \sigma_2 \wedge  \sigma_3$. 
+Let's calculate the right hand side explicitly, we have that
+\begin{align*}
+	\sigma_2 \wedge  \sigma_3 & = ( \cos \psi d \theta + \sin \psi \sin \theta d \phi ) \wedge ( d \psi + \cos \theta d \phi )  \\
+	&=  \cos \psi d \theta \wedge  d \psi + \sin \psi \sin \theta d \phi \wedge  d \psi + \cos \psi \cos \theta d \theta d \phi + \cos \psi \cos \theta d \theta \wedge  d \phi \\ 
+	& + \sin \psi \sin \theta \cos \theta d \phi \wedge  d \phi \\
+	&=  \cos \psi d \theta \wedge  d \psi + \sin \psi \sin \theta d \phi \wedge  d \psi + \cos \psi \cos \theta d \theta d \phi + \cos \psi \cos \theta d \theta \wedge  d \phi 
+\end{align*}
+
+When we do an exterior derivative in 3 dimensions on a one form, 
+we get that in our wedge product basis
+\begin{align*}
+	d \omega & = ( \partial_ 1 \omega _ 2 - \partial  _ 2 \omega_1 ) d x^ 1 \wedge  dx^ 2 \\
+		 & + ( \partial _ 2 \omega_3 - \partial  _ 3 \omega _ 2 ) dx^ 2 \wedge  dx^ 3  \\
+		 & + ( \partial  _ 3 \omega_1 - \partial  _ 1 \omega_3 ) dx ^ 3 \wedge  dx ^ 1
+\end{align*}
+Now, if we identify $d x^ 1 = d \theta, dx^ 2 = d \psi , dx^ 3 = d \phi $, 
+then our first component to calculate is 
+ \[
+	 (  \partial  _{ \theta }  ( \sigma_1)   _{ \psi } - \partial  _{ \psi } ( \sigma_1 )_{ \theta } d \theta \wedge  d \psi )  = \cos \psi d \theta \wedge  d \psi 
+\] Similarly, we find that 
+\begin{align*}
+	( \partial_2 ( \sigma_{1} ) _ 3 - \partial _ 3 ( \sigma_{ 1 }) _ 2 ) dx^ 2 \wedge  dx^ 3 & = \sin \psi \sin \theta d \phi \wedge  d\psi  \\
+	( \partial _ 3 ( \sigma_1 ) _{ 1 } - \partial  _ 1 ( \sigma_ 1 ) _ 3 ) dx^ 3 \wedge  dx ^ 1 &=  \cos \psi \cos \theta d \theta \wedge  d \phi \\
+\end{align*}
+

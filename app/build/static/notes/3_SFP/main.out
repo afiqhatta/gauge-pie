@@ -1,0 +1,62 @@
+\BOOKMARK [1][-]{section.1}{What is a symmetry?}{}% 1
+\BOOKMARK [2][-]{subsection.1.1}{Groups to represent symmetries}{section.1}% 2
+\BOOKMARK [2][-]{subsection.1.2}{Symmetries correspond to conserved quantities}{section.1}% 3
+\BOOKMARK [1][-]{section.2}{Manifolds and Tangent Spaces}{}% 4
+\BOOKMARK [2][-]{subsection.2.1}{Manifolds}{section.2}% 5
+\BOOKMARK [2][-]{subsection.2.2}{Functions on manifolds}{section.2}% 6
+\BOOKMARK [2][-]{subsection.2.3}{Tangent vectors}{section.2}% 7
+\BOOKMARK [2][-]{subsection.2.4}{Embedding manifolds in Rn}{section.2}% 8
+\BOOKMARK [3][-]{subsubsection.2.4.1}{The Embedding Theorem}{subsection.2.4}% 9
+\BOOKMARK [2][-]{subsection.2.5}{Classifying manifolds}{section.2}% 10
+\BOOKMARK [1][-]{section.3}{Lie Groups}{}% 11
+\BOOKMARK [2][-]{subsection.3.1}{What is a Lie Group?}{section.3}% 12
+\BOOKMARK [2][-]{subsection.3.2}{Matrix groups}{section.3}% 13
+\BOOKMARK [3][-]{subsubsection.3.2.1}{Matrix groups in GL\(n, R \)}{subsection.3.2}% 14
+\BOOKMARK [3][-]{subsubsection.3.2.2}{General properties of O\(n\) }{subsection.3.2}% 15
+\BOOKMARK [3][-]{subsubsection.3.2.3}{SO\(2\)}{subsection.3.2}% 16
+\BOOKMARK [3][-]{subsubsection.3.2.4}{SO\(3\)}{subsection.3.2}% 17
+\BOOKMARK [3][-]{subsubsection.3.2.5}{Non compact groups; the Lorentz group and more general metrics}{subsection.3.2}% 18
+\BOOKMARK [3][-]{subsubsection.3.2.6}{Subgroups of GL\(n, \040C\) }{subsection.3.2}% 19
+\BOOKMARK [1][-]{section.4}{Lie Algebras}{}% 20
+\BOOKMARK [2][-]{subsubsection.4.0.1}{Properties of Lie algebras}{section.4}% 21
+\BOOKMARK [3][-]{subsubsection.4.0.2}{Cartan classification}{subsubsection.4.0.1}% 22
+\BOOKMARK [2][-]{subsection.4.1}{Construction of Lie algebras from Lie groups}{section.4}% 23
+\BOOKMARK [3][-]{subsubsection.4.1.1}{Preliminaries}{subsection.4.1}% 24
+\BOOKMARK [2][-]{subsection.4.2}{The Lie Algebra \040 L \040\( G \) \040}{section.4}% 25
+\BOOKMARK [3][-]{subsubsection.4.2.1}{Constructing the Lie Algebra for Matrix Lie Groups}{subsection.4.2}% 26
+\BOOKMARK [2][-]{subsection.4.3}{Examples of derived Lie Algebras}{section.4}% 27
+\BOOKMARK [3][-]{subsubsection.4.3.1}{ SO \( n \) \040to \040 L \040\( SO \( n \) \) }{subsection.4.3}% 28
+\BOOKMARK [3][-]{subsubsection.4.3.2}{ \040SU \( n \) \040to \040 L \040\( U \( n \) \) }{subsection.4.3}% 29
+\BOOKMARK [2][-]{subsection.4.4}{Reconstructing Lie Groups from Lie Algebras}{section.4}% 30
+\BOOKMARK [3][-]{subsubsection.4.4.1}{Actions: a natural maps on Lie groups}{subsection.4.4}% 31
+\BOOKMARK [3][-]{subsubsection.4.4.2}{Actions move us between tangent spaces}{subsection.4.4}% 32
+\BOOKMARK [3][-]{subsubsection.4.4.3}{Left actions on Matrix Lie Algebras}{subsection.4.4}% 33
+\BOOKMARK [3][-]{subsubsection.4.4.4}{Reconstructing \040G \040from \040 L \040\( G \) }{subsection.4.4}% 34
+\BOOKMARK [1][-]{section.5}{Representations}{}% 35
+\BOOKMARK [2][-]{subsection.5.1}{Representations of Lie algebras}{section.5}% 36
+\BOOKMARK [3][-]{subsubsection.5.1.1}{ Examples of representations of the additive group on the reals \( R, + \) }{subsection.5.1}% 37
+\BOOKMARK [2][-]{subsection.5.2}{A canonical representation of Lie Groups with Lie Algebras}{section.5}% 38
+\BOOKMARK [2][-]{subsection.5.3}{Classifying representations}{section.5}% 39
+\BOOKMARK [2][-]{subsection.5.4}{Invariant subspaces and reducibility}{section.5}% 40
+\BOOKMARK [3][-]{subsubsection.5.4.1}{ Invariant subspaces}{subsection.5.4}% 41
+\BOOKMARK [3][-]{subsubsection.5.4.2}{Irreducible representations and total irreducibility }{subsection.5.4}% 42
+\BOOKMARK [2][-]{subsection.5.5}{A canonical representation of Lie algebras}{section.5}% 43
+\BOOKMARK [2][-]{subsection.5.6}{Constructing a natural map of between representations of Lie groups to representations of Lie algebras}{section.5}% 44
+\BOOKMARK [3][-]{subsubsection.5.6.1}{Remark on alternate representations}{subsection.5.6}% 45
+\BOOKMARK [1][-]{section.6}{ Representations of SU\(2\) in Quantum Mechanics}{}% 46
+\BOOKMARK [2][-]{subsection.6.1}{Our choice of basis}{section.6}% 47
+\BOOKMARK [2][-]{subsection.6.2}{ Constructing representations of SU \(2\) }{section.6}% 48
+\BOOKMARK [2][-]{subsection.6.3}{Construction of an irreducible representation}{section.6}% 49
+\BOOKMARK [1][-]{section.7}{Example sheet 1}{}% 50
+\BOOKMARK [2][-]{subsection.7.1}{Question 1}{section.7}% 51
+\BOOKMARK [2][-]{subsection.7.2}{Question 2}{section.7}% 52
+\BOOKMARK [2][-]{subsection.7.3}{Question 3}{section.7}% 53
+\BOOKMARK [2][-]{subsection.7.4}{Question 4}{section.7}% 54
+\BOOKMARK [2][-]{subsection.7.5}{Question 5}{section.7}% 55
+\BOOKMARK [2][-]{subsection.7.6}{Question 6}{section.7}% 56
+\BOOKMARK [2][-]{subsection.7.7}{Question 7}{section.7}% 57
+\BOOKMARK [2][-]{subsection.7.8}{Question 8}{section.7}% 58
+\BOOKMARK [2][-]{subsection.7.9}{Question 9}{section.7}% 59
+\BOOKMARK [1][-]{section.8}{Example Sheet 2}{}% 60
+\BOOKMARK [2][-]{subsection.8.1}{Question 2}{section.8}% 61
+\BOOKMARK [1][-]{section.9}{Problems left to contribute}{}% 62

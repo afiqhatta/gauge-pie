@@ -1,0 +1,118 @@
+\subsection{Creating particle states} 
+With this framework in mind, we can create excited states with a given energy $\freq{ p }$ from our vacuum by applying raising operators. 
+Let's denote $\ket { \mathbf{ p ' } }  = \crea{ p ' } \ket{ 0 } $. Then, applying our Hamiltonian, we have that 
+\begin{align*} 
+H \ket { \mathbf{ p } '} & = \intp \freq{ p } \crea{ p} \ann{ p} \crea{ p' } \ket{0} \\
+&= \intp \freq{ p} \crea{ p } [ \ann{ p }, \crea{ p'} ]\ket{ 0 } \\
+&= \freq{ p '} \crea{ p ' } \ket{ 0 } = \freq{  p ' } \ket{ \mathbf{ p }'} 
+\end{align*} 
+We thus interpret the raised state as  a particle with mass $m$, energy $ \freq{ p' }  = \sqrt{ \ve{ p ' }^2 + m^ 2 }$  and momentum $ \mathbf{ p' } $, where the mass comes from the scalar term $\frac{ 1}{ 2} m^2 \phi^ 2 $ in the Lagrangian. From now on, we will relabel the energy $\freq{ p }$ as $E_\ve{ p } $. From our energy momentum tensor, we could also promote our expression for momentum as an operator, to find that 
+\[ 
+\ve{ P } =  - \int d^3 x\,  \mom{x} \scal{x}  = \intp \ve{ p} \crea{ p} \ann{ p} 
+\] 
+One can verify that this definition makes sense by acting on our momentum eigenstate via 
+\[ 
+\ve{ P } \ket{ \ve{ p}}  = \ve{ p } \ket{ \ve{ p } } 
+\] Similarly, constructing our angular momentum operator, $J^i $ as a cross product of our momentum and position operators, to find that for zero momentum eigenstates, $J^i \ket{ \ve{ p } = 0 } = 0 $, in other words, the intrinsic angular momentum, or spin, in zero. Now, to create multi-particle states, we can apply a bunch of raising operators to the vacuum state, and interpret this as a system of multiple particles. 
+This is denoted as 
+\[ 
+\ket{ \ve{ p }_1, \dots \ve{ p} _n }  = \crea{ p_1 } \dots \crea{ p_ n } \ket{ 0} 
+\] Because creation operators commute, we have that particles are symmetric under exchange ($ \ket { \ve{ p }, \ve{ q}} =  \ket { \ve{ q}, \ve{ p}})$, which means that this particle species are bosons. 
+
+Our full Hilbert space is then the space of all particles spanned by states of the form $\ket{ 0 }, \crea{p} \ket{ 0 }, \crea{ p } \crea{ q} \ket{ 0 }, \dots $ This is what we call Fock space. We can create another interesting operator on this space, called the number operator, defined as
+\[ 
+\mathcal{ N }  = \intp \crea{ p} \ann{ p} 
+\] This has the property that it counts particle states. This is because since 
+\begin{align*} 
+\mathcal { N } \ket{ \ve{p_1} \dots \ve{p_n} }  & = \intp \crea{ p} \ann{p} \crea{p_1} \crea{p_2} \dots \crea{ p_n } \ket{ 0} \\
+&= \intp \crea{ p} ( [ \ann{ p} , \crea{p_1} ] + \crea{p_1} \ann{ p} ) \crea{p_2} \dots \crea{p_n} [ket{ 0} \\
+&= \intp \crea{ p} ( 2\pi )^3 \delta ( \ve{ p - p_1} ) \crea{p_2} \dots \crea{p_n} \ket{0} \\
+& + \intp \crea{ p} \crea{ p_1} \ann{p}  \crea{p_2} \crea{p_n} \ket{ 0} \\
+&= \ket{ \ve{p_1} \dots \ve{p_n} } + \intp \crea{ p} \crea{ p_1} \ann{p } \crea{ p_2} \dots \crea{ p_n} \ket{ 0 } \\
+&= N \ket{ \ve{p_1} \dots \ve{p_n} } 
+\end{align*} 
+The last line is obtained by repeating the procedure until $\ann{p }$ hits $\ket{ 0}$. 
+To show that particle number is conserved in our Fock space, we need to show that this operator commutes with the Hamiltonian. We simply write this out as 
+\begin{align*} 
+[ H , \mathcal{ N } ] &= \int \frac{ d^3 p d^3 q }{ ( 2 \pi )^6} \freq{q} [ \crea{ q} \ann{q} , \crea{ p} \ann{ p} ] \\
+	&=  \int \frac{ d^3 p d^3 q }{ ( 2 \pi )^6} \freq{q} \left( \crea{ q} [ \ann{q}, \crea{ p} \ann{ p} ] + [ \crea{ q}, \crea{ p} \ann{ p } ] \ann{ q} \right)  \\
+	&= \int \frac{ d^3 p d^3 q }{ ( 2 \pi )^6} \freq{q} \left( \crea{ q} [ \ann{ q}, \crea{ p } ] \ann{ p} + \crea{ p} [ \crea{ q} , \ann{p} ] \ann{ q}  \right)  \\
+&= \int \frac{ d^3 p d^3 q }{ ( 2 \pi )^6} \freq{q} (2 \pi )^3 \delta ( \ve{ p - q} ) \crea{ q} \ann{ p } - (2 \pi )^3 \delta ( \ve{ p - q} ) \crea{ p} \ann{ q} \\
+& = 0 
+\end{align*} 
+Hence we have that the particle operator commutes with the Hamiltonian, and thus the particle number is conserved. 
+
+Note momentum eigenstates aren't localised. We can write a localised state via 
+\[ 
+\ket{ x} = \intp \nmode{p }  \ket{ \ve{ p} } 
+\] More generally, we describe a wave packet partially localised in both position and momentum space. We can write 
+\[
+\ket{ \psi }  = \intp \nmode{ p } \psi ( \ve { p } ) \ket{ \ve{ p } } , \quad \psi ( \ve { p } ) \propto e^{  - \ve{ p }^2 / 2m^  2 }
+\] Neither $\ket { \ve { x} } $ nor  $ \ket { \psi } $ are eigenstates of $H$ like in usual quantum mechanics. 
+
+\subsubsection{Relativistic normalisation} 
+From now on, let's define our vacuum state to be normalised such that $ \bra{0}\ket{0}  = 1$. Let's do a simple thing, and just contract two momentum eigenstates, and see what we get; 
+\[
+\bra{\ve{ p } }\ket{ \ve{ q}} = \bra{ 0 }\ann{ p} \crea{ q } \ket{ 0 }  = \bra{ 0 }[ \ann{p } \crea{ q} ] \ket{0 }  = ( 2\pi )^3 \delta( \ve { p - q} ) 
+\]  But, this our delta function Lorentz invariant? If not, it would be in our interest to come up with some expression that is Lorentz invariant, since manifest Lorentz invariance is easy (since things hold in all frames). We know definitely how four momentum transforms under a Lorentz boost, this is just given by
+\[ 
+p^\mu \rightarrow \Lambda\indices{^\mu_\nu} p^\nu  = p'^\mu 
+\] This induces a transformation on our actual \textbf{eigenstates}, where we map $ \ket{ \ve{ p } } \rightarrow \ket{ \ve{ p '} }$.  
+In our usual notion of quantum theory, we would want $ \ket{ \ve{ p } } $ to be related to $ \ket{ \ve{ p' } } $ by a unitary transformation, because this forces the contraction to be Lorentz invariant. So we would want 
+\begin{align*} 
+\ket{ \ve{ p } } \rightarrow \ket{ \ve{ p ' }}  & = U ( \Lambda) \ket { \ve { p }} \\
+( 2\pi )^3 \delta( \ve{ p - q} ) &=  \bra{ \ve { p } }\ket{ \ve { q } }  \rightarrow \bra{ \ve{ p } }U^\dagger( \Lambda ) U ( \Lambda ) \ket{\ve{ p } }  = \bra{ \ve{ p ' }}\ket{ \ve{ q' } }  = (2 \pi )^3 \delta ( \ve{ p' - q' } ) 
+\end{align*} 
+But we can'y assume that this holds in our quantum field theory case - we've made no study into how states change under relativistic transformations. So, the best we can do is to start from a different perspective, and use objects we know which are Lorentz invariant to construct a Lorentz invariant dot product. 
+
+Notice that our identity transformation
+\[ 
+1 = \intp \ket{\ve{ p } }\bra{ \ve { p } } 
+\] is Lorentz invariant, despite the individual states $\ket { \ve{ p } } $ not being Lorentz invariant. This means that or integration expression, or \textbf{measure}, is not Lorentz invariant. Thus, a good place to start is to find a Lorentz invariant measure.
+
+\begin{thm} 
+We have that the measure 
+\[ 	
+\int \frac{ d^3 p}{2 E_\ve{ p } } , \quad E_\ve{ p } = \sqrt { \ve{ p}^2 + m^2 } 
+\] is an invariant measure.
+
+\begin{proof}
+We construct this item from a chain of Lorentz invariant arguments. First, we assert that the measure 
+\[
+\int d^4 p 
+\] is Lorentz invariant. We know that this is true because when we transform 4-vectors $d^4 p \arr d^4 p'$, the factor is changed by $det ( \Lambda) $. But since Lorentz transformations lie in the special orthogonal group $SO(1, 3)$ this is just 1. In addition. we know that $p^2  = p_\mu p^\mu = p_0^2 - \ve{ p}^2 - m^2 $ is a Lorentz invariant quantity, hence putting this inside a delta function and sticking it inside the integrand also gives us a Lorentz invariant quantity!
+So 
+\[ 	
+\int d^4p \,  \delta \left( p_0^2  - \ve{ p}^2 - m^2 \right) \quad \text{is Lorentz invariant. } 
+\] This all seems a bit rabbit-out-of-the-hat at the moment, but bear with us. Let's separate our the time and space terms of our integral like this 
+\[
+\int d^3 p \int dp_0 \, \delta \left( p_0^2 - \ve{ p}^2  - m^2 \right)  = \int d^3 p \int dp_0 \,  \delta \left( f (p_0 )\right) , \text{ where}  \quad f( p_0) = p_0^2  - \ve{ p} ^2  - m^2 
+\] Now, we appeal to an identity we learned in our undergraduate years which allows us to work with delta functions of functions. 
+\[	
+\delta ( f ( x) )  = \sum_{ x_i } \frac{  \delta ( x - x_i)}{ | f'( x_i) |} \quad \text{ where } x_i \text{ are roots of f }.
+\] Now, our roots of $ f$ are at 
+\[ 
+p_0^{ \pm}  = \pm \sqrt{ \ve{ p }^2 + m^2 } 
+\] And, our derivative if just $f' ( p_0 )  = 2 p_0 $. Thus, our full function for our delta function is 
+\[	
+\delta \left( p_0^2 - \ve{ p}^2  - m^2 \right) = \frac{ \delta ( p_0  -  \sqrt{ \ve{ p }^2 + m^2 }  )}{ 2 \sqrt{ \ve{ p }^2 + m^2 } } +  \frac{ \delta ( p_0  +\sqrt{ \ve{ p }^2 + m^2 }  )}{  2\sqrt{ \ve{ p }^2 + m^2 } } = \frac{ \delta ( p_0  -  E_\ve{ p} )}{ 2 E_\ve{ p}  } +  \frac{ \delta ( p_0  + E_\ve{ p}  )}{  2 E_\ve{ p }  } 
+\] Now, we don't have to include both of these delta functions in our integral. It's okay just to choose $p_0 > 0 $, since we cannot Lorentz boost from positive time into negative time. Thus, our notion of sign choice for $p_0$ is also Lorentz invariant. So, selecting just the positive component 
+gives us 
+\[ 
+\int d^3 p \left. \int dp_0 \delta \left( p_0^2 - \ve{ p}^2  - m^2 \right) \right\vert_{p_0 > 0 }  = \,\int d^3 p  \int d p_0 \, \frac{ \delta ( p_0  -  E_\ve{ p} )}{ 2 E_\ve{ p}  } = \int \frac{ d^3 p }{ 2 E_ \ve{ p} } 
+\] since the delta function absorbed into the $\int p_0$ just goes to one. 
+\end{proof}
+\end{thm}  
+
+With this fact, we motivate the concept of a relativistically normalised state; which we denote as 
+\[ 	
+\ket{ p^\mu }  : = \ket{ p } = \sqrt{ 2 E_\ve{ p } } \ket{ \ve{ p } } 
+\] This is manifestly Lorentz invariant because  
+\[ 
+I = \int \frac { d^3 p }{ 2 E_\ve{p} } \ket{ p }\bra{p } 
+\] is Lorentz invariant, and so is the measure. Hence the integrand must be Lorentz invariant. Thus, our normalised delta function looks like 
+\[ 
+\bra{ p}\ket{ q} = ( 2 \pi )^3 2 \sqrt{ E_\ve{ p} E_\ve{ q} } \delta^3 ( \ve{ p - q} ) 
+\] 
+
+\pagebreak

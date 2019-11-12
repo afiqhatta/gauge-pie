@@ -1,0 +1,151 @@
+\subsection{Connections and Curvature} 
+What's the point of a connection? 
+This is going to be our final way of differentiation as opposed to 
+the things we have already written down. 
+A connection is a map $ \nabla  : \mathcal{ X } ( \mathcal{ M } ) \times \mathcal{ X } ( \mathcal{ M } ) \to \mathcal{ X } ( \mathcal{ M } ) $
+
+We write this as $ \nabla  ( X, Y )  = \nabla _{ X } Y $. 
+The purpose of doing this is to make it look more like differentiation. 
+Here, we call $ \nabla  _ X $ the covariant derivative, and it satisfies 
+\begin{itemize}
+	\item Linearity in the second argument $ \nabla _ X ( Y + Z )  = \nabla _ X Y + \nabla _ X Z $
+	\item Linearity in the first argument $ \nabla _{ f X + g Y }  Z = f \nabla _ X Z + g \nabla _ Y Z \forall f, g \in C^\infty ( \mathcal{ M } ) $
+	\item Leibniz $ \nabla _ X ( f Y )  = f \nabla _ X Y + ( \nabla _ X F ) Y $, with $ f $ a function. 
+	\item In the above, we have that $ \nabla _ X f = X ( f ) $, agrees with usual differentiation. 
+\end{itemize} 
+
+Suppose we have a basis of vector fields $ \left\{  e_ \mu  \right\} $. 
+We write 
+\[
+ \nabla _{ e _ \rho } e_{ \nu } = \Gamma^ \mu _{ \rho \nu } e _{ \mu } 
+\] This expression is a vector field because we know 
+the derivative spits out a vector field.
+We use the notation $ \nabla _{ e _ \mu }  = \nabla _ \mu $, 
+to make the connection look like a partial derivative. Then, applying the 
+Leibniz rule we can do a derivative on a general vector to give 
+\begin{align*}
+	\nabla _ X Y & = \nabla _ X ( Y ^ \mu e_{\mu  } ) + X ( Y ^ \mu ) e_\mu + Y ^\mu \nabla _ X e _\mu \\
+		     &=  X ^ \nu e_\nu ( Y ^\mu ) e _\mu + Y ^\mu X^\nu \nabla _ \nu e _ \mu  \\
+		     &=  X ^ \nu ( e _ \nu Y ^ \mu  + \Gamma^\mu _{ \nu \rho } Y ^ \rho ) e _ \mu  
+\end{align*}
+Because the vector sits out front we can write 
+\[
+ \nabla _ X Y  = X^ \nu \nabla _ \nu  Y 
+\]  with 
+\[
+	\nabla _ \nu Y = ( e _ \nu ( Y ^ \mu ) + \Gamma^ \mu _{ \nu \rho } Y ^ \rho ) e _ \mu 
+\] or, we define we equivalently define 
+\[
+	( \nabla _ \nu Y ) ^ \mu := \nabla _ \nu Y ^ \mu = e _ \nu ( Y ^ \mu ) + \Gamma ^ \mu _{ \nu \rho } Y ^ \rho 
+\] Comparing this to the Lie derivative however, 
+we have that $ \mathcal{ L } _ X $ depends on $ X $ and $ \partial X $,
+so we can't write " $ \mathcal{ L }_ X = X ^ \mu \mathcal{ L } _ \mu $ ". 
+If we take a coordinate basis 
+for the vector fields $ \left\{  e _  \mu  \right\}  = \left\{  \partial  _ \mu  \right\} $, 
+then was have that 
+\[
+ \nabla _ \nu Y ^ \mu = \partial  _ \nu Y ^ \mu + \Gamma ^ \mu _{ \nu \rho } Y ^ \rho 
+\] In terms of notation, we can replace differentiation with  
+punctuation. So, we have that 
+\[
+ \nabla _ \nu Y ^ \mu : = Y ^ \mu _{ ; \nu } : = Y ^ \mu_{ , \nu } + \Gamma^ \mu _{ \nu \rho } Y ^ \rho 
+\] 
+The connection is not a tensor! Consider a change of basis 
+\[
+	\tilde{ e } _ \nu = A \indices{ ^\mu _\nu } e_\mu, \text{ with } A \indices{ ^\mu _\nu} = \frac{\partial x^\mu }{\partial \tilde{x} ^\nu}    
+\]  
+We have that 
+\[
+\nabla _{ \tilde{e } _ \rho  } \tilde{ e } _ \nu \tilde{ \Gamma } ^ \mu _{ \rho \nu } \tilde{ e } _ \mu  = \nabla _{ A \indices{ ^\sigma _ \rho } e _ \sigma  } ( A \indices{ ^ \lambda _ \nu } e _ \lambda )  = A \indices{ ^ \sigma _ \rho } \nabla _ \sigma ( A \indices{ ^ \lambda _ \nu  } e _ \lambda  )        
+\]  This simplifies further to give 
+\begin{align*}
+	&=  A \indices{ ^ \sigma _ \rho } ( A \indices{ ^ \lambda _ \nu  } \Gamma ^ \tau _{ \sigma \lambda  } e _ \tau + e _ \lambda \partial  _ \sigma A \indices{ ^ \lambda _ \nu }     \\
+	&=  A \indices{ ^ \sigma _ \rho } ( A \indices{ ^ \lambda _ \nu } \Gamma ^ \tau _{ \sigma \lambda } + \partial  _ \sigma A \indices{ ^ \tau _ \lambda } ) e _ \tau     , \quad e _ \tau = ( A^{ -1 } ) \indices{ ^ \mu _ \tau  } \tilde{ e } _ \mu  	 
+\end{align*}
+This implies that 
+\[
+	\tilde{ \Gamma } ^ \mu _{ \rho \nu }  = ( A ^{ -1 } ) \indices{ ^ \mu _ \tau } A \indices{ ^ \sigma _ \rho } A \indices{ ^ \lambda _ \nu } \Gamma ^ \tau _{ \sigma \lambda } + ( A ^{ -1 } ) \indices{ ^ \mu _ \tau } A \indices{ ^ \sigma _ \rho } \partial  _ \sigma A \indices{ ^ \tau _ \nu }       
+\]  So we have that an extra term is added on. 
+We can also use the connection to differentiate 
+other tensors. 
+We simply ask that it obeys the Leibniz rule. 
+For example, $ \omega \in \Lambda ^ 1 ( \mathcal{ M } ) , Y \in \mathcal{ X } ( \mathcal{ M } ) $ 
+\[
+	X ( \omega ( Y ) ) = \nabla _ X ( \omega ( Y ) )  = ( \nabla _ X \omega ) ( Y ) + \omega ( \nabla _ X Y ) 
+\] Thus, rearranging the terms we have that 
+\[
+	\nabla _ X \omega ( Y )  = X ( \omega ( Y ) ) - \omega ( \nabla _ X Y ) 
+\] So, in terms of coordinates, 
+\[
+	X^ \mu ( \nabla _ \mu \omega _ \nu ) Y ^ \nu = X^ \mu \partial  _ \mu ( \omega  _\nu Y ^ \nu ) - \omega _ \nu X^ \mu ( \partial  _ \mu Y ^ \nu + \Gamma ^ \nu _{ \mu \rho } Y ^ \rho )  = X ^ \mu ( \partial  _ \mu \omega _ \rho - \Gamma ^ \nu _{ \mu \rho } \omega _ \nu ) Y ^ \rho 
+\] Hence, we have that 
+\[
+ \nabla _ \mu \omega _ \rho  = \partial  _ \mu \omega _ \rho  - \Gamma ^ \nu _{ \mu \rho } \omega _ \nu 
+\]  %In general, 
+%\[
+ %\nabla _ \gamma T \indices{ ^{ \mu_1 \dots \mu _{ p }  } _{ \nu _ 1 \dots \nu _ q }} = \partial _ \mu T \indices{ ^{ \mu _ 1 \dots \mu _ p } _{ \nu_ 1 \dots \nu _ q }} + \Gamma^{ \mu _ 1 }_{ \rho \sigma }  T \indices{ ^{ \sigma \mu _ 2 \dots \mu _{ p }} _{ \nu _ 1 \dots \nu _ q } + \dots  - \Gamma^{ \sigma }_{ \rho \nu_1 } T \indices{ ^{ \mu_ 1 \dots \mu _{ p }}_{ \sigma \nu_ 1 \dots \nu _ q }}    
+%\]
+
+Given a connection, we can construct two tensors. 
+\begin{enumerate}
+	\item Torsion is a rank $(1, 2) $ tensor
+		\[
+			T ( \omega; X, Y )  = \omega ( \nabla _ X Y - \nabla _ Y X - [ X, Y ] ) 
+		\] where we have that $ \omega \in \Lambda^ 1 ( \mathcal{ M } ) $, 
+		and $ X, Y \in \mathcal{ X } ( \mathcal{ M } ) $. 
+		We can also think of $ T $ as a map from 
+		$ \mathcal{ X } ( M ) \times \mathcal{ X } ( \mathcal{ M } ) \to \mathcal{ X } ( \mathcal{ M } ) $, with 
+		\[
+			T ( X, Y ) = \nabla _ X Y - \nabla _ Y X - [ X, Y ] 
+		\] 
+	\item Our second quantity that we can create is called \textbf{curvature}. 
+		This is a rank $ ( 1, 3 )  $  tensor
+		\[
+			R ( \omega, X, Y , Z ) = \omega ( \nabla _ X \nabla  _ Y Z - \nabla _ Y \nabla  _ X Z - \nabla _{ [ X, Y ]  } Z 
+		\] This is called the Riemann tensor. We can 
+		also think of it as a map from $ \mathcal{ X  } ( \mathcal{ M } ) \times \mathcal{ X } ( \mathcal{ M } ) $ to a differential operator which 
+		acts on $\mathcal{ X } ( \mathcal{ M } ) $. 
+		\[
+			R( X, Y ) = \nabla _ X \nabla  _ Y - \nabla  _ Y \nabla  _ X - \nabla _{ [ X, Y ] }
+		\] 
+\end{enumerate}
+
+To show that these objects are tensors, 
+we just need to check linearity in all the arguments. 
+For example, 
+
+\begin{align*}
+	T ( \omega , fX, Y ) &=  \omega ( \nabla _{ f X  } Y - \nabla _ Y ( f X) - [ fX , Y ] )  \\
+			     &=  \omega ( f \nabla _ X Y - f \nabla _ Y X - Y ( f) X  - ( f [ X, Y ] - Y ( f ) X ) ) \\
+			     &=  f \omega ( \nabla _ X Y - \nabla _ Y X   - [ X , Y ] )   \\
+			     &=  f T ( \omega , X, Y ) 
+\end{align*}
+
+Linearity is inherited from the fact 
+that our covariant derivative is linear when you add. 
+In a coordinate basis $ \left\{  e _\mu   \right\}  = \left\{  \partial  _ \mu  \right\}  $, 
+and our dual basis of one-forms $ \left\{  f^ \mu \right\}  = \left\{  dx ^ \mu \right\} $, 
+we have that the torsion in our components 
+is 
+\begin{align*}
+	T \indices{ ^ \rho _{ \mu \nu } } &=  T ( f ^ \rho, e_ \mu , e _ \nu )  \\
+					  &=  f^ \rho ( \nabla _ \mu e _ \nu - \nabla _ \nu e_\mu  - [ e_ \mu , e _ \nu ] )   \\
+	&=  \Gamma^ \rho_{ \mu \nu }  - \Gamma ^ \rho _{ \nu \mu ` } 
+\end{align*}
+A connection with $ \Gamma^ \rho _{ \mu \nu }  = \Gamma ^ \rho _{ \nu \mu } $
+has $ T ^ \rho _{ \mu \nu }  = 0 $ and is said to 
+be torsion free. 
+In addition, our curvature tensor has components 
+\begin{align*}
+	R \indices{ ^ \sigma _{ \rho \mu \nu }} &=  R ( f ^ \sigma; e_ \mu , e_ \nu , e _ \rho )  \\
+						&=  f ^ \sigma ( \nabla _ \mu \nabla _ \nu e _ \rho - 
+						\nabla _ \nu \nabla _ \mu e _ \rho 
+						- \nabla _{ [ e_ \mu , e _ \nu ] } e _ \rho \\
+						&=  f ^ \sigma ( \nabla _ \mu ( \Gamma ^ \lambda _{ \nu \rho } e_{ \lambda } )  - \nabla _ \nu ( \Gamma ^ \lambda _{ \mu \rho } e_{ \lambda  } ) )   \\
+						&=  \partial _ \mu \Gamma ^ \sigma _{ \nu \rho } - \partial  _ \nu \Gamma ^ \sigma _{ \mu \rho } + \Gamma ^ \lambda _{ \nu \rho } \Gamma^ \sigma _{ \mu \lambda } 
+						 - \Gamma^ \lambda_{ \mu \rho } \Gamma ^ \sigma _{ \nu  \lambda }
+\end{align*}
+Clearly, we have an antisymmetry property here, 
+where \[
+ R ^ \sigma _{ \rho \mu \nu } =  - R ^ \sigma _{ \rho \nu \mu } 
+\]

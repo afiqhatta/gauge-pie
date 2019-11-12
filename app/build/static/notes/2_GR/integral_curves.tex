@@ -1,0 +1,17 @@
+\subsection{Integral curves} 
+We'll now do an interesting diversion to discuss flows on a manifold. Think of a body of water moving smoothly on a surface, where each point on the manifold moves to a different point after some amount of time. This is a what a flow is. More specifically, it is a smooth map $\sigma_t : \mathcal{M} \rightarrow \mathcal{M} $ on the manifold (which makes it a diffeomorphism), where $t$ is our 'time' parameter that we were talking about. As such, these flow maps actually form an abelian group, where 
+\begin{itemize} 
+\item $\sigma_0 = I_\mathcal{M} $. So, after time $t = 0$ has passed, nothing has moved so we have that this is the identity map. 
+\item If we compose the same flow after two intervals in time, we should get the same flow when we've let the sum of those times pass over. So, 
+\[ \sigma_s \circ \sigma_t  = \sigma_{ s + t } \] 
+\end{itemize} 
+If we take a flow at a given point $p \in \mathcal{M}$, we can define a curve on the manifold by setting: 
+\[ 
+\gamma(t): \mathbb{R} \rightarrow \mathcal(M), \quad \gamma(t) = \sigma_t ( p ) 
+\] where without loss of generality we have $\gamma(0) = p$. Since this is a curve, we can define it's associated curve in $R^n$ space with a given coordinate chart, and hence associate with it a tangent vector $X_p$. We can also work backwards. From a given vector field, we can solve the differential equation 
+\[ 	
+X^\mu ( x(t) )  = \frac{ d x^\mu ( t) }{ dt} 
+\] with the initial condition that $x^\mu ( 0 )  = \psi ( p ) $ at some point in the manifold, and have that this defines a unique curve. The set of curves then together form a flow. 
+Thus, we've seen a one to one correspondence between vector fields and flows. 	
+\pagebreak 
+

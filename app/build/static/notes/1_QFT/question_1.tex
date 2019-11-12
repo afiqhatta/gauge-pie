@@ -1,0 +1,49 @@
+\subsection{Question 1} 
+
+In this question, we're asked to derive the momentum operator $P^\mu = \int d^3x \, T^{ 0 \mu} $. The first thing we notice is that this object is derived from the momentum part of the energy-momentum tensor, and is simply integrating this over all of space. Hence, we expect it to be an operator on fields. The first thing we'll do is derive the form of the energy momentum tensor. 
+
+The energy-momentum tensor is a conserved object which arises from translational symmetry. In Minkowski spacetime, translational symmetries in time correspond to the conservation of energy, and translational symmetries in space correspond to conserved momemtum. Hence, we consider the translation \[ x^\mu \rightarrow x^\mu + \epsilon^\mu \] 
+But, since this is a passive transformation of our reference frame, we have that our scalar field $\psi(x)$  transforms as \[ \psi(x) \rightarrow \psi(x - \epsilon) = \psi(x)  - \epsilon^\mu \partial_\mu \psi( x) \] 
+So our change in the scalar field $\delta( x) = \epsilon^\mu\partial_\mu \psi(x) $. Similarly, our Lagrangian $L$ in general transforms in the same way, with $\delta L = \epsilon^\mu \partial_\mu L $. This is indeed a symmetry of the Lagrangian since $\delta L = \partial_\mu ( F^\mu ) $ where $F^\mu = \epsilon^\mu L $ Thus, by Noether's theorem we can write out conserved current as 
+\[ j^\mu = \epsilon^\mu L - \epsilon^\nu \partial_\nu \psi \left( \frac{ \partial L }{\partial ( \partial_\mu \psi) } \right) \]    
+However, now we can 'factorise' out the $\epsilon^\mu$ since it's arbitrary, and write our conserved current as \[ T\indices{^\mu_\nu}  = \delta\indices{^\mu_\nu} L  - \partial_\nu \psi \left( \frac{ \partial L }{ \partial ( \partial_\mu \psi) } \right) \] 
+Now, substituting our expression for the Lagrangian (which is associated to the Klein-Gordon equation) 
+\[ L = \frac{1}{2} \partial_\alpha \psi \partial^\alpha \psi  - \frac{1}{2} m^2 \psi^2 \] 
+Our expression for our energy momentum tensor becomes 
+\[ T^{ \mu \nu} = \eta^{ \mu \nu} \left( \frac{ 1}{2} \partial_\alpha \psi \partial^\alpha \psi  - \frac{1}{2} m^2 \psi^2 \right)  - \partial^\nu \psi \partial^\mu \psi \] 
+
+Let's examine this term by term for $ \int d^3 x \, T^{ 0 \mu }$. For starters, let's take the $\partial^0 \psi \partial^\mu \psi $ term. First, we Fourier expand this object to get 
+\[  
+\psi( x) = \int d^3 p \frac{1}{(2 \pi )^3 \sqrt{ 2 E_\mathbf{p}} } \left( a_\mathbf{p} e^{ - i p \cdot x }  + a^\dagger_\mathbf{p} e^{ i p \cdot x } \right) \] 
+If we differentiate this thing with $\partial^0$ and $\partial^\mu$, we have that 
+\begin{align*} 
+\partial^0 \psi & = \int d^3 p \,  \frac{p^0}{ (2 \pi )^3 \sqrt{ 2 E_\mathbf{p}} } \left(  - a_\mathbf{p} e^{ - i p \cdot x } + a_\mathbf{p}^\dagger e^{ i p \cdot x} \right) \\ 
+\partial^\mu \psi & = \int d^3 p \, \frac{p^\mu}{ (2 \pi )^3 \sqrt{2 E_\mathbf{p}}} \left( - a_\mathbf{p} e^{ - i p \cdot x}  + a_\mathbf{p}^\dagger e^{ i p \cdot x } \right)  
+\end{align*}    
+Now, amalgamating this all together, we have that the integral of this is \[ \int d^3 x T^{ 0 \mu }  = \int d^3 x \, d^3 p \, d^3 q \, \frac{ p^0 q^\mu}{ ( 2 \pi )^6 \sqrt{ 2 E_\mathbf{p} E_\mathbf{q} }} \left( - a_\mathbf{p} a_\mathbf{q} e^{ - i ( p + q ) \cdot x } + a_\mathbf{p}^\dagger a_\mathbf{q} e^{ i ( p - q) \cdot x } + a_\mathbf{p} a_\mathbf{q}^\dagger e^{ i ( p -q ) \cdot x }  - a_\mathbf{p}^\dagger a_\mathbf{q}^\dagger e^{ i ( p + q ) \cdot x } \right) \] 
+But here, we can use the identity that 
+\[ 
+\int d^3 x \, e^{i \mathbf{x} \cdot (\mathbf{c } }  = (2 \pi )^3 \delta ( \mathbf{ c} ) \] 
+In the spatial part to isolate out a delta function. In addition, we also use the fact that $p^0 = E_\mathbf{p} $ to cancel out with $E_\mathbf{p}$ in the denominator. Hence, we end up with the expression that the above is 
+\[ 
+\int \frac{ d^3 p }{2 ( 2 \pi )^3 } p^\mu (a_\mathbf{p} a_\mathbf{ -p } + a_\mathbf{p}^\dagger a_\mathbf{p} + a_\mathbf{p} a_\mathbf{p}^\dagger + a_\mathbf{p}^\dagger a_{ \mathbf{ - p } }^\dagger ) \]  
+
+Now, the first and last terms disappear because under a change of variables $\mathbf{p} \rightarrow \mathbf{ - p} $, $p^\mu$ is an odd function under the spatial integral, but $a_\mathbf{p} a_\mathbf{ -p} $ and $a_\mathbf{p}^\dagger a_\mathbf{-p}^\dagger$ are even functions, so these terms disappear. Now, if we commute the third expression with our standard relation and remove our delta function since it's an infinite term ( like we do with our Hamiltonian), we get the final expression. 
+
+One can show that the rest of the terms in the energy momentum tensor disappear under integrating over $\int d^3 x $. 
+
+Now, for the next part of the question, we'd like to show that in the Heisenberg picture \[ [ P^\mu, \psi(x) ] =  - i \partial^\mu \psi( x) \] 
+This is achieved fairly easily by pulling the commutators to inside the integral and then using our standard commutation relations. 
+\begin{align*} 
+[P^\mu, \psi(x) ] & = [ \int \frac{d^3 p }{ (2 \pi )^3 } \,  p^\mu a_\mathbf{p}^\dagger a_\mathbf{p}, \psi ] \\
+&= \int \frac{ d^3 p }{ (2 \pi )^3} \, [ p^\mu a_\mathbf{p}^\dagger a_\mathbf{p} , \psi ] \\ 
+&= \int \frac{d^3 p}{ ( 2\pi) ^3 } \, p^\mu [a_\mathbf{p}^\dagger a_\mathbf{p} , \psi ] 
+\end {align*} 
+Where, going into the third line, since $p^\mu$ is not an operator, we've just pulled it out of the commutator. By linearity of the integral, we can also pull the commutator inside the integral, as we did going into the second line. Fourier expanding out, the above expression reads 
+\begin{align*} 
+\int \frac{ d^3 p d^3 q }{ ( 2 \pi )^6 } p^\mu [ a_\mathbf{p}^\dagger a_\mathbf{p}, a_\mathbf{q} e^{ - i q \cdot x } + a_\mathbf{q}^\dagger e^{ i q \cdot x } ] &= \int \frac{ d^3 p d^3 q }{ ( 2 \pi ) ^ 6} \, p^\mu \left( e^{ - i q \cdot x } [ a_\mathbf{p}^\dagger, a_\mathbf{q} ] a_\mathbf{p} + e^{ i q \cdot x } a_\mathbf{p}^\dagger [a_\mathbf{p}, a_\mathbf{q}^\dagger ] \right)  \\
+&= \int \frac{ d^3 p }{ ( 2 \pi )^ 3} \, \left( - p^\mu a_\mathbf{p} e^ { - i p\cdot x } + a_\mathbf{p}^\dagger p^\mu e^{ i p \cdot x } \right) \\ 
+&= - i \partial^\mu \psi(x)  
+\end{align*} 
+
+

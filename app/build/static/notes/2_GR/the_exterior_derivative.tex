@@ -1,0 +1,142 @@
+\subsection{The exterior derivative} 
+Notice that given a function $ f$, we can construct a  1-form 
+\[
+df = \frac{\partial f }{\partial  x^{ \mu} } 
+\] In general, there exists a map 
+$ d : \Lambda^ p ( M ) \to \lambda^{ p + 1 } (  M ) $. 
+this is the exterior derivative. In coordinates, 
+we have that 
+\[
+dw = \frac{1}{ p ! } \frac{\partial \omega_{ \mu_1 \dots \mu_{ p  } }}{\partial x^\nu} dx^\nu \wedge  \dots \wedge  dx^{ \mu_{ p }} 
+\] One should view this as a 
+generalised curl of some vector field. 
+In components, we have that 
+\[
+( d \omega  ) _{ \mu_1 \dots \mu_{ p + 1  }} = ( p +  1) \partial_{ [ \mu_1 } \omega_{ \mu_2 \dots \mu_{ p + 1 }]  }
+\] Let's try to gain an intuition about 
+why these two definitions are equivalent.
+If we contract our component definition with the tensor 
+product $ dx^ 1 \otimes \dots \otimes dx^{p +1}$, 
+then we are summing over 
+\[
+	d \omega = \frac{1}{p ! } \sum_{ \sigma \in S_ n } \epsilon ( \sigma)  \partial_{ \sigma ( \mu_ 1 ) } w_{ \sigma ( \mu _ 2 )  \dots \sigma ( \mu _{ p + 1 ) }} dx^{ \mu _ 1 } \otimes \dots \otimes dx^{ \mu _{ p +1}}
+\] However we can transfer our 
+permutations to permutations on tensor product, 
+but by definition this would just be the 
+wedge product on our basis one-forms. 
+
+By antisymmetry,  we have a very significant identity that 
+\[
+d ( d \omega  ) = 0 
+\] We write this as $ d^ 2 = 0 $.
+To show this, the easiest way is not to use our 
+definition of $ d \omega  $ in components but 
+rather to use our definition in terms of wedge product 
+basis vectors. Let's think carefully about how the exterior 
+derivative acts on some on $ p $ form but with 'components' 
+in our wedge product basis $ \left\{  dx^1 \wedge  \dots \wedge  dx^p \right\}  $. 
+In our wedge product basis, our components are $ \frac{1}{p !} \omega_{ \mu_ 1 \dots \mu _{ p } } $ since 
+\[
+	\omega = \frac{1}{p!} \omega_{ \mu_1 \dots \mu_{ p } }
+\] We have that under the exterior derivative, we are mapping 
+\[
+ d : \frac{1}{p!} \omega_{ \mu_ 1 \dots \mu_ p } dx^{ \mu _ 1 } \wedge  \dots \wedge dx ^{ \mu_ p } \mapsto \frac{1}{p!} \partial_\nu \omega_{ \mu _1 \dots \mu _ p } dx^ \nu \wedge dx^{ \mu _ 1 } \wedge  \dots \wedge  dx^{ \mu _ p } 
+\] So, in our new fancy wedge product basis, we are mapping 
+ \[
+ w_{ \mu_1 \dots \mu_{ p }} \mapsto \partial _ \nu \omega_{ \mu _ 1 \dots \mu _{ p } }
+\] 
+Hence, we have that, in our wedge product basis, our components of 
+$ d ( d \omega ) $ are 
+\[
+d ( d \omega ) = \frac{1}{p ! } \partial _ \rho \partial  _ \nu w_{ \mu _ 1 \dots \mu _ p } dx^ \rho \wedge  dx ^ \nu \wedge  dx ^{ \mu _ 1 } \wedge  \dots \wedge  dx^{\mu _ p } = 0 
+\] since we have symmetry of mixed 
+partial derivatives in $ \rho , \nu $ contracted 
+with the wedge product which is antisymmetric in those 
+indices.
+
+It's also simple to show that 
+\begin{itemize}
+\item $ d ( \omega  \wedge \epsilon ) = d \omega  \wedge  \epsilon + ( - 1)^ p \omega  \wedge  d \epsilon $
+\item For pull backs, $ d ( \phi^ * \omega  ) = \phi^* ( d \omega  ) $
+\item $ \mathcal{ L }_X ( d \omega  ) = d ( \mathcal{ L }_ X \omega $
+\end{itemize}
+A p-form is closed if $ d \omega   = 0 $ everywhere. 
+A p form is exact if $ \omega   = d \epsilon$ everywhere for some $ \epsilon$. 
+We have that  
+\[
+d^ 2 = 0 \implies \text{exact} \implies \text{closed} 
+\] 
+\textbf{Poincare's lemma} states that on $ \mathbb{ R}^n$, or locally on  $ \mathcal{  M }$, exact implies closed. 
+
+\pagebreak 
+\subsubsection{Examples} 
+Consider a one form $ \omega = \omega_\mu( x) dx^\mu $. Using our formula for the exterior derivative: 
+\[
+( d \omega)_{ \mu \nu } = \partial _\mu \omega_\nu - \partial  _\nu \omega_\mu 
+\] Or, in terms of our form basis, 
+\[
+d \omega = \frac{1}{2 } ( \partial _\mu \omega_\nu - \partial _\nu \omega _\mu ) dx^\mu \wedge  dx ^ \nu 
+\] In three dimensions, 
+\[
+d \omega = ( \partial_1 \omega_2 - \partial_2 \omega_1 ) dx^ 1 dx ^ 2 + ( \partial_2 \omega_3 -\partial_3 \omega_2 ) dx^ 2 \wedge  dx^ 3 + ( \partial_3 \omega_1 - \partial_1 \omega_3  ) dx^ 3 \wedge  dx^ 1 
+\] These are the components of $ \nabla \times \omega $. 
+The exterior derivative of a 1 form is a 2 form, but 2 forms have just three components in $ \mathbb{ R} ^3$ by anti symmetry ( with the components shown there). So we think of it has another vector field, if we identify the basis vectors $ \left\{  dx^ i \wedge  dx^ j  \right\} $ with components in $ \mathbb{R}^ 3 $!. 
+However, getting another 'vector field' by doing an exterior derivative on the 
+same type of object we had before is not the case in general.
+
+Consider  $ B \in \Lambda^ 2 ( \mathbb{ R} ^ 3 ) $. So, we have
+a 2-from in a 3 dimensional manifold. Let's label the components out 
+explicitly here. 
+\[
+ B = B_1 ( x) dx^ 2 \wedge  dx^ 3 + B_2 ( x) dx^ 3 dx^ 1 + B_3 ( x) dx^ 1 \wedge  dx^ 2 
+\] Before we do any explicit calculation, 
+we know that the exterior derivative pushes this up to a 3 -form, which only has one component
+in a three dimensional manifold. We compute the exterior derivative 
+explicitly by differentiating each component
+and then adding on the wedge.
+\begin{align*}
+	d B &=  \partial _ 1 B_ 1 dx ^1 \wedge  dx ^ 2 \wedge  dx^ 3  + \partial _ 2 B_2 dx^ 2 \wedge  dx^ 3 \wedge  dx^ 1 + \partial  _ 3 B _ 3 dx^ 3 \wedge  dx^ 1 \wedge  dx^ 2  \\
+	    &=   \left( \partial  _ 1 B _ 1 + \partial  _ 2 B _ 2 + \partial  _ 3 B _ 3 
+	     \right) dx^ 1 \wedge  dx^ 2 \wedge  dx^ 3 
+\end{align*} 
+In the last step, we permuted the indices cyclically 
+so that we don't have a sign change. 
+Note that we get our components of a grad
+operator acting on $ \mathbf { B } $! 
+
+For our final example, we take something from
+electromagnetism. The gauge field, or perhaps more commonly 
+known as our vector potential $ A \in \Lambda ^ 1 ( \mathbb{ R} ^ 4 ) $, 
+can be written out as a one-form in $ \mathbb{ R } ^ 4 $. 
+
+If we expand this as a one form, we can write 
+\[
+ A = A_ \mu dx^ \mu 
+\] 
+What happens when we take the exterior 
+derivative of this thing? 
+We get that 
+\begin{align*}
+	dA &= \partial  _ \nu A _ \mu dx^ \nu \wedge  dx ^ \mu   \\
+	   &=  \frac{1}{2 } \partial _{ [ \mu } A _{ \mu ] } dx^ \nu \wedge  dx ^ \mu \\ 
+	   &=  \frac{1}{2 } \left(  \partial  _ \nu A _ \mu - \partial  _ \mu 
+	   A _ \nu  \right) dx^ \nu \wedge dx ^ \mu \\
+	   &=  \frac{1}{2 } F_{ \mu  \nu  } dx^ \mu  dx ^ \nu  \\
+\end{align*} 
+We identify here that $ F_{ \mu \nu} = \partial  _ \mu A _ \nu - \partial  _ \nu A _ \mu $ 
+is our electromagnetic field strength tensor! 
+We also have that since $ d F = d ^2 A = 0 $, 
+we get for free what one may recognise as the Bianchi 
+identities. 
+
+We can also introduce gauge transformations
+which act on our electromagnetic 
+vector potential. These act as 
+\[
+A\to A+ d\alpha  \implies F \to d ( A d\alpha ) = dA \text{ invariant } 
+\] where we treat $ \alpha \in \Lambda^ 0 ( \mathcal{ M } ) = C^\infty ( \mathcal{ M }) $
+We also get Maxwell's equations for free! 
+\[
+F = dA \implies dF = d^ 2 A = 0
+\] There's are two of Maxwell's equations. 
+

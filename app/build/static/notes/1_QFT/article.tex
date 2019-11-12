@@ -1,0 +1,163 @@
+\documentclass[11pt, oneside]{article}   	% use "amsart" instead of "article" for AMSLaTeX format
+\usepackage[margin = 1.1in]{geometry}            		% See geometry.pdf to learn the layout options. There are lots.
+\geometry{letterpaper}                   		% ... or a4paper or a5paper or ... 
+\usepackage[parfill]{parskip}    		% Activate to begin paragraphs with an empty line rather than an indent
+\usepackage{graphicx}				% Use pdf, png, jpg, or eps§ with pdflatex; use eps in DVI mode
+								% TeX will automatically convert eps --> pdf in pdflatex	
+\usepackage{adjustbox}	
+\usepackage[section]{placeins}
+
+
+%% LaTeX Preamble - Common packages
+\usepackage[utf8]{inputenc}
+\usepackage[english]{babel}
+\usepackage{textcomp} % provide lots of new symbols
+\usepackage{graphicx}  % Add graphics capabilities
+\usepackage{flafter}  % Don't place floats before their definition
+\usepackage{amsmath,amssymb}  % Better maths support & more symbols
+\usepackage[backend=biber]{biblatex}
+\usepackage{amsthm}
+\usepackage{bm}  % Define \bm{} to use bold math fontsx
+\usepackage[pdftex,bookmarks,colorlinks,breaklinks]{hyperref}  % PDF hyperlinks, with coloured links
+\usepackage{memhfixc}  % remove conflict between the memoir class & hyperref
+\usepackage{mathtools}
+\usepackage[T1]{fontenc}
+\usepackage[scaled]{beramono}
+\usepackage{listings}
+\usepackage{physics}
+\usepackage{tensor}
+\usepackage{simplewick} 
+\usepackage{tikz} 
+\usepackage{import}
+\usepackage{xifthen}
+\usepackage{pdfpages}
+\usepackage{transparent}
+\usepackage{pgfplots}
+\usepackage[compat=1.1.0]{tikz-feynman}
+\usepackage{subfiles}
+\usepackage{simpler-wick}
+\usepackage{slashed}
+
+%% Commands for typesetting theorems, claims and other things.
+\newtheoremstyle{newline}
+{\topsep} 
+{\topsep} 
+{} 
+{} 
+{\bfseries} 
+{}
+{.5em}
+{\newline}
+{}
+
+\theoremstyle{newline} 
+\newtheorem{theorem}{Theorem}
+
+\theoremstyle{newline} 
+\newtheorem*{thm}{Theorem}
+
+\theoremstyle{newline} 
+\newtheorem*{claim}{Claim}
+
+\theoremstyle{newline} 
+\newtheorem{example}{Example}
+
+\theoremstyle{newline} 
+\newtheorem*{defn}{Definition}
+
+\newcommand{\Lagr}{\mathcal{L}} 
+\newcommand{\vc}[1]{\mathbf{#1}}
+\newcommand{\pdrv}[2]{\frac{\partial{#1}}{\partial{#2}}}
+\newcommand{\thrint}[1]{\int d^3 \vc{x} \left( {#1} \right)}
+
+%% QFT specific macros 
+\newcommand{\intp}{ \int \frac{ d^3 p }{ (2 \pi)^3 } \, }
+\newcommand{\ann}[1]{a_{ \mathbf{ #1 }}}
+\newcommand{\crea}[1]{a^\dagger_{ \mathbf{ #1 }}}
+\newcommand{\ve}[1]{ \mathbf{ #1 } } 
+\newcommand{\mode}[ 1]{ e^{ i \mathbf{ #1 } \cdot \mathbf{x} }}
+\newcommand{\nmode}[1]{ e^{  - i \mathbf{ #1 } \cdot \mathbf{x} }}
+\newcommand{\freq}[1]{\omega_\mathbf{ #1} } 
+\newcommand{\scal}[1]{\phi ( \mathbf{ #1 })} 
+\newcommand{\mom}[1]{ \pi (\mathbf{ #1 })} 
+\newcommand{\arr}{\rightarrow} 
+
+\newcommand{\incfig}[1]{%
+\def\svgwidth{\columnwidth}
+\resizebox{0.75\textwidth}{!}{\input{./figures/#1.pdf_tex}}
+}
+
+\newcommand{\anop}[2]{ #1_\mathbf{#2}}
+\newcommand{\crop}[2]{#1_\mathbf{#2}^\dagger}
+
+\usepackage{helvet} 
+
+%tikz decoration commands 
+\usetikzlibrary{decorations.pathmorphing}
+
+
+\title{Part III Quantum Field Theory}
+\author{Afiq Hatta } 
+\begin{document} 
+\maketitle
+\tableofcontents
+
+
+\pagebreak 
+
+\subfile{why_do_we_care_about_quantum_field_theory_.tex}
+\subfile{the_problem_of_locality.tex}
+\subfile{particle_indistinguishability_and_particle_conservation.tex}
+\subfile{problems_with_qft.tex}
+\subfile{scaling_in_qft.tex}
+\subfile{classical_field_theory.tex}
+\subfile{euler_lagrange_equations_for_a_point_particle.tex}
+\subfile{promotion_of_point_particles_to_the_classical_field.tex}
+\subfile{lorentz_invariance.tex}
+\subfile{symmetries_and_noether's_theorem.tex}
+\subfile{switching_over_to_the_hamiltonian_formalism.tex}
+\subfile{promoting_discrete_operators_to_fields.tex}
+\subfile{reviewing_the_harmonic_oscillator_in_one_dimension_in_quantum_mechanics.tex}
+\subfile{promoting_fields_to_operators.tex}
+\subfile{creating_particle_states.tex}
+\subfile{quantising_the_free_complex_scalar_field.tex}
+\subfile{introducing_time_with_the_heisenberg_picture.tex}
+\subfile{causality_in_qft.tex}
+\subfile{propagators.tex}
+\subfile{the_feynman_propagator.tex}
+\subfile{interacting_fields_and_the_approach_with_perturbation_theory.tex}
+\subfile{why_do_we_need_interacting_fields_and_what_are_'valid'_conditions_for_perturbation_expansions.tex}
+\subfile{the_interaction_picture.tex}
+\subfile{_scattering_.tex}
+\subfile{wick's_theorem.tex}
+\subfile{feynman_diagrams.tex}
+\subfile{scattering_revisited.tex}
+\subfile{amplitudes.tex}
+\subfile{_computing_the_two_point_correlation_function_for_the_ground_state_of_our_perturbed_hamiltonian_.tex}
+\subfile{wick's_theorem.tex}
+\subfile{applying_wick's_theorem_for_the_interaction_term.tex}
+\subfile{feynman_phi_rules.tex} 
+\subfile{greens_function_vacuum.tex}
+\subfile{cross_sections.tex} 
+\subfile{the_dirac_equation.tex}
+\subfile{what_does_the_dirac_equation_give_us.tex}
+\subfile{warming_up_with_spinors_from_the_$so(3)$_rotation_group.tex}
+\subfile{lorentz_tranformations_and_spinors.tex}
+\subfile{constructing_the_chiral_representation_for_the_dirac_equation.tex}
+\subfile{motivating_lorentz_invariance_of_the_dirac_equation.tex}
+\subfile{constructing_boosts_and_rotations_in_block_diagonal_form.tex}
+\subfile{the_weyl_equations.tex}
+\subfile{constructing_plane-wave_solutions_to_the_weyl_equation.tex}
+\subfile{example_sheet_1.tex}
+\subfile{question_1.tex}
+\subfile{question_2.tex}
+\subfile{question_3.tex}
+\subfile{question_4.tex}
+\subfile{question_5.tex}
+\subfile{question_6.tex}
+\subfile{question_7.tex}
+\subfile{question_8.tex}
+\subfile{example_sheet_2.tex}
+\subfile{question_1.tex}
+\subfile{question_2.tex}
+\end{document} 

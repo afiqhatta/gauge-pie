@@ -1,0 +1,23 @@
+\subsection{Constructing Plane-Wave solutions to the Weyl equation} 
+At it's essence, the Dirac equation is a wave equation. In this section, we'll explore solutions of Dirac's equation which have the form $\psi(p )  = e^{ - i p x } u ( p ) $, where $p$ denotes momentum, and we have the relativistic dispersion relation where $p^\mu p_\mu = m^2 $. We can make our life easier by reducing the problem to that of the rest frame, where $p^\mu  = (E_\mathbf{p} , 0 ) $. Our dispersion relation then tells us that $p^\mu = (m,  0 )$. Our Dirac equation in matrix form then reads \[ 
+\begin{pmatrix}  - m & i ( \partial_0  + \sigma \cdot \nabla ) \\ 
+i ( \partial_0  - \sigma \cdot \nabla ) & -m 
+\end{pmatrix} e^{ - i p \cdot x } u(  p )  = \begin{pmatrix} -m & m \\ m & -m \end{pmatrix} e^{  - i p \cdot x } u(p)  = 0 
+\] 
+This implies that our general solution in the rest frame can be written as \[ u(p)  = \sqrt{m} \begin{pmatrix} \xi \\ \xi \end{pmatrix} \] 
+
+Now, it's a matter of boosting this solution to a non-rest frame. To do this, we need to do a Lorentz boost on our 4-momentum vector, which for simplicity we'll just consider a boost in the $z$-direction. We know from special relativity that a boost given by 
+\[ 
+\begin{pmatrix} 
+E \\ p_3 
+\end{pmatrix}  = \left(  1 + \nu \begin{pmatrix} 0 & 1 \\ 1 & 0 \end{pmatrix} \right)  \begin{pmatrix} m \\ 0 \end{pmatrix} \] 
+Notice that we're not using our spinor representation here; the spinor representation is not for transforming 4-vectors; we're just using our ordinary Lorentz boost representation. Exponentiating this gives us our full Lorentz boost j The associated spinor representation however for this boost is 
+\[
+\Lambda_{\frac{1}{2}} = \exp \left(  - \frac{i}{2} \omega_{ \mu \nu } S^{\mu \nu} \right) 
+\]
+For a boost in the z-direction, our boost parameter looks is zero everywhere except in the $z$ direction, hence $\omega_{03}  = - \omega_{30}  = \mu$, and contracting this object with $S^{ \mu \nu} $ (rembering to include an extra factor of two due to antisymmetry, gives our Lorentz boost \[ 
+\Lambda_{\frac{1}{ 2}} = \exp \left(  \frac{ \mu}{ 2} \begin{pmatrix} \sigma_i & 0 \\ 0 &  -\sigma_i \end{pmatrix} \right)  \] 
+Now we're in good shape to multiply our spinor by the Lorentz boost object.  
+
+
+\pagebreak 

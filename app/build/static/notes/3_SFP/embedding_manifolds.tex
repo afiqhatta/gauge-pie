@@ -1,0 +1,23 @@
+\subsection{Embedding manifolds in $\mathbb{R}^n$} 
+Let's think about the manifold $S^2$. We've already defined an appropriate coordinate chart in this object, but a natural way to think about this surface is also to parametrise this as a surface in $\mathbb{R}^3 $, as a sphere with unit radius $1$. So, we're taking a manifold $\mathcal{M}$ and then finding a way to express this in some higher dimensional $\mathbb{R}^k$ (this is called an embedding).  We have that clearly
+\[ 	
+	S^2 = \{ \mathbf{x} \in \mathbb{R}^3 \mid |\mathbf{x}|^2  =1 \} 
+\] 
+Note that here, the way we parametrise $S^2$ is by specifying an element in $\mathbb{R}^n$ and then imposing a condition on the surface. More generally, we can embed a general manifold in $\mathbb{R}^n$ by writing it as 
+\[ 
+	\mathcal{M} = \{ \mathbf{x} \in \mathbb{R}^n \mid F_\alpha(\mathbf{x} ) = 0 \}  \]
+where we have $l$ constraints given by $\alpha = 1, 2 \dots, l$, where $F_\alpha : \mathbb{ R}^n \rightarrow \mathbb{R}$, and is a smooth function. In the case of $S^2$, we have that $\alpha = 1$, and 
+\[ 
+	F_1 ( \mathbf{x} ) = |\mathbf{x}|^2 - 1
+\]  
+\subsubsection{The Embedding Theorem} 
+A natural question to ask ourselves is how we can relate our dimension of our manifold to the dimension of our embedded space and our number of constraints. This is where the embedding theorem comes in. If we have $\alpha = 1, 2 \dots, l$, then the dimension of our manifold $\mathcal{M}$ is of dimension $m  - l$, where $m$ is the dimension of the space we're embedding in, if and only if 
+\[ 
+	J\indices{^\alpha_\beta} = \frac{ \partial F_\alpha}{ \partial x^ \beta} \] 
+is of full rank $l$ everywhere on our manifold.
+In the case of our 2-sphere, we had that in components 
+\[ 
+	F(x, y, z) = x^2 + y^2 + z^2 - 1 \implies J = 2( x, y , z) 
+\] 
+But in this case, on the manifold, $(x, y, z) \neq ( 0 , 0 , 0)$, so is of rank $1 = l$ everywhere. Hence the dimension of $S^2$ is $3 - 1 = 2$. 
+ 

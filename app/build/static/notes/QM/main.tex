@@ -1,0 +1,73 @@
+\documentclass[11pt, a4paper]{article}   	% use "amsart" instead of "article" for AMSLaTeX format
+\usepackage[margin = 1.0in]{geometry}            		% See geometry.pdf to learn the layout options. There are lots.
+\geometry{letterpaper}                   		% ... or a4paper or a5paper or ... 
+\usepackage[parfill]{parskip}    		% Activate to begin paragraphs with an empty line rather than an indent
+\usepackage{graphicx}				% Use pdf, png, jpg, or eps§ with pdflatex; use eps in DVI mode
+								% TeX will automatically convert eps --> pdf in pdflatex	
+\usepackage{adjustbox}	
+\usepackage[section]{placeins}
+
+
+
+%% LaTeX Preamble - Common packages
+\usepackage[utf8]{inputenc}
+\usepackage[english]{babel}
+\usepackage{textcomp} % provide lots of new symbols
+\usepackage{graphicx}  % Add graphics capabilities
+\usepackage{flafter}  % Don't place floats before their definition
+\usepackage{amsmath,amssymb}  % Better maths support & more symbols
+\usepackage[backend=biber]{biblatex}
+\usepackage{amsthm}
+\usepackage{bm}  % Define \bm{} to use bold math fontsx
+\usepackage[pdftex,bookmarks,colorlinks,breaklinks]{hyperref}  % PDF hyperlinks, with coloured links
+\usepackage{memhfixc}  % remove conflict between the memoir class & hyperref
+\usepackage{mathtools}
+\usepackage[T1]{fontenc}
+\usepackage[scaled]{beramono}
+\usepackage{listings}
+\usepackage{physics}
+\usepackage{tensor}
+\usepackage{tikz}
+\usepackage{multicol} 
+
+%% Commands for typesetting theorems, claims and other things. 
+\newtheorem{theorem}{Theorem}
+\newtheorem*{thm}{Theorem}
+\newtheorem*{claim}{Claim}
+\newtheorem*{example}{Example}
+\newtheorem*{defn}{Definition}
+
+\newcommand{\Lagr}{\mathcal{L}}
+\newcommand{\vc}[1]{\mathbf{#1}}
+\newcommand{\pdrv}[2]{\frac{\partial{#1}}{\partial{#2}}}
+\newcommand{\thrint}[1]{\int d^3 \vc{x} \left( {#1} \right)}
+
+\author{Afiq Hatta} 
+\title{Hilbert Spaces in Quantum Mechanics}
+\begin{document}
+\maketitle
+
+\begin{multicols}{2}
+
+\section{Hilbert Spaces} 
+In quantum mechanics, we do physics in terms of 'states', which one may have seen denoted by a ket vector which looks like $\ket{\psi}$, and then extract probabilities of interest by taking the square of the modulus. For example, one may be familar with calculating the probability that a particle exists in some region of time by integrating over $|\psi(x)|^2$, which is a probability distribution function.
+
+But what exactly is the mathematical formulation behind these states, and how do we put them on a slightly more general mathematical footing? This is where the idea of a Hilbert space comes in. A Hilbert space is a vector space, whose underlying field is the complex numbers $\mathbb{C}$. In addition, we have a well defined notion of an 'inner product', and in particular take note that this vector space is not necessarily finite in dimension. Our final condition is that this space is complete  
+
+In quantum mechanics, states are vectors in an infinite dimensional Hilbert space, and the inner product is defined to satisfy the following. The inner product is a map from states in the Hilbert space and its dual, to the complex numbers. 
+
+\[ 
+	\mathcal{H}^* \times \mathcal{H} \rightarrow \mathbb{C} 
+\] 
+The inner product between states $\ket{\psi}, \bra{\phi}$ is denoted $\bra{\phi}\ket{\psi}$, which is a complex number. This somewhat represents an amplitude, and we can get a real number by taking the modulus of this. 
+p> ;l
+\begin{itemize} 
+\item Conjugate
+\end{itemize}
+\subsection{Position and momentum representation} 
+
+\subsection{Things to cover} 
+Classical versus quantum formalisms
+Harmonic oscillator.  
+\end{multicols} 
+\end{document} 

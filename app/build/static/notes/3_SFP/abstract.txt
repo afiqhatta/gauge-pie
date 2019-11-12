@@ -1,0 +1,5 @@
+In this set of notes, we explore the relationships
+between group theory and particle physics. 
+We do this via the language of Lie groups, which 
+are groups of transformations where we can move smoothly from one 
+to another. 

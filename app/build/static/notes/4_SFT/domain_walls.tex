@@ -1,0 +1,133 @@
+\subsection{Domain Walls}
+However, we recognise that this obeys the same pattern as the mean field approximation! This is reassuring. However, we can go into a bit more detail, and explore field configurations in one dimension which smoothly move between $ \sqrt{ \frac{  - \alpha_2 }{ \alpha_4 } }$ and $  - \sqrt{ \frac{  - \alpha_2 }{ \alpha_4 } } $ (we can't have say, a step function because that means our gradient would be infinite). One can verify that a solution with this asymptotic property of converging to these stable state is given by 
+\[ 
+m = m_0 \tanh \left( \frac{ x - x_0}{ w }  \right), \quad W = \sqrt{ \frac{ 2 \gamma }{ \alpha_2 } } 
+\] This is called a domain wall. 
+We need to verify that this is a solution of the equation of motion.
+We find that 
+\[	\frac{d m }{dx } = \frac{m^{0 }}{W} \sech^2 \left( \frac{x - X}{W} \right), \quad \frac{d^2 m }{dx^ 2 } =  - \frac{2m_0 }{W^ 2 } \tanh \left( \frac{x - X}{W} \right) 	+ \frac{2 m_0 }{W^ 2} tanh^2 \left( \frac{x - X }{W} \right)   	\] 
+However, we can just wrangle this into the form 
+\[
+\gamma \frac{d^ 2 m }{dx^ 2 } = - \frac{2 \gamma }{W^ 2 }m  +  \frac{ 2 \gamma }{W^ 2 m_{0 }^2 }m ^ 3 
+\] If we substitute in our asymptotic values $ \pm m_{0 }$, as well as our characteristic width $W$, then 
+we recover that indeed 
+\[
+\gamma \frac{d^ m }{dx^ 2 } = \alpha_2 m + \alpha_4 m^{3}
+\] 
+Now, we saw that the function $m $ has \textbf{ characteristic length} $ W$. Beyond this length 
+we basically consider the function $ m $ to be constant. Let's try 
+plug this function back into our expression for our free energy $ F ( m ( \vec{x}) ) $. 
+Let's consider how the derivative terms scale first. Since the function is constant outside of our characteristic length, 
+we need only to integrate in this range. Our free energy derivative term is 
+\[
+F_{deriv } ( m ) = \int d^{d} x \frac{1}{2 } \gamma ( \nabla m )^ 2 \sim L^{d -1 } \int dx \gamma \left( \frac{ d m  }{dx} \right)^2  
+\] Let's take a look at what we've done here. We're approximating the 3d integral 
+into an 'radial' component, 
+and we've factored out a characteristic length scale of $L^{d - 1}$, much like 
+when we do a spherical intgral in $ d$ dimensions, we take out a factor of 
+$ S_{d -1 } $, the $ d - 1$ dimensional hypersphere, and leave in the 
+radial integral. 
+If we take just the constant term of $\frac{d m  }{ dx }$, then this integral 
+becomes 
+\[
+ L^{d - 1} \gamma \int dx \frac{m_0^2 }{W^ 2}  \sim  L^{d - 1} \gamma \frac{m_{0}^2 }{W} \simeq L^{d -1 }\sqrt{\frac{ - \gamma \alpha_2^3 }{\alpha_4^3 }}  
+\] We can also check that 
+this is the characteristic length scale of other terms in the free energy. 
+
+We can similarly do the polynomial functions in the free energy. 
+We have, for the term with the $\alpha_2 $ coefficent, that 
+\[
+	F ( m ( \vec{v}) )  = \int d^{d }x \frac{1}{2 } \alpha_2( T ) m^ 2 \sim L^{d - 1} \int dx \frac{1}{2} \alpha_2 m^ 2
+\] But again, we repeat the previous argument, 
+and integrate just over the characteristic length scale $W$. 
+Once again, we just take the constant terms, so that this 
+is approximated by 
+\begin{align*}
+	L^{d - 1} W \alpha_2 m_{0}^2 &= L^{d - 1}\alpha_2W \sqrt{\frac{-\alpha_2}{\alpha_4}}  \\
+	&= L^{d -1} W \frac{ - \alpha_2^2 }{\alpha_4 } \sqrt{\frac{ - 2 \gamma }{\alpha_4}}  \\
+	& \sim \sqrt{ \frac{ - \gamma \alpha_2^3 }{\alpha_4 }} 
+\end{align*}
+Similarly, we have that our quartic term scales in this way. 
+Hence, this free energy of a domain wall is well defined. 
+The free energy of a domain wall $F_{DW}$, compared with the free energy of a ground state scales with a power law for characteristic length, 
+\[ 
+F_{ DW} \sim L^{ d - 1} \sqrt{ \frac{  - \gamma \alpha_2^3 }{ \alpha_4} } 
+\] 
+There's a special value of $d = 1$ since our domain wall has no length scale. 
+This is what we call a critical dimension. 
+Now, we can look at the probability of a domain wall occuring. 
+As usual, the probability to have a certain field configuration is 
+given by 
+\[
+	e^{  - \beta F ( m ) }
+\] Hence, the probabilty of us having a domain wall at a given point $ x $ is 
+\[
+	\mathcal{  P}(\text{ domain wall at } x = X )  = \frac{e^{- \beta F_{wall}}}{\mathcal{ Z}}
+\] Now, the first thing to notice is that when $ d= 1$, our exponential factor 
+is constant since we have no length dependence. 
+Overall, this constant is really small. Now, let's imagine 
+we're in a section of  $ \R$ between $ \frac{L}{ 2} < x < \frac{L}{2}$. 
+Then, we can calculate the probabability of us having a domain wall in this box. 
+This means we'd like to calculate 
+\[
+	\int_{L / 2 }^{ L / 2 } dx \, \mathcal{ P }( \text{ domain wall at } X = x ) 
+\] Naively, this looks like it'll just be $ L $ times the probability of a domain wall at a given point. 
+However, we need to remember that domain walls have a characteristic length scale  $W$. 
+This means we need to multiply by a factor of $ \frac{1}{ W} $ in the measure. 
+So, we have that 
+\[	\mathcal{ P }( \text{there's a domain wall between } \frac{L}{2 }< x < \frac{L}{2} )  = \frac{L}{W} \frac{e^{ - \beta F_{ wall}}}{ \mathcal{ Z }} 
+\] What's the effect of having a domain wall in the range? 
+Well, suppose that, in this one dimensional line, that we have a 
+fixed magnetisation at the boundary, so suppose that $ m (  - \frac{L}{2 }) =  - m_{0 } $.
+Then, the effect of a domain wall would be to flip this to $ m ( \frac{L}{2 })  = m_{ 0 } $ 
+at the other end of the line. 
+
+Now we can ask, if we have the condition that say $ m ( L / 2 ) = m_0 $, 
+then what's the total probability of the magnetisation staying the same, 
+or switching, by the time we get to the other side? 
+The simplest way to find out what's happening is to consider 
+the probability that we have $ N $ domain walls appearing in the system. 
+Let's write down the expression first, then explain why this is. 
+Our expression 
+\[
+	\mathcal{ P }\left( \text{ n domain walls}  \right)  = \frac{e^{ - n \beta F_{wall}}}{\mathcal{Z} W^n } \int_{L / 2}^{ L / 2 } dx_1 \int_{x_1}^{ L / 2 } dx_2 \dots \int_{ x_{n-1}}^{ L / 2} dx_n  
+\] To see why this is, observe that, without loss of generality, we can place a domain wall anywhere
+in the range, as the first domain wall to be placed. This is represented in the first integral. 
+After that, we can place a wall any point after that wall, assuming 
+its placed at the point $ x_{1}$. We repeat, to place a wall after that, and so on, 
+until we've placed $n $ walls. 
+Our probability density given by the exponential $ e^{ - \beta F_{wall}}$ is constant, so we
+pull $ n $ of these factors out. 
+
+An elegant argument to evaluate this integral is to observe that 
+this term is symmetric amongst permutation of the variables $ x_1, x_2, \dots x_n $. 
+So, we're essentially multiplying the first integral $ n $ times, 
+but to take into account the permutation symmetry, we need to 
+divide by $ n ! $. 
+Thus 
+\[
+	\mathcal{ P }\left( \text{n domain walls} \right) = \frac{1}{n! \mathcal{ Z}} \left( \frac{L e^{ - \beta F_{wall}}}{ W} \right)^{n }   
+\] Now that we've done this, calculating the probability of whether 
+magnetisation will flip by the time it reaches the other side 
+is simply a matter of looking at whether we have an odd or even 
+number of domain walls. If we have an even number, 
+our magnetisation flips an even number of times and thus is not changed. Hence, 
+\[
+	\mathcal{ P }( m_0 \to  m_0 )  = \sum_{n \text{ even }} \mathcal{P }\left( \text{n walls} \right) \frac{1}{\mathcal{Z}} \cosh \left( \frac{L e^{ - \beta F_{wall}}}{ W } \right)  
+\] Similarly, our probability of switching sign is 
+\[
+	\mathcal{ P }( m_{0} \to   - m_0 ) = \frac{1}{\mathcal{ Z}} \sinh \left( \frac{L e^{ - \beta F_{wall}}}{ W} \right) 
+\] What's the point of all this? 
+Well, since our dimension was at $d = 1$, our probability diverges and $ L \to \infty $.
+Thus, the probabilities $ \mathcal{ P }( m_0 \to  m _0 ) $ and $ \mathcal{P }( m_0 \to - m_0 ) $ 
+are indistiuishable. 
+We have a disordered state in one dimension, and hence mean field theory 
+here breaks down. However, when 
+$ d = 2$, we have that $ F \sim L $, so as we take the limit
+as  $ L \to  \infty $, the terms don't diverge and we still retain an memory of 
+the boundary conditions initially at $ x =  - \frac{L}{2}$. 
+
+
+\pagebreak
+
+

@@ -1,0 +1,273 @@
+\subsection{Matrix groups}
+Given some field $F$, which could be either $\mathbb{C}$ or $\mathbb{R}$, we define the set of $n \times n$ matrices over it as $Mat_n (F)$. Let's choose matrix multiplication as our group operation. Clearly, there exists a mutliplicative identity, the identity map, and we also have by the definition of matrix multiplication that its associative. However, this set doesn't form a group in it's own right since not all matrices are invertible. However, we can pick out the set of invertible matrices 
+\[
+	GL_n(F) = \{A \in Mat_n(F) \mid det A \neq 0 \}  
+\]
+which we refer to as the general linear group. In fact, $GL(n, F)$ is a lie group in its own right, because matrix multiplication and inversion is smooth. We will also prove shortly that $GL(n, F)$ is an open set of $Mat_n(F)$, so our coordinate chart into $\mathbb{R}^{n^2}$ is just the identity map, and hence we have an $n^2$ dimensional Lie group.  
+
+The special linear group is $SL_n(F)$ where our matrices have determinant 1, so 
+\[ 
+	SL(n, F) = \{ M \in GL(n, F) \mid det M = 1 \} 
+\] 
+This is a group by the multiplicative property of determinants where 
+\[ 
+	det(M_1 M_2) = det(M_1)det(M_2)
+\] Hence, multiplying two matrices with determinant 1 also gives a matrix with determinant 1. We now ask ourselves what is the dimension of this Lie group? Well, we've embedded this object in as 
+\[
+	SL(n, F) = \{ M \in Mat_n(\mathbb{ R}) \simeq \mathbb{R}^{ n^2 } \mid det M = 1 \}
+\]
+Thus, if we can show that the function $F(M) = det M - 1 $ has a non-negative Jacobian at each point on the manifold, then we have an $n^2 - 1$ dimensional Lie group.  
+We reindex the variables to differentiate with as $M_{ij}$. This looks weird but we're merely reindexing each component of the matrix in the completely natural way. Our Jacobian element (due to a result which we will not prove), is 
+\[ 
+	J_{ij}  = \frac{\partial F}{\partial M{ij} } = \pm det ( \hat{M}^{ ij } ) 
+\] 
+$\hat{M}^{ ij} $ represents the matrix of minors, which is the $(n - 1) \times ( n - 1) $ matrix that we get when we remove the $i$th row and $j$th column. It's a result that $det(\hat{M}^{ ij } )  = 0 \iff det(M) = 0, \quad \forall i, j = 1, 2,\dots n$, hence this $J$ is non zero and hence is of rank one. Thus, the dimension of our manifold is $n^2 -1 $. Furthermore, matrix multiplication and matrix inversion are smooth maps, hence this is a lie group. 
+
+We can extend this argument to complex matrices where our condition that our determinant be 1 gives two constraint functions, since we're fixing a condition on both real and imaginary components. We have 
+\begin{align*} 
+dim (GL(n, \mathbb{R} ) &= n^2 \\
+dim (SL(n, \mathbb{R} ) &= n^2 - 1\\
+dim (GL(n, \mathbb{C} ) &= 2n^2 \\
+dim (SL(n, \mathbb{C} ) &= 2n^2 - 2
+\end{align*} 
+
+\subsubsection{Matrix groups in $GL(n, \mathbb{R} )$} 
+Our first matrix group that we'd like to examine is the matrix group whose action on vectors leaves their lengths unchanged.
+\[ 
+\mathbf{v} \mapsto \mathbf{v}' = M \mathbf{v} 
+\] 
+The condition that these maps leave lengths unchanged means that 
+\[ 
+|\mathbf{v}'|^2 = \mathbf{v}^T M^TM \mathbf{v}  = \mathbf{v}^T \mathbf{v} 
+\] 
+This implies that our matrix $M$ has to satisfy the condition that $M^M  = I$. This motivates the definition of the orthogonal group 
+\[ 
+O(n)  = \{ M \in Mat_n(F) \mid M^T M = I \} 
+\] 
+Taking determinants, 
+\[ 
+M^T M = I \implies det (M )^2 = 1 \implies det M  = \pm 1 
+\] 
+$O(n)$ defines a manifold since there's as chart to a subset of $\mathbb{R}^{n^2 } $ (although we don't know what dimension it is yet), but we can see that immediately that it's not a connected manifold. This is because of the fact that $det (M ) = \pm 1$ Taking a determinant is a smooth function of $M$, but there's no smooth path we can parametrise $M$ with on the manifold to swith the determinant from $+1$ to $-1$. This is becasue if there was, the composition of two smooth functions would be discontinuous, a contradiction.
+
+So, we've essentially split $O(n)$ into two portions. If we focus on the part of the group where $det M  =1$, this gives us the special orthogonal group. 
+\[ 
+SO( n) = \{ M \in O(n) \mid det M  = 1\} 
+\] 
+This has the property that we're preserving the orientation of a basis of $\mathbb{R}^n $ say. Suppose we had a basis 
+\[ 
+\mathcal{B}   = \{ \mathbf{v}^1 , \dots \mathbf{v}^n \} 
+\] 
+Then a linear map is orentation preserving if the sign of 
+\[ 
+\Omega  = \epsilon^{ i_1 i_2, \cdots i_n} v^1_{i_1} \dots v^n_{i_n } 
+\] 
+is preserved after transformation of the vectors. Matrices with determinant 1 preserve the sign of this object. Hence $M \in SO ( n) $ are considered as rotations, where as matrices in $O ( n ) $ without unit determinant are considered some composition of rotations and reflections. 
+
+The condition that $M^T M = I$ provides constraints only up to a transpose. This means that our constraints which are linearly independent only lie in the top triangle, which gives us $\frac{1}{ 2} ( n ) ( n + 1 ) $ constraints on our manifold. This means that, using the embedding theorem, 
+\[ 
+dim ( O (n) ) = n^2  - \frac{1}{2} ( n ) ( n + 1 )  = \frac{1}{2}( n )( n - 1) 
+\] 
+Since our condition already fixes that that $ det M  = \pm 1 $ up to a sign, this imposes no additional contraints on our manifold and we have that 
+$dim SO( n )  = dim O(n)$. 
+
+Matrix groups are Lie groups - the can parametrise them through their matrix entries smoothly, where each matrix element is a coordinate. With this reasoning, the dimension of $GL_n(\mathbb{R})$ is $n^2$, for example. 
+
+\subsubsection{General properties of $O(n)$ } 
+In this section, we'll look at some properties of some common orthogonal groups that will arise. To help us with this, we'll present some details about matrices in $ O (n) $ to help us with our discussion. In particular, facts about eigenvectors and eigenvalues, which are basis invariant properties, are particularly useful for our discussion. 
+
+\begin{thm}
+
+If $\lambda \in \mathbb{C}$ is an eigenvalue of $M \in O (n) $, then so is $\lambda^* \in C$ Furthermore, we have that $|\lambda|^ 2 = 1$. 
+\begin{proof} 
+Suppose that $\lambda \in C$ is an eigenvalue. Then by definition, there exists a (complex) vector $\mathbf{v} \in \mathbb{ C}^n $such that $M \mathbf{v}_\lambda = \lambda \mathbf{v}_\lambda $. However, recall that $M \in GL ( n , \mathbb{ R})$. This means we can take the complex conjugate (not transpose!) of this equation, and since the entries of $M$ are real, it doesn't change. This gives us 
+\[ 
+M \mathbf{v}_\lambda^* = \lambda^* \mathbf{v}_\lambda^* 
+\] However, this implies that $ \mathbf{v}_\lambda^*$ is an eigenvector with eigenvalue $\lambda^*$. So we're done. Another way to phrase this is that since the entries of $M $ are real, then the coefficients of its characteristic polynomial are real. However, this means that any complex root must have it's complex conjugate as a root as well. 
+
+We can use the orthogonality property to our advantage here. Note that 
+\[
+	|\mathbf{v}|^2 = \mathbf{v}^\dagger I \mathbf{v} = \mathbf{v}^\dagger M^T M \mathbf{v} = |\lambda|^2 |\mathbf{v}|^2 \implies |\lambda|^2  = 1
+\] 
+\end{proof}
+\end{thm} 
+This fact is important, this means that if we have a complex eigenvalue, then it must be a phase of the form $e^{ i \theta} $ and $e^{  - i \theta} $ must also be an eigenvalue. Our condition that modulus squared also applies to real numbers. If we have $\lambda \in \mathbb{ R}$, then $\lambda \in \{ -1, + 1 \}$. However, these are also phases and so are included in the condition above. 
+
+\subsubsection{SO(2)} 
+Take the group $SO(2)$. This is the matrix group 
+\[ 
+	SO(2) = \{A \in O ( n )  \mid \det A = 1 \}  
+\] We have from our previous discussion that matrices in $O (n ) $ have eigenvalues which must be $e^{ i \theta}, e^{. -i \theta} $, with $\theta \in \mathbb{R}$. However, phases are invariant by shifting $\theta \rightarrow \theta + 2 \pi$, so we have the identification that 
+\[ 
+	\theta \sim \theta + 2 \pi 
+\] This is suggestive that elements in the group represent rotations in the 2 dimensional plane. We can thus use $\theta$ as a coordinate to parametrise our manifold as rotations in the plane as $M(\theta)$, with a general group element written as 
+\[ 
+	g(\theta)  = \begin{pmatrix}
+	\cos \theta &   - \sin \theta \\
+	\sin \theta & \cos \theta
+	\end{pmatrix}, 
+\]
+where we restrict $\theta \in S^1$. Thus, our corresponding manifold for this Lie group is the circle $S^1$, and $\mathcal{M} (SO(2)) \simeq S^1$. 
+To reaffirm our confidence that this is a Lie group, one can check that $M ( \theta_1 ) M(\theta_2 )  = M(\theta_2)M(\theta_1) = M(\theta_1 + \theta_2) $, so group multiplication acts smoothly on the manifold. Furthermore, this manifold is connected, but not simply connected because tying a string around a circle, we can't contract this down to a point. In fact the homotopy group of $S^1$ is 
+\[ 
+	\pi_1 (S^1 ) \simeq \mathbb{Z}
+\] This is because we can loop a string around $S^1 $ n times in an additive sense. 
+
+
+
+\subsubsection{SO(3)}
+We increase the dimension a bit and explore what's going on with $SO(3)$.Before we go into the maths behind representing rotations in three dimensions, let's first go into some of the geometrical intuition. To rotate something in three dimensions, a systematic way one could go about doing this is to first choose an axis of rotation which we could parametrise as a unit vector $\hat{\mathbf{n}} \in S^2 $ on our two-sphere. We can then rotate this. Naively, we'll say that we can rotate this by an angle $\theta \in [0, 2\pi)$, but more careful consideration tells us that if we parametrise rotations in this range, we're double counting. Rotating about the $\hat{ \mathbf{z} } $ axis by an angle of $ \theta  = \frac{ \pi }{ 2 } $ is exactly the same as rotating about the $ - \hat{ \mathbf { z} } $ axis by an angle of $ \theta  = \frac{ 3 \pi}{ 2} $. So, we have a \textbf{redundancy} in our initial idea of the range of $\theta \in [0, 2 \pi)$, and it's sufficient to parametrise elements in SO(3) with 
+\[ 
+	\hat{ \mathbf{ n } } \in S^2, \quad \theta \in [0 , \pi ) 
+\] Now we can go into more detail about representing objects in SO(3) as matrices.  We first ask what our eigenvalues look like. Since the matrix elements of a matrix in $SO(3)$ are real, its characteristic polynomial has real coefficients. Thus, we must have one real eigenvalue and two complex eigenvalues. Due to the conditions we described earlier about orthogonal matrices, they eigenvalues are $1, e^{i \theta}, e^{ - i \theta}$. 
+Given that $\mathbf{n}$ is a unit modulus eigenvector of $M \in SO(3)$ with $M \mathbf{n} = \mathbf{n}$, a general element in this matrix can be written as 
+\[
+	M(\theta, \mathbf{n}) = \cos \theta \delta_{ij} + (1 - \cos \theta) n_i n _j  + \sin \theta \epsilon_{ijk} n_k. 
+\]
+We're interpreting $\mathbf{n}$ to be the axis of rotation, since it's an invariant vector. Notice that there's some ambiguity in our description here. For example, if we were to map $\theta \rightarrow 2 \pi - \theta$, this gives us the same result as if were to map $\mathbf{n} \rightarrow - \mathbf{n}$, which we argued in the previous paragraph\. . In addition, rotating about a given axis by 0 degrees does nothing, so we have even more redundancy in this system. We have the following identifications on our manifold $M$: 
+\[ 
+	M( - \mathbf{n}, \theta ) \sim M ( \mathbf{n}, 2\pi - \theta), \quad M(\mathbf{n}, 0 )  = I_3, \quad \theta \in [ 0, \pi] 
+\] 
+Now let's ask ourselves, what are problematic values of $\theta$ and where can we identify what things with what things? Well, since we require that 
+\[ 
+	\theta \in [0,\pi ], 2 \pi  -\theta \in [ 0, \pi ] \implies \pi \leq \theta \leq 2 \pi \implies \theta = \pi 
+\] is where our things need to be identified. So, we have the identification that 
+\[ 
+	( - \mathbf{n}, \pi) \sim (\mathbf{n}, \pi )
+\]  
+Let's think of this geometrically by defining a new mapping from our manifold to a ball. Let's now parametrise the manifold in terms of a vector 
+\[ 
+ 	\mathbf{w} = \theta \hat{ \mathbf{ n} }, \quad \theta \in [0, \pi ) 
+\] This is already consistent with our second identification since when  $\theta = 0$, $\mathbf{ w}  = 0 $, an identity element. Now, it takes some work to wrangle this in a manifold that's compatible with the first identification structure. 
+We can define the ball with radius $ \pi$. 
+\[
+	B_3  = \{\mathbf{w} \in \mathbb{R}^3 \mid |\mathbf{w}|^2 \leq \pi  \} 
+\]
+and its corresponding boundary 
+\[
+	\partial B_3 = \{\mathbf{w} \in \mathbb{R}^3 \mid |\mathbf{w}|^2 =\pi  \}. 
+\] However, because of our identification condition earlier, we have that antipodal points on this boundary sphere are considered to be 'identified' or 'the same' with one another. So in actual fact, the boundary of this manifold is $\partial B_3  / \sim$, where our equivalence relation quotients our antipodal points. This means that our manifold has no boundary since points on the boundary sphere aren't unique. It's easy to see that whilst this manifold is connected, it's not simply connected because we can take a straight line going through the origin through the sphere, but since antipodal points are identified, this constitutes a loop. We can't contract this however since rotating this line will always keep us on the boundary. On the other hand, we can easily construct a loop just in the interior of this sphere. 
+
+However, we can 'square' a loop by going straight through the sphere twice, and that curve \text{is} deformable to a point! This suggests that our homotopy group structure is akin to $\mathbb{Z}_2$, so 
+\[ 
+	\pi_1 ( SO ( 3) ) \simeq \mathbb{Z}_ 2 \simeq \{ +1, - 1 \} 
+\] 
+This manifold is compact since it's bounded, and closed since we're including points on the boundary. 
+
+\pagebreak 
+\subsubsection{Non compact groups; the Lorentz group and more general metrics}
+
+We brought up orthogonal groups previously because they preserve the Euclidean metric
+\[ 
+	M^T M  = M^T I M. = I 
+\] 
+ However, there are matrices which preserve more general metrics, ubiquitous in physics. A metric with signature $(p, q)$, is of the form 
+\[
+	\eta = \begin{pmatrix}
+		I_p & 0 \\
+		0 & - I_q \\
+	\end{pmatrix}. 
+\]
+We denote the matrices which preserve this metric as 
+\[
+	O(p, q) = \{ M \in Mat_n(F) | M^T \eta M = \eta  \} . 
+\]
+These are matrices which constitute the general orthogonal group. Our simplest example of a matrix in the class of general orthogonal matrices is the a general matrix in $SO(1,1)$, which looks strikingly similar to a rotation matrix in $SO(2)$, expect that we've replaced our sin and cos terms with 
+\[ 	
+	M  = \begin{pmatrix} 
+		\cosh \phi & \sinh \phi \\
+		\sinh \phi & \cosh \phi 
+	\end{pmatrix}, \quad \phi \in \mathbb{R} 
+\] 
+One can easily check that this has determinant 1, and that it preserves the metric $diag ( 1, - 1)$ However, since our coordinate parameter $\phi \in \mathbb{R} $, this group is not compact since $\mathbb{R}$ is not compact. 
+
+
+\subsubsection{Subgroups of $GL(n, \mathbb{ C}) $}
+
+Thus far, we've invested quite a bit of effort in looking at real matrices which have the interpretation of leaving vector norms unchanged. We can do the exact same with complex matrices. These matrices are analog of orthogonal matrices but in complex space instead, for $F = \mathbb{C}$. The set of matrices in this matrix group which leave the norm of complex vectors unchanged are the unitary matrices. 
+\[
+	U(n) = \{ M \in Mat_n (\mathbb{C}) \mid M^{\dagger} M = I \}. 
+\] In analog with what we had in the real case, 
+\[ 	
+	\mathbf{v}' \in \mathbb{C}^n \mapsto \mathbf{v}' = M\mathbf{ v}, \implies  |\mathbf{v}'|^2 = |\mathbf{v}|^2 
+\] Our condition for unitary implies that the determinant of matrices in the group is a phase, since 
+\[ 
+	| det ( M ) |^2 = 1 \implies det ( M) = e^{ i \theta}, \quad M \in U ( n) 
+\] Our key difference that we have from the real case with $O(n)$ is now that we no longer have discontinuous jumps when taking the determinant, since our determinants vary by a smooth phase! This means that $U( n)$ is a connected manifold! Just as before, we can restrict our matrices in $U( n )$ to those which have unit determinant, 
+\[ 
+	SU ( n ) = \{ M \in U ( n ) \mid det M = 1\} 
+\] 
+By arguments that matrix multiplication in complex space is smooth, we have that $U ( n)$ and $SU ( n) $ are Lie groups. Thus, we can count their dimensions. If we consider complex numbers as being parameterised by 2 real numbers, our over-arching embedding space is $\mathbf{R}^{ n^2 } $. To figure out the dimension of $U (n)$, we need to impose the condition that 
+\[ 
+	 H = M^\dagger M  = I, \text{ equivalently } H^\dagger = H 
+\]  On the surface this looks like we have $2 n^2 $ constraints, but this is symmetric up to hermitian conjugation. Hence, we ask how many degrees of freedom we need to define a Hermitian matrix. On the diagonal of a hermitian matrix, we require real elements. On the upper triangular part of a Hermitian matrix, we have $n (n -1 ) /2 $ place holders for complex numbers, but since each complex number has 2 degrees of freedom over the reals, we multiply this number by 2. Hence our total degrees of freedom is 
+\[ 
+	2 ( n ( n  -1) ) / 2 + n  = n^2 
+\] Hence we have a set of $n^2$ quadratic constraint functions. This thing one can check is of full rank for non-zero matrices. Now, to find the dimension of $SU ( n)$ we impose an additional constraint on the determinant, 
+$det U = 1$. Since we're working over complex numbers, this is superficially looks like two conditions in real space. However, since our determinant is already a phase by the unitarity conditions, we actually just have one constraint that 
+\[ 
+	e^{ i \theta } = 1 
+\] So in summary we have that 
+\[ 
+	dim ( U ( n)) = n^2, dim ( SU ( n)) = n^2  - 1
+\] 
+
+Two Lie groups $G$ and $G' $ are isomorphic  ($G \simeq G'$) if there exists a one to one smooth map $\mathcal{ I } : G \rightarrow G' $ such that for any pair of elements of the Lie group $G$, we have that for $\forall g_1, g_2 \in G$
+\[ 
+	\mathcal{ I } ( g_1 g_2 ) = \mathcal{ I } ( g_1 ) \mathcal { I } ( g_2 ) 
+\]
+A general element $z  = e^ { i \theta } $ of $G  = U ( 1) $, with 
+\[ 
+	\theta \in \mathbb{ R}, \quad \theta \sim \theta + 2 \pi \] 
+corresponds to a unique element 
+\[ 
+	M (\theta )  = \begin{pmatrix} \cos \theta &  - \sin \theta \\ \sin \theta & \cos \theta \end{pmatrix} 
+\] of G'  = $SO ( 2) $. We have the map 
+\[ 
+	 \xi z( \theta)  = e^ { i \theta } \rightarrow M ( \theta ), \quad \xi : U ( 1) \rightarrow SO ( 2) 
+	 \] 
+	We can easily check that $ \xi $ is bijective, and in addition we have that 
+	\[ 
+	 	\xi ( z( \theta_1 ) z( \theta_ 2) )  = M ( \theta_1 + \theta_2 )  = M ( \theta_1 ) M ( \theta_2 )  = \xi ( z ( \theta_1 ) ) \xi ( z ( \theta_2 ) ) 
+	\] Therefore we have an isomorphism that $U ( 1) \simeq SO ( 2) $. 
+
+Now consider the Lie group $G = SU ( 2) $, with dimension $3$. We can show that we can write 
+\[ 
+	U = a_o I + i \mathbf{ a} \cdot \sigma, \quad \sigma  = ( \sigma_1, \sigma_2, \sigma_3 ), \quad (a_0 , a_1, a_2. a_3 ) \in \mathbb{R}^3 
+\] We have the condition that 
+\[ 
+ 	a_0^2 + a_1^2 + a_2^2 + a_3^2  = 1 \implies \mathcal { M }( SU ( 2) ) \simeq S^3 \subset \mathbb{ R}^4 
+\] This defines a different manifold than that of $ SO ( 3) $
+We have that the corresponding manifolds are 
+\[ 
+	 \pi_1 ( SU ( 2) ) \simeq \{ 1 \}, \quad \pi_1 ( SO ( 3) ) \simeq \mathbb{ Z}_2 \implies SU ( 2) \neq SO ( 3) 
+\] 
+
+Our most obvious example is 
+\[
+	U(1) = \{z \in \mathbb{C} | |z|^2 = 1 \}, 
+\]
+thus, we can write 
+\[
+	z \in U(1) \iff z = e^{i \theta}, \quad \theta \in [0, 2 \pi ). 
+\]
+We can now construct a bijective map $U(1) \rightarrow SO(2)$
+\[ 
+	e^{i \theta} \mapsto  \begin{pmatrix}
+	\cos \theta &   - \sin \theta \\
+	\sin \theta & \cos \theta
+	\end{pmatrix}. 
+\] 
+Thus we have that $U(1) \simeq SO(2)$. As for $SU(2)$, we can show that a general element is of the form 
+\[ 
+	U = a_0I + i \mathbf{a} \dot \sigma
+\]
+where $\sigma$ represents the Pauli matrices. Our unitarity condition implies that $a_0^2 + a_1^2 + a_2^2 + a_3^2 = 1$. 
+Thus 
+\[ 
+	\mathcal{M}(SU(2)) \simeq S^3. 
+\] 
+
+
+
+\pagebreak 

@@ -1,0 +1,35 @@
+\subsection{Propagators} 
+
+If we prepare a particle at a point $ y $, what's the probability it 
+ends up at $ x $? Well, we could identify the creation 
+of a particle at the point $ x $, with  $ \phi ( x) $. It's instructive to view the similarities with QM. 
+We have that  $ \bra { x } X \ket { p }  = e^{i p \cdot  x} $ in regular quantum mechanics, but we have
+\[
+\bra{ 0 } \phi ( x) \ket { p }  = e^{  - i p \cdot  x }
+\] in QFT. Hence, we can somewhat identify $ \phi ( x) \ket{ 0 } $ as the position  presentation of a created particle. 
+
+Our amplitude for a particle to propagate at $x $ then travel to $ y $ is then  
+\[
+\bra{0}\phi ( x) \phi( y ) \ket{0}  = \int \frac{d^ 3 p d^ 3 q }{ ( 2 \pi )^6 \sqrt{ 4 E_p E_q } } \bra{0}[ a_{\vec{p}}, a_{\vec{p}'}]\ket{0} e^{  - i (  p \cdot  x   i -  p' \cdot  y }
+\] which is 
+\[
+= \int \frac{d^3 p }{ ( 2 \pi )^ 3 2E_p } e^{  - i p \cdot  ( x - y ) } : = D ( x - y ) 
+\] This quantity we call the propagator. 
+For spacelike separations $ ( x - y )^2 < 0 $, we can show that it decays as 
+\[
+D( x -y ) \sim e^{ | \vec{x} - \vec{y} |  } 
+\] The quantum field leaks out of the light cone. 
+But, we just saw that the space like separations commute; 
+\[
+\Delta ( x -y ) = [ \phi( x ), \phi ( y) ] = D( y - x ) - D ( x- y )  =0 ,\quad \forall ( x - y )^2 < 0 
+\] There's no Lorentz invariant way of ordering the events and a particle can just as 
+easily travel from $ x \to  y $ as it can from $ y \to x $. 
+In a measurement, these amplitudes cancel. 
+For a $ \mathbb{ C} $ scalar field, we have that 
+\[
+[ \psi ( x), \psi ( y ) ] = 0, \text{ outside the light cone } 
+\] 
+The amplitude to go from $ x \to  y $ cancels the one 
+for an antiparticle to go from 
+$ y \to   x$. For real fields, the particle is the antiparticle. 
+

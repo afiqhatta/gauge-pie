@@ -1,0 +1,176 @@
+\section{Evaluating Path Integrals and Gaussian Path Integrals }
+We want to compute the path integral 
+\[
+	\mathcal{ Z} = \int \mathcal{D}m ( \vec{x}) e^ { - \beta F( m ( \vec{x}) ) } 
+\] This object forms flutuations around the saddle point. 
+This object is dominated around the saddle point (a weaklu coupled theory). 
+Hence, we can work perturbatively. 
+However, if the object was strongly coupled, the fluctuations matter just as much. 
+If we set our magentic field to zero, we know our free energy takes the form 
+\[
+	F( \phi ( \vec{x}) )  = \int d^{d}x \left[ \frac{1}{2} \alpha_2(T ) \phi^2 + \frac{1}{4}\alpha_4(T) \phi^{4} + \frac{1}{ 2} \gamma( T ) ( \nabla \phi)^2 + \dots  \right] 
+\] We can do a gross simplification here where we take $\alpha_4 \to 0 $.
+To justify the following approximations, we need to keep track of what our 
+\textbf{mean field} terms are. 
+In the case where 
+\begin{itemize}
+	\item $\alpha_2 > 0 $, to leading order, our mean field is 
+		\[
+			\langle \phi \rangle  = 0
+		\]  Since we're assuming that $\phi $ is close to zero, then 
+		the quartic terms disappear. Hence, we're just left with 
+		the quadratic and derivative terms. 
+		\[
+			F ( \phi( \vec{v}) ) = \int d^{d} x \frac{1}{2} \alpha_2 \phi^2 + \frac{1}{2 } \gamma ( \nabla \phi ) ^ 2  
+		\] 
+	\item In the case where $\alpha_2 ( T ) < 0 $, we redefine 
+		$ hat{\phi }( \vec{v}) = \phi ( \vec{v})  - \langle \phi \rangle  $	
+
+
+\end{itemize} 
+There's a very good reason why we need to make a redefinition 
+for the case where $\alpha_2 < 0 $. This is because, when we solve for the equations of motion, 
+just as in the mean field case, we recover two constant solutions 
+\[
+ \left< \phi \right> = \pm m_0 = \pm \sqrt{ \frac{ - \alpha_2 }{\alpha_4 }} 
+\] We get that $ \left< \phi \right> $ is not close to zero, but these
+two equilibrium terms instead. 
+In addition, it's obvious that if we just set the quartic terms to zero 
+with $ \alpha_2 < 0 $, then the whole qualitative shape of our potential 
+would be different: we would have an upside down smiley face.  
+However, we can make a different field which is close to zero. We define a translated field
+\[
+	\widetilde{ \phi }( \vec{x})  = \phi ( \vec{x})  - \left< \phi \right>
+\] These are small fluctuations around the mean field average. 
+If we substitute these expressions into the free energy, we have
+\[
+	F( \widetilde{\phi}) = \int d^{d }x \frac{1}{ 2} \alpha_2 ( T ) ( \widetilde { \phi} + \left<\phi \right> )^ 2 + \frac{1}{4} ( \widetilde{ \phi} + \phi)^ 4 + \frac{1}{2 } \gamma ( \nabla  \widetilde{\phi} ) ^2 
+\] Now, up to quadratic order, the constant terms from $ \left< \phi \right> $ 
+come out to form the integral $ F ( \left< \phi \right> ) $. The non constant terms 
+give a linear and quadratic integral as follows 
+\[
+	F = F( \left< \phi \right>) + \int d^{d } x \alpha_2 ( T ) \left< \phi \right>\widetilde{ \phi} + \alpha_4 \widetilde{ \phi } \left< \phi \right>^3 +\int d^{d } x \frac{1}{2} \alpha_2 ( T ) \widetilde { \phi }^2 + \frac{3}{2 } \left< \phi \right>^2 \alpha_4 + \frac{\gamma}{2 } ( \nabla \widetilde{ \phi }  )^2 
+\] 
+In the integral with terms linear in $ \widetilde{ \phi } $, the coefficient is 
+ \[
+\alpha_2 \left< \phi \right> + \alpha_4 \left< \phi  \right>^3 = 0, \quad \left< \phi \right> = \sqrt{ \frac{ - \alpha_2 }{\alpha_4}} 
+\] Thus, the linear term vanishes, and we're left with a quadratic and derivative term
+just like in the case with $ \alpha_2 < 0 $.
+We can write the quadratic $ \phi $ coefficient as 
+\[
+	\int d^{d }x \frac{1}{ 2 } \alpha_2' ( T) \widetilde{ \phi }^2 
+\]  where we have that 
+\[
+\alpha_2'  = \alpha_2 + \frac{3}{2} \left< \phi  \right>^2\alpha_4 = \alpha_2  - 3 \frac{\alpha_2 }{\alpha_4} \alpha_4  = - 2 \alpha_2 
+\] 
+Hence, in terms of our new translated field, we can write the free energy as 
+\[
+	F (\widetilde{ \phi } ) = F( \left< \phi \right>) + \int d ^{d }x \frac{1}{ 2} \alpha_2' \widetilde{ \phi } + \frac{1}{2 }\gamma ( \nabla \phi)^2 \dots 
+\] 
+
+We move into Fourier space with 
+\begin{align*}
+	\phi_{\vec{k}}  &= \int d^{d}x e^{ - i \vec{k} \cdot  \vec{x}} \phi( \vec{x}) \\
+	\phi_{ \vec{k}}^*  &= \phi_{-\vec{k}}  \\
+\end{align*}
+However, recall that we've coarse grained, which means 
+we have to put out some Fourier modes, by an ultraviolet cutoff. 
+Inserting this expression into our free energy, we have that 
+\[
+	F [ \phi_{ \vec{k}} ] = \frac{1}{2}\int d^{d} \vec{k}_1 \int d^{ d}\vec{k}_2 
+\] 
+Given our form of free energy $F(m)$, our usual way of computing our partition function would be \[ Z = \sum_{\text{configurations}} e^{ - \beta F(m) } \] However, with coarse graining introduced, we now integrate over all possible configurations of $m = m(\mathbf{ x} )$. To do this, we introduce a measure called a path integral, and thus our partition functions is given by \[ Z = \int \mathcal{D} m \, e^{ - \beta F(m)} \]
+Where the measure $\int \mathcal{ D } m $ is telling us to integrate over all possible field configurations. 
+
+Question is, how do we even begin to evaluate this kind of object? The key is to rewrite this measure as a product of integrals of Fourier modes, that is, we diagonalise $m$ in Fourier space and rewrite \[ \int \mathcal{D}m  = \prod_\mathbf{k} \mathcal{K} \int d m_\mathbf{ k } d m^*_\mathbf{k} \] 
+In what follows, we'll be using both continuous and discrete decomppositions of $m$ into Fourier modes. We decompose $m( \mathbf{x} ) $ into contnuous Fourier modes as \[ m(\mathbf{x} ) = \int  \frac{d\mathbf{k}}{ ( 2 \pi )^d }\, e^{ - i \mathbf{x} \cdot \mathbf{k}}m_\mathbf{k} \] and decompose $m$ into discrete Fourier modes in some volume $V$ as \[ m(\mathbf{x} ) = \frac{1}{ V} \sum_\mathbf{k} e^{ - i \mathbf{x} \cdot \mathbf{k} }m_\mathbf{k} \] 
+
+At this point, as a result of our coarse graining proceduce, since we're counting averages over a lattice, we need to ensure that our Fourier modes aren't too high. So, we impose that 
+\[
+ \phi_{\vec{k}} =0, \quad  \frac{\pi}{ a } < \| k \|  
+\] Where $ a $ is the characteristic length of our coarse graining procedure. 
+
+If we rewrite our free energy $F (m)$ in terms of our Fourier modes, we have \[ F(m) = \int \frac{d m_\mathbf{k_1} d m_\mathbf{k_2}d^d x}{( 2\pi )^d} \, \left( \mu^2 m_{\mathbf{k}_1} m_{\mathbf{k}_2} e^{ - i \mathbf{k}_1 \cdot \mathbf{x} } e^{ - i \mathbf{k}_2 \cdot \mathbf{x} } - \mathbf{k}_1 \cdot \mathbf{k}_2 e^{ - i ( \mathbf{k}_1 + \mathbf{k}_2  \cdot \mathbf{x} )}m_{\mathbf{k}_1} m_{\mathbf{k}_2} \right) \] 
+
+At this point, it's useful to remember the identity \[ ( 2 \pi )^d \delta (\mathbf{k} ) = \int d^d x e^{- i \mathbf{x} \cdot \mathbf{k}} \] so our final expression for our free energy is \[ F(m ) = \int \frac{ d \mathbf{k} }{ (2 \pi ) ^d } \left( \mu^ 2 |\mathbf{k} |^2 + \alpha \right) m_\mathbf{k} m_{ - \mathbf{k} } \]   
+Substituting this transformed expression for our free energy, and using our measure which is the product of Fourier modes, our partition function \[ Z = \left( \prod_\mathbf{k} \mathcal{K} \int dm_\mathcal{k } dm_{ - \mathcal{k} } \right) \exp \left(  - \beta \int \frac{ d\mathbf{k} } { (2 \pi )^d } \left( \mu^2 |\mathbf{k}|^2 + \alpha \right) m_\mathbf{k} m_{ - \mathbf{k}} \right) \]
+Now the tricky part is to somehow get rid of that integral over $d \mathbf{k}$ in the exponent. To do this, we discretize the integral over the possible modes $\mathbf{k} $ in a finite volume and then take this volume to infinity. \[ \int d \frac{ \mathbf{k} }{ (2 \pi)^d } f( \mathbf{k} ) = \lim_{V \rightarrow \infty} \frac{ 1 }{ V} \sum_\mathbf{k} f(\mathbf{k} ) \] where in this case in the finite volume, our modes $\mathbf{k} $ are appropriately quantized. This makes our integral above easier to hande because now we can write it as \[ \left( \prod_\mathbf{k} \mathcal { K } \int dm_\mathbf{k} dm_{  - \mathbf{k} } \right) \exp \left( - \frac{ \beta}{ V } \sum_{ \mathbf{ k } } ( \mu^2 |\mathbf{ k} |^2 + \alpha )m_\mathbf{k} m_{ - \mathbf{k} } \right) \] but we can factor out our above expression over the product so that \[ Z = \prod_{ \mathbf{k} } \mathcal {K} \int dm_\mathbf{k} dm_\mathbf{-k} \exp \left(  - \frac{1}{ TV}  ( \mu^2 |\mathbf{k}|^2 + \alpha ) m_\mathbf{k} m_\mathbf{ -k } \right) \] 
+(There's a factor of 2 missing here which I need to correct). How do we go about evaluating this object? Well, recall that in a fourier transform, our negative fourier mode is indeed just the complex conjugate of the corresponding positive mode: 
+\[ 
+dm_{  - \mathbf{k}}  = dm_\mathbf{ k}^* 
+\] 
+So to do the above, we need to think carefully about how we integrate expressions that look like 
+\[ 
+\int dx dx^* \exp \left(  - \frac{ |x|^2 }{ 2 \alpha } \right)  
+\] 
+At first glance, one might think to treat the $x, x^* $ variables here separately and integrate twice over, but since $x$ clearly depends on $x^*$, we have that the expression above is just the same as integrating 
+\[ 
+\int dx \exp \left(  - \frac{ |x|^2 }{ 2 \alpha } \right) = \sqrt{ 2 \pi \alpha }  
+\] 
+This is our usual expression for a Gaussian-like integral. Our expression for our partition function is therefore 
+\[ 
+Z = \prod_{ \mathbf{k}} \sqrt{ \frac{ 2 \pi V T \mathcal{ K }^2 }{ ( \mu^2 |\mathbf{ k} |^2 + \alpha  ) } }  
+\]   
+where, in calculating this, we've pulled the constant $\mathcal{K}$ inside the square root to make our calculations with it easier later on. Now that we have our partition function, we're in good shape to start calculating quantities of interest. The most obvious one we can compute is our thermodynamic free energy, $F_{thermo} =  - T \log Z$. What we'll do now is naively plug our expression for $Z$ in, but then make an approximation to get it into a nice integral form. We'll work instead with the thermodynamic free energy per unit volume. 
+
+This is given by
+\[ 
+\frac{ F_{ thermo} }{ V} =  - \frac{ T}{ V} \log Z =  - \frac{ T}{ 2V } \sum_{ \mathbf{k}} \log \left( \frac{ 2 \pi  V T \mathcal{K}^2 }{ ( \mu^2 |\mathbf{k}|^2 + \alpha ) } \right) 
+\] 
+
+But, we can do even better than this. Previously, we swapped out our integral for a sum, but now we can do the opposite thing and swap out our sum $\frac{ 1}{ V } \sum_\mathbf{k} $ with $\int \frac{ d^d \mathbf{ k} } { ( 2 \pi)^d } $. This gives the condensed expression that 
+\[ 
+\frac{ F_thermo}{ V} = - \frac{ T}{ 2} \int \frac{ d^d k}{ ( 2\pi )^d } \, \log \left( \frac{ 2 \pi V T \mathcal{K}^2 } { (\mu^2 |\mathbf{k}|^2 + \alpha ) } \right)  
+\] 
+
+In the $\mathbb{ C} $ case, we have 
+\[
+	\mathcal{ Z}_{\mathbb{ C} } = \prod_{\vec{k}}^{\infty} \left\{ \int d \phi_{\vec{k} }^r d\phi_{\vec{k} }^I e^{  - \frac{\beta}{2 V  } ( \gamma k^ 2 + \mu^ 2 )( \phi_{ \vec{k} }^ { r 2 }   + \phi_{\vec{k} }^{ I 2 }}  \right\}   
+\] 
+Our Gaussian integral identity implies that 
+\[
+	\mathcal{ Z}_{\mathbb{ C} } = \prod \mathcal{ N } \frac{ 2 \pi T V }{ \gamma k^ 2+ \mu^2 }  
+\] So, in the real case we have that for the real field, 
+ %\[
+%	\mathcal{ Z } = \prod_{\vec{k}} N \left( \frac{ 2 \pi T V }{ \gamma k^2 + \mu^2 }  \right)^{ \frac{1}{2 } }    
+%\] This is because our factors of $ d \phi_\vec{k}$ and $ d \phi_{  - \vec{k}}$ are now
+related in the real case. 
+Our free energy was $ \mathcal{ Z } = e^{  - \beta F_{ thermo  } }$. This means that 
+in the discrete case 
+we have that 
+\begin{align*}
+	\frac{F_{thermo  } }{V } &=   - \frac{T}{V} \log ( \mathcal{ Z })  \\
+				 &=   - \frac{T}{ 2V } \sum_{ \vec{k} } \log \left( \frac{ 2 \pi T V N^2 }{ \gamma k^ 2 + \mu^  2} \right)  \\
+				 & \sim  - \frac{T}{2 }\int d^{ d } k \frac{ 1 }{ ( 2\pi )^d } \log \left( \frac{ 2 \pi T V N^2  }{ \gamma k^2 + \mu^ 2 } \right) 
+\end{align*}
+
+For Heat capacity, we define 
+\begin{align*}
+	c &=  \frac{C}{V } \\
+	  &=  \frac{\beta^2}{V  } \frac{\partial^ 2 }{\partial \beta^2 } \log ( \mathcal{ Z })  \\
+	  &=  \frac{1}{2 } \left( T^2 \frac{\partial ^2 }{\partial T^ 2}  + 2T \frac{\partial  }{\partial T }  \right) \int \frac{d^{ d }k }{ ( 2 \pi ) ^ 2 } \log \left( \frac{ 2 \pi T V N^ 2 }{ \gamma k^ 2 + \mu^ 2 } \right)  \\
+\end{align*} 
+When we do this integral we get that 
+\[
+	c = \frac{1}{2 } \int_0^{ \lambda }  \frac{ d^{ d }k }{ ( 2 \pi ) ^  2} \left[ 1 - \frac{ 2T }{\gamma k^ 2 + \mu ^ 2 } + \frac{ T^ 2 }{ ( \gamma k^2 + \mu^ 2 )^ 2 } \right] 
+\] The last two terms depend on dimension $ d $.
+Here, we've added a cutoff from our lattice spacing approximation. 
+Our middle term is 
+\[
+ \int_{ 0 }^\lambda dk \frac{ k^{ d - 1 } }{\gamma k^2 + \mu^2 } = \begin{cases}
+ \lambda^{ d - 1} & d > 2 \\
+ \log ( \lambda ) & d = 2 \\
+ \frac{1}{\mu} & d =1 
+ \end{cases} 
+\] Our last term gives 
+\[
+	\int_{ 0 }^\lambda dk \frac{k^{ d - 1 }  }{ ( \gamma k ^ 2+ \mu^ 2)^ 2  } = \begin{cases}
+		\lambda^{ d - 1} & d > 4 \\
+		\log ( \lambda ) & d = 4 \\
+		\mu^{ d - 4 } & d < 4 
+	\end{cases}
+\] For the case that $ d < 4 $
+ \[
+ c \sim | T - T_c |^{ - \alpha}, \quad \alpha  = 2 - \frac{d}{2 }
+\] 
+

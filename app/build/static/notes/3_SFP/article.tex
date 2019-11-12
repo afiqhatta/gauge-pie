@@ -1,0 +1,120 @@
+\documentclass[11pt, oneside]{article}   	% use "amsart" instead of "article" for AMSLaTeX format
+\usepackage[margin = 1.1in]{geometry}            		% See geometry.pdf to learn the layout options. There are lots.
+\geometry{letterpaper}                   		% ... or a4paper or a5paper or ... 
+\usepackage[parfill]{parskip}    		% Activate to begin paragraphs with an empty line rather than an indent
+\usepackage{graphicx}				% Use pdf, png, jpg, or eps§ with pdflatex; use eps in DVI mode
+							% TeX will automatically convert eps --> pdf in pdflatex	
+\usepackage{adjustbox}	
+\usepackage[section]{placeins}
+
+
+
+%% LaTeX Preamble - Common packages
+\usepackage[utf8]{inputenc}
+\usepackage[english]{babel}
+\usepackage{textcomp} % provide lots of new symbols
+\usepackage{graphicx}  % Add graphics capabilities
+\usepackage{flafter}  % Don't place floats before their definition
+\usepackage{amsmath,amssymb}  % Better maths support & more symbols
+\usepackage[backend=biber]{biblatex}
+\usepackage{amsthm}
+\usepackage{bm}  % Define \bm{} to use bold math fontsx
+\usepackage[pdftex,bookmarks,colorlinks,breaklinks]{hyperref}  % PDF hyperlinks, with coloured links
+\usepackage{memhfixc}  % remove conflict between the memoir class & hyperref
+\usepackage{mathtools}
+\usepackage[T1]{fontenc}
+\usepackage[scaled]{beramono}
+\usepackage{listings}
+\usepackage{physics}
+\usepackage{tensor}
+\usepackage{tikz}
+\usepackage{subfiles}
+\usetikzlibrary{decorations.markings}
+
+\usepackage{helvet}
+
+\newtheoremstyle{slanted}
+{1em}%   Space above
+{.8em}%   Space below
+{}%  Body font
+{}%          Indent amount (empty = no indent, \parindent = para indent)
+{\bfseries}% Thm head font
+{.}%         Punctuation after thm head
+{0.5em}%     Space after thm head: " " = normal interword space;
+{}%         \newline = linebreak
+{}%          Thm head spec (can be left empty, meaning `normal')
+
+%% Commands for typesetting theorems, claims and other things. 
+
+\theoremstyle{slanted}
+\newtheorem*{thm}{Theorem}
+\newtheorem{theorem}{Theorem}
+\newtheorem*{claim}{Claim}
+\newtheorem*{example}{Example}
+\newtheorem*{defn}{Definition}
+
+\newcommand{\Lagr}{\mathcal{L}}
+\newcommand{\vc}[1]{\mathbf{#1}}
+\newcommand{\pdrv}[2]{\frac{\partial{#1}}{\partial{#2}}}
+\newcommand{\thrint}[1]{\int d^3 \vc{x} \left( {#1} \right)}
+\newcommand{\lalg}{ \mathcal{ G } } 
+\newcommand{\rea}{ \mathbb{ R} } 
+\newcommand{\com}{ \mathbb{ C} } 
+\newcommand{\al}{ \alpha} 
+\newcommand{\be}{\beta}
+\newcommand{\ad}{\text{Ad}}
+
+\title{Part III Symmetries, Fields and Particles}
+\author{Notes by Afiq Hatta, based on lectures by Nick Dorey and notes by Nicholas Manton}
+\begin{document}
+\maketitle
+\tableofcontents
+
+\pagebreak 
+
+\subfile{what_is_a_symmetry.tex}
+\subfile{groups_to_represent_symmetries.tex}
+\subfile{symmetries_correspond_to_conserved_quantities.tex}
+\subfile{manifolds_and_tangent_spaces.tex}
+\subfile{manifolds.tex}
+\subfile{functions_on_manifolds.tex}
+\subfile{tangent_vectors.tex}
+\subfile{embedding_manifolds.tex}
+\subfile{classifying_manifolds.tex}
+\subfile{lie_groups.tex}
+\subfile{what_is_a_lie_group.tex}
+\subfile{matrix_groups.tex}
+\subfile{lie_algebras.tex}
+\subfile{construction_of_lie_algebras_from_lie_groups.tex}
+\subfile{the_lie_algebra.tex}
+\subfile{examples_of_derived_lie_algebras.tex}
+\subfile{reconstructing_lie_groups_from_lie_algebras.tex}
+\subfile{representations.tex}
+\subfile{representations_of_lie_algebras.tex}
+\subfile{a_canonical_representation_of_lie_groups_with_lie_algebras.tex}
+\subfile{classifying_representations.tex}
+\subfile{invariant_subspaces_and_reducibility.tex}
+\subfile{a_canonical_representation_of_lie_algebras.tex}
+\subfile{constructing_a_natural_map_of_between_representations_of_lie_groups_to_representations_of_lie_algebras.tex}
+\subfile{_representations_of_su(2)_in_quantum_mechanics.tex}
+\subfile{our_choice_of_basis.tex}
+\subfile{roots_and_weights.tex}
+\subfile{construction_of_an_irreducible_representation.tex}
+\subfile{classifying_lie_algebras.tex}
+\subfile{basic_representation_theory.tex}
+\subfile{structure_of_the_representation.tex}
+\subfile{killing_forms.tex}
+\subfile{example_sheet_1.tex}
+\subfile{question_1.tex}
+\subfile{question_2.tex}
+\subfile{question_3.tex}
+\subfile{question_4.tex}
+\subfile{question_5.tex}
+\subfile{question_6.tex}
+\subfile{question_7.tex}
+\subfile{question_8.tex}
+\subfile{question_9.tex}
+\subfile{example_sheet_2.tex}
+\subfile{question_2.tex}
+\subfile{problems_left_to_contribute.tex}
+\end{document} 

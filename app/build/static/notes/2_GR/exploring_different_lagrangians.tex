@@ -1,0 +1,28 @@
+\subsection{Exploring different Lagrangians} 
+Consider the Lagrangian in Euclidean coordinates 
+\[ L = \frac{1}{2} m ( \dot{x}^2 + \dot{y}^2 + \dot{z}^2 ) 
+\] 
+The E-L equations imply that $\ddot {x} = 0 $. So we have a constant velocity. Now in different coordinates, 
+\[ L = \frac{ 1}{2} g_{ ij } (x) \dot{x}^i \dot{x}^j \] 
+This is a metric. Our distance in these general coordinates between $x^i \rightarrow x^i + \delta x^i $ is now 
+\[ 
+ds^2 = g_{ij} dx^i dx^j \] 
+Some $g_{ij} $ do not come from $\mathbb{R}^3 $, and these spaces are \textbf{curved}. This means there is no smooth map back into $\mathbb{R}^3$. Our equations of motion that comes from the Euler Lagrange equations are the geodesic equations.  
+
+Observe that 
+\begin{align*} 
+\frac{d}{dt} \left( \frac{ \partial L}{\partial \dot{x}^i } \right) &= \frac{d}{dt} g_{ ik}\dot{x}^k \\
+&= g_{ik} \ddot{x}^k + \dot{x}^k \dot{x}^l \partial_l g_{ ik}\end{align*} 
+
+And, differentiating the lagrangian with $\partial_i$, we get
+\[ 
+\frac{ \partial L}{ \partial x^i} = \frac{ 1}{2} \partial_i g_{kl} \dot{x}^k \dot{x}^l \]
+Substiting this into the EL equations, this reads 
+\[ 
+g_{ik} \ddot{x}^k + \dot{x}^k \dot{x}^l \partial_l g_{ ik}  - \frac{1}{2} \partial_i g_{kl} \dot{x}^k \dot{x}^j  =0 
+\]  
+Now, the second term is symmetric in $k, l$, so we can split this term in two. We also multiply by the inverse metric to cancel out this annoying factor of $g$ that we have in front of everything. This gives us the final expression that 
+\[ 
+\ddot{x}^i + \frac{1}{2} g^{il} \left( \partial_k g_{lj} + \partial_j g_{lk}  - \partial_l g_{jk} \right) \dot{x}^j \dot{x}^k = 0
+\] 
+

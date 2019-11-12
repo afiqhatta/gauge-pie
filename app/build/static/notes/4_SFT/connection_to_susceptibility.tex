@@ -1,0 +1,26 @@
+\subsection{Connection to Susceptibility} 
+Let's apply these ideas to what we know about magnetic susceptiblity. 
+Our equation that we've always used is 
+\[
+ \chi = \frac{\partial  m}{\partial   B } 
+\] Now, we can promote this to a localised 
+version by setting 
+\[
+	\chi ( \vec{x}, \vec{y} ) = \frac{\partial  \left< \phi ( \vec{x} )  \right> }{\partial B ( \vec{y} ) } = \beta ( \left< \phi ( \vec{x} ) \phi ( \vec{y} )  \right> \sim \int \mathcal{ D } \phi \frac{\partial \phi }{\partial  B } e^{  - \beta F [ \phi ] }  
+\] From this local 
+definition, we can define a global magnetic 
+susceptibilty as 
+\[
+	\chi = \int d^ d x \chi ( \vec{x}, 0 ) = \beta \int d^ d x \left< \phi ( \vec{x} ) \phi ( \vec{y} )  \right>
+\]
+Recall our correlation function 
+\[
+	\left< \phi ( \vec{x} ) \phi ( \vec{y} )  \right> = \begin{cases}
+		\frac{1}{r^{ d - 2}  } & r \ll \zeta \\
+		e^{ - \frac{r}{2 } } / r ^{ \frac{ d -1 }{ 2 } } & r \gg \zeta
+	\end{cases}
+\] This implies that our critical exponents satisfy $ \mu ^ 2 \sim | T - T_{ c } | $, 
+and $ \zeta \sim \frac{1}{ | T - T_{ c } | ^{ \frac{1}{ 2 }  } } $. 
+Thus at low temperatures, our correlation length diverges, so 
+our system because highly correlated. 
+

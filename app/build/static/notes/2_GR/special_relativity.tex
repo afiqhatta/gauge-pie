@@ -1,0 +1,38 @@
+\section{Special relativity} 
+We'll now put time and space on the same 'footing' per se, and talk about special relativity. In special relativity, instead of time being its own separate variable, we have that dynamic events take place in 4 spacetime coordinates denoted $x^\mu  = (t, x, y, z)$, where we now use greek indices to denote four components $\mu = 0, 1, 2 , 3$. Now, we wish to construct an action and extremize this path, but since our $t$ variable is already taken, we need to parametrise paths in spacetime by a different parameter. We'll call this parameter $\sigma$, and show that there's a natural choice for this, something called 'proper time', later. 
+
+We define our metric, the Minkowski metric, on this spacetime to be $\eta^{ \mu\nu} = diag( -1, +1, +1, +1) $. Thus, distances in Minkwoski spacetime are denoted as \[ 
+ds^2  = \eta_{ \mu \nu} dx^\mu dx^\nu  =  -dt^2 + dx^2 + dy^2 + dz^2 \] 
+
+We have names for different events based on their infinitesimal distance. Since our metric is no longer positive definite, we have that events can have a distance of any sign. 
+
+\begin{itemize} 
+\item If $ds^2 < 0$, events are called timelike. 
+\item If $ds^2 = 0$, events are called null. 
+\item If $ds^2 > 0$, events are called spacelike. 
+\end{itemize} 
+
+
+Our action, then, should look like (now with the use of an alternate parameter $\sigma$ to parametrize our paths) 
+\[ 
+S[ x^\mu ( \sigma) ] = \int_{ \sigma_1}^{\sigma_2} \sqrt{ - ds^2 } \]
+Now, we can parametrise the integrand with sigma to get 
+\[ 
+S[x^\mu (\sigma) ] = m \int_{\sigma_1}^{ \sigma_2 } d\sigma \, \,  \sqrt{ - \eta_{ \mu \nu} \frac{ d x^\mu}{ d \sigma} \frac{ dx^\nu}{ d \sigma} } 
+\] 
+In this case, our Lagrangian $L = 
+m \sqrt{ - \eta_{ \mu \nu} \frac{ d x^\mu}{ d \sigma} \frac{ dx^\nu}{ d \sigma} }$. Now, before we begin analysing what this equation gives us, there are two symmetries we'd like to take note of. One of our symmetries is invariance under Lorentz transformations. This means, if we boost our frame with a Lorentz transformation $x^\mu \rightarrow \Lambda\indices{^\mu_\nu} x^\nu $, one can easily verify, using the condition that \[ 
+\Lambda\indices{^\alpha_\mu} \Lambda\indices{^\beta_\nu} \eta_{\alpha\beta} = \eta_{ \mu \nu} 
+\] 
+that the Lagrangian remains invariant under this. One can also verify that this action is invariant under reparametrisation of the curve via a new function $\sigma' = \sigma' ( \sigma)$.  
+
+Using the chain rule, we reparametrise by rewriting the action as 
+\[ 
+S = m \int \frac{d \sigma}{ d \sigma' } d\sigma' \, \quad \sqrt{  - \eta_{ \mu\nu} \left( \frac{ d \sigma' }{ d\sigma} \right)^2 \frac{ dx^\mu}{ d \sigma' } \frac{ dx^\nu}{ d \sigma' } } = \int d \sigma'\,  \sqrt{  - \eta_{ \mu\nu} \frac{ d x^\mu}{ d \sigma'} \frac{ dx^\nu}{ d\sigma'} } \] 
+
+In this case, we're just applying the chain rule but factoring out the the $\frac{ d \sigma ' }{ d \sigma} $ term. But this is exactly the same as what we had before. Thus, we have reparametrisation invariance.In analogy with classical mechanics, we compute the conjugate momentum \[ 
+p_\mu = \frac{ \partial L }{ \partial \dot{x}^\mu }  
+\] 
+
+
+\pagebreak 

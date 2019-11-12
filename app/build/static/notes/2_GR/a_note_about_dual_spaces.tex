@@ -1,0 +1,105 @@
+\subsection{A note about dual spaces}
+In linear algebra, if we have a vector space which we call $ V$, then we can define a natural object which we call it's dual space, denoted by $V^* $. The dual space is the space of linear functions which takes $V \to  \R$: 
+\[
+V^* = \{ f \mid f : V \to  \R, \quad \text{ f is linear } \} 
+\] 
+Now it may seem from first glance that the space of all functions is a lot larger than our original vector space, so it's counter intuitiveto call it the 'dual'. However, we can prove that these vector spaces are isomorphic. Suppose that $\{ e_\mu \} $ is a basis of $V$. Then we pick what we call a dual basis of $V^*$, by choosing the 
+\[
+\mathcal{B}( V ^* ) = \{ f^\mu \mid f^\mu ( e_\nu )  =\delta \indices{^\mu_\nu} \}  
+\] 
+One can show that this set indeed forms a basis of $V^* $.
+\begin{thm}
+The above basis forms a basis of $V^* $. 
+ \begin{proof}
+	First we need to show that the linear maps above, span our space. 
+	This means we need to be able to write any linear map, say $ \omega $, as a linear combination 
+	\[
+		\omega = \sum \omega_\mu  f^\mu , \omega_\mu  \in F  
+	\] 
+	To do this, we appeal to the fact that if two linear maps agree on the vector space's basis, 
+	then they agree. 
+	So, let the values that $ \omega $ takes on the basis be $\omega_\mu  = \omega (e_\mu  ) $. Then, taking 
+	\[
+	 \Omega  = \sum \omega_\mu  f^\mu  
+ \] We find that $ \Omega$ also satisifes $ \Omega( e_\mu  )  = \omega_\mu  $. 
+ Thus, the maps are the same. 
+ Hence, $\omega$ can be written as the span of our dual basis vectors. 
+ To show that these basis vectors are linearly independent, 
+ we assume that there exists a non trivial sum such that they add to the zero map.  
+	\[
+	 0  = \sum \lambda_\mu  f^\mu  
+	\] If we apply this map to an arbitrary basis vector $ e_i$, then we get  \[
+	0 = \sum \lambda_\mu  f^\mu  ( e_i ) = \lambda_i 				
+	\] for arbitrary $i $. Hence, we must have that all $\lambda_i$ are zero. 
+	Thus the basis vectors are independent. 
+\end{proof}
+\end{thm}
+Now, assuming that our original vector space $ V$ had finite dimension, the way we've defined the basis of $V^* $
+means that we had the same number of basis elements. 
+This means that $V $ and $V^* $ have the same dimesion. 
+One can prove that vector spaces with the same dimension are isomorphic, so we have that 
+\[
+V \simeq V^* 
+\] Think of a dual space as a 'flip' of a vector space. 
+We can identify the dual of a dual space as the original space itself, so that 
+\[
+\left( V^*  \right)^ * = V 
+\] This is because given an object in the dual space $\omega$, we can define a natural map from 
+$V: V^* \to  \R $ given by
+\[
+V \left( \omega  \right)  = \omega \left( V  \right) \in \R
+\] 
+\subsubsection{Vector and Covector spaces} 
+Now, since we've identified tangent spaces as vector spaces, we can proceed to construct its dual. 
+If we have a tangent space $ T_p ( \mathcal{ M}) $ with a basis $\{ e_\mu  \}$, our natural dual basis is 
+given by 
+\[
+\mathcal{B }( T_p^* ( \mathcal{M})) = \{ f^\mu  \mid f^\mu  ( e_\nu  ) = \delta \indices{^\mu _\nu  } 
+\] The corresponding dual space is denoted as $T_p^* ( \mathcal{ M}) $, and is known as 
+the cotangent vector space. 
+For brevity, elements in this space are called \textbf{ covectors}. 
+In this basis, the elements $ \{ f^\mu  \}$ have the effect of 'picking' out components of a vector $ V = V^\mu e_\mu  $. 
+\[
+f^\nu  ( V )  =f^\nu  ( V^\mu  e_\mu  )  = V^\mu  f^\nu  ( e_\mu )  = V^\nu  
+\] There's a different way to pick elements of this dual space in a smooth way. 
+They're chosen by picking elements of a set called the set of 'one forms'. 
+We denote the set of one forms, with an index $1 $ as $ \Lambda^{1}( \mathcal{M }) $. 
+We can construct elements form this set by taking elements from $ C^\infty ( \mathcal{M} )$. 
+Suppose that we have an $ f \in C^\infty ( \mathcal{ M } ) $, then the corresponding one-form is a map 
+\[
+df : T_p ( \mathcal{ M}) \to  \R \quad V \mapsto V( f) 
+\] From one the set of one forms, we then have an obvious way to get the dual basis. 
+The dual basis is obtained by just taking the coordinate element of the manifold, so that our one form is 
+\[
+dx^\nu  : T_p ( \mathcal{ M }) \to  \R
+\] This satisfies the property of a dual basis, since 
+\[
+dx^\nu ( e_\mu  )  = \frac{\partial x^\nu  }{\partial x^\mu  } = \delta \indices{^\nu _\mu  } 
+\] With this convention, we can check that 
+$ V ( f) $ is what its supposed to be by observing that
+\[
+df( X)  = \frac{\partial f}{\partial x_\mu} dx^\mu ( X^\nu \partial _\nu )  = X^\nu \frac{\partial f}{\partial x^\nu} = X_ ( f)  
+\]  So we recover what we expect 
+by setting this as a basis. Now, we should
+check whether a change in coordinates leaves our properties invariant. 
+
+Suppose we change our basis from $ x^\mu \to \tilde{z}^\mu ( x)  $, 
+then, we know that our basis vector transforms like 
+\[
+\frac{\partial }{\partial \tilde{x }^\mu }  = \frac{\partial \tilde{x }^\mu }{\partial x^\nu} dx^\nu  
+\] We guess that our basis of one forms 
+should transform as 
+\[
+d \tilde{x }^\mu = \frac{\partial \tilde{x}^\mu }{\partial x^\nu} dx^\nu  
+\] This ensures that, when we contract a transformed basis one form 
+with a transformed basis vector, that
+\begin{align*}
+d \tilde{x }^\mu \frac{\partial }{\partial \tilde{x }^\nu } &=  \frac{\partial \tilde{x }^\mu}{ \partial x^\rho} dx^\rho \frac{\partial x^\sigma}{\partial \tilde{x }^\nu } \frac{\partial }{\partial x^\sigma}    \\
+							    &=  \frac{\partial \tilde{x }^\mu }{\partial x^\sigma} \frac{\partial x^\sigma}{\partial \tilde{ x}^\nu } dx^\rho \left( \frac{\partial }{\partial dx^\sigma}  \right)    \\
+							    &=  \frac{\partial \tilde{x}^\mu }{\partial x^\rho} \frac{\partial x^\rho}{\partial \tilde{x }^\nu }  = \delta \indices{^\mu_\nu} 
+\end{align*} It's no coincidence that this looks like a Jacobian! 
+
+Now, as with basis elements in our vector space, 
+we need to determine how these objects transform under a change of basis. 
+*Need to finish this section on basis transformations for covectors* 
+

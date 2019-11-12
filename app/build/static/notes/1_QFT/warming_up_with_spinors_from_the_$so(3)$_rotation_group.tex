@@ -1,0 +1,32 @@
+\subsection{Warming up with spinors from the $SO(3)$ rotation group} 
+
+Spinors are (complex) elements in a vector field which transform linearly when the underlying coordinate basis is rotated. In three dimensional Euclidean space, this transformation would take the form of an element in $SO(3)$, acting on three dimensional real vectors in $\mathbb{R}^3$. Our goal of this subsection is to build an equivalence between this and elements in $SU(2)$, where then these elements act on 2 component complex vectors in $\mathbb{C}^2$.
+
+\subsubsection{Rotations in Euclidean space} 
+Let's revise quickly how to map rotations out in three dimensional space. We multiply a vector $\mathbf{v} $ by a matrix to give the map $\mathbf{v} \mapsto R \mathbf{v}$. In the case of a rotation by an angle $\theta$ about the z-axis, our rotation matrix $R_z$ takes the form \[ R_z = \begin{pmatrix} \cos \theta & \sin \theta \\  - \sin \theta & \cos \theta \end{pmatrix} \] 
+In the terminology of Lie groups, this is an element of the Lie group $SO(3)$, and has an associated generator $J_z$, given by it's derivative at $\theta = 0$; 
+\[ J_z = \left. \frac{d}{ d\theta } R_z (\theta) \right\vert_{ \theta = 0 }  = \begin{pmatrix} 0 & 1 & 0 \\ -1 & 0 & 0 \\ 0 & 0 & 0 \end{pmatrix}  \]
+We can repeat this same procedure with rotations along the y and x axes, and differentiate with respect to the parameters as well to obtain the generators $ J_x $ and $J_y$. One finds that these rotation generators obey the following commutation relations, or 'algebra' \[ [ J_i , J_j ] = i \epsilon_{ ijk} J_k \] 
+
+We can then write out a full transformation, which is a rotation by an angle $\theta$ about the normal vector $\mathbf{ n } $, as \[ \mathbf{ v} \mapsto e^{ i  \mathbf{n} \cdot \mathbf{J} \theta } \mathbf{ v} \] where the exponent is simply the expected series sum of the matrices.  
+
+\subsubsection{Transformations with Unitary matrices} 
+We now explore the group $SU(2)$, the group of 2 by 2 matrices which satisfy the relation $U^\dagger = U^ { -1} $, and $\det U = 1$. One can show, that by comparing coefficients, that unitary matrices can be written in general of the form 
+\[ 
+U = \begin{pmatrix} a & b \\  -b^* & a^* \end{pmatrix} 
+\] 
+where we have the condition that $|a|^2 + |b|^2 = 1 $. Recall that $a$ and $b$ are complex, so over the reals are specified by 2 parameters each. Our condition that $|a|^2 + |b|^2 = 1$ reduces our degrees of freedom by 1, so we have 3 degrees of freedom in total.  
+We would like to see how unitary matrices transform vectors of the form \[ \xi = \begin{pmatrix} \xi_1 \\ \xi_2 \end{pmatrix} \]
+We have that \[ \xi \mapsto \xi' = U \xi = \begin{pmatrix} 
+a \xi_1 + b \xi_2 \\ \ - b^* \xi_1 + a^* \xi_2 \end{pmatrix} = \begin{pmatrix} \xi_1' \\ \xi_2' \end{pmatrix}  \]
+Now we ask the question of whether we can find other vectors derived from this which can transform in the same way. Turns out, the vector $( - \xi_2^*, \xi_1^* ) $ does as well. You can verify this yourself! We employ the notation that Ryder uses here, using the sign $\sim $ to denote 'transforms as', we've discovered that \[ (\xi_1, \xi_2) \sim (  -\xi_2^*, \xi_1^* ) \] 
+Or, setting \[ \chi = \begin{pmatrix} 0 & -1 \\  1 & 0 \end{pmatrix} \] we can alternatively write that $ \xi \sim \chi \xi^* $. Now, this also means that, taking the hermitian conjugate of a vector, that $\xi^\dagger $ transforms as $ ( - \xi_2 , \xi_1 ) $ 
+which implies that $\xi \xi^\dagger$ transforms as \[ 
+H = \begin{pmatrix} \xi_1 \\ \xi_2 \end{pmatrix} ( -\xi_2, \xi_1) = 
+\begin{pmatrix}  - \xi_1 \xi_2 & \xi_1^2 \\  - \xi_2^2 & \xi_1 \xi_2 \end{pmatrix} \] 
+But we already know that since we have the transformation laws $\xi \mapsto U \xi$ and $\xi^\dagger \mapsto \xi U^\dagger$, \[ 
+\xi \xi^\dagger \mapsto U \xi \xi^\dagger U^\dagger \implies H \mapsto U H U^\dagger  = U H U^{ -1 }  \]
+The main reason why we've invested so much into finding this matrix which transforms under $U$ is that $H$ is indeed traceless. So, we can write out a matrix which transforms under $U$ in the way we want by giving ourselves a complex traceless matrix, which we'll call $h$. Now, $h$ can be written as \[ h = \begin{pmatrix} z & x + iy \\ x - iy & - z  \end{pmatrix} = \mathbf {\sigma} \cdot \mathbf{x}  \] where $\mathbf{ x} $ is our original position vector we've rotated, and $\mathbf{\sigma} $ are the Pauli sigma matrices. So, we've taken a vector rotating in $SO ( 3) $ and have reduced it down to induced rotations by $SU(2) $. By contruction we've shown that $h \mapsto UhU^{ -1}$, and so we've shown that unitary transformations acting on spinors in $SU(2)$ correspond to rotations acting on position vectors in $SO ( 3) $. We have a specifc map from the spinors to the position vector, given by comparing elements of $h$ and $H$
+\[ x = \frac{1}{ 2} ( \xi_1+ \xi_2), \quad y = \frac{ 1}{ 2i } (\xi_1^2 + \xi_2^2 ), \quad z = \xi_1 \xi_2 \] 
+
+

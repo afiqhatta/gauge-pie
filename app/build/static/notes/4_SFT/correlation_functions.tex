@@ -1,0 +1,62 @@
+\subsection{Correlation functions} 
+In mean field theory, we had no local specific information. 
+\[
+	\left< \phi ( \vec{x} )  \right> =  \begin{cases}
+		0 & T > T_c \\
+		\pm m_0 & T < T_c 
+	\end{cases}
+\] Our next simplest way to think about correlations is
+\[
+	\left< \phi ( \vec{x} ) \phi ( \vec{y} )  \right>
+\] this tells us how fluctations propagate throughout time by encoding spatial
+variations at multiple points. A naive way to 
+think about this is how waves propagate in the material. 
+Moreover, we can think about functions deviating from the mean
+as the \textbf{connected correlation function}. 
+This is defined as 
+\[
+	\left< \phi ( \vec{x} ) \phi( \vec{y} )  \right>_c = \left< \phi( \vec{x} ) \phi ( \vec{y} )  \right> - \left< \phi  \right>^2 
+\] This is also known as the cumulant in statistics. 
+We can compute these correlation functions explicitly. 
+
+If we define 
+\[
+	F[ \phi ( \vec{x} ) ] = \int d^{  d} x \left[ \frac{\gamma}{2 } ( \nabla \phi)^ 2 + \frac{\mu^2 }{2 } \phi^2 + B ( x) \phi  \right] 
+\] with the partition function 
+\[
+	Z [ B ( x) ] = \int \mathcal{ D } \phi e^{  - \beta  F [ \phi ( \vec{x} ), B ( \vec{x} ) ]}
+\] We can take a functional derivative to get
+\[
+	\frac{1}{\beta } \frac{\delta \log \mathcal{ Z }}{\delta B ( \vec{x} ) } = \frac{1}{\beta \mathcal{ Z }} \frac{ \delta \mathcal{ Z }}{ \delta B ( \vec{x} ) }
+\] However, this term, the benefit of doing this is that differentiating by $B ( \vec{v} ) $ pulls out a factor of $ \phi $ in the integral. Hence, the quantity we've calculated is 
+\[
+	- \frac{1}{\mathcal{ Z } } \int \mathcal{ D } \phi ( \vec{x})  e^{  - \beta F[ \phi , B  ] } =  - \left< \phi ( \vec{x} )  \right> \mid_{ B }
+\] So, we've found a neat way to encode the average function in our partition function. 
+This is exactly the same as encoding our average magnetisation 
+in our partition function using mean field theory earlier. 
+We can get even more information from this. We calculate an object called the \textbf{two-point} function. 
+In analogy to moment generating functions in statistics, 
+differentiating this a second time enables us to get the connected 
+correlation function we listed earlier. If we act on what we have 
+with $  \frac{ \partial  }{ \beta \partial  }$, the product rule gives us 
+\[
+	\frac{1}{ \beta ^ 2 } \frac{\delta^ 2   \log \mathcal{  Z} }{\delta B ( \vec{x} ) \delta B ( \vec{y} ) } = \frac{1}{ \beta ^ 2 \mathcal{ Z } } \frac{ \delta ^2 \mathcal{ Z } }{\delta B ( \vec{x} ) \delta B ( \vec{y} ) }  - \frac{1}{ \beta ^ 2 \mathcal{Z } ^ 2 } \frac{ \delta \mathcal{ Z } }{ \delta B ( \vec{x} ) } \frac{ \delta \mathcal{ Z } }{ \delta B ( \vec{y}) } 
+\] This was obtained by applying the product rule on $ \frac{1}{ \mathcal{ Z } } $ as 
+well as the derivative terms. 
+The upshot is that the first term pulls down two factors, $ \phi ( \vec{x} )  $ and $ \phi ( \vec{y} ) $ from our free energy. 
+Hence, our first term is 
+\[
+	 \frac{1}{ Z }\int \mathcal{ D } \phi \, \phi ( \vec{x} ) \phi ( \vec{y} ) e^{  - \beta F } = \left< \phi ( \vec{x} ) \phi ( \vec{y} )  \right>\mid_B
+\]  Further more, observe that the second term is just 
+$ \left< \phi  \right>^ 2 $. 
+Thus, our final correlation function can be written in the compact form, writing our subscript $ B $ to denote evaluation at the field configuration $ B $, 
+\[
+	\left< \phi ( \vec{x} ) \phi ( \vec{y} )  \right>_c  = \frac{1}{\beta ^ 2 } \frac{ \delta ^ 2 \log \mathcal{ Z } }{\delta B ( \vec{x} ) \delta B ( \vec{y} ) } = \left< \phi ( \vec{x} ) \phi_( \vec{y} )  \right>_B - \left<\phi( \vec{x} ) \right>_B \left< \phi( \vec{y} )  \right>_B 
+\] Now, above the critical temperature $ T > T_{  c} $, we have that our average 
+magnetisation is given by $ \left< \phi ( \vec{x} )  \right>  = 0 $ when $B = 0$. 
+Thus, we can condense what we have even further by 
+ \[
+	 \frac{1}{ \beta ^ 2 } \frac{ \delta ^ 2 \log \mathcal{ Z }  }{\delta B ( \vec{x} )  \delta B ( \vec{y} ) }\mid_{ B  =0 } \left< \phi ( \vec{x} )\phi ( \vec{y} )   \right>_{ B = 0} 
+\] 
+
+
