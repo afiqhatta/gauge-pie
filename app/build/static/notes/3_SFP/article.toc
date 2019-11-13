@@ -143,6 +143,8 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {section}{\numberline {9}Example Sheet 2}{68}{section.9}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {9.1}Question 2}{68}{subsection.9.1}
+\contentsline {subsection}{\numberline {9.1}Question 8}{68}{subsection.9.1}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {10}Problems left to contribute}{68}{section.10}
+\contentsline {subsection}{\numberline {9.2}Question 2}{68}{subsection.9.2}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {10}Problems left to contribute}{69}{section.10}

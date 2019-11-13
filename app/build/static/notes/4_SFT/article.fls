@@ -581,6 +581,8 @@ INPUT ./applying_wicks_free_energy.tex
 INPUT ./applying_wicks_free_energy.tex
 INPUT ./feynman_diagrams.tex
 INPUT ./feynman_diagrams.tex
+INPUT ./continuous_symmetries.tex
+INPUT ./continuous_symmetries.tex
 INPUT ./example_sheet_1.tex
 INPUT ./example_sheet_1.tex
 INPUT ./question_1.tex
@@ -597,6 +599,8 @@ INPUT ./question_5.tex
 INPUT ./question_5.tex
 INPUT ./question_7.tex
 INPUT ./question_7.tex
+INPUT ./example_sheet_2.tex
+INPUT ./example_sheet_2.tex
 INPUT ./article.aux
 INPUT ./article.run.xml
 OUTPUT article.run.xml
@@ -610,6 +614,7 @@ INPUT /usr/local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.p
 INPUT /usr/local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi6.pfb
 INPUT /usr/local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb
 INPUT /usr/local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb
+INPUT /usr/local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb
 INPUT /usr/local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb
 INPUT /usr/local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb
 INPUT /usr/local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb

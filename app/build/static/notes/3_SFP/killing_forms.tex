@@ -1,28 +1,38 @@
-\section{The Killing Form} 
+\section{The Killing Form}
+We will now create a structure on 
+our Lie algebra which is somewhat analogous to a 
+metric on vectors (which we covered 
+in the general relativity notes). 
 Given a vector-space like Lie algebras, 
 it is of interest for us to define a scalar product 
 on the Lie algebra, which takes two vectors and returns a scalar. 
 
 Let's first define an inner product first. 
 \begin{defn}{(Inner product)} 
-	Gven a vector space $ V $ over a field $ F $, an inner product is 
+	Given a vector space $ V $ over a field $ F $, an inner product is 
 	a bilinear map 
 	\[
 	 i : V \times V \to F 
-	\] where this map is symmetric. 
+	\] where this map is symmetric. This is notion is 
+	analogous to the usual dot product we all know and love, 
+	but we've made things a bit more general. 
 \end{defn}
 Right now, we'll define the inner product in this way. 
-However, we'll want to make an extra definition 
-to constrain things a map. 
+However, we'll want to make an extra definition, 
+motivated by the fact that we don't care about inner 
+products where, when we contract a specific element with 
+all others in a lie algebra, we get zero. 
 \begin{defn}{(Non-degeneracy)} 
-	 We say that the inner product $ i $ is non-degenrate 
+	 We say that the inner product $ i $ is non-degenerate 
 	 if for all $ v \in V ( v \neq  0 ) $, there 
 	 is a $ w \in V $ such that $ i ( v, w ) \neq 0$. 
-	 This is somewhat similar to our definition of a metric! 
+	 With this, our concept of an inner product looks more like a metric. 
 \end{defn}
-The question is, is there a natural inner product which we can 
+Now, a natural question 
+to pose is if there is a natural inner product which we can 
 write down for a Lie algebra? What does the term 'natural' 
-even mean? The answer is yes; our answer is the \textbf{killing form}. 
+even mean? We'll answer this question later. 
+For the first question The answer is yes; our answer is the \textbf{killing form}. 
 \begin{defn}{(Killing form)} 
 	Our Killing form is a map from the Lie algebra $ \lalg $
 	 \[
@@ -31,24 +41,34 @@ even mean? The answer is yes; our answer is the \textbf{killing form}.
 	which takes 
 	\[
 	 K ( X, Y )  = \tr ( \ad_ X \circ \ad _ Y ) 
-	\] By the cyclicity of trace, we have that 
+	\] So, we are taking 
+	the trace of the composition of tow adjoint 
+	representations. By the cyclic property of trace, we have that 
 	this object is symmetric since we 
-	can switch the ad maps around. 
+	can switch the adjoint maps around and still have the same map. Hence, 
+	it's still and inner product. 
 	In addition, since the adjoin maps are linear in both arguments, 
 	we have that this map is linear. 
 \end{defn}
-Since
+Now, what does this map look like 
+in terms of a basis of our Lie algebra? Let's look at the map 
 \[
  ( \ad_ X \circ \ad_ Y ) : \lalg \to \lalg 
-\] we map some $ Z $ like 
+\] we write out the definition of the 
+adjoint map explicitly, which is the commutator. 
+Composing two commutator operations means that some $ Z $ is mapped 
+as
 \[
  Z \in \lalg \to [ X , [ Y , Z ] ] \in \lalg
 \] What is the matrix representation of this map? 
 To do this, we construct a basis $ \left\{  T ^ a : a = 1, \dots , D  \right\} $ 
 for $ \lalg$. 
-Writing out our components explicitly, 
+Writing out our components, and our structure constants explicitly, 
  \[
- X  = X_ a T ^ a , Y = Y  _a Y ^ a , Z = Z_ a T ^ a, [ T ^ a , T ^ b ] = f ^{ ab } _ c T ^ c 
+ X  = X_ a T ^ a , \quad 
+ Y = Y  _a Y ^ a , \quad
+ Z = Z_ a T ^ a, 
+ \quad [ T ^ a , T ^ b ] = f ^{ ab } _ c T ^ c 
 \] Multiplying components out, 
 we find that 
 \begin{align*}

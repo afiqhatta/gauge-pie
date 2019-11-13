@@ -60,26 +60,160 @@ extra term
 		-- [ghost, half left] b,
 		d [ particle =\( k _ 2 \) ] -- [fermion] b 
 	}; =   6 g_0 \int _{ \Lambda / \zeta } ^ \Lambda 
-\frac{ d ^ d q }{ q ^ 2 + \mu _ 0 ^ 2 } \int d ^ d x ( \phi ^ - ) ^ 4
+\frac{ d ^ d q }{ q ^ 2 + \mu _ 0 ^ 2 } \int d ^ d x ( \phi ^ - ) ^ 2
 \end{equation*}
+This term corresponds 
+to the contribution which we 
+looked at earlier; that of $ \phi_{ \vec{k} _ 1 }^ -  \phi_{ \vec{k} _ 2 } ^ - \phi _{ \vec{k} _ 3 } ^ + \phi _{ \vec{k} _ 4}^ + $ This diagram is qualitatively new because it 
+contains a loop which of undetermined momentum which we need to 
+integrate over, as opposed to the \textit{tree diagrams} 
+which have no internal loops.
 You can convince yourself that these are the only possible diagram 
 one can get at first order. 
 Now, if we move up to second order, we need to consider diagrams 
 which contain two vertices, but whose ends are connected. 
 We shall consider a \textbf{connected} diagram first, 
 whose contribution looks like 
-\begin{equation*}
-	
-\end{equation*}
-Now, to second order we have a term 
+
+\begin{equation}
+	\feynmandiagram[small]{ 
+		a[particle = \( k_1 \) ] -- [fermion] b, 
+		c[particle = \( k_1 \) ] -- [fermion] b,
+		b -- [ghost, half left] d 
+		-- [ghost, half left] b , 
+		e[particle = \(k_4 \)] -- [fermion] d, 
+		f[particle = \(k_3 \)] -- [fermion] d,
+	}; 
+\end{equation}
+
+Now, this diagram is from second order and corresponds to the term 
 given by 
 \[
  36 g_0 ^ 2 \int_ 0 ^{ \Lambda / \zeta } \prod_{ i =1 } ^ 4 
  \left[  \frac{ d ^ d k_ i }{ ( 2 \pi ) ^ d } \phi ^ -_{ \vec{k} _ i}  \right] 
  f ( \vec{k} _ 1 + \vec{k} _ 2 ) ( 2 \pi ) ^ d \delta ^ d ( \sum_ i \vec{k} _ i  )
-\]  
-Multiples of diagrams get cancelled out by cumulant terms.
+\]  where 
+\[
+	f ( \vec{k} _ 1  + \vec{f} _ 2 ) = \int _{ \Lambda / \zeta } ^ \Lambda 
+	\frac{ d ^ d q}{ ( 2 \pi ) ^ d } \, \frac{1 }{ q ^ 2 + \mu _ 0 ^ 2 } \frac{1}{
+	( \vec{k} _ 1 + \vec{k} _ 2 + q ) ^ 2 } 
+\] Let's break this down. Our factor of $ f $ comes 
+from the fact that, after we impose momentum conservation, 
+we still have an undetermined momentum  $ q $ to integrate over. 
+Within this integral, we have the two internal line 
+propagators which contribute $ \frac{1}{q ^ 2 + \mu _ 0 ^ 2} $ and 
+$ \frac{1}{ ( \vec{k} _ 1 + \vec{k} _ 2 + \vec{q} ) ^ 2 + \mu _ 0 ^  2}$. 
+Now, this is the only diagram which contributes 
+to this order in the interaction. One may ask, what happens to 
+the terms like 
+\begin{equation*}
+	\feynmandiagram[small]{ 
+		a  -- [ghost, half left] c -- [ghost, half left] a ,
+		b -- [fermion]a;
+		d -- [fermion]a; 
 
+		h -- [fermion] e, 
+		g -- [fermion] e,  
+		f -- [fermion] e, 
+		i -- [fermion] e, 
+	}; + 
+	\feynmandiagram[small]{ 
+		a -- [fermion] d; 
+		b -- [fermion] d; 
+		c -- [fermion] d; 
+		e -- [fermion] d; 
+
+		f -- [fermion] k; 
+		g -- [fermion] k; 
+		h -- [fermion] k; 
+		i -- [fermion] k; 
+	}; 
+\end{equation*}
+
+The key thing to observe here 
+is that these diagrams are disconnected, and 
+in fact get cancelled out by terms in the expansion of 
+$ \left< F _ I  \right> ^ 2 $. 
+Multiples of diagrams get cancelled out by cumulant terms! 
+So, in our expansion for $ F _ I $ we need only consider 
+the sum of connected diagrams.
+Finally, we don't consider 
+diagrams which look like
+\begin{equation*}
+	\feynmandiagram[small]{ 
+		h -- [fermion] a , 
+		a -- [ghost, half left] c 
+		-- [ghost, half left] a, 
+		a -- [ghost] d, 
+		d -- [fermion] f, 
+		d -- [fermion] e, 
+		d -- [fermion] g,
+	}; = 0 
+\end{equation*}
+This is because we need to impose momentum conservation at each vertex, 
+but as you can see here there's a lone 
+external propagator meeting a bunch of internal ones, 
+so momentums cannot match here. 
+This means that diagrams of this form go to zero. 
+
+However, there are other interesting cases to second order 
+that we need to think about. For example, 
+consider the diagram 
+\begin{equation*}
+	\feynmandiagram[small]{ 
+		a[particle = \( k \) ] -- [fermion] c, 
+		b[particle = \( -k \) ]  -- [fermion] c, 
+		c -- [ghost, half left, momentum = \( q_1 \) ] d -- 
+		[ghost, half left] c, 
+		d -- [ghost, half left] e -- 
+		[ghost, half left,  momentum = \( q_2 \) ] d, 
+	}; = \int \frac{ d ^ d k }{ ( 2\pi ) ^ d } \phi_{ \vec{k} } \phi _{ - \vec{k} } 
+	\int^ \Lambda _{ \Lambda / \zeta } \frac{d ^ d q_1 	 d ^ d q_2 }{ ( 2 \pi ) ^{ 2 d } } \frac{1}{q_ 1 ^ 2 
+	+ \mu _ 0 ^ 2 } \frac{1}{q_ 2 ^ 2 + \mu _ 0 ^ 2 }
+\end{equation*}
+The above diagram can be written in simplified fashion as 
+\[
+	\dots = \int \frac{ d ^ d k }{ ( 2 \pi ) ^ d } \frac{1}{2 } \phi _{ \vec{k} } \phi _{ - \vec{k} } 
+	C ( \Lambda ) 
+\] 
+The key point that we made here is that our function 
+which comes from the interaction terms doesn't depend on the momentum 
+$ \vec{k} $  in this case, but we've still encoded the 
+ultraviolet cutoff $ \Lambda $. If we factor in 
+this contribution to our free energy, then 
+we've induced another contribution 
+in how $ \mu ^ 2 $ changes: 
+\[
+ \mu _ 0 ^ 2 \to \mu _ 0 ^ 2 + 12 g_0 \int 
+ _{ \Lambda / \zeta } ^ \Lambda \frac{ d ^ d q }{ ( 2 \pi ) ^ d } \frac{1}{q ^ 2 + \mu _ 0 ^ 2  } 
+ + g_0 ^ 2 C ( \Lambda ) 
+\] 
+We can also denote general functions which \textbf{do} depend on 
+$ \vec{k} $. For example, consider the diagram 
+\begin{equation*}
+	\feynmandiagram{
+		a[particle = \( k \) ] -- [fermion] b, 
+		b -- [ghost, half left, momentum =\( q_ 1 \) ] c -- [ghost, half left, 
+		momentum = \( k - q_1 - q_2 \) ] b, 
+		b -- [ghost, momentum =\( q_2 \) ] c, 
+		c -- [fermion] d[particle  = \( k \) ], 
+	};  =  \int \frac{d ^ d k }{ ( 2 \pi ) ^ d } \phi_{ \vec{k} } \phi _{ - \vec{k} } 
+	\int \frac{ d ^ d q_ 1 d ^ d q_ 2 }{ ( 2 \pi ) ^{ 2d } } \frac{1}{q_1 ^ 2 + 
+	\mu _ 0 ^ 2} \frac{1}{q_ 2 ^ 2 + \mu _ 0 ^ 2 } \frac{1}{( k - q_1 - q_2 ) ^ 2 + \mu _ 0 ^ 2 }
+\end{equation*} 
+This is qualitatively different from 
+the previous case because now we 
+can write our second order contribution as 
+\[
+	\dots = g_0 ^ 2 \int \frac{ d ^ d k }{ ( 2 \pi ) ^ d } \frac{1}{2 } A ( k , \Lambda ) 
+	\phi ^ - _{ \vec{k} } \phi ^{ -  }_{ - \vec{k}}  
+\] Where $ A ( k , \Lambda ) $ actually now depends on $ k$. 
+The upshot of this is that, when we return back into  \textbf{real space}, 
+we have that since we expand $ A ( k ) = A ( 0 )  + \frac{1}{2 } k^ 2 A '' ( 0 , \Lambda ) $
+(ignoring odd powers of $k $ since they ultimately vanish), we get that 
+now our \textbf{gradient term } picks up an extra contribution now. 
+
+ 
 Now, we can write things as general functions of $ \vec{k}  $ and $\Lambda $
 when dealing with more complicated terms. 
 This means that a diagram of the below form gives us a term like 

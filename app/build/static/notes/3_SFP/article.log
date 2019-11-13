@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.19 (TeX Live 2018) (preloaded format=pdflatex 2019.1.15)  12 NOV 2019 21:03
+This is pdfTeX, Version 3.14159265-2.6-1.40.19 (TeX Live 2018) (preloaded format=pdflatex 2019.1.15)  13 NOV 2019 00:57
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -2204,11 +2204,11 @@ LaTeX Font Info:    Try loading font information for U+msb on input line 71.
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 ) (./article.toc [1
 
-{/usr/local/texlive/2018/texmf-var/fonts/map/pdftex/updmap/pdftex.map}])
+{/usr/local/texlive/2018/texmf-var/fonts/map/pdftex/updmap/pdftex.map}] [2])
 \tf@toc=\write7
 \openout7 = `article.toc'.
 
- [2] [3] (./what_is_a_symmetry.tex) (./groups_to_represent_symmetries.tex [4]) (./symmetries_correspond_to_conserved_quantities.tex [5]) (./manifolds_and_tangent_spaces.tex) (./manifolds.tex) (./functions_on_manifolds.tex [6]) (./tangent_vectors.tex) (./embedding_manifolds.tex
+ [3] (./what_is_a_symmetry.tex) (./groups_to_represent_symmetries.tex [4]) (./symmetries_correspond_to_conserved_quantities.tex [5]) (./manifolds_and_tangent_spaces.tex) (./manifolds.tex) (./functions_on_manifolds.tex [6]) (./tangent_vectors.tex) (./embedding_manifolds.tex
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
 (hyperref)                removing `math shift' on input line 1.
@@ -2362,7 +2362,7 @@ Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
 (hyperref)                removing `math shift' on input line 315.
 
 [51] [52]) [53] (./killing_forms.tex
-Overfull \hbox (6.25606pt too wide) in paragraph at lines 46--50
+Overfull \hbox (6.25606pt too wide) in paragraph at lines 63--67
 \T1/cmr/m/n/10.95 What is the ma-trix rep-re-sen-ta-tion of this map? To do this, we con-struct a ba-sis $[]$
  []
 
@@ -2401,31 +2401,31 @@ Overfull \hbox (30.0pt too wide) in paragraph at lines 6--6
 [] 
  []
 
-) (./problems_left_to_contribute.tex) [68]
+[68]) (./problems_left_to_contribute.tex) [69]
 Package atveryend Info: Empty hook `BeforeClearDocument' on input line 120.
 Package atveryend Info: Empty hook `AfterLastShipout' on input line 120.
  (./article.aux)
 Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 120.
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 120.
 Package rerunfilecheck Info: File `article.out' has not changed.
-(rerunfilecheck)             Checksum: 1131527A9C09307234BD8AB40087ADD3;5817.
+(rerunfilecheck)             Checksum: E154894AB06829C9255C36FA2EECCB64;5877.
 Package logreq Info: Writing requests to 'article.run.xml'.
 \openout1 = `article.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 36570 strings out of 492649
- 688154 string characters out of 6129622
- 1092178 words of memory out of 5000000
- 39636 multiletter control sequences out of 15000+600000
+ 36573 strings out of 492649
+ 688191 string characters out of 6129622
+ 1092177 words of memory out of 5000000
+ 39637 multiletter control sequences out of 15000+600000
  548118 words of font info for 69 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  55i,14n,65p,10402b,1962s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/local/texlive/2018/texmf-dist/fonts/enc/dvips/cm-super/cm-super-t1.enc}{/usr/local/texlive/2018/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc}</usr/local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cmextra/cmex8.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi6.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy6.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/cm-super/sfbx1095.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/cm-super/sfbx1200.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/cm-super/sfbx1440.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/cm-super/sfrm0800.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/cm-super/sfrm1095.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/cm-super/sfrm1200.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/cm-super/sfrm1728.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/cm-super/sfti1095.pfb>
-Output written on article.pdf (68 pages, 510095 bytes).
+Output written on article.pdf (69 pages, 512393 bytes).
 PDF statistics:
- 819 PDF objects out of 1000 (max. 8388607)
- 718 compressed objects within 8 object streams
- 161 named destinations out of 1000 (max. 500000)
- 597 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 829 PDF objects out of 1000 (max. 8388607)
+ 727 compressed objects within 8 object streams
+ 163 named destinations out of 1000 (max. 500000)
+ 605 words of extra memory for PDF output out of 10000 (max. 10000000)
 
