@@ -211,9 +211,32 @@ can write our second order contribution as
 The upshot of this is that, when we return back into  \textbf{real space}, 
 we have that since we expand $ A ( k ) = A ( 0 )  + \frac{1}{2 } k^ 2 A '' ( 0 , \Lambda ) $
 (ignoring odd powers of $k $ since they ultimately vanish), we get that 
-now our \textbf{gradient term } picks up an extra contribution now. 
-
- 
+now our \textbf{gradient term } picks up an extra contribution now, 
+so we have a flow on this term 
+which we can figure out by inverse Fourier transforming. 
+\begin{align*}
+	g_0 ^ 2 \int \frac{d ^ d k}{ ( 2 \pi ) ^ d } \frac{1}{2 } A ( k , \Lambda ) 
+	\phi _{ \vec{k} } \phi _{ - \vec{k} } &=  g_0 ^ 2 \frac{1}{4 } \int 
+	\frac{ d ^ d k  }{ ( 2 \pi ) ^ d } k ^ 2 \phi _{ - \vec{k} } \phi _{ \vec{k} } \\
+					      &=  g_0 ^ 2 \int \frac{ d ^ d k }{ ( 2 \pi ) ^ d } 
+					      d ^ d x_1 d ^ d x_2 \phi ( x_ 1 ) \phi ( x_ 2) 
+					      e^{ i \vec{k} \cdot  \vec{x} _ 1 } e ^{ - i \vec{k} \cdot  \vec{x} _ 1 } k ^ 2 A'' ( 0 , \Lambda ) \\
+					      &=  - \frac{g_0 ^ 2 A '' ( \Lambda , 0 ) }{ 4 } 
+					      \int  d^ d x_1 d ^ d x_2 \phi ( x_1) 
+					      \phi ( x_2) \nabla^ 2 _{ \vec{x} _ 2 } \int 
+					      \frac{ d ^ d k }{ ( 2 \pi ) ^ d } e ^{ i \vec{k} \cdot  ( \vec{x} _ 1 - \vec{x} _ 2 ) }\\
+					      &=  - g_0^ 2 \frac{ A '' ( 0 , \Lambda ) }{ 4 }
+					      \int d ^ d x_1 d ^ d x_2 \phi ( x_1 ) 
+					      \phi ( x_2 ) \nabla _{ \vec{x} _ 2 } \nabla _{ \vec{x} _ 1 } \delta ( 
+					      \vec{x} _ 1- \vec{x} _ 2 ) \\
+					      &= - g_0 ^ 2 \int \frac{ A'' ( 0, \Lambda ) }{ 4 } 
+					      \int d ^ d x_1 d ^d x_2 \nabla_{ \vec{x} _ 1 } \phi ( \vec{x} _ 1 ) \nabla _{ \vec{x} _ 2 } \phi( { \vec{x} _ 2 }) \delta ( \vec{x} _ 1 - \vec{x} _ 2 )  \\
+\end{align*}
+Applying this delta function, this means that we get an overall correction in 
+the free energy that 
+\[
+ F ' [ \phi ] = \int d ^ d x \, \frac{1}{2 } \gamma ' \nabla \phi \cdot  \nabla  \phi 
+\] 
 Now, we can write things as general functions of $ \vec{k}  $ and $\Lambda $
 when dealing with more complicated terms. 
 This means that a diagram of the below form gives us a term like 

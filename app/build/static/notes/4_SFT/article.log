@@ -1,4 +1,4 @@
-This is LuaTeX, Version 1.07.0 (TeX Live 2018)  (format=lualatex 2019.1.15)  13 NOV 2019 15:21
+This is LuaTeX, Version 1.07.0 (TeX Live 2018)  (format=lualatex 2019.1.15)  13 NOV 2019 18:27
  restricted system commands enabled.
  file:line:error style messages enabled.
 **article.tex
@@ -23,7 +23,7 @@ Inserting `luaotfload.aux.patch_cambria_domh' at position 2 in `luaotfload.patch
 Inserting `luaotfload.aux.fixup_fontdata' at position 1 in `luaotfload.patch_font_unsafe'.
 Inserting `luaotfload.aux.set_capheight' at position 3 in `luaotfload.patch_font'.
 Inserting `luaotfload.rewrite_fontname' at position 4 in `luaotfload.patch_font'.
-luaotfload | main : initialization completed in 0.158 seconds
+luaotfload | main : initialization completed in 0.157 seconds
 Babel <3.18> and hyphenation patterns for 1 language(s) loaded.
 (/usr/local/texlive/2018/texmf-dist/tex/latex/base/article.cls
 Document Class: article 2014/09/29 v1.4h Standard LaTeX document class
@@ -2387,123 +2387,4 @@ Package luatex.def Info: figures/deformations.png  used on input line 8.
 (luatex.def)             Requested size: 364.24149pt x 304.19997pt.
 ) (./scaling.tex [35
 warning  (pdf backend): ignoring duplicate destination with the name 'figure.7'
-<./figures/deformations.png>]) (./relation_to_critical_exponents.tex) (./relevant,_irrelevant_or_marginal.tex [36]) (./the_gaussian_fixed_point.tex [37
-warning  (pdf backend): ignoring duplicate destination with the name 'table.1'
-] [38] [39]
-<figures/rg_flow.pdf, id=579, 326.17859pt x 159.71669pt>
-File: figures/rg_flow.pdf Graphic file (type pdf)
-<use figures/rg_flow.pdf>
-Package luatex.def Info: figures/rg_flow.pdf  used on input line 180.
-(luatex.def)             Requested size: 364.24149pt x 178.3648pt.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 185.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `subscript' on input line 185.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 185.
-
-) [40
-warning  (pdf backend): ignoring duplicate destination with the name 'figure.8'
-<./figures/rg_flow.pdf>] (./interacting_fields.tex [41] [42] [43]) (./applying_wicks_free_energy.tex [44]) (./feynman_diagrams.tex [45] [46] [47] [48]
-
-Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 239.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\beta' on input line 239.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 239.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 279.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\epsilon' on input line 279.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 279.
-
-[49] [50]) (./continuous_symmetries.tex
-
-Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 38.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 38.
-
-[51]
-Overfull \hbox (14.69176pt too wide) in paragraph at lines 99--101
-[]\T1/lmr/m/n/10.95 So, at low en-er-gies we ex-pect to have our Gold-stone bosons dom-i-nat-ing the low en-ergy physics. 
- []
-
-[52]
-
-Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 146.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 146.
-
-[53
-warning  (pdf backend): ignoring duplicate destination with the name 'table.2'
-]) (./example_sheet_1.tex) (./question_1.tex [54]) [55] (./question_2.tex) [56] (./question_3.tex [57]) [58] (./question_4.tex
-Overfull \hbox (17.01123pt too wide) in paragraph at lines 70--75
-\T1/lmr/m/n/10.95 only pos-si-ble con-fig-u-ra-tions for sta-tion-ary points is that $\OML/cmm/m/it/10.95 m[] \OT1/cmr/m/n/10.95 = 0\OML/cmm/m/it/10.95 ; m[] \OT1/cmr/m/n/10.95 = \OMS/cmsy/m/n/10.95 []$
- []
-
-[59
-warning  (pdf backend): ignoring duplicate destination with the name 'figure.9'
-]
-
-LaTeX Warning: `h' float specifier changed to `ht'.
-
-[60] [61
-warning  (pdf backend): ignoring duplicate destination with the name 'figure.10'
-]) [62] (./question_5.tex [63] [64]) (./question_5.tex [65] [66]) (./question_7.tex) (./example_sheet_2.tex) [67]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 107.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 107.
- (./article.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 107.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 107.
-Package rerunfilecheck Info: File `article.out' has not changed.
-(rerunfilecheck)             Checksum: 6E0D32CD0252F83B0E529A393E4D9824;5556.
-
-
-LaTeX Warning: There were multiply-defined labels.
-
-Package logreq Info: Writing requests to 'article.run.xml'.
-
-\openout1 = article.run.xml
-)
-
-Here is how much of LuaTeX's memory you used:
- 51671 strings out of 494413
- 125171,1977958 words of node,token memory allocated
- 2026 words of node memory still in use:
-   7 hlist, 2 vlist, 2 rule, 2 glue, 1 kern, 379 attribute, 65 glue_spec, 379 attribute_list, 1 write nodes
-   avail lists: 1:6,2:6367,3:2109,4:172,5:307,6:85,7:4412,8:87,9:765,10:13,11:228,12:1
- 53822 multiletter control sequences out of 65536+600000
- 70 fonts using 8536863 bytes
- 65i,12n,104p,1120b,2022s stack positions out of 5000i,500n,10000p,200000b,100000s
-{/usr/local/texlive/2018/texmf-dist/fonts/enc/dvips/lm/lm-ec.enc}{/usr/local/texlive/2018/texmf-dist/fonts/enc/dvips/lm/lm-ts1.enc}</usr/local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx6.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx8.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cmextra/cmex8.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi6.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy6.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/lm/lmbx10.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/lm/lmbx12.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/lm/lmr10.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/lm/lmr12.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/lm/lmr17.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/lm/lmr6.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/lm/lmr8.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/lm/lmri10.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
-Output written on article.pdf (67 pages, 1562994 bytes).
-
-PDF statistics: 838 PDF objects out of 1000 (max. 8388607)
- 716 compressed objects within 8 object streams
- 187 named destinations out of 1000 (max. 131072)
- 584 words of extra memory for PDF output out of 10000 (max. 100000000)
-
+<./figures/deformations.png>]) (./relation_to_critical_exponents.tex) (./relevant,_irrel

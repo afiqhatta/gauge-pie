@@ -2,26 +2,44 @@
 The Dirac equation is important because it provides the framework for quantization of spin-$\frac{1}{ 2}$ particles, like electrons and other fermions. Another startling prediction that the Dirac equation gives us is the existence of anti-matter. This equation is an amazing combination of the geometry of spinors in Minkowski space-time, and the wave-function formalisation of quantum mechanics that we all know and love. 
 In this section, we'll provide some motivation for constructing the Dirac equation, solve it, then quantise this object to give rise to particles (fermions). 
 
-LECTURE CONTENT
+Right now we'll try to analyse how fields with \textbf{multiple}
+components change under an underlying Lorentz transformation. 
 Recall that when we have a Lorentz transformation in our 
 coordinates, we induce a transform on our scalar field. 
 \[
 	x ^ \mu \to ( x ') ^ \mu = \Lambda \indices{ ^ \mu _ \nu } x  ^ \nu, \quad 
  \phi ( x) \to \phi ' ( x) = \phi ( \lambda ^{ -1 } x ) 
 \] Most particles have an intrinsic angular momentum-spin however, 
-for example a spin 1 vector field which transforms our vector as 
+and so transform in a non-trivial way 
+under boosts and rotations. 
+For example a spin-1 vector field $ A ^ \mu $ (for example, 
+our familiar electromagnetic vector potential) transforms under a 
+Lorentz boost as 
 \[
 	A ^ \mu ( x) \to (A ') ^ \mu ( x) = \Lambda \indices{ ^ \mu _ \nu } A ^ \nu ( \Lambda ^{ - 1 } x )  
-\] In general, we have that our field transforms 
+\] There's no 
+reason a priori why vector fields with 
+multiple components need to transform with $ \Lambda \indices{ ^ \mu _ \nu } $
+multiplying it out front. In general, we have that our field transforms 
 as 
 \[
 	\phi ^ a ( x) \to D \indices{ ^ a _ b  } ( \Lambda ) \phi ^ b ( \Lambda ^{ - 1} x )  
-\] where our matrices $ D $ form a representation of our Lorentz group.
-Representations obey the properties that 
+\] where our matrices $ D $ form a representation of our Lorentz group. Let's 
+explain why this is. We treat $ \psi ^ a $ as a vector which 
+is acted on by a symmetry. However, for this symmetry to  \textbf{act} 
+on an object like a vector, it needs to be represented in 
+the same space (for example, as a matrix). 
+Up until now, we've been representing a Lorentz transformation group
+in it's standard form as a matrix, but this isn't
+the only representation (recall the Lorentz group isn't 
+defined in terms of matrices in the first place, but 
+as members of the orthogonal group $O(1, 3 )$ ). 
+Representations obey the properties that the group structure is preserved.
+This means that, if $ D $ is a representation, then
 \begin{align*}
 	D ( \Lambda _ 1 ) D ( \Lambda _ 2) & = D ( \Lambda _  1 \Lambda _ 2 ) \\
-	D ( \Lambda ^{ - 1} ) = D ( \Lambda ) ^{ - 1} \\
-	D ( I ) = 1 
+	D ( \Lambda ^{ - 1} ) &= D ( \Lambda ) ^{ - 1} \\
+	D ( I ) &= 1 
 \end{align*} To find representations 
 we look at the Lorentz algebra, considering infinitesimal transformations
 \[
@@ -71,12 +89,24 @@ Our Lorentz algebra, one can calcuate, is
 	[ \mathcal{ M } ^{ \rho \sigma } , \mathcal{ M  } ^{ \tau \nu  } ] 
 	= \eta ^{ \sigma \tau } \mathcal{ M } ^{ \rho \nu } - \eta ^{ \rho \tau } \mathcal{ M} ^{ \sigma \nu }
 	- \eta ^{ \rho \nu } \mathcal{ M }^{ \sigma \tau } - \eta ^{ \sigma \nu } \mathcal{ M } ^{ \rho \tau }
-\]  Our corresponding boost is $ \exp ( \frac{1}{2 } \Omega_{ \rho \sigma  } \mathcal{ M } ^{ \rho \sigma }$.
+\] What we've 
+done here is that we've calculated the Lie bracket of two 
+elements in our representation. This means that any other representation 
+of the Lorentz group necessarily satisfies this relation, since 
+representations of a Lie algebra needs to preserve the Lie bracket. 
+Our corresponding boost is $ \exp ( \frac{1}{2 } \Omega_{ \rho \sigma  } ) \mathcal{ M } ^{ \rho \sigma }$.
+This is because when we are returning 
+the infinitesimal transformation back into its full form 
+by exponentiating. 
 
 \subsection{The Spinor Representation} 
+
+Now, the aim of the game is to try and find 
+other representations which satisfy the 
+Lorentz algebra.
 To help us find representations that satisfy the 
-Lroentz algebra, we start with the 
-Clifford algebra. This is an algebra whose 
+Lorentz algebra, we start by defining 
+something called the Clifford algebra. This is an algebra whose 
 elements satisfy the anti-commutation 
 relations 
 \[
@@ -88,7 +118,7 @@ We have that our matrices in the algebra obey
 the properties 
 \begin{align*}
 	\gamma ^ \mu \gamma ^ \nu & = - \gamma ^ \nu \gamma ^ \mu , \quad \mu \neq \nu \\
-	( \gamma ^ 0 ) ^ 2 = I, \quad ( \gamma ^ i ) ^ 2 =  - I , \quad i \in \left\{ 1, 2, 3  \right\} 
+	( \gamma ^ 0 ) ^ 2 & = I, \quad ( \gamma ^ i ) ^ 2 =  - I , \quad i \in \left\{ 1, 2, 3  \right\} 
 \end{align*}
 Our simpliest representation which obeys these commutation relation 
 are a set of $ 4 \times 4 $ matrices, which we call the Chiral representation. 
@@ -102,12 +132,14 @@ Pauli matrices given by
 	\sigma ^ 1 = \begin{pmatrix}  0 & 1 \\ 1 & 0  \end{pmatrix}  , \quad 
 	\sigma ^ 2 = \begin{pmatrix}  0 & - i \\ i & 0  \end{pmatrix} , \quad
 	\sigma ^ 3  = \begin{pmatrix}  1 &  0 \\ 0 & 1  \end{pmatrix} 
-\] These Pauli matrices 
+\] 
+
+These Pauli matrices 
 obey the commutation and anti commutation relations 
 \[
  \left\{  \sigma ^ i , \sigma ^ j  \right\}  = 2 \delta ^{ ij } I _ 2 , 
  \quad [ \sigma ^ j , \sigma ^ k ] =  2i \epsilon ^{ jkl } \sigma ^ l 
-\] Given this represetnation, we can also 
+\] Given this representation, we can also 
 generate a new representation by conjugating by a constant 
 invertible matrix $ U$, so $ U \gamma ^ \mu U ^{ - 1} $  works 
 also as a representation. 
@@ -120,15 +152,52 @@ If we define
 		\frac{1}{2  } \gamma ^ \rho \gamma ^ \sigma &  \rho \neq \sigma 
 	\end{cases}
 	 = \frac{1}{2 } \gamma ^ \rho \gamma ^ \sigma  - \frac{1}{2 } \eta ^{ \rho \sigma } I 
-\] then, we can 
-prove that 
+\] we aim to show that this satisfies 
+the Lorentz algebra, whilst being philosphically different 
+to the algebra we defined before. 
+Now, expanding this whole thing out explicitly is difficult to 
+do, so we prove a handful of useful relations to show this. We can 
+ 
 \begin{claim}
+We have that 
 	\[
 		[ S ^{ \mu \nu } , \gamma ^ \rho ]  = \gamma ^ \mu \eta ^{ \nu \rho } 
 		  - \gamma ^ \nu \eta ^{ \rho \mu }
 	\]  
+\begin{proof}
+There's some steps we have to follow and it's not as straightforward 
+as it seems from first glance. 
+The basic idea is to commute things out 
+so that we only have one $ \gamma $ factor per term. 
+
+\begin{align*}
+	[S ^{ \mu \nu } , \gamma ^{ \rho } ] &=  
+	\frac{1}{2 } [ \gamma ^ \mu \gamma ^ \nu  - \eta ^{ \mu \nu } , \gamma ^{ \rho }  ] \\
+					     &=  \frac{1}{2 } [ \gamma ^ \mu \gamma ^ \nu , \gamma ^ \rho ]  \\
+					     &=  \frac{1}{2  } ( \gamma^ \mu \gamma ^ \nu \gamma ^ \rho - 
+					     \gamma ^ \rho \gamma ^ \mu \gamma ^ \nu ) 
+\end{align*}
+Now, this is a bit tricky to manage. The key is to anti-commute things 
+in the right order. We anti-commute the last two 
+matrices in the first term, and the first two matrices in 
+the last term. 
+The above is then equal to 
+
+\begin{align*}
+	\dots & = \frac{1}{2} \gamma ^ \mu ( \left\{  \gamma ^ \nu , \gamma ^ \rho  \right\}   - \gamma ^ \rho \gamma ^ \nu )
+	 - \frac{1}{2 }\left(  \left\{  \gamma ^ \rho , \gamma ^ \mu  \right\}  - \gamma ^ \mu \gamma ^ \rho  \right)  \gamma ^ \nu \\
+	      &=  \frac{1}{2 } \gamma ^ \mu \left(  
+	      2 \eta ^{ \nu  \rho }  - \gamma ^ \rho \gamma ^ \nu \right)   - \frac{1}{2 } 
+	      ( 2 \eta ^{ \rho \mu } - \gamma ^ \mu g \gamma ^ \rho ) \gamma ^ \nu \\
+	      &=  \gamma ^ \mu \eta ^{ \nu \rho } - 
+	      \gamma ^ \nu \eta ^{ \rho \mu }
+\end{align*}
+\end{proof} 
 \end{claim}
-Using this, we can then prove that 
+Using this, we can then prove that $ S^{ \rho \sigma} $
+satisfies the Lorentz algebra! This means we 
+would then be able to use this 
+as a valid representation of the Lorentz group. 
 \begin{claim}
 	\[
 		[ S ^{ \rho\sigma } , S ^{ \tau \nu } ] = 
@@ -136,29 +205,81 @@ Using this, we can then prove that
 		\eta ^{ \rho \tau } S ^{ \sigma \nu } 
 		+ \eta ^{ \rho \nu } S ^{ \sigma \tau } 
 		 - \eta ^{ \sigma \nu } S ^{ \rho \tau }
-	\] 
+	\]
+
+\begin{proof}
+We can expand out one side and appeal to the relation 
+we proved earlier. 
+\begin{align*}
+	[ S ^{ \rho \sigma }, S^{ \tau \nu } ] &=  
+	\frac{1}{2 } [ S ^{ \rho \sigma } ,  \gamma ^ \tau 
+	\gamma ^ \nu - \eta ^{ \tau \mu } I ] \\
+	&=  \frac{1}{2 } [ S^{ \rho \sigma } , \gamma ^{ \tau } 
+	\gamma ^{ \nu } ] \\
+	&=  \frac{1}{2 } [ S ^{ \rho \sigma } , \gamma ^ \tau ] 
+	\gamma ^{ \nu } + \frac{1}{2 } \gamma ^ \tau [ 
+	S ^{ \rho \sigma } , \gamma ^ \nu ] \\
+	= \frac{1}{2 } ( \gamma ^ \rho \eta ^{ \sigma \tau}  - \gamma ^ \sigma 
+	\eta ^{ \rho \tau } ) \gamma ^ \nu + \frac{1}{2 } \gamma ^ \tau 
+	( \gamma ^ \rho \eta ^{ \sigma \nu }  - \gamma ^ \sigma \eta ^{ \rho \nu 
+	} ) 
+\end{align*}
+Now, to recover what we had earlier, we need to sub out our expressions 
+with two gammas for an expression in $S$. To do this, 
+we invert our relation for $ S $ so that 
+\[
+ \gamma ^ \mu \gamma ^ \nu  = 2 S ^{ \mu \nu } + \eta ^{ \mu \nu } I 
+\] We then 
+get that the above is equal to 
+\begin{align*}
+	\dots & = \frac{1}{2 } \left(  2 ^{ \rho \nu } \eta ^{ \sigma \tau }
+	 + \eta ^{ \sigma \tau } \eta ^{ \rho \nu } I \right) \\ 
+	      &  - \frac{1}{2 } \left(  
+	      2 S^{ \sigma \nu } \eta ^{ \rho \tau } + \eta ^{ \sigma \nu } 
+      \eta ^{ \rho \tau } I  \right) \\
+	      & + \frac{1}{2 } \left(  2 S^{ \tau \rho } \eta ^{ \sigma \nu }
+	      + \eta ^{ \rho \tau } \eta ^{ \sigma \nu } I \right) \\
+	      & - \frac{1}{2 } \left(  2 S ^{ \tau\sigma }
+	      \eta ^{ \rho \nu } + \eta ^{ \rho \nu } \eta ^{ \tau \sigma }\right)
+	      \\
+	      &=  S ^{ \rho \nu } \eta ^{ \sigma \tau } 
+	       - S^{ \sigma \nu } \eta ^{ \tau \rho } + 
+	       S ^{ \tau \rho } \eta ^{ \sigma \nu } 
+	        - S ^{ \tau \sigma } \eta ^{ \rho \nu }\\
+\end{align*}
+The terms with two $ \eta $ terms cancel out. 
+The object that we're left with is precisely the Lorentz algebra. 
+
+\end{proof}
 \end{claim} Thus, $ S $ provides a representation of 
 the Lorentz group. 
 We now define a Dirac spinor, $ \psi _ \alpha ( x) $which is a four component 
 vector that satisfies the following transformation 
 law 
 \[
-	\psi _ \alpha ( x) \to  S[ \Lambda ] \indices{ ^ \alpha _ \beta } \psi ^ \beta ( 
+	\psi ^ \alpha ( x) \to  S[ \Lambda ] \indices{ ^ \alpha _ \beta } \psi ^ \beta ( 
 	\Lambda ^{ - 1} x ) 
 \] where we've defined $ \Lambda = \exp \left(  \frac{1}{2 } 
 \Omega _{ \rho \sigma } M ^{ \rho \sigma } \right)  $, and 
 our spinor representation $ S [ \Lambda ] = \exp \left(  
 \frac{1}{2 } \Omega _{ \rho \sigma } S ^{ \rho \sigma } \right)  $. 
 We need to check that the Spinor representation is not 
-equivalent to the usual vector representation, which we 
-can see via a specific lorentz transformation 
+equivalent to the usual vector representation, in the
+sense that we need to check what we've
+written down gives something \textbf{different} than 
+our standard Lorentz boost. 
+
+To check that what we have is different, we trial a particular Lorentz transformation (in this case, a rotation by $ 2 \pi$). 
+
+\begin{example}{(The Spinor representation is different)} 
+If we choose 
 \[
  S^{ ij } = \frac{1}{4 }\left[  \begin{pmatrix}  
  0 & \sigma ^ i \\ - \sigma ^ i & 0 \end{pmatrix}  , 
- \begin{pmatrix}  0 & \sigma ^ j \\ - \sigma ^ j & 0  \end{pmatrix}  \right]  
+ \begin{pmatrix}  0 & \sigma ^ j \\ 0 & \sigma^ k   \end{pmatrix}  \right]  
  =  - \frac{i \epsilon ^{ ijk } }{ 2 } \begin{pmatrix}  \sigma ^ k & 0 
- \\ \sigma ^ k & 0 \end{pmatrix}  \text{ from } \sigma ^ i \text{ algebra}
-\] If we write as a paramter 
+ \\ 0 & \sigma^k \end{pmatrix}  \text{ from } \sigma ^ i \text{ algebra}
+\] If we write as a paramater 
 $ \Omega_{ ij } =  - \epsilon _{ ijk } \phi ^ k $ . 
 Exponentiating, we get that 
 \[
@@ -171,8 +292,9 @@ $ 2 \pi $ abou the $ x ^ 3 $ axis, we get that
 our corresponding representation is 
 \[
 	S [ \Lambda ] = \begin{pmatrix}  e ^{ i \pi \sigma ^ 3 }` & 0 \\ 
-	0 & e ^{ - i \pi \sigma ^ 3 } \end{pmatrix}   = - I _ 4 
-\] Thus, a rotation of $ 2\Pi  $  takes a 
+	0 & e ^{ i \pi \sigma ^ 3 } \end{pmatrix}   = - I _ 4 
+\] In this notation, the exponential 
+needs Thus, a rotation of $ 2 \pi  $  takes a 
 spinor $ \phi _ \sigma ( x ) \to  - \phi _{ \sigma } ( x) $, not like a vector, 
 which goes like $ \Lambda = I $ as expected (in our fundamental representation). 
 
@@ -185,11 +307,19 @@ is
 \[
 	S [ \Lambda ] = \begin{pmatrix}  e^{  - \chi \cdot \sigma / 2   } & 
 	0 \\ 0 & e ^{ \chi \cdot  \sigma / 2 } \end{pmatrix}  
-\] Note that for rotations, $ S [ \Lambda ] $ is unitary, since $ S [ \Lambda ] ^ \dagger S [ \Lambda ]  = I $, but for boosts, it's not. 
+\] Note that for rotations, $ S [ \Lambda ] $ is unitary, since $ S [ \Lambda ] ^ \dagger S [ \Lambda ]  = I $, but for boosts, it's not.
+\end{example} 
+
+\begin{thm}{(No finite dimensional, unitary representations of the Lorentz group)} 
 There are no finite dimensional unitary representations of the Lorentz group! 
+
+\begin{proof} 
 $ S [ \Lambda ]  = \exp \left[  \frac{1}{2 } \Omega_{ \rho \sigma } 
 S ^{ \rho \sigma } \right]  $ is only unitary if $ S ^{ \rho \sigma } $ are 
-anti hermitian. Now, 
+anti hermitian. Now, when we take the Hermitian conjugate 
+of a commutator, not only does each element pick up a 
+hermitian conjugate, but the arguments in the commutator switch around. 
+This means we have to pick up a minus sign. 
 \[
 	( S ^{ \rho \sigma } ) ^ \dagger  = -  \frac{1}{4 } [ ( \gamma ^ \rho ) ^ \dagger , 
 	( \gamma ^ \sigma ) ^ \dagger ] 
@@ -197,21 +327,27 @@ anti hermitian. Now,
 However, this can't be arranged, and is impossible to do. 
 This can't be arranged, because
 \[
- ( \gamma ^ 0 ) ^ 2 = 1 \implies \gamma ^ 0 \text{ has real eigenvalues, so can't be anti-hermitatian 
- since these have imaginary eigenvalues }
-\] Similarly, 
+ ( \gamma ^ 0 ) ^ 2 = 1 \] 
+ This means in particular that $ \gamma ^ 0 $ has real eigenvalues, 
+ which means it can't be hermitian since hermitian matrices 
+ only have pure imaginary eigenvalues. 
 \[
  ( \gamma ^ i ) ^ 2 = 1 \implies \gamma ^ i \text{ can't be hermitian }
 \] In general, there's no way to pick $ \gamma ^ \mu $  such that $ S ^{ \mu \nu } $ 
 are anti-Hermitian.
+\end{proof} 
+\end{thm} 
 
-\subsection{Constructing a Lorentz Invariant action of $ \psi $ } 
-We write $ \psi ^ \dagger ( x )   = ( \phi ^ * ) ^ T ( x ) $. 
+\subsection{Constructing a Lorentz Invariant action of $ \psi $ }
+Now, something of immediate interest is to see whether we 
+can construct some sort of action from this. To carry this out, we
+should try to construct Lorentz invariant quantities. 
+We write $ \psi ^ \dagger ( x )   = ( \psi ^ * ) ^ T ( x ) $. 
 One question that we might have is to ask whether 
-$ \psi ^ \dagger ( x) \phi ( x) $ is a Lorentz scalar. 
+$ \psi ^ \dagger ( x) \psi( x) $ is a Lorentz scalar. 
 However, under a Lorentz transformation, 
 \[
-	\psi ^ \dagger ( x) \psi ^ ( x) \to \psi ^ \dagger ( \Lambda ^{ - 1} x ) 
+	\psi ^ \dagger ( x) \psi  ( x) \to \psi ^ \dagger ( \Lambda ^{ - 1} x ) 
 	S [ \Lambda ] ^ \dagger S [ \Lambda ] \psi( \Lambda ^{ - 1}x ) 
 \] This is not invariant in general since $ S [ \Lambda ] $ is 
 not unitary. 
@@ -219,23 +355,38 @@ In the chiral representation, we have that
 \[
 	( \gamma ^ 0 ) ^ \dagger  = \gamma ^ 0 , \quad ( \gamma ^ i) ^ \dagger = 
 	 - ( \gamma ^ i ) 
-\] We learn that we can write out
+\] We can verify by checking for each index, 
+that we can write out an identity to relate 
+the hermitian conjugate of a gamma matrix to 
+an expression which doesn't involve conjugates as 
 \[
  ( \gamma ^ \mu ) ^ \dagger = \gamma ^ 0 \gamma ^ \mu \gamma ^ 0 
 \] Thus, we can find the Hermitian conjugate of $ S $ as 
 \[
 	( S ^{ \mu \nu } ) ^ \dagger = - \frac{1}{4 } [ ( \gamma ^ \mu ) ^ \dagger, 
-	( \gamma & \nu ) ^ \dagger ]  =  - \gamma ^ 0 S ^{ \mu \nu } \gamma ^ 0 
-\]  hence, our exponential gives 
+	( \gamma^ \nu ) ^ \dagger ]  =
+	- \frac{1}{4 } [ \gamma ^ 0 \gamma ^ \mu \gamma ^ 0 , 
+	\gamma ^ 0 \gamma ^ \nu \gamma ^ 0 ]  = - \gamma ^ 0 S ^{ \mu \nu } \gamma ^ 0 
+\]  We do this because, since $ \gamma ^ 0 = ( \gamma ^ 0 ) ^{ -1 } $, 
+when we exponentiate this object we can pull out the $ \gamma ^ 0 $ on
+both sides. Hence, our exponential gives 
 \[
  S [ \Lambda ] ^ \dagger = \exp \left(  \frac{1}{2 } 
  \Omega _{ \mu \nu } ( S ^{ \mu \nu } ) ^ \dagger \right)   = \gamma ^ 0 S [ \Lambda ] ^{ - 1} 
  \gamma ^ 0 
-\] In this spirit, we can 
-define our Dirac adjoint of $ \psi $, as 
-\[
+\]
+\begin{defn}{(The Dirac adjoint)}
+	The Dirac adjoint of  $ \psi $ is defined as 
+	\[
 	\overline{\psi } ( x) := \psi ^ \dagger  (x) \gamma ^ 0 
-\] Our claim is that $ \overline{ \psi } \psi  $ is indeed a Lorentz scalar. 
+\] We define this object in the spirit of 
+creating scalars, vectors and other objects which transform nicely 
+under Lorentz transformations. 
+\end{defn}
+
+ 
+\begin{claim}{(Lorentz invariance of $ \overline{\psi } \psi $)}
+Our claim is that $ \overline{ \psi } \psi  $ is indeed a Lorentz scalar. 
 To prove this 
 observe that 
 \[
@@ -244,15 +395,43 @@ observe that
 	\Lambda ^{ - 1 }x ) 
 \] Using the identity above, we get that this is 
 the same. 
-In addition, we have that $ \overline{\psi } \gamma ^ \mu \psi ( x) $ is 
-a Lorentz vector. We have that 
+\end{claim} 
+
+\begin{claim}{($ \overline{\psi } \gamma ^ \mu \psi $ transforms as a Lorentz vector)}
+Things that transform nicely under Lorentz boosts 
+are called Lorentz vectors (or more 
+familiarly, 4-vectors). This means that they 
+transform much like how a position vector 
+transforms under a Lorentz boost: 
+\[
+ x ^ \mu \to \Lambda \indices{^ \mu _ \nu } x ^ \nu  
+\] 
+We claim that the object $ \overline{\psi } \gamma ^ \mu \psi  $
+transforms in this way to, where under a Lorentz 
+transform we have that 
+\[
+ \overline{ \psi } \gamma ^ \mu \psi \to 
+ \Lambda \indices{ ^ \mu _ \nu } \overline{ \psi } \gamma ^ \nu 
+ \psi 
+\]
+\begin{proof} 
+	Our vector transforms as follows (note that 
+	the $ \gamma ^ \mu $ matrix doesn't change 
+	since it's a constant object - only the spinors change.
 \[
 	\overline{ \psi } \gamma ^ \mu \psi \to \overline{ \psi } S [ \Lambda ] ^{ - 1} 
 	\gamma ^ \mu S [ \Lambda ] \psi 
 \]  For this to be a Lorentz vector, we require that 
 \[
 	S [ \Lambda ]^{ - 1} \gamma ^ \mu S [ \Lambda ] = \Lambda \indices{ ^ \mu _ \nu } \gamma ^ \nu  
-\] We have that, infinitesimally, 
+\] To go from here, we need to 
+write out the transformations in terms of the 
+exponents of their generators. In particular, 
+we require that the coefficients of the 
+generators $ \Omega_{ \rho \sigma  }  $ are 
+the same on both sides  - it's just the matrices $ \mathcal{ M } $
+and $ S $ that are different since we're dealing with distinct 
+representations. 
 \[
 	\Lambda \indices{ ^ \mu _ \nu } = \exp \left(  
 	\frac{1}{2 } \Omega _{ \rho \sigma  }\mathcal{ M } ^{ \rho \sigma } \right)  , 
@@ -268,29 +447,443 @@ a Lorentz vector. We have that
   - \eta ^{ \sigma \mu } \delta \indices{ ^ \rho  _ \nu }  \right)  \gamma ^ \nu 
     = \eta ^{\rho \mu } \gamma ^{ \rho }  - \gamma ^{ \rho } \eta ^{ \sigma \mu } = 
     - [ S ^{ \rho \sigma } , \gamma ^{ \mu } ] 
-\] Finally, 
+\] 
+\end{proof} 
+\end{claim} 
+Now, the upshot of doing all this 
+work is that we can now write down 
+an action (which by right should be Lorentz invariant). 
+We know that $ \overline{\psi }  \gamma ^ \mu \psi $ is 
+a Lorentz four vector, which implies that 
+$ \overline{ \psi } \gamma ^ \mu \partial  _ \mu \psi $ 
+is a Lorentz invariant quantity. We also already know that 
+$ \overline{ \psi } \psi $  is also Lorentz invariant on its 
+own. Finally, 
 we can construct a Lorentz invariant action from these objects, 
 by setting 
 \[
 	S = \int  d^ 4 x \, \overline{ \psi  } \left(  
-	0 \gamma ^ \mu \partial  _\mu  - m \right) \psi ( x) 
+	 \gamma ^ \mu \partial  _\mu  - m \right) \psi ( x) 
 \] 
 \subsection{The Dirac equation} 
-Varying $ \psi $ and $ \overline{ \psi } $ independently 
-in the Euler Lagrange equations gives us the Dirac equation. 
+Varying $ \overline{ \psi } $ independently 
+in the Euler Lagrange equations gives us the Dirac equation.
+Because there is no dependence on $ \dot{ \overline{ \psi } }  $, 
+we have that our equation of motion is given by 
+\[
+ \frac{\partial  \mathcal{L } }{\partial  \overline{ \psi } }   = 0 
+\] 
+Specifically, this is the equation 
 \[
  \left(  i \gamma ^ \mu \partial  _ \mu - m  \right)  \psi  =0 
 \] This is first order, not second order like KG.
-We write $ A _ \mu \gamma ^ \mu = \slashed{ A } $. 
-The equation is 
+To save some ink, we write 
+objects which are contracted with $ \gamma ^ \mu $ with 
+a slash. For example, we write $ A _ \mu \gamma ^ \mu = \slashed{ A } $. In this notation, 
+the Dirac equation reads  
  \[
 	 \left(  i \slashed{\partial } - m  \right)  \psi = 0 
 \] Note that each component of $ \psi $ solves
 the KG equation. 
 \begin{align*}
-	( i \slashed{ \partial  } + m ) ( i \slashed { \partial  } - m ) \psi &=  0  \\
+	( i \slashed{\partial} + m ) ( i \slashed {\partial} - m ) \psi &=  0  \\
 	( \gamma ^ \mu \gamma ^ \nu \partial  _ \mu \partial  _ \nu + m ^ 2 ) \psi &=  0  \\ 
-	( \frac{1}{2 } \left\{  \gamma ^ \mu , \gamma ^ \nu  \right\}  \partial  _ \mu \partial  _ \nu 
-	+ m^ 2 ) \psi = 0 
-	- ( \partial  ^ 2 + m ^ 2 ) \psi  = 0 
+	( \frac{1}{2 } \left\{  \gamma ^ \mu , \gamma ^ \nu  \right\}  \partial  _ \mu \partial  _ \nu + m^ 2 ) \psi &  = 0 \\
+	- ( \partial  ^ 2 + m ^ 2 ) \psi & = 0 
 \end{align*}
+
+\subsection{Chiral Spinors} 
+Since $ S [ \Lambda ] $ is block diagonal in our 
+Chiral representation, we say that it's reducible (since 
+we can write the representation as a direct sum of 
+two different representations). 
+It decomposes into 2 irreducible representations. 
+We write our spinor as 
+\[
+ \psi = \begin{pmatrix} u _ L \\ u _ R  \end{pmatrix} 
+\] where $ u_L , u _ R $ are 2 $ \mathbb{ C } $ component objects
+which we call Weyl, or chiral, spinors. 
+These objects transform identically under rotations, so that 
+\[
+ u _{ L, R } \to e ^{ \phi \cdot  \sigma / 2 } u _{ L , R }
+\] but under boosts, they transform in the opposite fashion. This 
+can be seen by just multiplying the matrix with the vector 
+as $ \psi \to S[ \Lambda ]_{ \text{ rot } } \psi $, which gives us 
+\[
+ u _{ L } \to e ^{ - \chi \cdot  \sigma / 2 } u_L  , \quad u _{ R } \to e ^{ \chi \cdot  \sigma / 2 } u _ R
+\] Heuristically we write 
+\[
+	u _{ L } \sim ( \frac{1}{2 } , 0 )\quad u _{ R } \sim ( 0 , \frac{1}{2 } ) \in ( SU ( 2) , SU ( 2) ) 
+\] we have that $ \psi $ is in $ ( \frac{1}{2 } , 0 ) \oplus ( 0 , \frac{1}{2 } ) $. 
+
+\subsubsection{The Weyl equation} 
+If we take our Dirac Lagrangian 
+\[
+	\mathcal{L}_D  = \overline{\psi} \left(i\slashed{\partial} - m\right)\psi 
+\] which is equal to 
+\[
+ \dots = i u_L ^ \dagger \sigma ^ \mu \partial  _ \mu u _ L + 
+ i u _ R ^ \dagger \overline{ \sigma } ^ \mu \partial  _ \mu u _{ R } - m \left(  
+ u _ L ^ \dagger u _ R - u _ R ^ \dagger u _ L \right) 
+\] where we define $ \sigma ^ \mu = ( I , \sigma ) , \overline{\sigma } ^ \mu = ( I , - \sigma ) $. 
+A massive fermion requires both $ u _L $ and $ u _ R $ , but 
+the massless limit $ m =0 $ requires only $ u _ L $ or $ u _ R $. 
+The mass term is mixing up left handed and right handed spinors. 
+In the case  $ m = 0$, we get the following EL equations
+\[
+ i \sigma ^ \mu \partial  _ \mu u _ L = 0 , \quad i \overline{ \sigma } ^ \mu \partial  _ \mu u _ R  = 0 
+\] These are called Weyl's equations. 
+In classical particle mechanics, the number of degrees of freedom is given by 
+half the dimension of phase space. in field theory, we need to do things different
+and discuss the number of degrees of freedom per spacetime point. 
+In field theory, we have a scalar $ \phi $ and $ \Pi_{ \phi } = \dot { \phi } $, so our 
+real degrees of freedom is $ \frac{1}{2 } \times 2  = 1$. 
+However, for a spinor $ \psi _{ \alpha } $ we have 8 degrees of freedom since 
+it's complex. For our conjugate momenta, 
+\[
+ \Pi _{ \psi } = i \psi ^{ i } 
+\] which doesn't add any degrees of freedom. This means 
+that our real degrees of freedom amounts to $\frac{1}{2 } \times 8  = 4$. 
+We have 2 for the spin up and spin down particle, and 2 for the 
+spin up and spin down anti-particle. 
+
+Consider $ \gamma ^ 5 $. 
+Note that  $ S [ \Lambda ] $ is not necessarily block diagonal 
+for different bases, 
+\[
+ \gamma ^ \mu = U \gamma ^ \mu U ^{ - 1 }, \psi \to U \psi 
+\] We use 
+\[
+ \gamma ^{ 5 }  : = i \gamma ^ 0 \gamma ^ 1 \gamma ^ 2 \gamma ^ 3 
+\]  to define Weyl spinors in a basis independent way. 
+We can verify that this object has the properties 
+\[
+	\left\{  \gamma ^ \mu , \gamma ^ 5 \right\}   = 0 , \left(  \gamma ^ 5  \right)  ^ 2 = I 
+\] We check that in our chiral representation, 
+\[
+	\gamma ^ 5 = \begin{pmatrix}  - I & 0 \\ 0 & I  \end{pmatrix} 
+\] We define projection operators 
+\[
+	P _ L = \frac{1}{2 } ( I _ 4 - \gamma ^ 5 ) , \quad P _ R = \frac{1}{2 } ( 1 + \gamma ^ 5 ) 
+\] These obey the properties 
+\[
+ P_ L ^ 2 = P_L , \quad P _ R ^ 2 = P _ R , \quad P _ L P _ R = 0 
+\] We then define 
+\[
+ \psi _ L = P_L \psi , \quad \psi _ R = P _ R \psi 
+\] for left handed and right handed spinors respectively. 
+Under a Lorentz transformation, 
+\[
+	\overline{ \psi } ( x) \gamma ^ 5 \psi ( x) \to \overline{ \psi } ( \Lambda ^{ - 1} x ) 
+	S [ \Lambda ] ^{ - 1} \gamma ^ 5 S [ \Lambda ] \psi 
+\] Checking that $ [ S_{ \mu\nu } , \gamma ^ 5 ] $, we have that 
+this is 
+\[
+	\dots = \overline{ \psi } ( \Lambda ^{ -1 } x ) \gamma ^ 5 \psi ( \Lambda ^{ - 1} x ) 
+\] This is called a pseudoscalar since it transforms under 
+parity transformation. We can also define the axial vector, $ \overline{ \psi } \gamma ^ 5 \gamma ^ \mu 
+\psi $ which transforms in the same way. 
+
+\subsection{Parity} 
+$ \psi _ L $ and $ \psi _ R $ are related by Parity. 
+We have a Lorentz group transformation defined 
+in the usual way. There are other discrete Lorentz transFormations. 
+One is 
+\[
+ \text{Time Reversal } T : x ^ 0 \to  - x ^ 0 , \quad x ^ i \to x ^ i 
+\] The other one is parity. 
+\[
+ \text{Parity } P : x ^ 0 \to x ^ 0 , \quad x ^ i \to  - x ^ i 
+\] Other transformations like  $x ^ 2 \to - x ^ 2 $
+are connected to the identity. 
+Under $ P $, rotations don't change sign, but 
+boosts do. 
+\[
+ u_{ L , R } \to e^{ \phi \cdot  \sigma / 2} u_{ L , R }, \quad 
+ u _{ L, R } \to e^{  \mp \chi \cdot  \sigma / 2} u_{ L, R }
+\] If we write $ \psi _{ L , R }  = \frac{1}{2 } ( I \mp \gamma ^ 5 )  $, 
+hence $ P $ exchanges LH and RH spinors. 
+\begin{align*}
+	P : & \psi_{ L , R } ( \vec{x} , t ) \to \psi_{ R, L } ( - \vec{x} ,  t) \\
+	P : & \psi ( \vec{x}, t ) \to \gamma ^ 0 \psi ( - \vec{x}, t ) 
+\end{align*}
+How do our terms in $\mathcal{ L } $ 
+Firstly, 
+\[
+	\overline{ \psi } \psi ( \vec{x}, t) \to \overline{ \psi } \psi ( - \vec{x}, t ) 
+\] Also, 
+\[
+	\overline{\psi } \gamma ^ \mu \psi ( \vec{x}, t ) \to \begin{cases}
+		\mu = 0 & \overline{ \psi } \gamma ^ 0 \psi ( - \vec{x}, t ) \\
+		\mu = i & \overline{ \psi } \gamma ^ 0 \gamma ^ i \gamma ^ 0 \psi ( -\vec{x}, t ) 
+		= - \overline{ \psi } \gamma ^ i \psi ( - \vec{x}, t ) 
+	\end{cases}
+\] On the other hand, we have that under parity, 
+\[
+	\overline{ \psi } \gamma ^ 5 \gamma ( \vec{x}, t ) \to \overline{ \psi } \gamma ^ 0 \gamma ^ 5 \gamma ^ 0 
+	\psi ( - \vec{x}, t ) = - \overline{ \psi } \gamma ^ 5 \psi 
+\] In addition, 
+\[
+ \overline{ \psi } \gamma ^ 5 \gamma ^ \mu \psi \to \overline{ \psi } \gamma ^ 0 \gamma ^ 5 \gamma ^ 0 \psi 
+  = \begin{cases}
+	  \mu = 0 &  - \overline{ \psi } \gamma ^5 \gamma ^ 0 \psi \\
+	  \mu = i & + \overline{ \psi } \gamma ^5 \gamma ^ i \psi 
+  \end{cases}
+\] To summarise, 
+we write down the number of components as
+\begin{equation}
+\begin{aligned}
+	\overline{ \psi } \psi &1\\
+	\overline{ \psi } \gamma ^ \mu \psi &4\\
+	\overline{\psi } S^{ \mu \nu } & 6\\
+	\overline{\psi } \gamma ^  5 \psi & 1\\
+	\overline{\psi } \gamma ^ 5 \gamma ^ \mu \psi & 4\\ 
+\end{aligned} 
+\end{equation}this has a total of $ 16 $ components. 
+Now we add extra terms to $ \mathcal{ L } $ involving $ \gamma ^ 5 $. This 
+can break $ P $ invariance. For example, 
+\begin{equation*}
+		\mathcal{ L }  = g  W_ \mu \overline{\psi} \frac{ \gamma ^ \mu ( 1 - \gamma ^ 5 ) \psi }{ 2}
+\end{equation*}
+This represents a $ W $ boson vector field coupling only to LH $\psi$ ' s. 
+If $\mathcal{ L }$ treats $\psi _ L$ and $\psi _ R$ equally it is called vector like. 
+If they appear differently they're called chiral. 
+
+\subsection{Symmetries and Currents of Spinors} 
+If we have a space time translation $x ^ \mu \to x ^ \mu - \epsilon ^ \mu $, 
+then  $ \Delta \psi  = \epsilon ^ \mu \partial  _ \mu \psi $. This 
+gives us the stress energy tensor 
+\[
+ T ^{ \mu \nu }  = i \overline{ \psi } \gamma ^ \mu \partial  ^ \nu \psi - \eta ^{ \mu \nu } \mathcal{ L }
+\] We get a conserved current when equations of motion 
+are obeyed, do we can impose them in $ T ^{ \mu \nu } $. 
+\[
+	\mathcal{ L } _ D = \overline{ \psi } \left(  
+	i \slashed{\partial} - m \right)  \psi  = 0 
+\] This implies $ \mathcal{ L }  = 0 $ in $ T ^{ \mu \nu } $ thus 
+\[
+ T ^{ \mu \nu } = i \overline{ \psi } \gamma ^ \mu \partial  ^ \nu \psi 
+\] 
+\[
+	S = \int  d^ 4 x \frac{1}{ 2 } \overline{ \psi } \left(  i \slashed{\partial}^{ \rightarrow}
+	- m \right)  \psi + \frac{1}{2 } \overline{ \psi } ( - i \slashed{\partial} ^{ \leftarrow } - m ) \psi 
+\] This is 
+\[
+	\int d ^ 4 x \frac{1}{2 } \overline{ \psi } ( i \slashed {\partial} ^{ \leftrightarrow} - 2m ) \psi 
+\]  where $\slashed{\psi} ^{ \leftrightarrow }  = \slashed{\partial} ^ \rightarrow - \slashed{\partial} ^ 
+\leftarrow $. So
+\[
+	T ^{ \mu \nu }  = \frac{ i }{ 2} \overline{ \psi } ( \partial  ^ \mu \partial  ^ \nu - \partial  ^ \nu \partial  ^ \mu ) \psi 
+\]
+\subsection{Lorentz transformations} 
+We know how a spinor is supposed to transform. 
+We have that infinitesimally, 
+\[
+	\psi \to S [ \Lambda ] \indices{ ^ \alpha _ \beta }  \psi ^ \beta  ( x ^ \mu - \omega  \indices{ ^ \mu _ \nu} x ^ \nu )  
+\] where we have that $ \omega  $ is generated as 
+\[
+	\omega \indices{ ^ \mu _ \nu } =  \frac{1}{2 } \Omega_{ \rho \sigma } ( M ^{ \rho \sigma } )\indices{ ^ \mu _ \nu }  
+\] Since we defined earlier that 
+\[
+	( M ^{ \rho \sigma } ) \indices{ ^ \mu _ \nu } = \eta ^{ \rho \mu } \delta \indices{ ^ \sigma _ \nu }
+	 - \eta ^{ \sigma \mu } \delta \indices{ ^ \rho _ \nu } 
+\] This implies that $ \omega ^{ \mu \nu } = \Omega ^{ \mu \nu } $. 
+Our infinitesimal change in our spinor is 
+\[
+ \delta \psi ^ \alpha    = i \omega ^{ \mu \nu }  \left[ 
+ x ^ \nu \partial  _ \mu \psi ^ \alpha  - \frac{1}{2 }  ( S ^{ \rho \sigma } ) \indices{ ^ \alpha 
+ _ \beta } \psi ^ \beta  \right] 
+\] Our corresponding conjugate change is 
+\[
+ \delta \overline{ \psi } _ \alpha  = 
+  - \omega ^{ \mu \nu } \left[  x _ \nu \partial  _ \mu \overline{\psi }_ \alpha 
+  + \frac{1}{2 } \overline{\psi } ( S_{ \mu \nu } ) \indices{ ^ \beta _ \alpha }  \right]  
+\] where the last term comes from $ \overline{\psi }_ \beta  S [ \Lambda ] ^{ - 1} $. 
+Our conserved current 
+\[
+ ( J ^ \mu ) ^{ \rho \sigma }  = x ^ \rho T ^{ \mu \sigma } - x ^ \sigma T ^{ \mu \rho }  - i 
+ \overline{ \psi } \gamma ^ \mu S ^{ \rho \sigma } \psi 
+\] THe first term looks like a real scalar stress energy tensor. 
+The new piece will give us spin $ \frac{1}{2 } $ after we quantise the
+field. 
+For example, looking at the last term $ ( J ^ 0 ) ^{ ij }  =  -i \overline{ \psi } \gamma ^ 0 S ^{ ij } \psi$. 
+Using the representation in Pauli matrices, 
+we get that the above is equal to 
+\[
+ ( J ^ 0 ) ^{ ij }  = \frac{1}{2 } \epsilon ^{ ijk  } \psi ^ \dagger 
+ \begin{pmatrix}  \sigma ^ k & 0 \\ 0 & \sigma ^ k  \end{pmatrix} \psi  
+\] 
+\subsection{Internal vector symmetry} 
+We get that under the phase rotation 
+\[
+ \psi \to e^{ i \alpha } \psi \implies \delta \psi  = i \sigma \psi 
+\] This gives us a conserved quantitiy 
+\[
+ j ^{ \mu _ \nu }  = \overline{ \psi } \gamma ^ \mu \psi \text{ a vector current }
+\] This gives us the conserved charge 
+\[
+ Q = \int d^ 3 x \, \overline{\psi } \gamma^ 0 \psi  = \int d ^ 3 x \, \psi ^ \dagger \psi 
+\]  in other words, an electric charge. 
+
+\subsection{Axial Symmetry} 
+For massless spinors in the $ m = 0 $ limit, 
+we transform 
+\[
+	\psi _{ \alpha } \to \left(  e ^{ i \alpha \gamma ^ 5 }  \right) \indices{ _ \alpha ^ \beta }
+	\psi _ \beta 
+\] This rotates left handed and right handed spinors in the 
+opposite direction. This leads to 
+the conserved axial vector current 
+\[
+ j _ A ^ \mu  = \overline{ \psi  } \gamma ^ \mu \gamma ^ 5 \psi 
+\] 
+
+\subsection{Plane-Wave Solutions} 
+We want to solve $ ( i \slashed{\partial}  -m ) \psi = 0 $. 
+We use the ansatz 
+\[
+ \psi = u_{ \vec{p} } e ^{ - i p \cdot  x }
+\] where $ u _{ \vec{p} }  $ is a constant spinor 
+depending on $ \vec{p} $ . 
+Substituting this in, using the chiral representation
+of $ \gamma ^ \mu $, we have that 
+\[
+ ( \gamma ^ \mu p _ \mu - m ) u _{ \vec{p} }  = 0  = 
+ \begin{pmatrix}  - m & p _ \mu \sigma ^ \mu \\ p _ \mu \overline{ \sigma } ^ \mu 
+ & - m  \end{pmatrix} u _{ \vec{p} }  =0 
+\] Our claim is that we have a solution 
+given by 
+\[
+ u _{ \vec{p} }  = \begin{pmatrix}  \sqrt{ p \cdot  \sigma }  \xi \\
+ \sqrt{ p \cdot  \overline{ \sigma } }  \xi \end{pmatrix} 
+\] for any two component spinor $ \xi $ such that $ \xi ^ \dagger \xi = 1 $. 
+To prove this, we let  $ u _ { \vec{p} } = ( u _ 1, u _ 2 ) $, and 
+substitute into the above such that 
+\[
+	( p \cdot  \sigma ) u _ 2 = m u _1 , \quad ( p \cdot  \overline{ \sigma } ) u _ 1 
+	 = m u _ 2 
+\] Either of these equations implies the other, since 
+\begin{align*}
+	( p \cdot  \sigma ) ( p \cdot  \overline{ \sigma } ) &=  
+	p_0^ 2 - p _ i p _ j \sigma ^ i \sigma ^ j \\
+	&=   p_0 ^ 2  - p _ i p_ j \frac{1}{2 } \left\{  \sigma ^ i , \sigma ^ j  \right\}  \\
+	&=  p _\mu p ^ \mu   = m ^ 2  
+\end{align*}
+
+Now, we try the ansatz $ u _ 1 = ( p \cdot  \sigma ) \xi $ for the 
+two component spinor $ \xi ' $. 
+Substituting this into the above, 
+we have that 
+\[
+	u _ 2 = \frac{1}{m} ( p \cdot  \overline{ \sigma } ) ( p \cdot  \sigma ) \xi = m \xi ' 
+\] Hence, 
+any vector of the form $ u _{ \vec{p} }  = A ( ( p \cdot  \sigma ) \xi ' , m \xi ' ) $. 
+To make this look more symmetric, choose $ A = \frac{1}{m } $  and 
+$ \xi '  = \sqrt{ p \cdot  \overline{ \sigma } }  \xi $  with $ \xi $ const. 
+Then, we have that 
+\[
+ u _{ \vec{p} }  = \begin{pmatrix}  \sqrt{ p \cdot  \sigma }  \xi \\
+ \sqrt{ p \cdot  \overline{ \sigma }   } \xi  \end{pmatrix}  
+\]  
+Examples. Let's take $ \mathbb{p } = 0$, then we have 
+that our solution looks like 
+ \[
+ u_{ \vec{p} = 0 }  = \sqrt{ m }  \begin{pmatrix}  \xi \\ \xi  \end{pmatrix} \text{ for any } \xi 
+\] Under spatial rotations, we have that 
+\[
+ \xi \to e ^{ i \sigma \cdot  \phi  / 2 } \xi 
+\] After quantisation, $ \xi $ describes the spin of the spinor. 
+For example, we have that 
+\[
+ \xi = \begin{pmatrix}  1 \\ 0  \end{pmatrix}  \text{ represents spin up along } x ^ 3 \text{ axis }
+\] Let's consider a particle boosted along the $ x ^ 3 $ direction. 
+Now, the momentum is not going to be zero. 
+Now what we have is that 
+\[
+ u_{ \vec{p} }  = \begin{pmatrix}  \sqrt{ E - p ^ 3 }  \begin{pmatrix}  1 \\ 0  \end{pmatrix} 
+ \\ \sqrt{ E + p_3 }  \begin{pmatrix}  1 \\ 0  \end{pmatrix}  \end{pmatrix} 
+\] which, in the $ m \to 0 $ or $ E \to p^ 3 $ limit, converges to 
+\[
+ \sqrt{ 2 E }  \begin{pmatrix}  0 \\ 0 \\ 1 \\ 0  \end{pmatrix} 
+\] Now, with instead $ \xi  = \begin{pmatrix}  0 \\ 1  \end{pmatrix}  $, 
+when we act on this we instead get that 
+\[
+	u _{ \vec{p} }  = \begin{pmatrix}  \sqrt{ E + p^ 3 }  \begin{pmatrix}  0 \\ 1   \end{pmatrix}  \\
+ \sqrt{ E - p ^ 3 }  \begin{pmatrix}  0 \\ 1  \end{pmatrix}  \end{pmatrix} 
+\] which tends to 
+\[
+ \sqrt{2 E }  \begin{pmatrix}  0 \\ 1 \\ 0 \\ 0  \end{pmatrix} 
+\]
+\subsection{Helicity}
+
+The Helicity operator projects angular momentum 
+along the direction of motion. 
+If we define 
+\[
+	h = \hat{\vec{p} } \cdot  \vec{s}  = \frac{1}{2 } \hat{ p } _ k 
+	\begin{pmatrix}  \sigma ^ k & 0 \\ 0 & \sigma ^ k  \end{pmatrix} 
+\] A massless spin up operator has $ h = \frac{1}{2 } $, and a massless spin down 
+particle has $ h = - \frac{1}{2 } $. 
+
+\subsubsection{Negative frequency solutions} 
+If we define $ \psi  = v _{ \vec{p} } e ^{ i p \cdot  x } $. 
+The Dirac equation then gives 
+\[
+ v_{ \vec{p} }  = \begin{pmatrix}  \sqrt{ p \cdot  \sigma }  \eta \\
+  - \sqrt{ p \cdot  \overline{ \sigma }  }  \end{pmatrix} 
+\] where we have as well that $ \eta ^ \dagger \eta  = 1 $ and $ \eta $ 
+is a constant 2 -spinor. 
+
+
+\subsection{Quantising the Dirac field} 
+When we take these solutions and write them out 
+in Fourier modes, we have that 
+\begin{align*}
+	\psi ( \vec{x} ) &=  \sum _{ i = 1 } ^ 2 
+	\int \frac{ d^ 3 p }{ ( 2 \pi ) ^ 3 \sqrt{ 2 E_{ \vec{p} } }  } \left[  
+	b_{ \vec{p} } ^ s u _{ \vec{p} } ^ s e ^{ i \vec{p} \cdot  \vec{x} } 
++ c_{ \vec{p} } ^{ s \dagger } v_{ \vec{p} } ^ s e ^{ - i \vec{p} \cdot  \vec{x}}\right] \\
+\psi ^ \dagger ( \vec{x} ) &=  \sum _{ i = 1 } ^ 2 
+\int \frac{ d ^ 3 p }{ ( 2 \pi ) ^ 3 \sqrt{ 2 E _{ \vec{p} } }  } \left[  
+b_{ \vec{p} } ^ s u_{\vec{p} } ^{ s \dagger } e ^{ - \vec{p} \cdot  \vec{x} } + 
+c_{ \vec{p} } ^ s v_{ \vec{p}} ^{ s \dagger } e ^{ i \vec{p} \cdot  \vec{x} } \right] \\ 
+\end{align*}
+
+In spinor quantisation, it turns out that we require 
+anti commutations relations instead of commutation relations, with 
+\[
+ \left\{  A, B  \right\}   = AB + B A 
+\]  We need the relations 
+\[
+	\left\{  \psi _ \alpha ( \vec{x} ) , \psi _ \beta ( \vec{y} )  \right\}   = 0 
+	= \left\{  \psi _{ \alpha } ^ \dagger ( \vec{x} ) , \psi _{ \beta } ^ \dagger 
+	( \vec{y} ) \right\}  , \quad \left\{  \psi _ \alpha ( \vec{x} ) , 
+\psi _{ \beta } ( \vec{y} ) \right\}  = \delta _{ \alpha \beta } \delta ^ 3 ( \vec{x} - \vec{y} ) 
+\]
+We can prove that thesse are equivalent to 
+\[
+ \left\{  b_{ \vec{q} } ^ r , b _{ \vec{q} } ^{ s \dagger }  \right\}  = 
+ ( 2 \pi ) ^ 3 \delta ^ 3 ( \vec{p} - \vec{q} ) \delta ^{ rs }  = \left\{  c_{ \vec{p} } ^ r , 
+ c _{ \vec{q} } ^{ s \dagger }\right\} 
+\] Our Hamiltonian density looks like 
+\begin{align*}
+	\mathcal{ H } &=  \pi \dot{ \psi }  - \mathcal{ L }   \\
+	&=  i \psi ^ \dagger \dot{ \psi }  - i \overline{ \psi } \gamma ^ 0 \partial  _ 0 
+	\psi - i \overline{ \psi } \gamma ^ i \partial  _ i \psi + m \overline{ \psi } \psi \\
+	&=  \overline{ \psi }( - i \gamma ^ i \partial  _ i + m ) \psi   \\ 
+\end{align*}
+If we plug in $ \psi , \overline{ \psi } $ from the above, 
+we use anti commutation relations and some reuslts on inner 
+products of spinors to get that 
+\[
+ u _{ \vec{p} } ^{ r \dagger } u _{ \vec{p} } ^ s  = 
+ v_{\vec{p} } ^{ r \dagger } v _{ \vec{p} } ^ s  = 2 p_0 \delta ^{ rs } , \quad 
+ u_{\vec{p} } ^{  r\dagger } v_{\vec{p} } ^ s = 0 = v_{ \vec{p} } ^{ r \dagger  } u_{ \vec{p} } ^ s 
+\] 
+This means that 
+\[
+	H = \int \frac{ d^ 3 p }{ ( 2 \pi ) ^ 3 } E _ p \sum_{ s = 1 } ^ 2 
+	\left(  b_{ \vec{p} } ^{ s \dagger  } b _{ \vec{p} } ^ s 
+	+ c _{ \vec{p} } ^{ s \dagger } c _{ \vec{p} } ^ s \right) 
+\] If we used commutation relations, we get a minus sign which means that we 
+have unboudned lower energy and there fore unstable theory. 

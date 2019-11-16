@@ -39,30 +39,24 @@
 \usepackage{slashed}
 
 %% Commands for typesetting theorems, claims and other things.
-\newtheoremstyle{newline}
-{\topsep} 
-{\topsep} 
-{} 
-{} 
-{\bfseries} 
-{}
-{.5em}
-{\newline}
-{}
+\newtheoremstyle{slanted}
+{1em}%   Space above
+{.8em}%   Space below
+{}%  Body font
+{}%          Indent amount (empty = no indent, \parindent = para indent)
+{\bfseries}% Thm head font
+{.}%         Punctuation after thm head
+{0.5em}%     Space after thm head: " " = normal interword space;
+{}%         \newline = linebreak
+{}%          Thm head spec (can be left empty, meaning `normal')
 
-\theoremstyle{newline} 
+%% Commands for typesetting theorems, claims and other things. 
+
+\theoremstyle{slanted}
 \newtheorem{theorem}{Theorem}
-
-\theoremstyle{newline} 
 \newtheorem*{thm}{Theorem}
-
-\theoremstyle{newline} 
 \newtheorem*{claim}{Claim}
-
-\theoremstyle{newline} 
 \newtheorem{example}{Example}
-
-\theoremstyle{newline} 
 \newtheorem*{defn}{Definition}
 
 \newcommand{\Lagr}{\mathcal{L}} 
@@ -160,4 +154,5 @@
 \subfile{example_sheet_2.tex}
 \subfile{question_1.tex}
 \subfile{question_2.tex}
+
 \end{document} 

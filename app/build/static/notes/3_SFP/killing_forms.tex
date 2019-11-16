@@ -115,4 +115,360 @@ We now prove this invariance condition.
 
 \end{thm}
 
+
+Given a matrix Lie group $G$, we can define the 
+adjoint action of $ G $ on $ \mathcal{ L } ( G ) $. 
+For all $ g \in G $, since we're dealing with matrix Lie 
+groups, we can do inverses and multiply Lie algebra elements with 
+$ g  \in G $. The action is defined as 
+\[
+	X \in \mathcal{ L } ( G ) \mapsto g X g^{ - 1 } \in \mathcal{ L }  (G ) 
+\] Our Killing form is 
+invariant of this action. In particular, we have that 
+\[
+	K ( X, Y ) = \kappa ( g X g^{ - 1} , g Y g^{ - 1 } ) ,\quad
+	\forall X, Y \in \mathcal{ L } ( G ) , \forall g \in G 
+\] We can recover the invariance property
+for Killing forms by writing 
+$ g = \text{Exp}( - t Z ) $. Expanding out, we get 
+the invariance property. 
+
+
+\begin{defn}{(Semi-Simple)} 
+	A Lie algebra $ \lalg $ is semi-simple if it has no Abelian ideals. 
+\end{defn}
+
+\begin{thm}{(Cartan)}
+	We have that $ \kappa $ is a non-degenerate Killing form $ \iff $ $ \lalg $ 
+	is semi-simple. 
+	We will prove later on that any semi-simple $ \lalg $ is a direct sum of 
+simple Lie algebras, 
+so we can decompose $\lalg$ is 
+\[
+\lalg = \lalg_ 1 \oplus \lalg_ 2 \oplus \dots \oplus \lalg_{ m }\]
+\begin{proof}
+	We will show first that $ \lalg $ is not semi-simple implies that
+	$ \kappa $ is degenerate. 
+	If $ \lalg $ is not semi-simple, then it has an Abelian ideal, 
+	which we will call $ \mathcal{ J } \subset \lalg$, with 
+	$\dim ( \lalg ) = D $ and $ \dim ( \mathcal{ J } )  = d \leq D $. 
+	Construct a basis of the algebra $ \left\{  T^ a  \right\} $ with 
+	$ a  = 1 , \dots D $, which we write as 
+	\[
+	 \mathcal{ B } = \left\{  i = 1 , \dots d  \right\}  \cup \left\{ 
+	 T ^{\alpha } , \alpha = 1, \dots D - d\right\} 
+	\] where we have $ T ^ i $ spanning $\mathcal{ J  } $. 
+	As $ \mathcal{ J } $ is Abelian, we have by definition 
+	that 
+	\[
+	 [ T ^ i , T ^ j ] = 0 , \forall i,j 
+	\] We also have that since it's an ideal, 
+	\[
+	 [ T ^ \alpha , T ^ j ] = f ^{ \alpha j } _ k T ^ k \in \mathcal{ J }
+	\] We thus have 
+	\[
+	 f^{ ij } _ a = 0 , \quad f^{ \alpha j } _ \beta = 0 
+	\] Now suppose that we have 
+	$ X = X_ a T ^ a \in \lalg  $,and $ Y = Y _ i T ^ i \in \mathcal{ J } $. 
+	If we write out our Killing form 
+	\[
+	 K [ X, Y ] = K^{ ai } X_ a Y_ i
+	\] then we have that 
+	\begin{align*}
+		\kappa ^{ ai } & = f ^{ ad }_ c f ^{ ic } _ d \\
+		&=  f ^{ aj } _ \alpha f ^{ i \alpha } _ j  \\ 
+		&= 0  
+	\end{align*} 
+	Thus, for all $ Y \in \mathcal{ J } $ we have that 
+	\[
+	 \kappa ( Y , X ) = 0 , \quad \forall X \in \lalg 
+	\] which implies that this killing form is degenerate. 
+\end{proof}
+\end{thm}
+
+\section{The Cartan Classification}
+in this section, we will classify all finite dimensional, 
+simple, complex $\lalg$. This is based on work done by Cartan in 1894. 
+When we were looking at the Lie algebra $\mathcal{ L } ( SU ( 2) ) $, 
+we chose the convenient basis $ \left\{  H, E_- , E_+ \right\} $ because 
+$ H $  was nice and diagonal. But, there's a deeper reason 
+why we chose this basis - it's part of a wider class of 
+bases which have really nice properties. 
+\begin{defn}{(Ad-diagonalisability)}
+	We say that a Lie algebra element $ X \in \lalg $ is 
+	ad-diagonalisable (AD) if the map 
+	\[
+	 \ad_ X : \lalg \to \lalg \text{ is diagonalisable }
+ \] In the case of $ \mathcal{ L } ( SU ( 2) ) $, this was 
+ our Cartan element $ H $. 
+\end{defn}
+ 
+We can turn the set of ad-diagonalisable elements into 
+a subalgebra of our Lie algebra. This is called the Cartan subalgebra. 
+
+\begin{defn}{(Cartan Subalgebra)}
+A Cartan subalgebra $ \subalg \in \lalg $ is a maximal abelian subalgebra 
+consisting of AD elements. Recall that what we mean 
+by abelian is that the vectors in the Lie algebra commute 
+under the Lie bracket. 
+This is defined as follows. 
+\begin{enumerate}
+	\item If $ H \in \subalg \implies H  $ is ad-diagonalisable by definition.  
+	\item $ H , H ' \in \subalg \implies [ H , H ' ] = 0$. 
+	\item If  $ X \in \lalg $ and $ [ X, H ] = 0 , \forall H \in \subalg$, 
+		then we necessarily have that  $ X \in \subalg$. 
+\end{enumerate}
+In fact, we have that all possible Cartan subalgebras of $ \lalg $ are 
+isomorphic and have the same dimension. 
+\[
+ r = \dim [ \subalg ] \in \mathbb{ N} \text{ defined as the rank of } \lalg 
+\] 	
+\end{defn}
+
+\begin{example}
+	Consider the Lie algebra $\lalg  = \mathcal{ L }_{ \mathbb{ C} } ( SU ( 2) )  = 
+	\text{span}_{ \mathbb{ C} } \left\{  H , E_ - , E _ +  \right\} $. 
+	We only have one diagonal element, where $ H  = \sigma _ 3 $  is AD. 
+	Specifically, \[
+		[ H , E_{ \pm } ] = \pm 2 E_{\pm}, [ H , H ] = 0 
+	\] Observe that however, $ E_{ \pm } $ are not diagonalisable. 
+	These are not AD. 
+\end{example}
+Let's consider another example. 
+\begin{example}
+	Suppose that $\subalg  = \text{span}_{ \mathbb{ C} } \left\{  H  \right\} $ 
+	is a choice of a Cartan subalgebra. 
+	Choose a basis $\left\{  H ^ i, i =  1, \dots r  \right\} $, 
+	such that $ [ H ^ i , H ^ j ] = 0 \forall i , j $. 
+	Consider  $ \mathcal{L}_{ \mathbb{ C} } ( SU ( N ) )$, the set 
+	of traceless $ n \times n $ matrices. 
+	Now, diagonal elements of $ \mathcal{ g } $ provide a choice 
+	of Cartan subalgebra! Take $ \alpha, \beta  = 1 , \dots N$. 
+	We can construct this basis by choosing 
+	 \[
+	 \left(  H ^ i  \right)_{ \alpha \beta }  = 
+	 \delta _{ \alpha i } \delta _{ \beta i }  - \delta _{ \alpha , i + 1 } \delta _{ \beta , 
+	 i + 1 }, \quad i  = 1 , \dots , N - 1
+ \] This shows that our rank $[\mathcal{ L }_{ \mathbb{ C} } ( SU ( N ) )  = N -1$. 
+ We have that our basis elements $ [ H ^ i , H ^ j ] = 0, \forall i , j  = 1 , \dots r $. 
+ By the property of the adjoint representation, we have that 
+ \[
+  \left(  \ad_{H ^ i } \circ \ad_{ H ^ j }  - \ad_{ H ^ j } \circ \ad_{ H ^ i }  \right) = 0  
+ \] This implies $ r $ linear maps $\ad_{ H ^ i } : \lalg \to \lalg $ are simultaneously 
+ diagonalisable. So $ \lalg $ is spanned by the simultaneous eigenvectors of $ \ad_{ H _ i }$.
+ \[
+	 \ad_{ H ^ i } ( E ^{ \alpha } ) = [ H ^ i , E ^ \alpha ] = \alpha ^ i E ^ \alpha , 
+	 \quad i = 1 , \dots,  r 
+ \] 
+\end{example}
+
+This allows us to define a basis 
+called the \textbf{Cartan Weyl} basis, which 
+is a basis constructed from the diagonal elements as 
+well as the step down and step up operators. 
+
+For example for $ \lalg  = \mathcal{ L } _ \mathbb{ C}  ( SU ( 2) ) $, 
+our Cartan-Weyl basis was the set $\left\{  H , E_ - , E _ +  \right\} $, 
+with the diagonalisable element being $ H $, with the step operators 
+being $ E _{ \pm } $. 
+
+We define something more general called a \textbf{Cartan Subalgebra}. 
+The Cartan subalgebra is a subalgebra $ \subalg \subset \lalg $ ,
+of dimension $ r = \text{Rank} [ \lalg ] $. 
+We construct a basis of $ \subalg $ as 
+\[
+	\left\{  H ^ i , i =1 \dots r  \right\} , \quad [ H ^ i , H ^ j ]  =0 \quad \forall 
+	i , j 
+\] In this case, we can try to diagonalise the adjoint
+action for each of these $ H ^ i $. This is possible, by the defining 
+property of representations.
+ $ \lalg $ is spanned by the simultaneous eigenvectors of the ad maps 
+ \[
+  \ad_{ H ^ i } : \lalg \to \lalg 
+ \] We can see that this is 
+ true for $ \mathcal{ L } ( SU ( 2) ) $.
+ Starting off with zero eigenvalues, the eigenvectors are just in the Cartan 
+ subalgebra themselves, in other words the set $\left\{ H ^ i , i = 1 , \dots ,r   \right\} $. 
+ This is because by construction, we have that 
+ \[
+	 \ad _{ H ^ i } ( H ^ j ) = [ H ^ i , H ^ j ] = 0 \quad \forall i , j 
+ \] Now, what about non-zero eigenvectors? 
+ Consider the indexed set $ \left\{  E ^ \alpha , \alpha \in \Phi  \right\} $. 
+ Because this is as eigenvector, we have that 
+ \[
+	 \ad_{ H ^  i } ( E ^{ \alpha } ) = [ H ^ i , E ^{ \alpha } ] = \alpha ^ i E ^ \alpha  
+ \] Since we're working in a complex basis, we must have that 
+ $ \alpha ^ i \in \mathbb{ C} $, which are not all zero (otherwise it 
+ would lie in the Cartan subalgebra). We call the objects $ \alpha $ as 
+ \textbf{ roots } of the Lie algebra. 
+
+ Now lets say a little bit more about the roots. 
+ For a general element of the Cartan subalgebra $ \subalg $, 
+ $ H \in \subalg$. As we have a basis of the Cartan subalgebra, 
+ we can write 
+ \[
+  H = e_ i H ^ i , \quad e _ i \in \mathbb{ C} 
+ \] By linearity, we have that the bracket of $ H $ with a step generator 
+ can be expanded, as follows. 
+ \[
+	 [ H , E ^ \alpha ] = \alpha ( H ) E ^{\alpha } , \quad \alpha ( H ) = e_ i \alpha ^ i \in 
+	 \mathbb{ C} 
+ \] This is because, upon expanding $ H $, we get that 
+ \begin{align*}
+	 [ H , E ^ \alpha ] &=   [ e_ i H ^ i, E ^ \alpha ]  \\
+			    &= e_ i [ H ^ i , E ^ \alpha ]  \\
+			    &=  e_i \alpha ^ i E ^ \alpha  \\
+			    &=  e _ i \alpha ^ i E^ \alpha  \quad 
+			    \text{ define } e_ i \alpha ^ i  = \alpha ( H ) \in \mathbb{ C}  \\ 
+ \end{align*}Thus, a more sophisticated way to think about roots
+ is to think of them as $ \alpha : \subalg \to \mathbb{ C}  $. 
+ Thus, they're elements of the dual vector space 
+ $ \alpha \in \subalg ^ * $, where we write $ \subalg ^ * $ as 
+  the dual space. Now we may have degeneracy in this case,
+  but we can prove that the roots are non-degenerate if 
+  $ \lalg $ is simple. However, we will not prove this in these
+  notes. 
+  This means that the set of roots $ \Phi$ consist of  $ d - r $ 
+  distinct vectors by non-degeneracy, which are distinct elements 
+  of $ \subalg ^ * $. This is for $ d  = \dim [ \lalg ] $, $ r = \dim [ \subalg ] $. 
+
+  \begin{defn}{(Cartan Weyl Basis)}
+  	We can write the basis of the Lie algebra in terms
+	of ad-diagonalisable elements and the step operators. 
+	\[
+	 \mathcal{ B } = \left\{  H ^ i , i = 1, \dots r   \right\} \cup 
+	 \left\{  E ^ \alpha , \alpha \in \Phi  \right\} 
+	\]  
+  \end{defn}
+ So far, we haven't really used the assumption that the Lie algebra is simple ( 
+ other than for the non-degeneracy condition). 
+Using Cartan's theorem, we remind ourselves 
+that $ \lalg $ being simple implies that the Killing form 
+\[
+	\kappa ( X, Y ) = \frac{1}{N } \tr [ \ad _ X \circ \ad_ Y ] 
+\] is non-degenerate. 
+With this, we can play around with the structure 
+of the Killing form in the Cartan-Weyl basis. 
+We'll start by proving two things.
+\begin{thm}
+	\begin{enumerate}
+		\item $ \forall H \in \subalg , \alpha \in \Phi $, we have 
+			that the Killing form vanishes for 
+			\[
+			 \kappa ( H , E ^ \alpha ) = 0 
+			\] 
+		\item $ \forall \alpha, \beta \in \Phi $, and $ \alpha + \beta \neq 0 $, 
+			we have that 
+			\[
+			 \kappa ( E ^ \alpha, E ^ \beta ) = 0 
+			\] 
+	\end{enumerate}
+\begin{proof}
+Throughout this proof, we'll use 
+Jacobi identity, the adjoint representation, and Killing form 
+invariance. 
+We'll prove the first statement. 
+\begin{enumerate}
+	\item Consider $ \alpha ( H ' ) \kappa ( H , E ^ \alpha )$. 
+		By linearity, we have that 
+		 \begin{align*}
+			 \alpha ( H ' ) \kappa ( H , E ^ \alpha ) &=  
+			 \kappa ( H ,  [ H ', E ^ \alpha ] )  \\
+								  &=  - \kappa ( [ H ' , H ] ,
+								  E^ \alpha ) \\
+								  &=  - \kappa ( 0 , E ^ \alpha )  \\
+								  &=  0  
+		\end{align*}
+		Now, $ \alpha ( H ' ) \neq 0 $ from $ H ' $, implies 
+		that 
+		 \[
+			 \kappa ( H , E ^{ \alpha } ) = 0 
+		 \] This proves the first statement. 
+	\item Again, consider $ H ' \in \subalg $. Now, consider 
+		\begin{align*}
+			( \alpha ( H ') + \beta ( H ' ) ) \kappa ( E ^ \alpha , 
+			E ^ \beta )  &=  \kappa ( [ H ' , E ^ \alpha ] , E ^ \beta )  
+			+ \kappa ( E ^ \alpha , [ H ' , E ^ \beta ] ) \\
+			 &=  0  \text{ by the invariance property} 
+		\end{align*}
+		Now, provided we assume that $ \forall \alpha, \beta \in \Phi$, 
+		with $ \alpha + \beta \neq 0 $ then by maximality that 
+		$ \alpha ( H ' ) + \beta ( H ' ) \neq 0 $  for some $ H ' $. 
+		This in turn then means that the other 
+		factor must be zero and hence we have that 
+		\[
+		 \kappa ( E ^ \alpha , E ^ \beta ) = 0 
+		\] 
+	
+\end{enumerate}
+\end{proof}
+\end{thm}
+
+\begin{thm}{(Non-degenracy of the Killing form result)} 
+	We have that for all $ H \in \subalg $, there exists 
+	a $ H ' $ such that $ \kappa ( H , H ' ) \neq 0 $. 
+\begin{proof}
+	For some $ H \in \subalg $, assume the converse that 
+	$ \kappa ( H , H ' ) = 0 , \quad \forall H ' \in \subalg  $. 
+	From i), we have that $ \kappa ( H , E ^ \alpha) = 0 , \quad \forall \alpha \in 
+	\Phi $. This means that $ \kappa ( H , X )  = 0 $, for all 
+	$ X \in \lalg $, which implies that $ \kappa $ is degenerate. 
+	Contradiction. 
+\end{proof}
+The significance of this theorem is that 
+we've shown that $ \kappa $ is not only non-degenerate on the whole space, 
+but is also a non-degenerate inner product on $ \subalg $. 
+In particular, if we write the inner product for any two 
+elements $ H , H ' $ as 
+\[
+ \kappa ( H , H' ) = \kappa ^{ ij } e _ i e' _ j, \quad H = e_ i H ^ i, H ' = e ' _ i H ^ i  
+\]  The condition of non-degeneracy implies that 
+$ \kappa ^{ ij }  = \kappa ( H ^ i , H ^j ) $ is an invertible $ n \times n $ 
+matrix. This means that we can find an inverse. 
+\[
+	\exists ( \kappa ^{ -1 } )_{ ij } \implies ( \kappa ^{ - 1} ) _{ ij } \kappa ^{ jk} 
+	 = \delta ^ k _ i 
+\] Thus, like in general relativity, it's natural to think 
+about lowering indices and transferring things over to the dual space. 
+\end{thm}
+Now, $ \kappa ^{ -1 }  $ defines a non-degenerate inner product 
+on the dual space $ \subalg ^ * $. Suppose we have a root $ \alpha $ so 
+that 
+\[
+ [ H ^ i , E ^ \alpha ] = \alpha ^ i E ^ \alpha, \quad [ H ^ i, E ^ \beta ] = \beta ^i E ^ \beta 
+\] We can now define the inner product $ ( \alpha, \beta ) $, as 
+\[
+	( \alpha, \beta ) = ( \kappa ^{ - 1} ) _{ ij} \alpha ^ i \beta ^ j 
+\] 
+\begin{thm}{(A result on the roots)} 
+	If we have $ \alpha \in \Phi $, then necessarily we have that
+	$ - \alpha \in \Phi $ , and that $ \kappa ( E ^ \alpha , E ^ - \alpha ) \neq 0$. 
+
+\begin{proof}
+	From i), we have that $ \kappa ( E ^ \alpha , H )   = 0 , \forall H \in \subalg $. 
+	From ii), we have that $ \kappa ( E ^ \alpha , E ^ \beta )  = 0, \forall 
+	\beta \in \Phi $ with $ \alpha \neq - \beta $. 
+	Hence, unless $ - \alpha \in \Phi $, and $ \kappa ( E ^ \alpha , E ^{ - \alpha }  ) \neq 0 $, 
+	we have that  $ \kappa ( E ^ \alpha , X ) = 0 , \quad \forall X \in \lalg $. This
+	implies that $ \kappa $ is degenerate. 
+\end{proof}
+\end{thm}
+
+\subsection{Algebra in the Cartan Weyl basis} 
+Let's summarise what we have so far. 
+\begin{align*}
+	[ H ^ i , H ^ j ] &=  0 , \quad \forall i , j   1, , \dots, r  \\ 
+	[ H ^ i , E ^ \alpha ] & = \alpha ^ i E ^ \alpha \forall \alpha \in \Phi 
+\end{align*}
+It remains to evaluate $ [ E ^ \alpha , E ^ \beta ] , \forall \alpha, \beta \in \Phi$. 
+Using the Jacobi identity, 
+ \[
+ [ H ^ i [ E ^ \alpha, E ^ \beta ] ] =  - [ E ^ \alpha , [ E ^ \beta , H ^ i ]] - [ E ^ \beta , 
+ [ H ^ i , E ^ \alpha ] ]  = ( \alpha ^ i + \beta ^ i ) [ E ^ \alpha , E ^ \beta ] 
+\] 
+This means that we get one extra bracket to our set of relations. 
+\[
+ [ E ^ \alpha , E ^ \beta ] = N_{ \alpha, \beta  } E ^{ \alpha + \beta }, \text{ if } 
+ $ \alpha + \beta $ \in \Phi 
+\] or is $ 0 $ otherwise.
 \pagebreak 

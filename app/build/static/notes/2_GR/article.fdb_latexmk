@@ -1,10 +1,10 @@
 # Fdb version 3
-["biber article"] 1573514170 "article.bcf" "article.bbl" "article" 1573514960
-  "article.bcf" 1573514959 90028 cbd81645b3fad370fbf0b8e4b1821886 ""
+["biber article"] 1573514170 "article.bcf" "article.bbl" "article" 1573822506
+  "article.bcf" 1573822505 90028 cbd81645b3fad370fbf0b8e4b1821886 ""
   (generated)
   "article.blg"
   "article.bbl"
-["pdflatex"] 1573514956 "article.tex" "article.pdf" "article" 1573514960
+["pdflatex"] 1573822502 "article.tex" "article.pdf" "article" 1573822506
   "/usr/local/texlive/2018/texmf-dist/fonts/enc/dvips/cm-super/cm-super-t1.enc" 1480098666 2971 def0b6c1f0b107b3b936def894055589 ""
   "/usr/local/texlive/2018/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc" 1480098666 2900 1537cc8184ad1792082cd229ecc269f4 ""
   "/usr/local/texlive/2018/texmf-dist/fonts/map/fontname/texfonts.map" 1511824771 3332 103109f5612ad95229751940c61aada0 ""
@@ -241,17 +241,17 @@
   "/usr/local/texlive/2018/texmf.cnf" 1523934483 577 0b39adfd7c93507ff20c9c14c2f1a33f ""
   "_the_metric.tex" 1573072056 9732 d1e4f5fa05029d3a280591dac008c692 ""
   "a_note_about_dual_spaces.tex" 1573072056 6036 4033b6bb5afb5bfd2a5062dd3e3e9067 ""
-  "article.aux" 1573514959 11596 2951a66d123a148f8220d00c1b2501e2 ""
+  "article.aux" 1573822505 11753 13eee21d895c811415b9fd8fda4a8570 ""
   "article.bbl" 1573514171 0 d41d8cd98f00b204e9800998ecf8427e "biber article"
-  "article.out" 1573514959 4623 424f1ba8bb98ec10a880f54f64ebba70 ""
-  "article.run.xml" 1573514959 2245 aac36eed3c889ef1f9bd29739b52ea87 ""
+  "article.out" 1573822505 4694 5a4605b8460293876297493a2d2815c1 ""
+  "article.run.xml" 1573822505 2245 aac36eed3c889ef1f9bd29739b52ea87 ""
   "article.tex" 1573508798 3694 d05b637fab5aeada645b357317a6aec6 ""
-  "article.toc" 1573514959 7944 2eeb589333344b57e11960227ce055af ""
+  "article.toc" 1573822505 8066 146a56731fddded7e4169bcc778b98de ""
   "connections_and_curvature.tex" 1573072056 8628 ceda07ff8e9e1b8ca989c8a089deb956 ""
   "derived_tensors.tex" 1573510290 6674 f31e2a4cfc96dffdbf835e8285435296 ""
   "differential_forms.tex" 1573072056 3474 55297d859c7851c95540b93dbeb68e8a ""
   "differentiating_vector_fields_with_respect_to_other_vector_fields.tex" 1573072056 6928 3e6d9253530426764167221ddc4d8b57 ""
-  "einstein_equations.tex" 1573514954 7291 65eb2e9f816730f511222be9b5a07739 ""
+  "einstein_equations.tex" 1573822501 19549 35ff1d0090e4eb92815813d4abb2f3fb ""
   "example_sheet_1.tex" 1573155940 117 c7ef59eee4e8bb9778abf83231e429c9 ""
   "example_sheet_2.tex" 1573507386 1831 81194ad0a43263ae49e84b8d1fd8a8e0 ""
   "exploring_different_lagrangians.tex" 1573072056 1638 8bc76423dcf9cb444cd2d9b24cd7c7f6 ""
@@ -284,10 +284,10 @@
   "treating_tangent_vectors_as_derivatives_of_curves_on_the_manifold.tex" 1573072056 1682 7fee596fdc9c9a6fad64bcffefa57261 ""
   "vector_fields.tex" 1573072056 1931 d87273c710272a810a5aceb52fd26145 ""
   (generated)
-  "article.bcf"
-  "article.log"
-  "article.out"
   "article.run.xml"
+  "article.bcf"
   "article.aux"
-  "article.pdf"
+  "article.out"
   "article.toc"
+  "article.log"
+  "article.pdf"

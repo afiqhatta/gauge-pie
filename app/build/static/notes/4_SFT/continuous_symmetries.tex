@@ -162,10 +162,186 @@ To order $ g _ 0 $, we also get new contributions that look like
  \sim ..
 \] 
 \subsubsection{Epsilon expansion} 
+
 When we go to the epsilon expansion 
 \[
 	\frac{ d \mu ^ 2 }{ ds } = 2 \mu ^ 2 + \frac{N + 2 }{ 2 \pi ^ 2 } \frac{ \Lambda ^ 4 }{ 
 	( \Lambda ^ 2 + \mu ^ 2 ) } \tilde{ g } ^ 2, \quad 
 	\frac{ \tilde{ g }  }{ ds }  = \epsilon g  - \frac{ N +  8 }{  2 \pi ^ 2 }  \frac{ \Lambda ^ 4 }{ 
 	\Lambda ^ 2+ \mu ^ 2 } \tilde{ g } ^ 2, \quad \tilde{ g }  = \Lambda ^{ - \epsilon }  
-\] This changes our Wilson Fisher fixed point. 
+\] This changes our Wilson Fisher fixed point. We see that 
+we have different factors of $ N $ here. 
+As $ N  $ grows, the effective contribution in the loops grows. 
+From here, we can calculate the critical exponents gained from 
+these equations. 
+\begin{align*}
+	\alpha &=  \frac{4 - N }{ 2 ( N + 8 ) } \epsilon  \\
+	\beta &=  \frac{1}{2 } - \frac{ 3 }{ 2 ( N + 8 ) } \epsilon  \\
+	\gamma &=  1 + \frac{ N + 2 }{ 2 ( N + 8  } \epsilon \\
+	\delta &=  3  + \epsilon  
+\end{align*}
+These are interesting, if we look at $ \beta $ as 
+$ N \to \infty $ we loose dependence on $\epsilon$. 
+
+\subsection{Goldstone Bosons in $ d = 2 $} 
+Before, when we did symmetry breaking, we got an associated Goldstone boson. 
+When we go into our ordered phase, a direction was picked out in the $ O ( n )  $ vector. 
+This gives rise to a submanifold in our vacuum (an $ n -1 $ dimensional sphere). 
+These bosons are massless - costs very little energy. 
+Hence, we expect them to be relevant as, and so appear at all distance scales. 
+They show up everywhere. 
+At $ d =2 $ something special happens. 
+In our previous derivation, we didn't have much talk of dimension itself. 
+However, it turns out that at $ d = 2$, independent of the symmetry breaking patterns, 
+the underlying physics seems to care about the number of dimensions. 
+For the Ising model, we had $ \mathbb{ Z} _ 2 $ discrete symmetries, not continuous. 
+But, we showed that at $ d = 1 $, due to domain walls, we had no ordered phased 
+since they dominated the physics (so $ d = 1 $ was the critical dimension). 
+However, in $ d = 2 $, the vacua are not contnuously connected, so 
+we had to use a domain wall. Domain walls cost us free energy. Fluctuations 
+along the manifold in n - 1 mexican hat might break the ordered phase. 
+
+In the $ X Y $ model, when we start, our expectation value of 
+Goldstone modes $ \left< \mathcal{ O } ( \vec{x} )  \right>  = 0$. 
+We can calculate our fluctuation specifically about the vacuum at $ \theta = 0 $ 
+as 
+\[
+	\left< \left[  \mathcal{ ( \vec{x} ) }  - \mathcal{ O } ( 0 )  \right]  ^ 2  \right> 
+	= 2 \left< \mathcal{ O } ^ 2 ( \vec{x} )  \right> - 2 \left< \mathcal{ O } ( \vec{x} ) \mathcal{ O } ( 0 )  \right>
+\] 
+We can calculate this two point function explicitly as 
+\[
+	\left< \mathcal{ O } ( \vec{x} ) \mathcal{ O } ( 0 )  \right> 
+	= \frac{1}{\gamma M _ 0 ^ 2 } \int _ 0 ^{ \Lambda } \frac{d ^ d k }{ ( 2 \pi ) ^ d } \frac{ e ^{ - i \vec{k} \cdot  \vec{x}}}{k ^ 2}
+	\sim \begin{cases}
+		\Lambda ^{ d - 2 } - r ^{ 2 - d } & d > 2 \\
+		\log ( \Lambda r ) & d =2 \\
+		r - \Kambda ^{ - 1 } & d = 1 
+	\end{cases}
+\] Something weird is going on. If we look at the fluctuations, we see that 
+as soon as we hit $ d = 2 $ the fluctuations start to become 
+arbitrarily large at large distances! 
+This is the manifestation of something known as the Mermin-Wagner theorem, 
+which states that a continuous symmetry cannot be 
+spontaneously broken in $ d = 2  $. These Goldstone modes 
+start to contribute some fishy business - they 
+give arbitrarily large fluctuations. 
+
+\subsubsection{$ \sigma $ models} 
+In the 60's and 70's people were trying to understand pions in the context of $QCD$. 
+People started noticing that these are very similar 
+to Goldstone bosons - they're now called pseudo-Goldstone bosons. 
+In the ordered phase, we have that 
+\[
+ \left \| \phi \|  \right> \neq 0, \implies \text{Vacuum Manifold } \sim S^{ N - 1} 
+\] We have another type 
+of mode, which are called longitudinal modes. These 
+are gapped since the second derivative is non-zero. 
+
+We have that $ \phi \cdot  \phi  = M_0 ^ 2 $. We can 
+rescale $ \phi $ such that $ \vec{n} \cdot  \vec{n} = 1 $. 
+In terms of the free energy, 
+we have that 
+\[
+	F [ n ] = \int d ^ d x \frac{1}{2 e ^ 2 } ( \nabla n ) \cdot  ( \nabla n )  , \quad e ^ 2 &=  \frac{1}{\gamma M_0 ^ 2 } \\
+\]  There's no potential term 
+since in the vacua its set to zero since 
+$V ( \phi ) = \frac{\lambda }{ 2 } ( \phi \cdot  \phi - M_0 ^ 2 ) $. 
+What does the path integral look like? 
+The path integral is now 
+\[
+	\mathcal{ Z } = \int \mathcal{ D } \vec{n} \delta ( \vec{n} \cdot  \vec{n} -1 ) \exp \left( 
+	- \frac{1}{2 e ^ 2 } \int d ^ d x \, ( \nabla \vec{n} ) \cdot  ( \nabla \vec{n} ) \right) 
+\] From dimensional analysis, we have that $ \left[  e ^ 2  \right]   = 2 - d $. 
+Now, if $ e $ is large, the exponential term is surpressed, 
+so we have less fluctuations. 
+We write 
+\[
+	\vec{n} ( \vec{x} ) = \left(  \pi ( \vec{x} ) , \sigma ( \vec{x} )  \right) 
+\] where we have that $ \phi  ( \vec{x} )  $ is $ n - 1  $ dimensional. 
+Our constraint gives us that 
+\[
+	\sigma ^ 2 ( \vec{x} )  = 1 - \pi ( \vec{x} ) \cdot \pi ( \vec{x} ) 
+\] Plugging this expression in, we get that 
+the free energy as a function of $ \pi $ and $ \sigma $ takes the 
+form 
+\[
+	F \left[  \phi ( \vec{x} )  \right]  = \int d ^ d x \, 
+	\frac{1}{2 e ^ 2 } \left[  ( \nabla \vec{n} ) ^ 2 + ( \nabla \sigma ) ^ 2  \right] 
+\] Substituting our constraint, give us 
+\[
+ \dots = \int d ^ d x \, \frac{1}{2 e ^ 2 } \left[  
+ ( \nabla \pi ) ^ 2 + \frac{( \phi \cdot  \nabla \pi) ^ 2 }{ 1- \pi \cdot  \pi }\right] 
+\] When we expand, each interaction comes with an $ e $ term 
+which tells us that $ e  $ actually acts like a coupling constant. 
+
+\subsubsection{Background Field Method} 
+We want to understand the fate of these Goldstone bosons. 
+The thing to do is to perform standard RG calculations.
+We could expand the second term, but this is hard. 
+Polyakov however, devised a clever method to do this. 
+What we do is set 
+\[
+	n ^ a ( \vec{x} ) \to \tilde{ n } ^ a ( \vec{x} ) \text{long wavelength}  ,\quad \tilde{ \vec{n}   } \cdot \tilde{ \vec{n}} = 1  
+\] We introduce the "frame fields" 
+which is a basis of $ N - 1$ unit vectors which we call 
+\[
+	e ^ a_ \alpha ( \vec{x} ) , \quad a  = 1, \dots N, \alpha = 1, \dots N - 1
+\] We also impose the constraint that these are orthogonal to 
+$ \tilde{ \vec{n} }  ^ a  $, such that $ \tilde{ \vec{n} } ^ a e ^ a _ \alpha = 0 , \forall a $. 
+Also, we have that $ e ^ a _ \alpha e ^ a _{ \beta }  = \delta _{ \alpha \beta } $. 
+
+Now we can introduce short wavelength modes 
+which we call $ \chi_{ \alpha } ( x ) $, 
+and hence write 
+\[
+	n ^ a ( \vec{x} )  = \tilde{ n } ^ a ( 1 - \chi ^ 2( x )  )^{ \frac{1}{2 } }  + 
+	\int _{ n = 1 } ^{ N - 1 } \chi _{ \alpha } ( x) e ^ a _ \alpha ( x)  \implies n ^ 2 =1
+\] 
+
+\subsubsection{Path Integral} 
+We have that 
+\[
+	\mathcal{ Z } = \int \mathcal{ D } \tilde{ n } \delta ( \tilde{ n } ^ 2-  1 ) \exp 
+	\left(   - \frac{1}{2 e ^ 2 } \int d ^ d x \, ( \nabla \tilde{ n } ) ^ 2   \right) 
+	\int \mathcal{ D } \chi \exp \left(  -\frac{1}{ 2 e ^ 2 } \int d ^ d x \, ( \nabla \chi ) ^ 2  \right)  
+	e ^{  - F _ I [ \tilde{ n } , \chi ]  }
+\] 
+Our interaction term is given by 
+\[
+ F _ I \left[  \tilde{ n } ^ a , \chi _{ \alpha }   \right]  
+  = \frac{1}{ 2 e  ^2 } \int d ^ d x \, \left[  
+  - \chi ^ 2 ( \nabla \tilde{ n } ) ^ 2 + \chi _ \alpha \chi _ \beta 
+  \nabla e ^ a _ \alpha \nabla e ^ a _ \beta + 2 \nabla \tilde{ n } ^ a \nabla ( \chi _ \alpha e ^ a _ \alpha )    \right]  
+\]  We want to focus on $ \left< e ^{ - F _ I }  \right> \simeq 1 - \left< F _ I  \right> + \dots $. 
+Taking the average, our first term is 
+\[
+ \left< F _ I  \right>  = \frac{1}{2 e ^ 2 } \int d ^ d  x \, 
+ ( - \delta _{ \alpha \beta } ( \nabla \tilde{ n } ^ a ) ^ 2 + \nabla e ^ a _ \alpha \nabla e ^ \alpha _ \beta ) \left< \chi _ \alpha
+ \chi _ \beta \right> 
+\] We can evaluate the two point function in the integral 
+\[
+\left< \chi _ \alpha \chi _ \beta   \right>  = e^ 2 \delta _{ \alpha \beta } I _ d  
+\] where 
+\[
+	I _ d = \frac{ \Omega_{ d - 1} }{ ( 2 \pi ) ^ d } \Lambda ^{ d - 2 } \begin{cases}
+		\zeta - 1  & d = 1 \\ \log ( \zeta ) & d =  2\\ 1 - 1\zeta ^{2 - d  } & d \geq  3
+	\end{cases} 
+\] Using the relation 
+\[
+\tilde{ n } ^ a \tilde{ n } ^ b + e ^ a _ \alpha e ^ b _ \alpha  = \delta ^{ ab }    \implies 
+\nabla e ^ a _ \alpha \nabla e ^ a _ \alpha = \nabla \tilde{ n } ^ a \nabla \tilde{ n } ^ a + \dots   
+\] 
+Finally we have that 
+\[
+	\left< F _ I  \right>  =( 2 - N ) I _ d \int d ^ d x  \frac{1}{2 } ( \nabla \tilde{ n } ) ^ 2  
+\] This gives us a correction 
+\[
+	\frac{1}{( e ' ) ^ 2 } = \frac{1}{e _ 0 ^ 2 }+ ( 2 - N ) I _{ d }
+\] when $ N = 2$ no change. 
+We hence have that 
+\[
+	\frac{1}{e ^ 2 ( \zeta ) } = \zeta ^{ d - 2} \left[  \frac{1}{e _ 0 ^ 2 } + ( 2- N ) I _ d  \right] 
+\] As we go to IR, interacting thepry of Goldstones become more strongly coupled. 
+This is why we don't get Goldstones in $ d = 2$. if we did, we would get
+arbitrarily large fluctuations which destroy ordered. states. 

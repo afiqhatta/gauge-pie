@@ -1,10 +1,10 @@
 # Fdb version 3
-["biber article"] 1573554558 "article.bcf" "article.bbl" "article" 1573606649
-  "article.bcf" 1573606649 90028 cbd81645b3fad370fbf0b8e4b1821886 ""
+["biber article"] 1573554558 "article.bcf" "article.bbl" "article" 1573904700
+  "article.bcf" 1573904677 90028 cbd81645b3fad370fbf0b8e4b1821886 ""
   (generated)
   "article.blg"
   "article.bbl"
-["pdflatex"] 1573606644 "article.tex" "article.pdf" "article" 1573606649
+["pdflatex"] 1573904700 "article.tex" "article.pdf" "article" 1573904700
   "/usr/local/texlive/2018/texmf-dist/fonts/enc/dvips/cm-super/cm-super-t1.enc" 1480098666 2971 def0b6c1f0b107b3b936def894055589 ""
   "/usr/local/texlive/2018/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc" 1480098666 2900 1537cc8184ad1792082cd229ecc269f4 ""
   "/usr/local/texlive/2018/texmf-dist/fonts/map/fontname/texfonts.map" 1511824771 3332 103109f5612ad95229751940c61aada0 ""
@@ -249,12 +249,12 @@
   "_representations_of_su(2)_in_quantum_mechanics.tex" 1573023597 58 3f4676332680e5572e2d228fad288a91 ""
   "a_canonical_representation_of_lie_algebras.tex" 1573023597 511 ddbd40f6a884a1cc4bbfa362bbf01c6c ""
   "a_canonical_representation_of_lie_groups_with_lie_algebras.tex" 1573023597 1754 48ec536e7c26c63d3c92b2b047516a83 ""
-  "article.aux" 1573606649 13684 f0b05bbdbeb0441f303f68a7451ae782 ""
+  "article.aux" 1573904677 14305 c246dee0851b87404988097ba9e31ac4 ""
   "article.bbl" 1573554559 0 d41d8cd98f00b204e9800998ecf8427e "biber article"
-  "article.out" 1573606649 5877 e154894ab06829c9255c36fa2eeccb64 ""
-  "article.run.xml" 1573606649 2245 aac36eed3c889ef1f9bd29739b52ea87 ""
-  "article.tex" 1573590219 4441 c6f0ee0803d2a7361b1c8e2a50a03cfb ""
-  "article.toc" 1573606649 9863 a4ae9581fff95a5220146e5bfdfe0b49 ""
+  "article.out" 1573904677 6149 4df6b22656223b8273464aba3720b2f7 ""
+  "article.run.xml" 1573904677 2245 aac36eed3c889ef1f9bd29739b52ea87 ""
+  "article.tex" 1573731380 4466 035cfe1f582139118f30ca37e80022d5 ""
+  "article.toc" 1573904677 10344 fb7defb44133f4647b246be95fed6732 ""
   "basic_representation_theory.tex" 1573127407 1 68b329da9893e34099c7d8ad5cb9c940 ""
   "classifying_lie_algebras.tex" 1573498504 1 68b329da9893e34099c7d8ad5cb9c940 ""
   "classifying_manifolds.tex" 1573023597 1155 03060f6d35ba6e7bb66f666d6d6a7a8a ""
@@ -264,12 +264,12 @@
   "construction_of_lie_algebras_from_lie_groups.tex" 1573023597 2326 bf1c50e918b8279e6dcb1b35c795dc3a ""
   "embedding_manifolds.tex" 1573023597 1946 1a01337aeb22c27fddaefb930154681f ""
   "example_sheet_1.tex" 1573023597 27 204d1e05ce61a343a9a1da2848944f5b ""
-  "example_sheet_2.tex" 1573606639 638 a3457115b6a5462a9adedc6690fb9a23 ""
+  "example_sheet_2.tex" 1573754717 930 f80fa55039d907f351b70601380c0d1a ""
   "examples_of_derived_lie_algebras.tex" 1573023597 9007 f0b9e509ca26b979bc1634b8baef30b5 ""
   "functions_on_manifolds.tex" 1573023597 996 2823891dbe2cbaa49c983ac63ff38ffc ""
   "groups_to_represent_symmetries.tex" 1573023597 1737 79e92b6e2288e4dbee92e8e5d066f5ab ""
   "invariant_subspaces_and_reducibility.tex" 1573023597 2563 9da4ead6a346d111abea15dd5aebaa01 ""
-  "killing_forms.tex" 1573599034 4431 d9f9fd671afc5769be4e250a400afa11 ""
+  "killing_forms.tex" 1573904700 19355 006ec35c5d459cff18c16ed9b6c11c3a ""
   "lie_algebras.tex" 1573023597 4789 1c2825b3ac616ef1f3741e2f5c3c1aa1 ""
   "lie_groups.tex" 1573023597 22 5beb50172e430cd988852114fc6f0583 ""
   "manifolds.tex" 1573023597 1426 d250e24cdb1a24869ac38d8e05dee09d ""
@@ -299,8 +299,8 @@
   (generated)
   "article.toc"
   "article.out"
+  "article.run.xml"
   "article.aux"
   "article.bcf"
-  "article.pdf"
   "article.log"
-  "article.run.xml"
+  "article.pdf"
