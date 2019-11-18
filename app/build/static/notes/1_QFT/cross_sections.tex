@@ -1,9 +1,21 @@
-\subsection{Cross sections and decay rates} 
+\section{Cross sections and decay rates} 
+In this section, we'll look at 
+calculating decay rates (the probability of particles 
+undertaking a certain type of scattering due to the 
+interaction potential). 
 
 \subsubsection{Kinematics} 
-Let's use handy variables called Mandelstam variables. 
+Let's first consider the case of 2 particles 
+scattering into two particles. For example,
+this could be a nucleon anti-nucleon pair scattering 
+into two mesons $ ( \overline{ \psi } \psi \to \phi \phi $. 
 
-Consider $ 2 \to 2 $ scattering. 
+To analyse this problem from a kinematic perspective, 
+we analyse incoming and outgoing momenta. 
+Suppose that $ p_1 ^ \mu $ and $ p_2 ^ \mu $ 
+represent the 4 momenta of the two incoming 
+particles, and that $ q_1 ^ \mu $ and $ q_2 ^ \mu  $
+represent their outgoing momenta. 
 Due to conservation of momentum, we have that 
 \[
  p_1 ^ \mu + p_2 ^ \mu = q_ 1 ^ \mu + q_2 ^ \mu 
@@ -13,10 +25,25 @@ Due to conservation of momentum, we have that
 	t & : = ( p_1 - q_1 ) ^ 2 \\
 	u & : = ( p_1 - q_2 ) ^ 2 
 \end{align*} 
-Exercise: show that 
+The neat thing about these variables
+is that, when we add them up, we get the sum of 
+the squares of the rest masses of our constituent 
+particles.
+\begin{align*}
+	s + t + u &=  3 p_1 ^ 2 + p_2 ^ 2 + q_1 ^ 2 + q_2 ^ 2 
+	+ 2 p_1 \cdot  p_2  - 2 p_1 \cdot  q_1 - 2 p_1 \cdot  q_2 \\
+		  &=  3 p_1 ^2 + p_2 ^ 2 + q_1 ^ 2 + q_2 ^ 2 + 2 p_1 \cdot  p_2 - 2 p_1 \cdot  ( p_1 + p_2 )  \\
+		  &=  3 p_1 ^ 2 + p_2 ^ 2 + q_1 ^ 2 + q_2 ^ 2 - 2 p_1 ^ 2  \\
+		  &=  p_1 ^ 2 + p_2 ^ 2 + q_1 ^ 2 + q_2 ^ 2
+\end{align*}
+However, due to the relativistic dispersion relation, 
+we have that $p ^  2 = m ^ 2 $, 
+so we have the result that 
 \[
 	s + t + u = m_1 ^ 2 + m_2 ^ 2 + ( m_1' )  ^ 2 + ( m_2' )  ^ 2
-\] (Insert diagram of scattering here) 
+\] We can write out scattering amplitude 
+for $ \psi \overline{ \psi } \to \psi \overline{ \psi } $ scattering 
+we had earlier in terms of the Mandelstam variables. 
 \begin{align*}
 	i \mathcal{ M } &=  ( - i g ) ^ 2 \left\{  \frac{1}{ 
 	( p_1 - q_1 ) ^2 - m ^ 2 } + \frac{1}{ ( p_1 - q_2) ^ 2 - m^ 2 } \right\}  \\
@@ -24,38 +51,66 @@ Exercise: show that
 \end{align*}
 
 \subsubsection{Decay rates} 
-Our probability of scattering 
-is expressed in terms of 
+Recall that in our earlier section, 
+we expressed the probability amplitude of scattering 
+as a product of a Dirac delta function which imposed 
+the conservation of momentum, and the factor 
+$ \mathcal{ M } $ which we called the amplitude
 \[
 	\bra{ \phi } S- 1 \ket{ i } = i \mathcal{ M } ( 2 \pi ) ^ 4 
-	\delta ^ 4 ( \sum_ i p_ i - \sum_i q_i ) 
-\] Our initial and final states 
-are in terms of definite momenta. 
+	\delta ^ 4 ( p_ i - \sum_i q_i ) 
+\] \textbf{Note} that $ p_i $ here is not an 
+index, but a label for the total momentum 
+of particles in the initial state!
+
+Just to refresh our memory, we 
+expressed momentum conservation in terms of 
+a delta function which summed initial and final states in 
+terms of of definite momenta. Now, we can 
+ask ourselves, how do we convert this into a probability 
+value that we can measure in experiment? 
+Well, we take the modulus of the amplitude, 
+and divide by $ \bra{f}\ket{f} \bra{i}\ket{i } $ since
+these initial states necessarily already normalised. 
 Our probability is given by 
 \[
 	P = \frac{ \| \bra { f} ( S -  1 ) \ket { i } \| ^ 2 }{
-	\bra { f} \ket { f} \bra{ i } \ket{ i } }
-\] The language of probability in this space is 
-given by 
+	\bra { f}\ket { f} \bra{ i }\ket{ i } }
+\]
+From this, we then define our differential cross section, 
+which roughly is the incremental change in area we 
+get when scattering particles through some interaction 
+potential (see Peskin and Schroeder for a proof of 
+this result). 
 \[
-	d \sigma = \frac{ ( 2 \pi ) ^ 4 \delta ^ 4 ( p_1 + p_2 - \sum_ i q _ i ) | \mathcal{M } | ^ 2 }{
+	d \sigma = \frac{ ( 2 \pi ) ^ 4 \delta ^ 4 \left( p_1 + p_2 - \sum_ i q _ i \right) | \mathcal{M } | ^ 2 }{
 	\mathcal{ F }}
 \] Here, $ \mathcal{ F } $ is our flux factor with 
 \[
 	\mathcal{ F } = 4 \sqrt{ ( p_1 \cdot  p_2 ) ^ 2 - m_1^ 2 m_2 ^ 2} 
 \] To find our total cross section from $ i \to f $, 
 we integrate over our final state momentum in the usual 
-Lorentz invariant way. 
+Lorentz invariant way, that is, over 
+integrals in momentum space with the measure $ \int \frac{d ^ 3 p }{ ( 2 \pi ) ^ 3  2 E_{ p}}$. 
+Thus, integrating our differential cross 
+section over each momentum variable gives us 
  \[
  \sigma = \int \frac{1}{ \mathcal{ F } } d p_{ f } | \mathcal{ M } | ^ 2 
 \] Our measure is given by 
 \[
 	\int d p _{ f } = ( 2 \pi ) ^ 4 \int \left( 
-	\prod_{ r = 1 } ^ n \frac{ d^ 3 q }{ ( 2 \pi ) ^ 3 2 E_{ r } }\right) 
-	\delta ^ 4 ( \sum_ i p _ i - \sum_ i q_i ) 
+	\prod_{ r = 1 } ^ n \frac{ d^ 3 q_r }{ ( 2 \pi ) ^ 3 2 E_{ q _r } }\right) 
+	\delta ^ 4 \left( p _ i - \sum_ i q_i \right) 
 \]
-\subsubsection{$ 2 \to 2 $ scattering} 
-We write our mandelstam variable 
+Hence, in the case of $ 2 \to 2 $  scattering for example, 
+we set here that $ n = 2 $, so we only have two integrals. 
+\subsubsection{$ 2 \to 2 $ scattering}
+We will now present an instructive 
+example to illustrate calculating 
+decay rates. Our aim for this section will be to 
+calculate the change in the cross section with respect to 
+the Mandelstam variable $ t $. 
+We write out this variable as 
 \[
 	t =  ( p_1 - q_1) ^ 2 = m_1 ^ 2 + m_2 ^ 2 - 2 E_{ p _ 1 } E _{ q _ 1 } + 2 
 	\vec{p} _ 1 \cdot  \vec{q} _ 1 
@@ -68,7 +123,10 @@ the frame where our total momenum is $ 0 $.
 Our second Mandelstam variable is 
 $ s= ( p_1 + p_2 ) ^ 2 $, which we can work out to be the centre 
 of mass energy. This quantity is a constant of the scattering. 
-We write 
+In the first section, we showed that our Lorentz invariant measure 
+could be written in terms of Lorentz invariant delta functions. 
+For our purposes, we will return to that formalism for $ q_2  $ 
+to aid computations. We set 
 \[
 	\frac{ d ^ 3 q_2 }{ 2 E _{ q_ 2 } } = d ^ 4 q _ 2 \delta ( q_2 ^ 2 - ( m_2 ') ^ 2 ) \theta ( q_2 ^ 0 ) 
 \] where we've defined $ \theta $ as the Heaviside step function. 

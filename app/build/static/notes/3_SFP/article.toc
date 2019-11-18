@@ -123,7 +123,7 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {section}{\numberline {8}The Cartan Classification}{57}{section.8}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {8.1}Algebra in the Cartan Weyl basis}{60}{subsection.8.1}
+\contentsline {subsection}{\numberline {8.1}Algebra in the Cartan Weyl basis}{61}{subsection.8.1}
 \defcounter {refsection}{0}\relax 
 \contentsline {section}{\numberline {9}Example sheet 1}{62}{section.9}
 \defcounter {refsection}{0}\relax 

@@ -1,1 +1,283 @@
 \section{Example Sheet 2} 
+
+\subsection{Question 1} 
+
+
+
+\subsection{Question 7} 
+In this question, we wish to verify the bubble diagram expansion for 
+$ \phi ^ 4 $ theory, for vacuum to vacuum scattering. 
+Specifically, we're interested 
+in the expansion to $ \lambda ^ 2 $ order for 
+$ \bra{ 0 } S \ket{ 0 } $, where, due to Dyson's formula, 
+we have that 
+\[
+	S = 1 - \frac{i \lambda }{ 4 ! } \int_{ - \infty } ^ \infty dt H_ I ( x) 
+	+ \frac{1}{2 } \frac{\lambda ^ 2 }{ (4 ! ) ^ 2  } \int_{ - \infty } ^ \infty 
+	 dt_ 1 \int_{ - \infty} ^ \infty dt _ 2 \mathcal{ T } \left\{  
+	 H _I (t_1, \vec{x} ) H _ I (t_2, \vec{x}) \right\} 
+\] Writing this in terms 
+of our Hamiltonian density instead, we have that this simplifies 
+down to 
+\[
+	S = 1 - \frac{i \lambda }{  4 ! } \int d ^ 4 x \, \mathcal{ H } _ I ( x ) 
+	+ \frac{1}{2 } \frac{\lambda ^ 2 }{ ( 4 ! ) ^ 2 } \int d^ 4 x_ 1  d^ 4 x_ 2 
+	\mathcal{ T } \left\{  \mathcal{ H } _ I ( x _ 1 ) H _ I ( x _ 2 )  \right\} 
+\] where we have our interaction picture Hamiltonian given 
+by $ \mathcal{ H } _ I ( x) = \phi _ I ^4  ( x) $. 
+Now,let's look at the contribution 
+to the first order in $ \lambda $. This contribution 
+is given by 
+\[
+  \frac{ - i \lambda }{ 4 ! } \int d ^ 4 x \,  \bra{ 0 } 
+  \mathcal{ T  } \left\{  \phi ( x) \phi ( x) \phi ( x) \phi ( x)  \right\} \ket{ 0 } 
+\] Now, due to Wick's theorem, the integrand 
+can be expanded out in terms of all possible contractions 
+of the two fields. There are $3$ ways to do this. 
+This is because we could've 
+contracted the first field with $ 3$ others, 
+which leaves the last two fields to contract 
+on their own. This means
+that our total contribution from first order from this field 
+is 
+\[
+	- \frac{ i \lambda }{ 8 } \int d^ 4 x \, D ( x - x ) D ( x -x) 
+\] This is represented by a figure $ 8 $ diagram. 
+Now, we aim to show that this matches up with the 
+diagram shown in the exponential. 
+To first order in $ \lambda $, our 
+exponential is given by 
+\begin{equation*}
+	\feynmandiagram[small]{ 
+		a [particle = \( x \) ]  -- [ghost, half left] c 
+		-- [ghost, half left] a 
+		-- [ghost, half left] b 
+		-- [ghost, half left] a, 
+	}; 
+\end{equation*}
+We know that from this diagram 
+that, by assigning propagators to each line, that 
+this is proportional to $ \int d ^ 4 x \, D ( x- x ) D ( x - x) $. 
+But, what about the symmetry factors? This diagram 
+has a symmetry factor of $ 8 $ since we assign a factor 
+of two for being able to switch the ends of the bottom and top loops. 
+In addition, we assign another factor of $2 $ since we 
+can rotate the diagram $ 180 $ degrees.
+
+Now, looking to second order in $ \lambda ^ 2 $, we'd
+like to find the amplitude given by the expression 
+\[
+	\frac{\lambda ^ 2 }{2 ( 4 ! ) ^ 2 }
+	\int d ^ 4 x \, d ^ y \mathcal{ T } \left\{  \phi_x \phi _ x \phi_ x \phi_ x \phi _ y \phi _ y \phi _ y \phi _ y  \right\} 
+\] Let's examine the possible contractions that we get from this. 
+We could have that the $ \phi _ x $ and $ \phi _ y $ terms are 
+contracted internally amongst themselves. There are $3 $ ways 
+to contract the $ \phi _ x $ amongst themselves and $ 3 $ ways to 
+contract the $ \phi _ y $ amongst themselves, so we have $ 9 $ ways in total. 
+This means that our contribution is given by 
+\[
+	\frac{1}{2 } \frac{\lambda ^2 }{ 8 ^ 2 } \int d ^ 4 x d ^ 4 y D ( x - x)  D( x - x ) D ( y - y ) D ( y - y) 
+\] The factor of $ \frac{1}{2 } $ comes from Dyson's formula. 
+As a diagram, this is represented by the diagram 
+\begin{equation*}
+	\feynmandiagram[small]{ 
+		a [particle = \( x \) ]  -- [scalar, half left] c 
+		-- [scalar, half left] a 
+		-- [scalar, half left] b 
+		-- [scalar, half left] a, 
+		}; 
+	\feynmandiagram[small]{ 
+		a [particle = \( y \) ]  -- [scalar, half left] c 
+		-- [scalar, half left] a 
+		-- [scalar, half left] b 
+		-- [scalar, half left] a, 
+		};
+\end{equation*}
+Our symmetry factor for this diagram is $ 2 \times 8 ^ 2 $, since, 
+as we discussed before, we have a symmetry of 8 for each diagram. 
+In addition, we could've swapped the diagrams as well. 
+This agrees with the above. 
+
+The next thing to do is that we could have contracted 
+each of the $ \phi_ x  $  terms with $ \phi _ y $. Since 
+we have four choices to contract the first  $ \phi _ x $
+with, then 3, then 2, we have that our contribution 
+to this term is \begin{align*} 
+	\frac{\lambda ^ 2 4 ! }{ 2 ( 4 ! ) ^ 2 } &  \int d^ 4 x \, d ^ 4 y\, 
+	D ( x - y ) D ( x - y ) D ( x - y ) D ( x - y )  = \\ & 
+	\frac{ \lambda ^ 2 }{  2 ( 4 ! ) }  \int d^ 4 x \, d ^ 4 y\, 
+	D ( x - y ) D ( x - y ) D ( x - y ) D ( x - y ) 
+\end{align*} This corresponds to the diagram 
+\begin{equation*}
+	\feynmandiagram[small]{ 
+		a [particle  = \( x \) ] -- [scalar, half left, looseness = 1.5] b [particle = \( y \) ], 
+		a -- [scalar, half right, looseness = 1.5] b, 
+		a -- [scalar] b, 
+		a -- [scalar] b, 
+	}; 
+\end{equation*}
+
+Finally, our last possible type of contraction is 
+what happens when we contract just two of the $ \phi _ x $ 
+fields with two of the $ \phi _ y $ fields, 
+and loop the rest. 
+There are $ \begin{pmatrix}  4 \\ 2  \end{pmatrix}   = 6 $ ways 
+to choose which to $ \phi _ x $ fields we contract with $ \phi _ y $, 
+and once we chose the $ \phi _ x $ fields, we have $ 12  = 4 \times 3 $ 
+options to which we can contract them. This means that 
+the contribution gained from this is 
+\begin{align*} 
+	- \frac{ \lambda ^ 2 6 \times 4 \times 3}{2 ( 4 ! ) ^ 2  } & 
+	\int d ^ 4 x \,    d ^ 4 y D ( x - x ) D ( y -x ) D ( y - x ) D ( y - y )  
+	=   \\  & - \frac{\lambda ^ 2 }{16  }	\int d ^ 4 x \,    d ^ 4 y D ( x - x ) D ( y -x ) D ( y - x ) D ( y - y )  
+\end{align*} This is associated with the 
+diagram 
+\begin{equation*}
+	\feynmandiagram[small]{ 
+	a -- [scalar, half left] b [particle = \( x\) ] -- [scalar, half left] a , 
+	b -- [scalar, half left] c [particle = \( y \) ] -- [scalar, half left] b, 
+	c -- [scalar, half left] d -- [scalar, half left] c, 
+}; 
+\end{equation*}
+
+We can switch around the two loops as well as the two propagators in the centre.
+Hence, we've showed that to second order in $ \lambda$, 
+the combinatoric and symmetry factors work 
+out for each diagram when we exponentiate the bubble 
+diagrams.
+
+\pagebreak 
+\subsection{Question 8} 
+To find the mass dimensions of $ g, h, k, l $, we 
+need to first find the mass dimensions of the fields $ \phi $ and $ \psi $. 
+Our scalar action needs to be dimensionless, so 
+ \[
+ \int d ^ 4 x \, \frac{1}{2 } \partial  _ \mu \phi \partial  ^ \mu \phi 
+\] has mass dimension $ 0 $. This implies that $ [ \phi ] = 1 $. 
+Similarly, we find that  $ [ \psi ] = 1 $. 
+This means that the mass dimensions of $ g, k$ are  $ [ g ] = [ k]  = 1$. 
+We have that $[ h ] = 0 $, and $ [ l ] = - 1$. 
+This theory contains both relevant, marginal and irrelevant operators.
+Thus, the theory is non-renormalisable since the $ l $ dimension 
+is irrelevant.
+
+We have four interaction terms, 
+which means that we get 4 distinct types 
+of diagrams, each with their own set of Feynman rules. 
+Let's tackle the Yukawa interaction first. 
+We know the momentum rules for this. 
+Now, for the interaction $ h | \psi | ^ 4  = h \psi \psi ^ * \psi \psi ^ * $, 
+we have that our interaction vertex is given by 
+ \begin{equation*}
+	 \feynmandiagram[small]{ 
+		 a -- [fermion] b, 
+		 c -- [fermion] b, 
+		 b -- [fermion] d, 
+		 b -- [fermion] e
+		}; 
+\end{equation*}
+Now, with this kind of diagram, our propagator 
+comes from contracting just $ \psi , \psi ^ *$ together, 
+which gives us a propagator in momentum space which looks 
+like 
+ \[
+ \frac{i}{p ^ 2 - \mu ^ 2 + i \epsilon } 
+\]
+For the term $ k \phi ^ 3 $, we have that our vertices 
+look like 
+\begin{equation*}
+	\feynmandiagram[small]{ 
+		 a -- [scalar] b, 
+ 		 c -- [scalar] b, 
+ 		 d -- [scalar] b, 
+
+	}; 
+\end{equation*}
+Each of these objects come with a propagator which comes from 
+contracting two scalars together 
+\[
+ \frac{i }{ p ^ 2 - m ^ 2 + i \epsilon }
+\] 
+Finally, the non-trivial one is the propagator that comes 
+from interactions with $ \phi \partial  _ \mu \psi \partial  ^ \mu \psi ^ *  $. 
+In this case, we have a different kind of propagator! 
+Non-zero contributions come from contractions of the form 
+\[
+ \wick{ \c \phi \c \phi  \c \psi ^ * \partial _ \mu \c \psi 
+ \c \partial  ^ \mu \c \psi ^ * \c \psi }
+\] Differentiating the contraction of $ \psi $ and $ \psi ^ * $
+pulls out a factor of  $ i \pi ^ \mu $. Thus, since 
+we'll always have an even number of propagators involving the anti-nucleons, 
+for each pair we attach a factor of 
+ \[
+  \frac{ - p ^ 2 }{ p ^ 2-m ^ 2 + i \epsilon }
+\] 
+
+\pagebreak 
+\subsection{Question 9} 
+We want to find the decay width 
+for the scattering process $ \phi \to \psi \overline{ \psi } $. 
+For studying the decay width up to order $ g ^ 2 $, 
+we need only consider the trivial Feynman diagram with 
+one vertex (since $ \Gamma \sim | \mathcal{ M } | ^ 2 $.  
+\begin{equation*}
+	\feynmandiagram[small]{
+		a -- [scalar] b, 
+		c -- [fermion] b -- [fermion] d, 
+	}; 
+\end{equation*}
+Now, since this already imposes momentum conservation, 
+our amplitude $\mathcal{ M } $ is just $  i g  $.
+Thus, our decay width is given by the formula 
+\[
+	\Gamma = \frac{1}{2m } g ^ 2 \frac{1}{( 2 \pi ) ^ 2}  \int 
+	\frac{d ^ 3 q_1  d ^ 3 q_2 }{ 2 E _{ q_1 } 2 E _{ q_2 } } \delta ^ 4 ( p_1- q_1 - q_2) 
+\] The trick here is to 
+rewrite the invariant measure $ \frac{ d ^ 3 q_2 }{ ( 2 E_{ q_2 } }$ as $  \delta^ 4 \left(  
+( q_2 ^ 2 - \mu ^ 2 \right)  $ (notice we're using $ \mu ^ 2 $ since this 
+comes from the nucleon. 
+Substituting this in, then integrating over $ q_2 $, 
+we get that our decay width is 
+\[
+	\Gamma = \frac{g ^ 2 }{ ( 2 \pi ) ^ 2 2m } \int \frac{d ^ 3 q_1 }{ 2 E_{ q_1 } } \delta ^  4
+	\left(  ( p_1 - q_1 ) ^ 2  - \mu ^ 2  \right) 
+\] Now, we'd like to find the set of $ q_1 $ such that $ ( p_1 - q_1 ) ^ 2  = \mu ^ 2 $. 
+Our relativistic dispersion relation gives us that $ p_1 ^ 2 = m ^ 2 $, 
+and $q_1 ^ 2 = \mu ^ 2 $. Also, in the convention of calculating 
+decay widths, we work in the rest frame of the incoming particle (in this case, 
+the meson). This means that we take $ p_1 = ( m , 0 ) $. 
+\begin{align*}
+	p_1 ^ 2 + q_1 ^ 2 - 2 p_1 \cdot  q_1  &=  \mu ^ 2 \\
+	m ^ 2 + \mu ^ 2  - 2 m E_{ q_1 }  &= \mu ^ 2 \\
+	m ^ 2  - 2m \sqrt{ \mu ^ 2 + \vec{q} _ 1 ^ 2 } &=  0  \\
+	\| \vec{q} _ 1 \|  & = \pm \sqrt{ \frac{m ^ 2 }{ 4 }  - \mu ^ 2 } 
+\end{align*}
+Our decay width is the integral 
+\[
+	\Gamma = \frac{g ^ 2 }{ 16 \pi ^ 2 m } \int \frac{d ^ 3 q_1 }{ E_{ q_1 } } \delta ^ 4 \left(  
+	m ^ 2- 2m \sqrt{ \mu ^ 2 + \| \vec{q} _ 1 \| ^ 2 } \right) 
+\] Selecting the positive root in the delta function, using 
+our standard identity for a delta function of a function, this 
+gives that the integral is 
+\begin{align*} 
+	\Gamma & = \frac{g ^ 2 }{ 16 \pi ^ 2 m } \int \frac{d ^ 3 q_1 }{ E_{ q_1 } } 
+	\frac{\delta \left(  | \vec{q} _ 1 |   - | \vec{q} _ 1 ^ * |   \right) }{
+	 \frac{2m | \vec{q} _ 1 ^ * | }{ \sqrt{ \mu ^ 2 + |\vec{q} _ 1 ^ *  | ^ 2 }  }} \\
+	 &=  \frac{ g ^ 2 }{ 16 \pi ^ 2 m } \int d |\vec{q} _ 1 | \frac{ 4 \pi | \vec{q} _ 1 | ^ 2 
+	 \delta ( | \vec{q} _ 1 |  - | \vec{q} _ 1 ^ * | ) }{2m E_{ q _ 1  } \frac{| \vec{q} _ 1 ^ * | }{
+ \sqrt{ \mu ^ 2 + | \vec{q} _ 1 ^ * | ^ 2 } }} \\
+ \end{align*} 
+ In the last two lines we converted this integral into spherical 
+ coordinates. 
+ Integrating out the delta function, this is just 
+ \begin{align*} 
+	 \Gamma & = \frac{g ^ 2 ( 2 \pi ) }{ 16 \pi ^2 m} \frac{1}{m } \frac{ |\vec{q} _ 1 ^ * | | E_{ q_ 1 ^ * }}{
+	 | E_{ q_ 1 ^ * } | } \\ 
+	 &=  \frac{ g ^ 2 }{ 8 \pi m ^ 2 } \sqrt{ \frac{m ^ 2 }{ 4 }  - \mu ^ 2 }   \\ 
+	 &=  \frac{g ^ 2 }{ 16 \pi m ^ 2 } \left(  1 -\frac{4 \mu ^ 2 }{ m ^ 2 }  \right)^{ \frac{1}{2 } }  \\
+	 &=  \frac{g ^ 2 }{ 16 \pi m } \sqrt{ 1 - ( 4 \mu ^ 2 / m ^ 2 ) }  \\
+ \end{align*} 
+ This has dimensions of mass since $ g  $ has mass dimension $ 1 $, thus 
+ decay width doesn't really make sense?
+\pagebreak 
+

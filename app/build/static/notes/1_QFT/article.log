@@ -1,4 +1,4 @@
-This is LuaTeX, Version 1.07.0 (TeX Live 2018)  (format=lualatex 2019.1.15)  16 NOV 2019 15:14
+This is LuaTeX, Version 1.07.0 (TeX Live 2018)  (format=lualatex 2019.1.15)  17 NOV 2019 21:28
  system commands enabled.
  file:line:error style messages enabled.
 **article.tex
@@ -23,7 +23,7 @@ Inserting `luaotfload.aux.patch_cambria_domh' at position 2 in `luaotfload.patch
 Inserting `luaotfload.aux.fixup_fontdata' at position 1 in `luaotfload.patch_font_unsafe'.
 Inserting `luaotfload.aux.set_capheight' at position 3 in `luaotfload.patch_font'.
 Inserting `luaotfload.rewrite_fontname' at position 4 in `luaotfload.patch_font'.
-luaotfload | main : initialization completed in 0.196 seconds
+luaotfload | main : initialization completed in 0.159 seconds
 Babel <3.18> and hyphenation patterns for 1 language(s) loaded.
 (/usr/local/texlive/2018/texmf-dist/tex/latex/base/article.cls
 Document Class: article 2014/09/29 v1.4h Standard LaTeX document class
@@ -2245,20 +2245,8 @@ Package biblatex Warning: 'babel/polyglossia' detected but 'csquotes' missing.
 \@quotelevel=\count437
 \@quotereset=\count438
 (./article.aux)
-Runaway argument?
-{\defcounter {refsectionax }\@writefile {toc}{\contentsline {subsecti\ETC.
-./article.tex:95: File ended while scanning use of \@writefile.
-<inserted text> 
-\par 
-l.95 \begin{document}
-                   
-I suspect you have forgotten a `}', causing me
-to read past where you wanted me to stop.
-I'll try to recover; but if the error is serious,
-you'd better type `E' or `X' now and fix your file.
-
-
 \openout1 = article.aux
+
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 95.
 LaTeX Font Info:    ... okay on input line 95.
 LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 95.
@@ -2275,7 +2263,7 @@ LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 95.
 LaTeX Font Info:    ... okay on input line 95.
 LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 95.
 LaTeX Font Info:    Try loading font information for TS1+cmr on input line 95.
-(/usr/local/texlive/2018/texmf-dist/tex/latex/base/ts1cmr.fd
+ (/usr/local/texlive/2018/texmf-dist/tex/latex/base/ts1cmr.fd
 File: ts1cmr.fd 2014/09/29 v2.5h Standard LaTeX font definitions
 )
 LaTeX Font Info:    ... okay on input line 95.
@@ -2364,27 +2352,7 @@ Package: gettitlestring 2016/05/16 v1.5 Cleanup title references (HO)
 LaTeX Info: Redefining \ref on input line 95.
 LaTeX Info: Redefining \pageref on input line 95.
 LaTeX Info: Redefining \nameref on input line 95.
- (./article.out
-./article.out:89: Extra }, or forgotten \endgroup.
-l.89 on.6.6}
-          {Question 6}{section.6}% 88
-I've deleted a group-closing symbol because it seems to be
-spurious, as in `$x}$'. But perhaps the } is legitimate and
-you forgot something else, as in `\hbox{$x}'. In such cases
-the way to recover is to insert both the forgotten and the
-deleted material, e.g., by typing `I$}'.
-
-) (./article.out
-./article.out:89: Extra }, or forgotten \endgroup.
-l.89 on.6.6}
-          {Question 6}{section.6}% 88
-I've deleted a group-closing symbol because it seems to be
-spurious, as in `$x}$'. But perhaps the } is legitimate and
-you forgot something else, as in `\hbox{$x}'. In such cases
-the way to recover is to insert both the forgotten and the
-deleted material, e.g., by typing `I$}'.
-
-)
+ (./article.out) (./article.out)
 \@outlinefile=\write6
 
 \openout6 = article.out
@@ -2400,66 +2368,65 @@ Package pdflscape Info: Auto-detected driver: pdftex on input line 81.
 Package pgfplots Warning: running in backwards compatibility mode (unsuitable tick labels; missing features). Consider writing \pgfplotsset{compat=1.16} into your preamble.
  on input line 95.
 
-[1
-
-{/usr/local/texlive/2018/texmf-var/fonts/map/pdftex/updmap/pdftex.map}]
 LaTeX Font Info:    Try loading font information for U+msa on input line 97.
- (/usr/local/texlive/2018/texmf-dist/tex/latex/amsfonts/umsa.fd
+(/usr/local/texlive/2018/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
 LaTeX Font Info:    Try loading font information for U+msb on input line 97.
  (/usr/local/texlive/2018/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
-) (./article.toc [2] [3])
+) (./article.toc [1
+
+{/usr/local/texlive/2018/texmf-var/fonts/map/pdftex/updmap/pdftex.map}] [2])
 \tf@toc=\write7
 
 \openout7 = article.toc
- [4] (./why_do_we_care_about_quantum_field_theory_.tex) (./the_problem_of_locality.tex) (./particle_indistinguishability_and_particle_conservation.tex) (./problems_with_qft.tex) (./scaling_in_qft.tex) [5] (./classical_field_theory.tex) (./euler_lagrange_equations_for_a_point_particle.tex) (./promotion_of_point_particles_to_the_classical_field.tex [6] [7] [8]) (./lorentz_invariance.tex [9]) [10] (./symmetries_and_noether's_theorem.tex [11] [12]) (./switching_over_to_the_hamiltonian_formalism.tex [13]) (./promoting_discrete_operators_to_fields.tex [14]) (./reviewing_the_harmonic_oscillator_in_one_dimension_in_quantum_mechanics.tex [15]) (./promoting_fields_to_operators.tex [16] [17] [18] [19]) (./creating_particle_states.tex [20]
+ [3] (./why_do_we_care_about_quantum_field_theory_.tex) (./the_problem_of_locality.tex) (./particle_indistinguishability_and_particle_conservation.tex) (./problems_with_qft.tex) (./scaling_in_qft.tex) [4] (./classical_field_theory.tex) (./euler_lagrange_equations_for_a_point_particle.tex) (./promotion_of_point_particles_to_the_classical_field.tex [5] [6] [7]) (./lorentz_invariance.tex [8]) [9] (./symmetries_and_noether's_theorem.tex [10] [11]) (./switching_over_to_the_hamiltonian_formalism.tex [12]) (./promoting_discrete_operators_to_fields.tex [13]) (./reviewing_the_harmonic_oscillator_in_one_dimension_in_quantum_mechanics.tex [14]) (./promoting_fields_to_operators.tex [15] [16] [17] [18]) (./creating_particle_states.tex [19]
 Overfull \hbox (46.156pt too wide) in paragraph at lines 22--23
 []\T1/lmr/m/n/10.95 Our full Hilbert space is then the space of all par-ti-cles spanned by states of the form $[] \OML/cmm/m/it/10.95 ; a[] [] ; a[]a[] [] ; [] $
  []
 
-[21] [22]) [23] (./quantising_the_free_complex_scalar_field.tex [24] [25]) (./introducing_time_with_the_heisenberg_picture.tex [26] [27]) (./causality_in_qft.tex [28]
+[20] [21]) [22] (./quantising_the_free_complex_scalar_field.tex [23] [24]) (./introducing_time_with_the_heisenberg_picture.tex [25] [26]) (./causality_in_qft.tex [27]
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-) (./propagators.tex [29]) (./the_feynman_propagator.tex [30] [31]) [32] (./interacting_fields_and_the_approach_with_perturbation_theory.tex) (./why_do_we_need_interacting_fields_and_what_are_'valid'_conditions_for_perturbation_expansions.tex
+) (./propagators.tex [28]) (./the_feynman_propagator.tex [29] [30]) [31] (./interacting_fields_and_the_approach_with_perturbation_theory.tex) (./why_do_we_need_interacting_fields_and_what_are_'valid'_conditions_for_perturbation_expansions.tex
 LaTeX Font Info:    Try loading font information for TS1+lmr on input line 58.
  (/usr/local/texlive/2018/texmf-dist/tex/latex/lm/ts1lmr.fd
 File: ts1lmr.fd 2009/10/30 v1.6 Font defs for Latin Modern
-) [33] [34]) (./the_interaction_picture.tex [35] [36] [37] [38]
+) [32] [33]) (./the_interaction_picture.tex [34] [35] [36] [37]
 Overfull \hbox (28.89311pt too wide) in paragraph at lines 228--232
 \T1/lmr/m/n/10.95 but this doesn't work if there are or-der-ing am-bi-gu-i-ties. This is be-cause we have that $\OT1/cmr/m/n/10.95 [\OML/cmm/m/it/10.95 H[]\OT1/cmr/m/n/10.95 (\OML/cmm/m/it/10.95 t[]\OT1/cmr/m/n/10.95 )\OML/cmm/m/it/10.95 ; H[]\OT1/cmr/m/n/10.95 (\OML/cmm/m/it/10.95 t[]\OT1/cmr/m/n/10.95 )] \OMS/cmsy/m/n/10.95 6\OT1/cmr/m/n/10.95 ==
  []
 
-[39]
+[38]
 Overfull \hbox (7.52707pt too wide) detected at line 299
 [][] \OML/cmm/m/it/10.95 dt[] [][] dt[]H[]\OT1/cmr/m/n/10.95 (\OML/cmm/m/it/10.95 t[]\OT1/cmr/m/n/10.95 )\OML/cmm/m/it/10.95 H[]\OT1/cmr/m/n/10.95 (\OML/cmm/m/it/10.95 t[]\OT1/cmr/m/n/10.95 ) = [] []
  []
 
-[40]) (./_scattering_.tex [41] [42] [43]) (./wick's_theorem.tex) (./feynman_diagrams.tex
-<figures/feyn_1.jpg, id=700, 531.9875pt x 223.83624pt>
+[39]) (./_scattering_.tex [40] [41] [42]) (./wick's_theorem.tex) (./feynman_diagrams.tex
+<figures/feyn_1.jpg, id=719, 531.9875pt x 223.83624pt>
 File: figures/feyn_1.jpg Graphic file (type jpg)
 <use figures/feyn_1.jpg>
 Package luatex.def Info: figures/feyn_1.jpg  used on input line 21.
 (luatex.def)             Requested size: 364.24149pt x 153.25859pt.
-<figures/feyn_2.png, id=703, 269.005pt x 151.56625pt>
+<figures/feyn_2.png, id=722, 269.005pt x 151.56625pt>
 File: figures/feyn_2.png Graphic file (type png)
 <use figures/feyn_2.png>
 Package luatex.def Info: figures/feyn_2.png  used on input line 39.
 (luatex.def)             Requested size: 182.11726pt x 102.61038pt.
-<figures/feyn_3.png, id=704, 567.11874pt x 151.56625pt>
+<figures/feyn_3.png, id=723, 567.11874pt x 151.56625pt>
 File: figures/feyn_3.png Graphic file (type png)
 <use figures/feyn_3.png>
 Package luatex.def Info: figures/feyn_3.png  used on input line 53.
 (luatex.def)             Requested size: 364.24149pt x 97.34897pt.
- [44] [45<./figures/feyn_1.jpg><./figures/feyn_2.png><./figures/feyn_3.png>]) (./scattering_revisited.tex) (./amplitudes.tex [46]
-<figures/feyn6.png, id=730, 334.24875pt x 225.84375pt>
+ [43] [44<./figures/feyn_1.jpg><./figures/feyn_2.png><./figures/feyn_3.png>]) (./scattering_revisited.tex) (./amplitudes.tex [45]
+<figures/feyn6.png, id=750, 334.24875pt x 225.84375pt>
 File: figures/feyn6.png Graphic file (type png)
 <use figures/feyn6.png>
 Package luatex.def Info: figures/feyn6.png  used on input line 36.
 (luatex.def)             Requested size: 227.65005pt x 153.82327pt.
-) [47<./figures/feyn6.png>] (./_computing_the_two_point_correlation_function_for_the_ground_state_of_our_perturbed_hamiltonian_.tex) (./wick's_theorem.tex) (./applying_wick's_theorem_for_the_interaction_term.tex [48] [49]) [50] (./feynman_phi_rules.tex
+) [46<./figures/feyn6.png>] (./_computing_the_two_point_correlation_function_for_the_ground_state_of_our_perturbed_hamiltonian_.tex) (./wick's_theorem.tex) (./applying_wick's_theorem_for_the_interaction_term.tex [47] [48]) [49] (./feynman_phi_rules.tex
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
 (hyperref)                removing `math shift' on input line 1.
@@ -2476,8 +2443,8 @@ Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
 (hyperref)                removing `math shift' on input line 1.
 
-[51]
-<figures/phifour.pdf, id=763, 506.85359pt x 252.945pt>
+[50]
+<figures/phifour.pdf, id=781, 506.85359pt x 252.945pt>
 File: figures/phifour.pdf Graphic file (type pdf)
 <use figures/phifour.pdf>
 Package luatex.def Info: figures/phifour.pdf  used on input line 115.
@@ -2486,37 +2453,42 @@ Package luatex.def Info: figures/phifour.pdf  used on input line 115.
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-[52]
-<figures/phiFourSecond.pdf, id=769, 453.61469pt x 182.6022pt>
+[51]
+<figures/phiFourSecond.pdf, id=788, 453.61469pt x 182.6022pt>
 File: figures/phiFourSecond.pdf Graphic file (type pdf)
 <use figures/phiFourSecond.pdf>
 Package luatex.def Info: figures/phiFourSecond.pdf  used on input line 150.
 (luatex.def)             Requested size: 364.24149pt x 146.63084pt.
- [53<./figures/phifour.pdf><./figures/phiFourSecond.pdf>]
-<figures/vacuumExpand.pdf, id=824, 369.29968pt x 149.59889pt>
+ [52<./figures/phifour.pdf><./figures/phiFourSecond.pdf>]
+<figures/vacuumExpand.pdf, id=843, 369.29968pt x 149.59889pt>
 File: figures/vacuumExpand.pdf Graphic file (type pdf)
 <use figures/vacuumExpand.pdf>
 Package luatex.def Info: figures/vacuumExpand.pdf  used on input line 229.
 (luatex.def)             Requested size: 364.24149pt x 147.5555pt.
-<figures/PhiFourVacuumExp.pdf, id=826, 290.0436pt x 78.2925pt>
+<figures/PhiFourVacuumExp.pdf, id=845, 290.0436pt x 78.2925pt>
 File: figures/PhiFourVacuumExp.pdf Graphic file (type pdf)
 <use figures/PhiFourVacuumExp.pdf>
 Package luatex.def Info: figures/PhiFourVacuumExp.pdf  used on input line 239.
 (luatex.def)             Requested size: 364.24149pt x 98.32411pt.
- [54]) (./greens_function_vacuum.tex [55<./figures/vacuumExpand.pdf><./figures/PhiFourVacuumExp.pdf>] [56]) (./cross_sections.tex [57] [58]
+ [53]) (./greens_function_vacuum.tex [54<./figures/vacuumExpand.pdf><./figures/PhiFourVacuumExp.pdf>] [55]) (./cross_sections.tex [56]
+
+Package hyperref Warning: Difference (2) between bookmark levels is greater 
+(hyperref)                than one, level fixed on input line 7.
+
+[57]
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 57.
+(hyperref)                removing `math shift' on input line 107.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\to' on input line 57.
+(hyperref)                removing `\to' on input line 107.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 57.
+(hyperref)                removing `math shift' on input line 107.
 
-[59]) [60] (./the_dirac_equation.tex) (./what_does_the_dirac_equation_give_us.tex [61] [62] [63]
+[58] [59]) [60] (./the_dirac_equation.tex) (./what_does_the_dirac_equation_give_us.tex [61] [62] [63]
 Overfull \hbox (3.84898pt too wide) in paragraph at lines 254--259
 []\T1/lmr/m/n/10.95 Thus, $\OML/cmm/m/it/10.95 S$ \T1/lmr/m/n/10.95 pro-vides a rep-re-sen-ta-tion of the Lorentz group. We now de-fine a Dirac spinor, $\OML/cmm/m/it/10.95  []\OT1/cmr/m/n/10.95 (\OML/cmm/m/it/10.95 x\OT1/cmr/m/n/10.95 )$\T1/lmr/m/n/10.95 which
  []
@@ -2543,59 +2515,52 @@ Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
 (hyperref)                removing `math shift' on input line 1.
 
-[75] [76]) (./lorentz_tranformations_and_spinors.tex [77]) (./constructing_the_chiral_representation_for_the_dirac_equation.tex [78]) (./motivating_lorentz_invariance_of_the_dirac_equation.tex [79] [80]) (./constructing_boosts_and_rotations_in_block_diagonal_form.tex [81]) (./the_weyl_equations.tex) (./constructing_plane-wave_solutions_to_the_weyl_equation.tex [82]) [83] (./example_sheet_1.tex) (./question_1.tex [84]
+[75] [76]) (./lorentz_tranformations_and_spinors.tex [77] [78]) (./constructing_the_chiral_representation_for_the_dirac_equation.tex [79]) (./motivating_lorentz_invariance_of_the_dirac_equation.tex [80]) (./constructing_boosts_and_rotations_in_block_diagonal_form.tex [81] [82]) (./the_weyl_equations.tex) (./constructing_plane-wave_solutions_to_the_weyl_equation.tex [83]) [84] (./example_sheet_1.tex) (./question_1.tex [85]
 Overfull \hbox (57.0368pt too wide) detected at line 23
 [] \OML/cmm/m/it/10.95 d[]xT[] \OT1/cmr/m/n/10.95 = [] \OML/cmm/m/it/10.95 d[]x d[]p d[]q [] []
  []
 
-[85]) (./question_2.tex) (./question_3.tex [86] [87]) [88] (./question_4.tex) [89] (./question_5.tex [90]) (./question_6.tex [91]
+[86]) (./question_2.tex) (./question_3.tex [87] [88]) [89] (./question_4.tex) [90] (./question_5.tex [91]) (./question_6.tex [92]
 Overfull \hbox (2.10384pt too wide) in paragraph at lines 23--25
 \T1/lmr/m/n/10.95 To as-sist us as well, we ap-ply prod-uct rule and an-ti-sym-me-try. We'll now cal-cu-late this thing 
  []
 
-[92]) [93] (./question_7.tex [94] [95]) (./question_8.tex) (./example_sheet_2.tex [96]) (./question_1.tex
+[93]) [94] (./question_7.tex [95] [96]) (./question_8.tex) (./example_sheet_2.tex [97] [98] [99] [100]
+
+Package simpler-wick Warning: I have reached the end of \wick with some unclosed contractions on input line 207.
+
+[101] [102] [103]) (./question_1.tex
 Overfull \hbox (57.0368pt too wide) detected at line 23
 [] \OML/cmm/m/it/10.95 d[]xT[] \OT1/cmr/m/n/10.95 = [] \OML/cmm/m/it/10.95 d[]x d[]p d[]q [] []
  []
 
-[97]) (./question_2.tex [98]) [99]
+[104]) (./question_2.tex [105]) [106]
 Package atveryend Info: Empty hook `BeforeClearDocument' on input line 158.
 Package atveryend Info: Empty hook `AfterLastShipout' on input line 158.
  (./article.aux)
 Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 158.
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 158.
-
-
-Package rerunfilecheck Warning: File `article.out' has changed.
-(rerunfilecheck)                Rerun to get outlines right
-(rerunfilecheck)                or use package `bookmark'.
-
-Package rerunfilecheck Info: Checksums for `article.out':
-(rerunfilecheck)             Before: DE8F93E0E853E28D3B4599D012D9F3C0;7691
-(rerunfilecheck)             After:  BF0FB61A8D25AB4AAD6E7A53CC3970E8;7691.
+Package rerunfilecheck Info: File `article.out' has not changed.
+(rerunfilecheck)             Checksum: 443CC264D7504F6D6CEFC9737CB24AC3;7991.
 Package logreq Info: Writing requests to 'article.run.xml'.
 
 \openout1 = article.run.xml
 )
 
 Here is how much of LuaTeX's memory you used:
- 52233 strings out of 494413
+ 52494 strings out of 494413
  125171,1977958 words of node,token memory allocated
- 2758 words of node memory still in use:
-   7 hlist, 2 vlist, 2 rule, 2 glue, 1 kern, 2 sub_mlist, 556 attribute, 65 glue_spec, 556 attribute_list, 1 write, 3 pdf_action nodes
-   avail lists: 1:8,2:2713,3:1027,4:186,5:344,6:92,7:3954,8:105,9:874,10:13,11:222,12:1
- 54128 multiletter control sequences out of 65536+600000
+ 2846 words of node memory still in use:
+   7 hlist, 2 vlist, 2 rule, 2 glue, 1 kern, 2 sub_mlist, 578 attribute, 65 glue_spec, 578 attribute_list, 1 write, 3 pdf_action nodes
+   avail lists: 1:8,2:2669,3:1027,4:180,5:344,6:90,7:3954,8:105,9:874,10:13,11:222,12:1
+ 54379 multiletter control sequences out of 65536+600000
  70 fonts using 8536863 bytes
- 65i,14n,101p,1050b,1968s stack positions out of 5000i,500n,10000p,200000b,100000s
-
-warning  (pdf backend): unreferenced destination with name 'subsubsection.5.9.2'
-
-warning  (pdf backend): unreferenced destination with name 'subsubsection.5.9.1'
+ 65i,14n,101p,1050b,1970s stack positions out of 5000i,500n,10000p,200000b,100000s
 {/usr/local/texlive/2018/texmf-dist/fonts/enc/dvips/lm/lm-ec.enc}{/usr/local/texlive/2018/texmf-dist/fonts/enc/dvips/lm/lm-ts1.enc}</usr/local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx6.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx8.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cmextra/cmex8.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi6.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy6.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/lm/lmbx10.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/lm/lmbx12.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/lm/lmr10.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/lm/lmr12.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/lm/lmr17.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/lm/lmr8.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/lm/lmri10.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
-Output written on article.pdf (99 pages, 880061 bytes).
+Output written on article.pdf (106 pages, 907381 bytes).
 
-PDF statistics: 1173 PDF objects out of 1200 (max. 8388607)
- 979 compressed objects within 10 object streams
- 233 named destinations out of 1000 (max. 131072)
- 776 words of extra memory for PDF output out of 10000 (max. 100000000)
+PDF statistics: 1228 PDF objects out of 1440 (max. 8388607)
+ 1026 compressed objects within 11 object streams
+ 243 named destinations out of 1000 (max. 131072)
+ 816 words of extra memory for PDF output out of 10000 (max. 100000000)
 

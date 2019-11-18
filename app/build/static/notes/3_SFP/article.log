@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.19 (TeX Live 2018) (preloaded format=pdflatex 2019.1.15)  16 NOV 2019 11:45
+This is pdfTeX, Version 3.14159265-2.6-1.40.19 (TeX Live 2018) (preloaded format=pdflatex 2019.1.15)  17 NOV 2019 00:58
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -2366,43 +2366,7 @@ Overfull \hbox (6.25606pt too wide) in paragraph at lines 63--67
 \T1/cmr/m/n/10.95 What is the ma-trix rep-re-sen-ta-tion of this map? To do this, we con-struct a ba-sis $[]$
  []
 
-[54] [55] [56] [57] [58] [59] [60]
-./killing_forms.tex:472: Display math should end with $$.
-<to be read again> 
-                    
-l.472  $ 
-         \alpha + \beta $ \in \Phi
-The `$' that I just saw supposedly matches a previous `$$'.
-So I shall assume that you typed `$$' both times.
-
-./killing_forms.tex:472: Missing $ inserted.
-<inserted text> 
-                $
-l.472  $ \alpha
-                + \beta $ \in \Phi
-I've inserted a begin-math/end-math symbol since I think
-you left one out. Proceed, with fingers crossed.
-
-./killing_forms.tex:472: Missing $ inserted.
-<inserted text> 
-                $
-l.472  $ \alpha + \beta $ \in
-                              \Phi
-I've inserted a begin-math/end-math symbol since I think
-you left one out. Proceed, with fingers crossed.
-
-./killing_forms.tex:473: Missing $ inserted.
-<inserted text> 
-                $
-l.473 \]
-         or is $ 0 $ otherwise.
-I've inserted something that you may have forgotten.
-(See the <inserted text> above.)
-With luck, this will get me unwedged. But if you
-really didn't forget anything, try typing `2' now; then
-my insertion and my current dilemma will both disappear.
-
-) (./example_sheet_1.tex [61]) (./question_1.tex
+[54] [55] [56] [57] [58] [59] [60]) (./example_sheet_1.tex [61]) (./question_1.tex
 Overfull \hbox (20.15558pt too wide) detected at line 33
 \OML/cmm/m/it/10.95 U[]U \OT1/cmr/m/n/10.95 = (\OML/cmm/m/it/10.95 A[] \OMS/cmsy/m/n/10.95 ^^@ \OML/cmm/m/it/10.95 iB[]\OT1/cmr/m/n/10.95 )(\OML/cmm/m/it/10.95 A \OT1/cmr/m/n/10.95 + \OML/cmm/m/it/10.95 iB\OT1/cmr/m/n/10.95 ) = (\OML/cmm/m/it/10.95 A[]A \OT1/cmr/m/n/10.95 + \OML/cmm/m/it/10.95 B[]B\OT1/cmr/m/n/10.95 ) + \OML/cmm/m/it/10.95 i\OT1/cmr/m/n/10.95 (\OML/cmm/m/it/10.95 A[]B \OMS/cmsy/m/n/10.95 ^^@ \OML/cmm/m/it/10.95 B[]A\OT1/cmr/m/n/10.95 ) = \OML/cmm/m/it/10.95 I  \OT1/cmr/m/n/10.95 =[]\OMS/cmsy/m/n/10.95 )  \OML/cmm/m/it/10.95 A[]A \OT1/cmr/m/n/10.95 + \OML/cmm/m/it/10.95 B[]B \OT1/cmr/m/n/10.95 = \OML/cmm/m/it/10.95 I;  A[]B \OMS/cmsy/m/n/10.95 ^^@ \OML/cmm/m/it/10.95 B[]A \OT1/cmr/m/n/10.95 = 0
  []
@@ -2452,13 +2416,13 @@ Package logreq Info: Writing requests to 'article.run.xml'.
 Here is how much of TeX's memory you used:
  36595 strings out of 492649
  688408 string characters out of 6129622
- 1092181 words of memory out of 5000000
+ 1092180 words of memory out of 5000000
  39642 multiletter control sequences out of 15000+600000
  548118 words of font info for 69 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  55i,14n,65p,10402b,1962s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/local/texlive/2018/texmf-dist/fonts/enc/dvips/cm-super/cm-super-t1.enc}{/usr/local/texlive/2018/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc}</usr/local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cmextra/cmex8.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi6.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy6.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/cm-super/sfbx1095.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/cm-super/sfbx1200.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/cm-super/sfbx1440.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/cm-super/sfrm0800.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/cm-super/sfrm1095.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/cm-super/sfrm1200.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/cm-super/sfrm1728.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/cm-super/sfti1095.pfb>
-Output written on article.pdf (75 pages, 530944 bytes).
+Output written on article.pdf (75 pages, 531680 bytes).
 PDF statistics:
  884 PDF objects out of 1000 (max. 8388607)
  776 compressed objects within 8 object streams

@@ -49,47 +49,52 @@
 \BOOKMARK [3][-]{subsubsection.4.11.3}{Vacuum Bubbles and Connected Diagrams}{subsection.4.11}% 49
 \BOOKMARK [2][-]{subsection.4.12}{Green's function vacuum}{section.4}% 50
 \BOOKMARK [3][-]{subsubsection.4.12.1}{LSZ Reduction}{subsection.4.12}% 51
-\BOOKMARK [2][-]{subsection.4.13}{Cross sections and decay rates}{section.4}% 52
-\BOOKMARK [3][-]{subsubsection.4.13.1}{Kinematics}{subsection.4.13}% 53
-\BOOKMARK [3][-]{subsubsection.4.13.2}{Decay rates}{subsection.4.13}% 54
-\BOOKMARK [3][-]{subsubsection.4.13.3}{ 2 2 \040scattering}{subsection.4.13}% 55
-\BOOKMARK [3][-]{subsubsection.4.13.4}{Decay rates}{subsection.4.13}% 56
-\BOOKMARK [1][-]{section.5}{The Dirac Equation}{}% 57
-\BOOKMARK [2][-]{subsection.5.1}{What does the Dirac equation give us?}{section.5}% 58
-\BOOKMARK [2][-]{subsection.5.2}{The Spinor Representation}{section.5}% 59
-\BOOKMARK [2][-]{subsection.5.3}{Constructing a Lorentz Invariant action of \040 }{section.5}% 60
-\BOOKMARK [2][-]{subsection.5.4}{The Dirac equation}{section.5}% 61
-\BOOKMARK [2][-]{subsection.5.5}{Chiral Spinors}{section.5}% 62
-\BOOKMARK [3][-]{subsubsection.5.5.1}{The Weyl equation}{subsection.5.5}% 63
-\BOOKMARK [2][-]{subsection.5.6}{Parity}{section.5}% 64
-\BOOKMARK [2][-]{subsection.5.7}{Symmetries and Currents of Spinors}{section.5}% 65
-\BOOKMARK [2][-]{subsection.5.8}{Lorentz transformations}{section.5}% 66
-\BOOKMARK [2][-]{subsection.5.9}{Internal vector symmetry}{section.5}% 67
-\BOOKMARK [2][-]{subsection.5.10}{Axial Symmetry}{section.5}% 68
-\BOOKMARK [2][-]{subsection.5.11}{Plane-Wave Solutions}{section.5}% 69
-\BOOKMARK [2][-]{subsection.5.12}{Helicity}{section.5}% 70
-\BOOKMARK [3][-]{subsubsection.5.12.1}{Negative frequency solutions}{subsection.5.12}% 71
-\BOOKMARK [2][-]{subsection.5.13}{Quantising the Dirac field}{section.5}% 72
-\BOOKMARK [2][-]{subsection.5.14}{Warming up with spinors from the SO\(3\) rotation group}{section.5}% 73
-\BOOKMARK [3][-]{subsubsection.5.14.1}{Rotations in Euclidean space}{subsection.5.14}% 74
-\BOOKMARK [3][-]{subsubsection.5.14.2}{Transformations with Unitary matrices}{subsection.5.14}% 75
-\BOOKMARK [2][-]{subsection.5.15}{Lorentz tranformations and spinors}{section.5}% 76
-\BOOKMARK [2][-]{subsection.5.16}{Constructing the Chiral representation for the Dirac equation}{section.5}% 77
-\BOOKMARK [2][-]{subsection.5.17}{Motivating Lorentz invariance of the Dirac equation}{section.5}% 78
-\BOOKMARK [2][-]{subsection.5.18}{Constructing boosts and rotations in block diagonal form}{section.5}% 79
-\BOOKMARK [2][-]{subsection.5.19}{The Weyl equations}{section.5}% 80
-\BOOKMARK [2][-]{subsection.5.20}{Constructing Plane-Wave solutions to the Weyl equation}{section.5}% 81
-\BOOKMARK [1][-]{section.6}{Example sheet 1}{}% 82
-\BOOKMARK [2][-]{subsection.6.1}{Question 1}{section.6}% 83
-\BOOKMARK [2][-]{subsection.6.2}{Question 2}{section.6}% 84
-\BOOKMARK [2][-]{subsection.6.3}{Question 3}{section.6}% 85
-\BOOKMARK [2][-]{subsection.6.4}{Question 4}{section.6}% 86
-\BOOKMARK [2][-]{subsection.6.5}{Question 5}{section.6}% 87
-\BOOKMARK [2][-]{subsection.6.6}{Question 6}{section.6}% 88
-\BOOKMARK [3][-]{subsubsection.6.6.1}{Gauge invariance}{subsection.6.6}% 89
-\BOOKMARK [3][-]{subsubsection.6.6.2}{Constructing the energy-momentum tensor}{subsection.6.6}% 90
-\BOOKMARK [2][-]{subsection.6.7}{Question 7}{section.6}% 91
-\BOOKMARK [2][-]{subsection.6.8}{Question 8}{section.6}% 92
-\BOOKMARK [1][-]{section.7}{Example Sheet 2}{}% 93
-\BOOKMARK [2][-]{subsection.7.1}{Question 1}{section.7}% 94
-\BOOKMARK [2][-]{subsection.7.2}{Question 2}{section.7}% 95
+\BOOKMARK [1][-]{section.5}{Cross sections and decay rates}{}% 52
+\BOOKMARK [2][-]{subsubsection.5.0.1}{Kinematics}{section.5}% 53
+\BOOKMARK [3][-]{subsubsection.5.0.2}{Decay rates}{subsubsection.5.0.1}% 54
+\BOOKMARK [3][-]{subsubsection.5.0.3}{ 2 2 \040scattering}{subsubsection.5.0.1}% 55
+\BOOKMARK [3][-]{subsubsection.5.0.4}{Decay rates}{subsubsection.5.0.1}% 56
+\BOOKMARK [1][-]{section.6}{The Dirac Equation}{}% 57
+\BOOKMARK [2][-]{subsection.6.1}{What does the Dirac equation give us?}{section.6}% 58
+\BOOKMARK [2][-]{subsection.6.2}{The Spinor Representation}{section.6}% 59
+\BOOKMARK [2][-]{subsection.6.3}{Constructing a Lorentz Invariant action of \040 }{section.6}% 60
+\BOOKMARK [2][-]{subsection.6.4}{The Dirac equation}{section.6}% 61
+\BOOKMARK [2][-]{subsection.6.5}{Chiral Spinors}{section.6}% 62
+\BOOKMARK [3][-]{subsubsection.6.5.1}{The Weyl equation}{subsection.6.5}% 63
+\BOOKMARK [2][-]{subsection.6.6}{Dirac Field Bilinears}{section.6}% 64
+\BOOKMARK [2][-]{subsection.6.7}{Parity}{section.6}% 65
+\BOOKMARK [2][-]{subsection.6.8}{Symmetries and Currents of Spinors}{section.6}% 66
+\BOOKMARK [2][-]{subsection.6.9}{Lorentz transformations}{section.6}% 67
+\BOOKMARK [2][-]{subsection.6.10}{Internal vector symmetry}{section.6}% 68
+\BOOKMARK [2][-]{subsection.6.11}{Axial Symmetry}{section.6}% 69
+\BOOKMARK [2][-]{subsection.6.12}{Plane-Wave Solutions}{section.6}% 70
+\BOOKMARK [2][-]{subsection.6.13}{Helicity}{section.6}% 71
+\BOOKMARK [3][-]{subsubsection.6.13.1}{Negative frequency solutions}{subsection.6.13}% 72
+\BOOKMARK [2][-]{subsection.6.14}{Quantising the Dirac field}{section.6}% 73
+\BOOKMARK [2][-]{subsection.6.15}{Warming up with spinors from the SO\(3\) rotation group}{section.6}% 74
+\BOOKMARK [3][-]{subsubsection.6.15.1}{Rotations in Euclidean space}{subsection.6.15}% 75
+\BOOKMARK [3][-]{subsubsection.6.15.2}{Transformations with Unitary matrices}{subsection.6.15}% 76
+\BOOKMARK [2][-]{subsection.6.16}{Lorentz tranformations and spinors}{section.6}% 77
+\BOOKMARK [2][-]{subsection.6.17}{Constructing the Chiral representation for the Dirac equation}{section.6}% 78
+\BOOKMARK [2][-]{subsection.6.18}{Motivating Lorentz invariance of the Dirac equation}{section.6}% 79
+\BOOKMARK [2][-]{subsection.6.19}{Constructing boosts and rotations in block diagonal form}{section.6}% 80
+\BOOKMARK [2][-]{subsection.6.20}{The Weyl equations}{section.6}% 81
+\BOOKMARK [2][-]{subsection.6.21}{Constructing Plane-Wave solutions to the Weyl equation}{section.6}% 82
+\BOOKMARK [1][-]{section.7}{Example sheet 1}{}% 83
+\BOOKMARK [2][-]{subsection.7.1}{Question 1}{section.7}% 84
+\BOOKMARK [2][-]{subsection.7.2}{Question 2}{section.7}% 85
+\BOOKMARK [2][-]{subsection.7.3}{Question 3}{section.7}% 86
+\BOOKMARK [2][-]{subsection.7.4}{Question 4}{section.7}% 87
+\BOOKMARK [2][-]{subsection.7.5}{Question 5}{section.7}% 88
+\BOOKMARK [2][-]{subsection.7.6}{Question 6}{section.7}% 89
+\BOOKMARK [3][-]{subsubsection.7.6.1}{Gauge invariance}{subsection.7.6}% 90
+\BOOKMARK [3][-]{subsubsection.7.6.2}{Constructing the energy-momentum tensor}{subsection.7.6}% 91
+\BOOKMARK [2][-]{subsection.7.7}{Question 7}{section.7}% 92
+\BOOKMARK [2][-]{subsection.7.8}{Question 8}{section.7}% 93
+\BOOKMARK [1][-]{section.8}{Example Sheet 2}{}% 94
+\BOOKMARK [2][-]{subsection.8.1}{Question 1}{section.8}% 95
+\BOOKMARK [2][-]{subsection.8.2}{Question 7}{section.8}% 96
+\BOOKMARK [2][-]{subsection.8.3}{Question 8}{section.8}% 97
+\BOOKMARK [2][-]{subsection.8.4}{Question 9}{section.8}% 98
+\BOOKMARK [2][-]{subsection.8.5}{Question 1}{section.8}% 99
+\BOOKMARK [2][-]{subsection.8.6}{Question 2}{section.8}% 100

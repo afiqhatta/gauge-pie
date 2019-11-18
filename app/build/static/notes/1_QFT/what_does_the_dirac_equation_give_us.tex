@@ -522,10 +522,13 @@ If we take our Dirac Lagrangian
 	\mathcal{L}_D  = \overline{\psi} \left(i\slashed{\partial} - m\right)\psi 
 \] which is equal to 
 \[
- \dots = i u_L ^ \dagger \sigma ^ \mu \partial  _ \mu u _ L + 
- i u _ R ^ \dagger \overline{ \sigma } ^ \mu \partial  _ \mu u _{ R } - m \left(  
- u _ L ^ \dagger u _ R - u _ R ^ \dagger u _ L \right) 
-\] where we define $ \sigma ^ \mu = ( I , \sigma ) , \overline{\sigma } ^ \mu = ( I , - \sigma ) $. 
+	\dots = i u_L ^ \dagger \overline{\sigma} ^ \mu \partial  _ \mu u _ L + 
+ i u _ R ^ \dagger  \sigma ^ \mu \partial  _ \mu u _{ R } - m \left(  
+ u _ L ^ \dagger u _ R + u _ R ^ \dagger u _ L \right) 
+\] where we define $ \sigma ^ \mu = ( I , \sigma ) , \overline{\sigma } ^ \mu = ( I , - \sigma ) $.
+This is derived simply by writing out 
+the components explicitly, then multiplying
+by the required matrices. 
 A massive fermion requires both $ u _L $ and $ u _ R $ , but 
 the massless limit $ m =0 $ requires only $ u _ L $ or $ u _ R $. 
 The mass term is mixing up left handed and right handed spinors. 
@@ -545,21 +548,57 @@ it's complex. For our conjugate momenta,
 \] which doesn't add any degrees of freedom. This means 
 that our real degrees of freedom amounts to $\frac{1}{2 } \times 8  = 4$. 
 We have 2 for the spin up and spin down particle, and 2 for the 
-spin up and spin down anti-particle. 
+spin up and spin down anti-particle.
 
-Consider $ \gamma ^ 5 $. 
-Note that  $ S [ \Lambda ] $ is not necessarily block diagonal 
-for different bases, 
+\subsection{Dirac Field Bilinears}  
+Throughout this section, 
+we've only been using a specific representation 
+of $ S $ (which we dubbed the chiral representation). 
+However, note that in a different basis,  $ S [ \Lambda ] $ is not necessarily block diagonal! We can transform to a different 
+basis by applying the map  
 \[
- \gamma ^ \mu = U \gamma ^ \mu U ^{ - 1 }, \psi \to U \psi 
+ \gamma ^ \mu \to U \gamma ^ \mu U ^{ - 1 }, \psi \to U \psi 
 \] We use 
 \[
  \gamma ^{ 5 }  : = i \gamma ^ 0 \gamma ^ 1 \gamma ^ 2 \gamma ^ 3 
 \]  to define Weyl spinors in a basis independent way. 
-We can verify that this object has the properties 
+This object has very nice properties which relate 
+agonistically with $ \gamma ^ \mu $ for $ \mu  = 0 , 1, 2,3 $. 
+\begin{claim}{(Commutation relations for $ \gamma ^ 5 $)}
+	The $ \gamma ^ 5$ matrix satisfies the 
+	relations 
 \[
-	\left\{  \gamma ^ \mu , \gamma ^ 5 \right\}   = 0 , \left(  \gamma ^ 5  \right)  ^ 2 = I 
-\] We check that in our chiral representation, 
+	\left\{  \gamma ^ \mu , \gamma ^ 5 \right\}   = 0 , \quad  \left(  \gamma ^ 5  \right)  ^ 2 = I \] 
+
+\begin{proof}
+	To prove the first 
+relation, it's instructive to set $ \mu  =0  $ just to 
+see what's going on. We have that the anti-commutator is 
+\begin{align*}
+	\left\{ \gamma ^ \mu , \gamma ^ 5  \right\}  &=  i ( 
+	\gamma ^ 0 \gamma ^ 0 \gamma ^ 1 \gamma ^ 2 \gamma ^ 3  + 
+	\gamma ^ 0 \gamma ^ 1 \gamma ^ 2 \gamma ^ 3 \gamma ^ 0 ) \\
+						     &=  i ( \gamma ^ 1 \gamma ^ 2 \gamma ^ 3 - \gamma ^ 1 \gamma ^ 0 \gamma ^ 2 \gamma ^ 3 \gamma ^ 0 )  \\
+						     &=  i ( \gamma ^ 1 \gamma ^ 2 \gamma ^ 3 + \gamma ^ 1 \gamma ^ 2 \gamma ^ 0 \gamma ^ 3 \gamma ^ 0 )  \\
+						     &=  i ( \gamma ^ 1 \gamma ^ 2 \gamma ^ 3 - \gamma ^ 1 \gamma ^ 2 \gamma ^ 3 ( \gamma ^ 0 ) ^ 2 )   = 0
+\end{align*}
+We've used liberally here the fact that 
+\[
+ \gamma ^ \mu \gamma ^ \nu = - \gamma ^ \nu \gamma ^ \mu \text{ when } \nu \neq \mu 
+\] For the second relation, we use this fact as well. 
+Note that when we pass a $ \gamma ^ j  $ matrix
+past $ n $ matrices $ \gamma ^ i $ where $ i $ never equals
+$ j  $, we pick up a factor of $ ( - 1) ^ n $. 
+Thus, note that $ ( \gamma ^ 5 ) ^ 2$ is just 
+\begin{align*}
+	( \gamma ^ 5) ^ 2 & = i^ 2 \gamma ^ 0 \gamma ^ 1 \gamma ^ 2 \gamma ^ 3 \gamma ^ 0 \gamma ^ 1 \gamma ^ 2 \gamma ^ 3 \\
+			  &=  ( - 1) ^ 4 \gamma ^ 1 \gamma ^ 2 \gamma ^ 3 \gamma ^ 1 \gamma ^ 2 \gamma ^ 3  \\
+			  &=  ( - 1) ^ 3 \gamma ^ 2 \gamma ^ 3 \gamma ^ 2 \gamma ^ 3  \\
+			  &=  ( - 1) ^ 4 I  = I 
+\end{align*} 
+\end{proof}
+\end{claim}
+Now, fWe check that in our chiral representation, 
 \[
 	\gamma ^ 5 = \begin{pmatrix}  - I & 0 \\ 0 & I  \end{pmatrix} 
 \] We define projection operators 

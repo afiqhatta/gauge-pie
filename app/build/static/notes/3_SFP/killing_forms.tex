@@ -356,12 +356,15 @@ We'll start by proving two things.
 			that the Killing form vanishes for 
 			\[
 			 \kappa ( H , E ^ \alpha ) = 0 
-			\] 
+			\] This is somewhat 
+			of a nice statement because we can interpret this 
+			as the vectors $ E ^{ \alpha } $ being 
+			orthogonal to the vectors in our Cartan subalgebra $ H$. 
 		\item $ \forall \alpha, \beta \in \Phi $, and $ \alpha + \beta \neq 0 $, 
 			we have that 
 			\[
 			 \kappa ( E ^ \alpha, E ^ \beta ) = 0 
-			\] 
+			\] This is somewhat of a non-obvious condition! 
 	\end{enumerate}
 \begin{proof}
 Throughout this proof, we'll use 
@@ -369,14 +372,24 @@ Jacobi identity, the adjoint representation, and Killing form
 invariance. 
 We'll prove the first statement. 
 \begin{enumerate}
-	\item Consider $ \alpha ( H ' ) \kappa ( H , E ^ \alpha )$. 
-		By linearity, we have that 
+	\item Consider $ \alpha ( H ' ) \kappa ( H , E ^ \alpha )$ for some 
+		arbitrary $ H ' $ in the Cartan subalgebra. Note that, 
+		we can't possibly have $ \alpha ( H ' )  =0 $ for 
+		all  $ H' $ in the subalgebra because, by maximality, 
+		this would then imply that $ [ H' , E ^ \alpha ]  = 0 $ 
+		for all $ H'  $ , which implies that $ E ^ \alpha $ was 
+		in the subalgebra (false by assumption). 
+		By linearity, we pull the root side the killing form 
+		in the first line. We have that 
 		 \begin{align*}
 			 \alpha ( H ' ) \kappa ( H , E ^ \alpha ) &=  
 			 \kappa ( H ,  [ H ', E ^ \alpha ] )  \\
 								  &=  - \kappa ( [ H ' , H ] ,
-								  E^ \alpha ) \\
-								  &=  - \kappa ( 0 , E ^ \alpha )  \\
+								  E^ \alpha ) \text{ by the invariance 
+								  property of the Killing form }\\
+								  &=  - \kappa ( 0 , E ^ \alpha )  \text{ 
+								  by the Abelian property of the 
+							  Cartan subalgebra }\\
 								  &=  0  
 		\end{align*}
 		Now, $ \alpha ( H ' ) \neq 0 $ from $ H ' $, implies 
@@ -469,6 +482,6 @@ Using the Jacobi identity,
 This means that we get one extra bracket to our set of relations. 
 \[
  [ E ^ \alpha , E ^ \beta ] = N_{ \alpha, \beta  } E ^{ \alpha + \beta }, \text{ if } 
- $ \alpha + \beta $ \in \Phi 
+  \alpha + \beta  \in \Phi 
 \] or is $ 0 $ otherwise.
 \pagebreak 
