@@ -125,34 +125,40 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {subsection}{\numberline {8.1}Algebra in the Cartan Weyl basis}{61}{subsection.8.1}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {9}Example sheet 1}{62}{section.9}
+\contentsline {subsubsection}{\numberline {8.1.1}Working out the Bracket of $ \left [ E ^ \alpha , E ^ \beta \right ] $}{61}{subsubsection.8.1.1}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {9.1}Question 1}{62}{subsection.9.1}
+\contentsline {subsubsection}{\numberline {8.1.2}Connections with $ \mathcal { L } ( SU ( 2) ) $}{62}{subsubsection.8.1.2}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {9.2}Question 2}{64}{subsection.9.2}
+\contentsline {subsection}{\numberline {8.2}Consequences}{63}{subsection.8.2}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {9.3}Question 3}{64}{subsection.9.3}
+\contentsline {section}{\numberline {9}Example sheet 1}{65}{section.9}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {9.4}Question 4}{66}{subsection.9.4}
+\contentsline {subsection}{\numberline {9.1}Question 1}{65}{subsection.9.1}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {9.5}Question 5}{67}{subsection.9.5}
+\contentsline {subsection}{\numberline {9.2}Question 2}{67}{subsection.9.2}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {9.6}Question 6}{69}{subsection.9.6}
+\contentsline {subsection}{\numberline {9.3}Question 3}{67}{subsection.9.3}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {9.7}Question 7}{70}{subsection.9.7}
+\contentsline {subsection}{\numberline {9.4}Question 4}{69}{subsection.9.4}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {9.8}Question 8}{72}{subsection.9.8}
+\contentsline {subsection}{\numberline {9.5}Question 5}{70}{subsection.9.5}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {9.9}Question 9}{73}{subsection.9.9}
+\contentsline {subsection}{\numberline {9.6}Question 6}{72}{subsection.9.6}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {10}Example Sheet 2}{74}{section.10}
+\contentsline {subsection}{\numberline {9.7}Question 7}{73}{subsection.9.7}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {10.1}Question 4}{74}{subsection.10.1}
+\contentsline {subsection}{\numberline {9.8}Question 8}{75}{subsection.9.8}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {10.2}Question 9}{74}{subsection.10.2}
+\contentsline {subsection}{\numberline {9.9}Question 9}{76}{subsection.9.9}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {10.3}Question 8}{74}{subsection.10.3}
+\contentsline {section}{\numberline {10}Example Sheet 2}{77}{section.10}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {10.4}Question 2}{74}{subsection.10.4}
+\contentsline {subsection}{\numberline {10.1}Question 4}{77}{subsection.10.1}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {11}Problems left to contribute}{75}{section.11}
+\contentsline {subsection}{\numberline {10.2}Question 9}{77}{subsection.10.2}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {10.3}Question 8}{77}{subsection.10.3}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {10.4}Question 2}{77}{subsection.10.4}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {11}Problems left to contribute}{78}{section.11}

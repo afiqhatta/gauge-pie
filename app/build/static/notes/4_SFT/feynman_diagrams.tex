@@ -260,35 +260,52 @@ $ A ( k, \Lambda ) $ as
 	 , \Lambda ) } \phi_{ \frac{ \vec{k} }{ \zeta } } ^ - 
  \]
  \subsection{$ \beta$ - functions}
+ Instead of parametrising our RG flow 
+ the way we've done it as $ \Lambda / \zeta$,
+ since  $ \zeta \geq 1 $, it's more natural 
+ to write $ \zeta  = e^{ s } $ for some continuous parameter $ s \geq 0 $. 
  Our new cutoff in RG flow is given by the relation 
 \[
  \Lambda ' = \frac{ \Lambda }{ \zeta  } = \Lambda e^{ - s }
-\] We define our beta functions to be the 
-solutions to the differential equation 
+\] We will now introduce a piece of 
+machinery to help us analyse 
+RG flow a bit more. We define our beta functions to be forcing 
+terms to the differential equation 
 \[
-	\frac{ d g_ n }{ ds } = `\beta_ n ( g _ n ) , \quad \begin{cases}
+	\frac{ d g_ n }{ ds } = \beta_ n ( g _ n ) , \quad \begin{cases}
 		\beta_ n > 0 & \text{ in the IR } \\
 		\beta _ n < 0 & \text{ otherwise }
 	\end{cases}
-\] Recall, that our leading order 
+\] The solutions to these equations are 
+of course just how our coupling constants evolve 
+with respect to changes in $ s $. Recall, that our leading order 
 contributions for our coupling constants are given by 
 \[
  \mu ^ 2 ( \zeta ) = \zeta ^ 2 ( \mu _ 0 ^ 2  + ag_0 ), \quad
  g ( \zeta ) = \zeta ^{ 4 - d  } ( g_0 - b g_0^ 2 ) 
-\] where our constants are given by 
+\] We derived this from earlier when we looked 
+at our first and second order 
+changes in our free energy. Recall, our constants are given by 
 \[
 	a = 12 \int_{ \Lambda / \zeta } ^ \Lambda \frac{  d^ d q }{ ( 2 \pi ) ^ d }
 	\frac{1}{q ^ 2 + \mu _ 0 ^ 2}, \text{ and } , \quad
 	b = 36 \int _{ \Lambda / \zeta } ^  \Lambda \frac{ d ^ d q }{ 
 	( 2 \pi ) ^ d  } \frac{1}{( q ^ 2 + \mu _ 0 ^ 2 ) ^ 2 }
-\] We differentiate these things with resepct to $ \zeta $. 
+\] We differentiate these things with respect to $ \zeta $. 
+To do this, we assume we only have a very small perturbation
+from $ \Lambda \to \Lambda e^{ -s } $, and we approximate 
+the function as a constant locally. We also approximate 
+$ e ^{ - s}  = 1 - s + \dots $
 \[
 	\int _{ \Lambda e ^{ - s} } ^ \Lambda dq \, f ( q) 
 	\simeq \left[  \Lambda - \Lambda e^{ - s}  \right] f ( \Lambda ) 
 	\simeq \Lambda f ( \Lambda ) s \implies 
 	\frac{ d }{ ds } \int _{ \Lambda e ^{ - s} } ^ \Lambda 
 	dq \, f ( q ) = \Lambda f ( \Lambda ) 
-\] In four dimensions, we integrate this 
+\]  We do a change of coordinates 
+in terms of spherical polars in the integrands 
+of $ a $ and $ b  $. Then, we use the identity above 
+to write out the beta functions. In four dimensions, we integrate this 
 thing in terms of spherical polars so that 
 we have that our coupling constants are solved by 
 \[
@@ -297,7 +314,10 @@ we have that our coupling constants are solved by
  \frac{ dg }{ ds } = \frac{ - 9 }{ 2 \pi ^ 2 } \frac{ \Lambda ^ 4 }{
  ( \Lambda ^ 2 + \mu ^ 2 ) } g ^ 2  
 \] This gives us differential equations that 
-we can solve. 
+we can solve. To the first order, we've written  
+$ \mu ^ 2 ( \zeta ) \sim \mu ^ 2 _ 0 $, and that $ g  \sim g_0 $ and we've 
+reflected this in the differential equation 
+(where intially we had $ \mu ^ 2 _ 0 $.  
 
 \subsection{$ \epsilon $ Expansions} 
 We learned that our $ \phi ^ 4 $ interaction 
@@ -323,7 +343,7 @@ to give approximate equations
  \begin{align*}
 	 \frac{ d \mu ^ 2 }{ds } \simeq & 2 \mu ^ 2 + \frac{3}{2 \pi ^ 2 } \frac{
 	 \Lambda ^ 4 }{ \Lambda ^ 2 + \mu ^ 2 } \tilde{ g } \\
-	 \frac{ \tilde{g }  }{ds  } \simeq & 
+	 \frac{ d \tilde{g }  }{ds  } \simeq & 
 	 \epsilon g  - \frac{ 9 }{ 2 \pi ^ 2 } \frac{ \Lambda ^ 4 }{
 	 ( \Lambda ^ 2 + \mu ^ 2 ) ^ 2 } \tilde{g } ^ 2  
 \end{align*}

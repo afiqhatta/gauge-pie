@@ -598,7 +598,9 @@ Thus, note that $ ( \gamma ^ 5 ) ^ 2$ is just
 \end{align*} 
 \end{proof}
 \end{claim}
-Now, fWe check that in our chiral representation, 
+Now, we can write out $ \gamma ^ 5 $ explicitly 
+depending on the representation we choose. 
+We check that in our chiral representation, 
 \[
 	\gamma ^ 5 = \begin{pmatrix}  - I & 0 \\ 0 & I  \end{pmatrix} 
 \] We define projection operators 
@@ -721,27 +723,27 @@ We have that infinitesimally,
 	\psi \to S [ \Lambda ] \indices{ ^ \alpha _ \beta }  \psi ^ \beta  ( x ^ \mu - \omega  \indices{ ^ \mu _ \nu} x ^ \nu )  
 \] where we have that $ \omega  $ is generated as 
 \[
-	\omega \indices{ ^ \mu _ \nu } =  \frac{1}{2 } \Omega_{ \rho \sigma } ( M ^{ \rho \sigma } )\indices{ ^ \mu _ \nu }  
+\omega \indices{ ^ \mu _ \nu } =  \frac{1}{2 } \Omega_{ \rho \sigma } ( M ^{ \rho \sigma } )\indices{ ^ \mu _ \nu }  
 \] Since we defined earlier that 
 \[
-	( M ^{ \rho \sigma } ) \indices{ ^ \mu _ \nu } = \eta ^{ \rho \mu } \delta \indices{ ^ \sigma _ \nu }
-	 - \eta ^{ \sigma \mu } \delta \indices{ ^ \rho _ \nu } 
+( M ^{ \rho \sigma } ) \indices{ ^ \mu _ \nu } = \eta ^{ \rho \mu } \delta \indices{ ^ \sigma _ \nu }
+ - \eta ^{ \sigma \mu } \delta \indices{ ^ \rho _ \nu } 
 \] This implies that $ \omega ^{ \mu \nu } = \Omega ^{ \mu \nu } $. 
 Our infinitesimal change in our spinor is 
 \[
- \delta \psi ^ \alpha    = i \omega ^{ \mu \nu }  \left[ 
- x ^ \nu \partial  _ \mu \psi ^ \alpha  - \frac{1}{2 }  ( S ^{ \rho \sigma } ) \indices{ ^ \alpha 
- _ \beta } \psi ^ \beta  \right] 
+\delta \psi ^ \alpha    = i \omega ^{ \mu \nu }  \left[ 
+x ^ \nu \partial  _ \mu \psi ^ \alpha  - \frac{1}{2 }  ( S ^{ \rho \sigma } ) \indices{ ^ \alpha 
+_ \beta } \psi ^ \beta  \right] 
 \] Our corresponding conjugate change is 
 \[
- \delta \overline{ \psi } _ \alpha  = 
-  - \omega ^{ \mu \nu } \left[  x _ \nu \partial  _ \mu \overline{\psi }_ \alpha 
-  + \frac{1}{2 } \overline{\psi } ( S_{ \mu \nu } ) \indices{ ^ \beta _ \alpha }  \right]  
+\delta \overline{ \psi } _ \alpha  = 
+- \omega ^{ \mu \nu } \left[  x _ \nu \partial  _ \mu \overline{\psi }_ \alpha 
++ \frac{1}{2 } \overline{\psi } ( S_{ \mu \nu } ) \indices{ ^ \beta _ \alpha }  \right]  
 \] where the last term comes from $ \overline{\psi }_ \beta  S [ \Lambda ] ^{ - 1} $. 
 Our conserved current 
 \[
- ( J ^ \mu ) ^{ \rho \sigma }  = x ^ \rho T ^{ \mu \sigma } - x ^ \sigma T ^{ \mu \rho }  - i 
- \overline{ \psi } \gamma ^ \mu S ^{ \rho \sigma } \psi 
+( J ^ \mu ) ^{ \rho \sigma }  = x ^ \rho T ^{ \mu \sigma } - x ^ \sigma T ^{ \mu \rho }  - i 
+\overline{ \psi } \gamma ^ \mu S ^{ \rho \sigma } \psi 
 \] THe first term looks like a real scalar stress energy tensor. 
 The new piece will give us spin $ \frac{1}{2 } $ after we quantise the
 field. 
@@ -749,64 +751,64 @@ For example, looking at the last term $ ( J ^ 0 ) ^{ ij }  =  -i \overline{ \psi
 Using the representation in Pauli matrices, 
 we get that the above is equal to 
 \[
- ( J ^ 0 ) ^{ ij }  = \frac{1}{2 } \epsilon ^{ ijk  } \psi ^ \dagger 
- \begin{pmatrix}  \sigma ^ k & 0 \\ 0 & \sigma ^ k  \end{pmatrix} \psi  
+( J ^ 0 ) ^{ ij }  = \frac{1}{2 } \epsilon ^{ ijk  } \psi ^ \dagger 
+\begin{pmatrix}  \sigma ^ k & 0 \\ 0 & \sigma ^ k  \end{pmatrix} \psi  
 \] 
 \subsection{Internal vector symmetry} 
 We get that under the phase rotation 
 \[
- \psi \to e^{ i \alpha } \psi \implies \delta \psi  = i \sigma \psi 
+\psi \to e^{ i \alpha } \psi \implies \delta \psi  = i \sigma \psi 
 \] This gives us a conserved quantitiy 
 \[
- j ^{ \mu _ \nu }  = \overline{ \psi } \gamma ^ \mu \psi \text{ a vector current }
+j ^{ \mu _ \nu }  = \overline{ \psi } \gamma ^ \mu \psi \text{ a vector current }
 \] This gives us the conserved charge 
 \[
- Q = \int d^ 3 x \, \overline{\psi } \gamma^ 0 \psi  = \int d ^ 3 x \, \psi ^ \dagger \psi 
+Q = \int d^ 3 x \, \overline{\psi } \gamma^ 0 \psi  = \int d ^ 3 x \, \psi ^ \dagger \psi 
 \]  in other words, an electric charge. 
 
 \subsection{Axial Symmetry} 
 For massless spinors in the $ m = 0 $ limit, 
 we transform 
 \[
-	\psi _{ \alpha } \to \left(  e ^{ i \alpha \gamma ^ 5 }  \right) \indices{ _ \alpha ^ \beta }
-	\psi _ \beta 
+\psi _{ \alpha } \to \left(  e ^{ i \alpha \gamma ^ 5 }  \right) \indices{ _ \alpha ^ \beta }
+\psi _ \beta 
 \] This rotates left handed and right handed spinors in the 
 opposite direction. This leads to 
 the conserved axial vector current 
 \[
- j _ A ^ \mu  = \overline{ \psi  } \gamma ^ \mu \gamma ^ 5 \psi 
+j _ A ^ \mu  = \overline{ \psi  } \gamma ^ \mu \gamma ^ 5 \psi 
 \] 
 
 \subsection{Plane-Wave Solutions} 
 We want to solve $ ( i \slashed{\partial}  -m ) \psi = 0 $. 
 We use the ansatz 
 \[
- \psi = u_{ \vec{p} } e ^{ - i p \cdot  x }
+\psi = u_{ \vec{p} } e ^{ - i p \cdot  x }
 \] where $ u _{ \vec{p} }  $ is a constant spinor 
 depending on $ \vec{p} $ . 
 Substituting this in, using the chiral representation
 of $ \gamma ^ \mu $, we have that 
 \[
- ( \gamma ^ \mu p _ \mu - m ) u _{ \vec{p} }  = 0  = 
- \begin{pmatrix}  - m & p _ \mu \sigma ^ \mu \\ p _ \mu \overline{ \sigma } ^ \mu 
- & - m  \end{pmatrix} u _{ \vec{p} }  =0 
+( \gamma ^ \mu p _ \mu - m ) u _{ \vec{p} }  = 0  = 
+\begin{pmatrix}  - m & p _ \mu \sigma ^ \mu \\ p _ \mu \overline{ \sigma } ^ \mu 
+& - m  \end{pmatrix} u _{ \vec{p} }  =0 
 \] Our claim is that we have a solution 
 given by 
 \[
- u _{ \vec{p} }  = \begin{pmatrix}  \sqrt{ p \cdot  \sigma }  \xi \\
- \sqrt{ p \cdot  \overline{ \sigma } }  \xi \end{pmatrix} 
+u _{ \vec{p} }  = \begin{pmatrix}  \sqrt{ p \cdot  \sigma }  \xi \\
+\sqrt{ p \cdot  \overline{ \sigma } }  \xi \end{pmatrix} 
 \] for any two component spinor $ \xi $ such that $ \xi ^ \dagger \xi = 1 $. 
 To prove this, we let  $ u _ { \vec{p} } = ( u _ 1, u _ 2 ) $, and 
 substitute into the above such that 
 \[
-	( p \cdot  \sigma ) u _ 2 = m u _1 , \quad ( p \cdot  \overline{ \sigma } ) u _ 1 
-	 = m u _ 2 
+( p \cdot  \sigma ) u _ 2 = m u _1 , \quad ( p \cdot  \overline{ \sigma } ) u _ 1 
+ = m u _ 2 
 \] Either of these equations implies the other, since 
 \begin{align*}
-	( p \cdot  \sigma ) ( p \cdot  \overline{ \sigma } ) &=  
-	p_0^ 2 - p _ i p _ j \sigma ^ i \sigma ^ j \\
-	&=   p_0 ^ 2  - p _ i p_ j \frac{1}{2 } \left\{  \sigma ^ i , \sigma ^ j  \right\}  \\
-	&=  p _\mu p ^ \mu   = m ^ 2  
+( p \cdot  \sigma ) ( p \cdot  \overline{ \sigma } ) &=  
+p_0^ 2 - p _ i p _ j \sigma ^ i \sigma ^ j \\
+&=   p_0 ^ 2  - p _ i p_ j \frac{1}{2 } \left\{  \sigma ^ i , \sigma ^ j  \right\}  \\
+&=  p _\mu p ^ \mu   = m ^ 2  
 \end{align*}
 
 Now, we try the ansatz $ u _ 1 = ( p \cdot  \sigma ) \xi $ for the 
@@ -814,44 +816,44 @@ two component spinor $ \xi ' $.
 Substituting this into the above, 
 we have that 
 \[
-	u _ 2 = \frac{1}{m} ( p \cdot  \overline{ \sigma } ) ( p \cdot  \sigma ) \xi = m \xi ' 
+u _ 2 = \frac{1}{m} ( p \cdot  \overline{ \sigma } ) ( p \cdot  \sigma ) \xi = m \xi ' 
 \] Hence, 
 any vector of the form $ u _{ \vec{p} }  = A ( ( p \cdot  \sigma ) \xi ' , m \xi ' ) $. 
 To make this look more symmetric, choose $ A = \frac{1}{m } $  and 
 $ \xi '  = \sqrt{ p \cdot  \overline{ \sigma } }  \xi $  with $ \xi $ const. 
 Then, we have that 
 \[
- u _{ \vec{p} }  = \begin{pmatrix}  \sqrt{ p \cdot  \sigma }  \xi \\
- \sqrt{ p \cdot  \overline{ \sigma }   } \xi  \end{pmatrix}  
+u _{ \vec{p} }  = \begin{pmatrix}  \sqrt{ p \cdot  \sigma }  \xi \\
+\sqrt{ p \cdot  \overline{ \sigma }   } \xi  \end{pmatrix}  
 \]  
 Examples. Let's take $ \mathbb{p } = 0$, then we have 
 that our solution looks like 
- \[
- u_{ \vec{p} = 0 }  = \sqrt{ m }  \begin{pmatrix}  \xi \\ \xi  \end{pmatrix} \text{ for any } \xi 
+\[
+u_{ \vec{p} = 0 }  = \sqrt{ m }  \begin{pmatrix}  \xi \\ \xi  \end{pmatrix} \text{ for any } \xi 
 \] Under spatial rotations, we have that 
 \[
- \xi \to e ^{ i \sigma \cdot  \phi  / 2 } \xi 
+\xi \to e ^{ i \sigma \cdot  \phi  / 2 } \xi 
 \] After quantisation, $ \xi $ describes the spin of the spinor. 
 For example, we have that 
 \[
- \xi = \begin{pmatrix}  1 \\ 0  \end{pmatrix}  \text{ represents spin up along } x ^ 3 \text{ axis }
+\xi = \begin{pmatrix}  1 \\ 0  \end{pmatrix}  \text{ represents spin up along } x ^ 3 \text{ axis }
 \] Let's consider a particle boosted along the $ x ^ 3 $ direction. 
 Now, the momentum is not going to be zero. 
 Now what we have is that 
 \[
- u_{ \vec{p} }  = \begin{pmatrix}  \sqrt{ E - p ^ 3 }  \begin{pmatrix}  1 \\ 0  \end{pmatrix} 
- \\ \sqrt{ E + p_3 }  \begin{pmatrix}  1 \\ 0  \end{pmatrix}  \end{pmatrix} 
+u_{ \vec{p} }  = \begin{pmatrix}  \sqrt{ E - p ^ 3 }  \begin{pmatrix}  1 \\ 0  \end{pmatrix} 
+\\ \sqrt{ E + p_3 }  \begin{pmatrix}  1 \\ 0  \end{pmatrix}  \end{pmatrix} 
 \] which, in the $ m \to 0 $ or $ E \to p^ 3 $ limit, converges to 
 \[
- \sqrt{ 2 E }  \begin{pmatrix}  0 \\ 0 \\ 1 \\ 0  \end{pmatrix} 
+\sqrt{ 2 E }  \begin{pmatrix}  0 \\ 0 \\ 1 \\ 0  \end{pmatrix} 
 \] Now, with instead $ \xi  = \begin{pmatrix}  0 \\ 1  \end{pmatrix}  $, 
 when we act on this we instead get that 
 \[
-	u _{ \vec{p} }  = \begin{pmatrix}  \sqrt{ E + p^ 3 }  \begin{pmatrix}  0 \\ 1   \end{pmatrix}  \\
- \sqrt{ E - p ^ 3 }  \begin{pmatrix}  0 \\ 1  \end{pmatrix}  \end{pmatrix} 
+u _{ \vec{p} }  = \begin{pmatrix}  \sqrt{ E + p^ 3 }  \begin{pmatrix}  0 \\ 1   \end{pmatrix}  \\
+\sqrt{ E - p ^ 3 }  \begin{pmatrix}  0 \\ 1  \end{pmatrix}  \end{pmatrix} 
 \] which tends to 
 \[
- \sqrt{2 E }  \begin{pmatrix}  0 \\ 1 \\ 0 \\ 0  \end{pmatrix} 
+\sqrt{2 E }  \begin{pmatrix}  0 \\ 1 \\ 0 \\ 0  \end{pmatrix} 
 \]
 \subsection{Helicity}
 
@@ -859,8 +861,8 @@ The Helicity operator projects angular momentum
 along the direction of motion. 
 If we define 
 \[
-	h = \hat{\vec{p} } \cdot  \vec{s}  = \frac{1}{2 } \hat{ p } _ k 
-	\begin{pmatrix}  \sigma ^ k & 0 \\ 0 & \sigma ^ k  \end{pmatrix} 
+h = \hat{\vec{p} } \cdot  \vec{s}  = \frac{1}{2 } \hat{ p } _ k 
+\begin{pmatrix}  \sigma ^ k & 0 \\ 0 & \sigma ^ k  \end{pmatrix} 
 \] A massless spin up operator has $ h = \frac{1}{2 } $, and a massless spin down 
 particle has $ h = - \frac{1}{2 } $. 
 
@@ -868,8 +870,8 @@ particle has $ h = - \frac{1}{2 } $.
 If we define $ \psi  = v _{ \vec{p} } e ^{ i p \cdot  x } $. 
 The Dirac equation then gives 
 \[
- v_{ \vec{p} }  = \begin{pmatrix}  \sqrt{ p \cdot  \sigma }  \eta \\
-  - \sqrt{ p \cdot  \overline{ \sigma }  }  \end{pmatrix} 
+v_{ \vec{p} }  = \begin{pmatrix}  \sqrt{ p \cdot  \sigma }  \eta \\
+- \sqrt{ p \cdot  \overline{ \sigma }  }  \end{pmatrix} 
 \] where we have as well that $ \eta ^ \dagger \eta  = 1 $ and $ \eta $ 
 is a constant 2 -spinor. 
 
@@ -878,9 +880,9 @@ is a constant 2 -spinor.
 When we take these solutions and write them out 
 in Fourier modes, we have that 
 \begin{align*}
-	\psi ( \vec{x} ) &=  \sum _{ i = 1 } ^ 2 
-	\int \frac{ d^ 3 p }{ ( 2 \pi ) ^ 3 \sqrt{ 2 E_{ \vec{p} } }  } \left[  
-	b_{ \vec{p} } ^ s u _{ \vec{p} } ^ s e ^{ i \vec{p} \cdot  \vec{x} } 
+\psi ( \vec{x} ) &=  \sum _{ i = 1 } ^ 2 
+\int \frac{ d^ 3 p }{ ( 2 \pi ) ^ 3 \sqrt{ 2 E_{ \vec{p} } }  } \left[  
+b_{ \vec{p} } ^ s u _{ \vec{p} } ^ s e ^{ i \vec{p} \cdot  \vec{x} } 
 + c_{ \vec{p} } ^{ s \dagger } v_{ \vec{p} } ^ s e ^{ - i \vec{p} \cdot  \vec{x}}\right] \\
 \psi ^ \dagger ( \vec{x} ) &=  \sum _{ i = 1 } ^ 2 
 \int \frac{ d ^ 3 p }{ ( 2 \pi ) ^ 3 \sqrt{ 2 E _{ \vec{p} } }  } \left[  
@@ -891,38 +893,155 @@ c_{ \vec{p} } ^ s v_{ \vec{p}} ^{ s \dagger } e ^{ i \vec{p} \cdot  \vec{x} } \r
 In spinor quantisation, it turns out that we require 
 anti commutations relations instead of commutation relations, with 
 \[
- \left\{  A, B  \right\}   = AB + B A 
+\left\{  A, B  \right\}   = AB + B A 
 \]  We need the relations 
 \[
-	\left\{  \psi _ \alpha ( \vec{x} ) , \psi _ \beta ( \vec{y} )  \right\}   = 0 
-	= \left\{  \psi _{ \alpha } ^ \dagger ( \vec{x} ) , \psi _{ \beta } ^ \dagger 
-	( \vec{y} ) \right\}  , \quad \left\{  \psi _ \alpha ( \vec{x} ) , 
+\left\{  \psi _ \alpha ( \vec{x} ) , \psi _ \beta ( \vec{y} )  \right\}   = 0 
+= \left\{  \psi _{ \alpha } ^ \dagger ( \vec{x} ) , \psi _{ \beta } ^ \dagger 
+( \vec{y} ) \right\}  , \quad \left\{  \psi _ \alpha ( \vec{x} ) , 
 \psi _{ \beta } ( \vec{y} ) \right\}  = \delta _{ \alpha \beta } \delta ^ 3 ( \vec{x} - \vec{y} ) 
 \]
 We can prove that thesse are equivalent to 
 \[
- \left\{  b_{ \vec{q} } ^ r , b _{ \vec{q} } ^{ s \dagger }  \right\}  = 
- ( 2 \pi ) ^ 3 \delta ^ 3 ( \vec{p} - \vec{q} ) \delta ^{ rs }  = \left\{  c_{ \vec{p} } ^ r , 
- c _{ \vec{q} } ^{ s \dagger }\right\} 
+\left\{  b_{ \vec{q} } ^ r , b _{ \vec{q} } ^{ s \dagger }  \right\}  = 
+( 2 \pi ) ^ 3 \delta ^ 3 ( \vec{p} - \vec{q} ) \delta ^{ rs }  = \left\{  c_{ \vec{p} } ^ r , 
+c _{ \vec{q} } ^{ s \dagger }\right\} 
 \] Our Hamiltonian density looks like 
 \begin{align*}
-	\mathcal{ H } &=  \pi \dot{ \psi }  - \mathcal{ L }   \\
-	&=  i \psi ^ \dagger \dot{ \psi }  - i \overline{ \psi } \gamma ^ 0 \partial  _ 0 
-	\psi - i \overline{ \psi } \gamma ^ i \partial  _ i \psi + m \overline{ \psi } \psi \\
-	&=  \overline{ \psi }( - i \gamma ^ i \partial  _ i + m ) \psi   \\ 
+\mathcal{ H } &=  \pi \dot{ \psi }  - \mathcal{ L }   \\
+&=  i \psi ^ \dagger \dot{ \psi }  - i \overline{ \psi } \gamma ^ 0 \partial  _ 0 
+\psi - i \overline{ \psi } \gamma ^ i \partial  _ i \psi + m \overline{ \psi } \psi \\
+&=  \overline{ \psi }( - i \gamma ^ i \partial  _ i + m ) \psi   \\ 
 \end{align*}
 If we plug in $ \psi , \overline{ \psi } $ from the above, 
 we use anti commutation relations and some reuslts on inner 
 products of spinors to get that 
 \[
- u _{ \vec{p} } ^{ r \dagger } u _{ \vec{p} } ^ s  = 
- v_{\vec{p} } ^{ r \dagger } v _{ \vec{p} } ^ s  = 2 p_0 \delta ^{ rs } , \quad 
- u_{\vec{p} } ^{  r\dagger } v_{\vec{p} } ^ s = 0 = v_{ \vec{p} } ^{ r \dagger  } u_{ \vec{p} } ^ s 
+u _{ \vec{p} } ^{ r \dagger } u _{ \vec{p} } ^ s  = 
+v_{\vec{p} } ^{ r \dagger } v _{ \vec{p} } ^ s  = 2 p_0 \delta ^{ rs } , \quad 
+u_{\vec{p} } ^{  r\dagger } v_{\vec{p} } ^ s = 0 = v_{ \vec{p} } ^{ r \dagger  } u_{ \vec{p} } ^ s 
 \] 
 This means that 
 \[
-	H = \int \frac{ d^ 3 p }{ ( 2 \pi ) ^ 3 } E _ p \sum_{ s = 1 } ^ 2 
-	\left(  b_{ \vec{p} } ^{ s \dagger  } b _{ \vec{p} } ^ s 
-	+ c _{ \vec{p} } ^{ s \dagger } c _{ \vec{p} } ^ s \right) 
+H = \int \frac{ d^ 3 p }{ ( 2 \pi ) ^ 3 } E _ p \sum_{ s = 1 } ^ 2 
+\left(  b_{ \vec{p} } ^{ s \dagger  } b _{ \vec{p} } ^ s 
++ c _{ \vec{p} } ^{ s \dagger } c _{ \vec{p} } ^ s \right) 
 \] If we used commutation relations, we get a minus sign which means that we 
-have unboudned lower energy and there fore unstable theory. 
+have unboudned lower energy and there fore unstable theory.
+
+\subsection{The Dirac Hole Interpretation}
+We can write the Dirac equation as 
+\[
+i \frac{\partial  \psi }{\partial  t }   = 
+( - i \alpha \cdot  \nabla + m \beta ) \psi , \quad \alpha =  - \gamma ^ 0 \gamma , \beta = \gamma ^ 0 
+\] The term in the brackets is considered as 
+the 1-particle Hamiltonian $ \hat{ H } $. 
+This has positive and negative energy solutions. 
+There's no consistent way of realising the 
+Dirac equation to one particle states.
+
+\subsection{Fermi-Dirac Statistics} 
+We expanded our spinor field with operators $ b  $ and $ c $, which 
+had a spin index. These operators annihilate the vacuum 
+\[
+b_{ \vec{p} } ^ s \ket{ 0 }  = 0 =  c_{ \vec{p} } ^ s \ket{ 0 } 
+\] Recall that these operators obey anti-commutation relations. 
+We can check that these commute with the Hamiltonian as follows 
+\begin{align*}
+[ H , b_{ \vec{p} } ^{ r \dagger } ] &=  E _p b _{ \vec{p} } ^{ r \dagger }  \\ 
+\left[  H , b_{ \vec{p} } ^{ r  }  \right]  &=   - E _ p b_{ \vec{p} } ^ r  \\ 
+\end{align*}
+If we index this state, for example, as $ \ket{ \vec{p} _ 1, r _ 1 } : = b_{ \vec{p} _ 1 } ^{ r _ 1 \dagger } \ket{ 0 }  $. 
+Then the anti-commutation relations give us a sign change when 
+we swap two things around. In particular, 
+we have that 
+\[
+\ket{ \vec{p} _ 1 , r _ 1 ; \vec{p} _ 2 , r _ 2 } =  - \ket{ \vec{p} _ 2 , r _ 2 ; \vec{p} _ 1 , r _ 1 } 
+\]   
+
+\subsubsection{Going into the Heisenberg picture} 
+Now, we have a time dependent operator $ \psi ( x) $ satisfying 
+$ \frac{\partial  \psi }{\partial  t }  = i \left[  H , \psi  \right]   $ 
+which is solved by the Heisenberg picture expansion 
+\[
+\psi _ \alpha ( x ) = \sum_{ s = 1 } ^ 2 \int \frac{ d ^ 3 p }{ ( 2 \pi ) ^ 3 \sqrt{ 2 E _ p }  } \, 
+\left(  b^ s _{\vec{p} } u_{ \vec{p}_ \alpha } ^s e^{ - i p \cdot  x } 
++ c _{\vec{p} } ^{ s \dagger } v_{\vec{p} _ \alpha } ^ s e ^{ i p \cdot  x } \right)  
+\] with an analogous expression for $ \psi_ \alpha ^ \dagger $. 
+We then define, in analogy with $ \Delta ( x -y )  = \left[  \phi ( x) , \phi ( y )  \right]  $, 
+that for $ \mathbb{ R }$ scalars, 
+\[
+i S_{ \alpha \beta } ( x  - y )  = \left\{  \psi _ \alpha ( x ) , \overline{ \psi } _ \beta ( y )  \right\} 
+\] where $ S _{ \alpha \beta } $ is a four by four matrix. 
+For brevity, we'll now drop the $ \alpha , \beta $ for brevity. 
+Substituting in our results from previously, 
+we have that 
+\[
+i S ( x - y ) = \sum_{ r, s } \int \frac{ d ^ 3 p d ^ 3 q  }{ ( 2 \pi ) ^ 6 \sqrt{ 4 E_ p E _ q }  } 
+\left[  \left\{  b_{ \vec{p} } ^ s , b_{ \vec{q} } ^{ r \dagger }  \right\} e ^{  - i ( p \cdot  x  - q \cdot  y ) }
+u_{ \vec{p} } ^ s \overline{u } _{ \vec{q} } ^ r + 
+\left\{  c_{\vec{p} } ^{ s \dagger } , c _{\vec{q} } ^{ r } \right\}  v _{ \vec{p} } ^ s 
+\overline{ v } _{\vec{q} } ^{ r } e ^{ i ( p \cdot  x - q \cdot  y ) } \right] 
+\]
+Now, this simplifies to the expression 
+\[
+i S_{ \alpha \beta } ( x -y )  = \int \frac{d ^ 3 p }{ ( 2 \pi ) ^ e 2 E_ p } 
+\left[  \sum _s u_{ \vec{p} _ \alpha } ^ s \overline{ u } _{ \vec{p} _ \beta } ^ s 
+e ^{ - i p \cdot  ( x - y ) } + \sum _ s v_{ \vec{p} _ \alpha } ^ s 
+\overline{ v } _{ \vec{p} _ \beta } ^ s e ^{ i p \cdot  ( x  -y ) }\right] 
+\] The sums are $\slashed{p} + m $ and $ \slashed{p} - m $. 
+This thing then simplifies to 
+\[
+= \left(  i \slashed{\partial } _ x + m   \right)  D ( x - y )  - \left(  i 
+\slashed{\partial} _ x + m \right)  D ( y - x )  = \left(  i \slashed{\partial} _ x 
++ m \right)  \left(  D ( x - y ) - D ( y  - x)  \right) 
+\] 
+Note that for $ ( x - y ) ^ 2 < 0 $, we have that $ D ( x - y ) - D ( y - x) =0  $. 
+We now have $ \left\{  \psi _ \alpha ( x) , \overline{ \psi  }_ \beta ( y )  \right\}   = 0\forall ( x - y ) ^ 2 < 0 $. 
+So what about causality? Our observables are bilinear in fermions. 
+They do commute at space-like separations so the theory is causal. 
+
+Away from singularities, we have that 
+\begin{align*}
+( i \slashed{p} _ x - m ) i S ( x - y ) &=  0  \\ 
+					&=  ( i \slashed{\partial} _ x - m ) 
+					( i \slashed{\partial}  + m ) \left[ D ( x - y )  - D ( y - x )  \right]  \\
+					&=  - ( \partial _ x ^ 2 + m ^ 2 ) \left[  D ( x -y )  - D( y - x)  \right]  \\
+					&= 0 \text{ using } p ^ \mu p _ \mu  = m ^ 2  \\
+\end{align*}
+
+\subsubsection{The Feynman Propagator} 
+A similar calculation gives us 
+\begin{align*}
+\bra{ 0 } \psi _ \alpha ( x) \overline{ \psi } _ \beta ( y ) \ket{ 0 } &=  \int \frac{ d ^ 3 p }{ ( 2 \pi ) ^ 3 
+2 E _ p } ( \slashed{p} + m ) _{ \alpha \beta } e ^{  - i p \cdot  ( x - y ) } \\
+\bra{ 0 } \overline{\psi } _{ \beta } ( y ) \psi _ \alpha ( x ) \ket{ 0  } &=  
+\int \frac{ d ^ 3 p }{ ( 2 \pi ) ^ 3 2 E _ p } ( \slashed{p}  - m )_{ \alpha \beta } e ^{ i p \cdot  ( x - y ) }\\
+\end{align*}
+If we define $ S _{ F \alpha \beta }  = \bra{ 0 } T \psi _{ \alpha } ( x) \overline{ \psi } _{ \beta } ( y ) \ket{ 0 } $
+as the object 
+\[
+\begin{cases}
+  \bra{ 0 } \psi _ \alpha ( x) \overline{ \psi } _ \beta ( y ) \ket{ 0 } & x ^ 0 >  y ^ 0 \\
+	  - \bra{ 0 }{ \overline{ \psi } _ \beta ( y ) \psi _ \alpha ( x ) \ket{ 0 }  & y ^ 0 } x ^ 0 
+\end{cases} 
+\]
+The negative sign in the second term is required 
+ for Lorentz invariance when $ ( x  -y ) ^ 2 < 0 $, since 
+ there exists no Lorentz invariant way to determine whether $x ^ 0 < y ^ 0 $ 
+ or the other way around. 
+ In this case, $ \left\{  \psi ( x) , \overline{ \psi } ( y )  \right\}   = 0 $ and 
+ so $ T $ as defined is lorentz invariant. 
+ This is the same for strings of fermionic operators in $T $  - they anti commute. 
+ We see the same behaviour for normal ordering, we get that 
+ \[
+  : \psi _ 1 \psi _ 2 : = - : \psi _ 2 \psi _ 1 : 
+ \]
+ We can define our Feynman propagator as 
+ \begin{equation*}  
+  \wick{ \c \psi ( x) \c \psi^*( y )} 
+ \end{equation*} 
+	From this we get that 
+	\[
+	T ( \psi ( x) , \overline{ \psi  }( y )  = : \psi ( x) \overline{ \psi ( y ) } 
+	\] 

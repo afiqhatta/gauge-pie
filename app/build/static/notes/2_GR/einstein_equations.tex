@@ -252,8 +252,11 @@ The simplest solution is Minkowski space time.
 \[
  ds ^ 2 = - d t ^ 2 + d \vec{x} ^ 2 
 \] 
-In the case, $ \Lambda > 0 $, look for solutions 
-to $ R _{ \mu \nu }  = \Lambda g_{ \mu \nu }$ of the form 
+
+\subsubsection{De Sitter Spacetime} 
+In the case, $ \Lambda > 0 $, we can look for solutions 
+to $ R _{ \mu \nu }  = \Lambda g_{ \mu \nu }$ which have some 
+spherical symmetry. We look for solutions of the form 
 \[
 	d s^ 2 = - f (r ) ^ 2 d t ^ 2 + f ( r ) ^{ - 2} dr ^ 2 + r ^ 2 ( d \theta ^ 2 
 	+ \sin^ 2 \theta d \psi ^ 2 ) 
@@ -261,10 +264,14 @@ to $ R _{ \mu \nu }  = \Lambda g_{ \mu \nu }$ of the form
 We can compute our Ricci tensor 
 to find 
 \[
-	R _{ t t }  =  - f 4 R_{ rr } f ^  3 ( f '' + \frac{2 f ' }{ r } + ( f ' ) ^2 f ), \quad 
-	R_{ \psi \psi }  = \sin ^ 2 \theta R _{ \theta \theta  } = ( 1 - f ^ 2 - 2 f f ' r ) \sin ^ 2 \theta 
+	R _{ t t }  =  - f^4 R_{ rr }  = f ^  3 \left( f '' + \frac{2 f ' }{ r } + ( f ' ) ^2 f 
+		\right), \quad 
+	R_{ \psi \psi }  = \sin ^ 2 \theta  R _{ \theta \theta  } = ( 1 - f ^ 2 - 2 f f ' r ) \sin ^ 2 \theta 
 \] 
-We have the system from $ R_{ \mu \nu } = \Lambda _{ \mu \nu } $. 
+Now, with this ansatz we can solve 
+for $ f ( r) $ by setting $ R_{ \mu \nu } = \Lambda g _{ \mu \nu } $, 
+and then solving the equation by substituting in 
+specific indices. 
 By setting $ \mu , \nu = t t , r r $ we get that 
  \[
 	 f '' + \frac{2 f ' }{ r } + \frac{ ( f ' ) ^ 2 }{ f }  = - \frac{\Lambda }{ f }
@@ -275,9 +282,37 @@ Similarly, by setting $ \mu,  \nu = \theta \theta , \psi \psi  $, we have
 \] This equation is solved by 
 \[
  f ( r)  = \sqrt{ 1 - \frac{ r ^ 2 }{ R ^ 2 }} , \quad R ^ 2 = \frac{ 3 }{ \Lambda}
-\] This is de Sitter space time (or alternatively called the static patch of 
+\] This means that our resulting, final metric 
+that we get takes the form
+\[
+	ds ^ 2 = -  \left( 1 - \frac{r^ 2 }{R^ 2 } \right)^2 dt ^ 2 + \left( 1 - \frac{r^2}{R^ 2 } 
+	\right) ^{ -2 } dr^ 2 
+	+  r ^ 2 d \Omega_2 ^ 2
+\] To save ink, we've written $ r ^ 2 ( d \theta ^ 2 + \sin ^ 2 \theta d \phi ^ 2 ) $
+as $ r ^ 2 d \Omega_2 ^ 2 $, which is the radius squared, multiplied by 
+the familiar metric on a unit 2-sphere. In particular, if we have 
+a set of three Cartesian coordinates such that 
+\[
+ x ^ 2 + y ^ 2 + z ^  2 = r
+\] then since this parametrises a $ 2 $-sphere of radius $r$, 
+our resulting metric in spherical coordinates is 
+ \[
+ d^ 2 x + d y ^ 2 + d z^ 2 = dr^2 + r ^ 2 d \Omega ^ 2 _ 2 
+\] 
+This will save a lot of time later in our calculations 
+which involve different ways 
+to parametrise this metric. 
+
+This is de Sitter space time (or alternatively called the static patch of 
 d S ). Note that we have a valid range from $ r \in [ 0 , R ] $, but the 
-metric appears to be singular at $ r = R $. 
+metric appears to be singular at $ r = R $. Throughout this section, 
+we will check whether this singularity comes 
+from merely a poor choice of coordinates, or is a genuine
+physical space-time singularity. 
+Recall, it's totally okay for this to be a coordinate singularity 
+(in fact, as we shall see, it is) because 
+when we define coordinates,  we only define them 
+in terms of coordinate patches. 
 We can look at geodesics. We have the action, where $ \sigma $ represents proper time 
 \[
  S  = \int d \sigma \left[  
@@ -305,7 +340,7 @@ This gives
 	\dot{ r } ^ 2 + V_{ eff} ( r)  = E ^ 2  
 \] with 
 \[
-	V_{ eff }( r) = ( 1 + \frac{l ^ 2 }{ r ^ 2 } ) ( 1 - \frac{ r ^  2 }{R ^ 2  } ) 
+	V_{ \text{eff} }( r) = ( 1 + \frac{l ^ 2 }{ r ^ 2 } ) ( 1 - \frac{ r ^  2 }{R ^ 2  } ) 
 \] For $ l  = 0 $, we have that 
 \[
 	r ( \sigma)  = R \sqrt{ E ^ 2 - 1}  \sinh ( \frac{ \sigma }{ R } ) 
@@ -370,6 +405,7 @@ There's a natural cosmological interpretation here.
 We have a 3-sphere, which initially shrinks, then expands. This 
 corresponds to a contracting / expanding universe. 
 
+\subsubsection{Anti de-Sitter Space-time} 
 The next solution we will look at is for 
 $ \Lambda < 0 $. Again, looking for solutions 
 \[
@@ -379,11 +415,11 @@ $ \Lambda < 0 $. Again, looking for solutions
  f ( r) = \sqrt{ 1 + \frac{ r^ 2 }{ R ^ 2 } }  , \quad R ^ 2 = - \frac{ 3 }{ \Lambda}
 \] This is called anti-de Sitter space-time (AdS). 
 There is no coordinate singularity here! 
-This time, massive geodesics obey the rule $ \dot{ r } ^ 2 + V_{ eff } = E ^ 2  $. 
+This time, massive geodesics obey the rule $ \dot{ r } ^ 2 + V_{ \text{eff} } = E ^ 2  $. 
 This potential energy is what it was before but there's 
 now a plus sign instead of a minus sign 
 \[
-	V_{ eff } ( r) = \left(  1 + \frac{l ^ 2 }{ r ^ 2 }   \right) \left(  
+	V_{ \text{eff} } ( r) = \left(  1 + \frac{l ^ 2 }{ r ^ 2 }   \right) \left(  
 	1 + \frac{ r ^ 2 }{ R ^ 2 }\right) 
 \] What's happening is that 
 this kind of looks like a gravitational potential well in which we're stuck in. 
@@ -446,4 +482,152 @@ we have that our potential obeys $ \dot{ r } ^ 2 + V_{ eff } ( r)
   d s^ 2 = R ^ 2 \frac{d \tilde{ r } ^ 2  }{ \tilde{ r } ^ 2  } 
   + \frac{ \tilde{r } ^ 2  }{R ^ 2  } \eta_{ ij }dx ^ i dx ^ j 
  \]  These don't cover all of AdS. This is called the Poincare patch. 
+
+\subsection{Symmetries}
+Let's look at some symmetries of the metric. 
+The first thing we'd like to do is explain what a symmetry actually is. 
+Think about a 2 dimensional sphere. 
+This has the symmetry group $ SO ( 3) $, 
+since we can rotate it in any axis. Now think 
+of a rugby ball. This has $ SO ( 2) $ symmetry since 
+we can only rotate it about one axis. 
+The correct way to think about these things is to consider flows. 
+Consider a 1-parameter family of diffeomorphisms 
+$ \sigma _ t : \mathcal{ M } \to \mathcal{ M } $. 
+Recall that this is associated to a vector field 
+\[
+ K^ \mu =  \frac{dx ^ \mu }{ dt }
+\] where $ \frac{ d x ^ \mu }{ dt } $ are tangent to the flow lines. 
+We're going to call this a symmetry if we start at any point, 
+flow along, then our destination point looks the same.
+
+This flow is an isometry if the metric 
+looks the same at each point along the flow, in other words 
+\[
+ \mathcal{ L }_K g = 0 \iff \nabla _ \mu K _ \nu + \nabla _ \nu K _ \mu  =0 
+\] This equation is 
+called the 'Killing equation' and any vector $ K  $ which 
+obeys this is 
+called the Killing vector. 
+This is the equation which we need to solve. 
+These objects describe the symmetries of the metric. 
+
+Note, commuting the Lie derivatives is handy because 
+\[
+	\mathcal{ L } _ X \mathcal{ L } _ Y - \mathcal{ L } _ Y \mathcal{ L } _ X  = \mathcal{ L } _{ [ X, Y ] }
+\] From this, we start to get a Lie 
+algebra structure that emerges for the group 
+of continuous symmetries of the metric, (which 
+is exactly what we expect from continuous symmetries).
+
+\begin{example}{Minkowski space} 
+With Minkwoski space in our metric, 
+the Killing equation implies 
+\[
+ \partial _ \mu k _ \nu + \partial  _ \nu k _ \mu  = 0
+\] In full generality, we have that 
+\[
+	k _{ \mu }  = c_\mu + \omega _{ \mu \nu } x ^ \nu , \omega_{ \mu \nu }  =- \omega  _{  \nu \mu }
+\] We have that $ c _ \mu $ represent our translations, 
+and $ \omega_{ \mu \nu } $ represent boosts or rotations 
+depending on what indices we're choosing. 
+We can define Killing vectors 
+\[
+ P _ \mu  = \frac{\partial   }{ \partial  x ^ \mu } , \text{ and } M_{ \mu \nu } 
+  = \eta _{ \mu \rho } x ^ \rho \frac{\partial  }{\partial  x ^ \nu }   - \eta _{ \nu \rho } x ^ \rho \frac{\partial  }{\partial  x ^ \mu } 
+\] Now, we find that $ [ P_\mu, P _ \nu  ]  $ , and that 
+\[
+	[ M_{ \mu \nu }, P _ \sigma ] =  - \eta _{ \mu \sigma } P _ \nu + \eta_{ \sigma \nu } P_{ \mu } 
+\] in addition, 
+\[
+	[ M_{ \mu \nu } , M_{ \rho \sigma  } ] = \eta_{ \mu \sigma } M_{ \nu \rho } + \eta_{ \nu \rho } M_{ \mu \sigma } 
+	 - \eta_{ \mu \rho } M_{ \nu \sigma } - \eta_{ \nu \sigma } M_{ \mu \rho }
+\] These are the commutation relations of the Poincare group. 	
+\end{example}
+
+\subsubsection{More examples} 
+The isometries of dS and AdS are inherited from 
+the 5 dimensional embedding. 
+de-Sitter space time has isometry group $ SO ( 1, 4 ) $, 
+and Anti de-Sitter space has isometry group $ SO ( 2, 3 ) $. 
+Both groups have dimension  $ 10 $, same as 
+$ SO ( 5 ) $, and the same is the Poincare group as well.
+Minkowski and de-Sitter space are equally as symmetric.
+In 5d, the Killing vectors are 
+\[
+ M_{ AB }  = \eta_{ AC } X ^ C \frac{\partial  }{\partial  X ^ B } - 
+ \eta _{ B C} X ^ C \frac{\partial   }{\partial  X ^ A } 
+\] In this case, $ A $ runs from $ A  = 0 , 1, 2, 3, 4$, 
+and we have that the metric are given by 
+ \begin{align*}
+	 \eta &=  ( - , + , + , + , + )  \\
+	 \eta &=  (- , -, + , + , + )  \\
+ \end{align*} 
+ The flows induced by $ M_{AB } $ map the embedding 
+ hyperboloid to itself. These are isometries of 
+ ( A ) dS. 
+ Let's look at an example in de Sitter space in static patch coordinates. 
+ If the metric $ g_{ \mu \nu } ( x) $, does not 
+ depend on some coordinate $ y $, then $ K = \frac{\partial }{\partial y } $ 
+ is a Killing vector since $ \mathcal{ L }_{ \partial  _ y } g   = 
+ \frac{ \partial  g_{ \mu \nu } }{ \partial  y }  = 0 $. 
+ So, for the static path, we expect $ \frac{\partial  }{\partial  t }  $ 
+ to be a Killing vector.
+
+ We had 
+ \begin{align*}
+	 X ^ 0 &=  \sqrt{ R ^ 2 - r ^ 2 }  \sinh \left(  \frac{t}{R} \right)  \\
+	 X ^ 4 &=  \sqrt{ R ^ 2 - r ^ 2 }  \cosh \left(  \frac{t}{R} \right)  \\
+ \end{align*}
+ Look at 
+ \[
+  \frac{\partial  }{\partial  t }  =  \frac{\partial X ^ A  }{\partial t }  
+  \frac{\partial  }{\partial  X ^ A }   = \frac{1}{R  } \left(  X ^ 4 \frac{\partial  }{\partial  X ^ 0 }
+   + X ^ 0 \frac{\partial   }{\partial X ^ 4 } \right) 
+ \]  It's interesting to note that 
+ timelike Killing vectors such that $ g_{ \mu \nu  }  k ^ \mu k ^ \nu  < 0 $ 
+ are used to define energy. Minkowski and AdS have such objects. 
+ de-Sitter space has such an object in the static patch, 
+ but not globally. 
+For example, 
+\[
+ K = X ^ 4 \frac{\partial  }{\partial  X ^ 0 }  + X ^ 0 \frac{\partial  }{\partial  X ^ 4 } 
+\] Now, the first term increases $ X ^ 0 $ then $ X ^ 4 > 0 $, 
+and decreases $ X ^ 0 $ when $ X ^ 4 < 0 $. 
+The Killing vector is positive and timelike only in the static patch. 
+Elsewhere, it is spacelike. Energy is a subtle concept in dS.
+
+\subsection{Conserved quantities} 
+Consider a particle moving on a geodesic  $ x ^ \mu ( \tau ) $ 
+in a spacetime with Killing vector $ K ^ \mu $. 
+Then, we have that 
+\[
+ Q  = K_ \mu \frac{d x ^ \mu }{ d \tau } \text{is conserved }
+\] To see this, differentiate to find that 
+\begin{align*}
+	\frac{d Q }{ d \tau }   & = \partial  _ \nu k _ \mu \frac{d x ^ \nu }{ d \tau } \frac{ d x ^ \mu }{ d \tau } 
+	+ k _ \mu \frac{ d ^ 2 x  }{ d \tau ^ 2 } \\
+	&=  \partial  _ \nu k _ \mu \frac{d k ^ \nu }{ d \tau } \frac{ d x ^ \mu }{ d \tau }  - 
+	k _ \mu \Gamma ^ \mu _{ \rho \sigma } \frac{d x ^ \rho }{ d \tau } \frac{ d x ^ \sigma }{ d \tau } \\
+	&=  \nabla _ \nu k _ \mu \frac{ d x ^ \nu }{ d \tau } \frac{ d x ^ \mu }{ d \tau } \\ 
+\end{align*} 
+We can also see this from the action 
+\[
+ S  = \int d \tau g_{ \mu \nu } \dot{ x } ^ \mu \dot{ x } ^ \nu   
+\] Consider $ \delta x ^ \mu ( \tau )  = k ^ \mu ( x) $. We have 
+ \[
+ \delta S  = \int d \tau \, \partial  _ \rho g_{ \mu \nu } \frac{ d x^ \mu }{ d \tau } \frac{ d x ^ \nu }{ d \tau } 
+ + 2 g_{ \mu \nu } \frac{d x ^ \mu }{ d \tau } \frac{ dk  ^ \nu }{ d \tau }
+\] 
+Now, we use the fact that 
+\begin{align*}
+	g_{ \mu \nu } \frac{d  k ^ \nu }{ d \tau } &=  \frac{d k _\mu }{ d \tau } - \frac{d g _{ \mu \rho } }{ d \tau } k ^ \rho  \\
+						   &=  \left(  \partial  _ \nu k _ \mu 
+						    - \partial  _ \nu g _{ \mu \rho } k ^ \rho \right)  
+						    \frac{ d x ^ \nu }{ d \tau }\\
+\end{align*}
+Substituting this into the action 
+\[
+ \delta S = \int d \tau 2 \nabla _ \mu K _ \nu \frac{ d x ^ \mu }{ d \tau } \frac{ d x ^ \nu }{ d \tau }
+\] This implies that $ \sigma S = 0 $ iff $ \nabla _{ ( \mu } k_{ \nu ) }  = 0 $, the Killing equation.
 

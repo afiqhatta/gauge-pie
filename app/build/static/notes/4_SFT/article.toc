@@ -1,0 +1,160 @@
+\boolfalse {citerequest}\boolfalse {citetracker}\boolfalse {pagetracker}\boolfalse {backtracker}\relax 
+\babel@toc {english}{}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {1}Useful resources}{4}{section.1}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {2}Introduction}{4}{section.2}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {3}Why Statistical Field Theory?}{4}{section.3}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {3.1}Phase transitions and critical exponents}{4}{subsection.3.1}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {3.2}Universality}{5}{subsection.3.2}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {3.3}Explaining universality with the renormalization group flow}{5}{subsection.3.3}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{\numberline {3.3.1}Fixed points}{6}{subsubsection.3.3.1}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {4}The Ising Model and Critical Exponents}{7}{section.4}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {4.1}The problems with just mean-field theory}{7}{subsection.4.1}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {4.2}Setting up the Ising model}{7}{subsection.4.2}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {4.3}Reformulating the above in terms of free energy}{8}{subsection.4.3}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{\numberline {4.3.1}Calculating our free energy via the mean field approximation.}{8}{subsubsection.4.3.1}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {4.4}Using the Landau approach}{10}{subsection.4.4}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {4.5}A Brief look at Universality}{12}{subsection.4.5}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {4.6}The Landau-Ginzburg approach}{14}{subsection.4.6}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {4.7}Domain Walls}{17}{subsection.4.7}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {5}Evaluating Path Integrals and Gaussian Path Integrals }{20}{section.5}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {5.1}Correlation functions}{25}{subsection.5.1}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {5.2}Computing Gaussian Path Integrals}{26}{subsection.5.2}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{\numberline {5.2.1}Our correlation function is just a Green's function}{26}{subsubsection.5.2.1}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{\numberline {5.2.2}An aside on functional integrals}{27}{subsubsection.5.2.2}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{\numberline {5.2.3}Evaluating our Green's function}{28}{subsubsection.5.2.3}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {6}Green's functions}{30}{section.6}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {6.1}Connection to Susceptibility}{31}{subsection.6.1}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {6.2}Critical exponents}{31}{subsection.6.2}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{\numberline {6.2.1}Upper critical dimension}{31}{subsubsection.6.2.1}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{\numberline {6.2.2}Translating to Quantum Field Theory}{32}{subsubsection.6.2.2}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {7}The Renormalisation Group}{33}{section.7}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {7.1}Basic Introduction}{33}{subsection.7.1}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {7.2}Flowing to the 'IR' (long distances)}{33}{subsection.7.2}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {7.3}A Second Look at Universality}{35}{subsection.7.3}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{\numberline {7.3.1}The Ising model}{35}{subsubsection.7.3.1}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {7.4}Classifying fixed points}{36}{subsection.7.4}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {7.5}Scaling}{36}{subsection.7.5}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {7.6}Relation to critical exponents}{37}{subsection.7.6}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {7.7}Relevant, Irrelevant or Marginal?}{38}{subsection.7.7}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {7.8}The Gaussian fixed point}{38}{subsection.7.8}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{\numberline {7.8.1}Expanding around the Gaussian fixed point}{39}{subsubsection.7.8.1}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{\numberline {7.8.2}A remark on 'tuning' to remain at a fixed point}{40}{subsubsection.7.8.2}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{\numberline {7.8.3}$ \mathbb { Z} _ 2 $ Symmetry breaking }{41}{subsubsection.7.8.3}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {7.9}Renormalisation with Interacting Fields}{42}{subsection.7.9}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{\numberline {7.9.1}A quick review of finding the effective free energy}{42}{subsubsection.7.9.1}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{\numberline {7.9.2}Logarithmic expansion of the Interaction Term}{43}{subsubsection.7.9.2}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{\numberline {7.9.3}Computing moments of the Interaction Free energy}{43}{subsubsection.7.9.3}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{\numberline {7.9.4}Second order corrections}{45}{subsubsection.7.9.4}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {7.10}Applying Wick's thoerem for the Free Energy}{45}{subsection.7.10}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {7.11}Feynman Diagrams}{46}{subsection.7.11}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {7.12}$ \beta $ - functions}{50}{subsection.7.12}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {7.13}$ \epsilon $ Expansions}{51}{subsection.7.13}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{\numberline {7.13.1}Wilson-Fisher Fixed Point}{52}{subsubsection.7.13.1}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{\numberline {7.13.2}Revisiting critical exponents}{52}{subsubsection.7.13.2}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {8}Continuous Symmetries}{53}{section.8}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {8.1}$ O ( n ) $ modes}{53}{subsection.8.1}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{\numberline {8.1.1}XY - Models}{54}{subsubsection.8.1.1}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {8.2}Goldstone modes}{54}{subsection.8.2}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{\numberline {8.2.1}Symmetry and Goldstone Bosons}{54}{subsubsection.8.2.1}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{\numberline {8.2.2}Critical Exponents}{55}{subsubsection.8.2.2}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{\numberline {8.2.3}RG in the $ O ( n ) $ model}{55}{subsubsection.8.2.3}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{\numberline {8.2.4}Epsilon expansion}{56}{subsubsection.8.2.4}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {8.3}Goldstone Bosons in $ d = 2 $}{56}{subsection.8.3}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{\numberline {8.3.1}$ \sigma $ models}{57}{subsubsection.8.3.1}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{\numberline {8.3.2}Background Field Method}{58}{subsubsection.8.3.2}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{\numberline {8.3.3}Path Integral}{58}{subsubsection.8.3.3}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {8.4}Asymptotic freedom and $ d = 2 + \epsilon $ }{59}{subsection.8.4}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{\numberline {8.4.1}Critical Exponents}{59}{subsubsection.8.4.1}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{\numberline {8.4.2}The Kosterlitz-Thouless Transition for $ N = 2 , d = 2$ }{60}{subsubsection.8.4.2}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{\numberline {8.4.3}Vortices}{60}{subsubsection.8.4.3}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {9}Example Sheet 1}{62}{section.9}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {9.1}Question 1}{62}{subsection.9.1}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {9.2}Question 2}{64}{subsection.9.2}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {9.3}Question 3}{65}{subsection.9.3}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {9.4}Question 4}{67}{subsection.9.4}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {9.5}Question 5}{71}{subsection.9.5}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {9.6}Question 5}{73}{subsection.9.6}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {9.7}Question 7}{75}{subsection.9.7}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {9.8}Techniques in Statistical Field Theory}{75}{subsection.9.8}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{\numberline {9.8.1}Thinking about scaling}{75}{subsubsection.9.8.1}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{\numberline {9.8.2}Terms in our free energy}{75}{subsubsection.9.8.2}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {9.9}Wick's Theorem}{75}{subsection.9.9}

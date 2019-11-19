@@ -467,21 +467,206 @@ that
 \end{proof}
 \end{thm}
 
-\subsection{Algebra in the Cartan Weyl basis} 
-Let's summarise what we have so far. 
+\subsection{Algebra in the Cartan Weyl basis}
+
+\subsubsection{Working out the Bracket of $ \left[  E ^ \alpha, E ^ \beta  \right]  $}
+In this section, we'll work on fully fleshing 
+out the Lie algebra relations in our Cartan Weyl basis. 
+Let's summarise some of the relations which we we have so far. 
+By construction, elements in the Cartan subalgebra commute, 
+and we've defined eigenvectors with weights. 
 \begin{align*}
 	[ H ^ i , H ^ j ] &=  0 , \quad \forall i , j   1, , \dots, r  \\ 
-	[ H ^ i , E ^ \alpha ] & = \alpha ^ i E ^ \alpha \forall \alpha \in \Phi 
+	[ H ^ i , E ^ \alpha ] & = \alpha ^ i E ^ \alpha \quad \forall \alpha \in \Phi 
 \end{align*}
-It remains to evaluate $ [ E ^ \alpha , E ^ \beta ] , \forall \alpha, \beta \in \Phi$. 
+The only thing we've yet to do 
+is explore what happens when we 
+commute two of the eigenvectors, say $  E^ \alpha$ and $ E ^ \beta $. 
+It remains to evaluate $ [ E ^ \alpha , E ^ \beta ] , \forall \alpha, \beta \in \Phi$.
+This is an eigenvector of elements in the Cartan subalgebra. 
 Using the Jacobi identity, 
  \[
- [ H ^ i [ E ^ \alpha, E ^ \beta ] ] =  - [ E ^ \alpha , [ E ^ \beta , H ^ i ]] - [ E ^ \beta , 
+ [ H ^ i , [ E ^ \alpha, E ^ \beta ] ] =  - [ E ^ \alpha , [ E ^ \beta , H ^ i ]] - [ E ^ \beta , 
  [ H ^ i , E ^ \alpha ] ]  = ( \alpha ^ i + \beta ^ i ) [ E ^ \alpha , E ^ \beta ] 
 \] 
-This means that we get one extra bracket to our set of relations. 
+This means that we get one extra bracket to our set of relations.
+Now, if $ \alpha + \beta \neq  = 0  $, then we 
+have a non-zero eigenvalue here, and by non-degeneracy of eigenvalues
+this implies that $ \left[  H ^ I , \left[  E^ \alpha, E ^ \beta  \right]   \right]  $
+is proportional to the $ \alpha + \beta $ eigenvector. This, 
+If $ \alpha + \beta \neq 0 $, 
 \[
- [ E ^ \alpha , E ^ \beta ] = N_{ \alpha, \beta  } E ^{ \alpha + \beta }, \text{ if } 
+ [ E ^ \alpha , E ^ \beta ] = N_{ \alpha, \beta  } E ^{ \alpha + \beta }, \quad \text{ if } 
   \alpha + \beta  \in \Phi 
-\] or is $ 0 $ otherwise.
+\] or is $ 0 $ otherwise. By the way, 
+we could also have that $ N_{ \alpha, \beta } $ is also zero. 
+If This means that 
+putting a bracket around two step operators 
+gives the summed step operator only if the roots are in 
+the right place. 
+Now, what happens when $ \alpha + \beta  = 0 $? 
+Then, we learn that 
+\[
+	[ H ^ i , [ E ^ \alpha , E ^{ - \alpha } ]]   = 0 , \quad \forall i \in 1, \dots r 
+\] This implies that actually $ [ E ^ \alpha , E ^{ - \alpha } ] \in \subalg $, 
+since our Cartan subalgebra is defined to be the maximal 
+subalgebra of vectors which commute with each other.
+
+\begin{example}{(Relating this back to $ \mathcal{ L } ( SU ( 2) ) $}
+We have shown that when we commute 
+two vectors with eigenvalues that are negatives of each other, 
+we get an element that's right back in the 
+Cartan subalgebra.
+Note that this is exactly what we had 
+in the case of $ \mathcal{ L } _ \mathbb{ C} ( S U( 2) ) $
+We can compare this with the structure of 
+the complexified Lie algebra $ \mathcal{ L } _{ \mathbb{ C} } ( SU ( 2) ) $, 
+where commuting $ E_ + $ and $ E _ - $ gives us back $ H $. 
+\end{example}
+
+So, we've found that $ [ E ^ \alpha , E ^{ - \alpha }  ] $ is 
+in our Cartan subalgebra, but what exactly is it? 
+Define the following normalised element 
+\[
+	H ^ \alpha  = \frac{ [ E ^ \alpha , E ^{ - \alpha }  ] }{ 
+	\kappa ( E ^ \alpha , E ^{ - \alpha } ) }
+\] To figure out $ H ^ \alpha $, plug it into the Killing form 
+\begin{align*}
+	\kappa ( H ^ \alpha , H ) &=  \frac{1}{\kappa ( E ^ \alpha , E ^{ - \alpha } )  } 
+	\kappa ( [ E ^ \alpha , E ^{ - \alpha } ] , H ) \\
+				  &=  \frac{1}{\kappa ( E ^ \alpha , E ^{ - \alpha } ) } 
+				  \kappa ( E ^ \alpha , [ E ^{ - \alpha } , H ] ) \\
+				  &=  \alpha ( H ) \frac{
+				  \kappa \left(  E ^ \alpha , E ^{ - \alpha }  \right) }{ 
+			  \kappa \left(  E ^{ \alpha  } E ^{ - \alpha } \right) } \\
+\end{align*} 
+This means that ultimately we have that 
+\[
+	\kappa \left(  H ^ \alpha, H  \right)   = \alpha \left(  H  \right) 
+\] From our result that $ \kappa $ is a non-degenerate 
+Killing form on the Cartan subalgebra, 
+the can try to invert this equation. 
+In components, we have that 
+\[
+ H^ \alpha ,  = e_ i ^ \alpha H ^ i , \quad H  = e _ i H ^ i \in \subalg
+\] This implies that, in components, 
+\[
+	\kappa ^{ ij } e _ i ^ \alpha e _ j  = \alpha ^ j e _ j , \implies \kappa ^{ ij } e _ i ^ \alpha 
+	= \alpha ^ j  \implies e _ i ^ \alpha  = ( \kappa ^{ - 1} ) _{ ij } \alpha ^ j 
+\] This means that, putting everything back together, 
+\[
+ H ^ \alpha = e _ i ^ \alpha H ^ i  = \left(  \kappa ^{ - 1}  \right)  _{ ij  } \alpha ^ j H ^ i 
+\]Let's summarise what's going on here. 
+\[
+	[ E ^ \alpha , E ^ \beta ]  =\begin{cases}
+		N_{ \alpha, \beta } E ^{ \alpha + \beta } & \alpha + \beta \in \Phi \\
+		\kappa ( E ^{ \alpha } , E ^{ - \alpha } ) H ^ \alpha & \alpha + \beta  = 0 \\
+		 0 & \text{otherwise}
+	\end{cases}
+\] 
+\subsubsection{Connections with $ \mathcal{ L } ( SU ( 2) ) $} 
+Now, to go further with this, 
+and to restrict the structure even further, 
+we need to exploit next our understanding 
+of the representation theory of $\mathcal{ L } ( SU ( 2) ) $. 
+There's actually an $ \mathcal{ L } ( SU ( 2) ) $ subalgebra 
+hiding in the structure of the roots, and using 
+this we can start to pin down the root systems. 
+Consider the bracket $ H ^ \alpha \in \subalg$, 
+for all  $ \alpha, \beta \in \Phi $
+\begin{align*}
+	[ H ^ \alpha , E ^ \beta ] &=  \left(  \kappa ^{ - 1 }  \right) _{ ij } 
+	\alpha ^ j [ H^ i , E^ \beta ] \\ 
+				   &=  \left(  \kappa ^{ - 1}  \right)_{ ij  } 
+				   \alpha ^ i \beta ^ j E ^ \beta  \\
+				   &=  ( \alpha , \beta ) E ^ \beta  
+\end{align*}
+In the last line we have an 'inner product' 
+given by our Killing form. 
+We now define a rescaling $ \forall \alpha \in \Phi $, 
+\[
+	e ^ \alpha  = \frac{\sqrt{2}  }{\left(  
+	( \alpha, \alpha ) \kappa \left(  E ^ \alpha, E ^{ - \alpha }  \right)  \right) ^{ \frac{1}{2 } } }, 
+	\quad h ^ \alpha  = \frac{2}{\left(  \alpha, \alpha \right)  } H ^ \alpha 
+\] here we have not proven that $ \left(  \alpha , \alpha  \right)   \neq 0 $. 
+See Fuchs, page 87 for a proof of this. 
+For all $ \alpha , \beta \in \Phi $, we have that using 
+our normalised vectors, 
+\begin{align*} 
+ [ h ^ \alpha , h ^ \beta ] &=  0  \\ 
+ [ h ^ \alpha ,  e ^ \beta ] &=  \frac{ 2 \left(  \alpha, \beta  \right)  }{ \left(  
+ \alpha , \alpha \right)  } e ^ \beta  \\
+ [ e ^ \alpha , e ^\beta ] &=  n_{ \alpha, \beta } e ^{ \alpha + \beta } \quad \alpha + \beta \in \Phi  \\ 
+ &=  h ^ \alpha \quad \alpha + \beta = 0  \\ 
+ &=  0  \text{ otherwise }\\ 
+\end{align*} 
+We've shown that $ \alpha \in \Phi \implies  - \alpha \in \Phi $. 
+We can look at the triplet of elements $ \left\{  h ^ \alpha , e ^ \alpha , e ^{ - \alpha } \right\}  $. 
+Now, in the above equation, if we set $ \beta = - \alpha $, 
+we find that 
+\[
+	[ h ^ \alpha, e ^{ \pm \alpha } ] = \pm e ^{ \pm \alpha }
+\] The point is, if we specialise 
+the brackets to these three elements, 
+they take a very special form. We also have that 
+\[
+ \left[  e ^{ \alpha } , e ^{ - \alpha }  \right]   =h ^ \alpha 
+\] Hence, we have an $ \mathcal{ L } _{ \mathbb{ C} } ( SU ( 2) ) $ 
+subalgebra for each root! 
+Now note, than in general, the generators for the $ SU ( 2) $ Lie 
+algebra may not commute with each other - they're not 
+commuting subalgebras. We will call 
+the subalgebra generated by a given root $ Sl ( 2 )_ \alpha $. 
+In fact, we can use our knowledge about simple 
+finite dimensional representations of $ \mathcal{ L } ( SU ( 2) ) $
+to constrain values of the root. 
+
+\subsection{Consequences} 
+For any $ \alpha , \beta \in \Phi  $ where  $ \alpha \neq \pm  \beta $, 
+we define the '$ \alpha $-string passing through $ \beta $ ' 
+as the set of all 
+roots from the form $ \beta + e \alpha $ for some
+$ e \in \mathbb{ Z} $. This is the set 
+\[
+	S_{ \alpha, \beta } = \left\{  \beta + e \alpha  \in \Phi , e \in \mathbb{ Z}  \right\} 
+\] and we define the corresponding vector subspace of $ \lalg $, 
+\[
+	V _{ \alpha, \beta } = \text{span} _{ \mathbb{ C} } \left\{  
+	e ^{ \beta + e \alpha} ; \beta + e \alpha \in S_{ \alpha , \beta }\right\} 
+\] 
+Now consider the action of $ Sl ( 2) _{ \alpha } $ on 
+$ V_{ \alpha, \beta } $ 
+\begin{align*}
+	[ h ^ \alpha, e ^{ \beta + e \alpha } ] &=  \frac{ 2 ( \alpha, \beta + e \alpha ) }{ 
+	\left(  \alpha, \alpha  \right)  } e ^{ \beta + e \alpha }  \\
+						&=  \left(  \frac{2 ( \alpha , \beta ) }{ ( \alpha, \alpha ) } 
+						+ 2 e \right)  e ^{ \beta + e \alpha }  \\
+\end{align*}
+In addition, we have that 
+\[
+	[ e ^{ \pm \alpha } , e ^{ \beta + e \alpha} ] \begin{cases}
+		e ^{ \beta + ( e \pm 1 ) \alpha } & \text{if } \beta + ( e \pm 1 ) \alpha \in \Phi \\
+		0 & \text{otherwise}
+	\end{cases}
+\]  
+Hence, we find that $ V_{ \alpha, \beta } $ is a representation 
+space for some representation $ R $ of $ Sl ( 2 )_ \alpha $. 
+Specifically, our weight set of $ R $  is given by 
+\[
+	S_{ R }  = \left\{  \frac{2 ( \alpha, \beta ) }{ ( \alpha, \alpha 0 ) } +  2 e ; 
+	\beta + e \alpha \in \Phi \right\} 
+\] R is finite dimensional, and irreducible.
+This means that $ R  =R _{ \Lambda } $ for 
+some highest weight $ \Lambda \in \mathbb{ Z} $, and 
+$ S _{ \Lambda }  = \left\{   - \Lambda , \dots, \Lambda  \right\}  $. 
+This means that we must have $ R \simeq R_{\Lambda } $,
+for some $ \Lambda \in \mathbb{ Z} _{ \geq 0  } $. 
+Hence, we must have $ e = n \in \mathbb{ Z} $, with 
+$ n _ - \leq n \leq n _ + $, and $ n_{ \pm } \in \mathbb{ Z} $. 
+We can match up our weights to give 
+\begin{align*}
+	- \Lambda &  = \frac{ 2 ( \alpha , \beta ) }{ ( \alpha, \alpha ) } + 2 n_ - \\
+	\Lambda &=   2 \frac{ ( \alpha, \beta ) }{ ( \alpha, \alpha )   } + 2 n _ +   \\
+\end{align*}
+Adding this gives $ \frac{ 2 ( \alpha , \beta ) }{ ( \alpha , \alpha ) }  = - ( n _ + + n _ - ) $
 \pagebreak 
