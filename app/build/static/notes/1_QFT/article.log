@@ -1,4 +1,4 @@
-This is LuaTeX, Version 1.07.0 (TeX Live 2018)  (format=lualatex 2019.1.15)  19 NOV 2019 16:13
+This is LuaTeX, Version 1.07.0 (TeX Live 2018)  (format=lualatex 2019.1.15)  19 NOV 2019 18:08
  system commands enabled.
  file:line:error style messages enabled.
 **article.tex
@@ -23,7 +23,7 @@ Inserting `luaotfload.aux.patch_cambria_domh' at position 2 in `luaotfload.patch
 Inserting `luaotfload.aux.fixup_fontdata' at position 1 in `luaotfload.patch_font_unsafe'.
 Inserting `luaotfload.aux.set_capheight' at position 3 in `luaotfload.patch_font'.
 Inserting `luaotfload.rewrite_fontname' at position 4 in `luaotfload.patch_font'.
-luaotfload | main : initialization completed in 0.158 seconds
+luaotfload | main : initialization completed in 0.163 seconds
 Babel <3.18> and hyphenation patterns for 1 language(s) loaded.
 (/usr/local/texlive/2018/texmf-dist/tex/latex/base/article.cls
 Document Class: article 2014/09/29 v1.4h Standard LaTeX document class
@@ -2506,7 +2506,7 @@ Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
 (hyperref)                removing `math shift' on input line 341.
 
-[65] [66] [67] [68] [69] [70] [71] [72] [73] [74] [75] [76]) (./warming_up_with_spinors_from_the_$so(3)$_rotation_group.tex
+[65] [66] [67] [68] [69] [70] [71] [72] [73] [74] [75] [76] [77]) (./warming_up_with_spinors_from_the_$so(3)$_rotation_group.tex
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
 (hyperref)                removing `math shift' on input line 1.
@@ -2515,26 +2515,26 @@ Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
 (hyperref)                removing `math shift' on input line 1.
 
-[77] [78]) (./lorentz_tranformations_and_spinors.tex [79] [80]) (./constructing_the_chiral_representation_for_the_dirac_equation.tex [81]) (./motivating_lorentz_invariance_of_the_dirac_equation.tex [82]) (./constructing_boosts_and_rotations_in_block_diagonal_form.tex [83] [84]) (./the_weyl_equations.tex) (./constructing_plane-wave_solutions_to_the_weyl_equation.tex [85]) [86] (./example_sheet_1.tex) (./question_1.tex [87]
+[78] [79]) (./lorentz_tranformations_and_spinors.tex [80] [81]) (./constructing_the_chiral_representation_for_the_dirac_equation.tex) (./motivating_lorentz_invariance_of_the_dirac_equation.tex [82] [83]) (./constructing_boosts_and_rotations_in_block_diagonal_form.tex [84]) (./the_weyl_equations.tex [85]) (./constructing_plane-wave_solutions_to_the_weyl_equation.tex [86]) [87] (./example_sheet_1.tex) (./question_1.tex [88]
 Overfull \hbox (57.0368pt too wide) detected at line 23
 [] \OML/cmm/m/it/10.95 d[]xT[] \OT1/cmr/m/n/10.95 = [] \OML/cmm/m/it/10.95 d[]x d[]p d[]q [] []
  []
 
-[88]) (./question_2.tex) (./question_3.tex [89] [90]) [91] (./question_4.tex) [92] (./question_5.tex [93]) (./question_6.tex [94]
+[89]) (./question_2.tex) (./question_3.tex [90] [91]) [92] (./question_4.tex) [93] (./question_5.tex [94]) (./question_6.tex [95]
 Overfull \hbox (2.10384pt too wide) in paragraph at lines 23--25
 \T1/lmr/m/n/10.95 To as-sist us as well, we ap-ply prod-uct rule and an-ti-sym-me-try. We'll now cal-cu-late this thing 
  []
 
-[95]) [96] (./question_7.tex [97] [98]) (./question_8.tex) (./example_sheet_2.tex [99] [100] [101] [102]
+[96]) [97] (./question_7.tex [98] [99]) (./question_8.tex) (./example_sheet_2.tex [100] [101] [102] [103]
 
 Package simpler-wick Warning: I have reached the end of \wick with some unclosed contractions on input line 246.
 
-[103] [104] [105]) (./question_1.tex
+[104] [105] [106]) (./question_1.tex
 Overfull \hbox (57.0368pt too wide) detected at line 23
 [] \OML/cmm/m/it/10.95 d[]xT[] \OT1/cmr/m/n/10.95 = [] \OML/cmm/m/it/10.95 d[]x d[]p d[]q [] []
  []
 
-[106]) (./question_2.tex [107]) [108]
+[107]) (./question_2.tex [108]) [109]
 Package atveryend Info: Empty hook `BeforeClearDocument' on input line 158.
 Package atveryend Info: Empty hook `AfterLastShipout' on input line 158.
  (./article.aux)
@@ -2548,19 +2548,19 @@ Package logreq Info: Writing requests to 'article.run.xml'.
 )
 
 Here is how much of LuaTeX's memory you used:
- 52513 strings out of 494413
+ 52514 strings out of 494413
  125171,1977958 words of node,token memory allocated
- 2898 words of node memory still in use:
-   7 hlist, 2 vlist, 2 rule, 2 glue, 1 kern, 2 sub_mlist, 591 attribute, 65 glue_spec, 591 attribute_list, 1 write, 3 pdf_action nodes
-   avail lists: 1:7,2:2643,3:1027,4:180,5:344,6:90,7:3954,8:106,9:874,10:13,11:222,12:1
+ 2906 words of node memory still in use:
+   7 hlist, 2 vlist, 2 rule, 2 glue, 1 kern, 2 sub_mlist, 593 attribute, 65 glue_spec, 593 attribute_list, 1 write, 3 pdf_action nodes
+   avail lists: 1:7,2:2639,3:1027,4:180,5:344,6:90,7:3954,8:105,9:874,10:13,11:222,12:1
  54391 multiletter control sequences out of 65536+600000
  70 fonts using 8536863 bytes
  65i,14n,101p,1050b,1970s stack positions out of 5000i,500n,10000p,200000b,100000s
 {/usr/local/texlive/2018/texmf-dist/fonts/enc/dvips/lm/lm-ec.enc}{/usr/local/texlive/2018/texmf-dist/fonts/enc/dvips/lm/lm-ts1.enc}</usr/local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx6.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx8.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cmextra/cmex8.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi6.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy6.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/lm/lmbx10.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/lm/lmbx12.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/lm/lmr10.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/lm/lmr12.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/lm/lmr17.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/lm/lmr8.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/lm/lmri10.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
-Output written on article.pdf (108 pages, 921411 bytes).
+Output written on article.pdf (109 pages, 924074 bytes).
 
-PDF statistics: 1261 PDF objects out of 1440 (max. 8388607)
- 1057 compressed objects within 11 object streams
- 250 named destinations out of 1000 (max. 131072)
+PDF statistics: 1265 PDF objects out of 1440 (max. 8388607)
+ 1060 compressed objects within 11 object streams
+ 251 named destinations out of 1000 (max. 131072)
  856 words of extra memory for PDF output out of 10000 (max. 100000000)
 

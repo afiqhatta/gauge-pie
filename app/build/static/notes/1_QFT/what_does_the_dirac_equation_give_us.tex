@@ -603,13 +603,21 @@ depending on the representation we choose.
 We check that in our chiral representation, 
 \[
 	\gamma ^ 5 = \begin{pmatrix}  - I & 0 \\ 0 & I  \end{pmatrix} 
-\] We define projection operators 
+\] We define projection operators in the spirit of 
+finding a way to extract the left-handed and right-handed spinors 
+from the entire spinor. We define  
 \[
 	P _ L = \frac{1}{2 } ( I _ 4 - \gamma ^ 5 ) , \quad P _ R = \frac{1}{2 } ( 1 + \gamma ^ 5 ) 
-\] These obey the properties 
+\] These obey the properties that come with what 
+we usually know as a projection operator, namely, 
+that projecting twice is the same as projecting once, 
+and that $ P_ L $ and $ P _ R $ project onto 'orthogonal' 
+spaces 
 \[
  P_ L ^ 2 = P_L , \quad P _ R ^ 2 = P _ R , \quad P _ L P _ R = 0 
-\] We then define 
+\] We then define 'left handed' and 'right handed' spinors
+$ \psi _ L $ and $ \psi_ R $, 
+which are the projection spinors with these operators 
 \[
  \psi _ L = P_L \psi , \quad \psi _ R = P _ R \psi 
 \] for left handed and right handed spinors respectively. 
@@ -626,29 +634,44 @@ parity transformation. We can also define the axial vector, $ \overline{ \psi } 
 \psi $ which transforms in the same way. 
 
 \subsection{Parity} 
-$ \psi _ L $ and $ \psi _ R $ are related by Parity. 
-We have a Lorentz group transformation defined 
-in the usual way. There are other discrete Lorentz transFormations. 
-One is 
+We'll now explore how spinors transform under discrete 
+transformations. We'll look at a specific class of transformations 
+which flips either our time coordinate or our spatial coordinate. 
+The transformations are called parity transformations. 
+Ultimately, we'll find that 
+$ \psi _ L $ and $ \psi _ R $ are related by a parity trasnformation. 
+In the Lorentz group $ O ( 1, 3 ) $, we've 
+dealt with boosts and rotations, which are a continuous 
+group of transformations. However, there are other discrete Lorentz transformations 
+which are not part of the Lorentz group's component connected to the identity. 
+These transformations are  
 \[
  \text{Time Reversal } T : x ^ 0 \to  - x ^ 0 , \quad x ^ i \to x ^ i 
 \] The other one is parity. 
 \[
  \text{Parity } P : x ^ 0 \to x ^ 0 , \quad x ^ i \to  - x ^ i 
 \] Other transformations like  $x ^ 2 \to - x ^ 2 $
-are connected to the identity. 
+are connected to the identity, because something like this can 
+be written as a rotation. 
 Under $ P $, rotations don't change sign, but 
 boosts do. 
 \[
  u_{ L , R } \to e^{ \phi \cdot  \sigma / 2} u_{ L , R }, \quad 
  u _{ L, R } \to e^{  \mp \chi \cdot  \sigma / 2} u_{ L, R }
-\] If we write $ \psi _{ L , R }  = \frac{1}{2 } ( I \mp \gamma ^ 5 )  $, 
-hence $ P $ exchanges LH and RH spinors. 
-\begin{align*}
-	P : & \psi_{ L , R } ( \vec{x} , t ) \to \psi_{ R, L } ( - \vec{x} ,  t) \\
-	P : & \psi ( \vec{x}, t ) \to \gamma ^ 0 \psi ( - \vec{x}, t ) 
-\end{align*}
-How do our terms in $\mathcal{ L } $ 
+\] This is equivalent to writing, 
+in our new notations with $ \psi _{ L , R }  = \frac{1}{2 } ( I \mp \gamma ^ 5 )  \psi $, 
+that  $ P $ exchanges LH and RH spinors. 
+\[ 
+	P : \,  \psi_{ L , R } ( \vec{x} , t ) \to \psi_{ R, L } ( - \vec{x} ,  t) 
+\] Since our parity transformation switches around 
+the left and right handed components of the spinor, it is 
+completely equivalent to applying the $ \gamma ^ 0 $ matrix to the spinor, 
+(but also we have to remember to change the $ \vec{x} $ sign) 
+\[
+	P : \,  \psi ( \vec{x}, t ) \to \gamma ^ 0 \psi ( - \vec{x}, t ) 
+\]
+How do our terms in our $\mathcal{ L } $ density change? We look at each field one 
+by one 
 Firstly, 
 \[
 	\overline{ \psi } \psi ( \vec{x}, t) \to \overline{ \psi } \psi ( - \vec{x}, t ) 
@@ -779,9 +802,13 @@ the conserved axial vector current
 j _ A ^ \mu  = \overline{ \psi  } \gamma ^ \mu \gamma ^ 5 \psi 
 \] 
 
-\subsection{Plane-Wave Solutions} 
+\subsection{Plane-Wave Solutions}
+Now, let's actually start writing down solutions to the 
+Dirac equation. 
 We want to solve $ ( i \slashed{\partial}  -m ) \psi = 0 $. 
-We use the ansatz 
+Even though this is a first order differential equation 
+and typically we wouldn't think of using wave solutions, 
+we try this anyway and make the ansatz 
 \[
 \psi = u_{ \vec{p} } e ^{ - i p \cdot  x }
 \] where $ u _{ \vec{p} }  $ is a constant spinor 
@@ -792,7 +819,13 @@ of $ \gamma ^ \mu $, we have that
 ( \gamma ^ \mu p _ \mu - m ) u _{ \vec{p} }  = 0  = 
 \begin{pmatrix}  - m & p _ \mu \sigma ^ \mu \\ p _ \mu \overline{ \sigma } ^ \mu 
 & - m  \end{pmatrix} u _{ \vec{p} }  =0 
-\] Our claim is that we have a solution 
+\] Here, we are again using 
+our notation that $ \sigma^ \mu = ( 1 , \sigma ) $, and $ \overline{ \sigma } ^ \mu  = ( 1 , - \sigma ) $. 
+
+\begin{claim}{(The Spinor plane-wave solution)}
+	
+\end{claim}
+Our claim is that we have a solution 
 given by 
 \[
 u _{ \vec{p} }  = \begin{pmatrix}  \sqrt{ p \cdot  \sigma }  \xi \\
