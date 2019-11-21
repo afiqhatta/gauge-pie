@@ -904,12 +904,95 @@ If we define $ \psi  = v _{ \vec{p} } e ^{ i p \cdot  x } $.
 The Dirac equation then gives 
 \[
 v_{ \vec{p} }  = \begin{pmatrix}  \sqrt{ p \cdot  \sigma }  \eta \\
-- \sqrt{ p \cdot  \overline{ \sigma }  }  \end{pmatrix} 
+- \sqrt{ p \cdot  \overline{ \sigma }  } \eta  \end{pmatrix} 
 \] where we have as well that $ \eta ^ \dagger \eta  = 1 $ and $ \eta $ 
 is a constant 2 -spinor. 
 
+\subsection{A canonical Basis for normalised Spinors} 
+In what follows, we'll construct a basis 
+for the two component spinors in a way such that 
+some nice identities will hold when we're doing calculations. 
+It will be convenient for us to choose the basis 
+\[
+	\xi ^ 1  = \eta ^ 1 = \begin{pmatrix}  1\\ 0  \end{pmatrix} , 
+	\quad \xi ^ 2 = \eta ^ 2 = \begin{pmatrix}  0 \\ 1  \end{pmatrix} 
+\] This gives us the sweet property that these 
+things are normalised, so 
+\[
+ ( \xi ^ r ) ^ \dagger \xi ^  s =  \delta ^{ r s }, \quad 
+ ( \eta ^ r ) ^ \dagger \eta ^ s = \delta ^{ r s }
+\] In this basis, we then get 
+two independent solutions for both $ u(\vec{p} ) $ 
+and $ v ( \vec{p} ) $, which 
+we will index as $ u ^ s ( \vec{p} ) $ and $ v ^ s ( \vec{p}  ) $. 
+We get these solutions by just plugging in $ \xi ^ s $ or $ \eta ^ s $
+into the respective spinors -  these linearly independent solutions are given by 
+\[
+	u ^ s (\vec{p} )  = \begin{pmatrix}  
+	\sqrt{ p \cdot  \sigma }  \xi \\ \sqrt{ p \cdot  \overline{ \sigma } }  
+\xi \end{pmatrix}, \quad v ^s ( \vec{p} ) = \begin{pmatrix}  
+\sqrt{ p \cdot  \sigma }  \eta \\  - \sqrt{ p \cdot  \overline{\sigma}}  \eta \end{pmatrix}
+\]  The neat thing is that, now with our 
+choice of basis for the two component spinors, 
+we get that $ u ^ s $ and $ v ^ s $ are themselves 
+normalised depending on how we contract them. 
+We can contract them in two ways. 
+The first thing that we can do is take the hermitian 
+dot product, so something like $ u^{ s \dagger  } u ^ r $. 
+Secondly, we could've also equally defined $ \overline{ u } ^ s  = u^{ s \dagger } \gamma ^ 0 $, and we also check the normalisation 
+$ \overline{ u } ^ s u ^ r $. It turns out, both 
+will be useful. 
 
-\subsection{Quantising the Dirac field} 
+Let's do the first contraction. 
+\begin{align*}
+	u^{ s \dagger } u ^ r &=  \begin{pmatrix}  \xi^{ s \dagger } \sqrt{ p \cdot  \sigma } & \xi ^{ s \dagger } \sqrt{ p \cdot  \overline{ \sigma } }   \end{pmatrix} 
+	\begin{pmatrix}   \sqrt{ p \cdot  \sigma }  \xi ^{ r  } \\
+	\sqrt{ p \cdot  \overline{ \sigma } }  \xi ^{ r } \end{pmatrix} \\
+	&=  \xi ^{ s \dagger } ( p \cdot  \sigma ) \xi ^{ r } 
+	+ \xi ^{ s \dagger } ( p \cdot  \overline{ \sigma } ) \xi ^{ r } \\
+	&=  2p_0 \xi ^{ s \dagger } \xi ^ r  \\ 
+	&=  2 p_0 \delta ^{ rs  } 
+\end{align*}
+We can see clearly that this is 
+not a necessarily Lorentz invariant 
+contraction since $ p_0 $ changes under boosts. 
+Now, lets do the other type of contraction which 
+is indeed Lorentz invariant! We have that 
+\begin{align*}
+	\overline{u }^{ s \dagger } u^ r &= \begin{pmatrix}  
+		\xi ^{ s \dagger } \sqrt{ p \cdot  \sigma }  & 
+\xi ^{ s \dagger } \sqrt{ p \cdot  \overline{ \sigma } }  \end{pmatrix} 
+\begin{pmatrix}  0 & I \\ I & 0  \end{pmatrix}  \begin{pmatrix} 
+\sqrt{ p \cdot  \sigma }  \xi ^ r \\ \sqrt{ p \cdot  \overline{ \sigma } }  \xi ^ r 
+\end{pmatrix} \\
+		   &=  2 \xi ^{ s \dagger }  \sqrt{ ( p \cdot  \sigma   ) 
+		   ( p \cdot  \overline{ \sigma   } ) }   \\
+		   &=  2m \delta ^{ r s }  
+\end{align*}
+In the above we've used the relation we proved 
+earlier that $ ( p \cdot  \sigma ) ( p \cdot  \overline{ \sigma } )  = m ^ 2 $. 
+
+Now, what about the 'negative frequency' spinors 
+$ v ^ s ( \vec{p} ) $? 
+Well, it is easy to also check that these spinors
+obey similar normalisation conditions, up to 
+a minus sign. 
+\[
+ v ^{ s \dagger} v ^ r = 2 p_0 \delta ^{ rs } , 
+ \quad \overline{ v }^{ s } v ^{ r }  =  - 2m \delta ^{ rs }
+\] 
+Finally, something we will also have to use 
+frequently in the coming section is 
+the outer product 
+
+\subsection{Quantising the Dirac field}
+In conclusion, we've found two 
+plane wave solutions of the Dirac equation, which, for 
+cleanliness, we will write as 
+$ u ^ s (\vec{p} )  $ and $ v ^s ( \vec{p} )$. 
+Recall, the $ s $ index let's us choose between 
+$ \xi ^ 1  $  or $ \xi ^ 2 $ in the definition $ u^ s ( \vec{p} )$, 
+or $ \eta ^ 1 $ or $ \eta ^ 2 $ in the definition of $  v ^ s ( \vec{p} ) $.  
 When we take these solutions and write them out 
 in Fourier modes, we have that 
 \begin{align*}
@@ -919,32 +1002,52 @@ b_{ \vec{p} } ^ s u _{ \vec{p} } ^ s e ^{ i \vec{p} \cdot  \vec{x} }
 + c_{ \vec{p} } ^{ s \dagger } v_{ \vec{p} } ^ s e ^{ - i \vec{p} \cdot  \vec{x}}\right] \\
 \psi ^ \dagger ( \vec{x} ) &=  \sum _{ i = 1 } ^ 2 
 \int \frac{ d ^ 3 p }{ ( 2 \pi ) ^ 3 \sqrt{ 2 E _{ \vec{p} } }  } \left[  
-b_{ \vec{p} } ^ s u_{\vec{p} } ^{ s \dagger } e ^{ - \vec{p} \cdot  \vec{x} } + 
+	b_{ \vec{p} } ^ { s \dagger }  u_{\vec{p} } ^{ s \dagger } e ^{ - \vec{p} \cdot  \vec{x} } + 
 c_{ \vec{p} } ^ s v_{ \vec{p}} ^{ s \dagger } e ^{ i \vec{p} \cdot  \vec{x} } \right] \\ 
 \end{align*}
-
+Analogous to our previous case in 
+nucleon anti-nucleon quantisation, we have that
+$ b_{\vec{p} }^ s $  and $ b_{\vec{p} } ^{ s \dagger } $ 
+represent the annihilation and creation 
+operators for $ u( \vec{p} ) ^ s $, and that $  c_{ \vec{p} } ^ s , 
+c_{ \vec{p} } ^{ s \dagger } $  represent annihilation 
+and creation for $ v ^ s ( \vec{p} ) $. 
 In spinor quantisation, it turns out that we require 
 anti commutations relations instead of commutation relations, with 
 \[
 \left\{  A, B  \right\}   = AB + B A 
-\]  We need the relations 
+\] We'll go into more detail about why we 
+need anti-commutation relations later, 
+but for now just acknowledge that this is due to the fact that 
+if we were to impose commutation relations, 
+we'll come across the problem of unbounded negative energy. 
+The specific anti-commutation relations are:  
 \[
 \left\{  \psi _ \alpha ( \vec{x} ) , \psi _ \beta ( \vec{y} )  \right\}   = 0 
 = \left\{  \psi _{ \alpha } ^ \dagger ( \vec{x} ) , \psi _{ \beta } ^ \dagger 
 ( \vec{y} ) \right\}  , \quad \left\{  \psi _ \alpha ( \vec{x} ) , 
-\psi _{ \beta } ( \vec{y} ) \right\}  = \delta _{ \alpha \beta } \delta ^ 3 ( \vec{x} - \vec{y} ) 
+\psi _{ \beta }^\dagger ( \vec{y} ) \right\}  = \delta _{ \alpha \beta } \delta ^ 3 ( \vec{x} - \vec{y} ) 
 \]
-We can prove that thesse are equivalent to 
+In the same vein as the case we 
+had with scalar fields and nucleons, 
+we construct a set of commutation relations on 
+the creation and annihilation operators
+which are logically equivalent to our anti-commutation 
+relations. We can prove that these are equivalent to 
 \[
 \left\{  b_{ \vec{q} } ^ r , b _{ \vec{q} } ^{ s \dagger }  \right\}  = 
 ( 2 \pi ) ^ 3 \delta ^ 3 ( \vec{p} - \vec{q} ) \delta ^{ rs }  = \left\{  c_{ \vec{p} } ^ r , 
 c _{ \vec{q} } ^{ s \dagger }\right\} 
-\] Our Hamiltonian density looks like 
+\] We do the Legendre transform to 
+get our Hamiltonian density. It's easy to 
+see that our conjugate momenta $ \pi $ is 
+$ \pi = i \psi^{ \dagger } $. This means that 
+our Hamiltonian looks like 
 \begin{align*}
 \mathcal{ H } &=  \pi \dot{ \psi }  - \mathcal{ L }   \\
 &=  i \psi ^ \dagger \dot{ \psi }  - i \overline{ \psi } \gamma ^ 0 \partial  _ 0 
 \psi - i \overline{ \psi } \gamma ^ i \partial  _ i \psi + m \overline{ \psi } \psi \\
-&=  \overline{ \psi }( - i \gamma ^ i \partial  _ i + m ) \psi   \\ 
+&=  \overline{ \psi }( - i \gamma ^ i \partial  _ i + m ) \psi -  
 \end{align*}
 If we plug in $ \psi , \overline{ \psi } $ from the above, 
 we use anti commutation relations and some reuslts on inner 
@@ -954,13 +1057,14 @@ u _{ \vec{p} } ^{ r \dagger } u _{ \vec{p} } ^ s  =
 v_{\vec{p} } ^{ r \dagger } v _{ \vec{p} } ^ s  = 2 p_0 \delta ^{ rs } , \quad 
 u_{\vec{p} } ^{  r\dagger } v_{\vec{p} } ^ s = 0 = v_{ \vec{p} } ^{ r \dagger  } u_{ \vec{p} } ^ s 
 \] 
-This means that 
+This means that for our Hamiltonian, 
+we fortunately get a positive definite quantity
 \[
 H = \int \frac{ d^ 3 p }{ ( 2 \pi ) ^ 3 } E _ p \sum_{ s = 1 } ^ 2 
 \left(  b_{ \vec{p} } ^{ s \dagger  } b _{ \vec{p} } ^ s 
 + c _{ \vec{p} } ^{ s \dagger } c _{ \vec{p} } ^ s \right) 
 \] If we used commutation relations, we get a minus sign which means that we 
-have unboudned lower energy and there fore unstable theory.
+have unboudned lower energy and therefore unstable theory.
 
 \subsection{The Dirac Hole Interpretation}
 We can write the Dirac equation as 
@@ -992,7 +1096,10 @@ we have that
 \ket{ \vec{p} _ 1 , r _ 1 ; \vec{p} _ 2 , r _ 2 } =  - \ket{ \vec{p} _ 2 , r _ 2 ; \vec{p} _ 1 , r _ 1 } 
 \]   
 
-\subsubsection{Going into the Heisenberg picture} 
+\subsubsection{Going into the Heisenberg picture}
+To study propagators in the theory, 
+we make the operators $ \psi $ and $ \overline{ \psi } $ time 
+dependent by moving into the Heisenberg picture. 
 Now, we have a time dependent operator $ \psi ( x) $ satisfying 
 $ \frac{\partial  \psi }{\partial  t }  = i \left[  H , \psi  \right]   $ 
 which is solved by the Heisenberg picture expansion 
@@ -1000,7 +1107,12 @@ which is solved by the Heisenberg picture expansion
 \psi _ \alpha ( x ) = \sum_{ s = 1 } ^ 2 \int \frac{ d ^ 3 p }{ ( 2 \pi ) ^ 3 \sqrt{ 2 E _ p }  } \, 
 \left(  b^ s _{\vec{p} } u_{ \vec{p}_ \alpha } ^s e^{ - i p \cdot  x } 
 + c _{\vec{p} } ^{ s \dagger } v_{\vec{p} _ \alpha } ^ s e ^{ i p \cdot  x } \right)  
-\] with an analogous expression for $ \psi_ \alpha ^ \dagger $. 
+\] with an analogous expression for $ \psi_ \alpha ^ \dagger $. Honestly, 
+the only thing we're doing here is 
+attaching a time dependence to the exponential 
+previously. Now, we are in a 
+position to define the Feynman propagaator 
+but in the case of these fermionic fields. 
 We then define, in analogy with $ \Delta ( x -y )  = \left[  \phi ( x) , \phi ( y )  \right]  $, 
 that for $ \mathbb{ R }$ scalars, 
 \[
@@ -1016,13 +1128,16 @@ u_{ \vec{p} } ^ s \overline{u } _{ \vec{q} } ^ r +
 \left\{  c_{\vec{p} } ^{ s \dagger } , c _{\vec{q} } ^{ r } \right\}  v _{ \vec{p} } ^ s 
 \overline{ v } _{\vec{q} } ^{ r } e ^{ i ( p \cdot  x - q \cdot  y ) } \right] 
 \]
-Now, this simplifies to the expression 
+The anti commutators in this expression yield 
+delta functions. So, this simplifies to the expression 
 \[
 i S_{ \alpha \beta } ( x -y )  = \int \frac{d ^ 3 p }{ ( 2 \pi ) ^ e 2 E_ p } 
 \left[  \sum _s u_{ \vec{p} _ \alpha } ^ s \overline{ u } _{ \vec{p} _ \beta } ^ s 
 e ^{ - i p \cdot  ( x - y ) } + \sum _ s v_{ \vec{p} _ \alpha } ^ s 
 \overline{ v } _{ \vec{p} _ \beta } ^ s e ^{ i p \cdot  ( x  -y ) }\right] 
-\] The sums are $\slashed{p} + m $ and $ \slashed{p} - m $. 
+\] Earlier we showed that the outer products 
+of the spinors $ u $ and $ v $ summed 
+over the spin indices give $\slashed{p} + m $ and $ \slashed{p} - m $. 
 This thing then simplifies to 
 \[
 = \left(  i \slashed{\partial } _ x + m   \right)  D ( x - y )  - \left(  i 
@@ -1040,11 +1155,13 @@ Away from singularities, we have that
 					&=  ( i \slashed{\partial} _ x - m ) 
 					( i \slashed{\partial}  + m ) \left[ D ( x - y )  - D ( y - x )  \right]  \\
 					&=  - ( \partial _ x ^ 2 + m ^ 2 ) \left[  D ( x -y )  - D( y - x)  \right]  \\
-					&= 0 \text{ using } p ^ \mu p _ \mu  = m ^ 2  \\
+					&= 0 \text{ using } p ^ \mu p _ \mu  = m ^ 2
 \end{align*}
 
 \subsubsection{The Feynman Propagator} 
-A similar calculation gives us 
+A similar calculation gives us us that 
+the two point propagator between $x $ and 
+$ y $ are 
 \begin{align*}
 \bra{ 0 } \psi _ \alpha ( x) \overline{ \psi } _ \beta ( y ) \ket{ 0 } &=  \int \frac{ d ^ 3 p }{ ( 2 \pi ) ^ 3 
 2 E _ p } ( \slashed{p} + m ) _{ \alpha \beta } e ^{  - i p \cdot  ( x - y ) } \\
@@ -1077,4 +1194,96 @@ The negative sign in the second term is required
 	From this we get that 
 	\[
 	T ( \psi ( x) , \overline{ \psi  }( y )  = : \psi ( x) \overline{ \psi ( y ) } 
-	\] 
+	\]
+\subsection{Momentum Space Feynman Rules for Fermion Amplitudes} 
+Let's review the diagrams for 
+the Yukawa interaction, but with the view of
+Fermionic quantisation. 
+We have the following diagrams.   
+The important thing 
+is that operators need to remain the same order, unless 
+we decide to anti-commute them and pick up a minus sign. 
+Hence, for a closed fermionic loop which looks like 
+$ :  \overline{ \psi } _ \alpha ( x) 
+\wick{ \c \psi_ \alpha ( x) \c \psi ^ * _ \beta ( y )  } \psi _ \beta ( y )   : $
+where we contract the middle two fields, 
+to contract the other two fields we need to pick up a 
+minus sign (show here). 
+
+Question: what if $ \mathcal{ L } _{ \text{ int } }  = - \lambda \phi  \overline{ \psi }_ \alpha ( \gamma ^ 5 )_{ \alpha \beta } \psi _{ \beta } $  ? 
+This interaction preserves parity if $ \phi $ is a pseudo-scalar, 
+in other words 
+\[
+	P \phi ( \vec{x} , t )   = - \phi ( - \vec{x} , t  )
+\] 
+This interaction looks like the below (diagram here) 
+this contributes $ ( - i \lambda ) ( \gamma ^ 5 )_{ \alpha \beta } $. 
+
+Question: how do we deal with spin and $ | \mathcal{ M } | ^ 2 $, 
+in the cross section calculation? 
+In most experiments $ \ket{ i } $ spin states are random 
+and so we average over them. For example, for 
+$ \psi \psi $, it would be $ \frac{1}{4 } \sum_{ r , s = 1 } ^ 2 $, 
+Also spins in $ \ket{ f } $, aren't observed - they're summed over. 
+Specifically 
+\[
+ \mathcal{ M } = B - A , \text{ in } \psi \psi \to \psi \psi 
+\] where $ B , A $ are the different terms. 
+We wrote appropriate spin sums averages with a line on top. 
+\begin{align*}
+	\overline{ | \mathcal{ M } | } ^ 2 &=  | \overline{ A } | ^ 2 
+	+ | \overline{ B } | ^ 2 - \overline{ A ^ \dagger B } - 
+	\overline{ B ^ \dagger A } \\
+	A &=  \frac{\lambda ^ 2 \left[  \overline{u  }_{ \vec{p} ' } ^ s 
+	\cdot  u_{ \vec{q} } ^ r  \right] \left[  
+\overline{ u } _{ \vec{q} ' } ^{ r ' } \cdot  u_{ \vec{p} } ^ s \right]}{
+\mu ^ 2- \mu ^ 2+ i \epsilon } \\
+\end{align*}
+Note that we have $ ( \gamma ^ 0 ) ^ \dagger  = \gamma ^ 0 $. 
+ \[
+	 | \overline{ A } | ^ 2 = \frac{ | \lambda | ^ 4  }{ 4 ( \mu ^ 2 - m ^ 2 ) ^ 2  } 
+ \sum_{ r , s , s' , r ' } \overline{u }_{ \vec{p} ' _ \alpha } ^{ s ' } 
+ u_{ \vec{q} _ \alpha } ^ r \overline{ u } _{ \vec{q} _ \beta } ^ r 
+ u_{ \vec{p} ' _ \beta } ^{ s ' } \overline{u }_{ \vec{q} ' _ \beta } ^{ r ' } 
+ u_{ \vec{p} _ \gamma } ^{ s } \overline{ u }_{ \vec{p} _ \delta } ^ s 
+ u_{ \vec{q}' _ \delta } ^{ r ' }
+\]  This 
+is equal to 
+\[
+	\frac{ | \lambda |  ^ 4 }{ 4 } \frac{( \slashed{p}' + m)_{ \alpha \beta } 
+	( \slashed{q} + m )_{ \beta \alpha } \tr \left[  
+( \slashed{q}' + m ) (\slashed{p} + m )  \right] }{ ( \mu ^ 2 - m ^ 2 ) ^  2}
+\] Often, we are in the high energy limit, 
+where we may wish to neglect particle masses. In this 
+case, we then find that 
+\[	| \overline{ A } | ^ 2 = \frac{ | \lambda | ^ 4 \tr ( 
+	\slashed{p} ' \slashed{q} ) \tr (\slashed{q} ' \slashed{p} ) }{4 \mu ^ 2 }
+\] Similarly, we have that for $ | \overline{ B  } | ^ 2 $, 
+we get that 
+\[
+ | \overline{ B } | ^ 2 = \frac{  | \lambda | ^ 2 }{ 4 t ^ 2 }
+ \tr ( \slashed{q} ' \slashed{q} ) \tr ( \slashed{p} ' \slashed{p} ) 
+\] We also want $  - \overline{ A ^ \dagger B  }  - \overline{ B ^ \dagger A }  = 
+- 2 Re \overline{ ( A ^ \dagger B ) } $. 
+We calculate this as 
+\begin{align*}
+	\overline{ A ^ \dagger B  } &  = \frac{ | \lambda | ^ 4 }{ 4 u t} 
+	\sum_{ r , r' , s, s ' } \overline{u } _{ \vec{q} _ \beta } ^ r 
+	u _{ \vec{p} ' _ \beta }^{ s' } \overline{ u } _{ \vec{p} _ \alpha } ^ s 
+	u _{ \vec{q} ' _ \alpha } ^{ r '} \overline{ u } _{ \vec{q}' _ \gamma } ^{ r ' } 
+	u_{ \vec{q} _ \gamma } ^ r \overline{ u } _{ \vec{p} ' _ \delta } ^{ s' } 
+	u _{ \vec{p} _ \delta } ^ s \\
+				    &=  \frac{|\lambda | ^ 2 }{ 4 ut } \tr \left(  
+				    \slashed{p} \slashed{p} ' 
+			    \slashed{q} \slashed{q}' \right)  \\
+\end{align*} 
+
+This gives us the Feynman rules 
+for spin summed $ \mathcal{ M } ^ 2 $ diagrams. 
+We have that complex conjugation switches $ \ket{ i } $ and 
+$ \ket{ f } $ in the diagram. 
+Fermion lines are joined with identical momentum on the LHS and RHS. 
+Adter a spin sum, a closed fermion line in the $| \mathcal{ M } | ^ 2 $ diagram 
+is given by a trace over $ \gamma $ matrices, with appropriate $\gamma ^ 5 $ ' s
+etc in vertices at the correct posiition in the trace. trace follows 
+fermion arrows backwards. 

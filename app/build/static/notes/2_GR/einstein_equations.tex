@@ -505,7 +505,19 @@ This flow is an isometry if the metric
 looks the same at each point along the flow, in other words 
 \[
  \mathcal{ L }_K g = 0 \iff \nabla _ \mu K _ \nu + \nabla _ \nu K _ \mu  =0 
-\] This equation is 
+\] We can show that the second expression 
+is equivalent to the first by recalling the expression 
+for a Lie derivative, and then working in normal coordinates to 
+get the covariant expression out. 
+In components, our Lie derivative is 
+\[
+	( \mathcal{ L } _ X g )_{ \mu \nu }  =  K ^ \alpha \partial  _ \alpha g _{ \mu \nu } 
+	 + g_{ \alpha \nu } \partial  _ \mu K ^ \alpha + 
+	 g _{ \alpha \mu } \partial  _ \nu K ^ \alpha 
+ \] In normal coordinates, our first term 
+ disappears since the metric is flat, and we 
+ can convert the partial derivatives to covariant derivatives, 
+ which gives us the second expression. This equation is 
 called the 'Killing equation' and any vector $ K  $ which 
 obeys this is 
 called the Killing vector. 
@@ -515,7 +527,10 @@ These objects describe the symmetries of the metric.
 Note, commuting the Lie derivatives is handy because 
 \[
 	\mathcal{ L } _ X \mathcal{ L } _ Y - \mathcal{ L } _ Y \mathcal{ L } _ X  = \mathcal{ L } _{ [ X, Y ] }
-\] From this, we start to get a Lie 
+\] You can 
+show this easily in the case of the Lie derivative 
+acting on either a function or a vector field (the first is trivial, 
+for a vector field just apply Jacobi). From this, we start to get a Lie 
 algebra structure that emerges for the group 
 of continuous symmetries of the metric, (which 
 is exactly what we expect from continuous symmetries).
@@ -631,3 +646,159 @@ Substituting this into the action
  \delta S = \int d \tau 2 \nabla _ \mu K _ \nu \frac{ d x ^ \mu }{ d \tau } \frac{ d x ^ \nu }{ d \tau }
 \] This implies that $ \sigma S = 0 $ iff $ \nabla _{ ( \mu } k_{ \nu ) }  = 0 $, the Killing equation.
 
+\subsection{Asymptotics of Spacetime} 
+Given a spacetime $ \mathcal{ M } $, with metric 
+$ g _{ \mu \nu } ( x) $, we consider a 
+conformal transformation 
+\[
+	\tilde{ g } _{ \mu \nu } ( x) = \Omega ^ 2 (  x) g_{ \mu \nu } ( x)  
+\] where $ \Omega( x) $ is smooth, and non zero. 
+These metrics don't necessarily 
+have the same symmetries - they're different metrics 
+that in general describe  \textbf{different } space times. 
+They do have one thing on common, however, 
+which is important. A vector which is 
+null in the $ g _{ \mu \nu } $ spacetime 
+is also null in the $ \tilde{ g } _{ \mu \nu  }  $ space 
+time. 
+This means that they have the same causal structure. 
+\[
+ g_{ \mu \nu }  X^ \mu    X^\nu =0   \iff \tilde{ g } _{ \mu \nu } X^\mu X^\nu  = 0 
+\] Since 0 is the dividing line between positve and negative, 
+null / spacelike / timelike vectors in $ g _{ \mu \nu } $ 
+map to null / spacelike / timelike vectors in $ \tilde{ g } _{ \mu \nu }  $. 
+Conformal transformations are something that crop up 
+everywhere in physics. 
+
+\subsubsection{Penrose Diagrams}
+The idea is to use conformal transformations 
+to bring the infinity of space time 
+a 'little bit closer', in such a way 
+that is becomes simple to visualise what infinity looks like. 
+There is some fancy technical way to do these diagrams, 
+but we'll just do examples to get the feel.
+
+In Minkowski space in 2 dimensions, $ \mathbb{ R} ^{ 1, 1 } $, 
+the metric $ ds ^ 2 = - d t ^ 2 + dx ^ 2 $ (the standard metric). 
+We'll do two successive coordinate transformations. 
+We introduce lightcone coordinates  $ u  = t  -x $, 
+and $ v = t + x $. It's simple to see that 
+in these coordinates, 
+\[
+ ds ^ 2 =  - du dv
+\] We have to be very careful about the range in which coordinates move. 
+We have that $ u , v \in ( - \infty  , \infty ) $, 
+since $ t , x  $  are in the same range. 
+Now, the idea is to come up with a second coordinate transform which 
+takes infinity to a finite number. We can choose any function we 
+like which has an infinite range in an infinite domain. 
+We can now map this to a finite range, 
+\[
+ u = \tan \tilde{ u } , \quad v = \tan \tilde{ v }   
+\] with $ u , v  \in ( - \frac{ \pi }{ 2 } , \frac{\pi}{ 2 } ) $. 
+In these coordinates, the metric is 
+\[
+ ds ^  2 =  -\frac{1}{\cos ^ 2 \tilde{ u } \cos ^ 2 \tilde{ v}   } d \tilde{ u } d \tilde{ v }   
+\] Now we do a conformal map. 
+Consider the metric 
+\[
+ d \tilde{ s } ^ 2 = \cos ^ 2 \tilde{ u } \cos ^ 2 \tilde{v } ds ^ 2  = - d \tilde{ u } d \tilde{ v }      
+\] Thus, 
+we get something that looks like 
+the Minkowski metric but now has a limited range. 
+We write this range to include the closure of the set (which acts as infinity) 
+so that $ \tilde{ u } , \tilde{ v } \in [ - \frac{\pi}{2 } , + \frac{\pi}{2 } ]   $. 
+Adding the points $ \pm \frac{\pi}{ 2 } $ that used to be 
+$ \pm \infty$ is called conformal compactification.
+Now we draw the spacetime with 
+lightrays at $ 45 $ degrees, and time vertical.
+
+Insert penrose diagram here. 
+This is the Penrose diagram. Don't
+trust distances on these diagrams, but trust the causal structure. 
+
+We can draw various geodesics on this diagram, 
+in particular timelike geodesics (constant $ x $), 
+and spacelike geodesics (constant $  t$ ). 
+These are geodesics in our \textbf{original } choice 
+of metric.
+
+All timelike geodesics start at the point $ \peninf ^ -  , [ - \frac{\pi}{2 } , - \frac{\pi}{2  }] $, 
+and end at $ \peninf ^ + , [ \frac{\pi}{2 } , \frac{\pi}{ 2   }]$. These are
+called past / future timelike infinity. 
+Meanwhile, all spacelike geodesics 
+start and end at two points $ \peninf ^ 0  , [ - \frac{\pi}{2 }, + \frac{\pi}{2 } ] $ or 
+$ [ + \frac{\pi}{2 } , - \frac{\pi}{ 2 } ] $. These are called spacelike 
+infinity. 
+
+All null curves start at $ \scri ^ - $ "scri-minus" and at $ \scri ^ + $ "scri-plus". 
+These all called past and future null infinity.
+
+There are some things we can read off
+from a Penrose diagram. They tell us 
+basic things about the spacetime.
+For example, any two points on the spacetime 
+have a common future and a common past. 
+
+Let's now do the same thing 
+for $ \mathbb{ R} ^{ 1, 3 } $. 
+We do something similar. 
+The metric is best written in 
+polar coordinates 
+\[
+ ds ^ 2 = - dt ^ 2 + d r ^ 2 + r ^ 2 d \Omega^ 2 _ 2 
+\] We, as before, 
+do a change of coordinates so that 
+\begin{align*}
+	u &=  t - r = \tan \tilde{ u }   \\
+	v &=  t + r  =  \tan \tilde{ v }   \\
+\end{align*}
+
+In these coordinates, we get that 
+\begin{align*}
+	ds ^ 2 &=  - d u dv + \frac{1}{4 } ( u - v ) ^ 2 d \Omega_ 2 ^ 2  \\
+	       &=  \frac{1}{4 \cos^ 2 \tilde{ u } \cos ^ 2 \tilde{ v }   } \left(  
+	       - 4 d \tilde{ u } d \tilde{ v } + \sin ^ 2 ( \tilde{ u } - \tilde{ v } ) d \Omega _ 2 ^ 2     \right)  \\
+\end{align*}
+
+This is still 4 dimensional, so we ignore the spherical part. 
+Unlike in Minkwoski space, we require that $ r \geq 0 $ which implies that 
+$ v \geq u $, which means that 
+\[
+  - \frac{\pi}{2 } \leq \tilde{ u } \leq \tilde{ v } \leq \frac{\pi}{2 }   
+\] We hence drop the $ S ^ 2 $ and draw the Penrose diagram, 
+The left hand line on the diagram 
+is not a boundary of space time - it is 
+merely where $ \tilde{ u }  = \tilde{ v } \implies r = 0   $, 
+and $ S ^ 2$ shrinks to zero here.
+
+\subsubsection{de Sitter} 
+In global coordinates, de Sitter space 
+is represented by 
+\[
+ ds ^ 2 = - d \tau ^ 2 + R ^ 2 \cosh ^ 2 \left(  \frac{ \tau }{ R }  \right)  d \Omega_ 3 ^ 2 
+\] We introduce conformal time, 
+which makes the metric have a factor which sits out front.
+Conformal time is given by 
+\[
+	\frac{ d \eta }{ d \tau }  = \frac{1}{ R \cosh \left(  \tau / R  \right)  } 
+	\implies \cos \eta = \frac{1}{\cosh \left(  \tau /  R  \right) }
+\] where $ \eta \in ( - \frac{\pi}{2 } , \frac{\pi}{2 } ) $. 
+Plugging this in, 
+we get the following metric 
+\[
+	ds ^ 2= \frac{R ^ 2 }{ \cos^ 2 \eta } \left(  
+	 - d \eta ^ 2 + d \Omega_ 3 ^ 2 \right)  
+\] We write out the 3 sphere metric as $ d \chi ^ 2  + \sin ^ 2 \chi d \Omega _ 2 ^2 $. 
+de Sitter is conformal to 
+\[
+ ds ^ 2 = - d \eta ^ 2 + d \chi ^ 2 + \sin ^ 2 \chi  d \Omega_2 ^ 2 
+\] Now we can draw our Penrose diagram. 
+
+We see that the boundary of de Sitter 
+is spacelike. 
+No matter how long you wait, you cannot 
+see the whole space, nor can you influence 
+the whole space. This is given by a diagonal line. 
+We can check that the static patch coordinates map to 
+the intersection of the event horizon and the particle horizon. 

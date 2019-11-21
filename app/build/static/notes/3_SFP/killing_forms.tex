@@ -669,4 +669,209 @@ We can match up our weights to give
 	\Lambda &=   2 \frac{ ( \alpha, \beta ) }{ ( \alpha, \alpha )   } + 2 n _ +   \\
 \end{align*}
 Adding this gives $ \frac{ 2 ( \alpha , \beta ) }{ ( \alpha , \alpha ) }  = - ( n _ + + n _ - ) $
+
+\subsection{More on roots}
+Recall that we can think 
+of our roots of our Lie algebra as members 
+of the dual space of the Cartan subalgebra, $ \alpha \in  \subalg ^ *  $, 
+with $ \dim \Phi = d - r $. 
+Throughout this section, we'll 
+be showing that roots form a real vector subspace of our roots space. 
+We've already shown that $ 2 \frac{ ( \alpha , \beta ) }{ ( \alpha , \alpha ) } \in 
+\mathbb{ Z} $, but we'll show that both the numerator and 
+denominator are real. 
+
+Recall that in the Cartan-Weyl basis, 
+we have that 
+\[
+	\left[  H ^ i , E ^ \delta  \right]   = \delta ^ i E ^ \delta , 
+	\quad \forall \delta \in \Phi , i = 1 , \dots r 
+\] 
+If we restrict our Killing form 
+to the Cartan Weyl basis, we define 
+\[
+	\kappa ^{ ij }  = \kappa ( H ^ i , H ^ j ) 
+	 = \frac{1}{\mathcal{ N  } } \tr \left[  
+	 \ad_{ H ^ I }  \circ \ad _{ H ^ j }\right]  = \frac{1}{\mathcal{ N } } 
+	 \sum_{ \delta \in \Phi } \delta ^ i \delta ^ j 
+\]  It can be easily shown that $ \ad_H $ is represented by 
+a diagonal matrix of $ \delta ^ i $ in the first diagonals, and then 
+a diagonal of zeros for the rest for the elements 
+in the Cartan subalgebra. Hence, for $ \alpha , \beta \in \Phi$, 
+we have that 
+ \[
+ \left(  \alpha, \beta  \right)   = \alpha ^ i \beta ^ j 
+ \left(  \kappa ^{ -1 }  \right)  _{ ij  } = \alpha _ i \beta ^ i  = \alpha _ i \beta _ j 
+ \kappa ^{ ij} , \quad \alpha _ i = \left(  \kappa ^{ - 1}  \right) _{ ij } \alpha ^ j 
+\]  Applying our previous 
+formula for the Killing form, 
+we get that this is expressed much more 
+explicitly as 
+\[
+ \dots  =\frac{1}{\mathcal{ N } } \sum_{ \delta \in \Phi }
+ \alpha _ i \delta ^ i \delta ^ j \beta _ j  = \frac{1}{\mathcal{ N } } 
+ \sum_{ \delta \in \Phi } \left(  \alpha, \delta  \right)  \left(  
+ \beta , \delta \right)  
+\]  Now, from the fact that 
+our ratio of inner product 
+\[
+	R_{ \alpha, \beta } \frac{ 2 \left(  \alpha , \beta  \right)  }{ \left(  
+	\alpha, \alpha \right)  } \in \mathbb{ Z} \subset \mathbb{ R} 
+\] dividing through by the appropriate factor 
+we get that 
+\[
+	\frac{ 2 }{ \left(  \beta , \beta  \right)  } 
+	R _{ \alpha , \beta }   = \frac{1}{\mathcal{ N } } 
+	\sum_{ \delta \in \Phi  } R _{ \alpha, \delta } R _{ \beta , \delta } 
+	\in \mathbb{ R} 
+\] we take $ \mathcal{ N } \in \mathbb{ R} $. 
+This implies that the left hand side is real. 
+So, the right hand side is real. 
+So, $ \left(  \beta , \beta  \right)  $ is real for all 
+$ \beta \in \Phi  $,  so $ \left(  \alpha, \beta  \right)  $ 
+is real for all $ \alpha , \beta $ in $ \Phi$. 
+
+\subsubsection{Real geometry of roots} 
+We will not prove, but use, the result 
+that the dual space of the Cartan subalgebra  $ \subalg $ 
+is spanned by the roots. 
+\[
+	\subalg ^ *  = \text{span} _{ \mathbb { C} } \left\{  
+	\alpha \in \Phi \right\}  
+\] Hence, we can find $ r $ roots 
+which we will index as $ \alpha _{ ( i )  } $, 
+$ \left\{  \alpha_{ \left(  i  \right)  } \in \Phi, i = 1 , \dots, r  \right\}   $ 
+which provide a basis for $ \subalg  ^ * $. 
+We define a real subspace $ \subalg^ * _{ \mathbb{ R} } \subset 
+\subalg ^ * $, as the real span of elements in this basis. 
+\[
+ h^ * _{ \R }  = \text{span}_{ \R } \left\{  
+ \alpha _{ \left(  i  \right)  } \in \Phi , i =  1 , \dots, r \right\}  
+\] 
+By the fact that $ \alpha ^{ ( i ) } $ spans $ \subalg ^ * $, 
+we write any roots $ \beta \in \Phi $  as 
+$ \beta = \sum_{ i  = 1} ^ r \beta ^ i \alpha _{ ( i ) } \beta ^ i \in 
+\mathbb{ C} $. The coefficients $ \beta ^ i  $  solve 
+\[
+	\left( \beta , \alpha _{ ( j ) }  = 
+	\sum_{ i  =1 } ^ r \beta ^ i \left(  \alpha _{( i ) } , \alpha _{ ( j ) } \right) \right)  
+\] Hence, by our previous result, 
+we have that $ \left(  \alpha, \beta  \right)  \in \R $, 
+for all $ \alpha , \beta \in \Phi  $. 
+This means that $ \beta _ i \in \R $, and that 
+$ \beta \in \subalg ^ * _{ \R } $. 
+Now, let's think about the inner product 
+of any two vectors in $ \subalg ^ *_{ \R } $. 
+We write them in components in our basis as 
+\[
+	\lambda = \sum_{ i = 1 } ^ r \lambda ^ i \alpha _{ ( i ) } \in 
+	\subalg ^ * _{ \R } , \quad \mu = \sum_{ i = 1 } ^ r \mu ^ i 
+	\alpha _{ ( i ) } \in \subalg ^ * _{ \R } 
+\] where by construction we have that $ \lambda ^ i , \mu ^ i \in \R $. 
+This means that our inner product is given by 
+\[
+ \left(  \lambda , \mu  \right)   = \sum_{ i =1 }^ r 
+ \lambda ^ i \mu ^ j \left(  \alpha _{ ( i ) } , \alpha_{ ( j ) }  \right)  \in 
+ \R 
+\]  From our identity for the Killing form 
+in terms of the Cartan-Weyl basis, we get that 
+\[
+ ( \lambda , \lambda )  = \frac{1}{\mathcal{ N } } \sum 
+ \lambda _ i \delta ^ i \delta ^ j \lambda _ j  = \frac{1}{\mathcal{ N } } 
+ \sum_{ \delta \in \Phi } ( \lamdba , \delta ) ^ 2 \geq 0 
+\] Thus, the inner product 
+in this space is positive, and we only have equality 
+if and only if $ \left(  \lambda , \delta  \right)   =0 $, 
+for all $ \delta \in \Phi $, if and only if $ \lambda = 0 $, 
+by the non-degeneracy of $ \kappa $. 
+The key point here is that a simple Lie algebra 
+has a non-degenerate inner product, and this gives 
+us a lot of information. 
+
+Accumulating all of these facts, 
+we can conclude that the roots $ \alpha $ 
+live in real vector space $ \subalg ^ * _{ \R } \simeq \R ^ r $, 
+where $ r = \text{Rank}( \lalg ) $, with 
+a Euclidean inner product. Specifically, this 
+means that for all $ \lambda , \mu \in \subalg ^ * _{ \R }  $, 
+we have that 
+\begin{enumerate}
+	\item $ ( \lambda , \mu ) \in \R $  
+	\item $ \left(  \lambda , \lambda  \right)  \geq 0 $
+	\item $ \left(  \lambda , \lambda  \right)   =0 \iff \lambda  = 0 $ 
+\end{enumerate}
+This are the characteristic properties of 
+a standard inner product. 
+Now, we can draw our vectors in two dimensional real 
+vector space, and apply geometric intuition. 
+As $\left(  \alpha, \alpha  \right)  > 0  $ for all $ \alpha \in \Phi   $, 
+we can define a length associated with the 
+root as 
+\[
+	| \alpha | : = ( \alpha , \alpha ) ^{ \frac{1}{2 } } \geq 0 
+	\] 
+The inner product takes the standard form 
+$ \left(  \alpha, \beta  \right)   = | \alpha | | \beta | 
+\cos \phi_{ \alpha, \beta } $  for all $ \alpha , \beta $ and 
+$ \alpha \in [ 0 , \pi ] $.
+The angle  $ \phi_{ \alpha ,\beta } $ is constrained by the fact that 
+our ratios are quantised. 
+\[
+	\frac{ 2 \left(  \alpha, \beta  \right)  }{ ( \alpha , \alpha ) } 
+	= \frac{2 | \beta | }{ | \alpha | } \cos \phi_{ \alpha , \beta } \in \mathbb{ Z} 
+\] We can also interchange $ \alpha , \beta $, which gives us 
+\[
+	\frac{ 2 \left(  \beta , \alpha )  \right)  }{ \left(  
+	\beta , \beta \right)  } = \frac{ 2 | \alpha | }{ | \beta |  } 
+	\cos \phi_{ \alpha , \beta } \in \mathbb{ Z} 
+\]  Multiplying these two equations together, 
+the have the result that 
+\[
+	4 \cos ^ 2 \phi_{ \alpha ,\beta } \in \mathbb{ Z} 
+\] This is a very strong result. 
+We only have a few options! We deduce that 
+\[
+ \cos \phi_{ \alpha, \beta }  = \pm \frac{\sqrt{ n }  }{ 2 } , \quad 
+ n \in \left\{  0 , 1, 2, 3, 4 \right\} 
+\] If we consider the case $ n = 0 $, this 
+corresponds to an angle $ \phi = \frac{ \pi }{ 2 } $, 
+which corresponds to the roots being orthogonal with 
+$ \left(  \alpha, \beta  \right)   = 0 $. 
+In the case where $ n = \pm 4 $, this corresponds 
+to the case where $ \phi = 0 , \pi $, with $ \alpha = \beta $ or 
+$ \alpha =  - \beta $.
+Exercise: if $ \alpha \in \Phi $, show that 
+$ k \alpha \in \Phi $ only for $ k  =\pm 1 $. 
+We have that 
+\[
+	\phi = \frac{\pi }{ 6 } , \frac{\pi}{ 4 }, \frac{\pi}{ 3 } \text{ with } ( \alpha , \beta ) > 0 , \quad n = 1 , 2,  3 
+\] 
+and as well, we have that 
+\[
+	\phi = \frac{ 2 \pi }{ 3 } , \frac{ 3 \pi }{ 4 } , \frac{ 5 \pi }{ 6 } \text{ with } \left( \alpha, \beta  \right) < 0 
+\] 
+\subsection{Simple roots}
+Draw a diagram. 
+We can divide the roots in terms positive and 
+negative roots by choosing an 
+appropriate hyperplane in $ \subalg ^ * _{ \R } $, a linear 
+subspace of dimension $ r - 1$ which 
+goes through the origin. 
+This will divide the roots into two halves, 
+the positive roots and negative roots. 
+We then write 
+\[
+ \Phi = \Phi ^ + \cup \Phi ^ -
+\] We then have that 
+\begin{enumerate}
+	\item $ \alpha \in \Phi ^ +  \iff  - \alpha \in \Phi _ - $. 
+	\item $ \alpha , \beta \in \Phi _ +  \implies 
+		\alpha + \beta \in \Phi _ + $ , 
+		if $ \alpha +  \beta $ is indeed a root.
+	\item If $ \alpha , \beta \in \Phi _ - $, 
+		then if  $ \beta + \alpha $ is a root, 
+		we have that $ \alpha + \beta \in \Phi  _- $. 
+\end{enumerate}
+Simple roots are positive roots which cannot be written 
+as the sum of two positive roots. 
 \pagebreak 

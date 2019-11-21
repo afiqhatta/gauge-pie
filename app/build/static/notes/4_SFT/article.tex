@@ -30,17 +30,37 @@
 \usepackage{pgfplots} 
 \usepackage{subfiles} 
 \usepackage{helvet}
-\usepackage{float}
+\usepackage{fancyhdr}
 
 \usepackage{tikz-feynman}
 \tikzfeynmanset{compat=1.1.0}
 
+\pagestyle{fancy}
+\fancyhf{}
+\rhead{Notes by Afiq Hatta}
+\lhead{Statistical Field Theory}
+\rfoot{Page \thepage}
+
+
+%% Commands for typesetting theorems, claims and other things.
+\newtheoremstyle{slanted}
+{1em}%   Space above
+{.8em}%   Space below
+{}%  Body font
+{}%          Indent amount (empty = no indent, \parindent = para indent)
+{\bfseries}% Thm head font
+{.}%         Punctuation after thm head
+{0.5em}%     Space after thm head: " " = normal interword space;
+{}%         \newline = linebreak
+{}%          Thm head spec (can be left empty, meaning `normal')
 
 %% Commands for typesetting theorems, claims and other things. 
+
+\theoremstyle{slanted}
 \newtheorem{theorem}{Theorem}
 \newtheorem*{thm}{Theorem}
 \newtheorem*{claim}{Claim}
-\newtheorem*{example}{Example}
+\newtheorem{example}{Example}
 \newtheorem*{defn}{Definition}
 
 \newcommand{\Lagr}{\mathcal{L}}
