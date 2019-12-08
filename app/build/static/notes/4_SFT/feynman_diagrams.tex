@@ -247,61 +247,61 @@ This means that a diagram of the below form gives us a term like
 $ A ( k, \Lambda ) $ as 
  \[
 	 A ( k , \Lambda ) \simeq A ( 0 ) + \frac{1}{2 } k ^ 2 A'' ( 0 ) + \dots
- \] Now, the first term here
- gives us a correction to $\mu ^ 2  $, and the second term 
- gives us a correction to $ ( \nabla \phi ) ^ 2 $. 
- So, in our full effective field theory we have that 
- \[
-	 F ' [ \phi ] = \int d^ d x \, \frac{1}{2 } \gamma ' ( \nabla \phi ) ^ 2, 
-	 \quad \gamma ' =  1- 2 g_0 ^ 2 A'' ( 0 , \Lambda ) 
- \] Hence, our rescaled momenta is given by 
- \[
-	 \phi_{ \vec{k} } ' = \frac{ \zeta ^{  - \frac{ d + 2 }{ 2 } } }{1 - g_0 ^ 2 A'' ( 0 
-	 , \Lambda ) } \phi_{ \frac{ \vec{k} }{ \zeta } } ^ - 
- \]
- \subsection{$ \beta$ - functions}
- Instead of parametrising our RG flow 
- the way we've done it as $ \Lambda / \zeta$,
- since  $ \zeta \geq 1 $, it's more natural 
- to write $ \zeta  = e^{ s } $ for some continuous parameter $ s \geq 0 $. 
- Our new cutoff in RG flow is given by the relation 
+\] Now, the first term here
+gives us a correction to $\mu ^ 2  $, and the second term 
+gives us a correction to $ ( \nabla \phi ) ^ 2 $. 
+So, in our full effective field theory we have that 
 \[
- \Lambda ' = \frac{ \Lambda }{ \zeta  } = \Lambda e^{ - s }
+ F ' [ \phi ] = \int d^ d x \, \frac{1}{2 } \gamma ' ( \nabla \phi ) ^ 2, 
+ \quad \gamma ' =  1- 2 g_0 ^ 2 A'' ( 0 , \Lambda ) 
+\] Hence, our rescaled momenta is given by 
+\[
+ \phi_{ \vec{k} } ' = \frac{ \zeta ^{  - \frac{ d + 2 }{ 2 } } }{1 - g_0 ^ 2 A'' ( 0 
+ , \Lambda ) } \phi_{ \frac{ \vec{k} }{ \zeta } } ^ - 
+\]
+\subsection{$ \beta$ - functions}
+Instead of parametrising our RG flow 
+the way we've done it as $ \Lambda / \zeta$,
+since  $ \zeta \geq 1 $, it's more natural 
+to write $ \zeta  = e^{ s } $ for some continuous parameter $ s \geq 0 $. 
+Our new cutoff in RG flow is given by the relation 
+\[
+\Lambda ' = \frac{ \Lambda }{ \zeta  } = \Lambda e^{ - s }
 \] We will now introduce a piece of 
 machinery to help us analyse 
 RG flow a bit more. We define our beta functions to be forcing 
 terms to the differential equation 
 \[
-	\frac{ d g_ n }{ ds } = \beta_ n ( g _ n ) , \quad \begin{cases}
-		\beta_ n > 0 & \text{ in the IR } \\
-		\beta _ n < 0 & \text{ otherwise }
-	\end{cases}
+\frac{ d g_ n }{ ds } = \beta_ n ( g _ n ) , \quad \begin{cases}
+	\beta_ n > 0 & \text{ in the IR } \\
+	\beta _ n < 0 & \text{ otherwise }
+\end{cases}
 \] The solutions to these equations are 
 of course just how our coupling constants evolve 
 with respect to changes in $ s $. Recall, that our leading order 
 contributions for our coupling constants are given by 
 \[
- \mu ^ 2 ( \zeta ) = \zeta ^ 2 ( \mu _ 0 ^ 2  + ag_0 ), \quad
- g ( \zeta ) = \zeta ^{ 4 - d  } ( g_0 - b g_0^ 2 ) 
+\mu ^ 2 ( \zeta ) = \zeta ^ 2 ( \mu _ 0 ^ 2  + ag_0 ), \quad
+g ( \zeta ) = \zeta ^{ 4 - d  } ( g_0 - b g_0^ 2 ) 
 \] We derived this from earlier when we looked 
 at our first and second order 
 changes in our free energy. Recall, our constants are given by 
 \[
-	a = 12 \int_{ \Lambda / \zeta } ^ \Lambda \frac{  d^ d q }{ ( 2 \pi ) ^ d }
-	\frac{1}{q ^ 2 + \mu _ 0 ^ 2}, \text{ and } , \quad
-	b = 36 \int _{ \Lambda / \zeta } ^  \Lambda \frac{ d ^ d q }{ 
-	( 2 \pi ) ^ d  } \frac{1}{( q ^ 2 + \mu _ 0 ^ 2 ) ^ 2 }
+a = 12 \int_{ \Lambda / \zeta } ^ \Lambda \frac{  d^ d q }{ ( 2 \pi ) ^ d }
+\frac{1}{q ^ 2 + \mu _ 0 ^ 2}, \text{ and } , \quad
+b = 36 \int _{ \Lambda / \zeta } ^  \Lambda \frac{ d ^ d q }{ 
+( 2 \pi ) ^ d  } \frac{1}{( q ^ 2 + \mu _ 0 ^ 2 ) ^ 2 }
 \] We differentiate these things with respect to $ \zeta $. 
 To do this, we assume we only have a very small perturbation
 from $ \Lambda \to \Lambda e^{ -s } $, and we approximate 
 the function as a constant locally. We also approximate 
 $ e ^{ - s}  = 1 - s + \dots $
 \[
-	\int _{ \Lambda e ^{ - s} } ^ \Lambda dq \, f ( q) 
-	\simeq \left[  \Lambda - \Lambda e^{ - s}  \right] f ( \Lambda ) 
-	\simeq \Lambda f ( \Lambda ) s \implies 
-	\frac{ d }{ ds } \int _{ \Lambda e ^{ - s} } ^ \Lambda 
-	dq \, f ( q ) = \Lambda f ( \Lambda ) 
+\int _{ \Lambda e ^{ - s} } ^ \Lambda dq \, f ( q) 
+\simeq \left[  \Lambda - \Lambda e^{ - s}  \right] f ( \Lambda ) 
+\simeq \Lambda f ( \Lambda ) s \implies 
+\frac{ d }{ ds } \int _{ \Lambda e ^{ - s} } ^ \Lambda 
+dq \, f ( q ) = \Lambda f ( \Lambda ) 
 \]  We do a change of coordinates 
 in terms of spherical polars in the integrands 
 of $ a $ and $ b  $. Then, we use the identity above 
@@ -309,59 +309,80 @@ to write out the beta functions. In four dimensions, we integrate this
 thing in terms of spherical polars so that 
 we have that our coupling constants are solved by 
 \[
- \frac{d \mu ^ 2 }{ ds } = 2 \mu ^ 2 + \frac{ 3g }{ 2 \pi ^ 2 } 
- \frac{ \Lambda ^ 4 }{ \Lambda ^ 2 + \mu ^ 2  } \text{ and } \quad
- \frac{ dg }{ ds } = \frac{ - 9 }{ 2 \pi ^ 2 } \frac{ \Lambda ^ 4 }{
- ( \Lambda ^ 2 + \mu ^ 2 ) } g ^ 2  
+\frac{d \mu ^ 2 }{ ds } = 2 \mu ^ 2 + \frac{ 3g }{ 2 \pi ^ 2 } 
+\frac{ \Lambda ^ 4 }{ \Lambda ^ 2 + \mu ^ 2  } \text{ and } \quad
+\frac{ dg }{ ds } = \frac{ - 9 }{ 2 \pi ^ 2 } \frac{ \Lambda ^ 4 }{
+( \Lambda ^ 2 + \mu ^ 2 ) } g ^ 2  
 \] This gives us differential equations that 
 we can solve. To the first order, we've written  
 $ \mu ^ 2 ( \zeta ) \sim \mu ^ 2 _ 0 $, and that $ g  \sim g_0 $ and we've 
-reflected this in the differential equation 
-(where intially we had $ \mu ^ 2 _ 0 $.  
+reflected this in the differential equation (where intially we had $ \mu ^ 2 _ 0 $. 
 
-\subsection{$ \epsilon $ Expansions} 
+\subsection{$ \epsilon $ Expansions}
 We learned that our $ \phi ^ 4 $ interaction 
-is irrelevant for $ d \geq 4 $ and relavant otherwise. 
-Now, lets employ a strange trick and perturb our
-dimensions, for example by setting 
+is irrelevant for $ d \geq 4 $ and relevant otherwise. 
+In this subsection, we'll employ a perturbative method 
+for finding another fixed point, different from the 
+Gaussian fixed point.  
+To do this, we'll need to do something slightly dubious. 
+Basically, we treat $ d $, our dimension, as 
+a continuous variable and perturb it with a parameter $\epsilon $. 
+The upshot of this is that we'll discover a new fixed point 
+called the Wilson-Fisher fixed point.  
+We set 
 \[
- d  = 4 - \epsilon  
+d  = 4 - \epsilon  
 \] Returning to our previous beta functions 
 which we calculated in four dimensions, generalising 
 these to beta functions in $ d $ dimensions gives us 
 new differential equations 
 \begin{align*}
-	\frac{ d \mu ^ 2 }{ ds } &=  2 \mu ^ 2 + 
-	\frac{ 12 \Omega_{ d- 1 } }{ ( 2 \pi ) ^ d } \frac{ \Lambda ^ 4  }{ 
-	\Lambda ^ 2 + \mu ^ 2  }  \tilde{ g } + \dots  \\
-	\frac{ d \tilde{ g }  }{ds } = 
-	\epsilon \tilde{ g } - \frac{ 36 \Omega_{ d- 1 } }{ ( 2 \pi ) ^ d }
-	\frac{ \Lambda ^ 4 }{ ( \Lambda ^ 2 + \mu ^ 2 ) ^ 2 } \tilde{ g } ^ 2 + \dots 
+\frac{ d \mu ^ 2 }{ ds } &=  2 \mu ^ 2 + 
+\frac{ 12 \Omega_{ d- 1 } }{ ( 2 \pi ) ^ d } \frac{ \Lambda ^ 4  }{ 
+\Lambda ^ 2 + \mu ^ 2  }  \tilde{ g } + \dots  \\
+\frac{ d \tilde{ g }  }{ds } &= 
+\epsilon \tilde{ g } - \frac{ 36 \Omega_{ d- 1 } }{ ( 2 \pi ) ^ d }
+\frac{ \Lambda ^ 4 }{ ( \Lambda ^ 2 + \mu ^ 2 ) ^ 2 } \tilde{ g } ^ 2 + \dots 
 \end{align*}
-We use the approximation $ \Omega_ 3  = 2 \pi ^ 2 + O ( \epsilon ) $ 
+We used the solid angles for the $ d -1 $ sphere as an approximation. 
+Since we're approximating from $ d = 4 $, we'll 
+use the approximation $ \Omega_ 3  = 2 \pi ^ 2 + O ( \epsilon ) $ 
 to give approximate equations 
- \begin{align*}
-	 \frac{ d \mu ^ 2 }{ds } \simeq & 2 \mu ^ 2 + \frac{3}{2 \pi ^ 2 } \frac{
-	 \Lambda ^ 4 }{ \Lambda ^ 2 + \mu ^ 2 } \tilde{ g } \\
-	 \frac{ d \tilde{g }  }{ds  } \simeq & 
-	 \epsilon g  - \frac{ 9 }{ 2 \pi ^ 2 } \frac{ \Lambda ^ 4 }{
-	 ( \Lambda ^ 2 + \mu ^ 2 ) ^ 2 } \tilde{g } ^ 2  
+\begin{align*}
+ \frac{ d \mu ^ 2 }{ds } \simeq & 2 \mu ^ 2 + \frac{3}{2 \pi ^ 2 } \frac{
+ \Lambda ^ 4 }{ \Lambda ^ 2 + \mu ^ 2 } \tilde{ g } \\
+ \frac{ d \tilde{g }  }{ds  } \simeq & 
+ \epsilon g  - \frac{ 9 }{ 2 \pi ^ 2 } \frac{ \Lambda ^ 4 }{
+ ( \Lambda ^ 2 + \mu ^ 2 ) ^ 2 } \tilde{g } ^ 2  
 \end{align*}
 From these things, we have the Gaussian 
 fixed point we derived before, but 
-we also have a new fixed point given by 
+an amazing result of this procedure is that now 
+we have a new fixed point when 
+we set the above system of equations to zero. 
+This point is given by 
 \[
- \mu _{ * } ^ 2 = - \frac{3 }{ 4 \pi ^ 2 } \frac{ \Lambda ^ 4 }{ 
- \Lambda ^ 2 + \mu _ * ^ 2 } \tilde{ g } _ * , \quad 
- \tilde{ g } _ * = \frac{ 2 \pi ^ 2 }{ 9 } \frac{ ( \Lambda ^ 2 + \mu _ * ^ 2 ) ^ 2 }{
- \epsilon } 
+\mu _{ * } ^ 2 = - \frac{3 }{ 4 \pi ^ 2 } \frac{ \Lambda ^ 4 }{ 
+\Lambda ^ 2 + \mu _ * ^ 2 } \tilde{ g } _ * , \quad 
+\tilde{ g } _ * = \frac{ 2 \pi ^ 2 }{ 9 } \frac{ ( \Lambda ^ 2 + \mu _ * ^ 2 ) ^ 2 }{
+\epsilon } 
 \] To leading order in $\epsilon $, our solutions for these 
 fixed points are 
 \[
- \mu _ * ^ 2 =  - \frac{1}{6 } \Lambda  ^2 \epsilon , \quad 
- \tilde{ g } _ *  = \frac{ 2 \pi ^ 2  }{ 9 }  \epsilon 
-\] 
+\mu _ * ^ 2 =  - \frac{1}{6 } \Lambda  ^2 \epsilon , \quad 
+\tilde{ g } _ *  = \frac{ 2 \pi ^ 2  }{ 9 }  \epsilon 
+\] These are called the Wilson-Fisher fixed points. 
+
+\begin{defn}
+The Wilson Fisher fixed points are the fixed points 
+which arise from perturbatively the dimension of our 
+beta function. We also might also 
+scale $g $ to another variable $\tilde{ g } = \Lambda ^{ - \epsilon } g $
+to achieve this fixed point. 
+\end{defn}
+
 \subsubsection{Wilson-Fisher Fixed Point} 
+
 We now work perturbatively 
 to understand flows near this fixed point. 
 We write out 
@@ -385,7 +406,15 @@ that
 \[
 	\Delta _ t = 2 - \frac{ \epsilon }{ 3 } + \mathcal{ O } ( \epsilon ^2 ) , 
 	\quad \Delta _g = - \epsilon + \mathcal{ O  } ( \epsilon ^ 2 )  
-\] 
+\]
+This means that we have a positive scaling dimension 
+associated with the coupling for reduced temperature, $ t $, which means 
+that we have one direction which is a relevant deformation. 
+Likewise we have an irrelevant scaling dimension from $ g$
+since is negative. This is important.  
+It basically means to reach the Wilson-Fisher fixed point, 
+we only have to tune the reduced temperature, which is associated with 
+the relevant coupling $ t$. 
 
 \subsubsection{Revisiting critical exponents} 
 Expanding out our critical exponents, 

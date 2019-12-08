@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.19 (TeX Live 2018) (preloaded format=pdflatex 2019.1.15)  20 NOV 2019 16:55
+This is pdfTeX, Version 3.14159265-2.6-1.40.19 (TeX Live 2018) (preloaded format=pdflatex 2019.1.15)  6 DEC 2019 12:51
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -2106,10 +2106,42 @@ Package: verbatim 2014/10/28 v1.5q LaTeX2e package for verbatim enhancements
 \verbatim@line=\toks50
 \verbatim@in@stream=\read3
 ))
+./article.tex:33: Undefined control sequence.
+<recently read> \setmathfont 
+                             
+l.33 \setmathfont
+                 {XITS Math}
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+
+./article.tex:33: LaTeX Error: Missing \begin{document}.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.33 \setmathfont{X
+                   ITS Math}
+You're in trouble here.  Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+./article.tex:34: Undefined control sequence.
+l.34 \setmathfont
+                 [version=setB,StylisticSet=1]{XITS Math}
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
 \c@theorem=\count435
 Package biblatex Info: Trying to load language 'english'...
 Package biblatex Info: ... file 'english.lbx' found.
- (/usr/local/texlive/2018/texmf-dist/tex/latex/biblatex/lbx/english.lbx
+(/usr/local/texlive/2018/texmf-dist/tex/latex/biblatex/lbx/english.lbx
 File: english.lbx 2018/03/04 v3.11 biblatex localization (PK/MW)
 )
 
@@ -2118,29 +2150,36 @@ Package biblatex Warning: 'babel/polyglossia' detected but 'csquotes' missing.
 
 \@quotelevel=\count436
 \@quotereset=\count437
-(./article.aux)
+(./article.aux
+
+LaTeX Warning: Label `fig:p_2' multiply defined.
+
+
+LaTeX Warning: Label `fig:' multiply defined.
+
+)
 \openout1 = `article.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 62.
-LaTeX Font Info:    ... okay on input line 62.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 62.
-LaTeX Font Info:    ... okay on input line 62.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 62.
-LaTeX Font Info:    ... okay on input line 62.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 62.
-LaTeX Font Info:    ... okay on input line 62.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 62.
-LaTeX Font Info:    ... okay on input line 62.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 62.
-LaTeX Font Info:    ... okay on input line 62.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 62.
-LaTeX Font Info:    Try loading font information for TS1+cmr on input line 62.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 69.
+LaTeX Font Info:    ... okay on input line 69.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 69.
+LaTeX Font Info:    ... okay on input line 69.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 69.
+LaTeX Font Info:    ... okay on input line 69.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 69.
+LaTeX Font Info:    ... okay on input line 69.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 69.
+LaTeX Font Info:    ... okay on input line 69.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 69.
+LaTeX Font Info:    ... okay on input line 69.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 69.
+LaTeX Font Info:    Try loading font information for TS1+cmr on input line 69.
  (/usr/local/texlive/2018/texmf-dist/tex/latex/base/ts1cmr.fd
 File: ts1cmr.fd 2014/09/29 v2.5h Standard LaTeX font definitions
 )
-LaTeX Font Info:    ... okay on input line 62.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 62.
-LaTeX Font Info:    ... okay on input line 62.
+LaTeX Font Info:    ... okay on input line 69.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 69.
+LaTeX Font Info:    ... okay on input line 69.
 
 *geometry* driver: auto-detecting
 *geometry* detected driver: pdftex
@@ -2209,10 +2248,10 @@ Package biblatex Info: Automatic encoding selection.
 Package biblatex Info: Trying to load bibliographic data...
 Package biblatex Info: ... file 'article.bbl' found.
  (./article.bbl)
-Package biblatex Info: Reference section=0 on input line 62.
-Package biblatex Info: Reference segment=0 on input line 62.
+Package biblatex Info: Reference section=0 on input line 69.
+Package biblatex Info: Reference segment=0 on input line 69.
 \AtBeginShipoutBox=\box85
-Package hyperref Info: Link coloring ON on input line 62.
+Package hyperref Info: Link coloring ON on input line 69.
  (/usr/local/texlive/2018/texmf-dist/tex/latex/hyperref/nameref.sty
 Package: nameref 2016/05/21 v2.44 Cross-referencing by name of section
  (/usr/local/texlive/2018/texmf-dist/tex/generic/oberdiek/gettitlestring.sty
@@ -2220,30 +2259,30 @@ Package: gettitlestring 2016/05/16 v1.5 Cleanup title references (HO)
 )
 \c@section@level=\count444
 )
-LaTeX Info: Redefining \ref on input line 62.
-LaTeX Info: Redefining \pageref on input line 62.
-LaTeX Info: Redefining \nameref on input line 62.
+LaTeX Info: Redefining \ref on input line 69.
+LaTeX Info: Redefining \pageref on input line 69.
+LaTeX Info: Redefining \nameref on input line 69.
  (./article.out) (./article.out)
 \@outlinefile=\write6
 \openout6 = `article.out'.
 
 \c@lstlisting=\count445
- ABD: EveryShipout initializing macros
-LaTeX Font Info:    Try loading font information for U+msa on input line 64.
+ ABD: EveryShipout initializing macros [1
+
+{/usr/local/texlive/2018/texmf-var/fonts/map/pdftex/updmap/pdftex.map}]
+LaTeX Font Info:    Try loading font information for U+msa on input line 71.
  (/usr/local/texlive/2018/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Try loading font information for U+msb on input line 64.
+LaTeX Font Info:    Try loading font information for U+msb on input line 71.
  (/usr/local/texlive/2018/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
-) (./article.toc [1
-
-{/usr/local/texlive/2018/texmf-var/fonts/map/pdftex/updmap/pdftex.map}])
+) (./article.toc [2] [3])
 \tf@toc=\write7
 \openout7 = `article.toc'.
 
- (./starting_off_with_non-relativistic_particles.tex [2]) (./exploring_different_lagrangians.tex [3]) (./special_relativity.tex [4]) [5] (./introducing_differential_geometry_for_general_relativity.tex [6]) (./tangent_vectors.tex [7] [8]) (./treating_tangent_vectors_as_derivatives_of_curves_on_the_manifold.tex) (./vector_fields.tex [9]) (./integral_curves.tex [10] [11]) (./differentiating_vector_fields_with_respect_to_other_vector_fields.tex [12] [13]) (./tensors.tex) (./a_note_about_dual_spaces.tex [14] [15]) (./taking_the_lie_derivative_of_covectors.tex [16] [17]) (./tensor_fields.tex [18]) [19] (./differential_forms.tex [20]) (./the_exterior_derivative.tex [21] [22] [23]) (./integration.tex [24]
-<figures/submanifold.png, id=487, 296.10625pt x 294.09875pt>
+ (./starting_off_with_non-relativistic_particles.tex) (./exploring_different_lagrangians.tex [4]) (./special_relativity.tex [5]) [6] (./introducing_differential_geometry_for_general_relativity.tex [7]) (./tangent_vectors.tex [8] [9]) (./treating_tangent_vectors_as_derivatives_of_curves_on_the_manifold.tex) (./vector_fields.tex [10]) (./integral_curves.tex [11] [12]) (./differentiating_vector_fields_with_respect_to_other_vector_fields.tex [13] [14]) (./tensors.tex) (./a_note_about_dual_spaces.tex [15] [16]) (./taking_the_lie_derivative_of_covectors.tex [17] [18]) (./tensor_fields.tex [19]) [20] (./differential_forms.tex [21]) (./the_exterior_derivative.tex [22] [23] [24]) (./integration.tex [25]
+<figures/submanifold.png, id=557, 296.10625pt x 294.09875pt>
 File: figures/submanifold.png Graphic file (type png)
 <use figures/submanifold.png>
 Package pdftex.def Info: figures/submanifold.png  used on input line 111.
@@ -2252,8 +2291,8 @@ Package pdftex.def Info: figures/submanifold.png  used on input line 111.
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-[25]) [26 <./figures/submanifold.png>] (./introducing_riemannian_geometry.tex) (./_the_metric.tex [27]
-<figures/lightcone.png, id=504, 385.44pt x 374.39874pt>
+[26]) [27 <./figures/submanifold.png>] (./introducing_riemannian_geometry.tex) (./_the_metric.tex [28]
+<figures/lightcone.png, id=573, 385.44pt x 374.39874pt>
 File: figures/lightcone.png Graphic file (type png)
 <use figures/lightcone.png>
 Package pdftex.def Info: figures/lightcone.png  used on input line 103.
@@ -2262,7 +2301,7 @@ Package pdftex.def Info: figures/lightcone.png  used on input line 103.
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-[28] [29 <./figures/lightcone.png>]) (./connections_and_curvature.tex [30] [31] [32]) (./the_levi-civita_connection.tex [33]) [34] (./parallel_transport.tex [35] [36]) (./path_deviations_and_curvature.tex [37]) (./derived_tensors.tex [38] [39] [40]) (./einstein_equations.tex [41]
+[29] [30 <./figures/lightcone.png>]) (./connections_and_curvature.tex [31] [32] [33]) (./the_levi-civita_connection.tex [34]) [35] (./parallel_transport.tex [36] [37]) (./path_deviations_and_curvature.tex [38]) (./derived_tensors.tex [39] [40] [41]) (./einstein_equations.tex [42]
 
 Package hyperref Warning: Difference (2) between bookmark levels is greater 
 (hyperref)                than one, level fixed on input line 11.
@@ -2272,9 +2311,22 @@ Overfull \hbox (6.09299pt too wide) in paragraph at lines 36--38
 \T1/cmr/m/n/10.95 Now, from this we can also de-duce how the in-verse met-ric changes with this in-finites-i-mal change. 
  []
 
-[42] [43] [44] [45] [46] [47] [48] [49] [50] [51]
-./einstein_equations.tex:726: Undefined control sequence.
-l.726 ...ke geodesics start at the point $ \peninf
+[43] [44] [45] [46] [47] [48] [49] [50] [51] [52] (./penrose-2.pdf_tex
+<penrose-2.pdf, id=680, page=1, 162.7969pt x 141.29259pt>
+File: penrose-2.pdf Graphic file (type pdf)
+<use penrose-2.pdf, page 1>
+Package pdftex.def Info: penrose-2.pdf , page1 used on input line 52.
+(pdftex.def)             Requested size: 162.7969pt x 141.30516pt.
+<penrose-2.pdf, id=681, page=2, 162.7969pt x 141.29259pt>
+File: penrose-2.pdf Graphic file (type pdf)
+<use penrose-2.pdf, page 2>
+Package pdftex.def Info: penrose-2.pdf , page2 used on input line 54.
+(pdftex.def)             Requested size: 162.7969pt x 141.30516pt.
+) [53]
+./einstein_equations.tex:771: Undefined control sequence.
+\peninf ->\mathscr 
+                   {i}
+l.771 ...ke geodesics start at the point $ \peninf
                                                    ^ -  , [ - \frac{\pi}{2 }...
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -2282,8 +2334,10 @@ misspelled it (e.g., `\hobx'), type `I' and the correct
 spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
-./einstein_equations.tex:727: Undefined control sequence.
-l.727 and end at $ \peninf
+./einstein_equations.tex:772: Undefined control sequence.
+\peninf ->\mathscr 
+                   {i}
+l.772 and end at $ \peninf
                            ^ + , [ \frac{\pi}{2 } , \frac{\pi}{ 2   }]$. The...
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -2291,8 +2345,10 @@ misspelled it (e.g., `\hobx'), type `I' and the correct
 spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
-./einstein_equations.tex:730: Undefined control sequence.
-l.730 start and end at two points $ \peninf
+./einstein_equations.tex:775: Undefined control sequence.
+\peninf ->\mathscr 
+                   {i}
+l.775 start and end at two points $ \peninf
                                             ^ 0  , [ - \frac{\pi}{2 }, + \fr...
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -2300,18 +2356,120 @@ misspelled it (e.g., `\hobx'), type `I' and the correct
 spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
-[52]
-./einstein_equations.tex:734: Undefined control sequence.
-l.734 All null curves start at $ \scri
-                                       ^ - $ "scri-minus" and at $ \scri ^ +...
+(./penrose-3.pdf_tex
+<penrose-3.pdf, id=687, page=1, 211.36168pt x 155.9654pt>
+File: penrose-3.pdf Graphic file (type pdf)
+<use penrose-3.pdf, page 1>
+Package pdftex.def Info: penrose-3.pdf , page1 used on input line 53.
+(pdftex.def)             Requested size: 211.36168pt x 155.965pt.
+
+./penrose-3.pdf_tex:54: Undefined control sequence.
+<recently read> \mathscr 
+                         
+l.54 ...makebox(0,0)[lb]{\smash{$\mathscr{i}^+$}}}
+                                                  %
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
 misspelled it (e.g., `\hobx'), type `I' and the correct
 spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
-./einstein_equations.tex:734: Undefined control sequence.
-l.734 ...$ \scri ^ - $ "scri-minus" and at $ \scri
+./penrose-3.pdf_tex:55: Undefined control sequence.
+<recently read> \mathscr 
+                         
+l.55 ...makebox(0,0)[lb]{\smash{$\mathscr{i}^-$}}}
+                                                  %
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+./penrose-3.pdf_tex:56: Undefined control sequence.
+<recently read> \mathscr 
+                         
+l.56 ...makebox(0,0)[lb]{\smash{$\mathscr{i}^0$}}}
+                                                  %
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+./penrose-3.pdf_tex:57: Undefined control sequence.
+<recently read> \mathscr 
+                         
+l.57 ...makebox(0,0)[lb]{\smash{$\mathscr{i}^0$}}}
+                                                  %
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+./penrose-3.pdf_tex:58: Undefined control sequence.
+<recently read> \mathscr 
+                         
+l.58 ...makebox(0,0)[lb]{\smash{$\mathscr{J}^-$}}}
+                                                  %
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+./penrose-3.pdf_tex:59: Undefined control sequence.
+<recently read> \mathscr 
+                         
+l.59 ...makebox(0,0)[lb]{\smash{$\mathscr{J}^-$}}}
+                                                  %
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+./penrose-3.pdf_tex:60: Undefined control sequence.
+<recently read> \mathscr 
+                         
+l.60 ...makebox(0,0)[lb]{\smash{$\mathscr{J}^+$}}}
+                                                  %
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+./penrose-3.pdf_tex:61: Undefined control sequence.
+<recently read> \mathscr 
+                         
+l.61 ...makebox(0,0)[lb]{\smash{$\mathscr{J}^+$}}}
+                                                  %
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+)
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+./einstein_equations.tex:787: Undefined control sequence.
+\scri ->\mathscr 
+                 {J}
+l.787 All null curves start at $ \scri
+                                       ^ - $ "scri-minus" and end at $ \scri...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+./einstein_equations.tex:787: Undefined control sequence.
+\scri ->\mathscr 
+                 {J}
+l.787 ...cri ^ - $ "scri-minus" and end at $ \scri
                                                    ^ + $ "scri-plus".
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -2319,31 +2477,345 @@ misspelled it (e.g., `\hobx'), type `I' and the correct
 spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
-[53]) (./example_sheet_1.tex [54]) (./question_1.tex [55]) [56] (./question_2.tex) [57] (./question_3.tex) [58] (./question_5.tex [59] [60]) (./question_6.tex [61]) (./question_7.tex [62] [63]) (./question_8.tex [64] [65]) (./question_9.tex [66]) (./question_10.tex) (./question_11.tex [67] [68]) (./example_sheet_2.tex [69]) [70]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 103.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 103.
+[54 <./penrose-2.pdf> <./penrose-2.pdf
+
+pdfTeX warning: pdflatex (file ./penrose-2.pdf): PDF inclusion: multiple pdfs with page group included in a single page
+>]
+./einstein_equations.tex:845: Undefined control sequence.
+<recently read> \mathscr 
+                         
+l.845 in the other direction to head to  $\mathscr
+                                                  {J} ^ + $.
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+(./penrose-5.pdf_tex
+<penrose-5.pdf, id=696, page=1, 123.80084pt x 153.33725pt>
+File: penrose-5.pdf Graphic file (type pdf)
+<use penrose-5.pdf, page 1>
+Package pdftex.def Info: penrose-5.pdf , page1 used on input line 53.
+(pdftex.def)             Requested size: 123.80083pt x 153.34154pt.
+
+./penrose-5.pdf_tex:54: Undefined control sequence.
+<recently read> \mathscr 
+                         
+l.54 ...akebox(0,0)[lb]{\smash{$\mathscr{i}^+$ }}}
+                                                  %
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+./penrose-5.pdf_tex:55: Undefined control sequence.
+<recently read> \mathscr 
+                         
+l.55 ...akebox(0,0)[lb]{\smash{$\mathscr{i}^-$ }}}
+                                                  %
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+./penrose-5.pdf_tex:56: Undefined control sequence.
+<recently read> \mathscr 
+                         
+l.56 ...akebox(0,0)[lb]{\smash{$\mathscr{i}^0$ }}}
+                                                  %
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+./penrose-5.pdf_tex:57: Undefined control sequence.
+<recently read> \mathscr 
+                         
+l.57 ...akebox(0,0)[lb]{\smash{$\mathscr{J}^-$ }}}
+                                                  %
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+./penrose-5.pdf_tex:58: Undefined control sequence.
+<recently read> \mathscr 
+                         
+l.58 ...akebox(0,0)[lb]{\smash{$\mathscr{J}^+$ }}}
+                                                  %
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+)
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+[55 <./penrose-3.pdf>] [56 <./penrose-5.pdf>] [57] (./sp-cylinder.pdf_tex
+<sp-cylinder.pdf, id=715, page=1, 240.11626pt x 147.5804pt>
+File: sp-cylinder.pdf Graphic file (type pdf)
+<use sp-cylinder.pdf, page 1>
+Package pdftex.def Info: sp-cylinder.pdf , page1 used on input line 52.
+(pdftex.def)             Requested size: 240.11624pt x 147.58226pt.
+<sp-cylinder.pdf, id=716, page=2, 240.11626pt x 147.5804pt>
+File: sp-cylinder.pdf Graphic file (type pdf)
+<use sp-cylinder.pdf, page 2>
+Package pdftex.def Info: sp-cylinder.pdf , page2 used on input line 55.
+(pdftex.def)             Requested size: 240.11624pt x 147.58226pt.
+<sp-cylinder.pdf, id=717, page=3, 240.11626pt x 147.5804pt>
+File: sp-cylinder.pdf Graphic file (type pdf)
+<use sp-cylinder.pdf, page 3>
+Package pdftex.def Info: sp-cylinder.pdf , page3 used on input line 58.
+(pdftex.def)             Requested size: 240.11624pt x 147.58226pt.
+)
+./einstein_equations.tex:1016: Misplaced alignment tab character &.
+l.1016 	  0 &
+             =  \int dt \int d ^ 3 x \partial  _ 0 T ^{ 0 \mu }  + \int _ B
+I can't figure out why you would want to use a tab mark
+here. If you just want an ampersand, the remedy is
+simple: Just type `I\&' now. But if some right brace
+up above has ended a previous alignment prematurely,
+you're probably due for more error messages, and you
+might try typing `S' now just to see what is salvageable.
+
+./einstein_equations.tex:1018: Misplaced alignment tab character &.
+<recently read> &
+                 
+l.1018 	    &
+             =  P ^ \mu ( \Sigma ) ( t_2 ) - P ^ \mu ( \Sigma ) ( t_1 )  + 0...
+I can't figure out why you would want to use a tab mark
+here. If you just want an ampersand, the remedy is
+simple: Just type `I\&' now. But if some right brace
+up above has ended a previous alignment prematurely,
+you're probably due for more error messages, and you
+might try typing `S' now just to see what is salvageable.
+
+[58 <./sp-cylinder.pdf> <./sp-cylinder.pdf
+
+pdfTeX warning: pdflatex (file ./sp-cylinder.pdf): PDF inclusion: multiple pdfs with page group included in a single page
+> <./sp-cylinder.pdf
+
+pdfTeX warning: pdflatex (file ./sp-cylinder.pdf): PDF inclusion: multiple pdfs with page group included in a single page
+>] (./sp-cylinder-2.pdf_tex
+<sp-cylinder-2.pdf, id=733, page=1, 151.21202pt x 121.56071pt>
+File: sp-cylinder-2.pdf Graphic file (type pdf)
+<use sp-cylinder-2.pdf, page 1>
+Package pdftex.def Info: sp-cylinder-2.pdf , page1 used on input line 52.
+(pdftex.def)             Requested size: 151.21202pt x 121.56596pt.
+<sp-cylinder-2.pdf, id=734, page=2, 151.21202pt x 121.56071pt>
+File: sp-cylinder-2.pdf Graphic file (type pdf)
+<use sp-cylinder-2.pdf, page 2>
+Package pdftex.def Info: sp-cylinder-2.pdf , page2 used on input line 55.
+(pdftex.def)             Requested size: 151.21202pt x 121.56596pt.
+) [59 <./sp-cylinder-2.pdf> <./sp-cylinder-2.pdf
+
+pdfTeX warning: pdflatex (file ./sp-cylinder-2.pdf): PDF inclusion: multiple pdfs with page group included in a single page
+>] [60]
+./einstein_equations.tex:1186: Undefined control sequence.
+l.1186 For example, $ \mathscr
+                              {J } ^ + $  in Minkowski space.
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+[61] [62]
+./einstein_equations.tex:1289: Missing number, treated as zero.
+<to be read again> 
+                   h
+l.1289 ...partial  _ \nu h _{ \mu \rho }  - \box h
+                                                   _{ \mu \nu }
+A number should have been here; I inserted `0'.
+(If you can't figure out why I needed to see a number,
+look up `weird error' in the index to The TeXbook.)
+
+./einstein_equations.tex:1291: Missing number, treated as zero.
+<to be read again> 
+                   h
+l.1291 ...l  ^ \sigma h _{ \rho \sigma }  - \box h
+                                                   \right)  h _{ \mu \nu } \...
+A number should have been here; I inserted `0'.
+(If you can't figure out why I needed to see a number,
+look up `weird error' in the index to The TeXbook.)
+
+[63]
+
+./einstein_equations.tex:1388: Package tensor Error: Sub/Superscript items out of order on input line 1388, 
+(tensor)                some index tokens may now have been lost.
+
+See the tensor package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.1388 ...$ R \indices{ \mu _{ \rho \nu \sigma } }
+                                                    $
+An index string has an extra or missing `^' or `_' token.
+
+./einstein_equations.tex:1412: Missing number, treated as zero.
+<to be read again> 
+                   h
+l.1412  \box h
+               _{ \mu \nu }  - \frac{1}{2 } h _{ \mu \nu } \box h  = - 16 \p...
+A number should have been here; I inserted `0'.
+(If you can't figure out why I needed to see a number,
+look up `weird error' in the index to The TeXbook.)
+
+./einstein_equations.tex:1412: Missing number, treated as zero.
+<to be read again> 
+                   h
+l.1412 ... }  - \frac{1}{2 } h _{ \mu \nu } \box h
+                                                    = - 16 \pi G T _{ \mu \nu }
+A number should have been here; I inserted `0'.
+(If you can't figure out why I needed to see a number,
+look up `weird error' in the index to The TeXbook.)
+
+./einstein_equations.tex:1424: Missing number, treated as zero.
+<to be read again> 
+                   \protect 
+l.1424  \box \overline
+                      { h } _{ \mu \nu }  = - 16 \pi G T _{ \mu \nu }
+A number should have been here; I inserted `0'.
+(If you can't figure out why I needed to see a number,
+look up `weird error' in the index to The TeXbook.)
+
+[64]
+./einstein_equations.tex:1432: Missing number, treated as zero.
+<to be read again> 
+                   =
+l.1432  \box  =
+                 - \partial  _ t ^ 2 + \nabla ^ 2
+A number should have been here; I inserted `0'.
+(If you can't figure out why I needed to see a number,
+look up `weird error' in the index to The TeXbook.)
+
+./einstein_equations.tex:1483: Missing number, treated as zero.
+<to be read again> 
+                   \protect 
+l.1483  \box \overline
+                      { h } _{ \mu \nu }  = 0
+A number should have been here; I inserted `0'.
+(If you can't figure out why I needed to see a number,
+look up `weird error' in the index to The TeXbook.)
+
+./einstein_equations.tex:1503: Double subscript.
+l.1503 ... \mu \nu } + \partial  _ \mu \xi _ \nu _
+                                                   \partial  _ \nu \xi _ \mu
+I treat `x_1_2' essentially like `x_1{}_2'.
+
+./einstein_equations.tex:1503: Double subscript.
+l.1503 ... \partial  _ \mu \xi _ \nu _ \partial  _
+                                                   \nu \xi _ \mu
+I treat `x_1_2' essentially like `x_1{}_2'.
+
+[65] [66]
+./einstein_equations.tex:1588: Double superscript.
+<argument>  d ^ S ^
+                    1
+l.1588 \end{align*}
+                   
+I treat `x^1^2' essentially like `x^1{}^2'.
+
+./einstein_equations.tex:1588: Double superscript.
+<argument>  d ^ S ^
+                    1
+l.1588 \end{align*}
+                   
+I treat `x^1^2' essentially like `x^1{}^2'.
+
+[67] [68] [69]
+./einstein_equations.tex:1833: Undefined control sequence.
+l.1833 in Minkowski space. We look at $ \mathscr
+                                                 { J }^ +  $,
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+./einstein_equations.tex:1836: Undefined control sequence.
+l.1836 energy which hit $ \mathscr
+                                  { J  } ^ + $ in Minkowski
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+[70]
+./einstein_equations.tex:1899: Undefined control sequence.
+l.1899 This is from the treatment at $ \mathscr
+                                               {J } ^ + $
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+[71]
+./einstein_equations.tex:1958: Undefined control sequence.
+l.1958 	The sun emits $ \mathcal{ L } _{ \sun
+                                               } \simeq 10 ^{ - 26 } \mathca...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+./einstein_equations.tex:1972: Undefined control sequence.
+l.1972 	10 ^{ - 3 } \mathcal{ M } _{ \sun
+                                          } $, and $ R \simeq 10 ^{ 8 } km $.
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+./einstein_equations.tex:1976: Undefined control sequence.
+l.1976 	  = 10 ^{ - 18 } \mathcal{ L } _{ \sun
+                                               }
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+) (./example_sheet_1.tex [72]) (./question_1.tex [73]) [74] (./question_2.tex) [75] (./question_3.tex) [76] (./question_5.tex [77] [78]) (./question_6.tex [79]) (./question_7.tex [80] [81]) (./question_8.tex [82] [83]) (./question_9.tex [84]) (./question_10.tex) (./question_11.tex [85] [86]) (./example_sheet_2.tex [87]) [88]
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 110.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 110.
  (./article.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 103.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 103.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 110.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 110.
 Package rerunfilecheck Info: File `article.out' has not changed.
-(rerunfilecheck)             Checksum: 0E25EE88392E711860B4597C83218062;5280.
+(rerunfilecheck)             Checksum: A4C5F6120405B13949D9ABA18D440783;6221.
+
+
+LaTeX Warning: There were multiply-defined labels.
+
 Package logreq Info: Writing requests to 'article.run.xml'.
 \openout1 = `article.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 36071 strings out of 492649
- 670500 string characters out of 6129622
- 1086783 words of memory out of 5000000
- 39183 multiletter control sequences out of 15000+600000
+ 36178 strings out of 492649
+ 672367 string characters out of 6129622
+ 1086840 words of memory out of 5000000
+ 39238 multiletter control sequences out of 15000+600000
  548118 words of font info for 69 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  55i,13n,54p,10402b,1962s stack positions out of 5000i,500n,10000p,200000b,80000s
-{/usr/local/texlive/2018/texmf-dist/fonts/enc/dvips/cm-super/cm-super-t1.enc}{/usr/local/texlive/2018/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc}</usr/local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi6.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy6.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/cm-super/sfbx1095.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/cm-super/sfbx1200.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/cm-super/sfbx1440.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/cm-super/sfrm0800.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/cm-super/sfrm1095.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/cm-super/sfrm1200.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/cm-super/sfrm1728.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/cm-super/sfti1095.pfb>
-Output written on article.pdf (70 pages, 556734 bytes).
+{/usr/local/texlive/2018/texmf-dist/fonts/enc/dvips/cm-super/cm-super-t1.enc}{/usr/local/texlive/2018/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc}</usr/local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi6.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy6.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/symbols/msam10.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/cm-super/sfbx1095.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/cm-super/sfbx1200.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/cm-super/sfbx1440.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/cm-super/sfrm0800.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/cm-super/sfrm1095.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/cm-super/sfrm1200.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/cm-super/sfrm1728.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/cm-super/sfti1095.pfb>
+Output written on article.pdf (88 pages, 651002 bytes).
 PDF statistics:
- 797 PDF objects out of 1000 (max. 8388607)
- 694 compressed objects within 7 object streams
- 151 named destinations out of 1000 (max. 500000)
- 591 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 1018 PDF objects out of 1200 (max. 8388607)
+ 867 compressed objects within 9 object streams
+ 187 named destinations out of 1000 (max. 500000)
+ 740 words of extra memory for PDF output out of 10000 (max. 10000000)
 

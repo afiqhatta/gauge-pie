@@ -1,0 +1,97 @@
+\documentclass[11pt, oneside]{article}   	% use "amsart" instead of "article" for AMSLaTeX format
+\usepackage[margin = 1.1in]{geometry}            		% See geometry.pdf to learn the layout options. There are lots.
+\geometry{letterpaper}                   		% ... or a4paper or a5paper or ... 
+\usepackage[parfill]{parskip}    		% Activate to begin paragraphs with an empty line rather than an indent
+\usepackage{graphicx}				% Use pdf, png, jpg, or eps§ with pdflatex; use eps in DVI mode
+								% TeX will automatically convert eps --> pdf in pdflatex	
+\usepackage{adjustbox}	
+\usepackage[section]{placeins}
+
+
+%% LaTeX Preamble - Common packages
+\usepackage[utf8]{inputenc}
+\usepackage[english]{babel}
+
+\title{Foo}
+\author{Your name} 
+\begin{document} 
+\maketitle
+\tableofcontents
+
+
+\pagebreak
+
+\section{My section} 
+\subsection{Subsection} 
+
+% Autocompile  - <space> ll
+
+% Contents  - <space> lt
+
+% Errors  - write some wrong stuff then press 
+
+% Get snippets  - In command mode, ':UltiSnipsEdit'. Get most of it from Giles Castell (link in the README.md)
+
+% Inline math - 'mk'
+$$
+
+% Display math  - 'dm'  
+\[
+
+\] 
+
+% FRACTIONS!!!! - '//' + all intuitive sorts of ways to trigger fractions (try type 2 `p/)
+\[
+\frac{}{}
+\] 
+
+% Greek Letters  - ' ` + corresponding Roman alphabet 
+\[ \alpha \delta \delta \delta \mu \nu \nu \beta \]
+
+% Environment  - 'beg' then type in your environment which you want 
+\begin{equation*}
+	 a + b  = c
+\end{equation*}
+
+% Type == for aligned equals 
+\begin{align*}
+	a &= jn \\
+	b &= efefefef \\
+\end{align*}
+
+% Figures - type 'fig' then <tab>
+\begin{figure}[htpb]
+	\centering
+	\includegraphics[width=0.8\linewidth]{name.ext}
+	\caption{Name}%
+	\label{fig:name}
+\end{figure}
+
+% Matrices  - pmat or bmat
+$ \begin{pmatrix} 0 & 0  \end{pmatrix} $
+
+% For physicists  - bra - ket notation. Type | 1 > 
+$ \ket{ 1 } \bra{ 2 } $
+
+% Vectors  - letter followed by ' ., ' 
+$   \vec{1} \vec{g}   \vec{a}  .,\vec{1} $
+
+% Overline  - 'bar'
+$\overline{ h nu}$
+
+% Subscripts and superscipts. For subscripts, press the number followed by the character. Type 'td' for superscripts
+$a_1 a_2  d_2 f_3 h_5 h^{ 12}$
+
+% Tables  - type 'table' then <tab> 
+ \begin{table}[htpb]
+	\centering
+	\caption{caption}
+	\label{tab:label}
+	\begin{tabular}{c}
+	
+	\end{tabular}
+\end{table}
+\end{document} 
+
+% Brackets - type (), lrb, lra, lr[ for round, curly angle and square brackets 
+

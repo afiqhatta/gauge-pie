@@ -447,6 +447,11 @@ INPUT structure_of_the_representation.tex
 INPUT structure_of_the_representation.tex
 INPUT killing_forms.tex
 INPUT killing_forms.tex
+INPUT weight-lattice.pdf_tex
+INPUT weight-lattice.pdf_tex
+INPUT weight-lattice.pdf
+INPUT ./weight-lattice.pdf
+INPUT ./weight-lattice.pdf
 INPUT example_sheet_1.tex
 INPUT example_sheet_1.tex
 INPUT question_1.tex

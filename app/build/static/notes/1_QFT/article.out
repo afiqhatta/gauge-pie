@@ -77,31 +77,41 @@
 \BOOKMARK [3][-]{subsubsection.6.17.1}{Going into the Heisenberg picture}{subsection.6.17}% 77
 \BOOKMARK [3][-]{subsubsection.6.17.2}{The Feynman Propagator}{subsection.6.17}% 78
 \BOOKMARK [2][-]{subsection.6.18}{Momentum Space Feynman Rules for Fermion Amplitudes}{section.6}% 79
-\BOOKMARK [2][-]{subsection.6.19}{Warming up with spinors from the SO\(3\) rotation group}{section.6}% 80
-\BOOKMARK [3][-]{subsubsection.6.19.1}{Rotations in Euclidean space}{subsection.6.19}% 81
-\BOOKMARK [3][-]{subsubsection.6.19.2}{Transformations with Unitary matrices}{subsection.6.19}% 82
-\BOOKMARK [2][-]{subsection.6.20}{Lorentz tranformations and spinors}{section.6}% 83
-\BOOKMARK [2][-]{subsection.6.21}{Constructing the Chiral representation for the Dirac equation}{section.6}% 84
-\BOOKMARK [2][-]{subsection.6.22}{Motivating Lorentz invariance of the Dirac equation}{section.6}% 85
-\BOOKMARK [2][-]{subsection.6.23}{Constructing boosts and rotations in block diagonal form}{section.6}% 86
-\BOOKMARK [2][-]{subsection.6.24}{The Weyl equations}{section.6}% 87
-\BOOKMARK [2][-]{subsection.6.25}{Constructing Plane-Wave solutions to the Weyl equation}{section.6}% 88
-\BOOKMARK [1][-]{section.7}{Example sheet 1}{}% 89
-\BOOKMARK [2][-]{subsection.7.1}{Question 1}{section.7}% 90
-\BOOKMARK [2][-]{subsection.7.2}{Question 2}{section.7}% 91
-\BOOKMARK [2][-]{subsection.7.3}{Question 3}{section.7}% 92
-\BOOKMARK [2][-]{subsection.7.4}{Question 4}{section.7}% 93
-\BOOKMARK [2][-]{subsection.7.5}{Question 5}{section.7}% 94
-\BOOKMARK [2][-]{subsection.7.6}{Question 6}{section.7}% 95
-\BOOKMARK [3][-]{subsubsection.7.6.1}{Gauge invariance}{subsection.7.6}% 96
-\BOOKMARK [3][-]{subsubsection.7.6.2}{Constructing the energy-momentum tensor}{subsection.7.6}% 97
-\BOOKMARK [2][-]{subsection.7.7}{Question 7}{section.7}% 98
-\BOOKMARK [2][-]{subsection.7.8}{Question 8}{section.7}% 99
-\BOOKMARK [1][-]{section.8}{Example Sheet 2}{}% 100
-\BOOKMARK [2][-]{subsection.8.1}{Question 1}{section.8}% 101
-\BOOKMARK [2][-]{subsection.8.2}{Question 4}{section.8}% 102
-\BOOKMARK [2][-]{subsection.8.3}{Question 7}{section.8}% 103
-\BOOKMARK [2][-]{subsection.8.4}{Question 8}{section.8}% 104
-\BOOKMARK [2][-]{subsection.8.5}{Question 9}{section.8}% 105
-\BOOKMARK [2][-]{subsection.8.6}{Question 1}{section.8}% 106
-\BOOKMARK [2][-]{subsection.8.7}{Question 2}{section.8}% 107
+\BOOKMARK [2][-]{subsection.6.19}{Cross-Sections and Mod-squared expressions}{section.6}% 80
+\BOOKMARK [1][-]{section.7}{Quantum Electrodynamics}{}% 81
+\BOOKMARK [2][-]{subsection.7.1}{Quantisation of the Electromagnetic Field}{section.7}% 82
+\BOOKMARK [3][-]{subsubsection.7.1.1}{Coulomb Gauge}{subsection.7.1}% 83
+\BOOKMARK [3][-]{subsubsection.7.1.2}{Lorentz Gauge}{subsection.7.1}% 84
+\BOOKMARK [2][-]{subsection.7.2}{Timelike \040 pairs continued}{section.7}% 85
+\BOOKMARK [3][-]{subsubsection.7.2.1}{ \040Feynman propagator}{subsection.7.2}% 86
+\BOOKMARK [2][-]{subsection.7.3}{Interactions}{section.7}% 87
+\BOOKMARK [3][-]{subsubsection.7.3.1}{Coupling to Fermions}{subsection.7.3}% 88
+\BOOKMARK [3][-]{subsubsection.7.3.2}{Coupling to Scalars}{subsection.7.3}% 89
+\BOOKMARK [2][-]{subsection.7.4}{Warming up with spinors from the SO\(3\) rotation group}{section.7}% 90
+\BOOKMARK [3][-]{subsubsection.7.4.1}{Rotations in Euclidean space}{subsection.7.4}% 91
+\BOOKMARK [3][-]{subsubsection.7.4.2}{Transformations with Unitary matrices}{subsection.7.4}% 92
+\BOOKMARK [2][-]{subsection.7.5}{Lorentz tranformations and spinors}{section.7}% 93
+\BOOKMARK [2][-]{subsection.7.6}{Constructing the Chiral representation for the Dirac equation}{section.7}% 94
+\BOOKMARK [2][-]{subsection.7.7}{Motivating Lorentz invariance of the Dirac equation}{section.7}% 95
+\BOOKMARK [2][-]{subsection.7.8}{Constructing boosts and rotations in block diagonal form}{section.7}% 96
+\BOOKMARK [2][-]{subsection.7.9}{The Weyl equations}{section.7}% 97
+\BOOKMARK [2][-]{subsection.7.10}{Constructing Plane-Wave solutions to the Weyl equation}{section.7}% 98
+\BOOKMARK [1][-]{section.8}{Example sheet 1}{}% 99
+\BOOKMARK [2][-]{subsection.8.1}{Question 1}{section.8}% 100
+\BOOKMARK [2][-]{subsection.8.2}{Question 2}{section.8}% 101
+\BOOKMARK [2][-]{subsection.8.3}{Question 3}{section.8}% 102
+\BOOKMARK [2][-]{subsection.8.4}{Question 4}{section.8}% 103
+\BOOKMARK [2][-]{subsection.8.5}{Question 5}{section.8}% 104
+\BOOKMARK [2][-]{subsection.8.6}{Question 6}{section.8}% 105
+\BOOKMARK [3][-]{subsubsection.8.6.1}{Gauge invariance}{subsection.8.6}% 106
+\BOOKMARK [3][-]{subsubsection.8.6.2}{Constructing the energy-momentum tensor}{subsection.8.6}% 107
+\BOOKMARK [2][-]{subsection.8.7}{Question 7}{section.8}% 108
+\BOOKMARK [2][-]{subsection.8.8}{Question 8}{section.8}% 109
+\BOOKMARK [1][-]{section.9}{Example Sheet 2}{}% 110
+\BOOKMARK [2][-]{subsection.9.1}{Question 1}{section.9}% 111
+\BOOKMARK [2][-]{subsection.9.2}{Question 4}{section.9}% 112
+\BOOKMARK [2][-]{subsection.9.3}{Question 7}{section.9}% 113
+\BOOKMARK [2][-]{subsection.9.4}{Question 8}{section.9}% 114
+\BOOKMARK [2][-]{subsection.9.5}{Question 9}{section.9}% 115
+\BOOKMARK [2][-]{subsection.9.6}{Question 1}{section.9}% 116
+\BOOKMARK [2][-]{subsection.9.7}{Question 2}{section.9}% 117

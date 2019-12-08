@@ -1,10 +1,10 @@
 # Fdb version 3
-["biber article"] 1574263057 "article.bcf" "article.bbl" "article" 1574264876
-  "article.bcf" 1574264874 90028 cbd81645b3fad370fbf0b8e4b1821886 ""
+["biber article"] 1574263057 "article.bcf" "article.bbl" "article" 1574633048
+  "article.bcf" 1574633046 90028 cbd81645b3fad370fbf0b8e4b1821886 ""
   (generated)
-  "article.bbl"
   "article.blg"
-["lualatex"] 1574264864 "article.tex" "article.pdf" "article" 1574264876
+  "article.bbl"
+["lualatex"] 1574633036 "article.tex" "article.pdf" "article" 1574633048
   "/Users/ahmadafiqhatta/Library/texlive/2018/texmf-var/luatex-cache/generic/fonts/otl/lmroman10-regular.luc" 1571438643 134930 00ae4e6b8bb3b328fba6fb1bcf4ea21b ""
   "/usr/local/texlive/2018/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmbsy6.tfm" 1480098698 1124 14ccf5552bc7f77ca02a8a402bea8bfb ""
   "/usr/local/texlive/2018/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmbsy8.tfm" 1480098698 1120 200be8b775682cdf80acad4be5ef57e4 ""
@@ -341,12 +341,12 @@
   "a_brief_look_at_universality.tex" 1573041651 1791 2cf996d6df3076019a0aa1bf798932f8 ""
   "a_second_look_at_universality.tex" 1573041651 1559 3be5eb623d49b0a8cdf67c61ab94b009 ""
   "applying_wicks_free_energy.tex" 1573208767 2313 f4a7fdb2d4f3b72c8cb8639cff233f5d ""
-  "article.aux" 1574264874 17243 47f6ac7896c545c829e827c8eadaeb85 ""
+  "article.aux" 1574633046 17243 f68e5b2f0c285b74c9fbdf91580b674c ""
   "article.bbl" 1574263058 0 d41d8cd98f00b204e9800998ecf8427e "biber article"
-  "article.out" 1574264874 6215 8b72b5d5193fef673e849eaf9f4016c4 ""
-  "article.run.xml" 1574264874 2280 af6a296f384e31a31cd30c3907bd0de4 ""
+  "article.out" 1574633046 6215 8b72b5d5193fef673e849eaf9f4016c4 ""
+  "article.run.xml" 1574633046 2280 af6a296f384e31a31cd30c3907bd0de4 ""
   "article.tex" 1574263040 4563 deebd5aa177fefd47796d5b1178f3785 ""
-  "article.toc" 1574264874 10423 2f36137039268852e4416c0b626781b1 ""
+  "article.toc" 1574633046 10423 3437b531b7cc8801f0c60f3dadb6af8e ""
   "basic_introduction.tex" 1573041651 1290 75f65267c2d7a3cc2f48c129d584e5c5 ""
   "classifying_fixed_points.tex" 1573041651 390 cb29ee0ce8009cdc4ebf3c993b6e4d94 ""
   "computing_gaussian_path_integrals.tex" 1573041651 8929 64acacdd836cc61dc08cd59796c3d5c1 ""
@@ -359,7 +359,7 @@
   "example_sheet_1.tex" 1573041651 27 22352b3691211b2ac55374f48367efb9 ""
   "example_sheet_2.tex" 1573576554 510 8b3fcdf014ace5e83eb1cbe423a73d83 ""
   "explaining_universality_with_the_renormalization_group_flow.tex" 1573041651 3860 0baab5b5b73bc6b97b49d6643bab9eb9 ""
-  "feynman_diagrams.tex" 1574107821 18395 71738ef797c0d99e146745073fa73880 ""
+  "feynman_diagrams.tex" 1574633035 19663 2bd79db8c5f23897d34997cd83285d59 ""
   "figures/deformations.png" 1572799359 23807 e2d8513f5248019a7b0afb936c1ff525 ""
   "figures/rg_flow.pdf" 1573411860 7746 6a4f82609b3e50a9b17d05b219115ec5 ""
   "figures/rg_flow_1.png" 1572799359 87434 bb47d949f40ea404e7fafe1dd6d9f895 ""
@@ -389,10 +389,10 @@
   "using_the_landau_approach.tex" 1573041651 5502 e77411228036aa02fa4a8711a3077cb0 ""
   "why_statistical_field_theory.tex" 1573041651 41 d936a4d31d83dfff5f3de6569136ebca ""
   (generated)
-  "article.bcf"
-  "article.toc"
-  "article.out"
-  "article.log"
   "article.aux"
+  "article.toc"
   "article.run.xml"
+  "article.bcf"
+  "article.out"
   "article.pdf"
+  "article.log"

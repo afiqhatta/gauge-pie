@@ -147,70 +147,90 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {subsection}{\numberline {6.14}A canonical Basis for normalised Spinors}{75}{subsection.6.14}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {6.15}Quantising the Dirac field}{76}{subsection.6.15}
+\contentsline {subsection}{\numberline {6.15}Quantising the Dirac field}{77}{subsection.6.15}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {6.16}The Dirac Hole Interpretation}{77}{subsection.6.16}
+\contentsline {subsection}{\numberline {6.16}The Dirac Hole Interpretation}{79}{subsection.6.16}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {6.17}Fermi-Dirac Statistics}{78}{subsection.6.17}
+\contentsline {subsection}{\numberline {6.17}Fermi-Dirac Statistics}{79}{subsection.6.17}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\numberline {6.17.1}Going into the Heisenberg picture}{78}{subsubsection.6.17.1}
+\contentsline {subsubsection}{\numberline {6.17.1}Going into the Heisenberg picture}{79}{subsubsection.6.17.1}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\numberline {6.17.2}The Feynman Propagator}{79}{subsubsection.6.17.2}
+\contentsline {subsubsection}{\numberline {6.17.2}The Feynman Propagator}{80}{subsubsection.6.17.2}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {6.18}Momentum Space Feynman Rules for Fermion Amplitudes}{79}{subsection.6.18}
+\contentsline {subsection}{\numberline {6.18}Momentum Space Feynman Rules for Fermion Amplitudes}{83}{subsection.6.18}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {6.19}Warming up with spinors from the $SO(3)$ rotation group}{81}{subsection.6.19}
+\contentsline {subsection}{\numberline {6.19}Cross-Sections and Mod-squared expressions}{85}{subsection.6.19}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\numberline {6.19.1}Rotations in Euclidean space}{81}{subsubsection.6.19.1}
+\contentsline {section}{\numberline {7}Quantum Electrodynamics}{88}{section.7}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\numberline {6.19.2}Transformations with Unitary matrices}{81}{subsubsection.6.19.2}
+\contentsline {subsection}{\numberline {7.1}Quantisation of the Electromagnetic Field}{90}{subsection.7.1}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {6.20}Lorentz tranformations and spinors}{83}{subsection.6.20}
+\contentsline {subsubsection}{\numberline {7.1.1}Coulomb Gauge}{90}{subsubsection.7.1.1}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {6.21}Constructing the Chiral representation for the Dirac equation}{84}{subsection.6.21}
+\contentsline {subsubsection}{\numberline {7.1.2}Lorentz Gauge}{91}{subsubsection.7.1.2}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {6.22}Motivating Lorentz invariance of the Dirac equation}{85}{subsection.6.22}
+\contentsline {subsection}{\numberline {7.2}Timelike $ \gamma $ pairs continued}{94}{subsection.7.2}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {6.23}Constructing boosts and rotations in block diagonal form}{87}{subsection.6.23}
+\contentsline {subsubsection}{\numberline {7.2.1}$ \gamma $ Feynman propagator}{94}{subsubsection.7.2.1}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {6.24}The Weyl equations}{88}{subsection.6.24}
+\contentsline {subsection}{\numberline {7.3}Interactions}{94}{subsection.7.3}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {6.25}Constructing Plane-Wave solutions to the Weyl equation}{88}{subsection.6.25}
+\contentsline {subsubsection}{\numberline {7.3.1}Coupling to Fermions}{95}{subsubsection.7.3.1}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {7}Example sheet 1}{90}{section.7}
+\contentsline {subsubsection}{\numberline {7.3.2}Coupling to Scalars}{96}{subsubsection.7.3.2}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {7.1}Question 1}{90}{subsection.7.1}
+\contentsline {subsection}{\numberline {7.4}Warming up with spinors from the $SO(3)$ rotation group}{96}{subsection.7.4}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {7.2}Question 2}{92}{subsection.7.2}
+\contentsline {subsubsection}{\numberline {7.4.1}Rotations in Euclidean space}{96}{subsubsection.7.4.1}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {7.3}Question 3}{93}{subsection.7.3}
+\contentsline {subsubsection}{\numberline {7.4.2}Transformations with Unitary matrices}{97}{subsubsection.7.4.2}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {7.4}Question 4}{95}{subsection.7.4}
+\contentsline {subsection}{\numberline {7.5}Lorentz tranformations and spinors}{98}{subsection.7.5}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {7.5}Question 5}{96}{subsection.7.5}
+\contentsline {subsection}{\numberline {7.6}Constructing the Chiral representation for the Dirac equation}{100}{subsection.7.6}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {7.6}Question 6}{98}{subsection.7.6}
+\contentsline {subsection}{\numberline {7.7}Motivating Lorentz invariance of the Dirac equation}{100}{subsection.7.7}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\numberline {7.6.1}Gauge invariance}{98}{subsubsection.7.6.1}
+\contentsline {subsection}{\numberline {7.8}Constructing boosts and rotations in block diagonal form}{102}{subsection.7.8}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\numberline {7.6.2}Constructing the energy-momentum tensor}{98}{subsubsection.7.6.2}
+\contentsline {subsection}{\numberline {7.9}The Weyl equations}{103}{subsection.7.9}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {7.7}Question 7}{100}{subsection.7.7}
+\contentsline {subsection}{\numberline {7.10}Constructing Plane-Wave solutions to the Weyl equation}{104}{subsection.7.10}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {7.8}Question 8}{102}{subsection.7.8}
+\contentsline {section}{\numberline {8}Example sheet 1}{106}{section.8}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {8}Example Sheet 2}{103}{section.8}
+\contentsline {subsection}{\numberline {8.1}Question 1}{106}{subsection.8.1}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {8.1}Question 1}{103}{subsection.8.1}
+\contentsline {subsection}{\numberline {8.2}Question 2}{108}{subsection.8.2}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {8.2}Question 4}{103}{subsection.8.2}
+\contentsline {subsection}{\numberline {8.3}Question 3}{109}{subsection.8.3}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {8.3}Question 7}{103}{subsection.8.3}
+\contentsline {subsection}{\numberline {8.4}Question 4}{111}{subsection.8.4}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {8.4}Question 8}{106}{subsection.8.4}
+\contentsline {subsection}{\numberline {8.5}Question 5}{112}{subsection.8.5}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {8.5}Question 9}{107}{subsection.8.5}
+\contentsline {subsection}{\numberline {8.6}Question 6}{114}{subsection.8.6}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {8.6}Question 1}{109}{subsection.8.6}
+\contentsline {subsubsection}{\numberline {8.6.1}Gauge invariance}{114}{subsubsection.8.6.1}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {8.7}Question 2}{111}{subsection.8.7}
+\contentsline {subsubsection}{\numberline {8.6.2}Constructing the energy-momentum tensor}{114}{subsubsection.8.6.2}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {8.7}Question 7}{116}{subsection.8.7}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {8.8}Question 8}{118}{subsection.8.8}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {9}Example Sheet 2}{119}{section.9}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {9.1}Question 1}{119}{subsection.9.1}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {9.2}Question 4}{119}{subsection.9.2}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {9.3}Question 7}{119}{subsection.9.3}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {9.4}Question 8}{122}{subsection.9.4}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {9.5}Question 9}{123}{subsection.9.5}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {9.6}Question 1}{125}{subsection.9.6}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {9.7}Question 2}{127}{subsection.9.7}

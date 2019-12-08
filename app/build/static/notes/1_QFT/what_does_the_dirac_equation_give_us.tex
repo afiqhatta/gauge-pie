@@ -983,7 +983,61 @@ a minus sign.
 \] 
 Finally, something we will also have to use 
 frequently in the coming section is 
-the outer product 
+the 'outer product' of the spinors. 
+In this case, instead of doing a dot product, 
+we sum over the spinors in the other way round 
+to create a matrix.
+
+\begin{claim}{(Outer products of spinors)}
+	We have that the outer products of the two spinors 
+	$ u ^ s ( \vec{p} ) $ and $ v ^s ( \vec{p} ) $ satisfy 
+	\[
+		\sum_{ s= 1 , 2 } u^ s ( \vec{p} ) \overline{ u } ^ s ( \vec{p} )  =
+		\slashed{p} + m 
+	\] And similarly, we have that our 
+	negative frequency solution acts somewhat in a conjugate fashion, 
+	with 
+	\[
+		\sum_{ s = 1, 2 } v ^ s ( \vec{p} ) \overline{ v } ^ s ( \vec{p} )  = 
+		\slashed{p} - m 
+	\]
+\begin{proof}
+	Proving this is just a simple matter 
+	of writing out the definitions, and using 
+	the fact that the outer product $ \xi ^ s \xi^{ s \dagger }$ and 
+	$ \eta ^{ s } \eta ^{ s \dagger } $
+	is just the identity matrix. 
+	Similarly, we have that for $ v ^ s ( \vec{p} ) \overline{v} ^{ s  } ( \vec{p} )  $, 
+	we get that
+	\[
+		v^ s ( \vec{p} ) = \begin{pmatrix}  \sqrt{ p \cdot  \sigma }  
+		\eta ^ s \\  - \sqrt{ p \cdot  \overline{ \sigma } }  \eta ^ s 
+	\end{pmatrix} , \quad \overline{ v } ^ s ( \vec{p} ) 
+	= \begin{pmatrix}  - \eta ^{ s \dagger } \sqrt{ p \cdot  \overline{ \sigma } } & 
+	\eta ^{ s \dagger } \sqrt{ p \cdot  \sigma }  \end{pmatrix} 
+	\] Now, doing the outer product and summing over $ s $ gives
+	\begin{align*}
+		\sum_{ s } v ^ s ( \vec{p} ) 
+		\overline{ v } ^ s ( \vec{p} )  &=  \sum_{ s } 
+		\begin{pmatrix}   - \sqrt{ p \cdot  \sigma }  \eta ^ s 
+		\eta ^{ s \dagger } \sqrt{ p \cdot  \overline{ \sigma } }  & 
+	\sqrt{ p \cdot  \sigma }  \eta ^ s \eta ^{ s \dagger  } \sqrt{ p \cdot  \sigma }  \\
+	\sqrt{ p \cdot  \overline{ \sigma } }  \eta ^ s \eta ^{ s \dagger } \sqrt{ p \cdot  \overline{ \sigma } }  & - \sqrt{ p \cdot  \sigma }  \eta ^ s \eta ^{ s \dagger } \sqrt{ p \cdot  \overline{ \sigma } }  \end{pmatrix}  \\
+														   &=  \begin{pmatrix}  - m I & p \cdot  \sigma \\
+														   p \cdot  \overline{ \sigma } &   -mI  \end{pmatrix}  \\
+	\end{align*}
+	Now, with the observation that $ \slashed{p} = \gamma ^ \mu p _ \mu $, which is 
+	\[
+		\slashed{p} = \begin{pmatrix}  0 & p \cdot  \sigma \\
+		p \cdot  \overline{ \sigma } & 0 \end{pmatrix}  
+	\] we are left with the result that 
+	\[
+		v ^ s ( \vec{p} ) \overline{ v }^ s ( \vec{p} ) = \slashed{p} - m  
+	\] where the $ - m $ is implicitly multiplied by the 
+	identity matrix. 
+\end{proof}
+\end{claim}
+
 
 \subsection{Quantising the Dirac field}
 In conclusion, we've found two 
@@ -1038,7 +1092,44 @@ relations. We can prove that these are equivalent to
 \left\{  b_{ \vec{q} } ^ r , b _{ \vec{q} } ^{ s \dagger }  \right\}  = 
 ( 2 \pi ) ^ 3 \delta ^ 3 ( \vec{p} - \vec{q} ) \delta ^{ rs }  = \left\{  c_{ \vec{p} } ^ r , 
 c _{ \vec{q} } ^{ s \dagger }\right\} 
-\] We do the Legendre transform to 
+\]
+To show that this is true, we'll do just one direction 
+and check that our anti-commutation relations hold true. 
+
+To show this, observe that 
+\begin{align*}
+	\left\{  \psi , \psi ^ \dagger  \right\}  &=  \sum_{ r, s } \int 
+	\frac{ d ^ 3 p d ^ 3 q }{( 2 \pi )^{6 }  2 \sqrt{ E_{ p } E_{q }  }  } 
+	\left[  \left\{  b _{ \vec{p} } ^{ s } , b _{ \vec{q} } ^{ r \dagger }  \right\}  
+	u _{ \vec{p} } ^{ s } u _{ \vec{q} } ^{ r \dagger } e ^{ i \cdot  ( \vec{p} \cdot  \vec{x}  - \vec{q} \cdot  \vec{y}}
+ + \left\{  c_{\vec{p} } ^{ s \dagger } , c_{\vec{q} } ^{ r }  \right\}  v _{ \vec{p} } ^ s v _{ \vec{q} } ^{ r \dagger } 
+ e ^{ - i ( \vec{p} \cdot  \vec{x} - \vec{q} \cdot  \vec{y} ) }\right] \\
+ &= \sum_{ r, s } \int \frac{d ^ 3 p d ^ 3 q}{ ( 2 \pi )^{ 6 }  2 \sqrt{ 
+ E_ p  E_ q } } \left[  ( 2 \pi )^{ 3 }  \delta _{ rs } \delta ( \vec{p} - \vec{q} ) 
+ u_{ \vec{p} } ^{ s } u _{ \vec{q}  } ^{ r \dagger } e ^{ i ( \vec{p} \cdot  \vec{x} - \vec{q} \cdot  \vec{y} ) } +  ( 2 \pi )^{ 3 }  \delta _{ rs } \delta ( \vec{p} - \vec{q} ) v _{ \vec{p} } ^{ s } v _{ \vec{q} } ^{ r \dagger } e ^{ - i ( \vec{p} \cdot  \vec{x} - \vec{q} \cdot  \vec{y}}\right] \\
+  &=  \sum _ s \int \frac{d ^ 3 p  }{ ( 2 \pi )^{ 3 }  2 E _ p } \left[  
+  u _{ \vec{p}  } ^{ s } \overline{u} _{\vec{p} } ^{ s } \gamma ^ 0 e ^{ i \vec{p} \cdot  ( \vec{x} - \vec{y} ) } 
+   + v_{ \vec{p} } ^{ s } \overline{v}_{ \vec{p} } ^{ r } \gamma ^ 0 e ^{  -i \vec{p} \cdot  ( \vec{x} - \vec{y} ) }\right]  \\
+  &=  \int \frac{ d ^ 3 p  }{ ( 2 \pi )^{ 3 }  2 E_{p } } \left[ ( 
+  \slashed{p} + m  ) \gamma ^ 0 e ^{ i \vec{p} \cdot  ( \vec{x} - \vec{y} ) }
+   +  ( \slashed{p} -m ) \gamma ^ 0  e ^{  -i \vec{p} \cdot  ( \vec{x} - \vec{y}) } \right]  \\
+   &=   \int \frac{ d ^ 3 p  }{ ( 2 \pi )^{ 3 }  } 
+   \frac{ m }{ E_{ p }  } e ^{ i \vec{p} \cdot  ( \vec{x} - \vec{y} ) }\\
+   &=  \int \frac{ d ^ 3 p  }{ ( 2 \pi )^{ 3 }  E_{ p }  } \left[  
+   ( \gamma ^ 0 p ^ 0 - \gamma ^ i p _ i + m ) \gamma ^ 0 e ^{ i \vec{p} \cdot  ( \vec{x} - \vec{yu} ) }
+    + ( \gamma ^ 0 p ^ 0 + \gamma ^ i p ^ i - m ) \gamma ^ 0 e ^{ i \vec{p} \cdot  ( \vec{x} - \vec{y} ) }\right]  \\
+   &=  \delta ( \vec{x} - \vec{y} )  \\
+\end{align*}
+Going into the second last line, we switched the 
+3 momentum variable $ \vec{p} \to  - \vec{p} $ in the second term. 
+Going into the last line, we also used the fact that $ ( \gamma ^ 0 ) ^ 2  =1 $. 
+
+We have that in the last line, since our measure 
+is Lorentz invariant, we boosted into 
+the rest frame so that $ m $ cancels with $ E_{ p }  $. 
+
+
+We do the Legendre transform to 
 get our Hamiltonian density. It's easy to 
 see that our conjugate momenta $ \pi $ is 
 $ \pi = i \psi^{ \dagger } $. This means that 
@@ -1047,8 +1138,13 @@ our Hamiltonian looks like
 \mathcal{ H } &=  \pi \dot{ \psi }  - \mathcal{ L }   \\
 &=  i \psi ^ \dagger \dot{ \psi }  - i \overline{ \psi } \gamma ^ 0 \partial  _ 0 
 \psi - i \overline{ \psi } \gamma ^ i \partial  _ i \psi + m \overline{ \psi } \psi \\
-&=  \overline{ \psi }( - i \gamma ^ i \partial  _ i + m ) \psi -  
+&=  \overline{ \psi }( - i \gamma ^ i \partial  _ i + m ) \psi  
 \end{align*}
+By the way, one needs to be careful that 
+the index $ i $ here only sums over the spatial 
+derivatives (this makes sense since the 
+Hamiltonian shouldn't be time independent anyway 
+since it's a conserved quantity). 
 If we plug in $ \psi , \overline{ \psi } $ from the above, 
 we use anti commutation relations and some reuslts on inner 
 products of spinors to get that 
@@ -1063,8 +1159,16 @@ we fortunately get a positive definite quantity
 H = \int \frac{ d^ 3 p }{ ( 2 \pi ) ^ 3 } E _ p \sum_{ s = 1 } ^ 2 
 \left(  b_{ \vec{p} } ^{ s \dagger  } b _{ \vec{p} } ^ s 
 + c _{ \vec{p} } ^{ s \dagger } c _{ \vec{p} } ^ s \right) 
-\] If we used commutation relations, we get a minus sign which means that we 
-have unboudned lower energy and therefore unstable theory.
+\] To derive this, the best way to go about doing this 
+is to look at the operator $ \left( - i \gamma ^ i \partial _ i   - m  \right)  $
+on $ u ^ s ( \vec{p} )  $ and $ v ^ s ( \vec{p} )  $.
+Due to Dirac's equation, we eliminate these 
+things in favour of $ \gamma ^ 0 p _ 0 $, 
+and then use this to find what the above is. 
+Then we substitute that back into our expression for $ H$. 
+
+If we used commutation relations, we get a minus sign which means that we 
+have unbounded lower energy and therefore unstable theory.
 
 \subsection{The Dirac Hole Interpretation}
 We can write the Dirac equation as 
@@ -1085,8 +1189,9 @@ b_{ \vec{p} } ^ s \ket{ 0 }  = 0 =  c_{ \vec{p} } ^ s \ket{ 0 }
 \] Recall that these operators obey anti-commutation relations. 
 We can check that these commute with the Hamiltonian as follows 
 \begin{align*}
-[ H , b_{ \vec{p} } ^{ r \dagger } ] &=  E _p b _{ \vec{p} } ^{ r \dagger }  \\ 
-\left[  H , b_{ \vec{p} } ^{ r  }  \right]  &=   - E _ p b_{ \vec{p} } ^ r  \\ 
+[ H , b_{ \vec{p} } ^{ r \dagger } ] &=  E _p b _{ \vec{p} } ^{ r \dagger }  , \quad \left[  H , b_{ \vec{p} } ^{ r  }  \right]  =   - E _ p b_{ \vec{p} } ^ r   \\
+\left[  H, c _{ \vec{p}}^ r   \right]   = - E _{ \vec{p} } c _{ \vec{p} }^ r \quad  \left[  H , c_{\vec{p} } ^{ r \dagger }  \right]   = E_{ \vec{p} } 
+c_{\vec{p} }^{ r \dagger }
 \end{align*}
 If we index this state, for example, as $ \ket{ \vec{p} _ 1, r _ 1 } : = b_{ \vec{p} _ 1 } ^{ r _ 1 \dagger } \ket{ 0 }  $. 
 Then the anti-commutation relations give us a sign change when 
@@ -1094,7 +1199,7 @@ we swap two things around. In particular,
 we have that 
 \[
 \ket{ \vec{p} _ 1 , r _ 1 ; \vec{p} _ 2 , r _ 2 } =  - \ket{ \vec{p} _ 2 , r _ 2 ; \vec{p} _ 1 , r _ 1 } 
-\]   
+\]  You can check this yourself.  
 
 \subsubsection{Going into the Heisenberg picture}
 To study propagators in the theory, 
@@ -1152,10 +1257,10 @@ They do commute at space-like separations so the theory is causal.
 Away from singularities, we have that 
 \begin{align*}
 ( i \slashed{p} _ x - m ) i S ( x - y ) &=  0  \\ 
-					&=  ( i \slashed{\partial} _ x - m ) 
-					( i \slashed{\partial}  + m ) \left[ D ( x - y )  - D ( y - x )  \right]  \\
-					&=  - ( \partial _ x ^ 2 + m ^ 2 ) \left[  D ( x -y )  - D( y - x)  \right]  \\
-					&= 0 \text{ using } p ^ \mu p _ \mu  = m ^ 2
+		&=  ( i \slashed{\partial} _ x - m ) 
+		( i \slashed{\partial}  + m ) \left[ D ( x - y )  - D ( y - x )  \right]  \\
+		&=  - ( \partial _ x ^ 2 + m ^ 2 ) \left[  D ( x -y )  - D( y - x)  \right]  \\
+		&= 0 \text{ using } p ^ \mu p _ \mu  = m ^ 2
 \end{align*}
 
 \subsubsection{The Feynman Propagator} 
@@ -1172,33 +1277,317 @@ If we define $ S _{ F \alpha \beta }  = \bra{ 0 } T \psi _{ \alpha } ( x) \overl
 as the object 
 \[
 \begin{cases}
-  \bra{ 0 } \psi _ \alpha ( x) \overline{ \psi } _ \beta ( y ) \ket{ 0 } & x ^ 0 >  y ^ 0 \\
-	  - \bra{ 0 }{ \overline{ \psi } _ \beta ( y ) \psi _ \alpha ( x ) \ket{ 0 }  & y ^ 0 } x ^ 0 
+\bra{ 0 } \psi _ \alpha ( x) \overline{ \psi } _ \beta ( y ) \ket{ 0 } & x ^ 0 >  y ^ 0 \\
+- \bra{ 0 }{ \overline{ \psi } _ \beta ( y ) \psi _ \alpha ( x ) \ket{ 0 }  & y ^ 0 } x ^ 0 
 \end{cases} 
 \]
 The negative sign in the second term is required 
- for Lorentz invariance when $ ( x  -y ) ^ 2 < 0 $, since 
- there exists no Lorentz invariant way to determine whether $x ^ 0 < y ^ 0 $ 
- or the other way around. 
- In this case, $ \left\{  \psi ( x) , \overline{ \psi } ( y )  \right\}   = 0 $ and 
- so $ T $ as defined is lorentz invariant. 
- This is the same for strings of fermionic operators in $T $  - they anti commute. 
- We see the same behaviour for normal ordering, we get that 
- \[
-  : \psi _ 1 \psi _ 2 : = - : \psi _ 2 \psi _ 1 : 
- \]
- We can define our Feynman propagator as 
- \begin{equation*}  
-  \wick{ \c \psi ( x) \c \psi^*( y )} 
- \end{equation*} 
-	From this we get that 
-	\[
-	T ( \psi ( x) , \overline{ \psi  }( y )  = : \psi ( x) \overline{ \psi ( y ) } 
-	\]
+for Lorentz invariance when $ ( x  -y ) ^ 2 < 0 $, since 
+there exists no Lorentz invariant way to determine whether $x ^ 0 < y ^ 0 $ 
+or the other way around. 
+In this case, $ \left\{  \psi ( x) , \overline{ \psi } ( y )  \right\}   = 0 $ and 
+so $ T $ as defined is lorentz invariant. 
+This is the same for strings of fermionic operators in $T $  - they anti commute. 
+We see the same behaviour for normal ordering, we get that 
+\[
+: \psi _ 1 \psi _ 2 : = - : \psi _ 2 \psi _ 1 : 
+\]
+We can define our Feynman propagator as 
+\begin{equation*}  
+\wick{ \c \psi ( x) \c \psi^*( y )} 
+\end{equation*} 
+From this we get that 
+\[
+T ( \psi ( x) , \overline{ \psi  }( y )  = : \psi ( x) \overline{ \psi ( y ) } 
+\]
+Our propagator before can be written as 
+a 4-momentum integral, which bears resemblance to 
+our propagator for scalar fields. 
+\[
+S _ F ( x - y ) = i \int \frac{ d ^ 4 p }{ ( 2 \pi )^{ 4 }  } \frac{e ^{  - ip \cdot  
+( x -y ) } }{ p ^ 2 - m ^2 + i \epsilon } (\slashed{p} + m ) 
+\] 
+This propagator acts as a Green's function for the Dirac equation. 
+Writing $\slashed{\partial} _ x $ to denote the derivative 
+terms acting on $ x $, we have that 
+\[
+( i \slashed{\partial}_ x - m ) S_ F ( x- y ) = i \delta ^ 4 ( x- y ) 
+\] As an example, let's look at 
+Fermionic Yukawa theory. Our Lagrangian here looks like 
+\[
+\mathcal{ L } = \frac{1}{2 } \partial  _ \mu \phi \partial  ^ \mu \phi 
++ \frac{1}{2 } \mu ^ 2 \phi ^ 2 + \overline{ \psi } ( i \slashed{\partial} - m ) \psi 
+- \lambda \phi \overline{ \psi } \psi 
+\] We ask ourselves, is this 
+theory normalisable? To answer this 
+question, we need to figure out the mass dimension of 
+our coupling constant $ \lambda $. A simple analysis of the mass dimension shows that 
+$ [ \phi ] = 1 $, $ [ \psi ] = \frac{3}{2 }  = [ \psi ' ] $, which 
+implies that $ [ \lambda  ]  = 0$. 
+In the language of statistical 
+field theory, we call this 
+interaction term marginal. Thus, we have that our theory is renormalisable.
+
+\begin{example}{(Nucleon to Nucleon scattering)}
+Let's revisit our problem of 
+nucleon to nucleon scattering, $ \psi \psi \to \psi \psi $ but treating 
+are nucleons as fermions. Let's 
+label our initial state as two nucleons with incoming momentum $ \vec{p}$  
+and $ \vec{q}$, as well as spin indexes $ r $ and $ s$,  so that $ \ket{ i }  = \sqrt{ 4 E_{ p }  E_{ q }  } b_{\vec{p} } ^{ s \dagger } b_{ \vec{q} } ^{ r \dagger } \ket{ 0 } $. 
+Similarly, we label $ \ket{ f} $ as the state $ \sqrt{ 4 E_{q' }  E_{ p ' }  }  b_{ \vec{p} ' } ^{ s ' \dagger } b_{ \vec{q} ' } ^{ r' \dagger } \ket{ 0 } $. 
+
+This is shown in the following Feynman diagram 
+
+\end{example}
+
+\begin{equation*}
+\feynmandiagram [small] {
+a -- [fermion] b [blob]  
+%c[particle = \( q , r \) ]  -- [fermion] b,
+%b -- [fermion] d[particle = \( p ' , s' \) ],
+%b --[fermion] e[particle = \( q', r'\) ], 
+}; 
+\end{equation*}
+In computing the scattering amplitude, 
+we'll need to take the Hermitian conjugate of 
+$ \ket{ f } $, which is \[
+\bra{ f }  = \sqrt{ 4 E_{ p' }  E_{ q' }  }  \bra{ 0 } b_{ \vec{q}'  }^ {r'} b_{ \vec{p}'  } ^{ s' }
+\] We don't pick up a minus sign here - we have to be careful. 
+This is because we are just taking the Hermitian conjugate. 
+Let's look at $ O ( \lambda ^ 2) $ scattering 
+terms from the fields in the interaction picture. 
+Our only non zero contribution to second order is given by 
+Wick's theorem 
+\[
+\bra{ f } : \overline{ \psi  } ( x_1 ) \psi ( x_1) 
+\overline{ \psi } ( x_2 ) \psi ( x_2 ) 
+\wick{ \c \phi ( x_1 ) \c \phi ( x_2) }  : \ket{ i } 
+\] Since in this configuration, the $ \psi $ 's 
+annihilate $ \ket{ i } $ and the $ \overline{ \psi } $'s
+create $ \bra { f} $.
+We'll now work on calculating the 
+scattering amplitude we get from this 
+problem.
+The first step to do is to expand out 
+$ \psi $ in terms of our creation and annihilation 
+operators. This gives us that 
+\begin{align*}
+: \overline{ \psi } ( x_1 ) \psi ( x_1) \overline{ \psi } ( x_2 ) \psi ( x_2) : b ^{ s \dagger }_{ \vec{p} } 
+b ^{ r \dagger } _{ \vec{q} } \ket{ 0 }   &=   - \int \frac{ d ^ 3 k_1 d ^ 3 k_2 }{ ( 2 \pi )^{ 6 }  } 
+\left[  \overline{ \psi } (x_1 ) \cdot  u ^ m ( \vec{k} _ 1 ) \right] \left[  \overline{ \psi } \left( x_2  \right)  
+\cdot  u ^ n ( \vec{k} _ 2) \right]  \\
+&=  \frac{ e ^{ - i k_1 \cdot  x_1 - i k_2 \cdot  x_2 } }{ \sqrt{ 4 E_{k_1 }  E_{ k_2 }  }  }
+b_{\vec{k}_ 1 } ^ m b _{ \vec{k} _ 2 } ^ n b _{ \vec{p} } ^{ s \dagger } b _{ \vec{q} } ^{ r \dagger } \ket{ 0 } 
+\end{align*}
+The terms in square brackets like 
+$ \left[  \overline{ \psi } \left( x_1  \right)  \cdot  u ^m  \right] $
+illustrate how we're summing over indices. 
+Let's just be clear about what objects we're dealing with here. 
+For any value of $ m $, $ u ^ n ( \vec{p} )$ is a 
+four component object, and so are the spinors $\overline{ \psi } $, 
+so we're taking the dot product here. We additionally need to sum 
+over the values $ m  $ and $ n  $, for the different spins. 
+Note that we also have an extra minus sign in the beginning 
+because we need to commute $ \psi ( x_1) $ past $ \overline{\psi } ( x_2)  $, 
+since we need to move the $ b_{\vec{k} _ 1 } $ past the $ b^\dagger $ 
+operator nested in $ \overline{ \psi } ( x_2 ) $. 
+
+The next mission is to commute the $ b $ operators 
+past the $ b ^ \dagger $ operators.  We do this 
+by looking at anti commutation relations. 
+We have that 
+\begin{align*}
+b_{\vec{k} _  1 } ^ m b _{ \vec{k} _ 2 } ^ n b _{ \vec{p} } ^{ s \dagger } b _{ \vec{q} } ^{ r \dagger  } \ket{ 0 } 
+&=  \left( \delta_{ mr } \delta _{ n s} \delta ( \vec{k} _ 2 - \vec{p} ) \delta (\vec{k} _1  - \vec{q} ) 
+- \delta _{ nr  } \delta _{ ms  } \delta \left( \vec{k} _ 1 - \vec{p}  \right)  \delta ( \vec{k} _2  - \vec{p} ) \right) \ket{ 0 }   \\
+\end{align*}
+When we integrate over the delta functions, 
+we have that the above expression 
+
+\begin{align*}
+= \frac{ - 1 }{2 \sqrt{ E_{ p }  E_{ q }  }  } ( \left[ \overline{ \psi } ( x_1 ) \cdot  u ^ r ( \vec{q} )  \right] &  
+\left[  \overline{ \psi } ( x_2 ) \cdot  u ^ s ( \vec{p} )  \right]  e ^{  - p \cdot  x_2 - i q \cdot  x_1 } \\
+												    &  - \left[  \overline{\psi } ( x_1 ) \cdot  u ^ s ( \vec{p} )  \right]  \left[  \overline{ \psi } ( x_2 ) \cdot  u ^ r ( \vec{q} )  \right]  e ^{  -i p \cdot  x_1  - i q \cdot  x_2 } ) \ket{ 0 } 
+\end{align*}
+Now, we contract this with $ \bra { f } $. We'll go slow 
+and just do one term first. For the first term 
+in our expression, we get, writing out $ \bra{ f} $ explicitly, 
+the term 
+\[
+\bra{ 0 } b _{ \vec{q} ' }^{ s ' } b _{ \vec{p}' } ^{ s ' } 
+\left[  \overline{ \psi } ( x_1 ) \cdot  u ^ r ( \vec{q} )  \right]  \left[  \overline{ \psi } ( x_2 ) \cdot  u ^ s ( \vec{p} )  \right] \ket{ 0 } 
+\] Now, ignoring $ c $ operators again, we bring out the $ b ^\dagger $  operators 
+which come from $ \overline{ \psi } $ in the expansion. 
+This gives us a string of $ b $ operators on the left, which leaves
+the above expression as 
+\[
+= \frac{ e ^{ i p ' \cdot  x_1 + i q ' \cdot  x_2  } }{ 2 \sqrt{ E_{ p'  }  E_{ q ' } } } \left[ 
+\overline{ u }^{ s ' } ( \vec{p} ' ) \cdot  u ^{ r } ( \vec{q} ) \right]  \left[  
+\overline{ u } ^{ r ' } \left(  \vec{q} '  \right)  \cdot  u ^{ s } ( \vec{p} ' ) \right]  
+- \frac{ e ^{ i p ' \cdot  x_2 + i q' \cdot  x_1 } }{2 \sqrt{ E_{ p' }  E_{ q' }  }  } \left[  
+\overline{ u } ^{ r'} \left(  \vec{q} '  \right)  \cdot  u ^ r \left( \vec{q}  \right)  \right]  
+\left[  \overline{ u } ^{ s ' } \left( \vec{p} '  \right)  \cdot  u ^ s ( \vec{p} )  \right]  
+\] By symmetry, the second term in our expression 
+also gives the same contribution. 
+Including the relativistic normalisation 
+from the $ \ket{ i } $ and $ \ket { f} $ states, 
+our final expression for our scattering amplitude is, 
+including the expression for our contraction $ \contraction{}{\phi ( x_1 ) }{}{\phi ( x_2) } \phi ( x_1 ) \phi ( x_2 ) $, 
+is given by 
+\begin{align*}
+( - i \lambda ) ^ 2 \int \frac{ d ^ 4 x_1 d ^ 4 x_2 d ^ 4 k }{ ( 2 \pi )^{ 4 }  } \frac{i e ^{ ik \cdot  
+\left(  x_1 - x_2  \right)  } }{ k ^ 2 - \mu ^ 2 + i \epsilon } & ( \left[  
+\overline{ u } ^{ s ' } ( \vec{p} ' ) \cdot  u ^ s ( \vec{p} ) \right]  \left[  \overline{ u } ^{ r'  } \left( \vec{q}'   \right) \cdot  
+u ^{ r } ( \vec{q} ) \right]  e ^{ i x_1 \cdot  ( q' - q ) + i x_2 \cdot  ( p' - p )  } \\
+						& - \left[  \overline{ u } ^{ s' } \left( \vec{p}'  \right)  
+						\cdot  u ^{ r } ( \vec{q} ) \right]  
+						\left[  \overline{ u } ^{ r'} ( \vec{q} ) 
+						\cdot  u ^ s ( \vec{p} ) \right]  
+						e ^{ i x_1 \cdot  \left( p ' - q  \right)   + i x_2\cdot  
+						\left( q' - p  \right)  } ) 
+\end{align*} 
+After integrating over $ x_1 $ and $ x_2 $, we can extract our 
+scattering amplitude from the 
+formula $ \bra{ f } S - 1 \ket{ i }  = i \mathcal{ M } ( 2 \pi )^{ 4 }  \delta ^ 4 ( p +  q - p ' - q' ) $. 
+Once we do this, our scattering amplitude is given by 
+\[
+\mathcal{ M } = \left( i \lambda  \right) ^ 2 
+\left( \frac{\left[  \overline{ u } ^{ s ' } ( \vec{p} ' ) \cdot  u ^{ s } ( \vec{p}  )  \right]  \left[ 
+\overline{  u } ^{ r' } ( \vec{q} ' ) \cdot  u ^{ r } ( \vec{q} ) \right]  }{ \left( p ' - p  \right)  ^ 2 
+- \mu ^ 2 +  i \epsilon }  - \frac{ \left[  \overline{ u } ^{ s ' } \left( \vec{p} '  \right) \cdot  u ^ r ( \vec{q} )  \right] \left[ 
+\overline{ u } ^{ r' } ( \vec{q} ' ) \cdot  u^ s ( \vec{p} ) \right]   }{ ( q' - p ) ^ 2  - \mu ^ 2 + i \epsilon } \right) 
+\] 
+
 \subsection{Momentum Space Feynman Rules for Fermion Amplitudes} 
-Let's review the diagrams for 
-the Yukawa interaction, but with the view of
-Fermionic quantisation. 
+We are now in a good position to guess the 
+Feynman rules for fermions. We can use our intuition to guess these rules.
+Compared to momentum space Feynman rules for scalar fields, 
+we need to attach a spin as well as a momentum 
+for each incoming line. The factor we attach is a spinor. 
+
+\begin{itemize} 
+\item From our amplitude above, it's clear that incoming particle with momentum $ \vec{p}$
+	and a given spin $ s $ contributes a 
+$ u ^ s ( \vec{p} ) $ spinor to our amplitude. Similarly, outgoing particles 
+contribute with spin $ r $ and momentum $ \vec{p} $ contribute a $ \overline{ u }^ r ( \vec{p} )  $
+spinor factor. 
+
+\begin{equation*}
+\feynmandiagram[small, horizontal  = a to b ]{ 
+	a[particle = \( u ^ r ( p ) \) ] -- [fermion, momentum = \( p \) ] b, 
+b --[fermion] c, 
+b -- [scalar] d
+}; \quad \quad  
+\feynmandiagram[small, horizontal  = b to d]{ 
+a -- [fermion] b, 
+c -- [scalar] b, 
+b -- [fermion, momentum = \( p \) ] d [particle = \( \overline{ u } ^ r(\vec{p} )  \) ], 
+}; 
+\end{equation*}
+\item This is flipped when we consider anti-fermions. For an incoming particle, 
+	we associate the opposite frequency 
+	spinor $ \overline{ v } $ and for outgoing particles 
+	we associate the spinor $ v $. For anti-fermions
+of momentum $ p $ and spin $ r $, we associate the spinor 
+$ \overline{v} ^ r ( \vec{p} ) $ for ingoing particles. For outgoing 
+particles, we associate the spinor $ v ^ r ( \vec{p} ) $. 
+\begin{equation*}
+	\feynmandiagram[small, horizontal = a to b ]{
+		a[particle = \( \overline{v } ^ r ( p ) \) ] -- [anti fermion, momentum = \( p \) ]b, 
+		b -- [anti fermion] c, 
+		b -- [scalar] d,
+	}; \quad \quad 
+\feynmandiagram[small, horizontal  = b to c]{
+	a  -- [anti fermion] b, 
+	b -- [anti fermion, momentum  = \( p \) ] c [particle = \( v ^ r ( \vec{p} ) \) ] ,
+	c -- [scalar] b, 
+}; 
+\end{equation*}
+\item For vertices in our Feynman diagram, we attach a factor $ \left( - i \lambda  \right)  $ 
+\item For each internal line, for scalars, we attach our standard 
+propagator 
+\begin{equation*}
+\feynmandiagram[small, horizontal  = a to b ]{
+	a -- [scalar, momentum = \( \vec{p} \) ] b, 
+}; = \frac{i }{ p ^ 2  - \mu ^ 2  + i \epsilon }, \quad \quad  
+\feynmandiagram[small, horizontal = a to b ]{ 
+	a -- [fermion, momentum = \( \vec{p} \) ] b, 
+};  = \frac{ i \left( \slashed{p} + m ^ 2   \right)  }{ p ^ 2 - m ^ 2 + i \epsilon }
+\end{equation*}	
+Importantly, we have that fermion lines 
+need to move consistently throughout the diagram. 
+This reflects fermion number conservation.
+\item Since we're attaching spinors, which are vectors, 
+	to the external legs in the diagram, we need a sensible 
+	way to turn these into a number which represents the probability. 
+	This is simple, all we do is contract the spinors which 
+	join at a vertex. 
+\item As before, we need momentum conservation at each vertex. 
+Propagators with undetermined momenta require an 
+integral over their momentum. 
+\item The difference with drawing diagrams 
+for fermions versus scalar particles, is 
+that we need to take into account fermion statistics when 
+we switch around legs in fermion diagrams. 
+\end{itemize} 
+
+\begin{example}{(Nucleon scattering Fermion diagrams)} 
+At first order, our possible diagrams 
+for nucleon to nucleon scattering are given 
+below. 
+\begin{figure}[htpb]
+	\centering
+	\input{nucleon-feynman.pdf_tex}
+	\caption{The Feynman diagram associated with nucleon to nucleon scattering. 
+	Notice that we have Fermi-Dirac statistics, so our switching of momentum 
+leads to a minus sign picked up in the amplitude. }%
+	\label{fig:}
+\end{figure}
+We read of the associated amplitude from this Feynman diagram 
+to get 
+\[
+	\mathcal{ M } = ( - i \lambda ) ^ 2 \left( 
+	\frac{\left[  \overline{ u } ^{ s' } ( \vec{p} ' ) \cdot  u ^ s ( \vec{p} )  \right] \left[ 
+\overline{ u } ^{ r' } \left( \vec{q} '  \right)  \cdot  u ^ r (\vec{q} ) \right]  }{ \left( p - p '  \right)  ^ 2 - \mu ^ 2 } 
+ - \frac{ \left[  \overline{ u } ^{ s' } \left( \vec{p} ' \right)  \cdot  u ^ r ( \vec{q} )  \right] \left[ 
+		 \overline{ u } ^{ r' } ( \vec{q} ') \cdot  u^{ s } ( \vec{p} )  \right]  }{  \left( p - q'  \right)  ^ 2 
+ - \mu ^ 2 }\right)  
+	\] 
+	Let's justify this 
+	picture and the terms in it. In the first diagram, 
+	we have two fermions for the top vertex - one going in and 
+	one going out with momenta $ \vec{p} $ and $ \vec{p} ' $ 
+	and these are contracted together. 
+	In addition, we have on the bottom vertex 
+	momenta $ \vec{q} $ and  $ \vec{q} ' $, and 
+	we contract the spinors associated with these in a similar fashion. 
+\end{example}
+
+\begin{example}{(Fermionic loops contribute a minus sign)} 
+It doesn't matter so much for scalar fields, 
+but we need to remember minus signs when dealing with diagrams.
+Fermionic loops contribute a minus sign 
+to our overall amplitude. We 
+can see this in the following fermionic loop
+\begin{equation*}
+	\feynmandiagram[small]{ 
+		a -- [scalar] b, 
+		b -- [fermion, half left] c -- [fermion, half left] b, 
+		c -- [scalar] d,
+	}; 
+\end{equation*}
+Let's label the left vertex $ x $ and the right vertex $ y $. 
+Our arrow pointing from $ x $ to $ y $ represents 
+the contraction between $ \phi ( x)  $ and  $ \overline{ \phi } ( y ) $. 
+The arrow pointing in the other direction represents 
+a contraction from $ \phi ( y ) $ and $ \overline{ \phi } ( x) $. 
+However, Wick's theorem gives us that our interaction term (without 
+the contractions between $ \phi $ term s) is proportional to 
+
+\begin{equation*}
+	\wick{\c1   \psi ^ * _ \alpha ( x) \c 2 \psi _ \alpha ( x) \c 2 \psi ^ * _ \beta ( y ) \c 1 \psi \beta  ( y ) } 
+\end{equation*}
+\end{example} 
 We have the following diagrams.   
 The important thing 
 is that operators need to remain the same order, unless 
@@ -1219,13 +1608,55 @@ in other words
 This interaction looks like the below (diagram here) 
 this contributes $ ( - i \lambda ) ( \gamma ^ 5 )_{ \alpha \beta } $. 
 
-Question: how do we deal with spin and $ | \mathcal{ M } | ^ 2 $, 
-in the cross section calculation? 
-In most experiments $ \ket{ i } $ spin states are random 
+\begin{example}{(Nucleon to Meson Decay)}
+Now we study the amplitudes for the 
+problem $ \psi \overline{ \psi } \to \phi \phi $. 
+The key thing about this problem is to think about 
+the statistics of the outgoing mesons. Since they're
+Bosons, we don't get the minus sign from 
+switching the legs like last time. 
+We assign the momenta as shown in the figure. 
+\end{example}
+\subsection{Cross-Sections and Mod-squared expressions}
+We want to calculate amplitudes and mod-squared 
+expressions like $ | \mathcal{ M } | ^ 2 $ in this 
+formalisation with fermions? We know 
+how to do this in the case with scalar fields (
+our scattering amplitude will depend on the ingoing and 
+outgoing momenta), 
+but we've yet do discuss how to do this when we've 
+added different options for spin and so on. 
+It turns out, probably for consistency purposes, is  
+that the way people do this is to also 
+formulate our scattering amplitude so that it also 
+depends \textbf{just on initial and final momenta, and 
+not spin}. The way we remove the dependence on spin 
+is by averaging over the spins in the initial states, 
+and summing over the spins in the final states. 
+For example, if we consider the case of $ \psi \psi \to \psi \psi $ 
+decay, we need to initialise a choice of spins $ r, s, s' , r' $ for each initial and final fermion
+state. 
+\begin{align*}
+	\ket{ i }  &= \sqrt{ 4 E_{ \vec{q} } E _{ \vec{p} }  }  
+	b_{ \vec{p} } ^{ r \dagger } b _{ \vec{q} } ^{ s \dagger } \ket{ 0 } \\
+	\ket{ f } &=  \sqrt{ 4 E_{ \vec{q} ' } E _{\vec{p} ' } }  
+	b_{ \vec{p} ' } ^{ s ' \dagger } b _{\vec{q} ' } ^{ r ' \dagger } \ket{ 0 } 
+\end{align*}
+Thus, we need find a scattering amplitude that's a function 
+of the momenta $ p , q , p ' $ and $ q ' $ but not the spins? 
+
+In most experiments, and in the formalisation that follows, we make the big assumption that 
+the spin states of incoming particles $ \ket{ i } $ are randomly 
+distributed. Then, because the incoming spin states are random 
 and so we average over them. For example, for 
 $ \psi \psi $, it would be $ \frac{1}{4 } \sum_{ r , s = 1 } ^ 2 $, 
-Also spins in $ \ket{ f } $, aren't observed - they're summed over. 
-Specifically 
+since we average over all the possible pairs of 
+$ \left( r, s   \right)  $ with the assumption 
+that the probability of each pair is$ \frac{1}{4 }$ . 
+
+Another reason we do this is that 
+typically the spin states of the final state can't 
+be measured, so we sum over these. 
 \[
  \mathcal{ M } = B - A , \text{ in } \psi \psi \to \psi \psi 
 \] where $ B , A $ are the different terms. 
@@ -1287,3 +1718,609 @@ Adter a spin sum, a closed fermion line in the $| \mathcal{ M } | ^ 2 $ diagram
 is given by a trace over $ \gamma $ matrices, with appropriate $\gamma ^ 5 $ ' s
 etc in vertices at the correct posiition in the trace. trace follows 
 fermion arrows backwards. 
+
+IN nucleon to nucleon scattering, 
+we have that 
+\[
+ | \mathcal{ M } | ^ 2 = \frac{| \lambda | ^ 2 }{ 4 } \left\{  
+ \frac{\tr \slashed{q}\slashed{q}' \tr \left( \slashed{p} \slashed{p'} \right) }{t ^ 2 } + 
+ \frac{ \tr \left( \slashed{q}' \slashed{p} tr\left( \slashed{p}' \slashed{q}  \right)  \right) }{u^ 2 }
+  - \frac{2 R  \tr \left( \slashed{p} \slashed{p}' \slashed{q} \slashed{q}' \right) }{ ut }\right\} 
+\] 
+Using trace techniques from sheet three we can show that 
+\[
+ | \mathcal{ M } | ^ 2 = \frac{ | \lambda | ^ 4 }{4 } \left[ 
+ \frac{ 4 q \cdot  q ' 4 p \cdot  p ' }{ t ^ 2 } + \frac{ 4 q ' \cdot  p 4 p ' \cdot  q }{ u ^ 2 }
+   - \frac{8}{ut } ( p \cdot  q ' p ' \cdot  q + p \cdot  p ' q \cdot  q ' - p \cdot  q p' \cdot  q ' )\right] 
+\] It's customary to 
+express this in terms of $ s, t $ and $ u$. 
+We have that, in the  $ m , \mu \to 0 $  limit, 
+we get that 
+\begin{align*}
+	s & = ( p + q ) ^ 2  = ( p' + q ' ) ^ 2 \implies p \cdot  q  = p ' \cdot  q'  = \frac{s}{2 } \\
+	t &=  ( p - p' ) ^ 2  = ( q - q ' ) ^ 2 \implies p \cdot  p ' = q \cdot  q ' =  - \frac{t}{2 }  \\
+	u &=  ( p - q ' ) ^ 2  = ( q - p ' ) ^ 2 \implies p \cdot  q '  = q \cdot  p ' = - \frac{u}{2 }  
+\end{align*}
+This implies that 
+\[
+	| \mathcal{ M } | ^ 2  = | \lambda | ^ 4 \left\{  1 + 1  - \frac{1}{2 ut } \left( u ^ 2 + t ^ 2 - s ^ 2 \right)  \right\} 
+\] Adding all the Mandelstam variables, so that 
+\[
+ s + t + u  = \sum m _ i ^ 2  \to 0 , \quad u = - s - t, \implies | \mathcal{ M } | ^ 2  = 3 | \lambda | ^  4
+\] Going into the centre of mass frame, 
+we have that 
+\[
+	\frac{ d \sigma  }{ dt } = \frac{ | \mathcal{ M } | ^ 2 }{ 16 \pi \lambda ( s, 0 , 0 ) }. \quad 
+	\frac{dt }{ d \cos \theta } | _{ \text{ COM } }  = 2  |\vec{p} | | \vec{p} ' |  = \frac{ s}{2}
+\] Writing out our solid angle $ \Omega$, we have that 
+$ d \Omega= d \left( \cos \theta  \right)  d \phi $. 
+This means that 
+\[
+ \frac{ d \sigma }{ d \Omega } |_{ \text{ COM } }  = \frac{ | \mathcal{ M } | ^ 2 }{ 64 \pi ^ 2 s }
+\] We have identical particles in the final state. 
+We integrate our final state angles over the hemisphere. 
+This implies that our cross section is 
+\[
+ \sigma = \frac{ 3 | \lambda | ^ 4 }{ 32 \pi s }
+\] This implies that $ \sigma > 0 $ even with negative quantum 
+interference. This means that $ [ \lambda ] =0 $, which means 
+that $ [ \sigma ]  = [ s ] ^{ - 1} = - 2$, which is an area. 
+This means that everything is correct.
+
+\section{Quantum Electrodynamics}
+In this section, we'll first look at the 
+reason why $ A ^ \mu $ has four components, 
+but physically we have only two distinct polarisation states 
+for a photon. 
+In electromagnetism, our Lagrangian is given by 
+\[
+ \mathcal{ L } = - \frac{1}{4 } F_{ \mu \nu } F ^{ \mu \nu }, \text{ where } F_{ \mu \nu }  = \partial  _ \mu A _ \nu - \partial  _ \nu A _ \mu 
+\]  is the field strength tensor. As we shown 
+in general relativity, this Lagrangian is 
+motivated by the fact that it's 
+pretty much the only thing we can write down 
+in four dimensional space time, given a 
+two form $ F $. It comes 
+from the action 
+\[
+ S = \int F \wedge  F 
+\]  
+Our Euler Lagrange equations read 
+\[
+	\partial  _ \mu \left( \frac{\partial  \mathcal{ L } }{\partial  ( \partial  _ \mu A _ \nu )  }   \right) =0  = \partial  _ \mu F ^{ \mu \nu } 
+\] These are Maxwell's equations in vacua. 
+This can be written in terms of our fields as 
+\begin{align*}
+	\vec{E} &=  - \nabla \phi  - \dot{ A }   \\ 
+	\vec{B} &= \nabla \times A 
+\end{align*}
+Our sign convention is such that 
+$ \nabla  = \left( \partial  _ x , \partial  _ y , \partial  _ z  \right) $, 
+and $ A ^ \mu = \left( \phi , \vec{A} \right) $. 
+From our definitions, we have that $ \vec{E} = \left( F_{ 01}, F _{ 02 },  F_{ 03} \right) 
+ = \left(  - F ^{ 01 } , -  F^{ 02 } , - F ^{ 0 3}  \right)  $. 
+ This equality comes from the fact that $ F _{ 0 i} = \partial  _ 0 A _ i - \partial  _ i A _ 0   $. 
+ In addition, we also have that 
+ for $ \vec{B} = \left( B _ 1 , B_2, B_3  \right)  $ gives 
+ for example, $B _ 3 = \partial  _ 1 A ^ 2  - \partial  _ 2 A ^1 $. 
+ Hence, 
+ \[
+	 F _{ \mu \nu  }  = \begin{pmatrix}  0 & E _ 1 & E_2 & E_3 \\ 
+		 - E _  1 & 0 & - B _ 3 & B _ 2 \\ - E_ 2 & B _ 3 & 0 & - B _ 1 \\
+		 - E _ 3 & - B _ 2 & B _ 1 & 0 
+ \end{pmatrix}
+ \]  
+ Our field strength tensor satisfies the Bianchi identity, where 
+ \[
+  \partial  _ \lambda F _{ \mu \nu } + \partial  _ \mu F _{ \nu \lambda } + \partial  _ \nu F _{ \lambda \mu }  =0 
+ \]  When we set $ \lambda = 3 , \mu = 1, \nu = 1 $, 
+ we have the equation $ \nabla \cdot  \vec{B} = 0 $. 
+ Similarly, we have that for $ \lambda = 0 $, $\mu = i , \nu  =j $  
+ then for $ i \neq j $, we get that
+  \[
+  \dot{ B } =  - \nabla \times \vec{E} 
+ \] Also, 
+ \[
+  \partial  _ \mu F ^{ \mu \nu }  = 0\implies \nabla \cdot  \vec{E} = 0 , \quad \vec{E} = \nabla \times \vec{B}
+ \]
+ The massless vector field $A_ \mu  $ satisfies 
+ 4 real degrees for freedom, $\mu = 0 , 1 , 2 , 3 $, but a photon $ \gamma $ 
+ only has 2 polarisation states. 
+ Note that $ A _ 0 $ is not dynamical - there is no kinetic term in $ \mathcal{ L }$. This means that in particular, our conjugate momentum $ \pi ^ 0  =0 $,
+ and solving for the equations of motion we have that 
+ \[
+	 \frac{\partial  \mathcal{ L } }{\partial  A^ 0 }    =0  \neq \text{an 
+	 explicit function of } t
+ \] This means we can also sub-out $ A ^ 0 $ in favour of 
+ the other degrees of freedom. 
+ Given $A _ i ( \vec{x}, t ) $ and $ \dot{ A } _ i ( \vec{x}, t_0)   $, 
+ we have that $A_0 $ is fully determined. 
+ The constraint that $\nabla \cdot  \vec{E} = 0 $ implies that 
+ \[
+  \nabla ^ 2 A _ 0 + \nabla \cdot  \vec{A} = 0 
+ \] This has solution 
+ \[
+	 A_0 ( \vec{x}, t_0 )  = \int d ^ 3 x ' \frac{ \nabla \cdot  \vec{A} ( \vec{x} ' , t_0 )  }{4 \pi | \vec{x} ' - \vec{x} | }
+ \] where we have that 
+ \[
+	 \nabla ^ 2 \left( \frac{1}{| \vec{X} - \vec{x} ' |} \right)  = - 4 \pi \delta ^ 3 ( \vec{x} - \vec{x}' ) 
+ \]
+ In addition there is a large symmetry group 
+ \[
+	 A_ \mu ( x ) \to A_ \mu ( x) + \partial  _ \mu \lambda ( x) 
+ \] where $ \lambda ( x) $ is some function such that 
+ $ \lim _{ | \vec{x} | \to \infty} \lambda ( x ) \to 0 $. 
+It's easy to show that $F _{ \mu \nu } $ is invariant under this transformation. 
+This is a new kind of symmetry, viewed as a redundancy in the description. 
+Observe that 
+\[
+ \eta_{ \mu \nu } \partial  _\rho F ^{ \rho \nu }  = 0 \implies \left[  
+ \eta _{ \mu \nu } \partial  _ \rho \partial  ^ \rho  - \partial  _ \mu p_ \nu  \right]  A^ \nu  =0 
+\] This operator, $ O _{ \mu \nu  } $  
+is not invertible since it annihilates any function 
+of the form $ \partial  ^ \nu \lambda ( x) $. 
+There's no way to uniquely determine the evolution of $A_ \mu $ 
+given $ A _ i , \dot{ A } _ i  $ at $t_0 $. We can't
+distinguish between $A_ \mu $ and $A _ \mu + \partial  _ \mu \lambda $ 
+which we identify as the same physical state. 
+Below we have a diagram of gauge orbits in configuration space.
+We choose one representation from each gauge orbit by cutting
+ a slice. All states in on the orbit 
+ are related to by a gauge transformation and so are physically equivalent. 
+It doesn't matter which representative 
+we choose from each, since they're all 
+physically equivalent.
+There are many possibilities, some of which make 
+certain calculations easier.
+Let's go through some examples of gauges. 
+\begin{itemize}
+	\item The Lorentz gauge $ \partial  _ \mu A ^ \mu = 0 $. 
+		We can always pick a representative that 
+		satisfies this. 
+		Start with a field $ A _ \mu ' $ such that $\partial _ \mu A ^{' \mu }  = f ( x) $. 
+		Then we choose $A _ \mu  = A _ \mu ' + \partial  _ \mu \lambda ( x) $ where 
+		$ \partial  _ \mu \partial  ^ \mu \lambda ( x)  = - f ( x ) $, 
+		which we can always solve. 
+		This condition doesn't pick a unique representative 
+		from the orbit, because we can make a further transformation 
+		with $ \partial  _ \mu \partial  ^ \mu \lambda ( x) $ 
+		which has non trivial solutions. The advantage 
+		of this is that the gauge condition is Lorentz invariant. 
+        \item The coulomb Gauge or radiation gauge. 
+		Here we set $\nabla \cdot  A = 0 $, 
+		which exists by an argument similar to the Lorentz gauge. 
+		This means that $ A_0  = 0 $. The advantage 
+		is that it's easy to see physical degrees of freedom. 
+		We have three comonents of $\vec{A} $ satisfying a physical constraint, 
+		leaving behind 2 physical degrees of freedom which are our polarisation states. 
+\end{itemize}
+
+\subsection{Quantisation of the Electromagnetic Field} 
+We can quantise the field 
+ay first looking at the conjugate momenta. 
+\begin{align*}
+	\pi ^ 0 &=  \frac{\partial  \mathcal{ L } }{\partial  \dot { A } }   =0  \\
+	\pi ^ i &=  \frac{\partial  \mathcal{ L } }{\partial  \dot{ A } _ i }   = 
+	 - \dot{ A} ^ i + \partial  ^ i A ^ 0  = F ^{ i 0 }  = E ^ i 
+\end{align*}
+Now, when we 
+put this into the Hamiltonian, we find that our expression is 
+\[
+	\mathcal{ H }  = \int  d^ 3 x \left( \pi ^ i \dot{ A } _ i - \mathcal{ L }  \right)  
+	= \int d ^ 3 x \frac{1}{2 } \left( | \vec{E} | ^ 2 + | \vec{B} | ^ 2  \right)   - A _ 0 \left( \nabla 
+	\cdot  E \right)  
+\]  now, the element $ A _ 0 $ acts as a Lagrange multiplier, which imposes 
+the equation $ \nabla \cdot  \vec{E} = 0 $ (by the Euler Lagrange equations). 
+Let's recall the classical dynamics interpretation of this 
+To review this interpretation, check out David Tong's
+notes on Classical Dynamics. 
+Our form of the Hamiltonian above is 
+reminiscent of the Lagrangian of a system 
+with constraints given by $ f ^ i ( \vec{x} ^ a )   = 0 $. 
+The Lagrangian looks like 
+\[
+	\mathcal{ L }  '  = \mathcal{ L } + \lambda_b f ^ b ( \vec{x} ^ a ) 
+\]  Now, we identify $  A_ 0 $ with the Lagrange 
+multiplier here, and view $ \nabla  \cdot  E  =0 $  as the constraint. 
+Now that it's a constraint of a system, we can treat $ \vec{A} $ just as 
+the physical degrees of freedom. 
+
+\subsubsection{Coulomb Gauge}
+In the Coulomb gauge, we're working with 
+the condition that $ \nabla \cdot  \vec{A} =  0 $. 
+From our discussion earlier, we 
+learnt that we could substitute $ A ^ 0 $ in 
+favour of  $ \vec{A} $ via the formula 
+\[
+	A ^ 0 (\vec{x} ) = \int d ^ 3 x' \frac{\nabla  \cdot \left(\frac{\partial  A }{ \partial  t } \left( \vec{x}  \right)    \right)  }{ 4 \pi | \vec{x} - \vec{x} ' | }
+\] However, when we commute our time derivative 
+operator with $ \nabla $, we simply get that 
+the integrand is 0. Hence, we have that $ A ^ 0  = 0 $. 
+Now, from our equation of motion, $ \partial  _ \mu F ^{ \mu \nu }  =0 $, 
+we have that 
+\begin{align*}
+	\partial  _ \mu \left( \partial  ^ \nu A ^ \mu  - \partial  ^  \mu A ^ \nu  \right) &=  0  \\
+	\partial  _ \mu \partial  ^ \nu A ^ \mu  - \partial  _ \mu \partial  ^ \mu A ^ \nu &=  0  \\ 
+	\partial  ^ \nu \left( \dot{ A } ^ 0  - \nabla \cdot  A  \right)  - \partial  _ \mu \partial  ^ \mu A ^ \nu &=  0  \\ 
+	\partial  _ \mu \partial  ^ \mu A^ \nu  &=  0  
+\end{align*}
+In the last line, we used the Coulomb gauge where $ \nabla \cdot  \vec{A} = 0 $ 
+and also the fact that $ A ^ 0 $ was a constant. 
+
+\subsubsection{Lorentz Gauge} 
+We'll now work in the Lorentz gauge. 
+The Lorentz gauge is what we get when we 
+impose the condition $ \partial _ \mu A ^ \mu  = 0 $, 
+which is different from the Coulomb gauge 
+because this is a divergence in space-time.
+
+This implies that the Maxwell's equations which we started with $ \partial  _ \mu F ^{ \mu \nu }  =0 $, 
+becomes the relation 
+\[
+ \partial  _ \mu \partial ^ \mu A ^ \nu  =0 
+\] We can view this from a 
+different perspective, and construct a 
+different Lagrangian where the Lorentz gauge 
+is imposed from the equations of motion. 
+To do this, we modify the Lagrangian and 
+add an extra term, so that it becomes 
+\[
+	\mathcal{ L }  =  - \frac{1}{4 } F _{ \mu \nu } F ^{ \mu \nu }  - \frac{1}{2 } \left( \partial  
+	_ \mu A ^ \mu \right)  ^ 2 
+\] Note that this Lagrangian is no longer gauge invariant
+under the gauge transformation of the field $ A ^ \mu \to A ^ \mu + \partial  ^ \mu \chi $. 
+But, the upshot of 
+writing our Lagrangian in this form
+is that we get 
+\[
+	\partial  _ \mu F ^{ \mu \nu } + \partial  ^ \nu \left( \partial  _ \mu 
+	A ^ \mu \right)   = 0 \iff \partial  _ \mu \partial  ^ \mu A ^ \nu  =0 
+\] which is the condition we imposed before. 
+We will now work with this new Lagrangian, 
+only imposing $\partial  _ \mu A ^ \mu  =0 $ later, 
+at the operator level. 
+In general, we could've written a Lagrangian 
+\[
+	\mathcal{ L } =   - \frac{1}{4 } F _{ \mu \nu } F ^{ \mu \nu }  - \frac{1}{2 \alpha } \left( 
+	\partial  _ \mu A ^ \mu \right)  ^ 2 
+\] where this gives rise to a continuum 
+of different theories. $ \alpha = 1 $ is called 
+the Feynman gauge, and $ \alpha \to 0 $ is 
+called the Landau gauge. 
+For illustration purposes, we'll look at the Feynman gauge. 
+Now, for $ \alpha =1 $, we have no gauge symmetry. 
+But now, both $ A _ 0 $ and the variables $ \vec{A} $ are dynamical. 
+We have that 
+\[
+	\pi ^ 0 = \frac{\partial  \mathcal{ L } }{\partial  \dot{ A } _ 0  }   =  - \partial  _ \mu A ^ \mu 
+\]  and we also have that 
+\[
+	\partial  ^ i = \frac{\partial  \mathcal{ L } }{\partial  \dot { A} _ i }   = - \dot { A } ^ i + 
+	\partial  ^ i A ^ 0 
+\] We impose the commutation 
+relations 
+\[
+	\left[  A _ \mu ( \vec{x} ) , A _ \nu ( \vec{y} )  \right]   = 0 
+	= \left[  \pi _ \mu ( \vec{x} ) , \pi _ \nu ( \vec{y} )  \right]  
+\] As well as a non-trivial commutation relation 
+\[
+	\left[  A _ \mu ( \vec{x} ) , \pi _ \nu ( \vec{y} )  \right]   = i \delta ^ 3 ( \vec{x} - \vec{y} ) 
+	\eta _{ \mu \nu } 
+\] We now expand our field $ A _ \mu ( \vec{x} ) $ in terms 
+of this. 
+\[
+	A _ \mu ( \vec{x} )  = \int \frac{ d ^ 3 p }{ ( 2 \pi )^{ 3 }  \sqrt{2  | \vec{p} | }  } 
+	\sum _{ \lambda = 0 } ^ 3 \left(  \epsilon _\mu ^ \lambda ( \vec{p} ) a _{ \vec{p} } ^ \lambda 
+	e ^{ i \vec{p} \cdot  \vec{x} } + \epsilon _ \mu ^{ \lambda * } (\vec{p} ) a_{\vec{p} } ^{ \lambda \dagger } 
+e ^{ - i \vec{p} \cdot  \vec{x} } \right) 
+\] where $ \epsilon _ \mu ^{ \lambda = 0 , 1, 2, 3 } $ are four polairsation vectors. 
+Similarly, we have that for our conjugate momentum 
+\[
+ \pi ^ \mu  = \int \frac{ d ^ 3 p  | \vec{p} | }{ ( 2 \pi )^{ 3 } \sqrt{ 2 } }  i 
+ \sum _{ \lambda = 0 } ^ 3 \left( \epsilon ^{ \mu \lambda  }  ( \vec{p} ) a _{ \vec{p}  }^ \lambda 
+ e ^{ i \vec{p} \cdot  \vec{l} } -  a _{ \vec{p} } ^{ \lambda * } e ^{ - i \vec{p} \cdot  \vec{x} } 
+ \left( \epsilon^{ \mu * } ( \vec{p} )  \right)  ^ \lambda \right)  
+\] In this formalisation 
+we pick $\epsilon ^ 0 _ \mu $ to be timelike, and $\epsilon _ \mu ^ i $ to be timelike. 
+We choose normalisation $\epsilon ^ \lambda  = \epsilon ^{ * \lambda }  = \eta ^{ \lambda \lambda ' } $ 
+We choose $ \epsilon ^ 1 _ \mu $ and $\epsilon ^ 2 _ \mu $ to be transverse, 
+in other words we have $ \epsilon ^ 1 \cdot  p = \epsilon ^ 2 \cdot  p = 0  $, 
+and $\epsilon ^ 3 _ \mu $ to be our longitudinal polarisation. For
+example, we take $ \gamma $ to be travelling in an $x ^ 3 $ direction. 
+We set 
+\[
+	p ^  \mu  = | \vec{p} | \begin{pmatrix}   1 \\ 0 \\ 0 \\ 1  \end{pmatrix}  , \epsilon ^{ 0 \mu }  = 
+	\begin{pmatrix}  1 \\ 0 \\ 0 \\ 0  \end{pmatrix}  , \epsilon ^{ 1 \mu }  = 
+	\begin{pmatrix}  0 \\ 1 \\ 0 \\ 0  \end{pmatrix}  , \epsilon ^{ 2  \mu }  = \begin{pmatrix}  
+0 \\0 \\ 1 \\ 0  \end{pmatrix}, \epsilon ^{ 3 \mu } = \begin{pmatrix}  0 \\0 \\ 0 \\ 1  \end{pmatrix} 
+\] 
+
+The relations above are equivalent to 
+the creation operators with 
+\[
+ \left[  a _{ \vec{p}' } ^ \lambda , a _{ \vec{q} } ^ \lambda  \right]   =0 =
+ \left[  a _{ \vec{p} } ^{ \lambda \dagger } , a _{ \vec{q} } ^{ \lambda ' \dagger }   \right]  
+\] However, our non zero commutation relation is given by the following 
+\[
+ \left[  a_{\vec{p} } ^\lambda , a _{ \vec{q} } ^{ \lambda \dagger }  \right]   = 
+ - \eta ^{ \lambda \lambda ' } \left( 2 \pi  \right) ^ 3 \delta ^ 3 ( \vec{p} - \vec{q} ) 
+\] We're in a bit of trouble here since we have 
+an minus sign in the commutation relation here! This is
+okay for $ \lambda, \lambda '  = 1, 2, 3 $ due to 
+the fact that the Minkowski metric is negative 
+in these indices, 
+but is unusual for time-like photons, as we will see now.  
+We have that $ a _{\vec{p} } ^{ \lambda } \ket{ 0 }  =0  $ as usual. 
+Now, as usual we have $ \ket{ \vec{p}, \lambda }  = a_{\vec{p} }^{ \lambda \dagger } \ket{ 0 } $
+is fine for $\lambda = 1, 2, 3 $ but actually, we have that 
+\[
+	\bra{ \vec{p}, \lambda = 0 }\ket{ \vec{q}, \lambda = 0 }  = 
+	\bra{ 0 } a_{\vec{p} } ^ 0 a _{\vec{q} } ^{ 0 \dagger } \ket{ 0 }  = - ( 2 \pi )^{ 3 } 
+	\delta ^ 3 \left( \vec{p} -  \vec{q} \right) 
+\] This is a negative norm state.!
+A Hilbert space with a negative norm state is problematic, but the 
+constraint equation comes to the rescue - so far we've yet 
+to impose the equation $ \partial  _ \mu A ^ \mu  = 0$, 
+so we expect this to restrict our Hilbert space and resolve this problem. 
+We'll try to 
+resolve the problem by trying out new definitions of what 
+physical states actually could be. Working in 
+the Heisenberg picture, we have that 
+\begin{enumerate}
+	\item $ \partial  _ \mu A ^ \mu  = 0 $ which doesn't work since $\pi ^ 0  = -\partial _ \mu A ^ \mu $ 
+		so commutation relations couldn't be obeyed.
+	\item Impose conditions on Hilbert space. We split the 
+		state $\ket{ \phi } $. $ \partial  _ \mu A ^ \mu \ket{ \psi } $ 
+		is too strong of a condition. 
+		We split the integral up into two parts in the Heisenberg picture, into 
+		a part that annihilates our vacuum state $ \ket{ 0 }  $ and 
+		a part that doesn't. 
+		We set
+		 \begin{align*}
+			 A^ +  _ \mu ( x )  &=  \int \frac{ d^ 3 p }{ \left( 2 \pi  \right)  ^ 3 \sqrt{ 2 | \vec{p} | } }  \sum_{ \lambda = 0 } ^ 3 \epsilon _{ \mu } ^{ \lambda } a _{ \vec{p} } ^ \lambda e ^{  - i p \cdot  x }\\ 
+			 A ^ - _ \mu ( x) &=  \int \frac{ d ^ 3 p }{ \left(  2 \pi  \right)  ^ 3 \sqrt{ 2 | \vec{p} | }  } \epsilon_{ \mu } ^{ \lambda * } a _{ \vec{p} } ^{ \lambda \dagger } e ^{ i p \cdot  x  } 
+		 \end{align*}
+		 Notice that in this formalisation, we have that $ A ^ + _ \mu \ket{ 0 }  =0 $, 
+		but unfortunately we have that $ \partial  ^ \mu A ^ - _ \mu \ket{ 0 }  \neq 0 $, 
+		so we can conclude that this is not the right way to classify physical states, 
+		since our vacuum state isn't even a physical state itself.
+	\item The correct way to do this is to classify the physical states
+		as states which satisfy the condition 
+		\[
+			\partial ^ \mu A _ \mu ^ + ( x) \ket{ \psi }  = 0
+		\] This is the 'correct way' to  deliver the 
+		condition that $ \partial _ \mu A ^ \mu = 0  $ 
+		in the Lorentz gauge. We have that 
+		for physical states $ \ket{ \psi } $ and 
+		$ \ket{ \psi ' } $, we have that  $ \bra{ \psi ' }\partial  _ \mu A ^ \mu \ket{ \psi }  = 0$. 
+		In addition, we have that $ \ket{ 0 } $ is also counted 
+		as a physical state, so we don't have the 
+		same problems which we encountered above. 
+		Now, by linearity, we have that the linear span 
+		of physical stated constitute a Hilbert space 
+		themselves, which we denote as $ \mathcal{ H } _{ \text{phys } } $.
+		So, this makes sense. 
+\end{enumerate}
+Since our operators $ a^ \lambda_{ \vec{p} } $  and 
+$ a ^{ \lambda \dagger } _{ \vec{p} } $mutually commute, 
+we can decompose the Fock space (the Hilbert space which is 
+generated by applying the operators $ a^{ \lambda \dagger }$ to 
+the vacuum state $ \ket{ 0 } $) into the direct sum of two states. 
+We decompose the state 
+\[
+ \ket{ \psi } = \ket{ \psi _ T } \ket{ \phi } 
+\] where $ \ket{ \psi _ T } $ is the subspace of states generated 
+by applying the creation operators $ a ^{ 1, 2 \dagger } _{  \vec{p}}  $ to 
+$ \ket{ 0 } $, and $ \ket{ \phi } $ is the 
+space of states generated by applying $ a ^{ 0 , 3\dagger  } $ to $ \ket{ 0 } $. 
+The states in the $ \ket{ \psi _ T } $ part represent transverse 
+polarised states, and in the $ \ket{ \phi } $  represent longitudinal 
+polarised states. 
+Taking $ p = ( 1, 0 , 0 , 1) $, we have that the operator 
+takes the form 
+\begin{align*}
+	\partial  ^ \mu A _ \mu ^ \dagger &=  \partial  ^ \mu \int 
+	\frac{d ^ 3 p }{ ( 2 \pi )^{ 3 }  } \frac{1}{\sqrt{ 2 |\vec{p} | }  } 
+	\left( \sum_{ \lambda = 0 } ^ 3 \epsilon _ \mu ^ r a_{\vec{p} } ^ r  \right)  
+	e ^{ - i p _ \mu x ^ \mu } \\ 
+	&=  \int \frac{d ^ 3 p  }{ ( 2 \pi )^{ 3 }  } \frac{1}{\sqrt{ 2 | \vec{p} | }  } 
+	\sum _{ \lambda = 0 } ^ 3 \epsilon _ \mu ^ r a_{\vec{p} } ^ r \left(  - i p ^ \mu  \right) 
+	e ^{ - i p _ \nu x ^ \nu } 
+\end{align*}
+This, when we operate on it with $ \ket{ \psi } $, gives us the 
+condition $ \left( a _{ \vec{k} } ^ 3 - a _{ \vec{k} } ^ 0  \right)  \ket{ \phi }  =0  $. 
+This is significant because it means that 
+whenever a state contains a time-like photon 
+of momentum $ \vec{p}$, generated by $ a _{ \vec{p} } ^{ 0 \dagger}$, then by the condition above 
+(which is called the Gupta-Blauer condition), we have 
+that the state necessarily contains a longitudinal 
+photon, which is generated by $ a_{ \vec{p} } ^{ 3 \dagger } $. 
+
+This is an important observation - it tells us 
+that in the state $ \ket{ \phi } $, our 
+Hilbert space has a basis $ \ket{ \phi _ n } $ which 
+denotes the number of pairs of a time-like 
+photon and a longitudinal photon. 
+Thus, we have that 
+\[
+ \ket{ \phi } = \sum_{ n = 0 } ^\infty c _ n \ket{ \phi _ n } 
+\] The Gupta-Blauer condition gives us 
+that the states obey an orthogonality relation
+\[
+ \bra{ \phi_ m }\ket{ \phi _ n }  = \delta_{ m 0   } \delta _{ n  0}
+\] So states with transverse and longitudinal photon pairs 
+have zero norm. This is problematic, but we 
+can bunch physical states into the equivalence class if they 
+differ by just transverse and longitudinal pairs, and 
+this solves the problem. 
+
+\subsection{Timelike $ \gamma $ pairs continued}
+What's the main point of this section?
+Why do we care about photon pairs? 
+It seems to me that this whole section is just about being consistent 
+with gauge choice. 
+We have asserted the condition 
+\[
+ \left( a _{ \vec{k} } ^ 3 - a_{\vec{k} } ^ 0  \right)  \ket{ \phi }  = 0
+\] which implies the normalisation 
+condition $ \bra{ \phi _ m }\ket{ \phi _ n }  = \delta _{ m_0 } \delta _{ n 0 }$. 
+If we set $ \ket{ \phi _ 1 }  = a _{ \vec{p} _ 1 }^{ 0 \dagger } a _{ \vec{p} _ 2 } ^{ 3 \dagger } 
+\ket{ 0 } $, and $ \ket{ \phi _ 1 ' }  = a_{ \vec{p} _ 3 } ^{ 0 \dagger } a_{ \vec{p} _ 4 } ^{ 
+3 \dagger}  \ket{ 0 }  $. 
+If we contract these two things 
+together, we have that 
+\begin{align*}
+\bra{ \phi _ 1 ' }\ket{ \phi _ 1 } &=  \bra{ 0 }a _{ \vec{p}_ 4 } ^{ 3 } a _{ \vec{p} _ 3 } ^ 0 \ket{ \phi _ 1 }  \\
+				   &=  \bra{ 0 }a_{\vec{p} _ 4 } ^{ 3 } a _{ \vec{p} _ 3 } ^ 3 a_{ \vec{p}_ 1 }^{ 0 \dagger } a_{\vec{p}_ 2 } ^{ 3 \dagger } \ket{0 }   
+\end{align*}
+
+Now, I'm not sure how to prove this 
+but the convention above asserts that this thing must be zero. 
+This is because we have the condition that these states 
+obey $ \bra{ \phi _ n }\ket{ \phi _ m }  = \delta _{ 0n } \delta_{ 0m }$, 
+and since we're setting $ m, n   =1 $ in the above, the above should 
+be zero. 
+
+\subsubsection{$ \gamma $ Feynman propagator}
+Here we'll go through the computation of 
+the Feynman propagator, this time starting from 
+the expansion of the field $ A _ \mu ( x) $. 
+If we want to compute a propagator bewteen two points 
+given by 
+\[
+	\bra{ 0 }T  A_ \mu ( x ) A _ \nu ( y ) \ket{ 0 }  = 
+	\int \frac{d ^  4 p }{ ( 2 \pi )^{ 4 }  } \frac{ -  i }{ p ^ 2 + i \epsilon} 
+	\left[  \eta _{ \mu \nu } + ( \alpha - 1 ) \frac{p _ \mu p _ \nu }{ p ^ 2  } \right]  
+	e ^{ - i p \cdot  ( x - y ) }
+\] for the general $ \alpha $ gauge. 
+The propagator takes the simple form $ \sim  - \frac{\eta _{ \mu \nu } }{ p ^ 2 + i \epsilon } $ 
+in the Feynman gauge when we take $ \alpha = 1 $. This is also straightforward to prove on its 
+own. 
+
+\subsection{Interactions} 
+If we want to explore interactions in the theory, 
+we set 
+\[
+ \mathcal{ L }  = - \frac{1}{4 } F _{ \mu \nu } F ^{ \mu \nu }  - e j ^ \mu A _ \mu 
+\] $ e $ here is some dimensionless coupling constant, 
+which we call the gauge coupling. In addition, $ j ^ \mu $ 
+is some current which has some symmetry. 
+
+\begin{claim}{Interaction currents of this form are conserved.}
+	We show that $ j ^ \mu $ as actually conserved. 
+	That is, $ \partial  _ \mu j ^ \mu  = 0 $. 
+	\begin{proof}
+	For the Euler-Lagrange equations, we have that 
+\[
+ \partial  _ \mu F ^{ \mu \nu }  = e j ^ \nu \implies \partial  _ \nu \partial  _ \mu F ^{ \mu \nu } 
+  = e \partial  _ \nu j ^ \nu  = 0 
+\] We have a zero since the expression 
+on the left hand side contains $ F^{ \mu \nu } $, 
+which is anti-symmetric in $ \mu \nu $ and the 
+symmetric partial derivative terms $ \partial  _ \mu \partial  _ \nu $. 
+This means that $ j ^ \nu $ is a conserved current. 	
+	\end{proof}
+\end{claim}
+\subsubsection{Coupling to Fermions} 
+Our Dirac part of our Lagrangian 
+is now given by 
+\[
+	\mathcal{ L } _ D = \overline{ \psi } \left( i \slashed{\partial} -m  \right) \psi 
+\] which has an internal symmetry from taking $ \psi \to e ^{ - i \alpha } \psi $, 
+and $ \overline{\psi } \to e ^{ i \alpha } \overline{ \psi } $, 
+where $ \alpha \in \mathbb{  R} $. This internal symmetry 
+induces a Noether current $ j ^ \mu  = \overline{\psi } \gamma ^ \mu \psi $.
+
+This gives us our full Lagrangian for quantum electrodynamics. 
+\[
+ \mathcal{ L } _{ \text{QED } }  = -\frac{1}{4 } F_{ \mu \nu } F ^{ \mu \nu } + 
+ \overline{ \psi } \left( i \slashed{\partial} -m  \right)\psi  - e \overline{ \psi } 
+ _ \alpha \gamma _{ \alpha \beta } ^{' \mu } A _ \mu \psi _ \beta 
+\] This yields the Feynman rule factor $ i e \left( \gamma ^ \mu  \right)  _{ \alpha \beta } $. 
+to cancel unphysical polarisations, it 
+was crucial we had gauge invariance. Do we still 
+have it? We rewrite our Lagrangian as 
+\[
+ \mathcal{ L } _{ \text{QED} }  = - \frac{1}{4 } F _{ \mu \nu } F ^{ \mu \nu } 
+ + \overline{ \psi } \left( i \slashed{D} - m   \right)  \psi 
+\] where we define $ D_ \mu \psi  = \partial  _ \mu \psi + i e A _ \mu \psi  $ 
+is called the covariant derivative.
+Under the gauge transformation, $ \mathcal{ L } _{ \text{ QED } } $ 
+is gauge invariant under 
+\begin{align*}
+	A _ \mu ( x ) & \to A _ \mu ( x ) + \partial  _ \mu \lambda ( x ) \\
+	\psi ( x) & \to e ^{  - i e \lambda ( x) } \psi ( x) 
+\end{align*}
+To prove this we have that 
+\begin{align*}
+	D_ \mu \psi  = ( \partial  _ \mu + i e A _ \mu ) \psi & \to \partial  _ \mu ( 
+	e^{ - i  e \lambda } \psi ) \\
+	&=  e ^{ - i e \lambda }  D_ \mu \psi  \\
+\end{align*}
+You can check this gauge invariance yourself!
+
+We will show that observables don't depend on timelike 
+$ \gamma $ pairs, ie $ \ket{ \phi _ n } $. 
+If we compute the Hamiltonian, we 
+get that 
+\[
+	H = \int \frac{d ^ 3p  }{( 2 \pi )^{ 3 }  } | \vec{p} | \left( 
+	\sum _{ i =  1 } ^ 3 a_{ \vec{p} } ^{ i \dagger } a_{\vec{p} } ^ i - a _{ \vec{p} } ^{ 0 \dagger } 
+a _{ \vec{p} } ^ 0 \right)  
+\] But our Gupta condition implies 
+\[
+ \bra{ \psi }a_{\vec{p} } ^{ 3 \dagger } a_{\vec{p} } ^ 3 \ket{ \psi }  = 
+ \bra{ \psi }a_{\vec{p} } ^{ 0 \dagger } a _{ \vec{p} } ^ 0 \ket{ \psi } 
+\]
+Gauge invariance of $\mathcal{ L } _{ \text{QED} } $ implies that 
+we remove the unphysical degrees of freedom in $ A _ \mu $, 
+leaving two polarisation states. $ e $ has the interpretation of 
+electric charge, since EL are $ \partial  _ \mu F ^{ \mu \nu}  = e j ^ \nu $. 
+In electromagnetism, we interpret $ j ^ 0 $ as charge density. 
+But as a quantum operstor, we set 
+\[
+ Q =  - e \int d ^ 3 x \overline{ \psi } \gamma ^ 0 \psi =  - e 
+ \int \frac{ d ^ 3 p }{ \left( 2 \pi  \right)  ^ 3 } \sum_{ s } \left( 
+ b _{ \vec{p} } ^{ s \dagger } b _{ \vec{p} } ^ s - c _{\vec{p} } ^{ s\dagger } c _{\vec{p} } ^ s \right) 
+\] Which is $ - e \left( \text{number of particles }  - \text{number of anti particles} \right) $ 
+
+\subsubsection{Coupling to Scalars} 
+We'll now describe $ \pi \pm \gamma $ interactions.
+For a real scalar, there is no suitable current and we can;t couple it to electromagentism. 
+For a complex scalar $ \phi $, we use a covariant derivative 
+\[
+D _ \mu \phi = \partial  _ \mu \phi  - i e q A _ \mu \phi  
+\] where the $ q $ is just a real number, which was $ - 1$ for an electron. 
+This is the charge for a scalar particle. 
+Under a gauge transformation, we have that $ \phi ( x) $ 
+transforms as 
+\[
+	\phi ( x) \to e ^{ i e q \lambda ( x) } \phi ( x) 
+\] So that $ D_ \mu \phi \to e ^{ i e q \lambda }  D_ \mu \phi $.
+$ q $ is chage of $ \phi $ in units of $ e $. 
+Our total coupled Lagrangian is 
+therefore 
+\[
+	\mathcal{ L } _{ \text{ QED } }  = -\frac{1}{4 } F_{ \mu \nu }F ^{ \mu \nu }  +  \left( D _ \mu \phi \right)  ^{ \dagger } D ^ \mu \phi - m ^ 2 \phi ^ \dagger \phi  
+\]
+This means our interaction lagrangian reads 
+\[
+\mathcal{ L } _{ \phi \text{ QED} } ^{ int } = i e q
+\left( \phi ^ \dagger \partial ^ \mu \phi  - \left( \partial  ^ \mu \phi  \right)  ^ \dagger 
+\phi \right) A_ \mu + e ^ 2 q ^ 2 A _ \mu A ^ \mu \phi ^ \dagger \phi   
+\]  Our first Feynman rules 
+are (insert pictures here)
+We can then derive a Noether current 
+\[
+	j ^ \mu  = i  eq \left( \left(  D^ \mu \phi  \right)  ^ \dagger  - \phi ^ \dagger D ^ \mu \phi  \right)  
+\] is gauge invariant. 
+A good model for electromagentic EM interactions of $ \pi ^{ \pm } $  
+s and BSM with $ H ^{ \pm } $ etc. 
+To couple a U ( 1) guage field $A _ \mu $ to any number of fields, 
+$ \phi ^ a $ (fermions and or bosons), replace space-time derviatives with 
+covariant ones 
+\[
+ \partial  _ \mu \phi ^ a \to D _ \mu \phi ^ a  = 
+ \partial  _ \mu \phi ^ a  - ieq _ a A _ \mu \phi ^ a 
+\]
+

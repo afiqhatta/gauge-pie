@@ -691,15 +691,31 @@ We have that $ u , v \in ( - \infty  , \infty ) $,
 since $ t , x  $  are in the same range. 
 Now, the idea is to come up with a second coordinate transform which 
 takes infinity to a finite number. We can choose any function we 
-like which has an infinite range in an infinite domain. 
+like which has an infinite range in an finite domain. 
+The simplest and most obvious choice we 
+can make is to use the $ \tan $ function. 
 We can now map this to a finite range, 
 \[
  u = \tan \tilde{ u } , \quad v = \tan \tilde{ v }   
-\] with $ u , v  \in ( - \frac{ \pi }{ 2 } , \frac{\pi}{ 2 } ) $. 
+\] The upshot of this 
+is that now the 
+range of our variables $  \tilde{u }  $ , $ \tilde{ v }  $
+is now finite, with $ \tilde{u}   , \tilde{v;w}  \in ( - \frac{ \pi }{ 2 } , \frac{\pi}{ 2 } ) $. 
+With differentiation of one forms, we have that for the $ u $ 
+coordinate for example, that 
+\[
+ du = \sec ^2 \tilde{ u } d  \tilde{ u }  
+\] 
 In these coordinates, the metric is 
 \[
  ds ^  2 =  -\frac{1}{\cos ^ 2 \tilde{ u } \cos ^ 2 \tilde{ v}   } d \tilde{ u } d \tilde{ v }   
-\] Now we do a conformal map. 
+\] Our form for the metric now is promising, 
+because we have something of the form $ \Omega^ 2 du dv $, 
+which means we have cooked up something conformally equivalent to 
+our lightcone coordinates in the first place, but has 
+a finite range!
+Now we do a conformal map to get rid of this scaling factor 
+by simply multiplying it by the reciprocal. 
 Consider the metric 
 \[
  d \tilde{ s } ^ 2 = \cos ^ 2 \tilde{ u } \cos ^ 2 \tilde{v } ds ^ 2  = - d \tilde{ u } d \tilde{ v }      
@@ -710,16 +726,45 @@ We write this range to include the closure of the set (which acts as infinity)
 so that $ \tilde{ u } , \tilde{ v } \in [ - \frac{\pi}{2 } , + \frac{\pi}{2 } ]   $. 
 Adding the points $ \pm \frac{\pi}{ 2 } $ that used to be 
 $ \pm \infty$ is called conformal compactification.
-Now we draw the spacetime with 
-lightrays at $ 45 $ degrees, and time vertical.
 
-Insert penrose diagram here. 
+We'll now try to draw a pictorial 
+representation of this spacetime. 
+The rule of thumb in general relativity is that light-cone 
+coordinates should be drawn at $ 45 $ degrees. 
+We make no exception in Penrose diagrams, so we 
+draw the coordinates in a diamond shape in the range $ ( - \frac{\pi}{2 } , \frac{\pi}{2 } ) $. 
+In this set of coordinates, time is vertical. 
+\begin{figure}[h]
+	\centering
+	\input{penrose-2.pdf_tex}
+	\caption{A Penrose diagram of conformally compactified 
+	Minkowski spacetime in two dimensions}%
+	\label{fig:}
+\end{figure}
+
 This is the Penrose diagram. Don't
 trust distances on these diagrams, but trust the causal structure. 
+What's the form of a general geodesic in this space? 
+We derive the geodesic from the Lagrangian
+\[
+ \mathcal{ L }  = - \dot{ t } ^ 2 + \dot{ x } ^ 2  
+\] Then, we solve the geodesic equations 
+to get the timelike geodesics 
+\[
+	x ^ \mu ( \tau ) = \left(  K \tau + A , \pm \sqrt{ K ^ 2 - 1 }  \tau  + B \right) 
+\] Now, when we substitute this 
+into our new lightcone coordinates, 
+we find that all geodesics, in terms of the coordinates 
+$ ( \tilde{ u }, \tilde{ v  } )   $, tend to $ ( \frac{\pi}{2 } , \frac{\pi}{2 } )$
+if we go far enough into the future. Similarly, we get to 
+$ (  - \frac{\pi}{2 } , -\frac{\pi}{ 2 } ) $ if we 
+go far enough into the past.  
 
 We can draw various geodesics on this diagram, 
-in particular timelike geodesics (constant $ x $), 
-and spacelike geodesics (constant $  t$ ). 
+in particular timelike geodesics with constant $ x $, 
+and spacelike geodesics and with constant $  t$  
+(of course, there are other geodesics but these are the ones well draw in
+figure \ref{fig:p_2}. 
 These are geodesics in our \textbf{original } choice 
 of metric.
 
@@ -731,7 +776,16 @@ start and end at two points $ \peninf ^ 0  , [ - \frac{\pi}{2 }, + \frac{\pi}{2 
 $ [ + \frac{\pi}{2 } , - \frac{\pi}{ 2 } ] $. These are called spacelike 
 infinity. 
 
-All null curves start at $ \scri ^ - $ "scri-minus" and at $ \scri ^ + $ "scri-plus". 
+\begin{figure}[h]
+	\centering
+	\input{penrose-3.pdf_tex}
+	\caption{The Penrose diagram of two dimensional Minkowski 
+	space with some geodesics drawn on}
+	\label{fig:p_2}
+\end{figure}
+
+All null curves start at $ \scri ^ - $ "scri-minus" and end at $ \scri ^ + $ "scri-plus".
+These null curves would be represented by diagonal lines on the Penrose diagram. 
 These all called past and future null infinity.
 
 There are some things we can read off
@@ -740,37 +794,63 @@ basic things about the spacetime.
 For example, any two points on the spacetime 
 have a common future and a common past. 
 
+\subsubsection{4 dimensional Minkowski space} 
 Let's now do the same thing 
-for $ \mathbb{ R} ^{ 1, 3 } $. 
+for $ \mathbb{ R} ^{ 1, 3 } $.
+We follow the same routine - get a metric, 
+and wrangle it into a form which is finite so we 
+can start drawing diagrams. 
 We do something similar. 
 The metric is best written in 
 polar coordinates 
 \[
  ds ^ 2 = - dt ^ 2 + d r ^ 2 + r ^ 2 d \Omega^ 2 _ 2 
 \] We, as before, 
-do a change of coordinates so that 
+do a change of coordinates into light-cone 
+coordinates (but in $ t $ and $ r $ ) so that 
 \begin{align*}
 	u &=  t - r = \tan \tilde{ u }   \\
-	v &=  t + r  =  \tan \tilde{ v }   \\
+	v &=  t + r  =  \tan \tilde{ v } 
 \end{align*}
-
-In these coordinates, we get that 
+After switching to these light-cone coordinates, 
+we then do the same coordinate transform $ u  = \tan \tilde{ u } , 
+v  = \tan \tilde{ v }  $ to make our range finite. 
+We get that  
 \begin{align*}
 	ds ^ 2 &=  - d u dv + \frac{1}{4 } ( u - v ) ^ 2 d \Omega_ 2 ^ 2  \\
 	       &=  \frac{1}{4 \cos^ 2 \tilde{ u } \cos ^ 2 \tilde{ v }   } \left(  
 	       - 4 d \tilde{ u } d \tilde{ v } + \sin ^ 2 ( \tilde{ u } - \tilde{ v } ) d \Omega _ 2 ^ 2     \right)  \\
 \end{align*}
-
-This is still 4 dimensional, so we ignore the spherical part. 
-Unlike in Minkwoski space, we require that $ r \geq 0 $ which implies that 
+The only tricky thing to verify here is the prefactor in front of 
+our angular component of our metric. This can be
+done however by just expanding out the $ \sin $ term with double 
+angle formulae then dividing it. 
+Finally, we then do a conformal transformation by multiplying this 
+whole thing by $ \cos ^ 2 $
+This is still 4 dimensional, so to present 
+this in two dimensions something has to be removed, we ignore the spherical part. 
+Unlike in Minkwoski space, we also require that $ r \geq 0 $ which implies that 
 $ v \geq u $, which means that 
 \[
   - \frac{\pi}{2 } \leq \tilde{ u } \leq \tilde{ v } \leq \frac{\pi}{2 }   
-\] We hence drop the $ S ^ 2 $ and draw the Penrose diagram, 
-The left hand line on the diagram 
+\] We hence drop the $ S ^ 2 $ and draw the Penrose diagram which 
+appears to be sliced in two to reflect this condition. 
+
+Note that the left hand line on the diagram 
 is not a boundary of space time - it is 
 merely where $ \tilde{ u }  = \tilde{ v } \implies r = 0   $, 
-and $ S ^ 2$ shrinks to zero here.
+and $ S ^ 2$ shrinks to zero here. So, for a null geodesic 
+like the path of a photon, when it hits this 
+left hand boundary representing $ r = 0 $, it bounces back off 
+in the other direction to head to  $\mathscr{J} ^ + $. 
+
+\begin{figure}[h]
+	\centering
+	\input{penrose-5.pdf_tex}
+	\caption{The Penrose diagram of two dimensional Minkowski 
+	space with some geodesics drawn on}
+	\label{fig:p_2}
+\end{figure}
 
 \subsubsection{de Sitter} 
 In global coordinates, de Sitter space 
@@ -801,4 +881,1110 @@ No matter how long you wait, you cannot
 see the whole space, nor can you influence 
 the whole space. This is given by a diagonal line. 
 We can check that the static patch coordinates map to 
-the intersection of the event horizon and the particle horizon. 
+the intersection of the event horizon and the particle horizon.
+
+\pagebreak 
+\section{Coupling to matter} 
+In this section, we'll be looking at how 
+matter 'backreacts' with the metric. Matter itself 
+changes the dynamics of our physical system.
+
+We'll start simple and consider fields first. 
+With a field in space-time, like we do in quantum field theory, 
+we associate an action to the field. This action 
+as a kinetic part, and a potential. 
+We first consider the scalar field 
+\[
+	S = \int d ^ 4 x \left(  - \eta ^{ \mu \nu } \partial  _ \mu \phi \partial  _ \nu \eta 
+	+ V ( \phi ) \right)   
+\] We call this thing a matter 
+field because it dictates the dynamics of matter. 
+In this case we're in Minkowski space-time. 
+Now, the natural way to generalise this would be $ \eta $ with 
+our new metric $ g $ (which may depend on our position on the manifold now), 
+and also include our canonical measure $ \sqrt{ - g }  $ in the integrand. 
+In addition, to make sure we're dealing with manifestly tensorial 
+objects, we should change our partial derivatives 
+to covariant derivatives. 
+
+In the end, we get a form for the scalar field which 
+is 
+\[
+ S_{\text{scalar } }  = \int d ^4 x \, \sqrt{  - g }  
+ \left(  - g^{ \mu \nu } \nabla _ \mu \phi \nabla _ \nu \phi  + V ( \phi )  \right) 
+\]
+The fact that we're now not just considering 
+the Minkowski metric means that we can 
+include things in this matter field which might  
+depend on the metric. For example, we may decide 
+to include the effect of the Ricci scalar in our action. 
+
+
+
+\subsection{Energy Conservation} 
+In this section, we'll talk about 
+the subtleties of current, energy and 
+momentum conservation in curved space-time. 
+What we'll see is that while everything is fine 
+and dandy in flat space-time, there's something 
+that goes wrong when we try to construct conserved charges 
+that come from the covariantly conserved energy-momentum 
+tensor in curved space-time. Loosely speaking, 
+\[
+\nabla _ \mu T ^{ \mu \nu }  =0 \text{ does not imply a conserved }  P ^ \mu
+\] 
+In flat space, we have the familiar currents and 
+energy momentum tensor which obey 
+\[
+\partial _ \mu J ^ \mu  =0 , \quad \partial  _ \mu T ^{ \mu \nu }  = 0
+\] Now, our conserved current 
+could come from say, the symmetry of a phase rotation 
+in a complex scalar field (using Noether's theorem). 
+We already know that in quantum field theory 
+our energy momentum tensor comes from symmetries of 
+translating space-time.
+
+From these conservation 
+laws, we can extrapolate conserved charges. 
+These conserved objects are obtained by 
+integrating the first around some spatial region 
+which we call $ \Sigma $. $ \Sigma $ is like 
+some slice of space in space-time which 
+we usually take to be quite large. 
+\[
+Q ( \Sigma )  = \int _{ \Sigma } d ^ 3 x \, J ^ 0, \text{ and } P ^ \mu ( \Sigma )  = \int _{ \Sigma } d ^ 3 x T ^{ 0 \mu } 
+\] Now, what exactly are the objects $ Q $ and $ P $? 
+Well, we know that $ J ^ 0 $ is a number, so $ Q ( \Sigma ) $ must 
+be a number. Now, what is it a function of? Since we integrating out the spatial degrees of freedom 
+of $ J ^ 0 $, it's a function of time. Hence, we have that 
+\[
+Q ( \Sigma ) : \mathbb{ R} \to \mathbb{ C }, \text{ for any } \Sigma 
+\] where $ \Sigma $ is some spatial slice in flat space-time. 
+In addition, we have that $ P ^ \mu $ is also just a function 
+\begin{claim}
+Provided that now current flows out 
+of our space-time cylinder, the quantity $ Q ( \Sigma ) $ is conserved. 
+Specifically, we have that between two points in time, 
+say $ t_1 $ and $ t_2 $, we require that the 
+change in $ Q ( \Sigma ) $ between these two points remain 
+the same. 
+To understand conservation here, we need to bound this in a region 
+of space-time. What we do is that we smear 
+our spatial region across cylinder in space-time, then 
+assert that no current flows in or out of this cylinder.
+
+\begin{proof}
+	We first need to define the 
+	volume which we're integrating 
+	the conserved current over. 
+	In this case, we take a cylinder through space-time.
+
+	\begin{figure}[h]
+		\centering
+		\input{sp-cylinder.pdf_tex}
+		\caption{Here our volume in four space is just a cylinder.}
+		\label{fig:sp-spacetime}
+	\end{figure}
+	From our conservation law, we assert that $ \partial _\mu J ^ \mu = 0 $
+	here. This means that our integral over the whole volume is zero. 
+	Thus, 
+	\begin{align*}
+		 0 &=  \int d ^ 4 x \, \partial  _ \mu J ^ \mu   \\
+		 &=  \int _{ t _ 1  }^{ t_2 } dt \, \int_{ \Sigma } d ^ 3 x \, \partial  _ t 
+		 J ^ 0 + \int _ B d ^ 3 x \, \partial  _ i J ^ i \\
+		 &=  \int _{ t_1 } ^{ t_2 } dt \, \partial  _ t \left( 
+		 \int _{ \Sigma } d ^ 3 x J ^ 0  \right)  + \int _{ B } d ^ 3 x \partial  _ i J ^ i  \\
+		 &=  [Q ( \Sigma ) ]( t_2 ) - \left[  Q ( \Sigma )  \right]( t_1 ) 
+		  + \int_{ B } d ^ 3 x \partial  _ i J ^ i  
+	\end{align*}
+	We recognize the expression in brackets in the first term as 
+	the definition $ Q $. 
+	We denote $ B $ as the boundary of this space-time cylinder. 
+	Note that this boundary is time-like (although it's not entirely clear 
+	why this is important right now). 
+	Now, crucially, we impose the condition that on the boundary $ B $, 
+	we have that the current vanishes, so $ J ^ i  =0 $. 
+	This then enforces charge conservation.
+
+	We can play this same game with the conserved charge 
+	$ P ^ \mu( \Sigma )   = \int_{ \Sigma} d ^ 3 x T^{ 0 \mu }  $. 
+	We recognise that from the conservation law that 
+	$ \partial  _ \nu  T ^{ \nu \mu } = 0 $.
+	As before, just integrate over 4 space in the 
+	required region. 
+	\[
+	  0 &=  \int dt \int d ^ 3 x \partial  _ 0 T ^{ 0 \mu }  + \int _ B 
+	  d ^ 3 x \, \partial  _ i T ^{ i \mu } \\
+	    &=  P ^ \mu ( \Sigma ) ( t_2 ) - P ^ \mu ( \Sigma ) ( t_1 )  + 0  \\
+	\] Here, we imposed the condition that 
+	$ T ^{ i \mu } $ is zero on $ B $. This does the trick, and 
+	we have yet another conserved charge. 
+\end{proof}
+\end{claim}
+
+This was all well and good in flat space time,
+but we want to generalise this to 
+see how things work in curved spacetime. 
+We have that instead, our quantities of 
+interest obey covariant conservation laws. 
+\[
+\nabla _ \mu J ^ \mu  =0 , \quad \nabla _ \mu T ^{ \mu \nu }  =0 
+\] In this case, we 
+can safely say that the charge associated with 
+the conserved current $ J ^ \mu $ is conserved.
+This can be shown by recalling the divergence theorem 
+for curved space-time with $ n  = 4  $.  
+We have that 
+\[
+0  = \int_{ V } d ^ 4  x \sqrt{ - g }  \nabla _ \mu J ^ \mu  = \int _{ \partial  V } 
+d ^ 3  x \sqrt{  | \gamma | }  n _ \mu J ^ \mu 
+\] In this case, we take 
+our closed volume $ V $ to be the space-time enclosed in the
+cylinder with boundary 
+\[
+\partial  V  = \Sigma _ 1 \cup \Sigma _ 2 \cup B 
+\] We have to be a little bit more 
+careful here. In particular, 
+we need to define two different 
+surfaces $ \Sigma _ 1 $ and $ \Sigma _ 2 $ 
+since there's no canonical way to 
+map our these surfaces throughout time. 
+\begin{figure}[h]
+\centering
+\input{sp-cylinder-2.pdf_tex}
+\caption{We now deal with the case when we have curved space-time}%
+\label{fig:}
+\end{figure}
+Now, the trick here is to partition this boundary integral up 
+into the slices
+\[
+0  = \int _{ \Sigma_ 1 } d ^ 3 x \, \sqrt{ | \gamma | }  n _ \mu J ^ \mu + 
+\int _{ \Sigma_ 2 } d ^ 3 x \, \sqrt{ | \gamma | }  n_ \mu J ^ \mu + 
+\int _ B d ^ 3 x \, \sqrt{ | \gamma | }  n _ \mu J ^ \mu 
+\] Again, if we impose that on the boundary, we 
+have that $ J ^ \mu  = 0 $, then we recover 
+charge conservation.
+We then have 
+charge conservation 
+\[
+Q ( \Sigma _ 1) = Q ( \Sigma _ 2 ) 
+\] where $ Q $ is defined analogously as before, 
+where we have $ Q ( \Sigma )  = \int _{ \Sigma } d ^ 3 x \, \sqrt{ | \gamma | }  n _\mu J ^ \mu  $. 
+
+\subsubsection{A foray into conservation in Electromagnetism} 
+\begin{example}{(Charge conservation in electromagnetism)}
+Let's look at the case of conserved 
+quantities in electromagnetism. 
+The first thing we start with is the electromagnetic 
+tensor $ F $, which is a two-form. 
+If we want to create an action to integrate over this, 
+the most natural thing we can 
+do is to wedge product these two things together 
+to get a four form, which we can integrate in four dimensional 
+space.
+
+Our resulting action then looks like 
+\[
+S_{ \text{ top} }  =   - \frac{1}{2 } \int F \wedge F 
+\] How do we make sense 
+of this object in terms of physical fields which 
+we observe? In components, this is 
+\[
+\frac{1}{2 } \left( \frac{1}{4 }  \right)  
+\int F _{ \mu \nu} F_{ \alpha \beta } \,  dx^ \mu \wedge  dx ^ \nu \wedge  dx ^ \alpha \wedge  dx ^ \beta  
+\] Now, which terms in this expansion survive? 
+Since we're anti-symmetrising over all of the indices $ \mu, \nu , \alpha , \beta $ 
+this means that any terms in which $ F _{ \mu \nu } F _{ \alpha \beta } $ 
+contain common values like $ F _{ 01 } F _{ 0 1 } $ go to zero. 
+So, we have to consider terms that are like $ F _{ 01 } F _{ 23 } $ 
+and permutations of these. 
+It's not hard to convince yourself that, adding all of these permutations
+together cancels our prefactor of $ \frac{1}{8 } $ and we have that 
+\[
+S_{ \text{ top }  }  = \int F \wedge  F  = \int dx ^ 1 dx ^ 2 dx ^ 3 dx ^ 4 \vec{E} \cdot  \vec{B}
+\]
+Now, to incorporate this with what we know 
+about GR, we can try couple this 
+action with a metric by placing in the Hodge star. 
+This gives us something slightly different 
+\[
+S_{ \text{...} }  = \int F \wedge  \star F  
+\] We can also try to compute this object explicitly. 
+(We'll finish this another time)
+\end{example}
+
+Now, something goes wrong when we 
+try to compute the associated charge from 
+the covariant conservation law $ \nabla _ \mu T ^{ \mu \nu }  = 0$. 
+Integrating over 4-space, we have that 
+\[
+0 = \int _ V d ^ 4 x \, \nabla _ \mu T ^{ \mu \nu } 
+\] Now, is there a way to turn this integral 
+into a surface term which we can take to zero?
+For the divergence theorem, we could have written 
+$ \nabla _ \mu J ^ \mu $ as a total integral. 
+This is achieved by writing 
+\[
+\nabla _ \mu J ^ \mu  = \partial  _ \mu J ^ \mu + \Gamma^ \mu _{ \mu \rho } J ^ \rho 
+\] as a total integral. 
+Recall, this can be done 
+
+The same argument does not work 
+for $ T ^{ \mu \nu } $. Now we have 
+\[
+0 = \int _ V  d^ 4 x \, \nabla _ \mu T ^{ \mu \nu }  
+\] Now, we have a bit of an issue here. 
+There's a hanging index $ \nu $, so 
+we can't apply our usual divergence theorem. 
+In fact, there is no divergence theorem for this! 
+Instead, we have 
+\[
+\sqrt{ - g } \nabla _ \mu T ^{ \mu \nu }  =0 \iff 
+\partial  _ \mu \left( \sqrt{ - g }  T ^{ \mu \nu }  \right)   = 
+- \sqrt{ -g } \Gamma ^ \nu _{ \mu \rho } T ^{ \mu \rho }  
+\] This comes from two occurences of the Christoffel 
+symbols given by doing the covariant derivatives on $ T ^{ \mu \nu } $. This looks like a 
+driving force, which roughly speaking means 
+that $ T ^{ 0 \mu } $ is not  conserved. 
+This extra term can be viewed as 
+energy seeping into the gravitational field 
+itself, since matter backreacts with our field!
+
+Suppose our spacetime has a Killing vector $ K $. 
+Define 
+\[
+J _ T ^\mu  = K _ \nu T ^{ \mu \nu   } 
+\]  Now, this 
+quantity is conserved as well! So, 
+by the Killing equation and covariant 
+conservation, we have that 
+\[
+\nabla _ \mu J _ T ^ \mu  = \left( \nabla _ \mu K _ \nu  \right)  T ^{ \mu \nu } 
++ k _ \nu \nabla _ \mu T ^{ \mu \nu }  = 0 
+\] Now, we can repeat the same steps which we did before, 
+and define the conserved charge 
+\[
+Q _ T ( \Sigma ) = \int _{ \Sigma } d ^ 3 x \, \sqrt{ | \gamma | }  n_ \mu J ^ \mu _ T 
+\] We have multiple interpretations 
+of this. 
+If $ g _{ \mu \nu } k ^ \mu k ^ \nu < 0  $ in other words timelike, 
+this can be interpreted as energy. 
+What if there isn't a Killing vector 
+is space-time? 
+Can we make sense of the total energy which 
+is possessed by both by the matter field and the gravitational 
+field? 
+The short answer : no.  
+There is no diffeomorphism invariant local energy density 
+for the gravitational field. 
+This is statement we can prove! However, 
+we should stop here since these types of things 
+are unphysical as non-diffeomorphism 
+invariant things are unphysical.
+There is however, one statement we can make. 
+Precise statements can only be made asymptotically. 
+For example, $ \mathscr{J } ^ + $  in Minkowski space.
+This is called the Bondi energy. 
+We want conserved energy since it allows us to solve equations!
+
+\pagebreak 
+\section{When Gravity is weak} 
+We will solve the Einstein equations 
+perturbatively, working in what 
+we call 'almost inertial coordinates'.
+Almost inertial coordinates are coordinates which 
+look like Minkowski space, but adding a small term 
+$ h_{ \mu \nu }  $ on the end which we assume to be small
+\[
+g _{ \mu \nu } = \eta _{ \mu \nu } + h _{ \mu \nu } \text{ with } h _{ \mu \nu } \ll 1 
+\]
+Adding a small field onto Minkowski space 
+like this has an important interpretation  - 
+we're now thinking of gravity as a field $ h _{ \mu \nu } $ 
+that acts on the stage of Minkowski space. 
+In particular, 
+we think of gravity as a spin 2 field $ \eta_{ \mu \nu } $ 
+field $ h _{ \mu \nu } $ propagating in Minkowski 
+space. I won't go into the details of why $ h _{ \mu \nu }  $ 
+is thought of as a spin $ 2 $  field. 
+
+In particular, since we're considering Minkowski space as
+the main metric here, we will raise and lower indices 
+using $\eta _{ \mu \nu }  $ rather than $ g _{ \mu \nu } $. 
+For example, we have that when we apply the Minkowksi metric 
+twice to raise the indices on $ h _{ \mu \nu } $, we get 
+\[
+h ^{ \mu \nu }  = \eta ^{ \mu \rho } \eta ^{ \nu \sigma  } h _{ \rho \sigma } 
+\] 
+Just as in normal field theory, we would hope 
+that the field $ h _{ \mu \nu } $ would be invariant 
+under some transformations. In particular, we 
+impose the condition that the theory that is Lorentz invariant 
+under transformations $ x ^ \mu \to \Lambda \indices{^ \mu _ \nu } x ^ \nu  $, 
+and 
+\[
+h ^ \mu \nu  = \Lambda \indices{ ^ \mu _ \rho } \Lambda \indices{ ^ \nu _ \sigma } h^{ \rho \sigma }  ( \Lambda^{ -1  } x ) 
+\]  
+
+\subsection{Linearised theory} 
+We work to leading order on $ h _{ \mu \nu } $. 
+We have that the inverse metric is 
+given by perturbating by the negative, so we have that 
+\[
+g ^{ \mu \nu } = \eta ^{ \mu \nu }  - h ^{ \mu\nu } 
+\] We can find that this is indeed the 
+correct inverse. Just verify that $ g^{ \mu \rho  } g_{ \rho \nu }  = \delta \indices{ ^ \mu _ \nu }  $: 
+\begin{align*}
+g^{ \mu \rho } g_{ \rho \nu } &=  \left( \eta ^{ \mu \rho }  - h ^{ \mu \rho }  \right)  \left( 
+\eta _{ \rho \nu } + h _{ \rho \nu } \right)   \\ 
+			      &=  \eta ^{ \mu \rho } \eta _{ \rho \nu }  - h ^{ \mu \rho } \eta _{ \rho \nu } + h _{ \rho \nu } \eta ^{ \mu \rho } + O ( h ^ 2 )  \\
+			      &=  \delta \indices{ ^ \mu _ \nu }  - h \indices{ ^ \mu _ \nu } + h \indices{ ^ \mu _ \nu } + O ( h ^ 2 ) \\
+			      &=  \delta \indices{ ^ \mu _ \nu } + O ( h ^ 2)  
+\end{align*}
+Be aware that when we're saying 'inverse', we actually 
+mean 'inverse to first order in $ h $' in linearised theory.  
+From this, we can compute the Christoffel components
+as well, to first order in $ h$. 
+
+\begin{defn}{(Christoffel components in linearised theory)}
+\[ \Gamma ^ \sigma _{ \nu \rho } = \frac{1}{2 } \eta ^{ \sigma \lambda } \left( 
+\partial  _ \nu h _{ \lambda \rho } + \partial  _ \rho h _{ \nu \lambda }  - \partial  _ \lambda h _{ \nu \rho } \right)   \]
+\end{defn}
+We can calculate our Riemann 
+tensor as well in linearised theory.
+Schematically, we have that $ R \sim \partial  \Gamma - \partial  \Gamma + \Gamma \Gamma  - \Gamma \Gamma$ .
+Now, since we've shown in the above that $ \Gamma $ is 
+a $ h $ term, we know that $ \Gamma \Gamma \sim O ( h ^ 2 ) $, 
+so we can ignore these terms. 
+If we calculate just the derivative terms 
+in linearised theory, we then get 
+\begin{align*}
+R \indices{ ^ \sigma _{ \rho \mu \nu } }  &=  \partial  _ \mu \Gamma^ \sigma _{ \nu \rho } 
+ - \partial  _ \nu \Gamma ^ \sigma _{ \mu \rho } + \Gamma ^ \lambda _{ \nu \rho } \Gamma ^ \sigma _{ \mu \lambda } 
+ - \Gamma ^ \lambda _{ \mu \rho } \Gamma ^ \sigma _{ \nu \lambda } \\
+					  & \simeq \partial _ \mu \Gamma^\sigma_{ \nu \rho } 
+					   - \partial  _ \nu \Gamma ^ \sigma _{ \mu \rho } \\
+					  &=  \frac{1}{2 } \eta ^{ \sigma \lambda } \left( 
+					  \partial  _ \mu \partial  _ \sigma h _{ \nu \lambda } 
+				  - \partial _ \mu \partial _ \lambda 
+			  h _{ \nu \rho } - \partial  _ \nu 
+		  \partial  _ \rho h _{ \mu \lambda } + \partial  _ \nu 
+	  \partial  _ \lambda h _{ \mu \rho } \right)   
+\end{align*}
+When we contract our indices to get the Ricci tensor, 
+we get that 
+\begin{align*}
+R_{ \mu \nu }  &= \frac{1}{2} ( \partial  ^ \rho \partial  _ \mu h _{ \nu \rho } + \partial  ^ \rho \partial  _ \nu 
+h _{ \mu \rho }  - \Box h _{ \mu \nu } - \partial  _ \mu \partial _ \nu h ) \\
+R &=  \partial  ^ \mu \partial  ^ \nu h _{ \mu \nu }  - \Box h  
+\end{align*}
+where we've define the Laplacian operator 
+$ \Box = \partial  _ \mu \partial  ^ \mu $.
+Also, we have that  $ h = h \indices{_ \mu ^ \mu }   = \eta ^{ \mu \nu } h _{ \mu \nu } $. 
+Finally, we have that our Einstein-Tensor given by $ G _{ \mu \nu } = R_{ \mu \nu  }  -\frac{1}{2 } g_{ \mu \nu } R $. This can also be expanded linearly in terms of the above. 
+Just substitute in our expressions for $ R _{ \mu \nu } $ and $ R$ and 
+you'll find that 
+\[
+G _{ \mu \nu } = \frac{1}{2 } \left[  \partial  ^ \rho \partial  _ \mu h _{ \nu \rho } 
++ \partial  ^ \rho \partial  _ \nu h _{ \mu \rho }  - \box h _{ \mu \nu } 
+- \partial  _ \mu \partial  _ \nu h  - \left( \partial  ^ \rho 
+\partial  ^ \sigma h _{ \rho \sigma }  - \box h \right)  h _{ \mu \nu } \right]  
+\] Like the other expressions, we 
+find that the Einstein tensor is 
+a term in $ h $. Because the Einstein tensor obeys the 
+Bianchi identity 
+\[
+ \nabla ^ \mu G _{ \mu \nu } =  0
+\] since $ G _{ \mu \nu } $ is a term 
+proportional to $ h $ and its derivatives, we can 
+forget about the extra Christoffel symbol here. 
+This means we only need to include the first partial derivative, 
+and he that that $ G _{ \mu \nu }$ obeys the linearised Bianchi identity $ \partial  _ \mu G ^{ \mu \nu }  =0  $. 
+
+\subsubsection{The Fierz-Pauli Action}
+To look at symmetries, we can reformulate 
+the above in terms of action principles. 
+The Einstein equation $ G _{ \mu \nu }  = 8 \pi G T _{ \mu \nu } $ follows from 
+\begin{align*}
+	S_{ FP  } = \int d ^ 4 x \frac{1}{ 8 \pi G } \left[ 
+	 - \frac{1}{4 } \partial  _ \rho h _{ \mu \nu } \partial  ^ \rho h ^{ \mu \nu } + 
+ \frac{1}{2 } \partial  _ \rho h _{ \mu \nu } \partial  ^ \nu h ^{ \rho \mu } 
+ + \frac{1}{4 } \partial  _ \mu h \partial  ^ \mu h  - \frac{1}{2 } \partial  _ \nu h ^{ \mu \nu } \partial  _ \mu h \right]  
+ + h _{ \mu \nu } T ^{ \mu \nu } 
+\end{align*}
+This arises from $ S _{ EH } $ by expanding to order $ h ^ 2 $. 
+We can vary this action first without including the matter 
+term to get the vacuum equations. 
+Varying the action, we find that relabelling 
+indices and integrating by parts. Our variation is given 
+first by
+\begin{align*}
+	\delta S_{FP}  = \frac{1}{ 8 \pi G } \int d ^ 4 x \, 
+	[  - \frac{1}{2 } \partial  _ \rho h _{ \mu \nu } 
+		\partial  ^ \rho \delta h _{ \mu \nu }  & + \frac{1}{2 } \partial  _ \rho h _{ \mu \nu } \partial  ^ \nu \left( \delta h ^{ \rho \mu }  \right)  
+	+   \frac{1}{2 }  \partial  _ \rho \delta h _{ \mu \nu } \partial  ^ \nu h ^{ \rho \mu }+ \\ 
+	   & \frac{1}{2 } \partial  _ \mu \left( \delta h  \right)  \partial  ^ \mu h 
+ - \frac{1}{2 } \partial  _ \nu \delta h ^{ \mu \nu } \partial  _ \mu h - \frac{1}{2 } \partial  _ \nu h ^{ \mu \nu } \partial  _ \mu \delta h ] 
+\end{align*}
+Now, the trick here is to expand $ h $ to first order so that 
+$ h  = h ^{ \mu \nu } \eta _{ \mu \nu } $.
+Varying $ h $ gives $ \delta h  = \eta _{ \mu \nu } \delta h ^{ \mu \nu } $. 
+Relabelling the indices and integrating by parts 
+gives 
+\begin{align*}
+	\delta S _{ FP } = \frac{1}{ 8 \pi G } \int d ^ 4 x \, 
+	\frac{1}{2 } \left( \partial  ^ \rho \partial  _ \rho h _{ \mu \nu }  \right)
+	\delta h^{ \mu \nu } & + \frac{1}{2 } \partial  _ \nu 
+	h _{ \mu \rho } \partial  ^ \rho \left( \delta h ^{ \mu \nu }  \right) 
+	+ \frac{1}{2 } \partial  ^ \rho \left( \delta h ^{ \mu \nu }  \right) 
+	\partial  _ \nu h _{ \rho \mu } + \\ \frac{1}{2 } 
+	\partial  _ \rho \left( \delta h ^{ \mu \nu }   \right)  \eta _{ \nu \mu } 
+	\delta ^ \rho h - \frac{1}{2 } \partial  _ \nu \delta h^{ \mu \nu } \partial  _ \mu h - \frac{1}{2 } \partial  _ \rho h ^{ \sigma \rho } \partial  _ \sigma \delta h ^{ \mu \nu } \eta _{ \mu \nu } 
+\end{align*}
+After simplifying this even further, 
+we can factor out the Einstein tensor in 
+linearised theory from this action. 
+This is given by 
+\[
+	\delta S _{ FP }  = \frac{1}{8 \pi G } 
+	\int d^ 4 x \left[ \frac{1}{2 } \partial  _ \rho \partial  ^ \rho 
+	h _{ \mu \nu }  - \partial  ^ \rho \partial  _ \nu h _{ \rho \mu } 
+- \frac{1}{2 } \left( \partial  ^ \rho \partial  _ \rho h  \right)  \eta _{ \mu \nu } + \frac{1}{2 } \partial  _ \nu \partial  _ \mu h + \frac{1}{2 } \partial  _ \rho \partial  _ \sigma h ^{ \rho \sigma } \eta _{ \mu \nu }  \right]   
+\] We recognize this 
+however as the action 
+\[
+ \delta S_{ FP }  = \frac{1}{8 \pi G } \int d ^ 4 x \left[   - 
+ G _{ \mu \nu } \delta h ^{ \mu \nu } \right] 
+\] 
+
+\subsubsection{Gauge Symmetries}
+The action above has a lot of 
+nice symmetries we can work with, 
+in particular, gauge symmetries. 
+Much like in electrodynamics, we 
+can explore the kinds of transformations 
+on our manifold which leave this action 
+invariant. 
+
+One transformation we can do 
+is on the coordinates of the manifold. 
+Under an infitesimal diffeomorphism $ x ^ \mu \mapsto x ^ \mu + \xi ^ \mu ( x) $, 
+we induce a Lie derivative on the metric generated 
+by the vector field $ \xi $. 
+ \[
+	 \delta g _{ \mu \nu }  = \left( \mathcal{ L } _ \xi g  \right)  _{ \mu \nu } 
+	  = \nabla _ \mu \xi _ \xi + \nabla _ \nu \xi _ \mu 
+\] We view this as a gauge transformation of $ h _{ \mu \nu } $ 
+which, to leading order is 
+\[
+ h _{ \mu \nu } \to h _{ \mu \nu } + \partial  _ \mu \xi_ \nu + \partial  _ \nu \xi _ \mu 
+\] Note that we only have partial 
+derivatives here since we are assuming that 
+not only $ h $, but $ \xi $ is also small 
+and linear in $ h$. This means that 
+the terms $ \sim \Gamma \xi $ are order $ h ^ 2 $, 
+and we can ignore them. 
+
+We can check that $ R \indices{ \mu _{ \rho \nu \sigma } }  $ 
+and $ S _{ F P } $ are both invariant under gauge transformations. 
+The first thing we're going to do to make life 
+easy is to pick a gauge and use gauge symmetry. 
+The sensible thing to do is to pick a symmetry called the de Dander gauge. 
+This choice of gauge obeys 
+\[
+	\partial  ^ \mu h _{ \mu \nu }   -\frac{1}{2 } \partial _ \nu h = 0  
+\]  The interesting thing is that this is analogous to 
+the Lorentz gauge in electromagnetism. 
+This is analogous to the Lorentz gauge $ \partial  _ \mu A ^ \mu = 0 $ in the equations 
+of motion. 
+An aside, in the full non-linear theory, the generalisation 
+of the de-Donder gauge is something quite elegant! It's
+the condition that 
+\[
+ g ^{ \mu \nu } \Gamma ^ \rho _{ \mu \nu }  = 0
+\]  This is not  atensor eqaution. This is ok - this is a gauge 
+choice and this is coorddinate depenedent. We also 
+have four equations to solve  - and this recovers our linearised 
+gauge which we presented earlier. 
+
+In de-Donder gauge, the linearised Einstein equations become 
+\[
+ \box h _{ \mu \nu }  - \frac{1}{2 } h _{ \mu \nu } \box h  = - 16 \pi G T _{ \mu \nu } 
+\]
+Given this gauge, we're now in a nice position 
+to define a new object which we call 
+\[
+ \overline{ h } _{ \mu \nu }  = h _{ \mu \nu }  - \frac{1}{2 } \eta _{ \mu \nu } h  
+\] This is easy to invert.
+We have that $ \overline{ h }  = \eta _{ \mu \nu } \overline{ h } ^{ \mu \nu }  =  -h $. 
+And so, our inverse expressing $ h $ in terms of $ \overline{ h } $. 
+$  \overline{ h}  $ is easy to solve! Our equation 
+is just given by 
+\[
+ \box \overline{ h } _{ \mu \nu }  = - 16 \pi G T _{ \mu \nu }
+\] 
+
+\subsection{The Newtonian Limit} 
+Consider stationary matter with $ T _{ 0 0 }  = \rho ( \vec{x} )  $.
+This doesn't change in time. Thus, we can just write 
+the wave operator 
+\[
+ \box  =  - \partial  _ t ^ 2 + \nabla ^ 2 
+\] and we look for solutions with $ \frac{\partial  }{ \partial  t }  = 0 $. 
+Thus, the equation's 
+we're trying to solve just look like 
+\[
+	\nabla ^ 2 \overline{ h } _{00 }  = - 16 \pi G \rho ( \vec{x} ) , \text{ and } \nabla ^ 2 
+	\overline{ h } _{ 0i }  = \nabla ^ 2 \overline{ h } _{ ij }  = 0
+\]  One of 
+our familir solutions to this 
+is just the Newtonian gravitational potential! 
+These has the solution $ \overline{ h } _{0i }  = \overline{ h } _{ ij }  =0 $. 
+And, we have that $ \overline{ h } _{ 00  }  = - 4 \Phi $. 
+Where, we have that $ \Phi  $ is the Newtonian gravitational potential
+\[
+	\nabla ^ 2 \Phi   = 4 \pi G \rho ( \vec{x} ) 
+\] This looks a lot like Maxwell's. This is because 
+our extra $ \nu $  index enforces gauge symmetry. 
+What does this do at a classical level? 
+Gauge symmetry allows us to have evolution without ambiguity. 
+So we have that this thing gives $ h _{ 0 0  } =  -  2 \Phi  $, 
+and that $ h _{ ij }  = - 2 \Phi  \delta_{ij }  , h _{ 0i }  = 0$. 
+This means that 
+we have our solution for a metric 
+\[
+	ds ^ 2  = - ( 1 + 2 \Phi  ) dt ^ 2 + ( 1 - 2 \Phi  ) d \vec{x} ^ 2 
+\] This is the metric for a Newtonian gravitational 
+potential. 
+Now, suppose that our point mass $ M $ 
+has the gravitational potential, 
+\[
+ \Phi   =   - \frac{GM}{r } 
+\] The metric then agrees with the Taylor 
+expansion of the Schwarzchild metric! 
+By the way, there's 
+a famous factor of $ 2 $ buried in this. 
+We can argue in general grounds that 
+what sits beside $ \Phi  $ needs to be a 2 
+in fornt of $ d t ^ 2 $. But classically, 
+we have no information about what we can say in front of 
+$ d \vec{x} ^ 2 $. However, 
+the Einstein equations predict the 
+extra factor of  $  - 2 \Phi   $ in 
+front of $ d \vec{x} ^ 2 $, which 
+gives us the offset required to agree with experiment. 
+
+\subsection{Gravitational Waves}
+Gravitational waves are a big deal! 
+From our Einstein momentum tensor, 
+we have wave solutions in GR obeying the 
+equation 
+\[
+ \box \overline{ h } _{ \mu \nu }  = 0
+\] The solution is $ \overline{ h } _{ \mu \nu  }  = \Re \left( H _{ \mu \nu } e ^{ i \kappa _ \rho x ^ \rho }  \right)    $. 
+Our matrix $ H _{ \mu \nu } $ is complex, symmetric and tells us our polarisation matrix. 
+This object solves the wave equation providing 
+$ k _ \mu k ^ \mu  = 0$. 
+This tells us that gravitational waves travel at the speed of light. There's 
+one thing we missed here. To derive the above equation, we 
+had to make sure that we were in the 
+de Donder gauge! Thus, we have to 
+impose the condition that $ \partial  _ \mu \overline{ h  }^{ \mu \nu }  =0 $, 
+provided that $ k ^ \mu H_{ \mu \nu }  = 0 $ !
+In terms 
+of electromagnetism this gives us restrictions 
+on the polarisation of our wave. 
+We can make further gauge transformations that leave us in 
+the de Donder gauge. 
+\[
+ h _{ \mu \nu } \to h _{ \mu \nu } + \partial  _ \mu \xi _ \nu + \partial  _ \nu \xi _ \mu 
+\] This means that 
+\[
+ \overline{ h } _{ \mu\nu } \to \overline{ h } _{ \mu \nu } + \partial  _ \mu \xi _ \nu _ \partial  _ \nu \xi _ \mu 
+  - \partial  ^ \rho \xi _{ \rho } \eta _{ \mu \nu } 
+\]  This leaves us in the de Donder gauge provided that 
+\[
+ \box \xi _ \mu  =0
+\] We can take, for example, that $ \xi _ \mu  = \lambda _ \mu e ^{ i \kappa _ \rho x ^ \rho }$. 
+This shifts the polarisation vector
+$ H _{ \mu \nu } \to H _{ \mu \nu } + i \left( \kappa _ \mu \lambda _ \nu + k _ \nu \lambda _ \mu  - k ^ \rho \lambda _ \rho 
+\eta _{ \mu \nu } \right)  $. 
+We can choose $ \lambda _ \mu $ such that 
+\[
+ H _{ 0 \mu }  = 0 \text{ and } H ^\mu _ \mu = 0 
+\] This is the transverse and traceless gauge. 
+This has the advantage that $ \overline{ h } _{ \mu \nu }  = h _{ \mu \nu } $. 
+Let's calculate the number of possible polarizations 
+that we could get from this. 
+We initially have a 4 by 4 symmetric matrix. 
+Then, we imposed the de Donder gauge, then we have the residual 
+gauge transformations. 
+This means 
+\[
+ \text{number of polarizations }  = 10 - 4- 4 =2
+\] This is cool because this 
+is the number of polarizations of light. 
+This is a coincidence that the number of 
+polarizations of a graviton matches that of light. 
+As an example, consider a wave in the z-direction. 
+We choose the wave vector $ k ^ \mu = ( \omega, 0 , 0, \omega ) $. 
+The de-Donder gauge tells us that 
+\[
+ k ^ \mu H _{ \mu \nu } = 0 \implies H _{ 0 \nu } + H _{ 3 \nu }  = 0
+\] Then in the transverse and traceless gauge, we 
+write that 
+\[
+	H_{ \mu \nu } = \begin{pmatrix}  0 & 0 & 0 & 0 \\
+	0 & H _ + & H _{ X } & 0 \\
+0 & H _ X & - H _ + & 0 \\ 0 & 0 & 0 & 0 \end{pmatrix} 
+\] We have some questions. How do we make gravitational waves 
+in the first place? We'll cover that later. 
+Another reasonable question to 
+ask is how to measure gravitational waves? 
+
+\subsection{Measuring gravitational waves} 
+A single particle is not enough to detect the waves. 
+We need to consider a family of particles, and 
+in particular a family of geodesics. 
+Consider the family of geodesics $ x ^ \mu \left( \tau , s  \right)  $
+ where $ \tau $ is our affine parameter and $ s $ is 
+ denotes geodesics. 
+ We have that 
+ \[
+  \text{4 - velocity } u ^ \mu = \left. \frac{\partial  x ^ \mu}{\partial  \tau }  \right\vert_{ s } 
+ \] and also our displacement across geodesics. 
+ \[
+  S ^ \mu  = \left. \frac{\partial  x ^ \mu }{\partial  s }  \right\vert_{ \tau } 
+  \] We take particles in flat space $ u ^ \mu  = ( 1, 0 , 0 , 0) $. 
+  We use the geodesic deviation equation
+  \[
+   \frac{d ^ 2 S }{ s \tau ^ 2  } = R \indices{ ^ \mu _{ \rho \sigma \nu } } u ^ \rho u ^ \sigma s ^ \nu  
+  \]  We work to leading order in $ h $, and $ R $ is linear in $ h $. 
+  Since we're working to linear order, 
+  we leave $ u $ fixed. We also replace $ \tau $ with $ t $, 
+  the coordinate time in Minkowski space since 
+  the difference will be something of order $ h $ . 
+  Thus, we have the equation 
+  \[
+   \frac{ d ^2 S ^ \mu }{d t ^  2  } = R \indices{ ^ \mu _{ 0 0 \nu } } S ^ \nu  
+  \] Now, using our previous result for the linearised Riemann tensor, 
+  we get that 
+  \[
+   \frac{d ^ 2 S ^ \mu }{ d t ^ 2 } = \frac{1}{2 } \frac{d ^ 2 h \indices{ ^ \mu _ \nu }  }{ dt ^ 2 } S ^ \nu 
+  \] So now what happens? For a wave in
+  the z direction, we see that from the form of $ H_{ \mu \nu } $ 
+  is the components, we have that 
+  \[
+   \frac{ d ^ 2 S ^ 0 }{ d t ^ 2 } = \frac{d ^ 2 S ^ 3 }{  dt ^ 2 }  =0 
+  \] So, all the action happens in the $ \left(  x, y  \right)  $ plane. 
+  We'll focus on the place $ z = 0 $. 
+We have two polarisations to look at. 
+
+In the $ H _ +  $ polarisation, we set $ H _ X = 0 $, 
+which implies that we have 
+\begin{align*}
+	\frac{ d ^ S ^  1}{ dt ^ 2 } &=   - \frac{\omega ^  2 }{ 2 } H _ + e ^{ i \omega t } S ^ 1  \\ 
+	\frac{ d ^ 2  S ^ 2  }{ d t ^  2 } &=  \frac{ \omega ^  2}{ 2 } H _ + e ^{ i \omega t }  S^  2 \\ 
+\end{align*}
+The solution to this is 
+\begin{align*}
+	S ^ 1 ( t ) & = S ^ 1 ( 0 ) \left[  1 + \frac{1}{2 } H _ + e ^{ i \omega t } + \dots  \right] \\
+	S ^ 2 (t ) &=  S ^ 2 ( 0 ) \left[  1 - \frac{1}{2 } H _ + e ^{ i \omega t }  \right]   \\ 
+\end{align*} 
+These are the geodesic equations. Taking the real part, 
+we get that the circle is squished in and out as an ellipse. 
+$ S ^ \mu $ is the displacment to neighbouring geodesics. 
+When the move in at $ x ^ 1 $, the move out at $ x ^ 2 $. 
+
+Now, we can play a similar game for  $ H _ X $ polarisation. 
+We have that $ H _ +  = 0 $  implies 
+\begin{align*}
+	\frac{d ^ 2 S ^ 1 }{ dt ^ 2 } &=   - \frac{\omega ^ 2 }{ 2 } H_ X e ^{ i \omega t } S ^  2  \\ 
+	\frac{ d ^  2 S ^ 2 }{ dt ^ 2 } &=   - \frac{\omega ^  2 }{ 2 } H _X e ^{ i \omega t } S ^  1  
+\end{align*}
+We now have the solutions 
+\begin{align*}
+	S ^ 1 ( t ) &=  S ^  1( 0 ) + \frac{1}{2 } S ^  2( 0 ) H _X e ^{ i \omega t } + \dots  \\ 
+	S ^ 2 ( t ) &=  S ^  2 ( 0 ) + \frac{1}{2 } S ^ 1 ( 0 ) H _ X e ^{ i \omega t} + \dots  
+\end{align*}
+We define $ S _{ \pm }  = S ^ 1 \pm S ^ 2 $. It's the same 
+as before, but rotated by $ 45 ^{ \circ } $!
+
+Gravitational wave detectors have two perpendicular
+arms. As a wave passes, the change in length is 
+\[
+	\mathcal{ L }  = \mathcal{ L } \left( 1 \pm \frac{H _ + }{ 2 }  \right)  \implies \frac{\delta \mathcal{ L } }{ 
+	\mathcal{ L } }  = \frac{ H _ + }{ 2 }
+\]  We'll see shortly that astrophysical 
+sources give $ H _ + \sim 10^{ - 21 } $. This 
+is fine for linearised theory. For arms of 
+length $ \mathcal{ L } \sim 3 km $, we need a change in 
+the length of arm $ \delta \mathcal{ L }  = 10 ^{ - 18 } m  $. 
+This is small!
+An aside: everything we've done is in the linearised 
+model, which is fine. There is however a class 
+of exact gravitational wave solutions, called Brinkmann metrics. 
+This metric is
+\[
+	ds ^ 2  = - du dv + dx ^ a dx ^ a + H_{ ab } ( u ) x ^ a x ^ b d u ^  2
+\] We introduced lightcone coordinates here where $ u = t - z $ and $ v = t + z $
+We're indexing over  $  a = 1, 2 $. $ H_{ ab } ( u ) $ is arbitrary with 
+$ H ^ a _ a  = 0 $. 
+This solves the Einstein equations. 
+
+
+\subsection{Making Waves}
+In this section we'll look at how to make grasvitational waves. 
+We generate electromagnetic waves by shaking charges, 
+and we generate gravitational waves by shaking mass. 
+We want to solve the equation 
+\[
+ \Box \overline{h } _{ \mu \nu }  =  - 16 \pi G T _{ \mu \nu }
+\] The right hand side must be 
+small since we're working in linearlised 
+theory. 
+We also have a restriction that $ T _{ \mu \nu } $ must be 
+non-slowly moving. 
+Let's look at how this works. 
+Suppose we have a region of space, in the diagram 
+below. (Insert here). 
+We can solve this using Green's functions, 
+by putting the Green's function on $ T $, and integrating 
+over this. 
+\[
+ \overline{h } _{ \mu \nu }  = 4 G \int_{ \Sigma } d ^ 3 x ' \, 
+ \frac{T _{ \mu \nu } \left( \vec{x} '  , t _{\text{ret} }  \right) }{ |\vec{x} - 
+ \vec{x} ' | } 
+\] where we define the retarded time $ t _{ \text{ret } }  = t - | \vec{x} - \vec{x} ' | $. Recall we derive 
+the Green's function by first fourier transforming, 
+then solving the Helmholtz equation. Alternatively, 
+in QFT, we can Fourier transform in 4-space and 
+then choose the retarded time contour to find 
+our integral. 
+ONe comment - this equation we derived while in 
+de Donder gauge, so we should make sure 
+the solution obeys the de-Donder gauge condition.
+\[
+ \partial  _ \mu T ^{ \mu \nu  }  = 0
+\]  We can check this. 
+This is analogous to electromagentism where 
+we impose that the current obeys the Lorentz gauge. 
+Now, this is the general solution, 
+and we want to know what this solution looks like a long way away. 
+We Taylor expand! For $ r \gg d $, we have 
+that 
+\[
+ | \vec{x} - \vec{x} ' | \simeq r - \frac{\vec{x} \cdot  \vec{x}  '}{ r } + \dots 
+\] If we take the reciprocal of this we 
+get that 
+\[
+ \frac{1}{| \vec{x} - \vec{x} ' | } \simeq \frac{1}{r } + \frac{\vec{x} \cdot  \vec{x} ' }{ r ^ 3 } + \dots 
+\] Since $ \vec{x} ' $ is buried in $ t_{\text{ret } } $, 
+we need to Taylor expand this out as well. 
+\[
+	T_{ \mu \nu } \left( \vec{x} ', t_{ \text{ret } }   \right)  = 
+	T _{ \mu \nu } \left( \vec{x} ' , t - r  \right)  + 
+	\dot{ T } _{ \mu \nu } \left( \vec{x} ' , t - r  \right)  \frac{\vec{x} \cdot  \vec{x} ' }{ r } + \dots  
+\]  At leading order, we have that our 
+field is 
+\[
+ \overline{ h } _{ \mu  \nu } \simeq \frac{4 G }{ r } \int _{ \Sigma } 
+ d ^ 3 x ' \, T _{ \mu \nu } \left( \vec{x} ', t - r   \right)  
+\] If we look at the specific components, 
+we have that 
+\[
+ \overline{h}_{00 } \simeq \frac{4 G E }{ r } \text{ with } 
+ E = \int _{ \Sigma } d ^ 3 x ' \quad T _{ 00} \left( \vec{x} ' , t - r  \right)  
+\] Similarly we have 
+\[
+ \overline{ h } _{ oi } \simeq  - \frac{4 G P _ i }{ r } \text{ with } 
+ P _ i   = - \int_{ \Sigma } d ^ 3 x ' T _{ 0i } \left( \vec{x} ' , 
+ t - r \right) 
+\] Note, these equations are 
+okay for the inspiral part of the motion, but not 
+okay for the 'merger' and 'ringdown' part of the 
+star merger. 
+The interesting physics part of the solution comes from 
+\[
+ \overline{ h } _{ ij } \simeq \frac{ 4 G }{ r } \int _{ \Sigma } d ^ 3 x' 
+ T _{ ij } \left( \vec{x} ' , t - r \right) 
+\] Now, to manipulate this 
+we write \[
+	T ^{ ij }  = \partial  _ k \left( T ^{ ij } x ^ j  \right)  
+- \left( \partial  _ k T ^{ ik }   \right) x ^ j \]
+But, using the fact that the energy momentum tensor is 
+conserved, we gave that the above 
+\[
+	\dots = \partial  _ k \left( T ^{ ik } x ^ j   \right)
+	 + \partial  _ 0 T ^{ 0i  } x ^ j 
+\] where we used the identity $ \partial  _ \mu T ^{ \mu  \nu }  = 0 $. 
+Anti-symmetrising, we have that 
+\begin{align*}
+	T^{ 0 ( i } x ^{ j ) } &=  \frac{1}{2 } \partial  _ k 
+	\left( T ^{ 0k } x ^ i x ^ j  \right)    - \frac{1}{2 } \left( \partial  _ k T^{ 0k }  \right)  x ^ i x ^ j \\
+			       &=  \frac{1}{2 } \partial  _ k \left( T ^{ 0k } x ^ i x ^ j  \right)  + \frac{1}{2 } \partial  _ 0 T ^{ 0 0 } x ^ i x ^ j  \\
+\end{align*}
+Now, we can put this into the integral for the 
+expression $ \overline{ h } _{ ij}  $, and 
+we can drop any spatial derivatives 
+because we can treat them as boundary terms. 
+We put this into $ \int _{ \Sigma } d x ' $. 
+Hence, we're only left with time 
+derivatives in our object we and we get that 
+\[
+	\overline{ h } _{ ij } \simeq \frac{ 2 G }{ r } \ddot{I }_{ij }\left( t - r \right)  
+\]  where $ I _{ ij }  = \int d ^ 3 x ' \, T ^{ 0 0 } (\vec{x} ' , t ) x_ i '  x _ j' $
+is defined as the quadrapole of the energy distribution in $ \Sigma $.
+If we continue this expansion, we have multiple 
+pole expansions after this. Note that, 
+we could now use $ \partial  _ \mu \overline{ h } ^{ \mu \nu }  = 0 $ to 
+find corrections to $ \overline{ h } _{ 0 0 } $ and $ \overline{ h } _{ 0 i} $
+using $ \overline{ h } _{ ij } $. Also, 
+if we shake matter at some characteristic frequency $ \omega $, 
+then we're going to create waves which have a frequency 
+of roughly $ \omega $ as well.
+Because $ T ^{ ij } $ has two indices, 
+we have that we get a dquadrapole instead of 
+the dipole as in electromagnetism. 
+We couldn't have a dipole in the expansion, 
+since momentum is conserved and can't shake backwards 
+and forwards.
+
+\begin{example}{(An example Binary system)}
+	Consider two objects, each with mass $ \mathcal{ M } $ 
+	in a circular orbit rather than in an elliptic orbit, 
+	which will be in the $ \left( x, y  \right)  $ plane 
+	at distance $ R $. 
+	If we assume Newtonian gravity, we 
+	get that the expression for frequency 
+	is 
+	\[
+	 \omega ^ 2  = \frac{2 G M }{ R ^ 3  }
+	\] Viewed as point particles, 
+	we get that the energy momentum tensor is 
+	\[
+		T ^{ 0 0 } \left( \vec{x}, t  \right)  = M \delta ( z ) 
+		\left[  \delta \left( x - \frac{1}{2 } R \cos \omega t  \right)  \delta \left( y  - \frac{1}{2 } R \sin \omega t  \right) + \delta \left( x + \frac{1}{2 } R \cos \omega t  \right)  \delta \left(  y + \frac{1}{2 } R \sin \omega t  \right)  \right] 
+	\] To compute 
+	$ I _{ ij } \left(  t \right)  $ to find 
+	\[
+	 I _{ ij }  = \frac{M R ^ 2 }{ 4 } 
+	 \begin{pmatrix}  1 + \cos \omega t & \sin \omega t & 0 \\
+	 \sin 2 \omega t & 1 - \cos \omega t & 0 \\
+ 0 & 0 & 0 \\ \end{pmatrix} 
+	\] where we've used the double angle formula 
+	to help simplify out the terms. 
+	This tells us that 
+	\[
+	 \overline{ h } _{ ij }  = \frac{ -  2 G M R ^ 2 \omega ^ 2 }{ r } 
+	 \begin{pmatrix}  \cos 2 \omega t_{ \text{ ret } } & \sin 2 \omega t _{ \text{ret } } & 0 \\ \sin 2 \omega t _{ \text{ret } } & - \cos 2 \omega t_{ \text{ ret } } & 0 \\ 0 & 0 & 0  \end{pmatrix} 
+	\] So we get circularly polarised gravitational waves which 
+	are travelling in the $ z $ direction. Using the fact 
+	that from Newtonian gravity, $ \omega ^ 2  = \frac{ 2 G M }{ R ^ 2 } $, 
+	we get that 
+	\[
+	 | h_{ ij } | \sim \frac{ G ^ 2 M ^ 2 }{ R r }
+	\] There's something surprising. 
+	When we are looking at light through a telescope, 
+	the dimness goes as $ \frac{1}{R  } ^ 2 $ here, it's
+	$ \frac{1}{  R} $. This is becasue we're not 
+	measuring intesity but strains. This 
+	meanas that if we double our intensity, 
+	we can see $ 8 $ times as more since we double our range 
+	and have an additional volume factor  $ 8 $. 
+	To get a large $ | h _{ ij } | $, we need compact objects 
+	nearby. But, the most compact objects 
+	are black holes and the closest they 
+	can possibly come if we have two black holes is 
+	the Schwarzchild radius, $ R _S  = 2 G M $.
+	As they approach, 
+we have that $ | h _{ ij } | \sim \frac{ G M }{ r } $ . 
+A black hole of a few solar masses $ R _ S \sim 10 k m $
+in the Andromeda galaxy ($ r \sim 10 ^{ 18 } km $  )
+gives us the strength of the gravitational wave 
+to be $ |h _{ ij } | \simeq 10 ^{ - 17 } $.
+Observed galaxies are even farther away, 
+with LIGO detecting strengths at $ 10 ^{ - 21 }$. ! 
+
+
+\subsection{Power Radiated} 
+How much energy is emitted in gravitational waves? 
+For electromagnetism, we compute the 
+power 
+\[
+ \mathcal{ P }  = \int_{ S ^ 2 } d ^ 2 S_i T ^{ 0 i }
+\] The $ T ^{ 0i } $ component is called 
+the Poynting vector. 
+For gravitational waves, we would need to define
+an energy momentum tensor $t _{ \mu \nu } $ 
+for the gravitational field which, in the linearised 
+theory, should obey 
+\[
+ \partial  _ \mu t ^{ \mu \nu }  = 0
+\] That's the goal - 
+we need to come up with 
+something like a conserved energy momentum tensor, 
+then integrate over the Poynting vector. 
+Sadly, there's no such object which is gauge 
+invariant. Or more precisely, 
+there is no such gauge invariant object. 
+The thing before depends on the choice of coordinates. 
+There is a way to proceed - we have to work 
+in Minkowski space. We look at $ \mathscr { J }^ +  $, 
+and look at the energy radiated at this point. 
+A correct treatment studies 
+energy which hit $ \mathscr{ J  } ^ + $ in Minkowski 
+space, and it turns out 
+that one can define gauge invariant things at this 
+infinity. This is something called Bondi energy. 
+
+Instead, we're going to do things in a hand-wavy way. 
+We're gonna be looking for 
+just order of magnitude estimates, and just 
+be sloppy in this section.
+
+We have the Fierz Pauli action. 
+As constructed, this looks similar to 
+all other actions in QFT with the field $ h _{ \mu \nu } $, 
+as a theory in flat space, and compute the Noether current 
+for translations. 
+We can treat it as any other action, 
+and in particular compute the Noether current. 
+However, what we get is 
+not gauge invariant or symmetric. This is 
+the same in Maxwell theory, but 
+in Maxwell theory we can add extra terms to make it 
+symmetry and gauge invariant. However, in the 
+Fierz-Pauli action there's nothing we can do to 
+make it gauge invariant. 
+
+In $ TT $ gauge, with $ h = 0 $ 
+and $ \partial  _ \mu h ^{ \mu \nu }  = 0 $ , the Fierz-Pauli 
+action is 
+\[
+ S _{ FP }   = - \frac{1}{8 \pi G } \int d ^ 4 x \, \frac{1}{4 } 
+ \partial  _ \rho h _{ \mu \nu } \partial  ^ \rho h ^{ \mu \nu } 
+\] Pretend that $ h _{ \mu \nu }$  are a bunch 
+of scalar fields. The energy density 
+is 
+\[
+	t ^{ 0 0 } \sim \frac{1}{G } \dot{h _{ \mu \nu } }\dot{h ^{ \mu \nu } }
+\]  For wave solutions, 
+the $ \nabla h^{ \mu \nu } \cdot  \nabla h ^{ \mu \nu }  $ 
+term contributes the same since we can 
+sub in the wave equation. 
+Previously, we had the solutions
+written in terms of our field 
+\[
+	\overline{ h } _{ ij } = \frac{ 2 G }{ r } \ddot{I}_{ ij }
+\]  This is not in TT 
+gauge, If we put it in this form, we get 
+\[
+	h _{ ij } \sim \frac{ G }{ r } \ddot{Q}_{ij }
+\] with $ \mathcal{ Q } _{ ij } = I _{ ij }  - \frac{1}{3 } I _{ kk } \delta _{ij } $. This suggests that 
+the energy density in gravitational waves 
+far from the source is given by 
+the time derivative of $ h $, with leads to 
+three time derivatives on $ Q $, so that 
+\[
+	t ^{ 0 0 } \sim \frac{ G }{ r ^ 2 } \dddot{\mathcal{ Q } }_{ ij }
+\]  Integrated over a sphere, 
+this suggests that the power emitted 
+is 
+\[
+ P \sim  G \dddot{Q}^ 2 _{ ij } 
+\] It turns out that this approximation is 
+correct. The correct result 
+is $ \mathcal{ P }  = \frac{ G }{ 5 }\dddot{Q}^ 2 _{ ij }$. 
+This is from the treatment at $ \mathscr{J } ^ + $ 
+using the Bondi energy. There was 
+an assumption in this solution 
+that things were stationary. 
+The problem is that at every single step, 
+the calculation we did relies on 
+our choice of coordinates. 
+How does it make any sense that we're getting 
+the right answer? This is probably due to dimensional 
+analysis. If we follow Bob Wald's book, 
+they take the Einstein equations 
+and expand them to second order. Then, 
+we carry the second order piece to the otherside, 
+and wrangle this into the form of $ t _{\mu \nu } $. 
+As we average over space and time, 
+the lack of gauge invariance is less severe, since 
+the terms are suppressed by larger volumes.
+This leads to something that we call almost gauge 
+invariant. This is dubious. 
+However, if we average over all of spacetime, 
+we get a method that recovers the Bondi energy. 
+
+There's something called the Holst Taylor binary. 
+This is a couple of neutron stars orbiting each other, 
+and one of them is a pulsar. 
+This means that measured over many years, you 
+can measure the frequency of the orbit. 
+The frequency decreases by 10 micro seconds every year, 
+and this result agrees with the calculation 
+we've done here. 
+
+The error is that if we did things this way, 
+we would get a bunch of other stuff. 
+
+Let's put some numbers in this and 
+see what we're going to get. 
+\end{example}
+
+\begin{example}
+	Take a binary system $ \omega ^ 2 R \sim \frac{ G M }{ R ^ 2  }$. 
+	The quadrupole 
+	is proportional to $ \mathcal{  Q} \sim M R ^ 2 $
+	by dimensional analysis. This means that 
+	the third time derivative is given by 
+	\[
+		\dddot{Q} \sim \omega ^ 3 \mathcal{ M } R ^ 2 
+	\]  This means that our power is given by 
+	\[
+		\mathcal{ P } \sim G  \dddot{\mathcal{ Q}} ^ 2 \sim 
+		\frac{ G ^ 4 M ^ 5 }{ R ^ 5 } 
+	\] It turns out that in regular dimensions, 
+	this is correct. But, it turns out that the 
+	Schwarzchild radius, $ R _ S = \frac{ 2 G M }{ c ^ 2 } $. 
+	We get that our power constructed is 
+	\[
+		\mathcal{ P }  = \left( \frac{ R _ S}{ R }  \right)  ^{ 5 } 
+		\mathcal{ L } _{ planck}
+	\] with $ \mathcal{ L } _{ \text{planck  } }  = \frac{ c ^ 5 }{ G } $ which is roughly equivalent $ 3. 6   \times 10 ^{ 52 } J s ^{ - 1} $.  
+	This is an enormous amount of energy emitted per second! 
+	The sun emits $ \mathcal{ L } _{ \sun  } \simeq 10 ^{ - 26 } \mathcal{ L } _{ \text{ planck } }  $. All the stars in the 
+	observable universe emit $ \mathcal{ L } \sim 10 ^{  - 5 } \mathcal{ L } _{ \text{planck } } $. Yet, when two black holes 
+	collide, they have $ R \sim R _ S $ and so $ \mathcal{ L } \sim \mathcal{ \text{ Planck }}$. This is quite astonishing  -
+	they are astonishingly violent events! You might think, 
+	surely gravitational waves are emitted by some less violent 
+	events. 
+	Two objects with different masses $ M _ 1 \gg M _ 2 $ 
+	has a power which is emitted 
+	\[
+	 P \sim \frac{ G ^  4 M _   1 ^ 3 M _ 2 ^ 2 }{ R ^ 5 }
+	\] Now we can start calculating the gravitational 
+	waves emitted by other things. 
+	In the solar system, we can calculate the gravitational 
+	waves emitted by Jupiter, where $ \mathcal{ M } _{ J }  \sim 
+	10 ^{ - 3 } \mathcal{ M } _{ \sun } $, and $ R \simeq 10 ^{ 8 } km $. 
+	If we plug this is, we get that 
+	\[
+	 \mathcal{ P } \sim 10 ^{ - 44 } \mathcal{ L }_{ \text{planck} } 
+	  = 10 ^{ - 18 } \mathcal{ L } _{ \sun }
+  \] 
+\end{example}
+\begin{example}{(Waving around arms)}
+	Suppose that you wave your arms wildly. 
+	$ \mathcal{ Q } \sim 1 kg m ^ 2 $ and 
+	$ \dddot{Q} \sim 1 kg m ^ 2 s ^{ - 3 } $. 
+	The formula for the power emitted is 
+	\[
+		\mathcal{ P } \sim G \dddot{\mathcal{ Q } }^ 2 / c ^ 5 \sim 10^{ - 5 2 } J s ^{ - 1 } 
+	\]  How small is this number? A single 
+	graviton has $ E  = \planck \omega 	 $, so if $ \omega  = 1 s ^{ - 1 } \implies E \simeq 10 ^{ - 3 4} J $ . To emit a single graviton, you 
+	should wave your arms for 
+	$ T \sim 10 ^{ 18 } s \simeq 10 \text{billion years } $.
+\end{example}

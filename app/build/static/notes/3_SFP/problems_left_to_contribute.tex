@@ -4,3 +4,69 @@
 \end{itemize}
 
 
+\section{Example Sheet 3} 
+
+\subsection{Question 2} 
+We need a basis for the Cartan Subalgebra for $ \mathcal{ L } ( SO ( 2n ) ) $. 
+These are the block matrices with entries. 
+We need to show that this is abelian, maximal and ad-diagonalisable. 
+To show that it's maximal, we need to prove that 
+anything that commutes with this is in the span. 
+
+We do this, we exhibit a basis of the Lie algebra 
+which is our standard basis of anti-symmetric indices. 
+\[
+	\left( T _{ ij }  \right) \indices{^ \alpha _ \beta }  = \delta \indices{ ^ \alpha _ i } 
+	\delta _{ \beta j  }  - \delta _{ i \beta } \delta \indices{ ^ \alpha _ j } 
+\]  The Cartan subalgebra 
+elements are given by 
+\[
+	H _ I = T _{ ( 2 I - 1) 2 I  } 
+\] To show that this is maximal, if $ \left[  X, H _ I  \right]   = 0 $, 
+then we must necessarily have that $ X \in H  $. 
+To show this, we 
+compute explicitly find that 
+\[
+	[ X , H _ I ]  = 2 X ^{ i ( 2 I - 1 ) } T _{ i ( 2I ) }  - 2 X ^{ i ( 2 I ) } T _{ i ( 2 I - 1 ) } =0 
+\] This implies that $ X ^{ i ( 2 I - 1) }  =0 , I = 1 \dots n , i = 1 \dots 2n , i \neq 2 I $. 
+Furthermore, we have that $ X ^{ i ( 2I )   }  =0  , I =  1, \dots n , i  = 1 , \dots 2n , i \neq 2 I - 1$. 
+This means that $ X \in \left< H _ I  \right>$ . 
+
+Finally, we need to show ad-diagonalisability.
+\begin{align*}
+	F_{ IJ } ^{ \pm }  & = T _{ \left( 2 I - 1  \right)  \left( 2 J - 1 \right)  } - T _{ \left( 2I  \right)  \left( 
+	2 J \right)  } \pm i ( T_{ \left(  2 I - 1  \right)  \left( 2 J  \right)  } 
+	+ T _{ \left( 2 I  \right)  T _{ \left(  2J - 1 \right)  } } ) \\
+			G^{ \pm } _{ IJ }  & = T _{ \left( 2 I - 1   \right)  \left(  2J  \right)  } - T _{ \left( 2 I  \right) 
+	\left( 2 J - 1  \right)  } \pm i \left( T _{ \left(  2I  \right)  \left(  2 J  \right)  } 
++ T _{ \left(  2I - 1  \right) \left( 2J - 1 \right)  } \right)  
+\end{align*} where this is defined for $ I < J $. 
+In addition, for $ 2n + 1 $, we also have that \[
+	E _ I ^{ \pm } = T_{ \left( 2 I  - 1 \right)  \left(  2 n + 1  \right)  } \pm i T _{ \left(  2I  \right)  
+	\left(  2n + 1  \right) }
+\] We can count the number of elements in this basis, 
+which is $ n + \frac{1}{2 } n ( n - 1) \cdot  4  = n  ( 2 n - 1 )  = \dim ( SO ( 2n ) ) $. 
+
+\subsection{Question 3} 
+using the condition that 
+\[
+	2 \frac{\left( \alpha, \beta  \right)  }{ \left( \alpha, \alpha  \right)  } \in \mathbb{ Z}  \implies 2k \in \mathbb{ Z} \quad 2 \frac{  \left( \alpha, \beta   \right)   }{\left( \beta , \beta  \right)  } \in \mathbb{ Z} 
+\] 
+
+\subsection{Question 5} 
+Suppose that 
+\[
+	A _{ ij }  = 2 \frac{ \left( \alpha _ i, \alpha _ j   \right)  }{ \left( \alpha _ j , \alpha _ j  \right)  }
+	 = 2 \frac{| \alpha _ i | \cos \phi _{ ij } }{ | \alpha _ j | } 
+\] We have that $ A_{ ij } A_{ ji }  =  4 \cos \phi _{ ij } \leq 4 $. 
+When contructing a Dynkin diagram, we go from long to short. 
+We find the Cartan matrix exhaustively. 
+
+\subsection{Question 6} 
+The steps to do this question are, 
+we need to find the roots. Then, identify simple roots. 
+After that, we need to find the Killing form 
+restricted on $ \lalg h $. Then, we find 
+the dual inner product on $ \subalg h ^ * $. 
+To compute the Killing form 
+

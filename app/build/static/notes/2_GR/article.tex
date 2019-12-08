@@ -29,7 +29,10 @@
 \usepackage{tensor}
 \usepackage{tikz}
 \usepackage{multicol}
-\usepackage{subfiles} 
+\usepackage{subfiles}
+\setmathfont{XITS Math}
+\setmathfont[version=setB,StylisticSet=1]{XITS Math}
+
 
 %% Commands for typesetting theorems, claims and other things.
 \newtheoremstyle{slplain}% name
@@ -56,7 +59,11 @@
 \newcommand{\pdrv}[2]{\frac{\partial{#1}}{\partial{#2}}}
 \newcommand{\thrint}[1]{\int d^3 \vc{x} \left( {#1} \right)}
 \newcommand{\R}{ \mathbb{R}}
-\newcommand{\planck}{\hbar} 
+\newcommand{\planck}{\hbar}
+\newcommand{\peninf}{\mathscr{i}} 
+\newcommand{\scri}{\mathscr{J}}
+
+
 \author{Afiq Hatta} 
 \title{Cool stuff in General Relativity}
 \begin{document}

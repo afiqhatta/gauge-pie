@@ -267,6 +267,7 @@ called the \textbf{Cartan Weyl} basis, which
 is a basis constructed from the diagonal elements as 
 well as the step down and step up operators. 
 
+\subsubsection*{Motivating a new basis for $ \mathcal{ L }_{ \C } $} 
 For example for $ \lalg  = \mathcal{ L } _ \mathbb{ C}  ( SU ( 2) ) $, 
 our Cartan-Weyl basis was the set $\left\{  H , E_ - , E _ +  \right\} $, 
 with the diagonalisable element being $ H $, with the step operators 
@@ -305,21 +306,29 @@ property of representations.
  Now lets say a little bit more about the roots. 
  For a general element of the Cartan subalgebra $ \subalg $, 
  $ H \in \subalg$. As we have a basis of the Cartan subalgebra, 
- we can write 
+ we can expand a general element $ H $ in terms the sum of basis 
+ elements $ H ^ i $ as well as with coefficients 
+ in the complex numbers since we're dealing with a complex Lie algebra. 
  \[
   H = e_ i H ^ i , \quad e _ i \in \mathbb{ C} 
- \] By linearity, we have that the bracket of $ H $ with a step generator 
+ \] Note the funny notation here, 
+ we usually use $ e _ i $ to denote basis vectors, 
+ but in this context we're using them 
+ as coefficients. By linearity, we have that the bracket of $ H $ with a step generator 
  can be expanded, as follows. 
  \[
 	 [ H , E ^ \alpha ] = \alpha ( H ) E ^{\alpha } , \quad \alpha ( H ) = e_ i \alpha ^ i \in 
 	 \mathbb{ C} 
- \] This is because, upon expanding $ H $, we get that 
+ \] So, anything we can cook up from 
+ our Cartan subalgebra plays nicely with $E ^{ \alpha }$, 
+ and the root $ \alpha $ defines what we get. 
+ Upon expanding $ H $, we get that 
  \begin{align*}
 	 [ H , E ^ \alpha ] &=   [ e_ i H ^ i, E ^ \alpha ]  \\
 			    &= e_ i [ H ^ i , E ^ \alpha ]  \\
 			    &=  e_i \alpha ^ i E ^ \alpha  \\
 			    &=  e _ i \alpha ^ i E^ \alpha  \quad 
-			    \text{ define } e_ i \alpha ^ i  = \alpha ( H ) \in \mathbb{ C}  \\ 
+			    \text{ define } e_ i \alpha ^ i  = \alpha ( H ) \in \mathbb{ C}  
  \end{align*}Thus, a more sophisticated way to think about roots
  is to think of them as $ \alpha : \subalg \to \mathbb{ C}  $. 
  Thus, they're elements of the dual vector space 
@@ -372,7 +381,11 @@ Jacobi identity, the adjoint representation, and Killing form
 invariance. 
 We'll prove the first statement. 
 \begin{enumerate}
-	\item Consider $ \alpha ( H ' ) \kappa ( H , E ^ \alpha )$ for some 
+	\item The way to prove the first thing is 
+		a bit unusual. We actually multiply 
+		the Killing form by an element which 
+		we know is not always zero then 
+		factor in. Consider $ \alpha ( H ' ) \kappa ( H , E ^ \alpha )$ for some 
 		arbitrary $ H ' $ in the Cartan subalgebra. Note that, 
 		we can't possibly have $ \alpha ( H ' )  =0 $ for 
 		all  $ H' $ in the subalgebra because, by maximality, 
@@ -392,12 +405,13 @@ We'll prove the first statement.
 							  Cartan subalgebra }\\
 								  &=  0  
 		\end{align*}
-		Now, $ \alpha ( H ' ) \neq 0 $ from $ H ' $, implies 
+		Now, from our what we said earlier, we have that $ \alpha ( H ' ) \neq 0 $ for some  $ H ' $, which implies 
 		that 
 		 \[
 			 \kappa ( H , E ^{ \alpha } ) = 0 
 		 \] This proves the first statement. 
-	\item Again, consider $ H ' \in \subalg $. Now, consider 
+	\item Again, consider $ H ' \in \subalg $. We play the same strategy as 
+		we did earlier, by multiplying in some factors. Consider 
 		\begin{align*}
 			( \alpha ( H ') + \beta ( H ' ) ) \kappa ( E ^ \alpha , 
 			E ^ \beta )  &=  \kappa ( [ H ' , E ^ \alpha ] , E ^ \beta )  
@@ -406,7 +420,10 @@ We'll prove the first statement.
 		\end{align*}
 		Now, provided we assume that $ \forall \alpha, \beta \in \Phi$, 
 		with $ \alpha + \beta \neq 0 $ then by maximality that 
-		$ \alpha ( H ' ) + \beta ( H ' ) \neq 0 $  for some $ H ' $. 
+		$ \alpha ( H ' ) + \beta ( H ' ) \neq 0 $ for some $ H ' $. 
+		This is because, if we did have $ \alpha ( H ) + \beta ( H )  =0 $
+		for all $ H \in \subalg $, then, identically 
+		we have that $ \alpha + \beta $ is the zero element. 
 		This in turn then means that the other 
 		factor must be zero and hence we have that 
 		\[
@@ -417,7 +434,7 @@ We'll prove the first statement.
 \end{proof}
 \end{thm}
 
-\begin{thm}{(Non-degenracy of the Killing form result)} 
+\begin{thm}{(Non-degenracy of the Killing form on the Cartan Subalgebra)} 
 	We have that for all $ H \in \subalg $, there exists 
 	a $ H ' $ such that $ \kappa ( H , H ' ) \neq 0 $. 
 \begin{proof}
@@ -621,40 +638,57 @@ In fact, we can use our knowledge about simple
 finite dimensional representations of $ \mathcal{ L } ( SU ( 2) ) $
 to constrain values of the root. 
 
-\subsection{Consequences} 
+\subsection{Consequences}
+
+\begin{defn}{($\alpha $ string passing through $ \beta$)}
 For any $ \alpha , \beta \in \Phi  $ where  $ \alpha \neq \pm  \beta $, 
 we define the '$ \alpha $-string passing through $ \beta $ ' 
 as the set of all 
 roots from the form $ \beta + e \alpha $ for some
 $ e \in \mathbb{ Z} $. This is the set 
 \[
-	S_{ \alpha, \beta } = \left\{  \beta + e \alpha  \in \Phi , e \in \mathbb{ Z}  \right\} 
-\] and we define the corresponding vector subspace of $ \lalg $, 
+S_{ \alpha, \beta } = \left\{  \beta + e \alpha  \in \Phi , e \in \mathbb{ Z}  \right\} 
+\] This set of roots is very important 
+in developing our understanding of the structure of Lie algebras.
+As we'll see later, we're interested in things like the length 
+of these objects. 
+\end{defn}
+We define the corresponding vector subspace of $ \lalg $
+as the set of eigenvectors $ e^{ \gamma } $ which 
+are indexed by roots that are in the $ \alpha $ string 
+passing through $ \beta $ as $ V _{ \alpha, \beta } $. 
 \[
-	V _{ \alpha, \beta } = \text{span} _{ \mathbb{ C} } \left\{  
-	e ^{ \beta + e \alpha} ; \beta + e \alpha \in S_{ \alpha , \beta }\right\} 
-\] 
-Now consider the action of $ Sl ( 2) _{ \alpha } $ on 
-$ V_{ \alpha, \beta } $ 
+V _{ \alpha, \beta } = \text{span} _{ \mathbb{ C} } \left\{  
+e ^{ \beta + e \alpha} ; \beta + e \alpha \in S_{ \alpha , \beta }\right\} 
+\] Now consider the action of $ Sl ( 2) _{ \alpha } $ on 
+$ V_{ \alpha, \beta } $. When we say $ SL ( 2 ) _ \alpha $, 
+we mean the subalgebra which consists of the 
+Cartan element $ h ^ \alpha $, as well as the 
+step operators $ e ^{ \pm \alpha }$. We explore how
+these things act. We use our normalised vectors which 
+we worked through earlier. 
 \begin{align*}
-	[ h ^ \alpha, e ^{ \beta + e \alpha } ] &=  \frac{ 2 ( \alpha, \beta + e \alpha ) }{ 
-	\left(  \alpha, \alpha  \right)  } e ^{ \beta + e \alpha }  \\
-						&=  \left(  \frac{2 ( \alpha , \beta ) }{ ( \alpha, \alpha ) } 
-						+ 2 e \right)  e ^{ \beta + e \alpha }  \\
+[ h ^ \alpha, e ^{ \beta + e \alpha } ] &=  \frac{ 2 ( \alpha, \beta + e \alpha ) }{ 
+\left(  \alpha, \alpha  \right)  } e ^{ \beta + e \alpha }  \\
+					&=  \left(  \frac{2 ( \alpha , \beta ) }{ ( \alpha, \alpha ) } 
+					+ 2 e \right)  e ^{ \beta + e \alpha } 
 \end{align*}
-In addition, we have that 
+In addition, we have that, by a previous lemma 
+which we shown earlier about commuting the $ e $ elements, 
 \[
-	[ e ^{ \pm \alpha } , e ^{ \beta + e \alpha} ] \begin{cases}
-		e ^{ \beta + ( e \pm 1 ) \alpha } & \text{if } \beta + ( e \pm 1 ) \alpha \in \Phi \\
-		0 & \text{otherwise}
-	\end{cases}
+[ e ^{ \pm \alpha } , e ^{ \beta + e \alpha} ] =  \begin{cases}
+	e ^{ \beta + ( e \pm 1 ) \alpha } & \text{if } \beta + ( e \pm 1 ) \alpha \in \Phi \\
+	0 & \text{otherwise}
+\end{cases}
 \]  
 Hence, we find that $ V_{ \alpha, \beta } $ is a representation 
 space for some representation $ R $ of $ Sl ( 2 )_ \alpha $. 
-Specifically, our weight set of $ R $  is given by 
+Specifically, our weight set of $ R $, $ S _ R $ is given
+by the eigenvalues of acting $ h ^ \alpha $ on the 
+elements in our representation space. 
 \[
-	S_{ R }  = \left\{  \frac{2 ( \alpha, \beta ) }{ ( \alpha, \alpha 0 ) } +  2 e ; 
-	\beta + e \alpha \in \Phi \right\} 
+S_{ R }  = \left\{  \frac{2 ( \alpha, \beta ) }{ ( \alpha, \alpha ) } +  2 e ; \quad  
+\beta + e \alpha \in \Phi \right\} 
 \] R is finite dimensional, and irreducible.
 This means that $ R  =R _{ \Lambda } $ for 
 some highest weight $ \Lambda \in \mathbb{ Z} $, and 
@@ -665,10 +699,13 @@ Hence, we must have $ e = n \in \mathbb{ Z} $, with
 $ n _ - \leq n \leq n _ + $, and $ n_{ \pm } \in \mathbb{ Z} $. 
 We can match up our weights to give 
 \begin{align*}
-	- \Lambda &  = \frac{ 2 ( \alpha , \beta ) }{ ( \alpha, \alpha ) } + 2 n_ - \\
-	\Lambda &=   2 \frac{ ( \alpha, \beta ) }{ ( \alpha, \alpha )   } + 2 n _ +   \\
+- \Lambda &  = \frac{ 2 ( \alpha , \beta ) }{ ( \alpha, \alpha ) } + 2 n_ - \\
+\Lambda &=   2 \frac{ ( \alpha, \beta ) }{ ( \alpha, \alpha )   } + 2 n _ +   \\
 \end{align*}
 Adding this gives $ \frac{ 2 ( \alpha , \beta ) }{ ( \alpha , \alpha ) }  = - ( n _ + + n _ - ) $
+This is a very important result, 
+which is a restriction on our Killing inner product. 
+
 
 \subsection{More on roots}
 Recall that we can think 
@@ -682,62 +719,88 @@ We've already shown that $ 2 \frac{ ( \alpha , \beta ) }{ ( \alpha , \alpha ) } 
 denominator are real. 
 
 Recall that in the Cartan-Weyl basis, 
-we have that 
+we have that, when we apply a step operator,  
+p> 
 \[
-	\left[  H ^ i , E ^ \delta  \right]   = \delta ^ i E ^ \delta , 
-	\quad \forall \delta \in \Phi , i = 1 , \dots r 
-\] 
+\left[  H ^ i , E ^ \delta  \right]   = \delta ^ i E ^ \delta , 
+\quad \forall \delta \in \Phi , i = 1 , \dots r 
+\]  
 If we restrict our Killing form 
-to the Cartan Weyl basis, we define 
+to the Cartan Weyl basis, we have that 
+the killing form in components is the sum of the 
+product of the two roots of the respective 
+elements in the Cartan subalgebra. 
 \[
-	\kappa ^{ ij }  = \kappa ( H ^ i , H ^ j ) 
-	 = \frac{1}{\mathcal{ N  } } \tr \left[  
-	 \ad_{ H ^ I }  \circ \ad _{ H ^ j }\right]  = \frac{1}{\mathcal{ N } } 
-	 \sum_{ \delta \in \Phi } \delta ^ i \delta ^ j 
-\]  It can be easily shown that $ \ad_H $ is represented by 
+\kappa ^{ ij }  = \kappa ( H ^ i , H ^ j ) 
+= \frac{1}{\mathcal{ N  } } \tr \left[  
+\ad_{ H ^ I }  \circ \ad _{ H ^ j }\right]  = \frac{1}{\mathcal{ N } } 
+\sum_{ \delta \in \Phi } \delta ^ i \delta ^ j 
+\] Going in to the third expression, 
+we recall that the Killing form was originally 
+defined as the trace of the composition 
+of the adjoint maps. Going into the last expression, 
+we recognise that composing two adjoint maps 
+on a $ E^ \delta $ element will give a factor of 
+$ \delta ^ i \delta ^ j $, and these basis elements 
+are the elements which we trace over. It can be easily shown that $ \ad_H $ is represented by 
 a diagonal matrix of $ \delta ^ i $ in the first diagonals, and then 
 a diagonal of zeros for the rest for the elements 
-in the Cartan subalgebra. Hence, for $ \alpha , \beta \in \Phi$, 
-we have that 
- \[
- \left(  \alpha, \beta  \right)   = \alpha ^ i \beta ^ j 
- \left(  \kappa ^{ -1 }  \right)  _{ ij  } = \alpha _ i \beta ^ i  = \alpha _ i \beta _ j 
- \kappa ^{ ij} , \quad \alpha _ i = \left(  \kappa ^{ - 1}  \right) _{ ij } \alpha ^ j 
+in the Cartan subalgebra.
+
+We can work out the Killing form inner product applied two 
+two roots $ \alpha , \beta \in \Phi$.  
+We have that 
+\[
+\left(  \alpha, \beta  \right)   = \alpha ^ i \beta ^ j 
+\left(  \kappa ^{ -1 }  \right)  _{ ij  } = \alpha _ i \beta ^ i  = \alpha _ i \beta _ j 
+\kappa ^{ ij} , \quad \alpha _ i = \left(  \kappa ^{ - 1}  \right) _{ ij } \alpha ^ j 
 \]  Applying our previous 
 formula for the Killing form, 
 we get that this is expressed much more 
 explicitly as 
 \[
- \dots  =\frac{1}{\mathcal{ N } } \sum_{ \delta \in \Phi }
- \alpha _ i \delta ^ i \delta ^ j \beta _ j  = \frac{1}{\mathcal{ N } } 
- \sum_{ \delta \in \Phi } \left(  \alpha, \delta  \right)  \left(  
- \beta , \delta \right)  
-\]  Now, from the fact that 
-our ratio of inner product 
+\left( \alpha, \beta  \right) =\frac{1}{\mathcal{ N } } \sum_{ \delta \in \Phi }
+\alpha _ i \delta ^ i \delta ^ j \beta _ j  = \frac{1}{\mathcal{ N } } 
+\sum_{ \delta \in \Phi } \left(  \alpha, \delta  \right)  \left(  
+\beta , \delta \right)  
+\]  We define the object $R _{ \alpha, \beta } $ 
+as the ratio, 
 \[
-	R_{ \alpha, \beta } \frac{ 2 \left(  \alpha , \beta  \right)  }{ \left(  
-	\alpha, \alpha \right)  } \in \mathbb{ Z} \subset \mathbb{ R} 
-\] dividing through by the appropriate factor 
+R_{ \alpha, \beta } =  \frac{ 2 \left(  \alpha , \beta  \right)  }{ \left(  
+\alpha, \alpha \right)  } \in \mathbb{ Z} \subset \mathbb{ R} 
+\] Now, dividing through by the appropriate factor 
 we get that 
 \[
-	\frac{ 2 }{ \left(  \beta , \beta  \right)  } 
-	R _{ \alpha , \beta }   = \frac{1}{\mathcal{ N } } 
-	\sum_{ \delta \in \Phi  } R _{ \alpha, \delta } R _{ \beta , \delta } 
-	\in \mathbb{ R} 
-\] we take $ \mathcal{ N } \in \mathbb{ R} $. 
+\frac{ 2 }{ \left(  \beta , \beta  \right)  } 
+R _{ \alpha , \beta }   = \frac{1}{\mathcal{ N } } 
+\sum_{ \delta \in \Phi  } R _{ \alpha, \delta } R _{ \beta , \delta } 
+\in \mathbb{ R} 
+\] Since our 
+initial choice of normalisation 
+was arbitrary, we take $ \mathcal{ N } \in \mathbb{ R} $. 
 This implies that the left hand side is real. 
 So, the right hand side is real. 
 So, $ \left(  \beta , \beta  \right)  $ is real for all 
 $ \beta \in \Phi  $,  so $ \left(  \alpha, \beta  \right)  $ 
 is real for all $ \alpha , \beta $ in $ \Phi$. 
 
+Thus, in conclusion, we have that 
+the Killing form induced inner products 
+$ \left( \alpha, \beta  \right)  $ as well as 
+$ \left( \alpha, \alpha  \right)  $ are both real 
+for all $ \alpha, \beta \in \Phi  $. 
+
+
 \subsubsection{Real geometry of roots} 
+The main result we'll show here is 
+that roots of a Lie algebra live in  
+a real vector space! 
 We will not prove, but use, the result 
 that the dual space of the Cartan subalgebra  $ \subalg $ 
 is spanned by the roots. 
 \[
-	\subalg ^ *  = \text{span} _{ \mathbb { C} } \left\{  
-	\alpha \in \Phi \right\}  
+\subalg ^ *  = \text{span} _{ \mathbb { C} } \left\{  
+\alpha \in \Phi \right\}  
 \] Hence, we can find $ r $ roots 
 which we will index as $ \alpha _{ ( i )  } $, 
 $ \left\{  \alpha_{ \left(  i  \right)  } \in \Phi, i = 1 , \dots, r  \right\}   $ 
@@ -745,40 +808,46 @@ which provide a basis for $ \subalg  ^ * $.
 We define a real subspace $ \subalg^ * _{ \mathbb{ R} } \subset 
 \subalg ^ * $, as the real span of elements in this basis. 
 \[
- h^ * _{ \R }  = \text{span}_{ \R } \left\{  
- \alpha _{ \left(  i  \right)  } \in \Phi , i =  1 , \dots, r \right\}  
+h^ * _{ \R }  = \text{span}_{ \R } \left\{  
+\alpha _{ \left(  i  \right)  } \in \Phi , i =  1 , \dots, r \right\}  
 \] 
 By the fact that $ \alpha ^{ ( i ) } $ spans $ \subalg ^ * $, 
-we write any roots $ \beta \in \Phi $  as 
-$ \beta = \sum_{ i  = 1} ^ r \beta ^ i \alpha _{ ( i ) } \beta ^ i \in 
+we write any roots $ \beta \in \Phi $  as a linear combination 
+of these basis roots. 
+$ \beta = \sum_{ i  = 1} ^ r \beta ^ i \alpha _{ ( i ) } , \quad \beta ^ i \in 
 \mathbb{ C} $. The coefficients $ \beta ^ i  $  solve 
 \[
-	\left( \beta , \alpha _{ ( j ) }  = 
-	\sum_{ i  =1 } ^ r \beta ^ i \left(  \alpha _{( i ) } , \alpha _{ ( j ) } \right) \right)  
+\left( \beta , \alpha _{ ( j ) } \right)   = 
+\sum_{ i  =1 } ^ r \beta ^ i \left(  \alpha _{( i ) } , \alpha _{ ( j ) } \right)   
 \] Hence, by our previous result, 
 we have that $ \left(  \alpha, \beta  \right)  \in \R $, 
 for all $ \alpha , \beta \in \Phi  $. 
-This means that $ \beta _ i \in \R $, and that 
-$ \beta \in \subalg ^ * _{ \R } $. 
+Crucially, this means that $ \beta _ i \in \R $, and that 
+$ \beta \in \subalg ^ * _{ \R } $. This 
+is important, because all we did was 
+start from the assumption that 
+$ \beta \in h ^ * $, and that $ \beta $ was a root. 
+However, we got for free that $ \beta $ is indeed 
+actually in $ h _{ \R } ^ * $. 
 Now, let's think about the inner product 
 of any two vectors in $ \subalg ^ *_{ \R } $. 
 We write them in components in our basis as 
 \[
-	\lambda = \sum_{ i = 1 } ^ r \lambda ^ i \alpha _{ ( i ) } \in 
-	\subalg ^ * _{ \R } , \quad \mu = \sum_{ i = 1 } ^ r \mu ^ i 
-	\alpha _{ ( i ) } \in \subalg ^ * _{ \R } 
+\lambda = \sum_{ i = 1 } ^ r \lambda ^ i \alpha _{ ( i ) } \in 
+\subalg ^ * _{ \R } , \quad \mu = \sum_{ i = 1 } ^ r \mu ^ i 
+\alpha _{ ( i ) } \in \subalg ^ * _{ \R } 
 \] where by construction we have that $ \lambda ^ i , \mu ^ i \in \R $. 
 This means that our inner product is given by 
 \[
- \left(  \lambda , \mu  \right)   = \sum_{ i =1 }^ r 
- \lambda ^ i \mu ^ j \left(  \alpha _{ ( i ) } , \alpha_{ ( j ) }  \right)  \in 
- \R 
+\left(  \lambda , \mu  \right)   = \sum_{ i =1 }^ r 
+\lambda ^ i \mu ^ j \left(  \alpha _{ ( i ) } , \alpha_{ ( j ) }  \right)  \in 
+\R 
 \]  From our identity for the Killing form 
 in terms of the Cartan-Weyl basis, we get that 
 \[
- ( \lambda , \lambda )  = \frac{1}{\mathcal{ N } } \sum 
- \lambda _ i \delta ^ i \delta ^ j \lambda _ j  = \frac{1}{\mathcal{ N } } 
- \sum_{ \delta \in \Phi } ( \lamdba , \delta ) ^ 2 \geq 0 
+( \lambda , \lambda )  = \frac{1}{\mathcal{ N } } \sum 
+\lambda _ i \delta ^ i \delta ^ j \lambda _ j  = \frac{1}{\mathcal{ N } } 
+\sum_{ \delta \in \Phi } ( \lambda , \delta ) ^ 2 \geq 0 
 \] Thus, the inner product 
 in this space is positive, and we only have equality 
 if and only if $ \left(  \lambda , \delta  \right)   =0 $, 
@@ -796,9 +865,9 @@ a Euclidean inner product. Specifically, this
 means that for all $ \lambda , \mu \in \subalg ^ * _{ \R }  $, 
 we have that 
 \begin{enumerate}
-	\item $ ( \lambda , \mu ) \in \R $  
-	\item $ \left(  \lambda , \lambda  \right)  \geq 0 $
-	\item $ \left(  \lambda , \lambda  \right)   =0 \iff \lambda  = 0 $ 
+\item $ ( \lambda , \mu ) \in \R $  
+\item $ \left(  \lambda , \lambda  \right)  \geq 0 $
+\item $ \left(  \lambda , \lambda  \right)   =0 \iff \lambda  = 0 $ 
 \end{enumerate}
 This are the characteristic properties of 
 a standard inner product. 
@@ -808,8 +877,8 @@ As $\left(  \alpha, \alpha  \right)  > 0  $ for all $ \alpha \in \Phi   $,
 we can define a length associated with the 
 root as 
 \[
-	| \alpha | : = ( \alpha , \alpha ) ^{ \frac{1}{2 } } \geq 0 
-	\] 
+| \alpha | : = ( \alpha , \alpha ) ^{ \frac{1}{2 } } \geq 0 
+\] 
 The inner product takes the standard form 
 $ \left(  \alpha, \beta  \right)   = | \alpha | | \beta | 
 \cos \phi_{ \alpha, \beta } $  for all $ \alpha , \beta $ and 
@@ -817,22 +886,22 @@ $ \alpha \in [ 0 , \pi ] $.
 The angle  $ \phi_{ \alpha ,\beta } $ is constrained by the fact that 
 our ratios are quantised. 
 \[
-	\frac{ 2 \left(  \alpha, \beta  \right)  }{ ( \alpha , \alpha ) } 
-	= \frac{2 | \beta | }{ | \alpha | } \cos \phi_{ \alpha , \beta } \in \mathbb{ Z} 
+\frac{ 2 \left(  \alpha, \beta  \right)  }{ ( \alpha , \alpha ) } 
+= \frac{2 | \beta | }{ | \alpha | } \cos \phi_{ \alpha , \beta } \in \mathbb{ Z} 
 \] We can also interchange $ \alpha , \beta $, which gives us 
 \[
-	\frac{ 2 \left(  \beta , \alpha )  \right)  }{ \left(  
-	\beta , \beta \right)  } = \frac{ 2 | \alpha | }{ | \beta |  } 
-	\cos \phi_{ \alpha , \beta } \in \mathbb{ Z} 
+\frac{ 2 \left(  \beta , \alpha )  \right)  }{ \left(  
+\beta , \beta \right)  } = \frac{ 2 | \alpha | }{ | \beta |  } 
+\cos \phi_{ \alpha , \beta } \in \mathbb{ Z} 
 \]  Multiplying these two equations together, 
 the have the result that 
 \[
-	4 \cos ^ 2 \phi_{ \alpha ,\beta } \in \mathbb{ Z} 
+4 \cos ^ 2 \phi_{ \alpha ,\beta } \in \mathbb{ Z} 
 \] This is a very strong result. 
 We only have a few options! We deduce that 
 \[
- \cos \phi_{ \alpha, \beta }  = \pm \frac{\sqrt{ n }  }{ 2 } , \quad 
- n \in \left\{  0 , 1, 2, 3, 4 \right\} 
+\cos \phi_{ \alpha, \beta }  = \pm \frac{\sqrt{ n }  }{ 2 } , \quad 
+n \in \left\{  0 , 1, 2, 3, 4 \right\} 
 \] If we consider the case $ n = 0 $, this 
 corresponds to an angle $ \phi = \frac{ \pi }{ 2 } $, 
 which corresponds to the roots being orthogonal with 
@@ -844,11 +913,11 @@ Exercise: if $ \alpha \in \Phi $, show that
 $ k \alpha \in \Phi $ only for $ k  =\pm 1 $. 
 We have that 
 \[
-	\phi = \frac{\pi }{ 6 } , \frac{\pi}{ 4 }, \frac{\pi}{ 3 } \text{ with } ( \alpha , \beta ) > 0 , \quad n = 1 , 2,  3 
+\phi = \frac{\pi }{ 6 } , \frac{\pi}{ 4 }, \frac{\pi}{ 3 } \text{ with } ( \alpha , \beta ) > 0 , \quad n = 1 , 2,  3 
 \] 
 and as well, we have that 
 \[
-	\phi = \frac{ 2 \pi }{ 3 } , \frac{ 3 \pi }{ 4 } , \frac{ 5 \pi }{ 6 } \text{ with } \left( \alpha, \beta  \right) < 0 
+\phi = \frac{ 2 \pi }{ 3 } , \frac{ 3 \pi }{ 4 } , \frac{ 5 \pi }{ 6 } \text{ with } \left( \alpha, \beta  \right) < 0 
 \] 
 \subsection{Simple roots}
 Draw a diagram. 
@@ -861,17 +930,1170 @@ This will divide the roots into two halves,
 the positive roots and negative roots. 
 We then write 
 \[
- \Phi = \Phi ^ + \cup \Phi ^ -
+\Phi = \Phi ^ + \cup \Phi ^ -
 \] We then have that 
 \begin{enumerate}
-	\item $ \alpha \in \Phi ^ +  \iff  - \alpha \in \Phi _ - $. 
-	\item $ \alpha , \beta \in \Phi _ +  \implies 
-		\alpha + \beta \in \Phi _ + $ , 
-		if $ \alpha +  \beta $ is indeed a root.
-	\item If $ \alpha , \beta \in \Phi _ - $, 
-		then if  $ \beta + \alpha $ is a root, 
-		we have that $ \alpha + \beta \in \Phi  _- $. 
+\item $ \alpha \in \Phi ^ +  \iff  - \alpha \in \Phi _ - $. 
+\item $ \alpha , \beta \in \Phi _ +  \implies 
+	\alpha + \beta \in \Phi _ + $ , 
+	if $ \alpha +  \beta $ is indeed a root.
+\item If $ \alpha , \beta \in \Phi _ - $, 
+	then if  $ \beta + \alpha $ is a root, 
+	we have that $ \alpha + \beta \in \Phi  _- $. 
 \end{enumerate}
 Simple roots are positive roots which cannot be written 
-as the sum of two positive roots. 
+as the sum of two positive roots.
+The height of the root is the perpendicular distance from the 
+root to the hyperplane, shown in the diagram. 
+
+\subsection{Simple roots} 
+Simple roots are a useful basis of our vector space.
+The set of simple roots $ \Phi $ is defined 
+such that $ \delta \in \Phi_ s \iff \delta \in \Phi _ + $ (they're
+positive roots)
+and that they cannot be written as the sum of other roots, so 
+$ \delta \neq \alpha + \beta , \forall \alpha, \beta \in \Phi _ + $. 
+\begin{claim}
+If we have two simple roots $ \alpha, \beta \in \Phi _ s $, 
+then  $ \alpha - \beta $ is not a root. 
+\begin{proof}
+	Suppose that $ \alpha - \beta \in \Phi $ . This means 
+	that $ \alpha - \beta $ is either a positive root 
+	or a negative root. Let's do the first case. 
+	Then we have that either $ \alpha - \beta \in  \Phi _ + \implies 
+	\alpha = \alpha - \beta + \beta $ which implies that 
+	$ \alpha $ is not simple. This is a contradiction. 
+	Or, we have that $ \beta - \alpha \in \Phi_ + $ 
+	which implies that $ \beta = \beta - \alpha + \alpha $ 
+	which implies that $ \beta $ is simple. 
+	This is also a contradiction. 
+\end{proof}
+\end{claim}
+
+\begin{claim}
+If $ \alpha , \beta \in \Phi_ s $, then 
+the $ \alpha $ string through $ \beta $ 
+has length $ l_{\alpha, \beta }  = 1 - \frac{ 2 \left(  \alpha, \beta  \right)  }{ (\alpha, \alpha)   }
+\in \mathbb{ N } $. 
+\begin{proof}
+	Our root string has roots 
+	\[
+	 S_{ \alpha, \beta }  = 
+	 \left\{  \beta + n \alpha \in \Phi , 
+	 n \in \mathbb{ Z}, \quad  n_ - \leq n \leq n _ + \right\} 
+	\] where $ n _ +  \geq 0 $  since 
+	$ \beta $ itself is in the root 
+	string be definition. We learned earlier that 
+	\[
+		\left(  n _ + + n _ -  = - \frac{ 2 \left(  \alpha, \beta  \right)  }{ 
+		\left(  \alpha, \alpha  \right)  }  \right)  \in \mathbb{ Z} 
+	\] Now, if $ \alpha $ and $ \beta $ 
+	are simple roots, then the previous claim says 
+	that $ \beta - \alpha $ is not a root, 
+	which means that the lower bound $ n_ - = 0 $. 
+	So, using the equation above, 
+	we have that 
+	\[
+		n _ + = \frac{ - 2 \left(  \alpha, \beta  \right)  }{ \left(  
+		\alpha, \alpha \right)  } \in \mathbb{ Z} _{ \geq  0 } 
+	\] Now, we can say what the length of the string is!
+	Since the string starts at zero, we have that 
+	$ l _{ \alpha , \beta }  = n _ + + 1    = 1 - \frac{ 2 \left(  \alpha, \beta  \right)  }{ 
+	\left(  \alpha, \alpha  \right)  } \in \mathbb{ N } $.  
+\end{proof}
+\end{claim}
+
+\begin{claim}
+For our third property, we have that if 
+$ \alpha, \beta \in \Phi _ s $, and $ \alpha \neq \beta $, 
+then the inner product is negative, so $ \left(  \alpha, \beta  \right)  \leq 0 $
+for all $ \alpha, \beta, \quad \alpha \neq \beta  \in \Phi _ s $. 
+\end{claim}
+
+\begin{claim}
+Any positive root can be written as 
+\[
+ \beta \in \Phi _ + \implies 
+ \beta = \sum_ i c _ i \alpha _{ ( i )   } 
+\]  where $ \alpha _{ ( i )   } $ are 
+in $ \Phi _ s $, and that $ c _ i $ are positive 
+integers in $ \mathbb{ Z} _{ \geq 0  } $. 
+\begin{proof}
+ The statement is clearly true if $ \beta \in \Phi _ s $. 
+  Now, if we have that $ \beta $ is not in $ \Phi  _ S  $, then 
+  we can write $ \beta = \beta _ 1 + \beta _  2 $ with 
+  $ \beta_ 1 , \beta_2 \in \Phi  _ +  $  with either 
+  $ \beta_1 , \beta _ 2 \in \Phi  _ S $ then we are done, 
+  or, we have that $ \beta = \beta _ 1 + \beta _ 2 + \beta _ 3 $
+  and so on. This process however, will terminate with 
+  \[
+	  \beta = \sum c_ i \alpha _{ \left(  i  \right)  } , \quad 
+	  \alpha _{ ( i )   } \in \Phi  _  S , c _i \in \mathbb{ Z}_{ \geq 0 }
+  \] 
+\end{proof}
+\end{claim}
+
+\begin{claim}
+Simple roots are linearly independent. Equivalently, 
+if we form the combination 
+\[
+	\lambda = \sum_{ i \in \inset   } c _ i \alpha _{ (i )     }  
+\]  with $ c _ i \in \R , \alpha _{ \left(  i  \right)  } $ and 
+$ \inset  = \Phi  _ S  $, where we have 
+$ \lambda \neq 0  $ unless $ c _ i = 0 \forall i $. 
+\begin{proof}
+	We define $ \lambda _ + \in \sum_{ i \in \inset_ + } c _ i 
+	\alpha_ i $ and $ \lambda _ - =  - \sum_{ i \in \inset _ - }
+	c_ i \alpha _{ \left(  i  \right)   } $. 
+	We have that $ \inset = \inset _ + \cup \inset _ - $, 
+	where we've split this up as 
+	 \[
+	 \inset _ +  = \left\{  i \in \inset ; c _ i > 0  \right\} , 
+	 \quad \inset _ - = \left\{  i \in \inset , c _ i < 0  \right\} 
+	\] We now write $ \lambda = \lambda _ + - \lambda _ - $, 
+	with either $ \lambda _ + $ , $ \lambda _ - $ not 
+	both zero. We then have that 
+	\[
+	 \left(  \lambda , \lambda  \right)   = 
+	 \left(  \lambda _ + , \lambda _ +  \right)  + 
+	 \left(  \lambda _ - , \lambda _ -  \right)   -  2 
+	 \left(  \lambda _ + , \lambda _ -  \right)  >  - 2 \left(  
+	 \lambda _ + , \lambda _ - \right)  = 
+	   2 \sum_{ i \in \inset _ + } \sum_{ j \in \inset_{ - } } c_ i c _ j 
+	   \left(  c _{ ( i ) } , c _{ ( j  )   }  \right) \geq 0 
+	\] By construction, we have that the 
+	$ c _ i  > 0 , c _ j < 0 $ and that also 
+	$ \left(  \alpha _{ ( i  )   }, \alpha _{ ( j )  } \right) < 0  $. 
+	This means that the final term is positive as shown above, 
+	so $ \left(  \lambda , \lambda  \right)   > 0 $, and hence
+	$ \lambda \neq 0 $. 
+\end{proof}
+\end{claim}
+
+\begin{claim}
+ There are exactly $ r = \text{ Rank } [ \lalg ] $ simple 
+ roots. 
+ \begin{proof}
+	As the are linearly independent, we have 
+	that $ | \Phi  _ S | \leq r $ . 
+	Suppose that $ | \Phi _ S |  < r $. This means 
+	that we can find a root $ \lambda \in \subalg_{ \R } ^ * $ such that 
+	$ \left(  \lambda , \alpha  \right)   = 0 $ for all $ \alpha \in \Phi  _ S $. 
+	This implies that $ \left(  \lambda , \alpha  \right)   = 0 $, 
+	for all $ \alpha \in \Phi  $. This means that 
+	for $ H _ \lambda  = \lambda _ i H ^ i \in \subalg $, 
+	we get that 
+	\begin{align*}
+		\left[  H _ \lambda , H  \right]  &=  0 \forall H \in \subalg  \\ 
+		\left[  H _ \lambda ,  E^ \alpha  \right]   = \left(  \lambda , \alpha  \right)  E ^ \alpha &=  0 , 
+		\quad \alpha \in \Phi   \\ 
+	\end{align*}
+	This means that $ \lalg $ has a non-trivial ideal, $\text{ span }_{ \mathbb{ C } } 
+	\left\{  H _{ \lambda }  \right\}  $. This is a contradiction.
+ \end{proof}
+\end{claim}
+We can now choose the simple roots $ \alpha _{ \left(  i  \right)  } $ $ i = 1, \dots r $ 
+as a basis for $ \subalg _{\R  } ^ * $, 
+\[
+  \mathcal{ B }  = \left\{  \alpha \in \Phi  _ S   \right\}   = \left\{  \alpha _{ \left(  i  \right)  } 
+  , \quad i =  1 , \dots r \right\}  
+\]  The inner products of simple roots form what we 
+call the Cartan matrix. 
+\[
+ A_{ ij } = \frac{ 2 ( \alpha _{ ( i ) } , \alpha _{ ( j ) }  ) }{ \left(  
+ \alpha _{ ( j ) } , \alpha _{ ( j ) }\right)  }
+\] Consider the basis 
+\[
+   h ^ i  = h ^{ \alpha _ \left( i   \right)  }, e ^ i_{ \pm }  = e ^{ \pm \alpha _{ ( i ) }}
+\] Then we find that 
+\begin{align*}
+\left[  h ^ i , h ^ j  \right]  &=  0  \\ 
+\left[  h ^ i , e_{ \pm } ^ j  \right]  &=  \pm A ^{ ji } e _{ \pm } ^ j  \\
+\left[  e _{ + } ^ i , e _{ - } ^ j  \right]  & =  \delta _{ ij } h ^ i  \\
+\end{align*}
+By the way, we're not using summation convention 
+for the above. 
+When we know the Cartan basis, from these brackets, we can reconstruct the 
+whole Lie algebra. The $ e ^{ i  }_{ \pm }  $ only gives 
+us two step generators per simple root. We need to account 
+for extra step generators. We can obtain this 
+by looking at extra brackets. 
+For example, we have that 
+\[
+ \left[  e _ + ^ i , e _ + ^ j  \right]   = \left[  e ^{ \alpha ( i ) } , e ^{ \alpha \left( j  \right)  }  \right]  
+ \propto \begin{cases}
+	 e ^{ \alpha\left( i  \right)  + \alpha \left( j  \right)  } & \alpha ( i ) + \alpha ( j ) \in \Phi \\
+	  0 & \text{otherwise}
+ \end{cases}
+\] This gives us another step generator. 
+We can also consider a nested bracket, calculating 
+\[
+\left[  e_ + ^ i, \left[  e _ + ^ i , e _ + ^ j  \right]   \right]  \propto
+\begin{cases}
+  e ^{ \alpha ( j ) + \alpha \left(  2 i  \right)  } & \alpha ( j ) + 2 \alpha \left( i  \right)  \in \Phi \\
+  0 & \text{ otherwise }
+\end{cases}
+\] However, we know 
+something about lengths of root strings. We know that 
+\[	\alpha _{ \left( j  \right)  } + n \alpha _{ \left( i  \right)  } \in \Phi  \iff n < l _{ ij} 
+\] where $ l _{ ij }  $ is the length 
+of the $\alpha ( i ) $ string through $ \alpha _{ \left( j  \right)  } $ . 
+\[
+l _{ ij }  = 1 - \frac{ 2 \left( \alpha _{ \left( i  \right)  } , \alpha _{ \left( j  \right)  }  \right)  }{ 
+\left( \alpha ^{ \left(  i  \right)  } , \alpha _{ \left( j  \right)  }  \right)   }  = 1 - A ^{ ji }
+\] This leads to the Cerre Chevally relation, 
+which tells us when the ad map of a step 
+operator is reduced to zero after continuous nesting. 
+\[
+\left( \ad _{ e ^ i _{ \pm } }  \right)  ^{ 1 - A ^{ ji } } e_{ \pm } ^ j  = 0   
+\] 
+We're going to see concretely that we can build 
+up the entire root structure explicitly. 
+We have two parts of the story. 
+A finite dimensional simple complex 
+Lie algebra is uniquely determined 
+by its Cartan matrix. 
+Now, for the purposes of classification, we work towards 
+constraining possible Cartan matrices. 
+
+\subsection{Constraints in a Cartan Matrix}
+In this section, as part of our effort 
+to classify simple, complex Lie algebras, we're
+going to put some restrictions on our Cartan matrix. 
+Recall, our Cartan matrix is 
+the matrix of 'normalised' inner products of $ \alpha _{ \left( i  \right)  } \in \Phi  _ S$, 
+the simple roots. 
+\[
+A ^{ ij }  = \frac{ 2 \left(  \alpha_{ \left( i  \right)  } ,  \alpha _{ \left( j  \right)  } \right) }{
+\left( \alpha _{ \left( j   \right)  } , \alpha _{ \left( j  \right)  } \right)  } \in \mathbb{ Z} 
+\] This gives some constraints 
+\begin{enumerate}
+\item  Our first, most obvious observation is that $ A ^{ i i }  = 2 , \quad i = 1 , \dots r $. 
+	This means that the diagonal elements of our Cartan matrix 
+	are just $2 $'s. 
+\item Clearly, if an entry on an off-diagonal is zero,$ A ^{ ij }  = 0 \implies A ^{ ji }  =0 $.
+\item We appeal to the fact that $ \left( \alpha, \beta  \right)  \leq 0 , \quad \forall \alpha, \beta \in \Phi  _ S , \alpha \neq \beta $		This give us the condition $ A ^{ ij } \in \mathbb{ Z} _{ \leq 0 } $ for $ i \neq j $. This is quite a powerful 
+	condition. It means that elements on the off diagonal of 
+	the Cartan matrix are necessarily negative!
+\item  The determinant of our Cartan matrix is strictly positive, $ \det A > 0 $. This is a slightly less obvious condition. We'll prove this below!  
+\end{enumerate}
+
+We'll prove the last property. 
+Let's think about the inner product on the space where 
+our roots live. We consider 
+two generic elements 
+\begin{align*}
+\lambda &=  \sum_{ i = 1 } ^ r \lambda ^ i \alpha _{ ( i )  } \in \subalg_{ \R } ^ *  \\ 
+\mu &=  \sum_{ i = 1} ^ r \mu ^ i \alpha _{ \left( i  \right)  } \in \subalg_{ \R } ^ *    
+\end{align*}
+Let's refresh our memory on how we take inner products 
+which look like $ \left( \lambda , \mu   \right)  $. 
+The inner product uses the inverse Killing form as a matrix, as we 
+always have done. 
+\[
+\left( \lambda , \mu  \right)   = \left( \kappa ^{ - 1}  \right)  _{ ij } \lambda ^ i \mu ^ j , 
+\quad \left( \kappa ^{ - 1}  \right)  _{ ij}  = \left( \alpha _{ \left( i  \right)  } , \alpha_{ \left( j  \right)  }  \right)  
+\]  for $ i, j = 1 , \dots , r  $. 
+We have that $ \kappa ^{ - 1} $ is a real symmetric matrix. 
+Now, real symmetric matrices are diagonalisable, and we 
+exploit this fact to try show that the eigenvalues 
+on the diagonal are positive. 
+which means that we can a transformation 
+which can diagonalise this matrix so that 
+\[
+O \cdot  \left( \kappa ^{ - 1}  \right)  \cdot  O ^{ - 1}  = \text{diag} \left\{  \rho_1, \dots , \rho _ r  \right\}  , 
+\quad l_i \in \R 
+\]  Good, so now we can fully analyse the 
+eigenvectors of the Killing form. For each eigenvalue $ \rho $, associate the eigenvector 
+\[
+v _{ \rho }  = \sum _{ i = 1} ^ r v _{ \rho } ^ i \alpha _{ \left( i  \right)  } \implies 
+\sum _{ i = 1  }^ r \left( \kappa ^{ - 1}  \right)  _{ ij } v _{ \rho } ^ i  = \rho \sum _{ i = 1 } ^ r 
+\delta _{ ij } v _{ \rho } ^ i 
+\] Using these eigenvectors, 
+we can apply our inverse Killing form on it and 
+use the positive definiteness relation. This means that we 
+can write the Killing inner product explicitly as 
+\[
+\left( v _{ \rho } , v _{ \rho }  \right)   = 
+\sum_{ i, j = 1 } ^ r \left( \kappa ^{ - 1}  \right)  _{ ij } v _{ \rho } ^ i v _{ \rho } ^ j  = \rho \sum _{ i = 1 }^ r 
+\left( v _ r ^ i  \right)  ^ 2 = \rho \| v _{ \rho } \| ^ 2 
+\] This implies that the eigenvalue $ \rho $ is positive!
+Hence, the determinant of the matrix $\det \left( \kappa ^{ - 1}  \right)  > 0 $. 
+Now, we write the Cartan matrix as the product of the inverse 
+Killing form applied to pairs of roots, as well as a delta function 
+\[
+A ^{ ij }  = \sum_{ k = 1} ^ r S ^{ ik } D_ k ^ j , \quad S ^{ ik } = \left( \alpha _{ \left( i  \right)  } , 
+\alpha _{ \left( k  \right)   }  \right) = \left( \kappa ^{ - 1}  \right)  _{ ik }  , 
+\quad D ^ j _ k  = \frac{ 2 }{ \left( \alpha _{ \left( j  \right)  } ,  \alpha _{ \left( k  \right)  } \right)  } 
+\delta ^{ j }_ k 
+\] Now, since $ D $ is a block dia So $ \det A   = \det D \det S  > 0  $. 
+Now, we define a reducible Cartan matrix which 
+has block form 
+\[
+ A  = \begin{pmatrix}  A^{ ( i ) } & 0 \\ 0 & A ^{ \left( j  \right)  }  \end{pmatrix}  
+\] We have the final constraint for $ \lalg $ to be simple. 
+
+\subsubsection{Examples} 
+For example, we we have $ r  = 1 $, we require that 
+$ A = 2 $.  
+For $ r = 2 $ we first require that we don't have block diagonals. 
+Hence, 
+\[
+ A  = \begin{pmatrix}  2 & -m \\ -n & 2  \end{pmatrix}  , \quad m , n \in \mathbb{ Z} _{ \geq 0 } 
+\] Our condition that our determinant 
+is positive however imposes the constraint that $ 4  - m n > 0 $. 
+This means that $ (m , n ) = \left(  1, ,1  \right), \left( 1, 2  \right) , \left( 1, 3  \right) $. 
+Now, we have some degeneracy here. For 
+example, we can permute the rows and columns and still 
+we get the same thing. 
+We encode the data in the Cartan matrix diagramatically
+in a Dynkin diagram. 
+
+\subsection{Dynkin Diagrams} 
+We draw a node $ O $ for each $ \alpha _{ \left( i  \right)  } \in \Phi  _ S , i = 1, \dots r $. 
+We join nodes $ \alpha _{ \left( i  \right)  } $, and $ \alpha _{ \left( j  \right)  }$, 
+max $ \left\{  | A ^{ ij } | , | A ^{ ji } | \in \left\{  0 , 1, 2, 3  \right\}  \right\} $. 
+If roots have different legnths, then draw an arrow from 
+long to short. 
+This means that we can 
+whittle our problem down to all the possible Dynkin diagrams. :w
+
+Now we look at the simple case
+
+\subsection{Reconstructing Lie algebras from the Cartan Classification } 
+Recall that in determining the full set of roots, 
+we used the fact that the simple roots 
+form an integer basis for all the roots! 
+If you want to construct the Lie algebras from the simple roots, 
+we first construct the simple roots, then consider the root strings. 
+We work with what we call the level of a root $ \alpha \in \Phi_ + $ , 
+which is the sum $ \sum _ i c _ i $ where $ \alpha  = \sum _ i c _  i \alpha _ i $. 
+
+The Cartan matrix determines, up to a single 
+overall direction and normalisation, our simple roots 
+$ \alpha _{ \left( i  \right)  } i = 1, \dots r$. 
+Why is this? Well, we know that 
+\[
+A ^{ ij }  = 2 \frac{\left( \alpha _{ \left( i  \right)  } , \alpha ^{ \left( j  \right)  }  \right)  }{ 
+\alpha _{\left( j  \right)  }  , \alpha _{\left( j  \right)  } }  = 
+2 \frac{ | \alpha _{ \left( i  \right)  } | }{ | \alpha _{ \left( j  \right)  }| }
+\cos \phi _{ ij } 
+\] Now, if we know the angle between all the roots, 
+this is enough to sufficiently determine all of our roots in the system, 
+up to a choice of a normal vector in $ \R ^ n $. 
+
+\begin{example}
+Consider $ \lalg  = A_2 $. Consider the Dynkin diagram 
+which is two nodes connected by a line. Label the nodes $ 1 $ and $ 2 $. 
+The because we just have one line, our Cartan matrix must be 
+\[
+	A = \begin{pmatrix}  2 & - 1 \\ -1 & 2  \end{pmatrix} 
+\] We conclude hence that 
+$ \lalg $  has two simple roots, which obey 
+\[
+	2 \frac{\left( \alpha, \beta  \right)  }{ \left( \alpha , \alpha  \right)  }  = \frac{2
+	\left( \alpha, \beta  \right)  }{ \left( \beta , \beta  \right)  }  = - 1
+\]  This implies that the magnitude is the same, 
+so $ | \alpha |  = | \beta | $. We also have that 
+ \[
+ \cos \phi _{ \alpha, \beta }  =  - \frac{1}{2 } , \implies \phi _{ \alpha, \beta }  = 2 \frac{\pi}{3 }
+\] 
+The next thing to do is find the remaining roots. By properties of 
+$\alpha, \beta  \in \Phi  _ S $, we know that 
+$  \pm ( \alpha - \beta )  $ is not in $ \Phi  _ $. 
+We can also deduce the length of the $ \alpha $ string through $ \beta $. 
+This is given by the length 
+\[
+	l _{ \alpha, \beta }  = 1  - 2 \frac{( \alpha , \beta ) }{ ( \alpha, \alpha ) }  = 2
+\] We can also consider the $ \beta $ string through $ \alpha $ 
+which we have as length 
+\[
+	l _{ \beta , \alpha }  = 1 - 2 \frac{\left( \beta , \alpha  \right)  }{ \left(  \beta , \beta  \right)  } = 2
+\] This means, that, considering the possible roots of the 
+form $ \alpha + n \beta \in \Phi  $ and also $ \beta + \tilde{ n } \in \Phi  $, 
+we've discovered that our only allowed values of 
+$ n $ and $ \tilde{ n }  $ are in the set $ \left\{  0 , 1 \right\}  $. 
+This means the new root we find is just $ \alpha + \beta $. 
+Check that $ \alpha $ and $ \beta $  strings 
+through $ \alpha + \beta $ give nothing new. 
+hence, our full root system is 
+\[
+	\Phi   = \left\{  \pm \alpha, \pm \beta , \pm ( \alpha + \beta )  \right\} 
+\] In addition, the normalisation of 
+this object satisfies 
+\[
+	\left( \alpha + \beta , \alpha + \beta  \right)   = \left( \alpha, \alpha  \right)  
+	+ \left( \beta , \beta  \right)  + 2 \left( \alpha, \beta  \right)  
+	= \left( \alpha, \alpha  \right)  [1 + 1 - 1] = \left( \alpha, \alpha  \right) 
+\] (Draw a diagram here). 
+This means that we can find 
+that all of our Lie algebra elements are 
+\[
+ \left\{  H ^ 1 , H ^ 2 , E ^ \alpha , E ^ \beta , E ^{ \alpha + \beta } , 
+ E ^{ - \alpha } , E ^{ - \beta } , E ^{ - \alpha - \beta } \right\} 
+\] To compute this, we have to compute the remaining 
+brackets using the Jacobi identity. 
+We find that the Lie algebra $ \lalg  = A_ 2 \sim \mathcal{ L } _{ \mathbb{ C }} \left( SU ( 3)  \right) $. 
+This means that our dimension squares up as $ 3 ^ 2  - 1 = 8 $, 
+which is consistent. 
+From now on, we'll try to come up with 
+an algorithm to reconstruct Lie algebras. 
+
+\end{example}
+
+\subsection{Representations of $ \lalg $ } 
+Because the Cartan Weyl basis was valid for all simple Lie algebras, 
+we'll use the same idea here. 
+If we let $ R $ be a represetnation of $ \lalg $ if dimension $ N $, 
+we can then construct a representation in terms of 
+$ n \times n $ complex matrices. 
+\begin{align*}
+H ^ i & \to R ( H ^ i ) \in \text{Mat} _ n ( \C ) \\
+E ^{ \alpha } & \to R \left(  E ^ \alpha  \right)  \in \text{Mat} _ n ( \C) 
+\end{align*} where $ i = 1 , \dots r $ and $ \alpha \in \Phi $. 
+
+Since we have a representation, this means
+that our Lie brackets are necessarily preserved. By 
+the definition of our Cartan subalgebra, since elements $ H ^i  $ 
+commute amongst themselves, and are diagonalisable, this means 
+that $ \left[  R \left(  H ^ i  \right)  , R \left( H ^ j  \right)    \right]   =0 $. 
+Now, we will for now make the assumption that $ R \left(H ^ i   \right)  $
+are diagonalisable separately. Using the 
+fact that these matrices commute, we then conclude that 
+$ \left\{  R (H ^ i ) \right\} $ are simultaneously diagonalisable. 
+This means that we can write our representation space $ V \simeq \C ^{ N  }$ 	 
+is spanned by our simultaneous eigenvalues. Furthermore, 
+each eigenvalue has an associated linear subspace. 
+This means that our representation space can be decomposed as 
+\[
+V = \bigoplus_{ \lambda \in S _ R } V _ \lambda 
+\] where, for all $ v \in V $ we have $ \lambda ^ i \in \C $  
+and $ i   = 1 , \dots r $. 
+We have the property that $ R \left( H ^ i  \right)  v = \lambda ^ i v $.
+We call our $ \lambda $ eigenvalues in $ h ^ * $ 
+as weights of our representation. 
+
+Note that, unlike our $ \mathcal{ L } ( SU ( 2 ) ) $ case, 
+our weights $ \lambda \in S _ R \subset \subalg ^ * $ 
+may have multiplicities $ m _ \lambda  = \dim v _ \lambda \geq 1 $.  
+Now, we can consider the action of 
+step operators $ R\left(   E^ \alpha  \right)  , \alpha \in \Phi  $
+acting on our $ v \in V _{ \lambda } $. 
+We do a very similar manoeuvre as before, 
+where we swap things at the cost of a commutator. 
+\[
+R \left( H ^ i  \right)  R \left( E ^ \alpha  \right)  = R \left( E ^ \alpha  \right)  
+R \left( H ^ i  \right)  v + \left[  
+R ( H ^ i ) , R \left( E ^ \alpha  \right)  \right]  v 
+\]  But, we know the commutator - it's a root! 
+So
+\[
+R \left( H ^ i  \right)  R \left( E ^ \alpha  \right)  v  = 
+\left( \lambda ^ i + \alpha ^ i  \right)  R \left( E ^ \alpha  \right)  v 
+\] Thus, we have 
+that for all eigenvectors $ v \in V _ \lambda $, we find that 
+when we apply the step operators, 
+$ R \left(  E ^ \alpha \right)  v  \in V _{ \lambda + \alpha } $  if 
+$ \alpha + \lambda \in  S_  R$ , and is zero otherwise. 
+
+Our next step is to consider the action of $ Sl ( 2) _ \alpha $ 
+generators (which are normalised) 
+$ \left\{  R ( h ^ \alpha ), R ( e ^ \alpha ) , R ( e ^{ - \alpha  } )   \right\}  $ on $ V $. 
+Recall that these have relations
+\begin{align*}
+	\left[  R ( h ^ \alpha ), R ( e ^{ \pm \alpha } )   \right] &= \pm 2 R \left( e ^{ \pm \alpha }  \right)   \\
+	\left[  R ( e ^ \alpha ) , R ( e ^{ - \alpha } )  \right]   & = R ( h ^ \alpha ) 
+\end{align*}
+each generator defines a linear map $ V \to V $. 
+$ V $ is a representation space for some representation 
+of $ Sl ( 2)_ \alpha  $. 
+Note that $ R _ \alpha $ is finite dimensional but not necessarily irreducible. 
+We have that for all $ v \in V _ \lambda $, 
+\[
+	R ( h ^ \alpha ) v = \frac{ 2 }{ \left( \alpha, \alpha  \right)  } 
+\left( \kappa ^{ - 1}  \right)  _{ ij } \alpha ^ j R \left(  H ^ j  \right)  v = 
+\left( \frac{2}{\left( \alpha, \alpha  \right)  } \left( \kappa ^{ - 1}  \right)  
+_{ij } \alpha ^ i \lambda ^ j \right)  v  
+\] But notice that in the last line, we have that 
+the eigenvalue must be an integer. 
+So, 
+\[
+2 \frac{\left( \alpha, \lambda  \right)  }{ \left( \alpha , \alpha  \right)  } \in \Z \quad
+\forall \lambda \in S _ R , \alpha \in \Phi  
+\]
+
+This last condition comes from the fact the eigenvalues needs to be integers.  If $ \lambda $ was a root, we 
+learned something that we already know. 
+ Roots of the lie algebra are the weights of the adjoint representation, which 
+ is given by 
+ \[
+	 R _{ \text{ adj } } X \in \lalg \to R _{ \text{ adj } } ( X)  = \ad_ X 
+ \]
+
+ \pagebreak
+\section{Weight and root lattices} 
+From our property of simple roots, we can write any 
+root $ \beta \in \Phi  $ as a linear combination of 
+simple roots. 
+\[
+	\beta = \sum _{ i = 1 } ^ r \beta ^ i \alpha _{ \left( i  \right)  } , \quad 
+	\beta ^ i \in \Z 
+\] This motivates us to define the root lattice, 
+which is the set of integer linear combinations of the 
+simple roots. 
+\begin{defn}{(Root Lattice)}
+	We define the root lattice, denoted $ \mathcal{ L } \left[  \lalg  \right]  $
+	as 
+	\begin{align*}
+	 \mathcal{ L } \left[  \lalg  \right] &=  \left\{  \sum_{ i= 1 } ^ r 
+	 m ^ i \alpha _{ \left( i  \right)  } , \mid m ^ i \in \Z , i = 1 , \dots r \right\}   \\
+					      &=  \text{span}_{ \Z } \left\{  \alpha _{ \left( i  \right)  } 
+					       , \mid i = 1 , \dots r \right\} 
+ \end{align*}
+\end{defn}
+
+ Before we carry on, let's recall an important fact about weights 
+ and the quantisation condition placed on the inner product. 
+ A weight vector $ \lambda $  is the vector satisfying 
+ \[
+  R \left( H ^ i  \right)  v_{ \lambda}  = \lambda ^ i v_{ \lambda } 
+ \]  (this works since the $ R \left( H ^ i \right)   $ are simultaneously diagonalisable). 
+ We had earlier that the Killing form inner product with roots are 
+ quantized as follows. 
+ \[
+	 2 \frac{ \left( \alpha , \lambda  \right)  }{ \left( \alpha , \alpha  \right)  } \in \Z , 
+	 \quad \forall \lambda \in S _ R, \quad \alpha \in \Phi  
+ \] 
+ It's now convenient to define simple co-roots, 
+ which is a nice normalisation that we apply so that we 
+ can simplify the condition above to just taking an inner product We set 
+ \[
+	 \alpha^ V _{ \left( i  \right)  }  = \frac{2}{\left( \alpha_{\left( i  \right)  } , \alpha _{\left( i  \right)  } \right)  } \alpha_{ \left( i  \right) }
+ \] for $ i = 1, \dots r $. 
+ We then define the corresponding co-root lattice 
+ \[
+	 \mathcal{ L } ^ V \left[  \lalg  \right]   = \text{span}_{ \mathbb{ Z } } \left\{  
+	 \alpha _{ \left( i  \right)  }^ V , i  = 1 , \dots, r \right\} 
+ \] We can now define the weight lattice $\mathcal{ L } _ W \left[  \lalg  \right]  $  
+ to be the dual lattice to the co-root lattice. When we say dual lattice, 
+ we mean the lattice with elements such that when we take the 
+ inner product with elements in our original lattice, we get an integer. 
+
+ \begin{defn}{(Weight lattices)}
+ We denote the dual with a star.
+ A weight lattice is the dual of our 
+ co-root lattice under the inner product 
+ given by the Killing form. 
+ \[
+  \mathcal{ L } _ W \left[  \lalg  \right]  
+   =  \mathcal{L  } ^{ V _ * } \left[  \lalg  \right]   = 
+   \left\{  \lambda \in \subalg _{ \R  } ^ * \mid \left( \lambda , \mu  \right)  \in \Z , \quad 
+   \forall \mu \in \mathcal{ L } ^ V \left[  \lalg  \right]  \right\}  
+ \] In other words, the dual lattice 
+ is defined to be the lattice such that 
+ for every element, our dot product with 
+ the original lattice system is an integer. 
+ This, if we have a vector $ \lambda \in \mathcal{ L } _W \left[  \lalg  \right]  $, 
+ this is equivalent to 
+ \[
+	 \frac{ 2 \left( \alpha _{ \left( i  \right)  } , \lambda  \right)  }{ 
+	 \left( \alpha _{ \left( i  \right)  } , \alpha ^{ \left( i  \right)   }  \right)  } \in \Z \quad 
+	 i = 1 , \dots ,r
+ \] However, this means that necessarily the weights 
+ of any finite dimensional representation $ R $ of 
+ $ \lalg $ lie in $ \mathcal{ L } _ W  \left[  \lalg  \right]  $, 
+ precisely due this quantisation condition. 	
+ \end{defn}
+
+ This dual lattice can be defined in terms of a dual basis. 
+ This is another way of describing a dual lattice.
+ We see the dual basis a lot in condensed matter physics 
+ for example. And, it's always useful to compute an explicit 
+ basis for the dual lattice. Dual lattices have the property 
+ that they're a set of vectors which are in a sense 'orthogonal 
+ to our original lattice'. 
+ We can construct the dual basis for $ \mathcal{ L }^ V \left[  \lalg  \right]  = 
+ \mathcal{ L } _ W \left[  \lalg \right]  $. 
+ This means that we can define the basis 
+ \[
+	 \mathcal{ B } ^ *  = \left\{  w_{ \left( I  \right)  } , \quad i  = 1 , \dots r  \right\} , 
+	 \quad \left( \alpha^ V  _{ \left( i  \right)  }, w _{ \left( j   \right)  } \right)   = 
+	 \frac{ 2 \left( \alpha _{ \left( i  \right)  }, w _{ \left( j  \right)  } \right) }{ 
+	 \left( \alpha _{ \left( i  \right)  } , \alpha _{ \left( i   \right)  }  \right)  }  = \delta _{ ij }
+ \] The basis $ w _{ \left( i   \right)  } , i = 1 , \dots r $ are known as 
+ fundamental weights. 
+ As simple roots span $ h _{ \R } ^ * $, we can write out 
+ weight vectors as a linear combination of our simple roots. 
+ \[
+	 w_{\left(  i  \right)  } = \sum _{ j = 1 } ^ r B _{ ij } \alpha _{ \left( j  \right)  } , 
+	 \quad B _{ ij } \in \R , i  , j = 1 , \dots r 
+ \] Our condition for the dual basis means 
+ that, if we expand out $ w _{ \left( i  \right)  } $ in 
+ the orthogonality condition in terms of the basis vectors, we have that \[
+	 \sum_{ k = 1 } ^ r \frac{ 2 \left( \alpha _{ \left( i  \right)  } , \alpha _{ \left( k  \right)  }  \right)  }{ \left(  \alpha_{ \left( i  \right)  } , \alpha _{ \left( i  \right)  }    \right)  } B _{ jk}  = \delta _{ ij}
+ \] Now, what's amazing is that the term on the right hand side 
+ of the sum is exactly our Cartan matrix. So, 
+ $ B $ as a matrix is the inverse of our Cartan matrix. 
+ Thus, we get that 
+ \[
+	 \sum _{ k = 1 } ^ r B _{ jk } A ^{ ki } = \delta \indices{ ^ i _ j  }  
+ \] This means, that inverting, 
+ we have that 
+ \[
+	 \alpha _{ \left( i  \right)  }  = \sum _{ j = 1 } ^ r A ^{ ij } w _{ \left( j  \right)  } 
+ \] Crucially, this means 
+ that our simple roots can be written as an integer 
+ linear combination of weight vectors, and this means that our simple roots also lie in 
+ our weight lattice! In other words, 
+ the lattice generated by our simple roots 
+ is a sublattice of our weight lattice, $ L _{ \left( i  \right)  } \in \mathcal{ L } _ W \left[  \lalg  \right]  $. 
+ \begin{example}
+ 	If we choose $ \lalg  = A _ 2 $, then if we 
+	have that 
+	\[
+		A  = \begin{pmatrix}  2 & - 1 \\ - 1 &  2  \end{pmatrix}  
+	\] This means that, writing out our roots in terms of simple roots. 
+	\begin{align*}
+		\alpha = \alpha _{ \left( 1  \right)  }  & = 2 w _{ \left( i  \right)  }  - w _{ \left( 2  \right)  } \\
+		\beta  = \alpha _{ \left( 2  \right)  }   &= - w _{ \left( i  \right)  } + 2 w _{ \left( 2  \right)  }
+	\end{align*}
+	Additionally, we can invert these relations to get 
+	a schematic of how the weights and the simple roots look 
+	together in a single diagram. Inverting the above, we get the relation 
+	\begin{align*}
+		w_{ \left( 1  \right)  } &=  \frac{1}{3 } \left( \alpha + 2 \beta  \right)   \\
+		w_{ \left( 2  \right)  } &=  \frac{1}{3 } \left( 2 \alpha + \beta  \right) 
+	\end{align*}
+	\begin{figure}[h]
+		\centering
+		\input{weight-lattice.pdf_tex}
+		\caption{A diagram of the weight lattice including 
+		our fundamental weights as well as our simple roots 
+	$ \alpha, \beta $ which we derived earlier.}%
+		\label{fig:weight-lattice}
+	\end{figure}
+ \end{example}
+The key point here is that for any weight $ \lambda \in S _ R 
+\subset \mathcal{ L } _ W \left[  \lalg  \right] $, we can expand what $ \lambda $ is in terms of the
+basis vectors: the fundamental weights. 
+	\[
+		\lambda = \sum _{ i = 1 } ^ r \lambda ^ i w _{ \left( i  \right)  }, \quad \lambda ^ i \in \Z, 
+		i = 1 , \dots , r 
+	\] We call set of integer coefficients $ \left\{  \lambda ^ i  \right\} $
+	the Dynkin labels of weight $ \lambda $. For example, 
+	we have that the label $ w_{ \left( 2  \right)  } $ is
+	represented by the Dynkin label $ \left( 0 , 1  \right)  $, 
+	and $ w _{ (1 ) } $ is represented by the Dynkin label 
+	$ ( 1, 0 ) $. 
+
+ \subsection{Highest weight representation}
+ Now that we've looked at weights 
+ Every finite dimensional representation $ R $ of $ \lalg $ 
+ has a highest weight $ \Lambda = \sum _{ i = 1 } ^ r \Lambda ^ i w _{ \left( i  \right)  }  
+ \in S _ R $, where our coefficients $ \Lambda^ i \in \Z  $ and 
+ $ \Lambda ^ i \ge  0 $. 
+ Our key feature here is that step up operators 
+ annihilate our highest weight vector, which 
+ we call $ v _{ \Lambda } \in V $, which has 
+ the property that 
+ \[
+  R \left( H ^ i  \right)  v _{ \Lambda } = \Lambda ^ i v _{ \Lambda } i  = 1, \dots r 
+ \] These are annihilated by raising operators, 
+ where for all $ \alpha $ in our set of positive roots $ \Phi  _ + $, 
+ we require that 
+ \[
+  R \left( E ^{ \alpha }  \right)  v _{ \Lambda } = 0 
+ \] Less obviously, we will not prove that irreducible 
+ representations have a unique highest weight vector. 
+ The remaining weights, just as in the case of 
+ representations of $ \mathcal{ L } \left( SU ( 2)   \right)  $,
+ $ \lambda \in  S_ R $ are generated by lowering operators 
+ $ R \left( E ^{ - \alpha }  \right)  $, for $ \alpha \in \Phi   _ + $. 
+This means that all remaining weights $ \lambda \in S _ R $
+have the form 
+\[
+	\lambda = \Lambda - \mu , \quad \mu = \sum_{ i = 1 } ^ r \mu ^ i \alpha _{ \left( i  \right)  } , 
+	\mu ^ i \in \Z _{ \geq 0 } 
+\] What we're generating is some subtraction by
+some linear combination of our the simple roots. So,if we have the highest weights, 
+we can use an algorithm to decide what all the remaining weights are, 
+which comes directly from the $ SU( 2) $ structure. 
+Recall that the highest weight of an $ SU ( 2) $ representation 
+determines the dimension of the representation. 
+The following algorithm applies this idea but 
+for each $ \mathcal{ L } \left( SU ( 2)  \right)  $ subalgebra. 
+Our algorithm is the following 
+
+For any finite dimensional representation of  $ \lalg $, 
+if $ \lambda = \sum \lambda ^ i w _{ \left( i  \right)  } \in S _ R $, this 
+means that $ \lambda - m _{ \left(  i  \right)  } \alpha _{ \left( i  \right)  } \in S _ R $, 
+where our coefficient $ m _{ \left( i  \right)  } \in \Z $ and $ 0 \leq 
+m _{ \left( i  \right)  } \leq \lambda ^ i $. 
+Hence to find all the weights, 
+from our fundamental to $ A _ 2 $ with Dynkin labels
+$ \left( \Lambda ^ 1, \Lambda ^ 2  \right)  = \left( 1, 0  \right)  $. 
+Our highest weight $ \Lambda  = w _{ \left( 1  \right)  } \in S _ f $, 
+this implies that 
+\begin{align*}
+	\Lambda  - \alpha _{ \left( 1  \right)  } &=  w _{ \left(   1  \right)  }  - 
+	\left( 2 w _{ \left( 1  \right)  }  - w _{ \left( 2  \right)  }  \right)  \\ 
+						  &=  - w _{ \left(  1  \right)  } + w _{ \left( 2  \right)  } 
+						  \in S _f \\ 
+\end{align*}
+Now, we can subtract another one 
+\begin{align*}
+	\lambda - \alpha _{ \left( 2  \right)  } &=  - w _{ \left(  1  \right)  } + w _{ \left(  2  \right)  } 
+	- \left(  2 w _{ \left( 2  \right)  } - w _{ \left( 1  \right)  }  \right)  \\ 
+						 &=  - w _{ \left( 2  \right)  } \in S _ f  \\
+\end{align*} 
+This representation has $ \dim 3 $ which explains why $ A _ 2 \simeq \mathcal{ L } _{ \C } \left( SU ( 3 )  \right) $
+
+
+\subsection{Irreps of $ A _ 2 \simeq \mathcal{ L } _{\C } \left(  SU ( 3 )  \right) $ } 
+For each integral dominant weight, 
+the set of weights with each Dynkin label positive
+\[
+	\Lambda  = \Lambda ^ 1 w _{ \left( 1  \right)  } + \Lambda ^ 2 w _{ \left( 2  \right)  } , \quad \Lambda ^ 1 , \Lambda ^ 2 \in \Z, \Lambda ^ 1 , \Lambda ^ 2 \geq 0 
+\] Now, for each integral dominant weight, 
+we get and irreducible representation $ R ( \Lambda ^ 1 , \Lambda ^ 2 ) $. 
+The dimension of this representation is 
+given by (without proof), 
+\[
+	\dim R _{ \left( \Lambda ^ 1, \Lambda ^  2  \right)  }  = 
+	\frac{1}{2 } \left( \Lambda ^  1  + 1\right)  \left(\Lambda ^  2+ 1   \right) 
+	\left( \Lambda ^ 1 + \Lambda ^ 2 + 1  \right) 
+\]  This is actually symmetric under exchange 
+of $ \Lambda ^ 1 $ and $ \Lambda ^ 1 $. 
+Now, for $ \Lambda ^ 1 \neq \Lambda ^ 2 $, then pairs 
+of representations are conjugates of one another. 
+\[
+	R _{ \left( \Lambda ^  1 , \Lambda ^ 2  \right)  }  = 
+	\overline{ R } _{ \left( \Lambda ^ 2 , \Lambda ^ 1  \right)  }
+\] Now, the $ A _ 2 $ irreps of lowest dimension 
+are: 
+
+\begin{table}[htpb]
+	\centering
+	\caption{caption}
+	\label{tab:label}
+	\begin{tabular}{c | c c }
+		$ R _{ \left( 0 , 0  \right)  } $ & 1 & trivial \\
+		$ R _{ \left( 1, 0   \right)  } $ & $ \under{3}$ & fundamental \\
+		$ R _{ \left( 0 , 1  \right)  } $ & $ \overline{ \under {3 }} $ & anti-fundamental \\
+		$ R _{ \left( 2, 0  \right)  } $ & \under{6} &  - \\
+		$ R _{ \left( 0 , 2  \right)  } $ \overline{\under{6}} & - \\
+		$ R _{ \left( 1, 1  \right)  } $ & \under{8} & adjoint because unique 
+	\end{tabular}
+\end{table}
+
+We have that $ \dim \left( A _ 2  \right)   = \dim \left( \mathcal{ L } _{ \C } 
+\left( SU ( 2)  \right)  \right)   = 8 $. 
+We extract the weights from this algorithm from the highest weight. 
+We start from the highest weight $ \left( 1, 1  \right)  \to w _ 1 + w _ 2 $. 
+(Insert diagram here)
+Our weight set, from 
+the algorithm using Dynkin labels, gives the weight set 
+\[
+	S_{ \left( 1, 1,  \right)  }  = \left\{  
+	w_ 1 + w _ 2 = \alpha + \beta , \alpha, \beta , 0 , 
+- \alpha, - \beta , - \alpha - \beta \right\}  
+\]  These are indeed the weights of the adjoint represetnation, 
+and the root set of $ A _ 2 $. Plus, we have zero, 
+which is a Cartan generator. 
+So, the representation space for this representation 
+\[
+ \lalg = \left\{  E ^ \alpha, E ^{ - \alpha }, E ^{ \beta }, 
+ E ^{ - \beta } , E ^{ \alpha + \beta } , E ^{ - \alpha - \beta } , 
+ H ^ 1 , H ^ 2 \right\} 
+\] However, this algorithm doesn't give us multiplicities
+of weights. We need better machinery, but we can still check 
+it against the formula for the dimension. 
+The dimension, hence, of $ \dim R _{ \left( 1, 1  \right)  } = 8$, 
+
+\subsection{Tensor products} 
+In a composite system, we need to 
+understand how to deal with this. 
+We will revist this topic with the 
+technology we have from the Cartan Classification. 
+We have two irreducible representations, $  R_{ \Lambda  } , R _{ \Lambda ' } $, 
+irreps of $ \lalg$. Let's 
+suppose these have representation spaces $ V _{ \Lambda } $ and $ V _{ \Lambda ' } $. 
+We decompose this in terms of the 
+eigenspaces of each weight. 
+\[
+ V_{ \Lambda } = \bigoplus_{ \lambda \in S _{ \Lambda } } V _{ \lambda } , \quad 
+ V _{ \Lambda ' } \in \bigoplus_{ \lambda ' \in S _{ \Lambda ' } } V _{ \lambda ' } 
+\] We label the weight sets 
+of these representations as $ S _{ \Lambda } , S _{ \Lambda ' } \subset 
+\subalg ^ * _{ \mathbb{ R}  } $. 
+Now, if $ \lambda \in S _{ \Lambda } $ and $ \lambda ' \in S _{ \Lambda ' }  $, 
+then we have that the sum of these things in in the 
+weight lattice, so we have that 
+$ \lambda + \lambda ' \in \mathcal{ L } _ W \left[  \lalg  \right]  $.
+So, it's a wieght of the tensor product representation $ R _{ \Lambda } 
+\otimes R _{ \Lambda ' } $. 
+
+To prove this, jyst recall that $ v _{ \lambda } \in V_{ \Lambda } $ 
+implies that $ R _{ \lambda } \left( H ^ i  \right)  v _ \lambda  = \lambda ^ i v _{ \lambda } $. We similarly have the same thing for $ v _{ \lambda ' } \in V _{ \lambda ' } $. 
+The basis vectors for the 
+representation space $ V_{ R_{ \Lambda \otimes R _{ \Lambda ' } } } $ 
+is just the tensor prodyct of the representation space : 
+\[
+ V _{ \Lambda } \otimes V _{ \Lambda ' }  = 
+ \left\{  v _ \lambda \otimes v _{ \lambda ' } , \quad 
+ \lambda \in S _{ \Lambda } , \lambda ' \in S _{ \lambda ' } \right\}  
+\] To study the eigenvalues which come 
+of this, we act on the tensor products with 
+the tensor product of representations. 
+\begin{align*}
+	\left( R _{ \Lambda } \otimes R _{ \Lambda ' }  \right)  \left( H ^ i  \right)  
+	\left( v _{ \lambda } \otimes v _{ \lambda ' }  \right)  &=  
+	R _{ \Lambda } \left( H ^ i  \right)  v _{ \lambda } \otimes v _{ \lambda ' } 
+	+ v _{ \lambda } \otimes R_{ \Lambda  ' } \left( H ^ i  \right)  v _{ \lambda ' } \\
+								 &=  \left( \lambda + \lambda '  \right)  \left( v _{ \lambda  } \otimes v _{\lambda ' }  \right)  
+\end{align*}
+So, for a finite 
+simple complex Lie algebra $ \lalg $, 
+we have the fact stated earlier on that 
+the tensor product is fully reducible as 
+the direct sum of representations, 
+This means that 
+\[
+ R _{ \Lambda } \otimes R _{ \Lambda  ' }  = 
+ \bigoplus_{ \Lambda '' \in \mathcal{ L } _ W } \mathcal{ N } _{ \Lambda , \Lambda  ' } ^{ \Lambda '' } R _{ \Lambda '' } 
+\] Let's take the example, of $ \lalg  = A _ 2 $ . 
+We tensor product $ R _{ \left( 1, 0  \right)  } \otimes R^{ \left( 0 ,1  \right)  } $. 
+These  correspond to the weight set 
+\[
+	S _{ \left( 1, 0  \right)  }  = \left\{  w _ 1 , w_ 2 - w _ 1 , - w _ 2  \right\}  
+\] Counting the mutliplicities, 
+we have that the multiplicity sum is 
+\[
+	S _{ \left( 1, 0  \right)  \otimes \left( 0 , 1  \right)  }  = 
+	S_{ \left( 1, 0  \right)  } ' + ' S _{ \left( 0 , 1  \right)  } 
+	 = \left\{  2 w _ 1 , w _ 2, w_ 2 , w _ 1 - w _ 2, 
+	 w _ 1  - w _ 2 , - w _ 1, - w_ 1 , - 2 w_ 1 - 2 w_ 2 , -  2w _ 2 \right\} 
+\] Now, we can write this as the union of 
+separate weight sets, decomposing this into 
+the weight sets we get from our algorithm. 
+This is equal to 
+\[
+ =  \left\{  2 w_ 1 , w _ 2, w_ 1 - w _ 2, - w_ 1, - 2 w _ 1 - 2 w _ 2,  - 2 w_ 2  \right\}  
+ \cup \left\{  w_ 2, w _ 1 - w _ 2 , - w _ 1  \right\} 
+\] We can check that the dimensions line up. 
+\[
+	R_{ \left( 1, 0  \right)  } \otimes R_{ \left( 1, 0  \right)  }  = R _{ \left( 2, 0  \right)  } \oplus R _{ \left( 0 , 1  \right)  }
+\] This is okay since $ 3 \times 3 $ = $ 6 + 3 $. 
+
+\section{Gauge theory} 
+What is a Gauge theory? Rather than 
+being something which acts physically on systems, 
+a gauge theory is about redundancy in describing physical systems. 
+Consider the gauge transformation of electromagnetism. We set 
+\[
+ a _ \mu = \left( \phi , A_i  \right)  
+\] Under a gauge transformation
+\[
+	a _ \mu \to a _ \mu + \partial  _ \mu \alpha , \alpha = \alpha \left( x, t  \right) 
+\] we have that this leaves the fields 
+invariant. 
+\[
+ f _{ \mu \nu }  = \partial  _ \mu a _ \nu - \partial  _ \nu a _ \mu 
+\] We consider the Lagrangian
+\[
+ \mathcal{ L } _{ \text{EM } }  = - \frac{1}{4 g ^ 2 } f _{ \mu \nu }f ^{ \mu \nu  } 
+\] For the purposes of this course, 
+we'll rescale our variables and make them complex. 
+\[
+ A _ \mu  =  -i a _ \mu \in i \R , \quad F _{ \mu \nu }  = - i f _{ \mu \nu } 
+\] Let's briefly recall 
+how this theory couples to matter. 
+Let's now introduce a complex scalar field, which 
+takes a point in space-time to the complex numbers. 
+\[
+ \phi : \R ^{ 3, 1 } \to \C 
+\] with Lagranfian 
+\[
+ \mathcal{ L } _{ \phi }  = \partial  _ \mu \phi ^ * \partial  ^ \mu \phi 
+  - W \left( \phi \phi ^ *  \right) 
+\] This Lagrangian is invariant under a global $ U ( 1) $
+symmetry. This means that we 
+can transform the fields as 
+\[
+ \phi \to g \phi , \quad \phi ^ * \to g ^{ - 1 } \phi ^ * 
+\] where we write $ g = \exp \left(  i \delta  \right)  \in U ( 1) $, 
+where  $ \delta \in [ 0 , 2 \pi )  $. 
+Consider now the infinitesimal symmetry generator, 
+we write $ g \in \exp \left( \epsilon X  \right)  , \epsilon \ll 1 $. 
+We set $ X \in \mathcal{ L } \left( U ( 1)  \right) \simeq i \R $, 
+so that 
+\[
+	g \simeq \left(  1 + \epsilon X _ O ( \epsilon ^ 2 )  \right) 
+\] 
+We do a Taylor expansion
+\[
+ \phi \to \phi + \delta _ X \phi, \quad \phi ^ * \to \phi ^ * + \delta _{ X } \phi ^ * 
+\] where $ \delta _ X \phi  = \epsilon X \phi $, and the negative 
+for $ \delta _ X \phi ^ * $. 
+Symmetry imposes $ \delta _ X \mathcal{ L }  = 0 $, 
+and we call the Lagrangian 'symmetric'. 
+Now, Noether's theorem 
+implies that we have a conserved charge. 
+Let's see what we can do to couple this system 
+to electromagnetism. We take the $ U ( 1 ) $ symmetry, 
+and then gauge the symmetry. To couple scalar fields 
+to electromagnetism, we gauge the $ U ( 1 ) $ symmetry. 
+That means if we're taking the non-infinitesimal symmetry, 
+we vary it in space and time.
+\[
+	\lalg : \R ^{ 3,  1} \to U ( 1 ) 
+\] where $ \phi (x ) \to g ( x ) \phi $ and 
+$ \phi ^ * (  x) \to g ^{ -1  } ( x ) \phi ^ * $ . 
+We'll supress the $ x $ for now on. 
+Infintesimally, we have that $ g = \exp\left( \epsilon X  \right)  $, 
+where $ \epsilon \ll 1 $, and this induces 
+the map to the Lie alegbra 
+\[
+	X : \R ^{ 3, 1 } \to \mathcal{ L } \left( U ( 1 )  \right)  
+\] where 
+\[
+ \delta _ X \phi = \epsilon X ( x ) \phi 
+\] Something was said about this 
+transformation not inducing a 
+proper transformation do the derivative terms. 
+In particular,  $ \mathcal{ L } _ \phi $ 
+is no longer invariant. But, we can 
+define a covariant derivative to 
+compensate for this, defined as 
+\[
+ D _{ \mu } = \partial  _ \mu + A _ \mu 
+\]  where we can write $ A _ \mu $ 
+as a map into the Lie algebra of the gauge group 
+\[
+	A _ \mu : \R^{ 3, 1 } \to \mathcal{ L } \left( U \left( 1  \right)   \right) \simeq i \R 
+\] Then, we define the transformation 
+to ve 
+\[
+ \delta _ X A _ \mu  =  - \epsilon \partial  _ \mu X 
+\] We expect that if we replace the 
+derivatives with the covariant derivatives, 
+and as long as we have a potential which 
+is invariant under $ U ( 1 ) $, we get that 
+the following Lagrangian is invariant. 
+\[
+ \mathcal{ L }  = \frac{1}{4 g ^  2} F _{ \mu \nu } F ^{ \mu \nu } 
+ + \left( D _ \mu \phi  \right)  ^ * \left( D ^ \mu \phi  \right)  
+  - W \left( \phi \phi ^ *  \right) 
+\] under our transformation of the scalar and gauge field, 
+we have that $ \phi _ X \mathcal{ L }  = 0$. 
+This process is called gauging the symmetry. 
+Now, when we go to quantum theory we 
+discover that this is a Lagrangian which 
+we can quantise for QCD. But if 
+we try to write down other interacting re normalisable 
+fields, this is pretty much the only one we have. 
+All other attempts to get spin 1 particles 
+lead to non-normalisable theories. 
+We want to generalise this Lagrangian 
+to other symmetry groups, and this 
+leads to all theories of spin 1 particles 
+in four dimensions. 
+
+We'll now look at 
+non-Abelian gauge theories from a Lie group $ G $. 
+
+\subsubsection{Global symmetries} 
+If we want to have a global symmetry, 
+the first thing to do is to choose a 
+representation $ D $ of the Lie group $ G $
+of dimension $ N $. In general, we'll 
+think about the representation space 
+\[
+ V \simeq \C ^{ N } 
+\] We're gonna take this 
+representation space and 
+define the usual inner product on this representation 
+space, where we get that 
+\[
+ \left( u , v  \right)   = \vec{v}^{ \dagger } \cdot \vec{u}, \forall 
+ \vec{u}, \vec{v} \in V 
+\] We'll take a scalar field 
+to be defined as 
+\[
+ \phi : \R^{ 3, 1 } \to V 
+\] This well be our invariant Lagrangian
+\[
+	\mathcal{ L } _ \phi  = \left( \partial  _ \mu \phi , 
+	\partial  ^ \mu \phi \right)   - W \left[ \left( \phi , \phi  \right)  \right] 
+\] now, what's the transformation 
+that we'd like to do? 
+We define the transformation
+\[
+ \phi \to D ( g ) \phi \forall g \in G 
+\] Now, when does this leave the Lagrangian invariant? 
+This is precisely when the transformation leaves 
+the dot product unchanged. 
+This means that $ \mathcal{ L } _ \phi $ is invariant 
+provided $ D $ is unitary: 
+\[
+	D ( g ) ^{ \dagger } D ( g )  = 1 _ N 
+\] Now, the symmetry group must be a compact group. 
+If we want a unitary representation and if 
+we want it to be finite dimensional, it better 
+be a compact Lie group. 
+Near the identity, we have that 
+\[
+	g  = \text{Exp } \left( \epsilon X  \right)  , \epsilon \ll 1, 
+	X \in \mathcal{ L } \left( G  \right) 
+\] where locally we know that this map is bijective. 
+In addition, we have that 
+the representation is given by 
+\[
+	D ( g ) = \text{Exp }\left( \epsilon  R( X )  \right) 
+\] where $ R : \mathcal{ L } \left( G  \right)  \to \text{Mat}_{N}\left( \C \right)  $ is a representation of $ \mathcal{ L } ( G) $. 
+If we want $ D $ to be a unitary representation, 
+we require that $ R $ must be anti-Hermitian 
+matrices for all elements of the Lie algebra. 
+Funnily enough, we still call this a 'unitary' representation. 
+\[
+	R ( X )  = - R ( X ) ^{ \dagger  }, \forall X \subset \mathcal{ L } \left( G  \right) 
+\] Infinitesimally for $ \epsilon \ll 1 $, we have 
+\[
+ D ( g ) \simeq I _ N + \epsilon  R( X ) + O ( \epsilon ^ 2 ) 
+\] If we define 
+\[
+ \phi \to \phi + \delta _ X \phi, \quad \delta _ X \phi = \epsilon R ( X ) \phi \in V 
+\] This gives the variation
+\[
+ \phi \to D ( g ) \phi \iff \phi \to \phi + \delta _ X \phi, 
+ \delta  _ X \phi = \epsilon  R( X ) \phi 
+\] Now, gauge symmetry gives us a map 
+\[
+	X : \R ^{ 3, 1 } \to \mathcal{ L } \left( G  \right) 
+\] correspondingly, we have that 
+\[
+ \delta _ X \phi  = \epsilon R ( X ( x ) ) \phi \in V 
+\] If we put the variation in, 
+the derivatives act however on the space time 
+derivatives and we don't get invariance straight 
+of the bat. Under this transformation, 
+$\mathcal{ L } _ \phi $ is no longer invariant 
+so we need to introduce a gauge field. 
+Thus, we introduce the gauge field $ A $
+so that 
+ \[
+	 A _ \mu : \R ^{ 3, 1 } \to \mathcal{ L } \left( G  \right) 
+\] for $ \mu  = 0 , 1 , 2,  3$.
+For our gauge transformation, we 
+have that 
+ \[
+ \delta _X A _ \mu  = - \epsilon \partial  _ \mu + \epsilon \left[  
+ X ,  A_ \mu \right]  \in \mathcal{ L } \left( G  \right) 
+\] Note the added term we have, which 
+is indeed in the Lie algebra. 
+Now, consider the covariant derivative, 
+\[
+	D _ \mu \phi  = \partial  _ \mu \phi +  R( A _ \mu ) \phi 
+\] We will now show that this is indeed 
+a valid candidate for a covariant derivative (where 
+the derivative transforms in the same way as the field). 
+\begin{claim}{(The above is a covariant derivative)}
+	We have 
+	\[
+		\delta _ X \left( D _ \mu \phi  \right)   = \epsilon  R( X )
+		D _ \mu \phi , \forall X \in \mathcal{ L } \left( G  \right) 
+	\] 
+	\begin{proof}
+		Plugging in the definition, we 
+		have that 
+		\[
+		 \delta _ X \left( D _ \mu \phi  \right)  
+		  = \delta _ X \left( \partial  _ \mu 
+		  \phi + R ( A _ \mu ) \phi \right)  
+		  = \partial  _ \mu \left( \delta _X \phi  \right)  
+		  + R ( A _ \mu ) \delta _ X \phi + 
+		  R \left( \delta _ X A _ \mu  \right)  \phi 
+		\] We can do the last 
+		step since variations are linear, and 
+		hence we can move it into the variation. 
+		Following in on from this, we 
+		have that this is equal to 
+		\begin{align*}
+			&=  \partial  _ \mu \left( \epsilon  R( X ) \phi  \right)  + \epsilon R \left( A _ \mu  \right)  R ( X ) \phi  \\ 
+			&  - \epsilon R ( \partial  _ \mu ) \phi + \epsilon 
+			R \left( \left[ X, A _ \mu  \right]   \right)  \phi \\
+			&=  \epsilon R ( \partial  _ \mu X ) \phi + 
+			\epsilon R ( X  ) \partial  _ \mu \phi + \epsilon R ( X ) R ( A ) \phi + \epsilon \left[   R( A _\mu) , R ( X ) \right]  \\
+			& - \epsilon R \left( \partial  _ \mu X  \right) \phi + \epsilon \left[  R ( X ) , R ( A _ \mu )  \right]  \phi \\
+			&=  \epsilon  R( X ) \partial _ \mu \phi 
+			+ \epsilon R ( X ) R ( A _ \mu ) \phi \\
+			&=  \epsilon  R( X ) \partial  _ \mu \phi 
+			+ \epsilon R ( X ) R \left( A _ \mu  \right)  \phi \\
+			&=  \epsilon  R( X ) D _ \mu \phi  \\
+		\end{align*} 
+	\end{proof}
+\end{claim}
+Now let's see that 
+we have an invariant Lagrangian! 
+Varying the kinetic term 
+\begin{align*}
+	\delta _ X \left[  \left( D ^ \mu \phi , D _ \mu \phi  \right)   \right]   & = \epsilon \left(  R( X ) D _ \mu \phi , D ^ \mu \phi  \right) + \epsilon \left( D _ \mu \phi , R ( X ) D ^ \mu \phi  \right)  \\
+										   &=  0 , \text{ using }  R( X) ^ \dagger  = -  R\left( X  \right)  \\
+\end{align*}
+The last thing to 
+do is to generalise the Maxwell action for 
+the gauge field itself. Once again, gauge invariance
+wil do most of the heavy lifting for us. 
+We need an action for the gauge field. In this 
+general setting, our gauge field is 
+\[
+	A _ \mu : R ^{ 3, 1 } \to \mathcal{ L } \left( G  \right)  
+\] Let's write down a suitable field strength 
+tensor. Write 
+\[
+ F _{ \mu \nu } = \partial  _ \mu A_ \nu  - \partial  _ \nu A _ \mu 
+\] In the non-Abelian case, we need to add on $ \left[  
+A _ \mu , A _ \nu \right] $. 
+If we define it like the above, only 
+then will we have a variation of the field strength 
+tensor is precisely the transform in the adjoint representation. 
+\[
+ \delta _ X \left( F_{ \mu \nu } \right)  = \epsilon \left[  
+ X , F _{ \mu \nu } \right]  \in \mathcal{ L } \left( G  \right) 
+\]
+The proof of this statement is as follows. 
+\[
+	\delta _ X \left( F _{ \mu \nu }  \right)   =\partial  _ \mu \left( \delta _ X A _ \nu  \right)   - \partial  _ \nu \left( \delta _ X A _ \mu  \right)  + \left[  \delta _ X A _ \mu , A _ \nu  \right]  + \left[  A _ \mu , \delta _ X A _ \nu  \right] 
+\] This changes to 
+\begin{align*}
+	\dots &=   - \epsilon  \partial _ \mu \partial  _ \nu X  +
+	\epsilon \partial  _ \mu \left( \left[  X , A _ \nu  \right]   \right)  + \epsilon \partial   _\nu \partial  _ \mu X  - \epsilon \partial  _ \nu \left( \left[  X , A _ \mu  \right]   \right)  \\ 
+	& - \epsilon \left[  \partial  _ \mu X, A _ \nu  \right]  - 
+	\epsilon \left[  A _ \mu , \partial  _ \nu  X \right]  
+	+ \epsilon \left[  \left[  X , A _ \mu  \right]  , A _ \nu  \right]  
+	+ \epsilon \left[  A _ \nu , \left[  X , A _ \nu  \right]   \right]  \\
+	&=  \epsilon \left[  X , \partial  _ \mu A _  \right]  - \epsilon \left[  X, \partial  _ \nu A _ \mu  \right]  - \epsilon \left( 
+	\left[  A_ \nu , \left[  X , A _ \mu  \right]   \right]  
++ \left[  A _ \mu , \left[  A _ \nu , X  \right]   \right]  \right)  
+\\
+&=  \epsilon \left[  X , \partial  _ \mu A _ \nu  - \partial  _ \nu A _ \mu  \right]  + \epsilon \left[  X , \left[  A _ \mu , A _ \nu  \right]   \right]   \\ 
+&=  \epsilon \left[  X , F _{ \mu \nu } \right]  
+\end{align*}
+Now define $ L _{ Y M } $ with Killing form 
+\[
+ \mathcal{ L }  = \kappa \left[  F _{ \mu \nu } , F ^{ \mu \nu }  \right]  \frac{1}{g ^  2} 
+\] This gives the variation 
+\[
+ \delta _ X \mathcal{ L } _ A  = \frac{1}{g ^ 2 } 
+ \kappa \left( \delta _ X F _{ \mu \nu } , F ^{ \mu \nu }  \right)  
+ + \frac{1}{g } \kappa \left( F _{ \mu \nu } , \delta _ X F ^{ \mu \nu }  \right)  = \frac{1}{ g ^ 2 } \left( \kappa \left( \left[  X , F _{ \mu \nu }  \right]  , F ^{ \mu \nu }  \right)  + \kappa \left( F _{ \mu \nu } , 
+ \left[  X , F ^{ \mu \nu }  \right] \right)   \right)   = 0
+\]  for all $ X \in \mathcal{ L } \left( G   \right)  $. 
+This means that at the end of the day, we 
+can write the most general gauge theory
+from $ \lalg $ and $ R _{ \Lambda } $. 
+\[
+	\mathcal{ L }  = \frac{1}{g ^ 2 } \kappa \left( F _{ \mu \nu } , F ^{ \mu \nu }  \right) + \sum _{ \Lambda \in S } \left( D _ \mu \phi _{ \Lambda} m D ^ \mu \phi _{ \Lambda }  \right)   - W \left( \left( \phi _{ \Lambda } , 
+	\phi _{ \Lambda} \right)   \right)  , \Lambda \in S 
+\] where we gave $ C _{ \Lambda } \in V _{ \Lambda } $ , $ D _ \mu  = \partial  _ \mu + R _{ \Lambda } \left( A _\mu  \right)  $
 \pagebreak 

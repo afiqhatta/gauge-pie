@@ -440,6 +440,8 @@ INPUT /usr/local/texlive/2018/texmf-dist/tex/latex/pgf/frontendlayer/libraries/t
 INPUT /usr/local/texlive/2018/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tikzexternalshared.code.tex
 INPUT /usr/local/texlive/2018/texmf-dist/tex/latex/carlisle/slashed.sty
 INPUT /usr/local/texlive/2018/texmf-dist/tex/latex/carlisle/slashed.sty
+INPUT /usr/local/texlive/2018/texmf-dist/tex/latex/fancyhdr/fancyhdr.sty
+INPUT /usr/local/texlive/2018/texmf-dist/tex/latex/fancyhdr/fancyhdr.sty
 INPUT /usr/local/texlive/2018/texmf-dist/tex/latex/psnfss/helvet.sty
 INPUT /usr/local/texlive/2018/texmf-dist/tex/latex/psnfss/helvet.sty
 INPUT /usr/local/texlive/2018/texmf-dist/tex/latex/biblatex/lbx/english.lbx
@@ -626,6 +628,14 @@ INPUT ./the_dirac_equation.tex
 INPUT ./the_dirac_equation.tex
 INPUT ./what_does_the_dirac_equation_give_us.tex
 INPUT ./what_does_the_dirac_equation_give_us.tex
+INPUT ./nucleon-feynman.pdf_tex
+INPUT ./nucleon-feynman.pdf_tex
+INPUT ./nucleon-feynman.pdf
+INPUT ./nucleon-feynman.pdf
+INPUT ./nucleon-feynman.pdf
+INPUT ./nucleon-feynman.pdf
+INPUT ./nucleon-feynman.pdf
+INPUT ./nucleon-feynman.pdf
 INPUT ./warming_up_with_spinors_from_the_$so(3)$_rotation_group.tex
 INPUT ./warming_up_with_spinors_from_the_$so(3)$_rotation_group.tex
 INPUT ./lorentz_tranformations_and_spinors.tex

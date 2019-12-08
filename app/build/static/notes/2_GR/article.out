@@ -51,21 +51,34 @@
 \BOOKMARK [2][-]{subsection.6.4}{Conserved quantities}{section.6}% 51
 \BOOKMARK [2][-]{subsection.6.5}{Asymptotics of Spacetime}{section.6}% 52
 \BOOKMARK [3][-]{subsubsection.6.5.1}{Penrose Diagrams}{subsection.6.5}% 53
-\BOOKMARK [3][-]{subsubsection.6.5.2}{de Sitter}{subsection.6.5}% 54
-\BOOKMARK [1][-]{section.7}{Example Sheet 1}{}% 55
-\BOOKMARK [2][-]{subsection.7.1}{Question 1}{section.7}% 56
-\BOOKMARK [2][-]{subsection.7.2}{Question 2}{section.7}% 57
-\BOOKMARK [2][-]{subsection.7.3}{Question 3}{section.7}% 58
-\BOOKMARK [2][-]{subsection.7.4}{Question 5}{section.7}% 59
-\BOOKMARK [2][-]{subsection.7.5}{Question 6}{section.7}% 60
-\BOOKMARK [2][-]{subsection.7.6}{Question 7}{section.7}% 61
-\BOOKMARK [2][-]{subsection.7.7}{Question 8}{section.7}% 62
-\BOOKMARK [2][-]{subsection.7.8}{Question 9}{section.7}% 63
-\BOOKMARK [2][-]{subsection.7.9}{Question 10}{section.7}% 64
-\BOOKMARK [2][-]{subsection.7.10}{Question 11}{section.7}% 65
-\BOOKMARK [2][-]{subsection.7.11}{Being careful about how we expand things}{section.7}% 66
-\BOOKMARK [2][-]{subsection.7.12}{Tricks in the Levi-Civita connection}{section.7}% 67
-\BOOKMARK [2][-]{subsection.7.13}{Integrating over volume forms}{section.7}% 68
-\BOOKMARK [2][-]{subsection.7.14}{Showing that magnitude is constant}{section.7}% 69
-\BOOKMARK [2][-]{subsection.7.15}{Symmetries of the Riemann Tensor}{section.7}% 70
-\BOOKMARK [2][-]{subsection.7.16}{General techniques}{section.7}% 71
+\BOOKMARK [3][-]{subsubsection.6.5.2}{4 dimensional Minkowski space}{subsection.6.5}% 54
+\BOOKMARK [3][-]{subsubsection.6.5.3}{de Sitter}{subsection.6.5}% 55
+\BOOKMARK [1][-]{section.7}{Coupling to matter}{}% 56
+\BOOKMARK [2][-]{subsection.7.1}{Energy Conservation}{section.7}% 57
+\BOOKMARK [3][-]{subsubsection.7.1.1}{A foray into conservation in Electromagnetism}{subsection.7.1}% 58
+\BOOKMARK [1][-]{section.8}{When Gravity is weak}{}% 59
+\BOOKMARK [2][-]{subsection.8.1}{Linearised theory}{section.8}% 60
+\BOOKMARK [3][-]{subsubsection.8.1.1}{The Fierz-Pauli Action}{subsection.8.1}% 61
+\BOOKMARK [3][-]{subsubsection.8.1.2}{Gauge Symmetries}{subsection.8.1}% 62
+\BOOKMARK [2][-]{subsection.8.2}{The Newtonian Limit}{section.8}% 63
+\BOOKMARK [2][-]{subsection.8.3}{Gravitational Waves}{section.8}% 64
+\BOOKMARK [2][-]{subsection.8.4}{Measuring gravitational waves}{section.8}% 65
+\BOOKMARK [2][-]{subsection.8.5}{Making Waves}{section.8}% 66
+\BOOKMARK [2][-]{subsection.8.6}{Power Radiated}{section.8}% 67
+\BOOKMARK [1][-]{section.9}{Example Sheet 1}{}% 68
+\BOOKMARK [2][-]{subsection.9.1}{Question 1}{section.9}% 69
+\BOOKMARK [2][-]{subsection.9.2}{Question 2}{section.9}% 70
+\BOOKMARK [2][-]{subsection.9.3}{Question 3}{section.9}% 71
+\BOOKMARK [2][-]{subsection.9.4}{Question 5}{section.9}% 72
+\BOOKMARK [2][-]{subsection.9.5}{Question 6}{section.9}% 73
+\BOOKMARK [2][-]{subsection.9.6}{Question 7}{section.9}% 74
+\BOOKMARK [2][-]{subsection.9.7}{Question 8}{section.9}% 75
+\BOOKMARK [2][-]{subsection.9.8}{Question 9}{section.9}% 76
+\BOOKMARK [2][-]{subsection.9.9}{Question 10}{section.9}% 77
+\BOOKMARK [2][-]{subsection.9.10}{Question 11}{section.9}% 78
+\BOOKMARK [2][-]{subsection.9.11}{Being careful about how we expand things}{section.9}% 79
+\BOOKMARK [2][-]{subsection.9.12}{Tricks in the Levi-Civita connection}{section.9}% 80
+\BOOKMARK [2][-]{subsection.9.13}{Integrating over volume forms}{section.9}% 81
+\BOOKMARK [2][-]{subsection.9.14}{Showing that magnitude is constant}{section.9}% 82
+\BOOKMARK [2][-]{subsection.9.15}{Symmetries of the Riemann Tensor}{section.9}% 83
+\BOOKMARK [2][-]{subsection.9.16}{General techniques}{section.9}% 84

@@ -1,0 +1,266 @@
+\documentclass[11pt, a4paper]{article}   	% use "amsart" instead of "article" for AMSLaTeX format
+ 
+\usepackage[margin = 1.0in]{geometry}            		% See geometry.pdf to learn the layout options. There are lots.
+\geometry{letterpaper}                   		% ... or a4paper or a5paper or ... 
+\usepackage[parfill]{parskip}    		% Activate to begin paragraphs with an empty line rather than an indent
+\usepackage{graphicx}				% Use pdf, png, jpg, or eps§ with pdflatex; use eps in DVI mode
+							% TeX will automatically convert eps --> pdf in pdflatex	
+\usepackage{adjustbox}	
+\usepackage[section]{placeins}
+
+
+%% LaTeX Preamble - Common packages
+\usepackage[utf8]{inputenc}
+\usepackage[english]{babel}
+\usepackage{textcomp} % provide lots of new symbols
+\usepackage{graphicx}  % Add graphics capabilities
+\usepackage{flafter}  % Don't place floats before their definition
+\usepackage{amsmath,amssymb}  % Better maths support & more symbols
+\usepackage[backend=biber]{biblatex}
+\usepackage{amsthm}
+\usepackage{bm}  % Define \bm{} to use bold math fontsx
+\usepackage[pdftex,bookmarks,colorlinks,breaklinks]{hyperref}  % PDF hyperlinks, with coloured links
+\usepackage{memhfixc}  % remove conflict between the memoir class & hyperref
+\usepackage{mathtools}
+\usepackage[T1]{fontenc}
+\usepackage[scaled]{beramono}
+\usepackage{listings}
+\usepackage{physics}
+\usepackage{tensor}
+\usepackage{tikz}
+\usepackage{multicol}
+\usepackage{subfiles}
+
+
+
+%% Commands for typesetting theorems, claims and other things.
+\newtheoremstyle{slplain}% name
+  {.5em} % Space above
+  {.8em} % Space below
+  {} % Body font
+  {} % Indent amount
+  {\bfseries} % Theorem head font
+  {.} % Punctuation after theorem head
+  {.1em} % Space after theorem head
+  {} % Theorem head spec (can be left empty, meaning `normal')
+
+\theoremstyle{slplain}
+\newtheorem{theorem}{Theorem}
+\newtheorem*{thm}{Theorem}
+\newtheorem*{claim}{Claim}
+\newtheorem*{example}{Example}
+\newtheorem*{defn}{Definition}
+\newtheorem*{tech}{Technique}
+\newtheorem*{question}{Questions} 
+
+\newcommand{\Lagr}{\mathcal{L}}
+\newcommand{\vc}[1]{\mathbf{#1}}
+\newcommand{\pdrv}[2]{\frac{\partial{#1}}{\partial{#2}}}
+\newcommand{\thrint}[1]{\int d^3 \vc{x} \left( {#1} \right)}
+\newcommand{\R}{ \mathbb{R}}
+\newcommand{\planck}{\hbar}
+\newcommand{\peninf}{\mathscr{i}} 
+\newcommand{\scri}{\mathscr{J}}
+
+
+\author{Afiq Hatta} 
+\title{Langevin Dynamics}
+\begin{document}
+
+\title 
+\tableofcontents
+
+\section{Introduction} 
+Speaker: Bidisha from ICTS Bangalore 
+
+This talk is about non-linear Langevin dynamics in 
+Holography. 
+
+\section{Papers} 
+Effective quantum field theories for the Thermodynamic 
+Bethe Ansatz - Ivan Kostov 
+
+Confinement as Analytic Continuation Beyond Inifinty 
+ - Masahito Yamazaki 
+ 
+Renormalon problems? 
+
+Techniques
+ - Place things on a cylinder 
+  - when coupling constants switch sign
+
+Partition function on different kinds of worldsheets. 
+
+\section{Papers} 
+Loganajan, Chakravanty, Sivakuman
+
+\section{Motivation} 
+In non equilibrium processes, how do we compute 
+real time correlation functions? 
+In the path integral framework, 
+we usually study equilibrium processes, 
+but we should extend this to non-equilibrium states. 
+
+This framework is known as the
+Schwinger-Keldysh path integral framework. 
+(We draw up the time contour) looks like a hook. 
+We initialise the density matrix $ \rho_ i  = \ket{ \psi } \bra{ \psi } $ 
+on the time contour. 
+We're splitting the parts of the Lagrangian by 
+doubling the degrees of freedom along $ Q_ 1 $ and $ Q _  2 $ 
+as 
+\[
+	\mathcal{ L } _{ SK }  = \mathcal{ L } _ 1 Q _ 1 - \mathcal{ L } _ 2 ( Q _ 2 ) 
+\] 
+Suppose we have a quantum brownian particle 
+with degrees of freedom denoted by $ q $, with 
+interacting degrees of freedom $ X $. 
+Our density matrix is given by 
+\[
+	\rho_ 0 = \rho _{ O P } \otimes \rho _{ B O }
+\] 
+Let's initialise our density matrix 
+at $ t_0 $ as $ \rho_0 $. 
+We double the degrees of freedom on legs of the contour 
+as $ q_ i $  and $ X_ i $. 
+Our microscopic lagrangian is given by 
+\[
+ \mathcal{ L } _{ \text{micro } }  = \mathcal{ L } _ P + \mathcal{ L } _ B 
+ + \lambda q X , \quad \mathcal{ L } _{ SK }  = \mathcal{ L } _ 1 - \mathcal{ L } _ 2 
+\] Our evolution is given 
+by 
+\[
+	\rho_{ f} = \left(  Q _{ 1 f } , Q_{ 2 f}  \right)   = 
+	\int d Q _{ 10 } d Q _{ 2 0 } \rho_0 ( Q_{ 10 } Q _{ 2 0 } ) \int 
+	[ \mathcal{ D } Q_ 1 ] [ \mathcal{ D } Q _ 2 ] \exp \left(  
+	i \int_{ Q_ 1 ( t_1 )  = Q_{ 10 } } ^{ Q_{ 1f } ) = Q_{ 1 f }} dt \left(  L _ 1 ( Q_ 1 )  - L _ 2 ( Q_ 2 )  \right) \right) 
+\]
+What is the reduced density matrix of the particles? 
+To do this, we need to integrate out some things. 
+Let's say that $ X_{ 1f } = X _{ 2f }  = X _  f $. 
+representing the bath degrees of freedom 
+are integrated out. 
+Then, computing the reduced density matrix 
+we get that 
+\[
+	\rho_{ p f }  ( q_{ 1f } , q_{ 2f } ) 
+	= \int d q_{ 10 } \int d q_{ 20} \rho_{ p_0 } ( q_{ 10 } , q_{ 20} ) 
+	\int_{ q_1 ( t_0 )  = q_{ 10 } , q_ 2 ( t_0 ) =  q_{ 20 } }
+	^{ q_1 ( t_ f )  = q _{ 1f }, q_2 (t_ f ) = q_{ 2f }  } 
+	\left[  \mathcal{ D } q_1  \right]  \left[  
+	\mathcal{ D } q_ 2 \right]  
+	e^{ i \left[  \frac{1}{2 } mp_0 \int_{ t_0 } ^{ t_ f }
+	dt \left[ ( \dot{ q } _ 1 ^ 2  - \mu _ 0 ^ 2 q_1 ^ 2 ) 
+	- ( \dot{ q } ^ 2 _ 2 - \mu 0 ^ 2 q_ 2 ^ 2 ) + W_{ SK } \right] \right] }
+\] The part $ W _{ SK } $ is known as the influence 
+phase of the particle. 
+We expand $ W_{ SK} $ as 
+\[
+	W _{ SK } = \sum_{n=1}^{\infty } \lambda ^ n W _{ SK } ^{ ( n ) } 
+\] with each of the components being 
+\[
+	W _{ SK } ^{ ( n ) }  = i ^{ n -1  } \sum_{ i_1  \dots i_n = 1 } ^ 2 
+	\int _{ t_1 } ^{ t_  f } dt_1 \dots \int_{ t_1 } ^{ t _{ n- 1 } } 
+	dt_ n \left< T _ c O_{ i_1 } ( t_1 ) \dots O _{ i _ n  } ( t_ n )   \right> q _{ i_1 } ( t _ 1 ) q _{ i_2 } ( t_ 2 ) \dots q_{ i _ n } ( t _ n ) 
+\] Here, we observe that 
+the effective action is non-local in time. 
+For a class of baths, the bath correlations decay exponentially fast.
+For example, we have that 
+\[
+	W ^{ ( 2) }  = \int dt_1 dt_2 
+	\left< T _c O _{ i_1 } ( t_1 ) O_{ i_2 } ( t_2 )  \right> 
+	q_{ i_1 } ( t_1 ) q_{ i_2 } ( t_2 ) 
+\] Our 
+correlated part enclosed in angle brackets exponentially 
+decays as $ e ^{ - \alpha t _{ 12 } } $. 
+We also can Taylor expand out $ q _{ i_2 } ( t_2) $  in 
+from $ t_1 $. 
+Referencing Feynman-Vernon. 
+\subsection{Quadratic Quantum Effective Theory of $ q $} 
+If we focus on the saddle point of this
+integral, then we get an equation of motion 
+\[
+ \frac{d ^ 2 q}{  d t ^  2 } + \gamma \frac{ dq }{ dt } + 
+ \overline{ \mu }^ 2 q = \left< f ^ 2  \right> \mathcal{ N } 
+\]  
+We have that our noise has distribution 
+\[
+	\rho ( \mathcal{ N } ) = \exp \left[  
+	 - \int dt \frac{\left< f ^ 2  \right> }{ 2 } \mathcal{ N } ^ 2 \right] 
+\] Our equation is called the Linear Langevin equation. 
+We have that 
+\[
+ \left< f ^ 2  \right> = \frac{2}{\beta } \gamma \sim \left< 
+ \left\{  O ( t_1 ) , O ( t_2 )  \right\} \right>
+\]  The above is the statement of equilibrium.
+This is how we derive 
+the equation of motion from the 
+path integral. 
+We define the helper variables
+\[
+ q_1 , q_2 \to q_ a = \frac{ q_1+ q_2 }{ 2 } ; \quad q _{ d } 
+ = q_1 - q_2
+\] 
+Consider the following stochastic path integral 
+\[
+ \int \left[  dq_ a  \right]  \left[  d \mathcal{ N }  \right]
+
+ P \left[  N  \right]  \delta ( \left< f ^ 2  \right> \mathcal{ N } 
+ - E ( q_ a , \mathcal{ N } ) ) 
+\] this can be written as 
+\[
+ \int \mathcal{ D } q_ a \mathcal{ D } \mathcal{ N } 
+ e ^{  - i \int dt q_ d ( E ( q_ a , \mathcal{ N } )  - \left< f ^ 2  \right> 
+ \mathcal{ N } )} P ( \mathcal{ N } ) 
+\] This can 
+be rewritten as 
+a path integral as 
+\[
+ \int \mathcal{ D } q_{ a } \mathcal{D} q_{ d } e ^{ i \int dt \mathcal{ L }_{ \text{ eff } }  } 
+\] Our Lagrangian for the effective action is 
+\[
+ \mathcal{ L } _{ \text{ eff } }  = 
+ \frac{ i \left< f ^ 2  \right> }{ 2  } q_ d ^ 2 + 
+ \dot{ q } _ d \dot{ q } _ a  - \gamma q _ d \dot{ q } _ a  - 
+ \overline{ \mu } ^ 2 q_d  q_ a 
+\] Thus, 
+we've computed non linear corrections to the Linear langevin equation 
+How to get this 
+big effective action $ \mathcal{ L } _{ \text{ eff } }  $ 
+Our most general Lagrangian for the effective action 
+is 
+\[
+ \mathcal{ L } _{ \text{ eff } }  = \frac{i \left< f ^ 2  \right> }{2 } 
+ ( \text{ insert most general terms here })
+\]
+If we take the classical limit 
+using saddle points of our effective Lagrangian, 
+we get that 
+
+\subsection{Non-Linear FDR}
+We have that 
+\[
+ \zeta _N =  - \frac{ 12 }{ \beta  } \zeta _{ \gamma } 
+\]  from OTO extension of effective theory. 
+$ \zeta _ N $ comes from time-reversal invariance and thermality of 
+bath. 
+
+
+\section{Holographic problem} 
+We'll now talk about the Holographic SK prescription. 
+The system we'll talk about 
+is a quark moving in a thermal CFT d-dimensional plasma. 
+In AdS / CFT, this quark is dual to an open dtring from the boundary 
+of an AdS d + 1 dimensional black brane.
+
+The generating function for real time CFT correlators when initial 
+state was thermal. It has also been done that 
+we verified non-linear FDR for quark using holographic SK.
+Check out Hong Liu, et al.
+
+The string is in the black brane, the black brane has Hawking radiation. 
+Modes captured by diffferent Green's function. 
+
+Fluctutation and dissipation are 
+measurable quantities. This can be tested! 
+\end{document} 
