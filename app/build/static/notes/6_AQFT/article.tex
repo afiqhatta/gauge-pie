@@ -1,0 +1,212 @@
+\documentclass[11pt, oneside]{article}   	% use "amsart" instead of "article" for AMSLaTeX format
+\usepackage[margin = 1.1in]{geometry}            		% See geometry.pdf to learn the layout options. There are lots.
+\geometry{letterpaper}                   		% ... or a4paper or a5paper or ... 
+\usepackage[parfill]{parskip}    		% Activate to begin paragraphs with an empty line rather than an indent
+\usepackage{graphicx}				% Use pdf, png, jpg, or eps§ with pdflatex; use eps in DVI mode
+								% TeX will automatically convert eps --> pdf in pdflatex	
+\usepackage{adjustbox}	
+\usepackage[section]{placeins}
+
+
+%% LaTeX Preamble - Common packages
+\usepackage[utf8]{inputenc}
+\usepackage[english]{babel}
+\usepackage{textcomp} % provide lots of new symbols
+\usepackage{graphicx}  % Add graphics capabilities
+\usepackage{flafter}  % Don't place floats before their definition
+\usepackage{amsmath,amssymb}  % Better maths support & more symbols
+\usepackage[backend=biber]{biblatex}
+\usepackage{amsthm}
+\usepackage{bm}  % Define \bm{} to use bold math fontsx
+\usepackage[pdftex,bookmarks,colorlinks,breaklinks]{hyperref}  % PDF hyperlinks, with coloured links
+\usepackage{memhfixc}  % remove conflict between the memoir class & hyperref
+\usepackage{mathtools}
+\usepackage[T1]{fontenc}
+\usepackage[scaled]{beramono}
+\usepackage{listings}
+\usepackage{physics}
+\usepackage{tensor}
+\usepackage{simplewick} 
+\usepackage{tikz} 
+\usepackage{import}
+\usepackage{xifthen}
+\usepackage{pdfpages}
+\usepackage{transparent}
+\usepackage{pgfplots}
+\usepackage[compat=1.1.0]{tikz-feynman}
+\usepackage{subfiles}
+\usepackage{simpler-wick}
+\usepackage{slashed}
+\usepackage{fancyhdr}
+
+\pagestyle{fancy}
+\fancyhf{}
+\rhead{Notes by Afiq Hatta}
+\lhead{Quantum Field Theory II}
+\rfoot{Page \thepage}
+
+%% Commands for typesetting theorems, claims and other things.
+\newtheoremstyle{slanted}
+{1em}%   Space above
+{.8em}%   Space below
+{}%  Body font
+{}%          Indent amount (empty = no indent, \parindent = para indent)
+{\bfseries}% Thm head font
+{.}%         Punctuation after thm head
+{0.5em}%     Space after thm head: " " = normal interword space;
+{}%         \newline = linebreak
+{}%          Thm head spec (can be left empty, meaning `normal')
+
+%% Commands for typesetting theorems, claims and other things. 
+
+\theoremstyle{slanted}
+\newtheorem{theorem}{Theorem}
+\newtheorem*{thm}{Theorem}
+\newtheorem*{claim}{Claim}
+\newtheorem{example}{Example}
+\newtheorem*{defn}{Definition}
+
+\newcommand{\Lagr}{\mathcal{L}} 
+\newcommand{\vc}[1]{\mathbf{#1}}
+\newcommand{\pdrv}[2]{\frac{\partial{#1}}{\partial{#2}}}
+\newcommand{\thrint}[1]{\int d^3 \vc{x} \left( {#1} \right)}
+
+%% QFT specific macros 
+\newcommand{\intp}{ \int \frac{ d^3 p }{ (2 \pi)^3 } \, }
+\newcommand{\ann}[1]{a_{ \mathbf{ #1 }}}
+\newcommand{\crea}[1]{a^\dagger_{ \mathbf{ #1 }}}
+\newcommand{\ve}[1]{ \mathbf{ #1 } } 
+\newcommand{\mode}[ 1]{ e^{ i \mathbf{ #1 } \cdot \mathbf{x} }}
+\newcommand{\nmode}[1]{ e^{  - i \mathbf{ #1 } \cdot \mathbf{x} }}
+\newcommand{\freq}[1]{\omega_\mathbf{ #1} } 
+\newcommand{\scal}[1]{\phi ( \mathbf{ #1 })} 
+\newcommand{\mom}[1]{ \pi (\mathbf{ #1 })} 
+\newcommand{\arr}{\rightarrow} 
+
+\newcommand{\incfig}[1]{%
+\def\svgwidth{\columnwidth}
+\resizebox{0.75\textwidth}{!}{\input{./figures/#1.pdf_tex}}
+}
+
+\newcommand{\anop}[2]{ #1_\mathbf{#2}}
+\newcommand{\crop}[2]{#1_\mathbf{#2}^\dagger}
+\renewcommand{\op}[1]{\hat{\mathbf{#1}}}
+
+\usepackage{helvet} 
+
+%tikz decoration commands 
+\usetikzlibrary{decorations.pathmorphing}
+
+
+\title{Notes on Quantum Field Theory II}
+\author{Afiq Hatta} 
+\begin{document} 
+\maketitle
+\tableofcontents
+
+\pagebreak 
+
+\section{Formulating the Path Integral} 
+
+In this section, we'll be moving on from 
+our standard procedure of quantising a given Hamiltonian 
+in quantum mechanics. We'll be introducing 
+the concept of a path integral. The path integral 
+is a 'functional integral' where we integrate over 
+all possible paths with a Gaussian probability factor.
+
+\subsection{Classical and Quantum Mechanics}
+In classical mechanics, we use the Lagrangian 
+as a conduit to encode the information about our 
+physical system. The Lagrangian is given by a function 
+of position and velocity, with 
+\[
+	\mathcal{ L }  = \mathcal{ L } \left( q _ a , \dot {q} _ a  \right) 
+\] where $ a = 1 , \dots  , N $ is an index for each particle 
+in our system. We can convert this to the Hamiltonian formalism 
+where we put position and momentum on the same pedestal and 
+define our conjugate momenta
+\[
+ p _ a = \frac{\partial  \mathcal{ L }}{\partial  \dot{q } ^ a  } 
+\] We then work in terms of the Hamiltonian 
+which is the Legendre transformation of the 
+Lagrangian, where we eliminate $ \dot{ q }^ a   $
+everywhere in the Lagrangian in favour of $ p^ a$ as follows 
+\[
+	H ( q_a , p _ a  ) = \sum _{ a } \dot{ q }_ a p ^ a  - \mathcal{ L } \left( q _ a , \dot{ q } _ a  \right)   
+\] 
+The quantum mechanical analog of this is the same. 
+However, $ p_ i $ and $ q _ i $ are \textbf{promoted} to 
+what we call operators, and obey commutation relations 
+which as we know, eventually lead to discrete energy levels 
+in the Hamiltonian. In quantum mechanics,
+we write the position and momentum operators 
+as $ \vec{q}^ i  $ and $ \vec{p} ^ i $ for position  
+and momentum respectively. 
+In the Heisenberg picture of quantum mechanics, 
+operators (and not states), depend on time. 
+So, we impose the commutation relations 
+for some fixed coordinate time $ t \in \mathbb{ R } $, where 
+\[
+ \left[  \vec{q}^ i , \vec{p} _ j  \right]   = i  \delta \indices{ ^ i _ j }  
+\]  
+In classical field theory, we 
+promote operators 
+to fields instead. If $ \phi ( \vec{x} , t ) $  
+represents a classical scalar field at some point in time $ t $, 
+then the field as well as it's conjugate momentum $ \pi \left( \vec{x}, t   \right) $ 
+obey the commutation relations
+\[
+	\left[  \phi ( \vec{x},  t ) , \pi ( \vec{y}, t  )  \right]  
+	= i \delta ^ 3 \left( \vec{x} - \vec{y} \right) 
+\] There is however a caveat in performing these 
+approaches to quantisation. 
+The theory is not manifestly Lorentz invariant. This is because 
+when we imposed the equal time commutation 
+relations above, we had to pick a preferred coordinate 
+time $ t $. 
+
+\subsection{Formulating the Path Integral} 
+We use the Hamiltonian 
+as a starting point. 
+\[
+	H ( q, p ) = \frac{p ^ 2 }{ 2m } + V ( q ) 
+\] The Schrödinger equation for 
+a state $ \ket{ \psi ( t ) } $ which is time dependent 
+is given by 
+\[
+	i \frac{ d }{ dt } \ket{ \psi ( t ) }  = \op{H }  \ket{ \psi ( t ) } 
+\] Now, this is 
+is a first order differential equation 
+and can be solved provided that 
+we have the right initial conditions. 
+For now, let's just write down the solution 
+in a 'formal' sense, where we 'exponentiate' 
+the Hamiltonian whilst being vague 
+about what this actually means. 
+We write the solution as 
+\[
+	\ket{ \psi ( t ) } = \exp\left(  - i \op{ H } t  \right)  
+	\ket{ \psi ( 0 ) } 
+\] To do calculations however, we 
+need construct an appropriate basis of states.
+For this section, we'll use 
+the position basis $ \ket{ q , t } $, for 
+$ q, t  \in \mathbb{ R } $. These states are 
+are defined to be the eigenstates of 
+the position operator $ \op{q} \left( t  \right)  $, 
+so that 
+\[
+	\op{q } \left( t   \right) \ket{ q , t }  = q \ket { q , t }   
+\] For now though, we'll work in 
+the Schrodinger picture so that $ \op{q } $ is fixed
+and hence we have that the eigenstates $ \ket{ q } $ 
+are time-independent.
+With this set of basis states, we can 
+now write the abstract state $ \ket{ \psi( t ) } $ 
+in terms of the position basis, where we denote 
+\[
+	\psi ( q, t ) = \bra{ q}\ket{ \psi  ( t ) } 
+	=  \bra{q } \exp\left(  - i \op{H }t  \right)\ket{ \psi ( 0 ) } 
+\]  
+\end{document} 

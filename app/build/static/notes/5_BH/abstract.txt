@@ -1,0 +1,4 @@
+Black holes are violent objects which arise from a space-time singularity.
+This is when the gravitational pull of a region of space is so powerful, not 
+even light can escape. These set of notes will go through the formation 
+and properties of black holes. 

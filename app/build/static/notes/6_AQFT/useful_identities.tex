@@ -1,0 +1,66 @@
+\section{Useful Identities in General Relativity for Black Holes} 
+
+In this section, we'll cover 
+some useful identities which may prove useful for 
+doing general relativity.
+The first one we'll prove is an equation that's useful for 
+proving the divergence theorem for curved space. 
+
+\begin{thm}{Divergence of a vector field in terms of $\sqrt{ - g }  $}
+	\begin{equation}
+		\nabla _ \mu V ^ \mu = \frac{1}{\sqrt{ - g }  } \partial  _ \mu \left( 
+		\sqrt{ - g}  V ^ \mu \right)  
+	\end{equation}
+\begin{proof}
+	We first apply the product rule, then 
+	make use of a smart rearrangement using logs. 
+	We first have that
+	\begin{align*}
+		\nabla _ a V ^ a  & = \partial  _ \mu V ^ \mu + 
+		\frac{1}{\sqrt{- g}  } V ^ \mu \partial  _ \mu \left( \sqrt{ - g }    \right) \\
+				  &=  \partial  _ \mu V ^ \mu + V ^ \mu \partial  _ \mu \left( \log \sqrt{ - g }   \right) \\
+				  &=  \partial  _ \mu V ^ \mu + \frac{1}{2 } V ^ \mu \partial  _ \mu \left( \log \left(  - \det g  \right)   \right)  
+	\end{align*}
+	Where in the last line we wrote out the determinant 
+	explicitly. 
+	Now the trick here is to use the identity which 
+	relates the logarithm of the determinant to the trace of 
+	the formal logarithm of a matrix.
+
+	Observe that if $ A $ is a matrix, which we assume 
+	to be positive definite (since our metric is), then 
+	it is diagonalisable. Since it's diagonalisable, 
+	we can write it in the appropriate basis such that 
+	$ \exp A  = \text{diag} \left( e ^{ \lambda _ 1 }, \dots, e ^{ \lambda _ n } \right) $ where $ \lambda _i \in \mathbb{R }$ are the eigenvalues of the matrix $ A $. This means that the eigenvalues of $ \exp A $ are $ e ^{ \lambda _ i } $ for all $ i $. So, since the determinant of the matrix is equal to 
+	the product of its eigenvalues, we have that 
+	\[
+		\det \left( \exp A  \right)   = \exp \left( \tr A  \right)  
+	\] If we set $ B = \exp A $, then this identity reduces to 
+	\[
+		\det B = \exp \left( \tr \log B  \right)  
+	\] Taking the logarithm of both sides once more, we 
+	have that finally 
+	\[
+	 \log \det B = \tr \log B 
+	\] We can now resume to 
+	the question at hand. We rewrite the above using this identity 
+	so that 
+	\begin{align*}
+		\nabla _ a V ^ a &=  \partial  _ \mu V ^ \mu 
+		+ \frac{1}{2 } V ^  \mu \partial  _ \mu \left( \tr \log \left(  - g  \right)   \right)  \\ 
+		&=  \partial  _ \mu V ^ \mu + \frac{1}{2 } V ^ \mu 
+		\tr \partial  _ \mu \log \left(  -g  \right)  \\
+		&=  \partial  _ \mu V ^ \mu 
+		+ \frac{1}{2 } V ^ \mu \tr \left( g ^{ - 1 } \partial  _ \mu g  \right) 
+	\end{align*}
+	Where in this case we've put  $ g $ to denote 
+	schematically the matrix $ g_{ \mu \nu }  $  and 
+	\textbf{not } the determinant. Be careful 
+	to observe that the minus signs when 
+	differentiating the logarithm cancel out. 
+	One can easily verify that $ \frac{1}{2 }g ^{ \alpha \beta } \partial  _ \mu 
+	g _{ \alpha \beta }  = \Gamma ^{ \nu } _{ \mu \nu } $. 
+	Thus, this completes the proof. 
+\end{proof}
+\end{thm}
+

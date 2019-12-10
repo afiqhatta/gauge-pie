@@ -1,0 +1,3 @@
+Notes on quantum field theory in more detail. 
+Specifically, these set of notes contains detail on the path integral formalism 
+of quantum field theory. 

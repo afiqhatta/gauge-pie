@@ -1,0 +1,51 @@
+\section{The formation of black holes} 
+In this section, we'll cover the formation of black holes. 
+To start this discussion, we'll need to discuss 
+the idea of symmetry on manifolds and in metrics. 
+The word 'black hole' should be a big enough hint 
+that the kinds of metrics we'll be considering exhibit 
+spherical symmetry. But, since general relativity is done
+in the frame-work of both \textbf{space} and  \textbf{time}, 
+we need to make clear what 'spherical symmetry' actually means. 
+
+First, lets discuss how to obtain the metric for a standard $2 $-sphere. 
+Working in signature $\left(  - , + , + , +  \right)  $, 
+we have that the metric on the $ 2$ -sphere in Cartesian 
+coordinates is given by the following, with the constraint
+\[
+ ds ^ 2  = dx ^ 2 + dy ^ 2 + dz ^ 2, \quad x ^ 2 + y ^ 2 + z ^ 2  = 1
+\] If we reparametrize the coordinates as follows, using 
+our standard spherical coordinates with $ r = 1 $, 
+we embed the $2 $ -sphere in $ \mathbb{ R } ^ 3 $
+\begin{align*}
+	x &=  \cos \phi \sin \theta  \\ 
+	y &=  \sin \phi \sin \theta  \\ 
+	z &=   \cos \theta
+\end{align*}
+Applying a coordinate transformation for the one forms $ dx, dy, d z$, 
+we get that
+\begin{align*}
+	dx &=  \cos \phi \cos \theta d \theta  - \sin \phi \sin \theta d \phi  \\
+	dy &=  \sin \phi \cos \theta d \theta + \cos \phi \sin \theta d \phi  \\
+	dz &=   - \sin d \theta  
+\end{align*} 
+Substituting into the above, we can read off that 
+the components of the metric are given by 
+\[
+ d s ^ 2 =  d \theta ^ 2 + \sin ^ 2 \phi d \phi ^ 2 
+\] This 
+metric comes from considering the 2-sphere manifold. 
+Now, we know that the symmetry group of a 2-sphere is 
+$ O( 3 ) $ if we consider reflections, and just $ SO ( 3 ) $ 
+if we consider only rotations. Hence, we 
+say that the metric admits an isometry group of $ SO ( 3 ) $. 
+
+\begin{defn}{(Isometries on a metric)}
+	An  \textbf{isometry} is a transformation 
+	on a metric space which leaves 
+	distances between points invariant. 
+	The image one has in their mind immediately 
+	might be a rotation or a reflection on a two dimensional 
+	plane. 
+
+\end{defn}
