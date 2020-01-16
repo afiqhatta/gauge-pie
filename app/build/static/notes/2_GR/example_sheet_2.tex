@@ -1,3 +1,654 @@
+\section{Example Sheet 2}
+
+\pagebreak 
+
+\section{Example Sheet 4}
+
+\subsection{Question 1}
+We want to solve the linearised 
+equation 
+\[
+	\nabla ^ 2 \overline{ h } _{ 00 }  = - 16 \pi M \delta \left( \vec{x} \right) 
+\] Using the standard 
+Green's function technique, 
+the solution to this equation is 
+\[
+ \overline{ h } _{ 00 }  = - \frac{4M}{ r} 
+\] This means that we have
+\[
+	h_{ 00 }  =  - \frac{2M }{r}, h _{ ii }  =  - \frac{2M}{ r }
+\] Our gravitational field is hence 
+\[
+	ds ^ 2  =  - \left( 1 + \frac{2M }{ r }  \right)  dt ^ 2 + \left( 1 - \frac{2M}{r }  \right)  
+	d\vec{x} \cdot  d \vec{x} 
+\] Now, where is this valid? 
+Well in comparison to the Scharwzchild metric, 
+the spatial perturbation to the metric is the leading order expansion for 
+$ \left( 1   - \frac{2G M }{r}  \right)^{  - 1 } $, 
+thus we should require that $ r \ll 2 G M $
+ 
+Our expansion is valid when 
+$ | h | \ll 1 $, so all we need from 
+this is that $ \overline{ h } _{ 00 } \ll 1 $, 
+for example. This gives the condition 
+that $ r \ll GM $ as well. 
+\subsection{Question 2} 
+
+The linearised Einstein equations are 
+\[
+ \Box \overline{h _{ \mu \nu } }  = - 16 \pi G T_{ \mu \nu } , \quad 
+ \overline{h } _{ \mu \nu }  = h _{ \mu \nu }   - \frac{1}{2 } \eta _{ \mu \nu } h 
+\] We choose to solve for $ \overline{ h } _{\mu \nu } $ 
+first because it's easier. We then obtain $ h _{ \mu \nu } $ from 
+$ \overline{ h } _{ \mu \nu }  $  by just inverting the above relation. 
+This inverse is 
+\[
+ h _{ \mu \nu }  = \overline{ h } _{ \mu \nu } - \frac{1}{2 } \eta _{ \mu \nu } \overline{h } 
+\] We are given the following time independent 
+stress-energy tensor to solve for, which is 
+\[
+	T _{ \mu \nu }  = \mu \delta \left( x  \right)  \delta \left( y  \right)  
+	\text{diag}\left( 1, 0 , 0 , - 1  \right)  
+\] We proceed by solving component by component. 
+Since our stress energy tensor is time-independent we 
+can reduce the wave operator $ \Box $ to just the Laplacian 
+$ \nabla ^ 2 $. For $ \overline{ h } _{ 00 } $, we wish to solve 
+\[
+	\nabla ^ 2 \overline{ h } _{ 00 }   = - 16 \pi G \mu \delta \left( x  \right)\delta\left( y \right) 
+\] For now, let's work in cylindrical polar 
+coordinates and isolate to the case where 
+our solution for $ \overline{ h } $ and therefore 
+$ \overline{ h }  $ relies solely on $ r $. 
+We hence rewrite our equation as 
+\[
+	\nabla ^ 2 \overline{ h } _{ 00 }\left( r  \right)  = - 16 \pi G \mu \delta\left(r = 0)  
+\] Now, if you already know the 
+Green's function for this kind of problem then 
+you can just solve this thing right here. 
+In case you don't, we have that the radial part of the Laplacian 
+gives us the equation 
+\[
+	\frac{1}{r } \frac{d }{ dr } \left( r \frac{ d \overline{ h } _{ 0 0 } }{ d r } 		   \right) = - 16 \pi G \mu \delta \left(  r  =  0  \right)  
+\]  For the case $ r > 0 $, when the 
+right hand side is zero, our solution is 
+\[
+	\overline{ h }_{ 0 0 }  = A \log \left( \frac{r}{ r_0} \right) 
+\] We need 
+to fix the constant  $ A $ consistently with the 
+delta function contribution on the 
+right hand side of the equation. 
+Integrating both sides in cylindrical polars, to 
+some radius  $ R $, and then taking the limit as  $ R  \to 0 $, 
+we have that 
+\begin{align*}
+	2 \pi A \int _{ 0 } ^ R dr \, r \frac{1}{r } \frac{ d  }{ dr } 
+	\left( r \frac{ df }{ dr}  \right) &  =  - 16 \pi G \mu \\
+	2 \pi R \frac{ d \log \frac{ R }{ r_ 0} }{ d R }  & =  - 16 \pi G \mu \\
+	A & = - 8 G \mu 
+\end{align*}
+Thus $ \overline{h } _{ 00 }  = - 8 G \mu \log \left( \frac{ r }{ r _ 0 }  \right) $ 
+Additionally, we have that $ \overline{ h } _{ 33 }  = 8 G \mu \log \left( \frac{ r }{ r^0 } \right) $. All of the other components of $ \overline{ h} _{ ij } $  
+can be set to zero, since this is a valid solution 
+in the homogeneous case. We thus have $ \overline{ h }  = 16 G \mu 
+\log \left( \frac{r}{ r_0 }  \right) $. Inverting with the formula above, 
+to get $ h $, the only non-zero contributions are
+$ h_{ 11 }  = h _{ 22 }  =  -  8 \mu G \log \left( \frac{r}{ r_0 } \right) $
+
+Adding on the perturbation, our metric is thus 
+\[
+	ds ^ 2  = - dt ^ 2 + \left( 1 - \lambda  \right) \left( dx ^ 2 + dy ^ 2  \right)  + dz ^ 2 
+\] In polar coordinates, the $ dx ^ 2 + dy ^ 2 $ is just $ dr ^ 2  + r ^ 2 d \phi ^ 2 $. 
+This means that our resulting metric is 
+\[
+	ds ^ 2 =  - dt ^ 2 + dz ^  2 + \left( 1 - \lambda   \right)  \left( dr ^ 2 + r ^ 2 d \phi ^ 2  \right) 
+\] Using the substitution $ \left( 1 - \lambda ^ 2   \right) r ^ 2  = \left( 1 - 8 \mu G  \right)  \tilde{r } ^ 2   $, our angular component of the 
+metric reads $ \left( 1 - 8 \mu G  \right)  d \tilde{ r } ^ 2    $. 
+To first order, we have that 
+\begin{align*}
+	\tilde{ r } &  = \frac{\left( 1 - \lambda  \right)  ^{ \frac{1}{2 } } }{ \left( 1 - 8 \mu G  \right)  ^{ \frac{1}{2 } }  } r  \\
+		    &\simeq   r \left( 1 + 4 \mu G \log r   \right) \left(  1 + 4 \mu G   \right)    \quad \text{to first order in } 8 \mu G  \\ 
+		    &=  \left( 1 + 4 \mu G  - 4 \mu G \log r  \right)  r  
+\end{align*}  
+Differentiating, this 
+gives 
+\[
+	d \tilde{ r }  = \left( 1 - 4 \mu G \log r   \right)   dr 
+\]  Squaring, we get that this is 
+\[
+	d \tilde{ r } ^ 2  = \left( 1 - \frac{\lambda}{2 }  \right)  ^ 2 dr ^ 2 
+	\simeq \left(  1 - \lambda  \right)  dr ^ 2  
+\] Substituting this in, we get that our metric under this change of coordinates 
+is 
+\[
+	ds ^ 2  = - dt ^  2 + dz ^ 2 + d \tilde{ r } ^ 2 + \left( 1 - 8 \mu G  \right) \tilde{ r } ^ 2 d \phi ^ 2    
+\] Scaling the angular coordinate as $ \tilde{ \phi }  = \sqrt{ 1 - 8 \mu G   }  \phi  $, 
+this gives our metric as 
+\[
+ ds ^ 2 =  - dt ^2 + dz ^ 2 + d \tilde{ r } ^ 2 + \tilde{ r } ^2 d \tilde{ \phi } ^ 2    
+\] This looks like Minkowski space time after all the first order approximations, 
+but our original metric wasn't.
+Intuitively, to get 
+a double image, our geodesics follow a path as follows.
+\hspace*{10cm}
+\begin{figure}[htpb]
+	\centering
+\input{ex2q2.pdf_tex}
+\caption{Double image appearing}%
+\label{fig:x2q2}
+\end{figure}
+
+Here's an efficient way to derive the Green's function. 
+\begin{align*}
+	\partial  ^ 2 _ x + \partial  ^ 2 _ y G &=  -  1  \\
+	\int_{ B _ 1 } d ^ 2 x \partial  ^ 2 G  &=  - 1 \\
+	\int _{ S_1 } r d \phi \left( \partial  G  \right)  \cdot  \vec{n} 
+						&=  \int _{ S_ 1  } d \phi \partial  _ r G \left( \frac{\partial r }{\partial  \vec{v} }    \right) \cdot  \vec{n}  \\
+						&=  2 \pi r \partial _ r G  
+\end{align*}
+If we integrate through, 
+we get that 
+\[
+  - \overline{ h } _{ 00 }  = \overline{ h } _{ 33 }  = \lambda 
+   = 8 G \mu \log \left( \frac{r}{r_0 }  \right) 
+\] 
+
+There's a slight caveat in this question. 
+if we rescale $ \phi $ as before, 
+this means that our periodicity changes, 
+we have a slightly smaller period. 
+So, two light rays get pinched when we 
+take straight lines. 
+
+\pagebreak 
+
+\subsection{Question 3} 
+To first approximation, since our rotating sphere is moving 
+slowly, our energy-momentum tensor 
+is $ T^{ \mu \nu } \sim \rho u ^{ \mu } u ^{ \nu } $, 
+where we take all contributions of $ O \left(  \Omega ^ 2  \right)  $ 
+as approximately zero. 
+\[
+T_{ \mu \nu } \simeq \rho 
+\begin{pmatrix}  1 & - \Omega y & \Omega x & 0 
+\\ - \Omega y & 0 & 0 & 0 
+\\ \Omega x & 0 & 0 & 0 \\
+0 & 0 & 0 & 0 \end{pmatrix} 
+\] 
+\subsubsection{First part}
+We first solve for our $ \overline{ h } _{ 00 } $ component, 
+which is the solution to the equation 
+\[
+\nabla ^ 2 \overline{ h } _{ 00 }  = - \frac{ 4 M }{ R ^ 2 } \delta \left( r - R  \right) 
+\] We switch to spherical polar coordinates and 
+assume axisymmetric solutions, and assume that 
+$ \overline{ h } _{ 00 }  = \overline{ h } _{ 00 } \left( r  \right)  $. 
+In spherical polar coordinates, 
+the form of the Laplacian means that 
+we have to solve
+\[
+\frac{1}{ r^ 2  } \frac{\partial }{\partial r }  \left( r ^ 2 
+\frac{\partial  \overline{ h } _{ 00  } }{\partial r  }  \right) 
+=  - \frac{4 M }{ R ^ 2 } \delta \left( r - R  \right) 
+\] 
+In the regions $ r < R $ and $ r > R $, we 
+want to solve 
+\[
+\frac{1}{ r ^ 2 } \frac{\partial  }{\partial  r ^ 2 }  \left( 
+r ^ 2 \frac{\partial  \overline{ h } _{ 00 } }{\partial   r }  \right) = 0  
+\] To ensure we don't have a singular solution at the origin
+and that the solution decays at infinity, this means that 
+\[
+\overline{ h} _{ 00 }  = \begin{cases}
+\frac{C}{ R } & r < R  \\ 
+\frac{C}{r} & r > R 
+\end{cases}
+\] where $ C $ is a constant to be determined. 
+To determine this constant, we integrate the 
+above equation between the bounds $ R + \epsilon $ and $ R  - \epsilon $ 
+for small $ \epsilon $. In other words, 
+we wish to calculate 
+\[
+4 \pi \int_{ R - \epsilon } ^{  R + \epsilon } 
+dr \, r ^ 2 \left[ \frac{1}{ r ^ 2 } \frac{\partial  }{\partial  r }  
+\left( r ^ 2 \frac{\partial  \overline{ h } _{ 00 } }{\partial  r }   \right)  \right]   = - \frac{4 M }{ R ^ 2 } \left( 4 \pi  \right)  
+\int_{ R - \epsilon } ^{ R + \epsilon }  dr \, r ^ 2 \delta \left( r - R  \right)  
+\] Hence we have that 
+\[
+\left[  R ^ 2 \frac{\partial  \overline{ h } _{ 00 } }{\partial  r }   \right] ^{ R ^ + } _{ R _  -  }   =  - 4 M \implies C = 4 M  
+\] since $ \overline{ h } _{ 00 } $ is constant taking the 
+limit from below. 
+Hence
+\[
+\overline{ h } _{ 00 }  = \begin{cases}
+\frac{4M}{R } & r < R \\
+\frac{4M}{r } & r > R 
+\end{cases}
+\] We invert this to find $ h_{ 00}  $. Since $ \overline{ h } _{ 00}  $ 
+is the only diagonal component of $ \overline{ h } _{ \mu \nu } $, 
+we have that $ \overline{ h }  =  - \overline{ h } _{ 00 } $ to first order. 
+This means that our solution for $ h_{ 00 } $ is given by 
+\[
+h _{ 00 }  = \overline{ h } _{ 00 }  - \frac{1}{2 } \eta _{ 00 } \overline{ h } _{ 00 } = \begin{cases}
+\frac{2M}{R  }  & r < R \\
+\frac{2M}{ r } & r > R 
+\end{cases} 
+\] Our metric is thus 
+\[
+ds^ 2 =  - \left( 1  - \frac{2M}{ r }  \right) dt ^ 2  
++ \left( 1 + \frac{2M}{r }  \right)  \left( dr ^ 2 + r ^ 2 d \phi ^ 2  \right)  
+\] This is the form of Newtonian gravity!
+
+\subsubsection{Second Part} 
+We proceed with the same strategy we used before. 
+Making use of the spherical Laplcian and 
+the ansatz that $ H = f ( r ) \sin \theta e ^{ i \phi } $, 
+we want to solve the following equation 
+in the regions $ r  > R $ and $ r < R $: 
+Substituting in this ansatz with the Laplacian in spherical 
+coordinates, we have that we want to solve the following 
+equation in the two regions (with the correct boundary conditions)
+\[
+\sin ^ 2 \theta \left( \frac{\partial  }{\partial  r }  \left(  r ^ 2 \frac{\partial  f }{\partial  r }   \right) \right) e ^{ i \phi  }  - e ^{ i \theta } \sin \theta f + e ^{ i \phi } f \sin \theta 
+\left( \cos ^ 2  - \sin ^ 2 \theta  \right)  = 0 
+\] 
+We make the appropriate cancellations 
+and make use of standard trigonometric 
+identities 
+\begin{align*} 
+\sin ^ 2 \theta \left(  \frac{\partial  }{\partial  r }  \left(  r ^ 2 \frac{\partial  f }{\partial  r }   \right)   \right)   - f + f \left(  \cos ^ 2 \theta  - \sin ^ 2 \theta  \right)   &= 0 \\ 
+\frac{\partial  }{\partial  r  }  \left( r ^ 2 \frac{\partial  f }{\partial  r }   \right)   - 2f  & = 0 
+\end{align*} 
+We then make the ansatz that $ f = A r ^{ \alpha } $ for some power exponent 
+$ \alpha $. The solutions substituting in this ansatz, we 
+find that the two solutions are $ \alpha = 1, -2 $. Due to 
+regularity conditions, these are the exponents for the regions 
+$ r < R $ and $ r > R $ respectively. Imposing that 
+the function is continuous at  $ r  = R $, 
+we find that 
+\[
+f\left(   r  \right)  = \begin{cases}
+A r & r < R \\ 
+\frac{ A R ^ 3}{ r ^ 2  } & r > R 
+\end{cases}
+\] Now all that's left to do is to determine the constant $ A $. 
+We do this by integrating the equation over 
+the troublesome coordinate over a small 
+volume around radius $ R $. We only care about the 
+radial part of the Laplacian since 
+continuity takes every other term to zero. 
+Thus, we integrate over 
+\[
+\sin \theta e ^{ i \phi } \frac{\partial  }{\partial  r }  \left( r ^ 2 
+\frac{\partial  f }{\partial  r }  \right)   =  e^{ i \phi } \sin \theta 
+\frac{ 4 \Omega }{ R ^ 2 } M \delta \left( r - R  \right)   
+\]   We cancel off the functions of $ \phi $ and $ \theta $
+, and remembering to include the measure $ dr \, r ^ 2 $, 
+integrating the radial coordinate 
+\[
+\left[  R ^ 2 \frac{\partial  f }{\partial  R }   \right] ^{ R _ + }_{ R_{ - } }  =  - i 4 \Omega R M 
+\] Now, the crucial observation 
+here is that we substitute in the limits from 
+above and below according to the \textbf{different} forms 
+of $ f \left( r  \right)  $. This means that 
+\[
+A R ^ 2 \left[  1 - \left(  - 2 \right)   \right]  = - i 4 \Omega R M 
+\]  Thus, we have that 
+$ A =  - \frac{4}{3 }  \Omega R M $.
+Substituting in our value of $ A $ and comparing the real and imaginary parts, we recover
+our formula for $ \overline{ h }_{ 0i  }  = h _{ 0i } $   
+as 
+\[
+h_{ 0i }  = \begin{cases}
+\omega  \left(  y , -x, 0  \right)  & r < R \\
+\frac{\omega  R ^ 3 }{ r ^ 3 }  \left( y , -x , 0  \right)  & r > R 
+\end{cases}
+\] 
+This means that our new metric is 
+\[
+ds ^ 2  = \left(  1 - \frac{2M}{ R }  \right)  dt ^ 2 + \left(  1 + \frac{2M}{ R }  \right)  
+\left( dx ^ 2 + dy ^ 2 + dz ^ 2  \right)  + 2 \omega  y dx dt - 2 \omega x dy dt 
+\] Our corresponding Lagrangian is 
+\[
+L =  - \left(  1 - \frac{2M}{r }  \right) \dot{  t } ^ 2 +  \left(  1 + \frac{2M}{r }  \right) 
+\left( \dot{ x } ^ 2 + \dot{ y } ^ 2 + \dot{ z } ^ 2     \right)  + 
+2 \omega y \dot{ x } \dot{ t } - 2 \omega x \dot{ y } \dot{ t }     
+\] Let's look at what our geodesic equation for 
+$ x $ is. Making use of the Euler-Lagrange equations, 
+we have that for the $ x $ coordinate 
+\[
+\ddot{x} \left(  1  +\frac{2M}{ r }  \right)  + \dot{ x } \dot{ r } (  - \frac{2M}{r ^ 2 } ) + 
+\omega  \dot{ y } \dot{ t } + \omega y \ddot{t}  = -  \omega \dot{ y } \dot{ t }    
+\]  Now, to first order we have that $ \dot{ t } \simeq 1  $. The second term 
+on the left hand side above is second order in $ | \dot{ x } |   $ and $ \omega y  \ddot{ t  }$ 
+is as well. 
+So, we're left with the equation 
+\[
+\ddot{x} (  1 + \frac{2M}{r } ) +  =  - 2 \omega \dot{ y }   
+\]  where this time we're differentiating with respect to $ t $ 
+since it's the same as differentiating 
+with respect to $ \lambda $ to first order. 
+Similarly, we have that \[ 
+\ddot{y} (  1 + \frac{2M}{r } ) +  =  2 \omega \dot{ x}   
+\] Taking the $ \left( \frac{2M}{ r }  \right)  $ perturbation as 
+small to the other side, we recover the Coriolis force.
+
+From the above, 
+we can just integrate out 
+the angular parts straight way to arrive 
+at the differential equation 
+\[
+	\frac{d}{dr } \left(  r^ 2 
+	\frac{d }{ d r } \overline{ h } _{00 } \right)  = - 
+	4 M  G \delta \left(  r   - R  \right) 
+\] 
+
+Another way to do the last part 
+would be to observe that since 
+the gravitational potential inside the 
+shell is zero. 
+Hence, we're left with just the kinetic part of 
+the Lagrangian which is 
+\[
+	\mathcal{ L }  = \vec{v} \cdot  \vec{v} + 2 h_{ 0i } \cdot \vec{v}
+\] 
+We have that $ h _{ 0i  }  = \vec{r} \times \omega $. 
+This means that our Lagrangian is 
+\[
+	\vec{v} \cdot  \vec{v} +  2 \left( \omega \times \vec{v}  \right)  \cdot  \vec{r}
+\] Using the Euler-Lagrange equations
+\begin{align*}
+	\frac{ d }{ dt } \left( \frac{\partial  \mathcal{ L } }{\partial  d \vec{v} }  	
+	\right)  & = 2 \frac{ d }{ dt } \vec{v} 	 + 
+	 2 \vec{v} \times \omega \\
+	 \frac{\partial  \mathcal{ L  } }{\partial \vec{r} 	 }
+		 &=  2 \left( \omega \times \vec{r}  \right)   \\ 
+		 \frac{d}{ dt  } \vec{v} &=  2 \omega \times \vec{r} 
+\end{align*}
+\pagebreak
+\subsection{Question 4}
+Our second order contribution from 
+our Christoffel component is 
+\[
+\Gamma ^ \mu _{ \nu \rho }  = - \frac{1}{2 } h ^{ \mu \sigma } ( h_{ \sigma \nu , \rho } 
++ h _{ \sigma \rho , \nu }  - h _{ \nu \rho , \sigma } 	 )
+\] Our Ricci tensor is given by 
+\[
+R_{ \mu \nu } ^{ \left(  2  \right)  } \left[  h  \right]   = 
+\partial  _ \rho \Gamma ^{ \rho } _{ \nu \mu }  - \partial  _ \nu \Gamma ^{ \rho } _{ \rho \mu } 
++ \Gamma ^{ \alpha } _{ \mu \nu } \Gamma ^{ \rho } _{ \alpha \rho }  - 
+\Gamma ^{ \alpha } _{ \mu \rho } \Gamma ^{ \rho } _{ \alpha \nu } 
+\] To keep things simple, we look at contributions 
+by type, and see if they match with what we're given. 
+Specifically, terms of the schematic $ h \partial  \partial  h $ 
+come from the $ \partial  \Gamma  - \partial  \Gamma $ term. 
+After working though the algebra, this term is given by 
+\[
+R_{ \mu \nu } ^{ \left(  2  \right)  } \left[  h \partial  \partial  h  \right]  
+=  - \frac{1}{2 } h ^{ \rho \sigma } h_{ \sigma \nu , \mu \rho } + \frac{1}{2 } 
+h ^{ \rho \sigma } h _{ \nu \mu , \rho \sigma  } + 
+\frac{1}{2 } h ^{ \sigma \rho } h _{ \rho \sigma, \mu \nu } - \frac{1}{2 } 
+h _{ \rho \mu , \sigma \nu } 
+\] This agrees with the form shown.
+Next, we need to calculate the only other type of 
+term there is in the expansion which is of the form $ \partial  h \partial  h $ 
+schematically. 
+The easiest way it seems to go about doing this 
+is by first calculating the term $ \partial  _ \rho \Gamma ^ \rho_{ \nu \mu }  + \Gamma ^{ \alpha } _{ \mu \nu } \Gamma ^{ \rho } _{ \alpha \rho }$ and then proceed to 
+anti-symmetrise over the indices $ \rho , \nu $ on the bottom.
+
+The contribution 
+comes from 
+\begin{align*}
+\partial  _ \rho \Gamma ^ \rho_{ \nu \mu }  + \Gamma ^{ \alpha } _{ \mu \nu } \Gamma ^{ \rho } _{ \alpha \rho } &=   - \frac{1}{2 } h ^{ \rho \sigma } _{ , \rho } \left(  h _{ \sigma \nu , \mu } 
++ h _{ \sigma \mu , \nu }  - h _{ \nu \mu , \sigma } \right)  + 
+\frac{1}{4 } \eta ^{ \alpha \sigma } \eta ^{ \rho \beta } \left(  
+h_{ \mu \sigma , \nu } + h _{ \nu \sigma , \mu }  - h _{ \mu \nu , \sigma } \right)  \left( 
+h_{ \alpha \beta, \rho } + h _{ \rho \beta , \alpha }  - h _{ \alpha \rho , \beta }  \right)  
+\end{align*}
+This term here is quite gnarly to deal with. 
+We get three terms from the first term in the sum, 
+and a further nine terms from the two first order $ h $ brackets multiplied together. 
+
+\subsubsection{Deriving the Linearised Einstein Hilbert action} 
+Recall that in the Lagrangian formulation 
+our Einstein-Hilbert action can be written as 
+\[
+S_{ EH  } = \int d ^ 4 x \, \sqrt{  - g }  R 
+\] In this question, 
+we have to be slightly careful. 
+We need to include terms of both order $ O \left(  h    \right) $ 
+and order $ O \left( h ^ 2  \right)  $ in our $ R _{ \mu \nu } $ term, 
+since $ g ^{ \mu \nu } = \eta ^{ \mu \nu }  - h ^{ \mu \nu } $. 
+We first have to find out what $ \sqrt{  - g}  $ is.
+To first order, using the fact that the derivative 
+of the determinant of a matrix is the trace, we have that 
+\[
+g =   - 1  - h \implies \left( -1 - h  \right)^{ \frac{1}{2 } }  \simeq - 1  - \frac{h}{2 } 
+\] So the total term 
+we have to consider is 
+\[
+S_{ EH }  = \int d ^ 4 x \left( 1 - \frac{h}{2 } \right) 
+\left( \eta^{ \mu \nu }  - h ^{ \mu \nu }  \right) R _{ \mu \nu } \] 
+Our first order contribution to the 
+Ricci tensor is 
+\[
+	R_{ \mu \nu } ^{ \left(  1  \right)  } \left[  h  \right]   = 
+	\partial  ^ \rho \partial  _{ ( \mu } h _{ \nu  ) \rho 	  }  - 
+	\frac{1}{2 } \partial  ^ \rho 	\partial  _ \rho h _{ \mu \nu } 
+	 - \frac{1}{2 } \partial  _ \mu \partial  _ \nu h
+\] To make things clearer, we go term by term.
+The first term that's easiest to check out 
+is the $  \frac{1}{4 }\partial  _ \rho h \partial  ^ \rho h  $ 
+term in the integrand. We can 
+selectively pick out terms from each bracket 
+which will get us what we want. This is 
+a technique we can try. 
+
+\pagebreak 
+
+\subsection{Question 5}
+Let's do some counting here. 
+In our gauge transformation, 
+we have $ 4 $ degrees of freedom which 
+are chosen from $ \lambda $. 
+But, we have that it looks like we 
+have five conditions from 
+the conditions 
+\[
+ H _{ 0 \mu }  = H  = 0 
+\] What happened? 
+Well, we need to impose the de Donder gauge
+condition so that 
+\[
+  - \overline{ H } _{ 00 } k _ 0 + \overline{ H } _{ 0i  } k _ i  = 0
+\] This removes one constraint, namely, 
+if $ \overline{ H  }_{ 0i } = 0 $, then since $ k _ 0  = 0 $  
+then we get that $ H _{ 00}  =  0 $ for free! 
+
+This question is about solving the right 
+equations to force us in the 'transverse-traceless' 
+gauge, or TT gauge. Since we're solving 
+a wave equation in two indices, we have a 
+polarisation matrix $ H _{ \mu \nu } $. 
+All we're doing in this question is showing that 
+when we move to a different gauge, 
+\[
+	H_{ \mu \nu } \to H _{ \mu \nu }  + i \left( 
+	k _ \mu X _ \nu + k _ \nu X _ \mu  - \eta _{ \mu \nu  } k ^ \rho X _ \rho \right) 
+\] we can solve the right equations to get that 
+\[
+ H _{ 0 \mu }  = H \indices{^ \mu _ \mu }  =0  
+\] It's not 
+always obvious a priori that we have enough 
+degrees of freedom in our gauge transformations 
+to be able to solve things like this, so 
+the whole point of the question is to indeed 
+check that this is possible.
+
+First observe that due to the 
+condition $ k _ \mu k ^ \mu  = 0 $, 
+we have that all non-trivial solutions 
+to the wave equation must include 
+ $ k _ 0 \neq  0 $.
+
+ Suppose that initially 
+ \[
+  H_{ 0 \mu }  = f _{ 0 \mu } 
+ \] Imposing our transverse condition means 
+ that we require
+ \[
+	 f _{ 0 \mu }  =  - i \left( k _ \mu X _ 0 
+	 + k _ 0 X _ \mu  - \eta _{ 0 \mu } k _ \rho X ^ \rho \right)  
+ \] If we set $ \mu   = 0 $, carrying the $ i$ to the
+ other side gives us the equation 
+ \[
+  i f _{ 00 }   = k _ 0 X _ 0 + k _ i X _ i 
+ \] In addition, 
+ imposing our traceless condition means that 
+ if we set $ H \indices{ ^ \mu  _\mu }  = \rho   $, 
+ then we get the condition 
+ \[
+   \frac{  - i \rho }{ 2} = k _ \rho X ^ \rho  =  - k _ 0 X ^ 0 + k _ i X ^ i 
+ \] Combining this with the condition 
+ that $ H _{ 0 0 }  = 0 $ above, we find that 
+ we can solve for $ X _ 0 $ by setting 
+ \[
+	 X _ 0  = \frac{ i }{ 2 k _ 0  }\left(  f _{ 00 } + \frac{\rho}{2} \right) 
+ \] The other transverse 
+ conditions are 
+ \[
+	 H  _{ 0 i }  =f _{ 0i }  = - i \left( k _ 0 X _ i + k _ i X _ 0 \right) 
+ \] However, since we've already solved 
+ for $ X _ 0 $, we can just invert to get 
+ \[
+  \frac{ i f _{ 0 i }  - k _ i X _ 0 }{ k _ 0 }  = X _ i 
+ \] These are all the gauge conditions we need. 
+ However, we still need to check that these solutions are consistent with one another. 
+To do this, the simplest thing to do is 
+to take our wave vector to lie in the $z  $ direction 
+without loss off generality, so $ k = \omega \left( 1, 0 , 0 , 1 \right) $. 
+This yields a system of equations we have to solve 
+as well as check for consistency. 
+\begin{align*}
+	i f_{00 } &=  \omega \left( X _ 0 + X _ 3  \right)   \\
+	- \frac{ i \rho }{ 2 } &  = \omega (  - X_0 + X_3) \\
+	i f _{ 01  } &=  \omega X _ 1 \\ 
+	i f _{ 02 } &= \omega X_2 \\
+	i f_{ 0 3 } &=  \omega \left(  X _ 0 + X _ 3 \right)  \\
+\end{align*}
+We have explicit solutions for $ X _ 1 $ and $ X _ 2 $, 
+but we need to check for consistency for the $ X _ 0 $ and 
+$ X _ 3 $ components. 
+Solving for the first two equations, we have 
+that
+\[
+	X_ 0  = \frac{1}{ 2 \omega } i \left( f _{ 00  } + \frac{\rho}{2 }  \right), 
+	X_3 = \frac{1}{2 \omega } i \left( f_{00}  - \frac{\rho}{2 } \right) 
+\] The only thing we need to check is that now, 
+$ f _{ 01 } = f_{ 0 3 } $. However, this 
+is okay since our de Donder gauge condition $ k_ \mu H ^{ \mu \nu }  = 0 $ for 
+$ \nu  =  0 $ implies that $ f _{ 00 } = f _{ 0 3 } $. 
+Thus, we have a consistent solution. 
+
+
+Question: is it always valid to 
+take the wave vector in the $ z $ direction without loss 
+of generality? 
+
+
+\pagebreak
+\section{Question 6}
+Assuming we have slow moving bodies, 
+the four momenta of an object is given by 
+the vector with unity in the zeroth component 
+as well as the Newtonian velocity. 
+
+Be careful 
+when contracting indices. For example 
+if we want to compute $ \dddot{ I }_{ kk }  $, 
+make sure you calculate $  I _{ kk} $ first in 
+the definition of $ Q _{ ij } $ first. 
+
+For each particle, the associated energy-momentum 
+tensor is the mass of each particle along with 
+a delta function for the coordinate.
+\[
+	T^{ 00 }  = m_1 \delta \left( z \right)  \delta \left( x -r_1 \cos \omega t  \right) \delta\left( y  - r_1 \sin \omega t  \right)  + m_2 \delta\left( z  \right)  \delta \left( x + r_2 \cos \omega t  \right)  \delta\left( y + r_2 \sin \omega t  \right)  
+\] Using standard double angle formulae we have
+that 
+\[
+	I_{ ij }  = \left( \frac{ m_1 r_1 ^ 2 + m_2 r_2^ 2 }{ 2 }  \right)  
+	\begin{pmatrix} 1 + \cos \omega t &  2 \sin \omega t & 0 \\
+	\sin 2 \omega t & 1 - \cos 2 \omega t & 0 \\ 
+0 & 0 & 0 \end{pmatrix}  
+\] Using this, our quadrapole moment is given by 
+\[
+	Q_{ ij} \left( t  \right)  = I_{ ij }  - \frac{1}{3 } I_{ kk } \delta_{ ij } 
+	 =  \left( \frac{ m_1 r_1 ^ 2 + m_2 r_2^ 2 }{ 2 }  \right)  
+	 \begin{pmatrix}  \frac{1}{3 } + \cos 2 \omega t  & \sin 2 \omega t & 0 \\ 
+	 \sin 2 \omega t & \frac{1}{3 } - \cos 2 \omega t & 0 \\
+         0 & 0 &  - \frac{2}{3 } \end{pmatrix}   
+\] Differentiating this with respect to time 3 times, 
+and then using the expression for reduced mass $ \mu U R  = m_1 r_1 = m_2 r_2 $, $ R  = r_1 + r_2 $, we have that 
+\[
+	 \dddot{Q}_{ ij } = 
+	 4 \omega ^ 3 \mu R ^ 2   \begin{pmatrix} \sin 2 \omega t & \cos 2 \omega t & 0 \\ \cos 2 \omega t &  - \sin 2 \omega t & 0 \\ 
+	 0 & 0 & 0 \end{pmatrix} 
+\] Our expression for power 
+is given by the expression 
+\[
+ \mathcal{ P }  = \frac{1}{5 } 
+ \dddot{ Q}_{ ij  } \dddot{ Q } ^{ ij }
+\] Recalling a factor of $ 2 $ that 
+comes from summing the triogonometric 
+terms in the matrix, we have that 
+\[
+ \mathcal{ P }  = \frac{32}{ 5 } \omega^  6 \mu ^ 2 R ^ 4 
+\] Substituting our values of $ \omega $ and $ \mu $, this gives our value of $ \mathcal{ P } $ as 
+\[
+ \mathcal{ P }  = \frac{32}{5 } \frac{ G ^ 4 
+ m_1 ^ 2 m_2 ^ 2 \left( m_1 + m_2  \right)  }{ R ^ 5 }
+\] 
+
+For the second part of the question, 
+we want to solve $ \frac{  d E }{  dt }  =  -\mathcal{ P } $. 
+Using the chain rule for our expression for $ E $, we have that 
+\[
+	\dot{ R } \frac{ G m_1 m_2 }{ 2 R ^ 2 }  =   - \frac{32}{5 } \frac{G ^ 4 m_1 ^ 2 m_2 ^ 2 \left( m_1 + m 2  \right)  }{ R ^ 5 } 
+\]
+Simplifying, we have that 
+\[
+	\frac{d R }{ d t }  =  - \frac{64 G ^ 3 m_1m_2 \left( m_1 +  m_2  \right)  }{ 5 R ^ 3 }
+\] Substituting in our initial condition 
+that $ R =R_0 $ at $ t = 0 $, then we 
+get that 
+\[
+	\frac{R^ 4 }{ 4 }  = \frac{R_0^ 4 }{ 4 }  - \frac{64 }{ 5 } G ^ 3 m_1 m 2 \left( m_1 +  m_2 \right) 
+\]
+
+To extract the chirp mass from 
+experimentally determining $ \omega $ and $ \dot{ \omega }  $, 
+we use the following facts (note that I've emitted constants here).
+We have from the definition that 
+\[
+	\omega \propto \frac{\left( m_1 + m_2  \right)  ^{ \frac{1}{2 } }}{ R ^{ \frac{3}{2 } } }
+\] Differentiating $ \omega ^ 2 $ with respect to time, 
+and substituting our expression for $ \dot{R }  $ above, 
+we find that 
+\[
+	\dot{ \omega }  \propto \left( m_1 + m_2  \right)  ^{ \frac{3}{2 } } m_1 m_2 R ^{  - \frac{11 }{ 2 } } 
+\] Now, just sub out $ R $ in favour of $ \omega $ in to get 
+\[
+	\dot{ \omega }  = m_1 m_2 \left( m_1 + m_ 2  \right)^{  - \frac{1}{3 } } \omega ^{ \frac{11}{3  }}  
+	\] This means 
+	that we get an experimentally measured value of $ \frac{m_1 m_2 }{  \left( m_1 + m_2  \right)  ^{ \frac{1}{3 } } } $. Just take this to the power of $ \frac{3}{5 } $ to get the chirp mass. 
+
+\pagebreak
+
+\section{Problem Solving Tips} 
+
+
+
 \subsection{Being careful about how we expand things} 
 We need to be careful about trying to 
 apply the covariant derivative to Christoffel symbols. 

@@ -3,7 +3,7 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {section}{\numberline {1}Starting off with non-relativistic particles}{4}{section.1}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {1.1}Exploring different Lagrangians}{4}{subsection.1.1}
+\contentsline {subsection}{\numberline {1.1}Exploring different Lagrangians}{5}{subsection.1.1}
 \defcounter {refsection}{0}\relax 
 \contentsline {section}{\numberline {2}Special relativity}{5}{section.2}
 \defcounter {refsection}{0}\relax 
@@ -135,36 +135,68 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {subsection}{\numberline {8.6}Power Radiated}{70}{subsection.8.6}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {9}Example Sheet 1}{73}{section.9}
+\contentsline {subsection}{\numberline {8.7}Summary}{73}{subsection.8.7}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {9.1}Question 1}{74}{subsection.9.1}
+\contentsline {subsubsection}{\numberline {8.7.1}Gauge symmetries in linearised theory}{73}{subsubsection.8.7.1}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {9.2}Question 2}{75}{subsection.9.2}
+\contentsline {subsubsection}{\numberline {8.7.2}Gravitational wave solutions and polarisations}{73}{subsubsection.8.7.2}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {9.3}Question 3}{76}{subsection.9.3}
+\contentsline {subsubsection}{\numberline {8.7.3}Gravitational waves from a source}{73}{subsubsection.8.7.3}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {9.4}Question 5}{77}{subsection.9.4}
+\contentsline {section}{\numberline {9}Example Sheet 1}{74}{section.9}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {9.5}Question 6}{79}{subsection.9.5}
+\contentsline {subsection}{\numberline {9.1}Question 1}{75}{subsection.9.1}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {9.6}Question 7}{80}{subsection.9.6}
+\contentsline {subsection}{\numberline {9.2}Question 2}{76}{subsection.9.2}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {9.7}Question 8}{82}{subsection.9.7}
+\contentsline {subsection}{\numberline {9.3}Question 3}{77}{subsection.9.3}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {9.8}Question 9}{84}{subsection.9.8}
+\contentsline {subsection}{\numberline {9.4}Question 5}{78}{subsection.9.4}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {9.9}Question 10}{85}{subsection.9.9}
+\contentsline {subsection}{\numberline {9.5}Question 6}{80}{subsection.9.5}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {9.10}Question 11}{86}{subsection.9.10}
+\contentsline {subsection}{\numberline {9.6}Question 7}{81}{subsection.9.6}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {9.11}Being careful about how we expand things}{87}{subsection.9.11}
+\contentsline {subsection}{\numberline {9.7}Question 8}{83}{subsection.9.7}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {9.12}Tricks in the Levi-Civita connection}{87}{subsection.9.12}
+\contentsline {subsection}{\numberline {9.8}Question 9}{85}{subsection.9.8}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {9.13}Integrating over volume forms}{87}{subsection.9.13}
+\contentsline {subsection}{\numberline {9.9}Question 10}{86}{subsection.9.9}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {9.14}Showing that magnitude is constant}{88}{subsection.9.14}
+\contentsline {subsection}{\numberline {9.10}Question 11}{87}{subsection.9.10}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {9.15}Symmetries of the Riemann Tensor}{88}{subsection.9.15}
+\contentsline {section}{\numberline {10}Example Sheet 2}{88}{section.10}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {9.16}General techniques}{88}{subsection.9.16}
+\contentsline {section}{\numberline {11}Example Sheet 4}{89}{section.11}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {11.1}Question 1}{89}{subsection.11.1}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {11.2}Question 2}{89}{subsection.11.2}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {11.3}Question 3}{92}{subsection.11.3}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{\numberline {11.3.1}First part}{92}{subsubsection.11.3.1}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{\numberline {11.3.2}Second Part}{93}{subsubsection.11.3.2}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {11.4}Question 4}{95}{subsection.11.4}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{\numberline {11.4.1}Deriving the Linearised Einstein Hilbert action}{95}{subsubsection.11.4.1}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {11.5}Question 5}{96}{subsection.11.5}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {12}Question 6}{98}{section.12}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {13}Problem Solving Tips}{100}{section.13}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {13.1}Being careful about how we expand things}{100}{subsection.13.1}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {13.2}Tricks in the Levi-Civita connection}{100}{subsection.13.2}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {13.3}Integrating over volume forms}{100}{subsection.13.3}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {13.4}Showing that magnitude is constant}{100}{subsection.13.4}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {13.5}Symmetries of the Riemann Tensor}{100}{subsection.13.5}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {13.6}General techniques}{100}{subsection.13.6}

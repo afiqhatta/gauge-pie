@@ -1,4 +1,4 @@
-This is LuaTeX, Version 1.07.0 (TeX Live 2018)  (format=lualatex 2019.1.15)  6 DEC 2019 17:24
+This is LuaTeX, Version 1.07.0 (TeX Live 2018)  (format=lualatex 2019.1.15)  16 JAN 2020 11:12
  system commands enabled.
  file:line:error style messages enabled.
 **article.tex
@@ -23,7 +23,7 @@ Inserting `luaotfload.aux.patch_cambria_domh' at position 2 in `luaotfload.patch
 Inserting `luaotfload.aux.fixup_fontdata' at position 1 in `luaotfload.patch_font_unsafe'.
 Inserting `luaotfload.aux.set_capheight' at position 3 in `luaotfload.patch_font'.
 Inserting `luaotfload.rewrite_fontname' at position 4 in `luaotfload.patch_font'.
-luaotfload | main : initialization completed in 0.158 seconds
+luaotfload | main : initialization completed in 0.156 seconds
 Babel <3.18> and hyphenation patterns for 1 language(s) loaded.
 (/usr/local/texlive/2018/texmf-dist/tex/latex/base/article.cls
 Document Class: article 2014/09/29 v1.4h Standard LaTeX document class
@@ -2260,6 +2260,18 @@ Package biblatex Warning: 'babel/polyglossia' detected but 'csquotes' missing.
 
 LaTeX Warning: Label `fig:' multiply defined.
 
+
+LaTeX Warning: Label `fig:e4_q1' multiply defined.
+
+
+LaTeX Warning: Label `fig:e4_q1' multiply defined.
+
+
+LaTeX Warning: Label `fig:e4_q1' multiply defined.
+
+
+LaTeX Warning: Label `fig:e4_q1' multiply defined.
+
 )
 \openout1 = article.aux
 
@@ -2400,7 +2412,14 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[2])
+[2]
+
+Package Fancyhdr Warning: \headheight is too small (12.0pt): 
+ Make it at least 13.59999pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+
+[3])
 \tf@toc=\write7
 
 \openout7 = article.toc
@@ -2411,21 +2430,14 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[3] (./why_do_we_care_about_quantum_field_theory_.tex) (./the_problem_of_locality.tex) (./particle_indistinguishability_and_particle_conservation.tex) (./problems_with_qft.tex) (./scaling_in_qft.tex)
+[4] (./why_do_we_care_about_quantum_field_theory_.tex) (./the_problem_of_locality.tex) (./particle_indistinguishability_and_particle_conservation.tex) (./problems_with_qft.tex) (./scaling_in_qft.tex)
 
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
  Make it at least 13.59999pt.
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[4] (./classical_field_theory.tex) (./euler_lagrange_equations_for_a_point_particle.tex) (./promotion_of_point_particles_to_the_classical_field.tex
-
-Package Fancyhdr Warning: \headheight is too small (12.0pt): 
- Make it at least 13.59999pt.
- We now make it that large for the rest of the document.
- This may cause the page layout to be inconsistent, however.
-
-[5]
+[5] (./classical_field_theory.tex) (./euler_lagrange_equations_for_a_point_particle.tex) (./promotion_of_point_particles_to_the_classical_field.tex
 
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
  Make it at least 13.59999pt.
@@ -2439,63 +2451,63 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[7]) (./lorentz_invariance.tex
+[7]
 
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
  Make it at least 13.59999pt.
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[8])
+[8]) (./lorentz_invariance.tex
 
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
  Make it at least 13.59999pt.
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[9] (./symmetries_and_noether's_theorem.tex
+[9])
 
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
  Make it at least 13.59999pt.
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[10]
+[10] (./symmetries_and_noether's_theorem.tex
 
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
  Make it at least 13.59999pt.
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[11]) (./switching_over_to_the_hamiltonian_formalism.tex
+[11]
 
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
  Make it at least 13.59999pt.
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[12]) (./promoting_discrete_operators_to_fields.tex
+[12]) (./switching_over_to_the_hamiltonian_formalism.tex
 
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
  Make it at least 13.59999pt.
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[13]) (./reviewing_the_harmonic_oscillator_in_one_dimension_in_quantum_mechanics.tex
+[13]) (./promoting_discrete_operators_to_fields.tex
 
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
  Make it at least 13.59999pt.
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[14]) (./promoting_fields_to_operators.tex
+[14]) (./reviewing_the_harmonic_oscillator_in_one_dimension_in_quantum_mechanics.tex
 
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
  Make it at least 13.59999pt.
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[15]
+[15]) (./promoting_fields_to_operators.tex
 
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
  Make it at least 13.59999pt.
@@ -2516,14 +2528,21 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[18]) (./creating_particle_states.tex
+[18]
 
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
  Make it at least 13.59999pt.
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[19]
+[19]) (./creating_particle_states.tex
+
+Package Fancyhdr Warning: \headheight is too small (12.0pt): 
+ Make it at least 13.59999pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+
+[20]
 Overfull \hbox (46.156pt too wide) in paragraph at lines 22--23
 []\T1/lmr/m/n/10.95 Our full Hilbert space is then the space of all par-ti-cles spanned by states of the form $[] \OML/cmm/m/it/10.95 ; a[] [] ; a[]a[] [] ; [] $
  []
@@ -2534,56 +2553,56 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[20]
+[21]
 
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
  Make it at least 13.59999pt.
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[21])
+[22])
 
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
  Make it at least 13.59999pt.
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[22] (./quantising_the_free_complex_scalar_field.tex
+[23] (./quantising_the_free_complex_scalar_field.tex
 
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
  Make it at least 13.59999pt.
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[23]
+[24]
 
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
  Make it at least 13.59999pt.
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[24]) (./introducing_time_with_the_heisenberg_picture.tex
+[25]) (./introducing_time_with_the_heisenberg_picture.tex
 
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
  Make it at least 13.59999pt.
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[25]
+[26]
 
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
  Make it at least 13.59999pt.
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[26]) (./causality_in_qft.tex
+[27]) (./causality_in_qft.tex
 
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
  Make it at least 13.59999pt.
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[27]
+[28]
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
@@ -2594,28 +2613,28 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[28]) (./the_feynman_propagator.tex
+[29]) (./the_feynman_propagator.tex
 
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
  Make it at least 13.59999pt.
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[29]
+[30]
 
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
  Make it at least 13.59999pt.
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[30])
+[31])
 
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
  Make it at least 13.59999pt.
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[31] (./interacting_fields_and_the_approach_with_perturbation_theory.tex) (./why_do_we_need_interacting_fields_and_what_are_'valid'_conditions_for_perturbation_expansions.tex
+[32] (./interacting_fields_and_the_approach_with_perturbation_theory.tex) (./why_do_we_need_interacting_fields_and_what_are_'valid'_conditions_for_perturbation_expansions.tex
 LaTeX Font Info:    Try loading font information for TS1+lmr on input line 58.
  (/usr/local/texlive/2018/texmf-dist/tex/latex/lm/ts1lmr.fd
 File: ts1lmr.fd 2009/10/30 v1.6 Font defs for Latin Modern
@@ -2626,21 +2645,14 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[32]
+[33]
 
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
  Make it at least 13.59999pt.
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[33]) (./the_interaction_picture.tex
-
-Package Fancyhdr Warning: \headheight is too small (12.0pt): 
- Make it at least 13.59999pt.
- We now make it that large for the rest of the document.
- This may cause the page layout to be inconsistent, however.
-
-[34]
+[34]) (./the_interaction_picture.tex
 
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
  Make it at least 13.59999pt.
@@ -2662,6 +2674,13 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  This may cause the page layout to be inconsistent, however.
 
 [37]
+
+Package Fancyhdr Warning: \headheight is too small (12.0pt): 
+ Make it at least 13.59999pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+
+[38]
 Overfull \hbox (28.89311pt too wide) in paragraph at lines 228--232
 \T1/lmr/m/n/10.95 but this doesn't work if there are or-der-ing am-bi-gu-i-ties. This is be-cause we have that $\OT1/cmr/m/n/10.95 [\OML/cmm/m/it/10.95 H[]\OT1/cmr/m/n/10.95 (\OML/cmm/m/it/10.95 t[]\OT1/cmr/m/n/10.95 )\OML/cmm/m/it/10.95 ; H[]\OT1/cmr/m/n/10.95 (\OML/cmm/m/it/10.95 t[]\OT1/cmr/m/n/10.95 )] \OMS/cmsy/m/n/10.95 6\OT1/cmr/m/n/10.95 ==
  []
@@ -2672,7 +2691,7 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[38]
+[39]
 Overfull \hbox (7.52707pt too wide) detected at line 299
 [][] \OML/cmm/m/it/10.95 dt[] [][] dt[]H[]\OT1/cmr/m/n/10.95 (\OML/cmm/m/it/10.95 t[]\OT1/cmr/m/n/10.95 )\OML/cmm/m/it/10.95 H[]\OT1/cmr/m/n/10.95 (\OML/cmm/m/it/10.95 t[]\OT1/cmr/m/n/10.95 ) = [] []
  []
@@ -2683,14 +2702,7 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[39]) (./_scattering_.tex
-
-Package Fancyhdr Warning: \headheight is too small (12.0pt): 
- Make it at least 13.59999pt.
- We now make it that large for the rest of the document.
- This may cause the page layout to be inconsistent, however.
-
-[40]
+[40]) (./_scattering_.tex
 
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
  Make it at least 13.59999pt.
@@ -2704,18 +2716,25 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[42]) (./wick's_theorem.tex) (./feynman_diagrams.tex
-<figures/feyn_1.jpg, id=805, 531.9875pt x 223.83624pt>
+[42]
+
+Package Fancyhdr Warning: \headheight is too small (12.0pt): 
+ Make it at least 13.59999pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+
+[43]) (./wick's_theorem.tex) (./feynman_diagrams.tex
+<figures/feyn_1.jpg, id=830, 531.9875pt x 223.83624pt>
 File: figures/feyn_1.jpg Graphic file (type jpg)
 <use figures/feyn_1.jpg>
 Package luatex.def Info: figures/feyn_1.jpg  used on input line 21.
 (luatex.def)             Requested size: 364.24149pt x 153.25859pt.
-<figures/feyn_2.png, id=808, 269.005pt x 151.56625pt>
+<figures/feyn_2.png, id=833, 269.005pt x 151.56625pt>
 File: figures/feyn_2.png Graphic file (type png)
 <use figures/feyn_2.png>
 Package luatex.def Info: figures/feyn_2.png  used on input line 39.
 (luatex.def)             Requested size: 182.11726pt x 102.61038pt.
-<figures/feyn_3.png, id=809, 567.11874pt x 151.56625pt>
+<figures/feyn_3.png, id=834, 567.11874pt x 151.56625pt>
 File: figures/feyn_3.png Graphic file (type png)
 <use figures/feyn_3.png>
 Package luatex.def Info: figures/feyn_3.png  used on input line 53.
@@ -2727,22 +2746,22 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[43]
+[44]
 
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
  Make it at least 13.59999pt.
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[44<./figures/feyn_1.jpg><./figures/feyn_2.png><./figures/feyn_3.png>]) (./scattering_revisited.tex) (./amplitudes.tex
+[45<./figures/feyn_1.jpg><./figures/feyn_2.png><./figures/feyn_3.png>]) (./scattering_revisited.tex) (./amplitudes.tex
 
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
  Make it at least 13.59999pt.
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[45]
-<figures/feyn6.png, id=835, 334.24875pt x 225.84375pt>
+[46]
+<figures/feyn6.png, id=860, 334.24875pt x 225.84375pt>
 File: figures/feyn6.png Graphic file (type png)
 <use figures/feyn6.png>
 Package luatex.def Info: figures/feyn6.png  used on input line 36.
@@ -2754,28 +2773,28 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[46<./figures/feyn6.png>] (./_computing_the_two_point_correlation_function_for_the_ground_state_of_our_perturbed_hamiltonian_.tex) (./wick's_theorem.tex) (./applying_wick's_theorem_for_the_interaction_term.tex
+[47<./figures/feyn6.png>] (./_computing_the_two_point_correlation_function_for_the_ground_state_of_our_perturbed_hamiltonian_.tex) (./wick's_theorem.tex) (./applying_wick's_theorem_for_the_interaction_term.tex
 
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
  Make it at least 13.59999pt.
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[47]
+[48]
 
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
  Make it at least 13.59999pt.
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[48])
+[49])
 
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
  Make it at least 13.59999pt.
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[49] (./feynman_phi_rules.tex
+[50] (./feynman_phi_rules.tex
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
 (hyperref)                removing `math shift' on input line 1.
@@ -2798,8 +2817,8 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[50]
-<figures/phifour.pdf, id=866, 506.85359pt x 252.945pt>
+[51]
+<figures/phifour.pdf, id=892, 506.85359pt x 252.945pt>
 File: figures/phifour.pdf Graphic file (type pdf)
 <use figures/phifour.pdf>
 Package luatex.def Info: figures/phifour.pdf  used on input line 115.
@@ -2814,8 +2833,8 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[51]
-<figures/phiFourSecond.pdf, id=873, 453.61469pt x 182.6022pt>
+[52]
+<figures/phiFourSecond.pdf, id=899, 453.61469pt x 182.6022pt>
 File: figures/phiFourSecond.pdf Graphic file (type pdf)
 <use figures/phiFourSecond.pdf>
 Package luatex.def Info: figures/phiFourSecond.pdf  used on input line 150.
@@ -2827,13 +2846,13 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[52<./figures/phifour.pdf><./figures/phiFourSecond.pdf>]
-<figures/vacuumExpand.pdf, id=929, 369.29968pt x 149.59889pt>
+[53<./figures/phifour.pdf><./figures/phiFourSecond.pdf>]
+<figures/vacuumExpand.pdf, id=954, 369.29968pt x 149.59889pt>
 File: figures/vacuumExpand.pdf Graphic file (type pdf)
 <use figures/vacuumExpand.pdf>
 Package luatex.def Info: figures/vacuumExpand.pdf  used on input line 229.
 (luatex.def)             Requested size: 364.24149pt x 147.5555pt.
-<figures/PhiFourVacuumExp.pdf, id=931, 290.0436pt x 78.2925pt>
+<figures/PhiFourVacuumExp.pdf, id=956, 290.0436pt x 78.2925pt>
 File: figures/PhiFourVacuumExp.pdf Graphic file (type pdf)
 <use figures/PhiFourVacuumExp.pdf>
 Package luatex.def Info: figures/PhiFourVacuumExp.pdf  used on input line 239.
@@ -2845,28 +2864,28 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[53]) (./greens_function_vacuum.tex
+[54]) (./greens_function_vacuum.tex
 
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
  Make it at least 13.59999pt.
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[54<./figures/vacuumExpand.pdf><./figures/PhiFourVacuumExp.pdf>]
+[55<./figures/vacuumExpand.pdf><./figures/PhiFourVacuumExp.pdf>]
 
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
  Make it at least 13.59999pt.
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[55]) (./cross_sections.tex
+[56]) (./cross_sections.tex
 
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
  Make it at least 13.59999pt.
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[56]
+[57]
 
 Package hyperref Warning: Difference (2) between bookmark levels is greater 
 (hyperref)                than one, level fixed on input line 7.
@@ -2877,7 +2896,7 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[57]
+[58]
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
 (hyperref)                removing `math shift' on input line 107.
@@ -2896,28 +2915,21 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[58]
+[59]
 
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
  Make it at least 13.59999pt.
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[59])
+[60])
 
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
  Make it at least 13.59999pt.
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[60] (./the_dirac_equation.tex) (./what_does_the_dirac_equation_give_us.tex
-
-Package Fancyhdr Warning: \headheight is too small (12.0pt): 
- Make it at least 13.59999pt.
- We now make it that large for the rest of the document.
- This may cause the page layout to be inconsistent, however.
-
-[61]
+[61] (./the_dirac_equation.tex) (./what_does_the_dirac_equation_give_us.tex
 
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
  Make it at least 13.59999pt.
@@ -2932,6 +2944,13 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  This may cause the page layout to be inconsistent, however.
 
 [63]
+
+Package Fancyhdr Warning: \headheight is too small (12.0pt): 
+ Make it at least 13.59999pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+
+[64]
 Overfull \hbox (3.84898pt too wide) in paragraph at lines 254--259
 []\T1/lmr/m/n/10.95 Thus, $\OML/cmm/m/it/10.95 S$ \T1/lmr/m/n/10.95 pro-vides a rep-re-sen-ta-tion of the Lorentz group. We now de-fine a Dirac spinor, $\OML/cmm/m/it/10.95  []\OT1/cmr/m/n/10.95 (\OML/cmm/m/it/10.95 x\OT1/cmr/m/n/10.95 )$\T1/lmr/m/n/10.95 which
  []
@@ -2942,7 +2961,7 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[64]
+[65]
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
 (hyperref)                removing `math shift' on input line 341.
@@ -2955,13 +2974,6 @@ Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
 (hyperref)                removing `math shift' on input line 341.
 
-
-Package Fancyhdr Warning: \headheight is too small (12.0pt): 
- Make it at least 13.59999pt.
- We now make it that large for the rest of the document.
- This may cause the page layout to be inconsistent, however.
-
-[65]
 
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
  Make it at least 13.59999pt.
@@ -3046,6 +3058,13 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  This may cause the page layout to be inconsistent, however.
 
 [77]
+
+Package Fancyhdr Warning: \headheight is too small (12.0pt): 
+ Make it at least 13.59999pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+
+[78]
 Overfull \hbox (18.51921pt too wide) detected at line 1122
 []
  []
@@ -3055,13 +3074,6 @@ Overfull \hbox (30.0pt too wide) in paragraph at lines 1122--1122
 [] 
  []
 
-
-Package Fancyhdr Warning: \headheight is too small (12.0pt): 
- Make it at least 13.59999pt.
- We now make it that large for the rest of the document.
- This may cause the page layout to be inconsistent, however.
-
-[78]
 
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
  Make it at least 13.59999pt.
@@ -3096,13 +3108,20 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[83] (./nucleon-feynman.pdf_tex
-<nucleon-feynman.pdf, id=1120, page=1, 257.05643pt x 110.27713pt>
+[83]
+
+Package Fancyhdr Warning: \headheight is too small (12.0pt): 
+ Make it at least 13.59999pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+
+[84] (./nucleon-feynman.pdf_tex
+<nucleon-feynman.pdf, id=1148, page=1, 257.05643pt x 110.27713pt>
 File: nucleon-feynman.pdf Graphic file (type pdf)
 <use nucleon-feynman.pdf, page 1>
 Package luatex.def Info: nucleon-feynman.pdf , page1 used on input line 52.
 (luatex.def)             Requested size: 257.05643pt x 110.28694pt.
-<nucleon-feynman.pdf, id=1121, page=2, 257.05643pt x 110.27713pt>
+<nucleon-feynman.pdf, id=1149, page=2, 257.05643pt x 110.27713pt>
 File: nucleon-feynman.pdf Graphic file (type pdf)
 <use nucleon-feynman.pdf, page 2>
 Package luatex.def Info: nucleon-feynman.pdf , page2 used on input line 62.
@@ -3114,14 +3133,7 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[84<./nucleon-feynman.pdf><./nucleon-feynman.pdf>]
-
-Package Fancyhdr Warning: \headheight is too small (12.0pt): 
- Make it at least 13.59999pt.
- We now make it that large for the rest of the document.
- This may cause the page layout to be inconsistent, however.
-
-[85]
+[85<./nucleon-feynman.pdf><./nucleon-feynman.pdf>]
 
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
  Make it at least 13.59999pt.
@@ -3172,18 +3184,6 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
 
 [92]
 
-Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 2157.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\gamma' on input line 2157.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 2157.
-
-
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
  Make it at least 13.59999pt.
  We now make it that large for the rest of the document.
@@ -3192,15 +3192,15 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
 [93]
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 2184.
+(hyperref)                removing `math shift' on input line 2175.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\gamma' on input line 2184.
+(hyperref)                removing `\gamma' on input line 2175.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 2184.
+(hyperref)                removing `math shift' on input line 2175.
 
 
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
@@ -3210,12 +3210,31 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
 
 [94]
 
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `math shift' on input line 2202.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `\gamma' on input line 2202.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `math shift' on input line 2202.
+
+
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
  Make it at least 13.59999pt.
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[95]) (./warming_up_with_spinors_from_the_$so(3)$_rotation_group.tex
+[95]
+
+Package Fancyhdr Warning: \headheight is too small (12.0pt): 
+ Make it at least 13.59999pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+
+[96]) (./warming_up_with_spinors_from_the_$so(3)$_rotation_group.tex
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
 (hyperref)                removing `math shift' on input line 1.
@@ -3230,77 +3249,77 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[96]
+[97]
 
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
  Make it at least 13.59999pt.
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[97]) (./lorentz_tranformations_and_spinors.tex
+[98]) (./lorentz_tranformations_and_spinors.tex
 
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
  Make it at least 13.59999pt.
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[98]
+[99]
 
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
  Make it at least 13.59999pt.
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[99]) (./constructing_the_chiral_representation_for_the_dirac_equation.tex) (./motivating_lorentz_invariance_of_the_dirac_equation.tex
+[100]) (./constructing_the_chiral_representation_for_the_dirac_equation.tex) (./motivating_lorentz_invariance_of_the_dirac_equation.tex
 
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
  Make it at least 13.59999pt.
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[100]
+[101]
 
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
  Make it at least 13.59999pt.
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[101]) (./constructing_boosts_and_rotations_in_block_diagonal_form.tex
+[102]) (./constructing_boosts_and_rotations_in_block_diagonal_form.tex
 
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
  Make it at least 13.59999pt.
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[102]) (./the_weyl_equations.tex
+[103]) (./the_weyl_equations.tex
 
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
  Make it at least 13.59999pt.
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[103]) (./constructing_plane-wave_solutions_to_the_weyl_equation.tex
+[104]) (./constructing_plane-wave_solutions_to_the_weyl_equation.tex
 
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
  Make it at least 13.59999pt.
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[104])
+[105])
 
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
  Make it at least 13.59999pt.
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[105] (./example_sheet_1.tex) (./question_1.tex
+[106] (./example_sheet_1.tex) (./question_1.tex
 
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
  Make it at least 13.59999pt.
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[106]
+[107]
 Overfull \hbox (57.0368pt too wide) detected at line 23
 [] \OML/cmm/m/it/10.95 d[]xT[] \OT1/cmr/m/n/10.95 = [] \OML/cmm/m/it/10.95 d[]x d[]p d[]q [] []
  []
@@ -3311,49 +3330,49 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[107]) (./question_2.tex) (./question_3.tex
+[108]) (./question_2.tex) (./question_3.tex
 
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
  Make it at least 13.59999pt.
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[108]
+[109]
 
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
  Make it at least 13.59999pt.
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[109])
+[110])
 
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
  Make it at least 13.59999pt.
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[110] (./question_4.tex)
+[111] (./question_4.tex)
 
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
  Make it at least 13.59999pt.
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[111] (./question_5.tex
+[112] (./question_5.tex
 
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
  Make it at least 13.59999pt.
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[112]) (./question_6.tex
+[113]) (./question_6.tex
 
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
  Make it at least 13.59999pt.
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[113]
+[114]
 Overfull \hbox (2.10384pt too wide) in paragraph at lines 23--25
 \T1/lmr/m/n/10.95 To as-sist us as well, we ap-ply prod-uct rule and an-ti-sym-me-try. We'll now cal-cu-late this thing 
  []
@@ -3364,35 +3383,28 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[114])
+[115])
 
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
  Make it at least 13.59999pt.
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[115] (./question_7.tex
+[116] (./question_7.tex
 
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
  Make it at least 13.59999pt.
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[116]
+[117]
 
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
  Make it at least 13.59999pt.
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[117]) (./question_8.tex) (./example_sheet_2.tex
-
-Package Fancyhdr Warning: \headheight is too small (12.0pt): 
- Make it at least 13.59999pt.
- We now make it that large for the rest of the document.
- This may cause the page layout to be inconsistent, however.
-
-[118]
+[118]) (./question_8.tex) (./example_sheet_2.tex
 
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
  Make it at least 13.59999pt.
@@ -3415,15 +3427,15 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
 
 [121]
 
-Package simpler-wick Warning: I have reached the end of \wick with some unclosed contractions on input line 246.
-
-
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
  Make it at least 13.59999pt.
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
 [122]
+
+Package simpler-wick Warning: I have reached the end of \wick with some unclosed contractions on input line 247.
+
 
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
  Make it at least 13.59999pt.
@@ -3437,7 +3449,195 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[124]) (./question_1.tex
+[124]
+
+Package Fancyhdr Warning: \headheight is too small (12.0pt): 
+ Make it at least 13.59999pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+
+[125]
+
+Package hyperref Warning: Difference (2) between bookmark levels is greater 
+(hyperref)                than one, level fixed on input line 328.
+
+(./e4_q1.pdf_tex
+<e4_q1.pdf, id=1339, page=1, 200.2596pt x 180.3673pt>
+File: e4_q1.pdf Graphic file (type pdf)
+<use e4_q1.pdf, page 1>
+Package luatex.def Info: e4_q1.pdf , page1 used on input line 52.
+(luatex.def)             Requested size: 200.25958pt x 180.3751pt.
+<e4_q1.pdf, id=1340, page=2, 200.2596pt x 180.3673pt>
+File: e4_q1.pdf Graphic file (type pdf)
+<use e4_q1.pdf, page 2>
+Package luatex.def Info: e4_q1.pdf , page2 used on input line 58.
+(luatex.def)             Requested size: 200.25958pt x 180.3751pt.
+<e4_q1.pdf, id=1341, page=3, 200.2596pt x 180.3673pt>
+File: e4_q1.pdf Graphic file (type pdf)
+<use e4_q1.pdf, page 3>
+Package luatex.def Info: e4_q1.pdf , page3 used on input line 60.
+(luatex.def)             Requested size: 200.25958pt x 180.3751pt.
+<e4_q1.pdf, id=1342, page=4, 200.2596pt x 180.3673pt>
+File: e4_q1.pdf Graphic file (type pdf)
+<use e4_q1.pdf, page 4>
+Package luatex.def Info: e4_q1.pdf , page4 used on input line 62.
+(luatex.def)             Requested size: 200.25958pt x 180.3751pt.
+<e4_q1.pdf, id=1343, page=5, 200.2596pt x 180.3673pt>
+File: e4_q1.pdf Graphic file (type pdf)
+<use e4_q1.pdf, page 5>
+Package luatex.def Info: e4_q1.pdf , page5 used on input line 64.
+(luatex.def)             Requested size: 200.25958pt x 180.3751pt.
+<e4_q1.pdf, id=1344, page=6, 200.2596pt x 180.3673pt>
+File: e4_q1.pdf Graphic file (type pdf)
+<use e4_q1.pdf, page 6>
+Package luatex.def Info: e4_q1.pdf , page6 used on input line 66.
+(luatex.def)             Requested size: 200.25958pt x 180.3751pt.
+<e4_q1.pdf, id=1345, page=7, 200.2596pt x 180.3673pt>
+File: e4_q1.pdf Graphic file (type pdf)
+<use e4_q1.pdf, page 7>
+Package luatex.def Info: e4_q1.pdf , page7 used on input line 68.
+(luatex.def)             Requested size: 200.25958pt x 180.3751pt.
+)
+./example_sheet_2.tex:335: Missing $ inserted.
+<inserted text> 
+$
+l.335 \caption{E4_q1}
+                   %
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+./example_sheet_2.tex:335: Missing $ inserted.
+<inserted text> 
+$
+l.335 \caption{E4_q1}
+                   %
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+(./e4_q1_b.pdf_tex
+<e4_q1_b.pdf, id=1346, page=1, 239.78404pt x 178.08368pt>
+File: e4_q1_b.pdf Graphic file (type pdf)
+<use e4_q1_b.pdf, page 1>
+Package luatex.def Info: e4_q1_b.pdf , page1 used on input line 52.
+(luatex.def)             Requested size: 239.78404pt x 178.08324pt.
+<e4_q1_b.pdf, id=1347, page=2, 239.78404pt x 178.08368pt>
+File: e4_q1_b.pdf Graphic file (type pdf)
+<use e4_q1_b.pdf, page 2>
+Package luatex.def Info: e4_q1_b.pdf , page2 used on input line 58.
+(luatex.def)             Requested size: 239.78404pt x 178.08324pt.
+<e4_q1_b.pdf, id=1348, page=3, 239.78404pt x 178.08368pt>
+File: e4_q1_b.pdf Graphic file (type pdf)
+<use e4_q1_b.pdf, page 3>
+Package luatex.def Info: e4_q1_b.pdf , page3 used on input line 64.
+(luatex.def)             Requested size: 239.78404pt x 178.08324pt.
+)
+
+Package Fancyhdr Warning: \headheight is too small (12.0pt): 
+ Make it at least 13.59999pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+
+[126<./e4_q1.pdf><./e4_q1.pdf><./e4_q1.pdf><./e4_q1.pdf><./e4_q1.pdf><./e4_q1.pdf><./e4_q1.pdf>] (./e4_q3.pdf_tex
+<e4_q3.pdf, id=1363, page=1, 434.13422pt x 267.89456pt>
+File: e4_q3.pdf Graphic file (type pdf)
+<use e4_q3.pdf, page 1>
+Package luatex.def Info: e4_q3.pdf , page1 used on input line 52.
+(luatex.def)             Requested size: 434.13422pt x 267.89796pt.
+<e4_q3.pdf, id=1364, page=2, 434.13422pt x 267.89456pt>
+File: e4_q3.pdf Graphic file (type pdf)
+<use e4_q3.pdf, page 2>
+Package luatex.def Info: e4_q3.pdf , page2 used on input line 59.
+(luatex.def)             Requested size: 434.13422pt x 267.89796pt.
+)
+
+Package Fancyhdr Warning: \headheight is too small (12.0pt): 
+ Make it at least 13.59999pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+
+[127<./e4_q1_b.pdf><./e4_q1_b.pdf><./e4_q1_b.pdf>]
+./example_sheet_2.tex:478: Undefined control sequence.
+<argument> ... p + q \right ) ^ 2 - m ^ 2 } \slashed {q} \lu 
+                                                  ^ s \left ( \vec {p} \righ...
+l.478 \end{align*}
+                
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+./example_sheet_2.tex:478: Undefined control sequence.
+<argument> ... p + q \right ) ^ 2 - m ^ 2 } \slashed {q} \lu 
+                                                  ^ s \left ( \vec {p} \righ...
+l.478 \end{align*}
+                
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+
+Package Fancyhdr Warning: \headheight is too small (12.0pt): 
+ Make it at least 13.59999pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+
+[128<./e4_q3.pdf><./e4_q3.pdf>] (./e4_q4.pdf_tex
+<e4_q4.pdf, id=1413, page=1, 446.54266pt x 173.2731pt>
+File: e4_q4.pdf Graphic file (type pdf)
+<use e4_q4.pdf, page 1>
+Package luatex.def Info: e4_q4.pdf , page1 used on input line 52.
+(luatex.def)             Requested size: 446.54266pt x 173.27531pt.
+)
+
+Package Fancyhdr Warning: \headheight is too small (12.0pt): 
+ Make it at least 13.59999pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+
+[129] (./e4_q5.pdf_tex
+<e4_q5.pdf, id=1418, page=1, 359.66971pt x 141.15363pt>
+File: e4_q5.pdf Graphic file (type pdf)
+<use e4_q5.pdf, page 1>
+Package luatex.def Info: e4_q5.pdf , page1 used on input line 52.
+(luatex.def)             Requested size: 359.66972pt x 141.15758pt.
+<e4_q5.pdf, id=1419, page=2, 359.66971pt x 141.15363pt>
+File: e4_q5.pdf Graphic file (type pdf)
+<use e4_q5.pdf, page 2>
+Package luatex.def Info: e4_q5.pdf , page2 used on input line 55.
+(luatex.def)             Requested size: 359.66972pt x 141.15758pt.
+<e4_q5.pdf, id=1420, page=3, 359.66971pt x 141.15363pt>
+File: e4_q5.pdf Graphic file (type pdf)
+<use e4_q5.pdf, page 3>
+Package luatex.def Info: e4_q5.pdf , page3 used on input line 61.
+(luatex.def)             Requested size: 359.66972pt x 141.15758pt.
+<e4_q5.pdf, id=1421, page=4, 359.66971pt x 141.15363pt>
+File: e4_q5.pdf Graphic file (type pdf)
+<use e4_q5.pdf, page 4>
+Package luatex.def Info: e4_q5.pdf , page4 used on input line 64.
+(luatex.def)             Requested size: 359.66972pt x 141.15758pt.
+)
+
+Package Fancyhdr Warning: \headheight is too small (12.0pt): 
+ Make it at least 13.59999pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+
+[130<./e4_q4.pdf><./e4_q5.pdf><./e4_q5.pdf><./e4_q5.pdf><./e4_q5.pdf>]
+Overfull \hbox (4.73108pt too wide) in paragraph at lines 627--630
+\T1/lmr/m/n/10.95 How-ever, since we're scat-ter-ing iden-ti-cal par-ti-cles, we use the fact that, in this mass-less case, 
+ []
+
+)
+
+Package Fancyhdr Warning: \headheight is too small (12.0pt): 
+ Make it at least 13.59999pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+
+[131] (./question_1.tex
 Overfull \hbox (57.0368pt too wide) detected at line 23
 [] \OML/cmm/m/it/10.95 d[]xT[] \OT1/cmr/m/n/10.95 = [] \OML/cmm/m/it/10.95 d[]x d[]p d[]q [] []
  []
@@ -3448,28 +3648,28 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[125]) (./question_2.tex
+[132]) (./question_2.tex
 
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
  Make it at least 13.59999pt.
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[126])
+[133])
 
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
  Make it at least 13.59999pt.
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[127]
+[134]
 Package atveryend Info: Empty hook `BeforeClearDocument' on input line 164.
 Package atveryend Info: Empty hook `AfterLastShipout' on input line 164.
  (./article.aux)
 Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 164.
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 164.
 Package rerunfilecheck Info: File `article.out' has not changed.
-(rerunfilecheck)             Checksum: A636770C20A33998D73AF148AB7F6399;9355.
+(rerunfilecheck)             Checksum: 7D67FB22F360BC8E81805F4D213A73E0;9602.
 
 
 LaTeX Warning: There were multiply-defined labels.
@@ -3480,19 +3680,19 @@ Package logreq Info: Writing requests to 'article.run.xml'.
 )
 
 Here is how much of LuaTeX's memory you used:
- 52806 strings out of 494413
+ 52998 strings out of 494413
  125171,1977958 words of node,token memory allocated
- 3287 words of node memory still in use:
-   7 hlist, 2 vlist, 2 rule, 2 glue, 1 kern, 6 sub_mlist, 684 attribute, 66 glue_spec, 684 attribute_list, 1 write, 3 pdf_action nodes
-   avail lists: 1:7,2:3373,3:1023,4:180,5:386,6:97,7:3954,8:206,9:902,10:13,11:224,12:1
- 54623 multiletter control sequences out of 65536+600000
+ 3407 words of node memory still in use:
+   7 hlist, 2 vlist, 2 rule, 2 glue, 1 kern, 6 sub_mlist, 714 attribute, 66 glue_spec, 714 attribute_list, 1 write, 3 pdf_action nodes
+   avail lists: 1:8,2:3319,3:1023,4:180,5:387,6:98,7:3954,8:206,9:902,10:13,11:224,12:1
+ 54687 multiletter control sequences out of 65536+600000
  70 fonts using 8536863 bytes
  65i,15n,101p,1050b,1978s stack positions out of 5000i,500n,10000p,200000b,100000s
 {/usr/local/texlive/2018/texmf-dist/fonts/enc/dvips/lm/lm-ec.enc}{/usr/local/texlive/2018/texmf-dist/fonts/enc/dvips/lm/lm-ts1.enc}</usr/local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx6.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx8.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cmextra/cmex8.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi6.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy6.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/lm/lmbx10.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/lm/lmbx12.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/lm/lmr10.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/lm/lmr12.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/lm/lmr17.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/lm/lmr8.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/lm/lmri10.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
-Output written on article.pdf (127 pages, 1032867 bytes).
+Output written on article.pdf (134 pages, 1080518 bytes).
 
-PDF statistics: 1416 PDF objects out of 1440 (max. 8388607)
- 1189 compressed objects within 12 object streams
- 289 named destinations out of 1000 (max. 131072)
- 957 words of extra memory for PDF output out of 10000 (max. 100000000)
+PDF statistics: 1576 PDF objects out of 1728 (max. 8388607)
+ 1300 compressed objects within 13 object streams
+ 314 named destinations out of 1000 (max. 131072)
+ 989 words of extra memory for PDF output out of 10000 (max. 100000000)
 

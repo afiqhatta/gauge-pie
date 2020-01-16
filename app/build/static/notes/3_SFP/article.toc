@@ -1,204 +1,232 @@
 \boolfalse {citerequest}\boolfalse {citetracker}\boolfalse {pagetracker}\boolfalse {backtracker}\relax 
 \babel@toc {english}{}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {1}What is a symmetry?}{4}{section.1}
+\contentsline {section}{\numberline {1}What is a symmetry?}{5}{section.1}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {1.1}Groups to represent symmetries}{4}{subsection.1.1}
+\contentsline {subsection}{\numberline {1.1}Groups to represent symmetries}{5}{subsection.1.1}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {1.2}Symmetries correspond to conserved quantities}{5}{subsection.1.2}
+\contentsline {subsection}{\numberline {1.2}Symmetries correspond to conserved quantities}{6}{subsection.1.2}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {2}Manifolds and Tangent Spaces}{6}{section.2}
+\contentsline {section}{\numberline {2}Manifolds and Tangent Spaces}{7}{section.2}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {2.1}Manifolds}{6}{subsection.2.1}
+\contentsline {subsection}{\numberline {2.1}Manifolds}{7}{subsection.2.1}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {2.2}Functions on manifolds}{6}{subsection.2.2}
+\contentsline {subsection}{\numberline {2.2}Functions on manifolds}{7}{subsection.2.2}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {2.3}Tangent vectors}{7}{subsection.2.3}
+\contentsline {subsection}{\numberline {2.3}Tangent vectors}{8}{subsection.2.3}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {2.4}Embedding manifolds in $\mathbb {R}^n$}{7}{subsection.2.4}
+\contentsline {subsection}{\numberline {2.4}Embedding manifolds in $\mathbb {R}^n$}{8}{subsection.2.4}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\numberline {2.4.1}The Embedding Theorem}{7}{subsubsection.2.4.1}
+\contentsline {subsubsection}{\numberline {2.4.1}The Embedding Theorem}{8}{subsubsection.2.4.1}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {2.5}Classifying manifolds}{8}{subsection.2.5}
+\contentsline {subsection}{\numberline {2.5}Classifying manifolds}{9}{subsection.2.5}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {3}Lie Groups}{9}{section.3}
+\contentsline {section}{\numberline {3}Lie Groups}{10}{section.3}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {3.1}What is a Lie Group?}{9}{subsection.3.1}
+\contentsline {subsection}{\numberline {3.1}What is a Lie Group?}{10}{subsection.3.1}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {3.2}Matrix groups}{10}{subsection.3.2}
+\contentsline {subsection}{\numberline {3.2}Matrix groups}{11}{subsection.3.2}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\numberline {3.2.1}Matrix groups in $GL(n, \mathbb {R} )$}{11}{subsubsection.3.2.1}
+\contentsline {subsubsection}{\numberline {3.2.1}Matrix groups in $GL(n, \mathbb {R} )$}{12}{subsubsection.3.2.1}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\numberline {3.2.2}General properties of $O(n)$ }{12}{subsubsection.3.2.2}
+\contentsline {subsubsection}{\numberline {3.2.2}General properties of $O(n)$ }{13}{subsubsection.3.2.2}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\numberline {3.2.3}SO(2)}{13}{subsubsection.3.2.3}
+\contentsline {subsubsection}{\numberline {3.2.3}SO(2)}{14}{subsubsection.3.2.3}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\numberline {3.2.4}SO(3)}{14}{subsubsection.3.2.4}
+\contentsline {subsubsection}{\numberline {3.2.4}SO(3)}{15}{subsubsection.3.2.4}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\numberline {3.2.5}Non compact groups; the Lorentz group and more general metrics}{16}{subsubsection.3.2.5}
+\contentsline {subsubsection}{\numberline {3.2.5}Non compact groups; the Lorentz group and more general metrics}{17}{subsubsection.3.2.5}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\numberline {3.2.6}Subgroups of $GL(n, \mathbb { C}) $}{16}{subsubsection.3.2.6}
+\contentsline {subsubsection}{\numberline {3.2.6}Subgroups of $GL(n, \mathbb { C}) $}{17}{subsubsection.3.2.6}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {4}Lie Algebras}{19}{section.4}
+\contentsline {section}{\numberline {4}Lie Algebras}{20}{section.4}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\numberline {4.0.1}Properties of Lie algebras}{20}{subsubsection.4.0.1}
+\contentsline {subsubsection}{\numberline {4.0.1}Properties of Lie algebras}{21}{subsubsection.4.0.1}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\numberline {4.0.2}Cartan classification}{20}{subsubsection.4.0.2}
+\contentsline {subsubsection}{\numberline {4.0.2}Cartan classification}{21}{subsubsection.4.0.2}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {4.1}Construction of Lie algebras from Lie groups}{20}{subsection.4.1}
+\contentsline {subsection}{\numberline {4.1}Construction of Lie algebras from Lie groups}{21}{subsection.4.1}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\numberline {4.1.1}Preliminaries}{21}{subsubsection.4.1.1}
+\contentsline {subsubsection}{\numberline {4.1.1}Preliminaries}{22}{subsubsection.4.1.1}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {4.2}The Lie Algebra $ \mathcal { L } ( G ) $ }{22}{subsection.4.2}
+\contentsline {subsection}{\numberline {4.2}The Lie Algebra $ \mathcal { L } ( G ) $ }{23}{subsection.4.2}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\numberline {4.2.1}Constructing the Lie Algebra for Matrix Lie Groups}{22}{subsubsection.4.2.1}
+\contentsline {subsubsection}{\numberline {4.2.1}Constructing the Lie Algebra for Matrix Lie Groups}{23}{subsubsection.4.2.1}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {4.3}Examples of derived Lie Algebras}{25}{subsection.4.3}
+\contentsline {subsection}{\numberline {4.3}Examples of derived Lie Algebras}{26}{subsection.4.3}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\numberline {4.3.1}$ SO ( n ) $ to $ \mathcal { L } ( SO ( n ) ) $}{25}{subsubsection.4.3.1}
+\contentsline {subsubsection}{\numberline {4.3.1}$ SO ( n ) $ to $ \mathcal { L } ( SO ( n ) ) $}{26}{subsubsection.4.3.1}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\numberline {4.3.2} $ SU ( n ) $ to $ \mathcal { L } ( U ( n ) ) $}{26}{subsubsection.4.3.2}
+\contentsline {subsubsection}{\numberline {4.3.2} $ SU ( n ) $ to $ \mathcal { L } ( U ( n ) ) $}{27}{subsubsection.4.3.2}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {4.4}Reconstructing Lie Groups from Lie Algebras}{29}{subsection.4.4}
+\contentsline {subsection}{\numberline {4.4}Reconstructing Lie Groups from Lie Algebras}{30}{subsection.4.4}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\numberline {4.4.1}Actions: a natural maps on Lie groups}{29}{subsubsection.4.4.1}
+\contentsline {subsubsection}{\numberline {4.4.1}Actions: a natural maps on Lie groups}{30}{subsubsection.4.4.1}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\numberline {4.4.2}Actions move us between tangent spaces}{30}{subsubsection.4.4.2}
+\contentsline {subsubsection}{\numberline {4.4.2}Actions move us between tangent spaces}{31}{subsubsection.4.4.2}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\numberline {4.4.3}Left actions on Matrix Lie Algebras}{31}{subsubsection.4.4.3}
+\contentsline {subsubsection}{\numberline {4.4.3}Left actions on Matrix Lie Algebras}{32}{subsubsection.4.4.3}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\numberline {4.4.4}Reconstructing $ G $ from $ \mathcal { L } ( G ) $}{32}{subsubsection.4.4.4}
+\contentsline {subsubsection}{\numberline {4.4.4}Reconstructing $ G $ from $ \mathcal { L } ( G ) $}{33}{subsubsection.4.4.4}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {5}Representations}{35}{section.5}
+\contentsline {subsection}{\numberline {4.5}Summary}{36}{subsection.4.5}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {5.1}Representations of Lie algebras}{36}{subsection.5.1}
+\contentsline {subsubsection}{\numberline {4.5.1}Properties of groups}{36}{subsubsection.4.5.1}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\numberline {5.1.1} Examples of representations of the additive group on the reals $\left ( \mathbb {R}, + \right ) $}{38}{subsubsection.5.1.1}
+\contentsline {section}{\numberline {5}Representations}{36}{section.5}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {5.2}A canonical representation of Lie Groups with Lie Algebras}{39}{subsection.5.2}
+\contentsline {subsection}{\numberline {5.1}Representations of Lie algebras}{38}{subsection.5.1}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {5.3}Classifying representations}{39}{subsection.5.3}
+\contentsline {subsubsection}{\numberline {5.1.1} Examples of representations of the additive group on the reals $\left ( \mathbb {R}, + \right ) $}{40}{subsubsection.5.1.1}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {5.4}Invariant subspaces and reducibility}{40}{subsection.5.4}
+\contentsline {subsection}{\numberline {5.2}A canonical representation of Lie Groups with Lie Algebras}{40}{subsection.5.2}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\numberline {5.4.1} Invariant subspaces}{40}{subsubsection.5.4.1}
+\contentsline {subsection}{\numberline {5.3}Classifying representations}{41}{subsection.5.3}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\numberline {5.4.2}Irreducible representations and total irreducibility }{41}{subsubsection.5.4.2}
+\contentsline {subsection}{\numberline {5.4}Invariant subspaces and reducibility}{41}{subsection.5.4}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {5.5}A canonical representation of Lie algebras}{41}{subsection.5.5}
+\contentsline {subsubsection}{\numberline {5.4.1} Invariant subspaces}{41}{subsubsection.5.4.1}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {5.6}Constructing a natural map of between representations of Lie groups to representations of Lie algebras}{41}{subsection.5.6}
+\contentsline {subsubsection}{\numberline {5.4.2}Irreducible representations and total irreducibility }{42}{subsubsection.5.4.2}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\numberline {5.6.1}Remark on alternate representations}{42}{subsubsection.5.6.1}
+\contentsline {subsection}{\numberline {5.5}A canonical representation of Lie algebras}{42}{subsection.5.5}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {6} Representations of SU(2) in Quantum Mechanics}{43}{section.6}
+\contentsline {subsection}{\numberline {5.6}Constructing a natural map of between representations of Lie groups to representations of Lie algebras}{42}{subsection.5.6}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {6.1}Our choice of basis}{43}{subsection.6.1}
+\contentsline {subsubsection}{\numberline {5.6.1}Remark on alternate representations}{43}{subsubsection.5.6.1}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {6.2}Roots and Weights}{44}{subsection.6.2}
+\contentsline {section}{\numberline {6} Representations of SU(2) in Quantum Mechanics}{44}{section.6}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\numberline {6.2.1}Roots}{44}{subsubsection.6.2.1}
+\contentsline {subsection}{\numberline {6.1}Our choice of basis}{44}{subsection.6.1}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\numberline {6.2.2}Weights}{44}{subsubsection.6.2.2}
+\contentsline {subsection}{\numberline {6.2}Roots and Weights}{45}{subsection.6.2}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\numberline {6.2.3}Construction of an irreducible representation}{45}{subsubsection.6.2.3}
+\contentsline {subsubsection}{\numberline {6.2.1}Roots}{45}{subsubsection.6.2.1}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {6.3}The structure of our representation}{47}{subsection.6.3}
+\contentsline {subsubsection}{\numberline {6.2.2}Weights}{45}{subsubsection.6.2.2}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {6.4}Conclusion}{47}{subsection.6.4}
+\contentsline {subsubsection}{\numberline {6.2.3}Construction of an irreducible representation}{46}{subsubsection.6.2.3}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\numberline {6.4.1}Linking this to Angular momentum in Quantum Mechanics}{48}{subsubsection.6.4.1}
+\contentsline {subsection}{\numberline {6.3}The structure of our representation}{48}{subsection.6.3}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {6.5}$SU ( 2) $ representations from $\mathcal { L } ( SU ( 2) ) $}{48}{subsection.6.5}
+\contentsline {subsection}{\numberline {6.4}Conclusion}{48}{subsection.6.4}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {6.6}New representations from old}{49}{subsection.6.6}
+\contentsline {subsubsection}{\numberline {6.4.1}Linking this to Angular momentum in Quantum Mechanics}{49}{subsubsection.6.4.1}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {6.7}Tensor products}{50}{subsection.6.7}
+\contentsline {subsection}{\numberline {6.5}$SU ( 2) $ representations from $\mathcal { L } ( SU ( 2) ) $}{49}{subsection.6.5}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {6.8}Reducibility}{51}{subsection.6.8}
+\contentsline {subsection}{\numberline {6.6}New representations from old}{50}{subsection.6.6}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {6.9}Tensor products of the $\mathcal { L } ( SU ( 2) ) $ Representations}{51}{subsection.6.9}
+\contentsline {subsection}{\numberline {6.7}Tensor products}{51}{subsection.6.7}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {7}The Killing Form}{54}{section.7}
+\contentsline {subsection}{\numberline {6.8}Reducibility}{52}{subsection.6.8}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {8}The Cartan Classification}{57}{section.8}
+\contentsline {subsection}{\numberline {6.9}Tensor products of the $\mathcal { L } ( SU ( 2) ) $ Representations}{52}{subsection.6.9}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {8.1}Algebra in the Cartan Weyl basis}{61}{subsection.8.1}
+\contentsline {section}{\numberline {7}The Killing Form}{55}{section.7}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\numberline {8.1.1}Working out the Bracket of $ \left [ E ^ \alpha , E ^ \beta \right ] $}{61}{subsubsection.8.1.1}
+\contentsline {section}{\numberline {8}The Cartan Classification}{58}{section.8}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\numberline {8.1.2}Connections with $ \mathcal { L } ( SU ( 2) ) $}{62}{subsubsection.8.1.2}
+\contentsline {subsection}{\numberline {8.1}Algebra in the Cartan Weyl basis}{62}{subsection.8.1}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {8.2}Consequences}{63}{subsection.8.2}
+\contentsline {subsubsection}{\numberline {8.1.1}Working out the Bracket of $ \left [ E ^ \alpha , E ^ \beta \right ] $}{62}{subsubsection.8.1.1}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {8.3}More on roots}{64}{subsection.8.3}
+\contentsline {subsubsection}{\numberline {8.1.2}Connections with $ \mathcal { L } ( SU ( 2) ) $}{63}{subsubsection.8.1.2}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\numberline {8.3.1}Real geometry of roots}{65}{subsubsection.8.3.1}
+\contentsline {subsection}{\numberline {8.2}Consequences}{64}{subsection.8.2}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {8.4}Simple roots}{67}{subsection.8.4}
+\contentsline {subsection}{\numberline {8.3}More on roots}{65}{subsection.8.3}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {8.5}Simple roots}{67}{subsection.8.5}
+\contentsline {subsubsection}{\numberline {8.3.1}Real geometry of roots}{66}{subsubsection.8.3.1}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {8.6}Constraints in a Cartan Matrix}{70}{subsection.8.6}
+\contentsline {subsection}{\numberline {8.4}Simple roots}{68}{subsection.8.4}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\numberline {8.6.1}Examples}{71}{subsubsection.8.6.1}
+\contentsline {subsection}{\numberline {8.5}Simple roots}{68}{subsection.8.5}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {8.7}Dynkin Diagrams}{71}{subsection.8.7}
+\contentsline {subsection}{\numberline {8.6}Constraints in a Cartan Matrix}{71}{subsection.8.6}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {8.8}Reconstructing Lie algebras from the Cartan Classification }{72}{subsection.8.8}
+\contentsline {subsubsection}{\numberline {8.6.1}Examples}{72}{subsubsection.8.6.1}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {8.9}Representations of $ \mathcal { G } $ }{73}{subsection.8.9}
+\contentsline {subsection}{\numberline {8.7}Dynkin Diagrams}{72}{subsection.8.7}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {9}Weight and root lattices}{75}{section.9}
+\contentsline {subsection}{\numberline {8.8}Reconstructing Lie algebras from the Cartan Classification }{73}{subsection.8.8}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {9.1}Highest weight representation}{77}{subsection.9.1}
+\contentsline {subsection}{\numberline {8.9}Representations of $ \mathcal { G } $ }{74}{subsection.8.9}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {9.2}Irreps of $ A _ 2 \simeq \mathcal { L } _{\mathbb {C}} \left ( SU ( 3 ) \right ) $ }{78}{subsection.9.2}
+\contentsline {subsection}{\numberline {8.10}Summary}{75}{subsection.8.10}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {9.3}Tensor products}{79}{subsection.9.3}
+\contentsline {subsubsection}{\numberline {8.10.1}The Cartan Weyl Basis}{75}{subsubsection.8.10.1}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {10}Gauge theory}{80}{section.10}
+\contentsline {section}{\numberline {9}Weight and root lattices}{76}{section.9}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\numberline {10.0.1}Global symmetries}{82}{subsubsection.10.0.1}
+\contentsline {subsection}{\numberline {9.1}Highest weight representation}{78}{subsection.9.1}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {11}Example sheet 1}{85}{section.11}
+\contentsline {subsection}{\numberline {9.2}Irreps of $ A _ 2 \simeq \mathcal { L } _{\mathbb {C}} \left ( SU ( 3 ) \right ) $ }{79}{subsection.9.2}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {11.1}Question 1}{85}{subsection.11.1}
+\contentsline {subsection}{\numberline {9.3}Tensor products}{80}{subsection.9.3}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {11.2}Question 2}{87}{subsection.11.2}
+\contentsline {subsection}{\numberline {9.4}Summary}{81}{subsection.9.4}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {11.3}Question 3}{87}{subsection.11.3}
+\contentsline {subsubsection}{\numberline {9.4.1}Cartan Matrices and Dynkin Diagrams}{81}{subsubsection.9.4.1}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {11.4}Question 4}{89}{subsection.11.4}
+\contentsline {subsubsection}{\numberline {9.4.2}Getting weights from the Cartan Matrix}{82}{subsubsection.9.4.2}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {11.5}Question 5}{90}{subsection.11.5}
+\contentsline {section}{\numberline {10}Gauge theory}{82}{section.10}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {11.6}Question 6}{92}{subsection.11.6}
+\contentsline {subsubsection}{\numberline {10.0.1}Global symmetries}{83}{subsubsection.10.0.1}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {11.7}Question 7}{93}{subsection.11.7}
+\contentsline {section}{\numberline {11}Example sheet 1}{88}{section.11}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {11.8}Question 8}{95}{subsection.11.8}
+\contentsline {subsection}{\numberline {11.1}Question 1}{88}{subsection.11.1}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {11.9}Question 9}{96}{subsection.11.9}
+\contentsline {subsection}{\numberline {11.2}Question 2}{90}{subsection.11.2}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {12}Example Sheet 2}{97}{section.12}
+\contentsline {subsection}{\numberline {11.3}Question 3}{90}{subsection.11.3}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {12.1}Question 4}{97}{subsection.12.1}
+\contentsline {subsection}{\numberline {11.4}Question 4}{92}{subsection.11.4}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {12.2}Question 9}{97}{subsection.12.2}
+\contentsline {subsection}{\numberline {11.5}Question 5}{93}{subsection.11.5}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {12.3}Question 8}{97}{subsection.12.3}
+\contentsline {subsection}{\numberline {11.6}Question 6}{95}{subsection.11.6}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {12.4}Question 2}{97}{subsection.12.4}
+\contentsline {subsection}{\numberline {11.7}Question 7}{96}{subsection.11.7}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {13}Problems left to contribute}{98}{section.13}
+\contentsline {subsection}{\numberline {11.8}Question 8}{98}{subsection.11.8}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {14}Example Sheet 3}{98}{section.14}
+\contentsline {subsection}{\numberline {11.9}Question 9}{99}{subsection.11.9}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {14.1}Question 2}{98}{subsection.14.1}
+\contentsline {section}{\numberline {12}Example Sheet 2}{100}{section.12}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {14.2}Question 3}{99}{subsection.14.2}
+\contentsline {subsection}{\numberline {12.1}Question 4}{100}{subsection.12.1}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {14.3}Question 5}{99}{subsection.14.3}
+\contentsline {subsection}{\numberline {12.2}Question 9}{100}{subsection.12.2}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {14.4}Question 6}{99}{subsection.14.4}
+\contentsline {subsection}{\numberline {12.3}Question 8}{100}{subsection.12.3}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {12.4}Question 2}{100}{subsection.12.4}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {13}Problems left to contribute}{101}{section.13}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {14}Example Sheet 3}{101}{section.14}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {14.1}Question 2}{101}{subsection.14.1}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {14.2}Question 3}{102}{subsection.14.2}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {14.3}Question 5}{102}{subsection.14.3}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {14.4}Question 6}{102}{subsection.14.4}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {15}Example Sheet 4}{103}{section.15}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {15.1}Question 3}{103}{subsection.15.1}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {15.2}Question 4}{103}{subsection.15.2}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {15.3}Question 5}{103}{subsection.15.3}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {15.4}Question 6}{105}{subsection.15.4}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {15.5}Question 7}{106}{subsection.15.5}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {15.6}Question 8}{107}{subsection.15.6}

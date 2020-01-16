@@ -1536,31 +1536,31 @@ At first order, our possible diagrams
 for nucleon to nucleon scattering are given 
 below. 
 \begin{figure}[htpb]
-	\centering
-	\input{nucleon-feynman.pdf_tex}
-	\caption{The Feynman diagram associated with nucleon to nucleon scattering. 
-	Notice that we have Fermi-Dirac statistics, so our switching of momentum 
+\centering
+\input{nucleon-feynman.pdf_tex}
+\caption{The Feynman diagram associated with nucleon to nucleon scattering. 
+Notice that we have Fermi-Dirac statistics, so our switching of momentum 
 leads to a minus sign picked up in the amplitude. }%
-	\label{fig:}
+\label{fig:}
 \end{figure}
 We read of the associated amplitude from this Feynman diagram 
 to get 
 \[
-	\mathcal{ M } = ( - i \lambda ) ^ 2 \left( 
-	\frac{\left[  \overline{ u } ^{ s' } ( \vec{p} ' ) \cdot  u ^ s ( \vec{p} )  \right] \left[ 
+\mathcal{ M } = ( - i \lambda ) ^ 2 \left( 
+\frac{\left[  \overline{ u } ^{ s' } ( \vec{p} ' ) \cdot  u ^ s ( \vec{p} )  \right] \left[ 
 \overline{ u } ^{ r' } \left( \vec{q} '  \right)  \cdot  u ^ r (\vec{q} ) \right]  }{ \left( p - p '  \right)  ^ 2 - \mu ^ 2 } 
- - \frac{ \left[  \overline{ u } ^{ s' } \left( \vec{p} ' \right)  \cdot  u ^ r ( \vec{q} )  \right] \left[ 
-		 \overline{ u } ^{ r' } ( \vec{q} ') \cdot  u^{ s } ( \vec{p} )  \right]  }{  \left( p - q'  \right)  ^ 2 
- - \mu ^ 2 }\right)  
-	\] 
-	Let's justify this 
-	picture and the terms in it. In the first diagram, 
-	we have two fermions for the top vertex - one going in and 
-	one going out with momenta $ \vec{p} $ and $ \vec{p} ' $ 
-	and these are contracted together. 
-	In addition, we have on the bottom vertex 
-	momenta $ \vec{q} $ and  $ \vec{q} ' $, and 
-	we contract the spinors associated with these in a similar fashion. 
+- \frac{ \left[  \overline{ u } ^{ s' } \left( \vec{p} ' \right)  \cdot  u ^ r ( \vec{q} )  \right] \left[ 
+	 \overline{ u } ^{ r' } ( \vec{q} ') \cdot  u^{ s } ( \vec{p} )  \right]  }{  \left( p - q'  \right)  ^ 2 
+- \mu ^ 2 }\right)  
+\] 
+Let's justify this 
+picture and the terms in it. In the first diagram, 
+we have two fermions for the top vertex - one going in and 
+one going out with momenta $ \vec{p} $ and $ \vec{p} ' $ 
+and these are contracted together. 
+In addition, we have on the bottom vertex 
+momenta $ \vec{q} $ and  $ \vec{q} ' $, and 
+we contract the spinors associated with these in a similar fashion. 
 \end{example}
 
 \begin{example}{(Fermionic loops contribute a minus sign)} 
@@ -1570,11 +1570,11 @@ Fermionic loops contribute a minus sign
 to our overall amplitude. We 
 can see this in the following fermionic loop
 \begin{equation*}
-	\feynmandiagram[small]{ 
-		a -- [scalar] b, 
-		b -- [fermion, half left] c -- [fermion, half left] b, 
-		c -- [scalar] d,
-	}; 
+\feynmandiagram[small]{ 
+	a -- [scalar] b, 
+	b -- [fermion, half left] c -- [fermion, half left] b, 
+	c -- [scalar] d,
+}; 
 \end{equation*}
 Let's label the left vertex $ x $ and the right vertex $ y $. 
 Our arrow pointing from $ x $ to $ y $ represents 
@@ -1585,7 +1585,7 @@ However, Wick's theorem gives us that our interaction term (without
 the contractions between $ \phi $ term s) is proportional to 
 
 \begin{equation*}
-	\wick{\c1   \psi ^ * _ \alpha ( x) \c 2 \psi _ \alpha ( x) \c 2 \psi ^ * _ \beta ( y ) \c 1 \psi \beta  ( y ) } 
+\wick{\c1   \psi ^ * _ \alpha ( x) \c 2 \psi _ \alpha ( x) \c 2 \psi ^ * _ \beta ( y ) \c 1 \psi \beta  ( y ) } 
 \end{equation*}
 \end{example} 
 We have the following diagrams.   
@@ -1603,7 +1603,7 @@ Question: what if $ \mathcal{ L } _{ \text{ int } }  = - \lambda \phi  \overline
 This interaction preserves parity if $ \phi $ is a pseudo-scalar, 
 in other words 
 \[
-	P \phi ( \vec{x} , t )   = - \phi ( - \vec{x} , t  )
+P \phi ( \vec{x} , t )   = - \phi ( - \vec{x} , t  )
 \] 
 This interaction looks like the below (diagram here) 
 this contributes $ ( - i \lambda ) ( \gamma ^ 5 )_{ \alpha \beta } $. 
@@ -1637,10 +1637,10 @@ For example, if we consider the case of $ \psi \psi \to \psi \psi $
 decay, we need to initialise a choice of spins $ r, s, s' , r' $ for each initial and final fermion
 state. 
 \begin{align*}
-	\ket{ i }  &= \sqrt{ 4 E_{ \vec{q} } E _{ \vec{p} }  }  
-	b_{ \vec{p} } ^{ r \dagger } b _{ \vec{q} } ^{ s \dagger } \ket{ 0 } \\
-	\ket{ f } &=  \sqrt{ 4 E_{ \vec{q} ' } E _{\vec{p} ' } }  
-	b_{ \vec{p} ' } ^{ s ' \dagger } b _{\vec{q} ' } ^{ r ' \dagger } \ket{ 0 } 
+\ket{ i }  &= \sqrt{ 4 E_{ \vec{q} } E _{ \vec{p} }  }  
+b_{ \vec{p} } ^{ r \dagger } b _{ \vec{q} } ^{ s \dagger } \ket{ 0 } \\
+\ket{ f } &=  \sqrt{ 4 E_{ \vec{q} ' } E _{\vec{p} ' } }  
+b_{ \vec{p} ' } ^{ s ' \dagger } b _{\vec{q} ' } ^{ r ' \dagger } \ket{ 0 } 
 \end{align*}
 Thus, we need find a scattering amplitude that's a function 
 of the momenta $ p , q , p ' $ and $ q ' $ but not the spins? 
@@ -1658,55 +1658,55 @@ Another reason we do this is that
 typically the spin states of the final state can't 
 be measured, so we sum over these. 
 \[
- \mathcal{ M } = B - A , \text{ in } \psi \psi \to \psi \psi 
+\mathcal{ M } = B - A , \text{ in } \psi \psi \to \psi \psi 
 \] where $ B , A $ are the different terms. 
 We wrote appropriate spin sums averages with a line on top. 
 \begin{align*}
-	\overline{ | \mathcal{ M } | } ^ 2 &=  | \overline{ A } | ^ 2 
-	+ | \overline{ B } | ^ 2 - \overline{ A ^ \dagger B } - 
-	\overline{ B ^ \dagger A } \\
-	A &=  \frac{\lambda ^ 2 \left[  \overline{u  }_{ \vec{p} ' } ^ s 
-	\cdot  u_{ \vec{q} } ^ r  \right] \left[  
+\overline{ | \mathcal{ M } | } ^ 2 &=  | \overline{ A } | ^ 2 
++ | \overline{ B } | ^ 2 - \overline{ A ^ \dagger B } - 
+\overline{ B ^ \dagger A } \\
+A &=  \frac{\lambda ^ 2 \left[  \overline{u  }_{ \vec{p} ' } ^ s 
+\cdot  u_{ \vec{q} } ^ r  \right] \left[  
 \overline{ u } _{ \vec{q} ' } ^{ r ' } \cdot  u_{ \vec{p} } ^ s \right]}{
 \mu ^ 2- \mu ^ 2+ i \epsilon } \\
 \end{align*}
 Note that we have $ ( \gamma ^ 0 ) ^ \dagger  = \gamma ^ 0 $. 
- \[
-	 | \overline{ A } | ^ 2 = \frac{ | \lambda | ^ 4  }{ 4 ( \mu ^ 2 - m ^ 2 ) ^ 2  } 
- \sum_{ r , s , s' , r ' } \overline{u }_{ \vec{p} ' _ \alpha } ^{ s ' } 
- u_{ \vec{q} _ \alpha } ^ r \overline{ u } _{ \vec{q} _ \beta } ^ r 
- u_{ \vec{p} ' _ \beta } ^{ s ' } \overline{u }_{ \vec{q} ' _ \beta } ^{ r ' } 
- u_{ \vec{p} _ \gamma } ^{ s } \overline{ u }_{ \vec{p} _ \delta } ^ s 
- u_{ \vec{q}' _ \delta } ^{ r ' }
+\[
+ | \overline{ A } | ^ 2 = \frac{ | \lambda | ^ 4  }{ 4 ( \mu ^ 2 - m ^ 2 ) ^ 2  } 
+\sum_{ r , s , s' , r ' } \overline{u }_{ \vec{p} ' _ \alpha } ^{ s ' } 
+u_{ \vec{q} _ \alpha } ^ r \overline{ u } _{ \vec{q} _ \beta } ^ r 
+u_{ \vec{p} ' _ \beta } ^{ s ' } \overline{u }_{ \vec{q} ' _ \beta } ^{ r ' } 
+u_{ \vec{p} _ \gamma } ^{ s } \overline{ u }_{ \vec{p} _ \delta } ^ s 
+u_{ \vec{q}' _ \delta } ^{ r ' }
 \]  This 
 is equal to 
 \[
-	\frac{ | \lambda |  ^ 4 }{ 4 } \frac{( \slashed{p}' + m)_{ \alpha \beta } 
-	( \slashed{q} + m )_{ \beta \alpha } \tr \left[  
+\frac{ | \lambda |  ^ 4 }{ 4 } \frac{( \slashed{p}' + m)_{ \alpha \beta } 
+( \slashed{q} + m )_{ \beta \alpha } \tr \left[  
 ( \slashed{q}' + m ) (\slashed{p} + m )  \right] }{ ( \mu ^ 2 - m ^ 2 ) ^  2}
 \] Often, we are in the high energy limit, 
 where we may wish to neglect particle masses. In this 
 case, we then find that 
 \[	| \overline{ A } | ^ 2 = \frac{ | \lambda | ^ 4 \tr ( 
-	\slashed{p} ' \slashed{q} ) \tr (\slashed{q} ' \slashed{p} ) }{4 \mu ^ 2 }
+\slashed{p} ' \slashed{q} ) \tr (\slashed{q} ' \slashed{p} ) }{4 \mu ^ 2 }
 \] Similarly, we have that for $ | \overline{ B  } | ^ 2 $, 
 we get that 
 \[
- | \overline{ B } | ^ 2 = \frac{  | \lambda | ^ 2 }{ 4 t ^ 2 }
- \tr ( \slashed{q} ' \slashed{q} ) \tr ( \slashed{p} ' \slashed{p} ) 
+| \overline{ B } | ^ 2 = \frac{  | \lambda | ^ 2 }{ 4 t ^ 2 }
+\tr ( \slashed{q} ' \slashed{q} ) \tr ( \slashed{p} ' \slashed{p} ) 
 \] We also want $  - \overline{ A ^ \dagger B  }  - \overline{ B ^ \dagger A }  = 
 - 2 Re \overline{ ( A ^ \dagger B ) } $. 
 We calculate this as 
 \begin{align*}
-	\overline{ A ^ \dagger B  } &  = \frac{ | \lambda | ^ 4 }{ 4 u t} 
-	\sum_{ r , r' , s, s ' } \overline{u } _{ \vec{q} _ \beta } ^ r 
-	u _{ \vec{p} ' _ \beta }^{ s' } \overline{ u } _{ \vec{p} _ \alpha } ^ s 
-	u _{ \vec{q} ' _ \alpha } ^{ r '} \overline{ u } _{ \vec{q}' _ \gamma } ^{ r ' } 
-	u_{ \vec{q} _ \gamma } ^ r \overline{ u } _{ \vec{p} ' _ \delta } ^{ s' } 
-	u _{ \vec{p} _ \delta } ^ s \\
-				    &=  \frac{|\lambda | ^ 2 }{ 4 ut } \tr \left(  
-				    \slashed{p} \slashed{p} ' 
-			    \slashed{q} \slashed{q}' \right)  \\
+\overline{ A ^ \dagger B  } &  = \frac{ | \lambda | ^ 4 }{ 4 u t} 
+\sum_{ r , r' , s, s ' } \overline{u } _{ \vec{q} _ \beta } ^ r 
+u _{ \vec{p} ' _ \beta }^{ s' } \overline{ u } _{ \vec{p} _ \alpha } ^ s 
+u _{ \vec{q} ' _ \alpha } ^{ r '} \overline{ u } _{ \vec{q}' _ \gamma } ^{ r ' } 
+u_{ \vec{q} _ \gamma } ^ r \overline{ u } _{ \vec{p} ' _ \delta } ^{ s' } 
+u _{ \vec{p} _ \delta } ^ s \\
+			    &=  \frac{|\lambda | ^ 2 }{ 4 ut } \tr \left(  
+			    \slashed{p} \slashed{p} ' 
+		    \slashed{q} \slashed{q}' \right)  \\
 \end{align*} 
 
 This gives us the Feynman rules 
@@ -1722,50 +1722,68 @@ fermion arrows backwards.
 IN nucleon to nucleon scattering, 
 we have that 
 \[
- | \mathcal{ M } | ^ 2 = \frac{| \lambda | ^ 2 }{ 4 } \left\{  
- \frac{\tr \slashed{q}\slashed{q}' \tr \left( \slashed{p} \slashed{p'} \right) }{t ^ 2 } + 
- \frac{ \tr \left( \slashed{q}' \slashed{p} tr\left( \slashed{p}' \slashed{q}  \right)  \right) }{u^ 2 }
-  - \frac{2 R  \tr \left( \slashed{p} \slashed{p}' \slashed{q} \slashed{q}' \right) }{ ut }\right\} 
+| \mathcal{ M } | ^ 2 = \frac{| \lambda | ^ 2 }{ 4 } \left\{  
+\frac{\tr \slashed{q}\slashed{q}' \tr \left( \slashed{p} \slashed{p'} \right) }{t ^ 2 } + 
+\frac{ \tr \left( \slashed{q}' \slashed{p} tr\left( \slashed{p}' \slashed{q}  \right)  \right) }{u^ 2 }
+- \frac{2 R  \tr \left( \slashed{p} \slashed{p}' \slashed{q} \slashed{q}' \right) }{ ut }\right\} 
 \] 
 Using trace techniques from sheet three we can show that 
 \[
- | \mathcal{ M } | ^ 2 = \frac{ | \lambda | ^ 4 }{4 } \left[ 
- \frac{ 4 q \cdot  q ' 4 p \cdot  p ' }{ t ^ 2 } + \frac{ 4 q ' \cdot  p 4 p ' \cdot  q }{ u ^ 2 }
-   - \frac{8}{ut } ( p \cdot  q ' p ' \cdot  q + p \cdot  p ' q \cdot  q ' - p \cdot  q p' \cdot  q ' )\right] 
+| \mathcal{ M } | ^ 2 = \frac{ | \lambda | ^ 4 }{4 } \left[ 
+\frac{ 4 q \cdot  q ' 4 p \cdot  p ' }{ t ^ 2 } + \frac{ 4 q ' \cdot  p 4 p ' \cdot  q }{ u ^ 2 }
+- \frac{8}{ut } ( p \cdot  q ' p ' \cdot  q + p \cdot  p ' q \cdot  q ' - p \cdot  q p' \cdot  q ' )\right] 
 \] It's customary to 
 express this in terms of $ s, t $ and $ u$. 
 We have that, in the  $ m , \mu \to 0 $  limit, 
 we get that 
 \begin{align*}
-	s & = ( p + q ) ^ 2  = ( p' + q ' ) ^ 2 \implies p \cdot  q  = p ' \cdot  q'  = \frac{s}{2 } \\
-	t &=  ( p - p' ) ^ 2  = ( q - q ' ) ^ 2 \implies p \cdot  p ' = q \cdot  q ' =  - \frac{t}{2 }  \\
-	u &=  ( p - q ' ) ^ 2  = ( q - p ' ) ^ 2 \implies p \cdot  q '  = q \cdot  p ' = - \frac{u}{2 }  
+s & = ( p + q ) ^ 2  = ( p' + q ' ) ^ 2 \implies p \cdot  q  = p ' \cdot  q'  = \frac{s}{2 } \\
+t &=  ( p - p' ) ^ 2  = ( q - q ' ) ^ 2 \implies p \cdot  p ' = q \cdot  q ' =  - \frac{t}{2 }  \\
+u &=  ( p - q ' ) ^ 2  = ( q - p ' ) ^ 2 \implies p \cdot  q '  = q \cdot  p ' = - \frac{u}{2 }  
 \end{align*}
 This implies that 
 \[
-	| \mathcal{ M } | ^ 2  = | \lambda | ^ 4 \left\{  1 + 1  - \frac{1}{2 ut } \left( u ^ 2 + t ^ 2 - s ^ 2 \right)  \right\} 
+| \mathcal{ M } | ^ 2  = | \lambda | ^ 4 \left\{  1 + 1  - \frac{1}{2 ut } \left( u ^ 2 + t ^ 2 - s ^ 2 \right)  \right\} 
 \] Adding all the Mandelstam variables, so that 
 \[
- s + t + u  = \sum m _ i ^ 2  \to 0 , \quad u = - s - t, \implies | \mathcal{ M } | ^ 2  = 3 | \lambda | ^  4
+s + t + u  = \sum m _ i ^ 2  \to 0 , \quad u = - s - t, \implies | \mathcal{ M } | ^ 2  = 3 | \lambda | ^  4
 \] Going into the centre of mass frame, 
 we have that 
 \[
-	\frac{ d \sigma  }{ dt } = \frac{ | \mathcal{ M } | ^ 2 }{ 16 \pi \lambda ( s, 0 , 0 ) }. \quad 
-	\frac{dt }{ d \cos \theta } | _{ \text{ COM } }  = 2  |\vec{p} | | \vec{p} ' |  = \frac{ s}{2}
+\frac{ d \sigma  }{ dt } = \frac{ | \mathcal{ M } | ^ 2 }{ 16 \pi \lambda ( s, 0 , 0 ) }. \quad 
+\frac{dt }{ d \cos \theta } | _{ \text{ COM } }  = 2  |\vec{p} | | \vec{p} ' |  = \frac{ s}{2}
 \] Writing out our solid angle $ \Omega$, we have that 
 $ d \Omega= d \left( \cos \theta  \right)  d \phi $. 
 This means that 
 \[
- \frac{ d \sigma }{ d \Omega } |_{ \text{ COM } }  = \frac{ | \mathcal{ M } | ^ 2 }{ 64 \pi ^ 2 s }
+\frac{ d \sigma }{ d \Omega } |_{ \text{ COM } }  = \frac{ | \mathcal{ M } | ^ 2 }{ 64 \pi ^ 2 s }
 \] We have identical particles in the final state. 
 We integrate our final state angles over the hemisphere. 
 This implies that our cross section is 
 \[
- \sigma = \frac{ 3 | \lambda | ^ 4 }{ 32 \pi s }
+\sigma = \frac{ 3 | \lambda | ^ 4 }{ 32 \pi s }
 \] This implies that $ \sigma > 0 $ even with negative quantum 
 interference. This means that $ [ \lambda ] =0 $, which means 
 that $ [ \sigma ]  = [ s ] ^{ - 1} = - 2$, which is an area. 
 This means that everything is correct.
+
+\subsection*{Summary}
+
+\subsubsection*{Trace technology}
+We use these trace relations 
+to simplify cross-section calculations. 
+We use anti-commutation relations to 
+prove this. 
+\begin{itemize}
+	\item Useful ones 
+	\[
+		\tr\left( \gamma ^ \mu \gamma ^ \nu  \right)   = 4 \eta ^{ \mu \nu }, \quad \tr \left( \gamma ^ \alpha 
+		\gamma ^ \beta \gamma ^ \gamma \gamma ^ \delta \right)   = 4 \left( \eta ^{ \alpha \beta } \eta ^{ \gamma \delta } 
+	 - \eta ^{ \alpha \gamma } \eta ^{ \beta \delta } 
+ + \eta ^{ \alpha \delta } \eta ^{ \beta \gamma } \right) 
+	\] 
+\end{itemize}
+
 
 \section{Quantum Electrodynamics}
 In this section, we'll first look at the 

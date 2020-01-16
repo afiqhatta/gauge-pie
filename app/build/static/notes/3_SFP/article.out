@@ -32,70 +32,84 @@
 \BOOKMARK [3][-]{subsubsection.4.4.2}{Actions move us between tangent spaces}{subsection.4.4}% 32
 \BOOKMARK [3][-]{subsubsection.4.4.3}{Left actions on Matrix Lie Algebras}{subsection.4.4}% 33
 \BOOKMARK [3][-]{subsubsection.4.4.4}{Reconstructing \040G \040from \040 L \040\( G \) }{subsection.4.4}% 34
-\BOOKMARK [1][-]{section.5}{Representations}{}% 35
-\BOOKMARK [2][-]{subsection.5.1}{Representations of Lie algebras}{section.5}% 36
-\BOOKMARK [3][-]{subsubsection.5.1.1}{ Examples of representations of the additive group on the reals \( R, + \) }{subsection.5.1}% 37
-\BOOKMARK [2][-]{subsection.5.2}{A canonical representation of Lie Groups with Lie Algebras}{section.5}% 38
-\BOOKMARK [2][-]{subsection.5.3}{Classifying representations}{section.5}% 39
-\BOOKMARK [2][-]{subsection.5.4}{Invariant subspaces and reducibility}{section.5}% 40
-\BOOKMARK [3][-]{subsubsection.5.4.1}{ Invariant subspaces}{subsection.5.4}% 41
-\BOOKMARK [3][-]{subsubsection.5.4.2}{Irreducible representations and total irreducibility }{subsection.5.4}% 42
-\BOOKMARK [2][-]{subsection.5.5}{A canonical representation of Lie algebras}{section.5}% 43
-\BOOKMARK [2][-]{subsection.5.6}{Constructing a natural map of between representations of Lie groups to representations of Lie algebras}{section.5}% 44
-\BOOKMARK [3][-]{subsubsection.5.6.1}{Remark on alternate representations}{subsection.5.6}% 45
-\BOOKMARK [1][-]{section.6}{ Representations of SU\(2\) in Quantum Mechanics}{}% 46
-\BOOKMARK [2][-]{subsection.6.1}{Our choice of basis}{section.6}% 47
-\BOOKMARK [2][-]{subsection.6.2}{Roots and Weights}{section.6}% 48
-\BOOKMARK [3][-]{subsubsection.6.2.1}{Roots}{subsection.6.2}% 49
-\BOOKMARK [3][-]{subsubsection.6.2.2}{Weights}{subsection.6.2}% 50
-\BOOKMARK [3][-]{subsubsection.6.2.3}{Construction of an irreducible representation}{subsection.6.2}% 51
-\BOOKMARK [2][-]{subsection.6.3}{The structure of our representation}{section.6}% 52
-\BOOKMARK [2][-]{subsection.6.4}{Conclusion}{section.6}% 53
-\BOOKMARK [3][-]{subsubsection.6.4.1}{Linking this to Angular momentum in Quantum Mechanics}{subsection.6.4}% 54
-\BOOKMARK [2][-]{subsection.6.5}{SU \( 2\) \040representations from \040L \040\( SU \( 2\) \) }{section.6}% 55
-\BOOKMARK [2][-]{subsection.6.6}{New representations from old}{section.6}% 56
-\BOOKMARK [2][-]{subsection.6.7}{Tensor products}{section.6}% 57
-\BOOKMARK [2][-]{subsection.6.8}{Reducibility}{section.6}% 58
-\BOOKMARK [2][-]{subsection.6.9}{Tensor products of the \040L \040\( SU \( 2\) \) \040Representations}{section.6}% 59
-\BOOKMARK [1][-]{section.7}{The Killing Form}{}% 60
-\BOOKMARK [1][-]{section.8}{The Cartan Classification}{}% 61
-\BOOKMARK [2][-]{subsection.8.1}{Algebra in the Cartan Weyl basis}{section.8}% 62
-\BOOKMARK [3][-]{subsubsection.8.1.1}{Working out the Bracket of \040[ E \040, E \040] }{subsection.8.1}% 63
-\BOOKMARK [3][-]{subsubsection.8.1.2}{Connections with \040 L \040\( SU \( 2\) \) }{subsection.8.1}% 64
-\BOOKMARK [2][-]{subsection.8.2}{Consequences}{section.8}% 65
-\BOOKMARK [2][-]{subsection.8.3}{More on roots}{section.8}% 66
-\BOOKMARK [3][-]{subsubsection.8.3.1}{Real geometry of roots}{subsection.8.3}% 67
-\BOOKMARK [2][-]{subsection.8.4}{Simple roots}{section.8}% 68
-\BOOKMARK [2][-]{subsection.8.5}{Simple roots}{section.8}% 69
-\BOOKMARK [2][-]{subsection.8.6}{Constraints in a Cartan Matrix}{section.8}% 70
-\BOOKMARK [3][-]{subsubsection.8.6.1}{Examples}{subsection.8.6}% 71
-\BOOKMARK [2][-]{subsection.8.7}{Dynkin Diagrams}{section.8}% 72
-\BOOKMARK [2][-]{subsection.8.8}{Reconstructing Lie algebras from the Cartan Classification }{section.8}% 73
-\BOOKMARK [2][-]{subsection.8.9}{Representations of \040 \040G \040 }{section.8}% 74
-\BOOKMARK [1][-]{section.9}{Weight and root lattices}{}% 75
-\BOOKMARK [2][-]{subsection.9.1}{Highest weight representation}{section.9}% 76
-\BOOKMARK [2][-]{subsection.9.2}{Irreps of \040A \0402 \040L \040C \( SU \( 3 \) \) \040}{section.9}% 77
-\BOOKMARK [2][-]{subsection.9.3}{Tensor products}{section.9}% 78
-\BOOKMARK [1][-]{section.10}{Gauge theory}{}% 79
-\BOOKMARK [2][-]{subsubsection.10.0.1}{Global symmetries}{section.10}% 80
-\BOOKMARK [1][-]{section.11}{Example sheet 1}{}% 81
-\BOOKMARK [2][-]{subsection.11.1}{Question 1}{section.11}% 82
-\BOOKMARK [2][-]{subsection.11.2}{Question 2}{section.11}% 83
-\BOOKMARK [2][-]{subsection.11.3}{Question 3}{section.11}% 84
-\BOOKMARK [2][-]{subsection.11.4}{Question 4}{section.11}% 85
-\BOOKMARK [2][-]{subsection.11.5}{Question 5}{section.11}% 86
-\BOOKMARK [2][-]{subsection.11.6}{Question 6}{section.11}% 87
-\BOOKMARK [2][-]{subsection.11.7}{Question 7}{section.11}% 88
-\BOOKMARK [2][-]{subsection.11.8}{Question 8}{section.11}% 89
-\BOOKMARK [2][-]{subsection.11.9}{Question 9}{section.11}% 90
-\BOOKMARK [1][-]{section.12}{Example Sheet 2}{}% 91
-\BOOKMARK [2][-]{subsection.12.1}{Question 4}{section.12}% 92
-\BOOKMARK [2][-]{subsection.12.2}{Question 9}{section.12}% 93
-\BOOKMARK [2][-]{subsection.12.3}{Question 8}{section.12}% 94
-\BOOKMARK [2][-]{subsection.12.4}{Question 2}{section.12}% 95
-\BOOKMARK [1][-]{section.13}{Problems left to contribute}{}% 96
-\BOOKMARK [1][-]{section.14}{Example Sheet 3}{}% 97
-\BOOKMARK [2][-]{subsection.14.1}{Question 2}{section.14}% 98
-\BOOKMARK [2][-]{subsection.14.2}{Question 3}{section.14}% 99
-\BOOKMARK [2][-]{subsection.14.3}{Question 5}{section.14}% 100
-\BOOKMARK [2][-]{subsection.14.4}{Question 6}{section.14}% 101
+\BOOKMARK [2][-]{subsection.4.5}{Summary}{section.4}% 35
+\BOOKMARK [3][-]{subsubsection.4.5.1}{Properties of groups}{subsection.4.5}% 36
+\BOOKMARK [1][-]{section.5}{Representations}{}% 37
+\BOOKMARK [2][-]{subsection.5.1}{Representations of Lie algebras}{section.5}% 38
+\BOOKMARK [3][-]{subsubsection.5.1.1}{ Examples of representations of the additive group on the reals \( R, + \) }{subsection.5.1}% 39
+\BOOKMARK [2][-]{subsection.5.2}{A canonical representation of Lie Groups with Lie Algebras}{section.5}% 40
+\BOOKMARK [2][-]{subsection.5.3}{Classifying representations}{section.5}% 41
+\BOOKMARK [2][-]{subsection.5.4}{Invariant subspaces and reducibility}{section.5}% 42
+\BOOKMARK [3][-]{subsubsection.5.4.1}{ Invariant subspaces}{subsection.5.4}% 43
+\BOOKMARK [3][-]{subsubsection.5.4.2}{Irreducible representations and total irreducibility }{subsection.5.4}% 44
+\BOOKMARK [2][-]{subsection.5.5}{A canonical representation of Lie algebras}{section.5}% 45
+\BOOKMARK [2][-]{subsection.5.6}{Constructing a natural map of between representations of Lie groups to representations of Lie algebras}{section.5}% 46
+\BOOKMARK [3][-]{subsubsection.5.6.1}{Remark on alternate representations}{subsection.5.6}% 47
+\BOOKMARK [1][-]{section.6}{ Representations of SU\(2\) in Quantum Mechanics}{}% 48
+\BOOKMARK [2][-]{subsection.6.1}{Our choice of basis}{section.6}% 49
+\BOOKMARK [2][-]{subsection.6.2}{Roots and Weights}{section.6}% 50
+\BOOKMARK [3][-]{subsubsection.6.2.1}{Roots}{subsection.6.2}% 51
+\BOOKMARK [3][-]{subsubsection.6.2.2}{Weights}{subsection.6.2}% 52
+\BOOKMARK [3][-]{subsubsection.6.2.3}{Construction of an irreducible representation}{subsection.6.2}% 53
+\BOOKMARK [2][-]{subsection.6.3}{The structure of our representation}{section.6}% 54
+\BOOKMARK [2][-]{subsection.6.4}{Conclusion}{section.6}% 55
+\BOOKMARK [3][-]{subsubsection.6.4.1}{Linking this to Angular momentum in Quantum Mechanics}{subsection.6.4}% 56
+\BOOKMARK [2][-]{subsection.6.5}{SU \( 2\) \040representations from \040L \040\( SU \( 2\) \) }{section.6}% 57
+\BOOKMARK [2][-]{subsection.6.6}{New representations from old}{section.6}% 58
+\BOOKMARK [2][-]{subsection.6.7}{Tensor products}{section.6}% 59
+\BOOKMARK [2][-]{subsection.6.8}{Reducibility}{section.6}% 60
+\BOOKMARK [2][-]{subsection.6.9}{Tensor products of the \040L \040\( SU \( 2\) \) \040Representations}{section.6}% 61
+\BOOKMARK [1][-]{section.7}{The Killing Form}{}% 62
+\BOOKMARK [1][-]{section.8}{The Cartan Classification}{}% 63
+\BOOKMARK [2][-]{subsection.8.1}{Algebra in the Cartan Weyl basis}{section.8}% 64
+\BOOKMARK [3][-]{subsubsection.8.1.1}{Working out the Bracket of \040[ E \040, E \040] }{subsection.8.1}% 65
+\BOOKMARK [3][-]{subsubsection.8.1.2}{Connections with \040 L \040\( SU \( 2\) \) }{subsection.8.1}% 66
+\BOOKMARK [2][-]{subsection.8.2}{Consequences}{section.8}% 67
+\BOOKMARK [2][-]{subsection.8.3}{More on roots}{section.8}% 68
+\BOOKMARK [3][-]{subsubsection.8.3.1}{Real geometry of roots}{subsection.8.3}% 69
+\BOOKMARK [2][-]{subsection.8.4}{Simple roots}{section.8}% 70
+\BOOKMARK [2][-]{subsection.8.5}{Simple roots}{section.8}% 71
+\BOOKMARK [2][-]{subsection.8.6}{Constraints in a Cartan Matrix}{section.8}% 72
+\BOOKMARK [3][-]{subsubsection.8.6.1}{Examples}{subsection.8.6}% 73
+\BOOKMARK [2][-]{subsection.8.7}{Dynkin Diagrams}{section.8}% 74
+\BOOKMARK [2][-]{subsection.8.8}{Reconstructing Lie algebras from the Cartan Classification }{section.8}% 75
+\BOOKMARK [2][-]{subsection.8.9}{Representations of \040 \040G \040 }{section.8}% 76
+\BOOKMARK [2][-]{subsection.8.10}{Summary}{section.8}% 77
+\BOOKMARK [3][-]{subsubsection.8.10.1}{The Cartan Weyl Basis}{subsection.8.10}% 78
+\BOOKMARK [1][-]{section.9}{Weight and root lattices}{}% 79
+\BOOKMARK [2][-]{subsection.9.1}{Highest weight representation}{section.9}% 80
+\BOOKMARK [2][-]{subsection.9.2}{Irreps of \040A \0402 \040L \040C \( SU \( 3 \) \) \040}{section.9}% 81
+\BOOKMARK [2][-]{subsection.9.3}{Tensor products}{section.9}% 82
+\BOOKMARK [2][-]{subsection.9.4}{Summary}{section.9}% 83
+\BOOKMARK [3][-]{subsubsection.9.4.1}{Cartan Matrices and Dynkin Diagrams}{subsection.9.4}% 84
+\BOOKMARK [3][-]{subsubsection.9.4.2}{Getting weights from the Cartan Matrix}{subsection.9.4}% 85
+\BOOKMARK [1][-]{section.10}{Gauge theory}{}% 86
+\BOOKMARK [2][-]{subsubsection.10.0.1}{Global symmetries}{section.10}% 87
+\BOOKMARK [1][-]{section.11}{Example sheet 1}{}% 88
+\BOOKMARK [2][-]{subsection.11.1}{Question 1}{section.11}% 89
+\BOOKMARK [2][-]{subsection.11.2}{Question 2}{section.11}% 90
+\BOOKMARK [2][-]{subsection.11.3}{Question 3}{section.11}% 91
+\BOOKMARK [2][-]{subsection.11.4}{Question 4}{section.11}% 92
+\BOOKMARK [2][-]{subsection.11.5}{Question 5}{section.11}% 93
+\BOOKMARK [2][-]{subsection.11.6}{Question 6}{section.11}% 94
+\BOOKMARK [2][-]{subsection.11.7}{Question 7}{section.11}% 95
+\BOOKMARK [2][-]{subsection.11.8}{Question 8}{section.11}% 96
+\BOOKMARK [2][-]{subsection.11.9}{Question 9}{section.11}% 97
+\BOOKMARK [1][-]{section.12}{Example Sheet 2}{}% 98
+\BOOKMARK [2][-]{subsection.12.1}{Question 4}{section.12}% 99
+\BOOKMARK [2][-]{subsection.12.2}{Question 9}{section.12}% 100
+\BOOKMARK [2][-]{subsection.12.3}{Question 8}{section.12}% 101
+\BOOKMARK [2][-]{subsection.12.4}{Question 2}{section.12}% 102
+\BOOKMARK [1][-]{section.13}{Problems left to contribute}{}% 103
+\BOOKMARK [1][-]{section.14}{Example Sheet 3}{}% 104
+\BOOKMARK [2][-]{subsection.14.1}{Question 2}{section.14}% 105
+\BOOKMARK [2][-]{subsection.14.2}{Question 3}{section.14}% 106
+\BOOKMARK [2][-]{subsection.14.3}{Question 5}{section.14}% 107
+\BOOKMARK [2][-]{subsection.14.4}{Question 6}{section.14}% 108
+\BOOKMARK [1][-]{section.15}{Example Sheet 4}{}% 109
+\BOOKMARK [2][-]{subsection.15.1}{Question 3}{section.15}% 110
+\BOOKMARK [2][-]{subsection.15.2}{Question 4}{section.15}% 111
+\BOOKMARK [2][-]{subsection.15.3}{Question 5}{section.15}% 112
+\BOOKMARK [2][-]{subsection.15.4}{Question 6}{section.15}% 113
+\BOOKMARK [2][-]{subsection.15.5}{Question 7}{section.15}% 114
+\BOOKMARK [2][-]{subsection.15.6}{Question 8}{section.15}% 115

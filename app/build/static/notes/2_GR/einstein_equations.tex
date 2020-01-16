@@ -1988,3 +1988,67 @@ see what we're going to get.
 	should wave your arms for 
 	$ T \sim 10 ^{ 18 } s \simeq 10 \text{billion years } $.
 \end{example}
+
+
+\subsection{Summary}
+
+\subsubsection{Gauge symmetries in linearised theory} 
+
+We can significantly reduce the 
+complexity of the equations in linearised theory 
+by fixing the gauge. 
+\begin{itemize}
+	\item An infinitesimal diffeomorphism on the metric induces the following transform on the perturbation as well as the trace removed form
+		\[
+		 h_{ \mu \nu } \to h_{ \mu \nu } + \partial  _ \mu \xi _ \nu 
+		 + \partial  _ \nu \xi _ \mu, \quad 
+		 \overline{ h } _{ \mu \nu }  \to \overline{ h} _{ \mu \nu } 
+		 + \partial  _ \mu \xi _ \nu + \partial  _ \nu \xi _ \mu 
+		  - \eta _{ \mu \nu } \partial  _ \rho \xi ^ \rho 
+		\]
+	\item With this transformation we can impose 
+		that we're working in the de Donder gauge: 
+		\[
+		 \partial  ^ \mu \overline{ h } _{ \mu \nu }  =  0 
+		\] 
+	\item This gauge gives us the forced 
+		wave equation to solve 
+		\[
+		 \Box \overline{ h } _{ \mu \nu }  =  - 16 \pi T_{ \mu \nu }
+		\] 
+\end{itemize}
+
+\subsubsection{Gravitational wave solutions and polarisations}
+
+\subsubsection{Gravitational waves from a source}
+We'll summarise the procedure of finding $ \overline{ h }_{ \mu \nu }$ 
+from the energy-momentum tensor $ T^{ \mu \nu } \left( \vec{x}, t  \right)$. 
+
+\begin{itemize}
+	\item We need to solve the forced wave equation 
+		\[
+			\Box \overline{ h }_{ \mu \nu }  =  - 16 \pi T_{ \mu \nu }, \quad \Box  = - \partial _ t ^ 2 + \partial  _ x ^ 2 
+		\]
+	\item We import the same result from electromagnetism that 
+		applying a retarded Green's function gives us the desired result 
+	\[
+		\overline{ h }^{ \mu \nu }  = \int d ^ 3 x '  \, \frac{T ^{ \mu \nu } \left(  
+		\vec{x} ' , t - | \vec{x} - \vec{x} ' | \right) }{ | \vec{x} - \vec{x} '  | }
+	\] where we define $ t_{ \text{ret} } = t - | \vec{x}  - \vec{x} ' | $. 
+\item Since $ \partial  _ \mu T ^{ \mu \nu }  = 0 $, the de Donder gauge condition is also obeyed with $ \partial_ \mu \overline{ h} ^{ \mu \nu }  = 0 $. (I should probably work on proving this sometime).
+\item The quadrapole moment $ I_{ ij } $ and obeys 
+	\[
+		\int d ^3 x' T_{ ij } \left(  \vec{x} ' , t  \right)   = \frac{1}{2 } \ddot{I }_{ ij } \left( t  \right), \quad I_{ ij } ( t )  = \int d ^ 3 x ' T ^{ 00 } \left( \vec{x}  ', t   \right) x _ i x _ j  
+	\]   
+\item We employ the approximation $  | \vec{x} - \vec{x} ' |   = r - \vec{x} ' \cdot  \hat{ \vec{x} } $ to approximate the stress-energy 
+	tensor and the metric perturbation as
+	\begin{align*}
+		T^{ \mu \nu } \left( t - | \vec{x} ' - \vec{x} |, \vec{x} '  \right)  & \simeq T ^{ \mu \nu } \left(  t - r + \hat{\vec{x} } \cdot  \vec{x} ' , \vec{x} '  \right)  \simeq T^{ \mu \nu } \left(  t - r , \vec{x} '  \right)  + \hat{ \vec{x} } \cdot  \vec{x} ' \partial _ 0 T ^{ 0 \nu } 
+		\left(  t - r , \vec{x} '  \right) \\ 
+		\overline{ h } _{ ij } \left( t, \vec{x} \right) 
+		&=  \frac{4}{r } \int d ^ 3 \vec{x} ' \, 
+		T_{ ij } \left( t - r , \vec{x} '  \right)
+	\end{align*}
+We assumed that the source is moving slowly so the second term 
+with the derivative with respect to time disappears. 
+\end{itemize}

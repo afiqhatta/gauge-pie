@@ -179,6 +179,7 @@ diagrams.
 \pagebreak 
 \subsection{Question 8} 
 For the Yukawa term, we need only attach 
+p> 
 $ i g $ to each vertex. 
 We need to take into account combinatoric factors for 
 each vertex if the 
@@ -189,8 +190,8 @@ same time of propagator is going into them.
 To find the mass dimensions of $ g, h, k, l $, we 
 need to first find the mass dimensions of the fields $ \phi $ and $ \psi $. 
 Our scalar action needs to be dimensionless, so 
- \[
- \int d ^ 4 x \, \frac{1}{2 } \partial  _ \mu \phi \partial  ^ \mu \phi 
+\[
+\int d ^ 4 x \, \frac{1}{2 } \partial  _ \mu \phi \partial  ^ \mu \phi 
 \] has mass dimension $ 0 $. This implies that $ [ \phi ] = 1 $. 
 Similarly, we find that  $ [ \psi ] = 1 $. 
 This means that the mass dimensions of $ g, k$ are  $ [ g ] = [ k]  = 1$. 
@@ -206,50 +207,50 @@ Let's tackle the Yukawa interaction first.
 We know the momentum rules for this. 
 Now, for the interaction $ h | \psi | ^ 4  = h \psi \psi ^ * \psi \psi ^ * $, 
 we have that our interaction vertex is given by 
- \begin{equation*}
-	 \feynmandiagram[small]{ 
-		 a -- [fermion] b, 
-		 c -- [fermion] b, 
-		 b -- [fermion] d, 
-		 b -- [fermion] e
-		}; 
+\begin{equation*}
+ \feynmandiagram[small]{ 
+	 a -- [fermion] b, 
+	 c -- [fermion] b, 
+	 b -- [fermion] d, 
+	 b -- [fermion] e
+	}; 
 \end{equation*}
 Now, with this kind of diagram, our propagator 
 comes from contracting just $ \psi , \psi ^ *$ together, 
 which gives us a propagator in momentum space which looks 
 like 
- \[
- \frac{i}{p ^ 2 - \mu ^ 2 + i \epsilon } 
+\[
+\frac{i}{p ^ 2 - \mu ^ 2 + i \epsilon } 
 \]
 For the term $ k \phi ^ 3 $, we have that our vertices 
 look like 
 \begin{equation*}
-	\feynmandiagram[small]{ 
-		 a -- [scalar] b, 
- 		 c -- [scalar] b, 
- 		 d -- [scalar] b, 
+\feynmandiagram[small]{ 
+	 a -- [scalar] b, 
+	 c -- [scalar] b, 
+	 d -- [scalar] b, 
 
-	}; 
+}; 
 \end{equation*}
 We need to also add in combinatoric factors, so we attach a 6 to this. 
 Each of these objects come with a propagator which comes from 
 contracting two scalars together 
 \[
- \frac{i }{ p ^ 2 - m ^ 2 + i \epsilon }
+\frac{i }{ p ^ 2 - m ^ 2 + i \epsilon }
 \] 
 Finally, the non-trivial one is the propagator that comes 
 from interactions with $ \phi \partial  _ \mu \psi \partial  ^ \mu \psi ^ *  $. 
 In this case, we have a different kind of propagator! 
 Non-zero contributions come from contractions of the form 
 \[
- \wick{ \c \phi \c \phi  \c \psi ^ * \partial _ \mu \c \psi 
- \c \partial  ^ \mu \c \psi ^ * \c \psi }
+\wick{ \c \phi \c \phi  \c \psi ^ * \partial _ \mu \c \psi 
+\c \partial  ^ \mu \c \psi ^ * \c \psi }
 \] Differentiating the contraction of $ \psi $ and $ \psi ^ * $
 pulls out a factor of  $ i \pi ^ \mu $. Thus, since 
 we'll always have an even number of propagators involving the anti-nucleons, 
 for each pair we attach a factor of 
- \[
-  \frac{ - p \cdot  q  }{ p ^ 2-m ^ 2 + i \epsilon }
+\[
+\frac{ - p \cdot  q  }{ p ^ 2-m ^ 2 + i \epsilon }
 \] 
 
 \pagebreak 
@@ -260,17 +261,17 @@ For studying the decay width up to order $ g ^ 2 $,
 we need only consider the trivial Feynman diagram with 
 one vertex (since $ \Gamma \sim | \mathcal{ M } | ^ 2 $.  
 \begin{equation*}
-	\feynmandiagram[small]{
-		a -- [scalar] b, 
-		c -- [fermion] b -- [fermion] d, 
-	}; 
+\feynmandiagram[small]{
+	a -- [scalar] b, 
+	c -- [fermion] b -- [fermion] d, 
+}; 
 \end{equation*}
 Now, since this already imposes momentum conservation, 
 our amplitude $\mathcal{ M } $ is just $  i g  $.
 Thus, our decay width is given by the formula 
 \[
-	\Gamma = \frac{1}{2m } g ^ 2 \frac{1}{( 2 \pi ) ^ 2}  \int 
-	\frac{d ^ 3 q_1  d ^ 3 q_2 }{ 2 E _{ q_1 } 2 E _{ q_2 } } \delta ^ 4 ( p_1- q_1 - q_2) 
+\Gamma = \frac{1}{2m } g ^ 2 \frac{1}{( 2 \pi ) ^ 2}  \int 
+\frac{d ^ 3 q_1  d ^ 3 q_2 }{ 2 E _{ q_1 } 2 E _{ q_2 } } \delta ^ 4 ( p_1- q_1 - q_2) 
 \] The trick here is to 
 rewrite the invariant measure $ \frac{ d ^ 3 q_2 }{ ( 2 E_{ q_2 } }$ as $  \delta^ 4 \left(  
 ( q_2 ^ 2 - \mu ^ 2 \right)  $ (notice we're using $ \mu ^ 2 $ since this 
@@ -278,45 +279,386 @@ comes from the nucleon.
 Substituting this in, then integrating over $ q_2 $, 
 we get that our decay width is 
 \[
-	\Gamma = \frac{g ^ 2 }{ ( 2 \pi ) ^ 2 2m } \int \frac{d ^ 3 q_1 }{ 2 E_{ q_1 } } \delta ^  4
-	\left(  ( p_1 - q_1 ) ^ 2  - \mu ^ 2  \right) 
+\Gamma = \frac{g ^ 2 }{ ( 2 \pi ) ^ 2 2m } \int \frac{d ^ 3 q_1 }{ 2 E_{ q_1 } } \delta ^  4
+\left(  ( p_1 - q_1 ) ^ 2  - \mu ^ 2  \right) 
 \] Now, we'd like to find the set of $ q_1 $ such that $ ( p_1 - q_1 ) ^ 2  = \mu ^ 2 $. 
 Our relativistic dispersion relation gives us that $ p_1 ^ 2 = m ^ 2 $, 
 and $q_1 ^ 2 = \mu ^ 2 $. Also, in the convention of calculating 
 decay widths, we work in the rest frame of the incoming particle (in this case, 
 the meson). This means that we take $ p_1 = ( m , 0 ) $. 
 \begin{align*}
-	p_1 ^ 2 + q_1 ^ 2 - 2 p_1 \cdot  q_1  &=  \mu ^ 2 \\
-	m ^ 2 + \mu ^ 2  - 2 m E_{ q_1 }  &= \mu ^ 2 \\
-	m ^ 2  - 2m \sqrt{ \mu ^ 2 + \vec{q} _ 1 ^ 2 } &=  0  \\
-	\| \vec{q} _ 1 \|  & = \pm \sqrt{ \frac{m ^ 2 }{ 4 }  - \mu ^ 2 } 
+p_1 ^ 2 + q_1 ^ 2 - 2 p_1 \cdot  q_1  &=  \mu ^ 2 \\
+m ^ 2 + \mu ^ 2  - 2 m E_{ q_1 }  &= \mu ^ 2 \\
+m ^ 2  - 2m \sqrt{ \mu ^ 2 + \vec{q} _ 1 ^ 2 } &=  0  \\
+\| \vec{q} _ 1 \|  & = \pm \sqrt{ \frac{m ^ 2 }{ 4 }  - \mu ^ 2 } 
 \end{align*}
 Our decay width is the integral 
 \[
-	\Gamma = \frac{g ^ 2 }{ 16 \pi ^ 2 m } \int \frac{d ^ 3 q_1 }{ E_{ q_1 } } \delta ^ 4 \left(  
-	m ^ 2- 2m \sqrt{ \mu ^ 2 + \| \vec{q} _ 1 \| ^ 2 } \right) 
+\Gamma = \frac{g ^ 2 }{ 16 \pi ^ 2 m } \int \frac{d ^ 3 q_1 }{ E_{ q_1 } } \delta ^ 4 \left(  
+m ^ 2- 2m \sqrt{ \mu ^ 2 + \| \vec{q} _ 1 \| ^ 2 } \right) 
 \] Selecting the positive root in the delta function, using 
 our standard identity for a delta function of a function, this 
 gives that the integral is 
 \begin{align*} 
-	\Gamma & = \frac{g ^ 2 }{ 16 \pi ^ 2 m } \int \frac{d ^ 3 q_1 }{ E_{ q_1 } } 
-	\frac{\delta \left(  | \vec{q} _ 1 |   - | \vec{q} _ 1 ^ * |   \right) }{
-	 \frac{2m | \vec{q} _ 1 ^ * | }{ \sqrt{ \mu ^ 2 + |\vec{q} _ 1 ^ *  | ^ 2 }  }} \\
-	 &=  \frac{ g ^ 2 }{ 16 \pi ^ 2 m } \int d |\vec{q} _ 1 | \frac{ 4 \pi | \vec{q} _ 1 | ^ 2 
-	 \delta ( | \vec{q} _ 1 |  - | \vec{q} _ 1 ^ * | ) }{2m E_{ q _ 1  } \frac{| \vec{q} _ 1 ^ * | }{
- \sqrt{ \mu ^ 2 + | \vec{q} _ 1 ^ * | ^ 2 } }} \\
- \end{align*} 
- In the last two lines we converted this integral into spherical 
- coordinates. 
- Integrating out the delta function, this is just 
- \begin{align*} 
-	 \Gamma & = \frac{g ^ 2 ( 2 \pi ) }{ 16 \pi ^2 m} \frac{1}{m } \frac{ |\vec{q} _ 1 ^ * | | E_{ q_ 1 ^ * }}{
-	 | E_{ q_ 1 ^ * } | } \\ 
-	 &=  \frac{ g ^ 2 }{ 8 \pi m ^ 2 } \sqrt{ \frac{m ^ 2 }{ 4 }  - \mu ^ 2 }   \\ 
-	 &=  \frac{g ^ 2 }{ 16 \pi m ^ 2 } \left(  1 -\frac{4 \mu ^ 2 }{ m ^ 2 }  \right)^{ \frac{1}{2 } }  \\
-	 &=  \frac{g ^ 2 }{ 16 \pi m } \sqrt{ 1 - ( 4 \mu ^ 2 / m ^ 2 ) }  \\
- \end{align*} 
- This has dimensions of mass since $ g  $ has mass dimension $ 1 $, thus 
- decay make sense since this is a rate. 
+\Gamma & = \frac{g ^ 2 }{ 16 \pi ^ 2 m } \int \frac{d ^ 3 q_1 }{ E_{ q_1 } } 
+\frac{\delta \left(  | \vec{q} _ 1 |   - | \vec{q} _ 1 ^ * |   \right) }{
+ \frac{2m | \vec{q} _ 1 ^ * | }{ \sqrt{ \mu ^ 2 + |\vec{q} _ 1 ^ *  | ^ 2 }  }} \\
+ &=  \frac{ g ^ 2 }{ 16 \pi ^ 2 m } \int d |\vec{q} _ 1 | \frac{ 4 \pi | \vec{q} _ 1 | ^ 2 
+ \delta ( | \vec{q} _ 1 |  - | \vec{q} _ 1 ^ * | ) }{2m E_{ q _ 1  } \frac{| \vec{q} _ 1 ^ * | }{
+\sqrt{ \mu ^ 2 + | \vec{q} _ 1 ^ * | ^ 2 } }} \\
+\end{align*} 
+In the last two lines we converted this integral into spherical 
+coordinates. 
+Integrating out the delta function, this is just 
+\begin{align*} 
+ \Gamma & = \frac{g ^ 2 ( 2 \pi ) }{ 16 \pi ^2 m} \frac{1}{m } \frac{ |\vec{q} _ 1 ^ * | | E_{ q_ 1 ^ * }}{
+ | E_{ q_ 1 ^ * } | } \\ 
+ &=  \frac{ g ^ 2 }{ 8 \pi m ^ 2 } \sqrt{ \frac{m ^ 2 }{ 4 }  - \mu ^ 2 }   \\ 
+ &=  \frac{g ^ 2 }{ 16 \pi m ^ 2 } \left(  1 -\frac{4 \mu ^ 2 }{ m ^ 2 }  \right)^{ \frac{1}{2 } }  \\
+ &=  \frac{g ^ 2 }{ 16 \pi m } \sqrt{ 1 - ( 4 \mu ^ 2 / m ^ 2 ) }  \\
+\end{align*} 
+This has dimensions of mass since $ g  $ has mass dimension $ 1 $, thus 
+decay make sense since this is a rate. 
 \pagebreak 
 
+\section{Example Sheet 4}
+
+\subsection*{Question 1} 
+
+\subsubsection{Part a}
+For $\psi \overline{ \psi } \to \psi \overline{ \psi }$ scattering, 
+the only two possible diagrams to second 
+order in $ \lambda $ are 
+\begin{figure}[htpb]
+\centering
+\input{e4_q1.pdf_tex}
+\caption{E4_q1}%
+\label{fig:e4_q1}
+\end{figure}
+
+Due to Feynman rules, since we have two vertices 
+in each diagram, we have a factor of $ ( - i \lambda  ) ^  2 $. 
+For the first diagram, 
+our ingoing nucleon spinor contributes $ u\left( \vec{p} \right)^s $, 
+and the ingoing anti-nucleon contributes $ \overline{v }\left(  \vec{q} \right)^ r $. 
+Since they meet at a vertex, we need to contract them to give 
+a factor of $ u \left( \vec{p}  \right)  ^ s \cdot  \overline{ v } \left( 
+\vec{q} \right)  ^ r $. Similarly, for the outgoing nucleon and anti-nucleon, 
+we have a factor of 
+$\overline{ u } \left( \vec{p} '   \right) ^{ s '  }  \cdot  
+v \left( \vec{q} '  \right)  ^{ r ' }  $. 
+Our nucleon propagator in the centre contributes a factor of 
+$ \frac{1}{\left( \left(  p + q  \right)^ 2   + \mu ^ 2  \right) }$. 
+This gives a contribution of 
+\[
+\left(  - i \lambda  \right)  ^ 2 \frac{
+\left[  \overline{ v } ^ r \left( \vec{q}  \right) \cdot  u ^{ s } \left( \vec{p}  \right)   \right]  \left[  \overline{ u }^{ s ' } \left( \vec{p} '  \right) \cdot  v ^{ r '  } \left( \vec{q} '  \right)    \right]  }{ \left(  p + q  \right)  ^  2 - \mu ^ 2  }
+\] 
+For the second diagram, the appropriate contractions 
+give
+\[
+\left(  - i \lambda  \right)  ^ 2 
+\frac{ \left[  \overline{ u } ^{ s ' } \left( \vec{p} '   \right) 
+\cdot  u ^{ s } \left( \vec{p}  \right)  \right]  \left[  
+\overline{v } ^{ r } \left( \vec{q}  \right)  \cdot  v ^{ r  ' } 
+\left( \vec{q} '  \right)  \right]  }{ \left(   p -  p '  \right)  ^ 2 
+- \mu ^ 2 }
+\] But, due to fermi-dirac statistics, we need to 
+add a minus sign relative to the first diagram since we're 
+'switching' the out-going fermions. This 
+gives the final contribution shown in the question. 
+
+\subsubsection*{Part b}
+
+\begin{figure}[htpb]
+\centering
+\input{e4_q1_b.pdf_tex}
+\caption{$\psi \phi \to \psi \phi $}%
+\label{fig:e4_q1}
+\end{figure}
+
+In the first diagram, we have an 
+incoming nucleon with spinor $ u\left( \vec{p}  \right)  ^ s $ and 
+and outgoing nucleon with spinor $ \overline{ u } \left( \vec{p '} \right) ^{ s ' } $. 
+These spinors are connected with the nucleon propagator
+with four momentum $  p + q$. 
+The nucleon propagator contributes the factor 
+\[
+ \frac{ \gamma _ \mu \left(  (p ^ \mu +q ^ \mu) + m   \right)  }{ 
+ \left(  p  + q  \right)  ^ 2  - m ^ 2  }
+\] This is a matrix object. 
+We need to contract the spinor objects on either side to 
+give a contribution of 
+\[
+\left(   - i \lambda  \right)  ^ 2 \frac{
+\overline{ u } ^{ s  ' } \left( \vec{p} '   \right) \gamma _ \mu 
+\left(  (p ^ \mu + q ^ \mu) + m   \right)  u ^ s \left( \vec{p}  \right)  }{ 
+\left(  p + q  \right)  ^ 2 - m ^ 2 }
+\]
+In the second diagram, we have the same 
+story but we've switched around the 
+meson lines. This means the 
+4 momentum of our nucleon propagator is different. 
+We \textbf{don't } add an extra minus sign here 
+since mesons are bosons. We get the contribution 
+\[
+\left(   - i \lambda  \right)  ^ 2 \frac{
+\overline{ u } ^{ s  ' } \left( \vec{p} '   \right) \gamma _ \mu 
+\left(  ( p ^ \mu  - q ^{  ' \mu }) + m   \right)  u ^ s \left( \vec{p}  \right)  }{ 
+\left(  p  - q'   \right)  ^ 2 - m ^ 2 }
+\]
+Adding these two amplitudes 
+together gives our total 
+contribution. 
+
+\subsection*{Question 3}
+According to Feynman rules, 
+each vertex contributes a factor of $  - i e \gamma ^ \mu $. 
+The ingoing and outgoing polarisation vectors of 
+the photons are contracted along these 
+vertex indices, and the 
+spinor indices are contracted across the propagator as before. 
+This means that we get, 
+for the diagrams below
+
+\begin{figure}[htpb]
+\centering
+\input{e4_q3.pdf_tex}
+\caption{Nucleon and photon 
+to nucleon and photon scattering}%
+\label{fig:e4_q1}
+\end{figure}
+
+For the first diagram, 
+we have the internal fermion propagator which 
+contributes a matrix factor of 
+\[
+\frac{\slashed{p} + \slashed{q}  + m  }{\left(  p + q   \right)  ^ 2 
+ - m^ 2 }
+\] From our vertices, 
+we attach a factor of $  - i e \gamma ^ \mu $ to each one, 
+which we have to contract with the polarisation vectors $\epsilon_{ \text{out } }
+\left( \vec{q} '   \right) $ and $ \epsilon_{ \text{ in } } \left(  \vec{q} \right) $. Putting this 
+on either side of the matrix, and then contracting 
+with our ingoing and outgoing spinors, 
+means that we get our amplitude from this diagram as 
+\[
+i\mathcal{ A }_ 1  = i \left(  - i e  \right)  ^ 2 
+\overline{ u } ^{ r ' } \left( \vec{p} '  \right)  
+\slashed{\epsilon}_{ \text{out } } \frac{\slashed{p} + \slashed{q} + m }{
+\left(  p + q  \right)  ^ 2  - m ^ 2 } \slashed{\epsilon}_{\text{in}}u ^ s \left(  \vec{p} \right) 
+\] 
+The contribution from the second diagram is exactly 
+the same, except that for the momentum 
+associated with the internal propagator, 
+it's now $ p  - q' $. 
+\[
+i \mathcal{ A } _2 =	i \left(  - i e  \right)  ^ 2 
+\overline{ u } ^{ r ' } \left( \vec{p} '  \right)  
+\slashed{\epsilon}_{ \text{out } } \frac{\slashed{p}  -  \slashed{q} '  + m }{
+\left(  p  - q'   \right)  ^ 2  - m ^ 2 } \slashed{\epsilon}_{\text{in}}u ^ s \left(  \vec{p} \right) 
+\] The sum of these contributions 
+give us our total amplitude for this scattering 
+problem. 
+
+Now, what happens which we replace our polarisation vector 
+$ \epsilon_{ \text{ in } } \left(  \vec{q}  \right)  $ with the 
+four vector $ q $? 
+For our first amplitude $ i \mathcal{  A} _ 1 $, schematically we 
+have that 
+\begin{align*}
+i\mathcal{ A } _ 1 & \propto \frac{\left(  \slashed{p} + 
+\slashed{q} + m  \right) }{\left( p + q  \right)  ^ 2 - m ^ 2 } \slashed{q} \lu ^ s \left( \vec{p} \right) \\
+&= \frac{\slashed{p}\slashed{q} + 
+\slashed{q}\slashed{q} + \slashed{q}\slashed{p}}{
+\left(  p + q  \right)  ^2   - m ^ 2 } u ^ s \left( \vec{p} \right)  \\
+&=  \frac{ 2 p \cdot  q }{\left( p + q  \right)  ^ 2  - m ^ 2 }
+u ^ s \left( \vec{p} \right) \\
+&=  1 
+\end{align*}
+There are some important justifications
+to be made with the calculations above. 
+Firstly, we have that since $ q $ is a null vector, 
+\[
+\slashed{q} \slashed{q} = q ^ 2  = 0 
+\] Secondly we subbed out the $ m $ factor 
+by using the on-shell spinor condition 
+\[
+\left(  \slashed{p} - m   \right) u ^ s \left( \vec{p}  \right)   = 0 
+\] Finally, 
+we use the fact that 
+\[
+\slashed{p} \slashed{q} + \slashed{q} \slashed{p} = 2 p \cdot  q 
+\] Similarly, for our second factor, we get a 
+$  - 1 $ from cancellations. So adding the 
+two together gives us a 0. 
+
+Now, to calculate the cross-section, 
+we need to take the spin-sum amplitude. 
+To do this, we 
+not need to only average over the incoming spins 
+and sum over out-going spins, but 
+we also need to average and sum over incoming 
+and outgoing photons as well. 
+
+Our expression for our 
+differential scattering with respect to the $ t $ 
+Mandelstam variable is 
+\[
+\frac{ d \sigma }{ dt }  = \frac{| A | ^ 2  }{ 16 \pi \lambda\left( 
+s, m_1^ 2 , m_2 ^ 2 \right) }
+\] where $ \lambda\left( x, y, z  \right)   = 
+x ^ 2 + y ^ 2 + z ^ 2  - 2xy  - 2 yz  - 2 zx $. 
+In this case, $ | A |^ 2 $ is the 
+spin and polarised average. We decompose this into the 
+separate amplitudes we calculated earlier, so 
+that 
+\[
+| A | ^ 2 = | A _ 1 | ^ 2 + | A _ 2 | ^ 2 + 2 Re \left(  A_ 1 ^ * 
+A _ 2 \right) 
+\] 
+\subsection{Question 4}
+To introduce scalars into our Lagrangian, 
+we need to add in covariant derivatives to couple 
+the photons from $ A _ \mu $ to charged scalars $ \phi $.
+This acts as 
+\[
+	D ^ \mu \phi  = \partial  ^ \phi + ie A ^ \mu \phi 
+\] This enforces gauge invariance when we put 
+it in  the Lagrangian 
+\[
+ \mathcal{ L }  = D ^ \mu \phi D _ \mu \phi ^\dagger = 
+ \partial  ^ \mu \phi \partial  _ \mu \phi ^\dagger 
+ + ie A ^ \mu \left(  \phi \partial  _ \mu \phi ^\dagger  - 
+ \phi ^\dagger \partial  _ \mu \phi \right)  + e ^ 2 A ^ \mu A ^ \mu \phi ^\dagger
+ \phi 
+\] The first term is a kinetic term, 
+and our two interaction terms give us two vertices 
+for our Feynman diagrams which we need to calculate Feynman rules 
+for. We get this from Fourier transforming. 
+
+\begin{figure}[htpb]
+\centering
+\input{e4_q4.pdf_tex}
+\caption{Nucleon and photon 
+to nucleon and photon scattering}%
+\label{fig:e4_q1}
+\end{figure}
+
+The first diagram contributes a factor of $ i e ( p^ \mu + q^ \mu )$ 
+due to the derivative terms. 
+The second diagram contributes a factor 
+of $ 2 i e ^ 2 \eta _{ \mu \nu  } $. 
+We have two identical photons from the second 
+diagram, so we need to add an additional 
+combinatoric factor of $ 2 $. 
+
+
+
+\subsection{Question 5}
+In QED, the only possible diagram which 
+we can get is the one below
+
+\begin{figure}[htpb]
+\centering
+\input{e4_q5.pdf_tex}
+\caption{Nucleon and photon 
+to nucleon and photon scattering}%
+\label{fig:e4_q1}
+\end{figure}
+
+As before, each vertex in this diagram 
+contributes one factor of $  -i e \gamma ^ \mu $. 
+We contract the incoming fermions  $ e ^ + $ and $ e ^ - $. 
+Our progagator is just a factor of $ \frac{i \eta_{ \mu \nu } }{ \left( p + q  \right)  ^ 2 }$, 
+since it's a photon propagator, and this contracts the two 
+indices for the $ \gamma ^ \mu $ matrices.  
+
+
+\subsection*{Question 6}
+
+Our amplitude from this 
+scattering problem is 
+\[
+ i \mathcal{  A}  = \frac{i e ^ 2 }{q ^ 2 } 
+ \left( \overline{v}_{ s ' } \left( p'  \right)  \gamma ^ \mu 
+ u _ s \left( p  \right) \right) \left( 
+ \overline{ u } _ r\left( k  \right)  \gamma _ \mu 
+ v_{ r' } \left( k'  \right)  \right)    
+\] 
+We calculate the spin sum-average of $ | A | ^ 2 $. 
+\[
+ | \overline{ A } | ^ 2  = 
+ \frac{1}{4 } \sum_{ r, r', s , s' } 
+ \left[ \overline{v}_{ s'  }\left( p'  \right)  \gamma ^ \mu 
+ u _ s \left( p  \right)  \right]  \left[  
+ \overline{ u } _ s \left( p  \right)  \gamma ^ \nu v _ s \left( p'  \right)  \right]  \left[  
+ \overline{ u } _{ r } \left( k  \right)  \gamma _ \mu v _{ r' } 
+ \left( k '  \right)  \right]  \left[  
+ \overline{ v } _{ r' } \left( k '  \right)  \gamma _ \nu 
+ u _ r \left( k  \right) \right] 
+\] 
+In the massless case, we use the completeness 
+relation for $ u  $ and $ v $ this simplifies to 
+\[
+ | A | ^ 2 =  \frac{1}{4 } \frac{ e ^ 4 }{ q ^ 4 } 
+ \tr \left( \slashed{p} ' \gamma ^ \mu \slashed{p } \gamma ^ \nu  \right)  \tr \left( \slashed{k} \gamma _ \mu \slashed{k} ' \gamma _ \nu  \right) \] where $ q ^ 2 = \left( p + p'  \right)  ^ 2 
+  = 4  E^ 2 $
+ Now here, we take the $ p , p ' , k , k' $ indices 
+ out and use the trace relation 
+ \[
+  \tr\left( \gamma ^ \alpha \gamma ^ \beta \gamma ^ \gamma 
+  \gamma ^ \delta \right)   = 
+  4 \left( \eta ^{ \alpha \beta } \eta 
+  ^{ \gamma \delta }  - \eta ^{ \alpha \gamma } \eta ^{ 
+  \beta \delta } + \eta ^{ \alpha \delta } \eta ^{ \beta \gamma } \right) 
+ \] After some simplification of the above, 
+ we arrive at the amplitude being 
+ \[
+  | A | ^ 2 = \frac{ e ^ 4 }{ 2 E ^ 4 } 
+  \left( \left( p \cdot  k  \right)  \left( p ' \cdot  k '  \right) + \left( p ' \cdot  k  \right)  \left( p \cdot  k '  \right)    \right) 
+ \] 
+ We recognise that we can use the Mandelstam 
+ variables to replace these momenta, 
+ and so we get that 
+ \[
+  | A | ^ 2 = \frac{1}{8 } \frac{ e ^ 4 }{ E ^ 4 } 
+  \left( t ^ 2 + u ^ 2  \right) 
+ \] However, since we're scattering 
+ identical particles, we use the fact that, 
+ in this massless case, 
+ \[
+  t  =  - 2p ^ 2 \left( 1 - \cos \theta  \right) =  - 2 
+  E ^ 2 \left(  1 - \cos \theta  \right) , \quad 
+  u  = 2p ^ 2 \left(  1 + \cos \theta  \right) = 2 E ^ 2 
+  \left(  1 + \cos ^ 2 \theta  \right) 
+ \] where $ \theta $ is our scattering angle for this problem. 
+ This means that 
+ \[
+	 | A | ^ 2 = e ^ 4  \left(  
+	 1 + \cos ^ 2 \theta \right)  
+ \] We substitute this into our expression for 
+ our differential cross section 
+ \[
+ \frac{ d \sigma }{ d \Omega  }   = 
+ \frac{ | A  | ^ 2 }{ 64 \pi ^ 2 s }  = \frac{
+ e ^ 4 \left( 1 + \cos ^2 \theta  \right)  }{ 64 \pi ^ 2 s }
+ \] Integrating along the whole solid angle, this gives 
+ \[
+  \sigma  = \frac{e ^ 4 }{ 12 \pi s }  = \frac{4 \pi \alpha ^ 2 }{ 3 s } 
+ \] 
+
+The centre of mass frame 
+is the frame where our total three momentum is zero. 
+This means that if we 
+have to incoming 4-momenta $ p_1 , p_ 2 $ , say in a $ 2 \to 2 $ 
+scattering problem, then 
+we have that $ \vec{p}_ 1 = - \vec{p} _ 2 $. As a result, 
+we also have that 
+\[
+	( p_1  + p_2  )^ 2  = \left(  E_1 + E_ 2  \right)^ 2  
+\]  
+We use this to our advantage in simplifying aspects of the 
+problem. 
+
+\pagebreak 

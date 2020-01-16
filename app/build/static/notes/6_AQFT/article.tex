@@ -198,15 +198,73 @@ the position operator $ \op{q} \left( t  \right)  $,
 so that 
 \[
 	\op{q } \left( t   \right) \ket{ q , t }  = q \ket { q , t }   
-\] For now though, we'll work in 
+\] We'll impose the condition 
+that these states are normalised 
+so that for a fixed time, we have 
+\[
+ \bra{q , t}\ket{ q ' , t } = \delta \left( q - q '  \right) 
+\] We impose the analogous conditions as 
+well for momentum eigenstates. For now though, we'll work in 
 the Schrodinger picture so that $ \op{q } $ is fixed
 and hence we have that the eigenstates $ \ket{ q } $ 
-are time-independent.
+are time-independent. Since these states form 
+a basis, we have that they obey the completeness 
+relation 
+\[
+	1 = \int d ^ 3 q \, \ket{ q }\bra{ q } 
+\] We also label the time-independent 
+momentum eigenstates as $ \ket{ p } $, 
+and impose the completeness relation 
+\[
+	1 = \frac{ d ^ 3 p }{ ( 2 \pi )^{ 3 }  } \ket{ p } \bra{ p } 
+\] Note the factor of $ 2 \pi $ that we divide by. 
+Other literature doesn't include this. 
 With this set of basis states, we can 
 now write the abstract state $ \ket{ \psi( t ) } $ 
 in terms of the position basis, where we denote 
 \[
 	\psi ( q, t ) = \bra{ q}\ket{ \psi  ( t ) } 
 	=  \bra{q } \exp\left(  - i \op{H }t  \right)\ket{ \psi ( 0 ) } 
-\]  
+\] We will put this into an integral form 
+for reasons we will discuss later. 
+To put any equation in integral 
+form, the rule of thumb is 
+to employ the completeness relations 
+for either the position or momentum basis.
+We get that 
+\begin{align*}
+	\bra{ q } \exp\left( - i \op{ H } t  \right) \ket{ \psi ( 0 ) } &=  \int d ^ 3 q '\,  \bra{ q }\exp \left(  - i \op{ H } t  \right)\ket{ q ' } \bra{ q ' }\ket{\psi ( 0 )}    \\ 
+									&=  \int d ^ 3 q '\,  \bra{q}\exp \left(  - i \op{H } t  \right) \ket{ q' }\psi ( q' , 0 )  \\ 							&=  \int  d ^ 3 q' \, K \left( q, q' ; t  \right)  \psi ( q' , 0 )  \\
+									&=  \int d ^ 3  q ' K ( q , q ' ; t ) \psi ( q ' , 0 )  
+\end{align*}  
+Here we've defined $ K ( q , q '; t )  = \bra{q}\exp\left(  - i \op{H } t  \right) \ket{ q ' } $. 
+Now to make progress, we need to find
+a meaningful expression for what $ K \left( q, q ; T \right)  $ 
+actually is. First, 'split up' 
+our $ \exp (  - i \op{H } T)$ term into smaller pieces - 
+that is, partition $ T $ as 
+\begin{equation}
+	\exp\left(  - i \op{H } T  \right)  = 
+	\exp \left(  - i \op{H } \left( t_{ n + 1 }  - t _ n  \right)   \right) \exp \left(  - i \op{H } \left( t_n  - t_{ n - 1 }  \right)   \right)  \dots \exp\left(  - i \op{H } \left( t _ 1  - t _ 0  \right)   \right)  
+\end{equation} here, we set by definition that 
+$ t_{ n + 1 }  =T  > t _ n > t _{ n - 1 } > \dots > t _ 1 > t _ 0 = 0 $. For example, setting $ n = 1$ and inserting one 
+integral as part of the completeness relation, 
+we get that 
+\begin{align*}
+	K \left( q, q' ; T  \right)  &=  
+	\bra{ q }\exp\left(  - i \op{H } \left( t_2 - t_1  \right)  \right) \exp\left(  - i \op{ H } \left( t_1  - t_0   \right)   \right) \ket{q ' }  \\
+	&=  \int d q_1 \,  
+	\bra{ q } \exp\left(  - i \op{H } \left( t_2  - t_1  \right) \right)\ket{q_1 } \bra{q_1 } \exp\left( - i \op{H } \left( t_1  - t_0  \right)   \right)\ket{q ' } 
+\end{align*}
+where we've set $ t_2 = T $. We can generalise this 
+to the case where we have $ n $ time slices. We 
+have that 
+\begin{equation}
+	K\left( q, q' , r  \right)   = 
+	\int \prod_{ i = 1 } ^ n \left( d q _  r \, 
+	\bra{q _{ r +  1} } \exp \left(  - i \op{ H } 
+\left(  t _{ r + 1 }  - t _ r  \right)  \right) \ket{q _ r }\right)\bra{q _  1}\exp\left(  - i \op{H } \left( t_1 - t_0  \right)   \right) \ket{q ' } 
+\end{equation}
+
+
 \end{document} 

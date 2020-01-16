@@ -489,6 +489,17 @@ INPUT question_11.tex
 INPUT question_11.tex
 INPUT example_sheet_2.tex
 INPUT example_sheet_2.tex
+INPUT ex2q2.pdf_tex
+INPUT ex2q2.pdf_tex
+INPUT ex2q2.pdf
+INPUT ./ex2q2.pdf
+INPUT ./ex2q2.pdf
+INPUT ex2q2.pdf
+INPUT ./ex2q2.pdf
+INPUT ./ex2q2.pdf
+INPUT ex2q2.pdf
+INPUT ./ex2q2.pdf
+INPUT ./ex2q2.pdf
 INPUT article.aux
 INPUT ./article.out
 INPUT ./article.out

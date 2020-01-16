@@ -1,0 +1,111 @@
+\documentclass[11pt, oneside]{article}   	% use "amsart" instead of "article" for AMSLaTeX format
+\usepackage[margin = 1.1in]{geometry}            		% See geometry.pdf to learn the layout options. There are lots.
+\geometry{letterpaper}                   		% ... or a4paper or a5paper or ... 
+\usepackage[parfill]{parskip}    		% Activate to begin paragraphs with an empty line rather than an indent
+\usepackage{graphicx}				% Use pdf, png, jpg, or eps§ with pdflatex; use eps in DVI mode
+								% TeX will automatically convert eps --> pdf in pdflatex	
+\usepackage{adjustbox}	
+\usepackage[section]{placeins}
+
+
+%% LaTeX Preamble - Common packages
+\usepackage[utf8]{inputenc}
+\usepackage[english]{babel}
+\usepackage{textcomp} % provide lots of new symbols
+\usepackage{graphicx}  % Add graphics capabilities
+\usepackage{flafter}  % Don't place floats before their definition
+\usepackage{amsmath,amssymb}  % Better maths support & more symbols
+\usepackage[backend=biber]{biblatex}
+\usepackage{amsthm}
+\usepackage{bm}  % Define \bm{} to use bold math fontsx
+\usepackage[pdftex,bookmarks,colorlinks,breaklinks]{hyperref}  % PDF hyperlinks, with coloured links
+\usepackage{memhfixc}  % remove conflict between the memoir class & hyperref
+\usepackage{mathtools}
+\usepackage[T1]{fontenc}
+\usepackage[scaled]{beramono}
+\usepackage{listings}
+\usepackage{physics}
+\usepackage{tensor}
+\usepackage{simplewick} 
+\usepackage{tikz} 
+\usepackage{import}
+\usepackage{xifthen}
+\usepackage{pdfpages}
+\usepackage{transparent}
+\usepackage{pgfplots}
+\usepackage[compat=1.1.0]{tikz-feynman}
+\usepackage{subfiles}
+\usepackage{simpler-wick}
+\usepackage{slashed}
+\usepackage{fancyhdr}
+
+\pagestyle{fancy}
+\fancyhf{}
+\rhead{Notes by Afiq Hatta}
+\lhead{Black Holes}
+\rfoot{Page \thepage}
+
+%% Commands for typesetting theorems, claims and other things.
+\newtheoremstyle{slanted}
+{1em}%   Space above
+{.8em}%   Space below
+{}%  Body font
+{}%          Indent amount (empty = no indent, \parindent = para indent)
+{\bfseries}% Thm head font
+{.}%         Punctuation after thm head
+{0.5em}%     Space after thm head: " " = normal interword space;
+{}%         \newline = linebreak
+{}%          Thm head spec (can be left empty, meaning `normal')
+
+%% Commands for typesetting theorems, claims and other things. 
+
+\theoremstyle{slanted}
+\newtheorem{theorem}{Theorem}
+\newtheorem*{thm}{Theorem}
+\newtheorem*{claim}{Claim}
+\newtheorem{example}{Example}
+\newtheorem*{defn}{Definition}
+
+\newcommand{\Lagr}{\mathcal{L}} 
+\newcommand{\vc}[1]{\mathbf{#1}}
+\newcommand{\pdrv}[2]{\frac{\partial{#1}}{\partial{#2}}}
+\newcommand{\thrint}[1]{\int d^3 \vc{x} \left( {#1} \right)}
+
+%% QFT specific macros 
+\newcommand{\intp}{ \int \frac{ d^3 p }{ (2 \pi)^3 } \, }
+\newcommand{\ann}[1]{a_{ \mathbf{ #1 }}}
+\newcommand{\crea}[1]{a^\dagger_{ \mathbf{ #1 }}}
+\newcommand{\ve}[1]{ \mathbf{ #1 } } 
+\newcommand{\mode}[ 1]{ e^{ i \mathbf{ #1 } \cdot \mathbf{x} }}
+\newcommand{\nmode}[1]{ e^{  - i \mathbf{ #1 } \cdot \mathbf{x} }}
+\newcommand{\freq}[1]{\omega_\mathbf{ #1} } 
+\newcommand{\scal}[1]{\phi ( \mathbf{ #1 })} 
+\newcommand{\mom}[1]{ \pi (\mathbf{ #1 })} 
+\newcommand{\arr}{\rightarrow} 
+
+\newcommand{\incfig}[1]{%
+\def\svgwidth{\columnwidth}
+\resizebox{0.75\textwidth}{!}{\input{./figures/#1.pdf_tex}}
+}
+
+\newcommand{\anop}[2]{ #1_\mathbf{#2}}
+\newcommand{\crop}[2]{#1_\mathbf{#2}^\dagger}
+
+\usepackage{helvet} 
+
+%tikz decoration commands 
+\usetikzlibrary{decorations.pathmorphing}
+
+
+\title{Notes on Black Holes}
+\author{Afiq Hatta } 
+\begin{document} 
+\maketitle
+\tableofcontents
+
+\pagebreak 
+
+\subfile{formation.tex}
+\subfile{useful_identities.tex}
+
+\end{document} 

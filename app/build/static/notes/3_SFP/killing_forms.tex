@@ -1430,6 +1430,30 @@ learned something that we already know.
 	 R _{ \text{ adj } } X \in \lalg \to R _{ \text{ adj } } ( X)  = \ad_ X 
  \]
 
+
+\subsection{Summary}
+
+\subsubsection{The Cartan Weyl Basis}
+\begin{itemize}
+	\item $ X \in \lalg $ is ad-diagonalisable 
+		when $ \ad_{ X } $ is diagonalisable 
+	\item The Cartan-Subalgebra $ \mathcal{ C }  =  \left\{  H \mid H \in \lalg   \right\} $ 
+		such that for all $ H \in \mathcal{ C } $, it's ad-diagonalisable, and 
+		it's the maximal Abelian subalgebra. The $ H _ i \in \mathcal{ C } $ 
+		are all simultaneously diagonalisable. 
+	\item The rank of $ \lalg G $ is just the size of this unique subalgebra. 
+	\item For $ SU \left(  N  \right)  $ it's the traceless diagonal matrices 
+		with a $ 1 $ and $ -1 $ on adjacent spots on the diagonal.
+	\item The $ H $ and their eigenvectors form a basis of $ \lalg $. If there 
+		are $ r $ elements in $ \mathcal{ C } $ then there 
+		are $ d  - r $  eigenvectors $ E ^{ \alpha } , \alpha =  1, \dots d - r $
+	\item The roots are defined such that 
+		\[
+			\left[  H ^{ i } , E ^{ \alpha }   \right]   = \alpha ^ i E ^{ \alpha } 
+		\] 
+
+\end{itemize}
+
  \pagebreak
 \section{Weight and root lattices} 
 From our property of simple roots, we can write any 
@@ -1710,6 +1734,7 @@ of weights. We need better machinery, but we can still check
 it against the formula for the dimension. 
 The dimension, hence, of $ \dim R _{ \left( 1, 1  \right)  } = 8$, 
 
+
 \subsection{Tensor products} 
 In a composite system, we need to 
 understand how to deal with this. 
@@ -1784,6 +1809,45 @@ This is equal to
 \[
 	R_{ \left( 1, 0  \right)  } \otimes R_{ \left( 1, 0  \right)  }  = R _{ \left( 2, 0  \right)  } \oplus R _{ \left( 0 , 1  \right)  }
 \] This is okay since $ 3 \times 3 $ = $ 6 + 3 $. 
+
+
+\subsection{Summary}
+
+\subsubsection{Cartan Matrices and Dynkin Diagrams}
+\begin{itemize}
+	\item The Cartan matrix $ A_{ ij } $ has elements 
+		\[
+			A _{ ij }  = 2 \frac{ \left(  \alpha _{ \left( i  \right)  }, 
+			\left( \alpha _{ \left( j  \right)  }  \right)  \right) }{ 
+		\left( \alpha _{ \left( j  \right)  } , \alpha _{ \left( j  \right) } \right) } \in \mathbb{ Z } 
+		\] Thus, 
+		\begin{itemize}
+			\item  $ A_{ ii }  = 0 $
+			\item $ A _{ ij } = 0 \iff A _{ ji }  = 0 $
+		\end{itemize}
+	\item If $ \lalg $ is simple then $ A $ can't 
+		be reducible (block diagonal). 
+	\item Draw a node for each simple root $ \alpha_{ \left( i  \right)  }$. 
+		Connect nodes $ i , j $ representing 
+		roots $ \alpha _{ \left( i  \right)  } $ and $ \alpha _{ \left( j  \right)  }$ with $ \text{max } \left\{  |A_{ij  } | , | A_{ ji } |  \right\} $ lines. We draw an arrow 
+		from the larger root to the smaller root.
+	\item Use the following algorithm to get weight 
+		sets a Cartan matrix. 
+	\begin{itemize}
+		\item Get the simple roots, which are 
+			linear combinations of weights which 
+			correspond to the columns of the Cartan matrix. 
+		\item Start with a highest weight vector $ \left( \Lambda_1 , \Lambda_2  \right)   $, 
+			which is called the Dynkin label. 
+		\item Subtract $ m_{ \left( i  \right) }\alpha_{ \left( i  \right) }$ with $0 \le   m_{ \left( i  \right) } \le  \Lambda_{ \left( i  \right) } $ to get a set of new weights. 
+		\item Repeat the subtraction with those new weights. 
+	\end{itemize}
+\end{itemize}
+
+\subsubsection{Getting weights from the Cartan Matrix}
+\begin{itemize}
+	\item 
+\end{itemize}
 
 \section{Gauge theory} 
 What is a Gauge theory? Rather than 
@@ -2096,4 +2160,62 @@ from $ \lalg $ and $ R _{ \Lambda } $.
 	\mathcal{ L }  = \frac{1}{g ^ 2 } \kappa \left( F _{ \mu \nu } , F ^{ \mu \nu }  \right) + \sum _{ \Lambda \in S } \left( D _ \mu \phi _{ \Lambda} m D ^ \mu \phi _{ \Lambda }  \right)   - W \left( \left( \phi _{ \Lambda } , 
 	\phi _{ \Lambda} \right)   \right)  , \Lambda \in S 
 \] where we gave $ C _{ \Lambda } \in V _{ \Lambda } $ , $ D _ \mu  = \partial  _ \mu + R _{ \Lambda } \left( A _\mu  \right)  $
+
+\pagebreak
+\subsection*{Summary}
+
+\subsubsection*{Global symmetries}
+\begin{itemize}
+	\item Our main example is the Lagrangian 
+		\[
+			\mathcal{ L }  = \partial  _ \mu \phi \partial  ^ \mu \phi ^ *  - W ( \phi ^ * \phi  )
+		\] 
+	\item This Lagrangian admits the 'global symmetries' 
+		\[
+		 \phi \to g \phi, \phi ^ * \to g ^{ - 1} \phi ^ *, 
+		 \delta_X = 
+	 \] where $ g = \exp\left(  i X \right)  \in U \left(  1  \right) $. 
+	 Note that here $ X $ is in $ \mathcal{ L }\left(  U \left( 1  \right)  \right)  $
+	\item Global symmetries are symmetries 
+		which don't depend on space-time, so they're 
+		simple and we don't require covariant derivatives.  
+\end{itemize}
+
+\subsubsection*{Local symmetries}
+\begin{itemize}
+	\item This is when for $ g \in U ( 1 ) $, 
+		our Lie algebra element  $ X $ depends 
+		on spacetime. 
+	\item Our scalar fields above transform as 
+		\[
+		 \delta _ X \phi  = \epsilon X \phi , \quad 
+		 \delta _ X \phi ^  *  = - \epsilon X \phi ^ * 
+		\] 
+	\item Our derivative does NOT transform nicely 
+		\[
+			\partial  _ \mu \left( \delta _ X \phi   \right)  = 
+			\epsilon \partial  _ \mu X \phi + \epsilon X \partial  _ \mu \phi 
+		\] 
+	\item Define the covariant derivative and a new gauge 
+		field $A _ \mu $ which 
+		is constructed from our Lie algebra element to make the above transform nicely. 
+		\[
+		 D_ \mu   = \partial  _ \mu  +A _ \mu , \quad 
+		 \delta _ X A_ \mu   =  - \epsilon X A _ \nu 
+		\] 
+	\item We have that the covariant derivative 
+		transforms nicely 
+		\[
+		 \delta _ X \left(  D _ \mu \phi  \right)   = 
+		 \epsilon   X  D _ \mu  \phi 
+		\] 
+	\item Our invariant Lagrangian including the 
+		electromagentic term is 
+	\[
+	 \mathcal{ L } =  -\frac{1}{4 } F _{ \mu \nu } F ^{ \mu\nu }
+	  + \frac{1}{2 } D_ \mu \phi D ^{ \mu } \phi ^ * 
+	  + W \left(  \phi \phi ^ *  \right) 
+	\] 
+\item 
+\end{itemize}
 \pagebreak 

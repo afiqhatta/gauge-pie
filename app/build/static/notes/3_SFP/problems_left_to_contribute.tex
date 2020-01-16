@@ -70,3 +70,202 @@ restricted on $ \lalg h $. Then, we find
 the dual inner product on $ \subalg h ^ * $. 
 To compute the Killing form 
 
+\pagebreak 
+\section{Example Sheet 4}
+
+\subsection{Question 3}
+We have a ten-dimensional representation 
+of $ SU ( 3 ) $. 
+If we go through the usual algorithm 
+to get the weights, we find that 
+'insert weight diagram here'. 
+The goal is to decompose this 
+into the sum of irreps of each roots. 
+
+
+\subsection{Question 4} 
+In this section, we decompose 
+tensor products of representations into 
+their irreducible components. 
+The algorithm for doing this is to add the weights, 
+including multiplicities, and then rewrite 
+this as a union.
+
+For example, in the case with $ 3 \otimes \overline{3} $, 
+our weight sets are given by 
+\[
+	S_{ \left( 0 , 1  \right) } = \left\{  
+	w _ 2 , w_1  - w_2 ,  - w_1 \right\}, \quad 
+	S _{ \left( 1, 0  \right)  }  = \left\{  
+	w_1 , w_2 - w_1,  - w_2 \right\} 
+\] If we take the set of the sums of the elements, we can 
+decompose this as..l
+
+For the case $ 3 \otimes 3 \otimes 3 $, 
+we repeat this same procedure. 
+We can decompose this as 
+ \[
+ 3 \otimes 3 \otimes 3  = 
+ R_{ \left( 3, 0  \right)  } \oplus R_{ \left( 1, 1  \right)  }
+ \oplus R _{ \left( 1, 1 \right) } \oplus R_{ \left( 0 , 0  \right) }
+\]
+WARNING, this decomposition 
+assumes that the $ R _{ \left( 1, 1 \right)  }$ 
+decomposition has a multiplicity of 2 
+for the $ \left( 0 , 0  \right) $ weight.
+I'm not sure of any other way to 
+know the multiplicities of weights 
+other than by checking for the dimension, for example. 
+
+
+\subsection{Question 5}
+Our Dynkin diagram for $ B_2 $ is 
+two nodes representing distinct simple roots. 
+The only possibility we have for the 
+Cartan matrix is 
+\[
+	A  = \begin{pmatrix}  2 & - 2 \\
+	 - 1 & 2 \end{pmatrix} 
+\] The weight sets we need to check which 
+are non-trivial are $ R _{ \left( 1, 0  \right)  } $
+and $ R_{ \left( 0 , 1  \right)  } $ to begin 
+with. Applying the algorithm 
+in lectures, we find that in coordinate notation, 
+\[
+	S_{ \left( 1 , 0  \right)  }  = 
+	\left\{  \left( 1, 0  \right), \left(  - 1, 1 \right), 
+	\left( 1 , - 1  \right), \left(   - 1, 0  \right) \right\} 
+\] which is a four dimensional representation. 
+We also have that 
+\[
+	S _{ \left(   0 , 1  \right)  }  = 
+	\left\{ \left(  0 , 1 \right), \left(  2 ,  - 1 \right), 
+	\left(  0 , 0  \right), \left(   - 2 , 1 \right) , \left(  0
+,  - 1\right) \right\} 
+\] which is a five dimensional representation.
+The $ R _{ \left(  1, 0  \right)  } $ 
+is the representation with lower dimension. 
+To take the tensor product of two copies of this 
+representation, we repeat the same procedure as above. 
+The set of sums of weights including multiplicities 
+of $ S_{ \left(  1, 0  \right)  } $ is, in coordinate 
+format 
+\[
+	S  = \left\{  \left( 2, 0  \right), 
+	\left(  0 , 1  \right)  , \left(  0 , 1  \right)  , 
+\left( 2, -1    \right) , \left(  2 , - 1  \right)  , 0 , 0 , 0 , 
+ 0 , \left(  2,  - 2  \right)  , \left( -2 , 2  \right) , 
+ \left(  -2, 1  \right)  , \left(   - 2, 1  \right)  , 
+ \left(   0 , - 1 \right)  , \left(   0 ,  - 1 \right)  , 
+ \left(   - 2, 0  \right) \right\} 
+\] Our $ \left(   2, 0  \right)  $ weight is
+the highest weight here to consider. Thus, 
+we try to 'subtract off' the $ R _{ \left( 2, 0  \right)  } $
+representation. Then, we're left with 
+weights from the $ R _{ \left(   0 , 1  \right)  } $ 
+representation, along with $ R _{ \left(  0 , 0  \right)  } $, 
+trivial zero weights. 
+We thus have 
+\[
+	R_{ \left( 1, 0  \right)  } \otimes R_{ 
+	\left(  1, 0  \right)  }  = R_{ \left(  2 , 0  \right)  } 
+	\oplus R _{ \left(  0 , 1  \right)  } \oplus 
+	R _{ \left(  0 , 0  \right)  } \oplus R _{ \left(  0 , 0  \right) }
+\] There is 
+still the question here about counting degeneracy of 
+the $ \left(  0 , 0  \right)  $ weight for the $ R _{ \left(  2, 0  \right)  } $ 
+representation. 
+
+\pagebreak 
+\subsection{Question 6}
+We have the following 
+gauge transformation for a gauge field $ A _ \mu  : \R ^{ 3, 1 } \to L \left( G  \right)  $. 
+\[
+	A_ \mu \to A _ \mu  '  = g A _ \mu g ^{ - 1 }  - \left(  \partial  _ \mu g  \right)  g ^{ - 1 }, 
+	\quad g : \R ^{ 3, 1 } \to  G 
+\] We isolate to the case where 
+we have $ A_ \mu   \ in L ( SU ( N ))$ and $ g \in SU ( N )  $ (in other words, 
+we set $ G  = SU (N )$), and we need to 
+check that $ A_ \mu  ' \in L \left(  SU ( N )  \right)   $. 
+We know that $ L \left(  SU \left(  N   \right)   \right)  $ 
+consists of anti-hermitian matrices, so we need to check that 
+\[
+  g A _ \mu g ^{ - 1 }  - \left(  \partial  _ \mu g  \right)  g ^{ - 1 } 
+\] is anti-Hermitian. The second term can be shown to be 
+anti-Hermitian by considering the derivative of 
+\[
+ g ^\dagger g  = I  
+\] and using the product rule. The first term can 
+be shown to be anti-Hermitian using the unitary 
+property of $ g $. 
+
+I'm not sure why $ A_ \mu  ' $ is necessarily in 
+$ L \left(  G  \right) $ for an arbitrary matrix 
+Lie group! We can look at the infinitesimal 
+version of the transformation. 
+
+If we write $ g  = \exp\left(  \epsilon  X  \right)  $, 
+and expand this quantity infinitesimally as $ g 
+\simeq 1  + \epsilon   X $, then we find that 
+\[
+\delta A _ \mu  =  - \epsilon \partial  _ \mu X + \epsilon \left[  X, A  \right] 
+\] 
+
+\pagebreak
+
+\subsection{Question 7}
+Our gauge field should 
+change as, in the general case as 
+\[
+ \delta _ X A _ \mu  = - \epsilon \partial  _ \mu X + \epsilon \left[  X, A _ \mu  \right] 
+\]
+Our corresponding covariant derivative is 
+\[
+	D_ \mu  = \partial _ \mu  + R ( X ) 
+\] where $ R $ is the representation we're working with. 
+In the case where we have the adjoint representation
+\[
+	D ^{ \left(  A  \right)  } _ \mu \phi  = \partial  _ \mu \phi + 
+	\left[  X, \phi  \right]  
+\] In the case of the fundamental representation 
+\[
+	D ^{ \left( F  \right)  } _ \mu \phi
+	 = \partial  _ \mu \phi + X \phi 
+\] One can check that the covariant 
+derivatives transform correctly when they're set to these things. 
+
+To write down the their respective Lagrangians, 
+we substitute our covariant derivative expressions 
+into 
+\[
+	\mathcal{ L  }  = \left(  D _ \mu \phi , D ^ \mu \phi  \right)   - W \left[  \left(  
+	\phi , \phi \right)  \right]  
+\] where the first term resembles our kinetic term, 
+and the second is our potential term. 
+
+For our covariant derivative to transform in 
+the fundamental representation, we use the standard 
+covariant derivative 
+\[
+	D_{ \mu } ^{ \left(  F  \right)  }  = \partial _ \mu + A _ \mu 
+\] where our gauge field transforms as 
+\[
+ \delta _ X A _ \mu  =  - \epsilon \partial  _ \mu X 
+\] to make this happen.  
+
+\pagebreak 
+
+\subsection{Question 8} 
+We want to show that 
+\[
+	F_{ \mu \nu }  = \left[  D _ \mu ^{ \left( A  \right)  }, D _ \nu ^{ \left(  A  \right) } \right] 
+\] This is quite simple, 
+just recall that in the adjoint representation, our 
+covariant derivative is 
+\[
+ D _ \mu  = \partial  _ \mu  + A _ \mu 
+\] It's simple to calculate that 
+\[
+	\left[  D _ \mu ^{ \left(  A  \right)  } , D _ \nu ^{ \left(  A  \right)  }  \right]  
+	= \partial  _ \mu A _ \nu  - \partial  _ \nu A _ \mu + \left[  A _ \mu , A  _ \nu  \right] 
+\] 
