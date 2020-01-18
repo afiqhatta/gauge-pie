@@ -103,9 +103,314 @@
 \maketitle
 \tableofcontents
 
-\pagebreak 
+\section*{Conventions and Housekeeping}
+We will set $ G  = c = 1 $, 
+and ignore the cosmological constant $ \Lambda $. 
+For indices, greek letters $ \mu , \nu $ refer to 
+a specific basis. 
+$ a, b$ are abstract indices which refer to any basis, 
+from Roger Penrose. 
+For example, we have 
+\[
+ \Gamma^ \mu _{ \nu \rho }  = \frac{1}{2 }g ^{ \mu \sigma } 
+ \left( g _{ \sigma \nu , \rho } + g _{ \sigma \rho , \nu }  - g _{ \nu \rho , \sigma }  \right), 
+ \quad R  = g ^{ ab } R _{ ab } 
+\] Christoffel components are 
+basis dependent so they are written with greek indices. 
+
+
+As far as Black holes are concerned, 
+the cosmological constant is incredibly small. 
+Hence, we will ignore it from now. 
+Check out Wald's book on General Relativity. It's great!
+
+\section{Spherical Stars}
+\subsection{Cold Stars}
+If you think about a star like our sun, 
+it's a ball of hot gas with nuclear reactions at its centre. 
+Gravitational force makes the star contract, 
+but nuclear reactions at the centre exert outward pressure 
+to resist the contraction. 
+If we wait long enough, th e star will exhaust the fuel 
+it has and hence the star will contract. 
+If we're interested in the final state of this star, 
+we need to look at some source of pressure which is non-thermal in nature 
+(so valid when the star is cold) to counter act gravity. 
+
+There is another natural source of pressure to resist gravity. 
+This is the Pauli principle - where a gas of Fermions 
+resists compression. This is called degeneracy pressure. 
+This is a purely quantum mechanical phenomenon. 
+
+For example, a white dwarf is a star in which gravity is balanced 
+by electron degeneracy pressure. 
+A white dwarf is a very dense kind of star. If we 
+had a white dwarf with the same mass of our sum $ M  = M _{ \sun } $. 
+the radius would be $ R \sim \frac{R_{\sun } }{100 } $. 
+A white dwarf is how the sun will end its life. 
+ 
+
+Can all stars end their life this way? 
+No. This is because there's a maximum mass for a white dwarf. 
+This is called the Chandrasekhar limit, where 
+\[
+ M _{ WD } \leq 1.4 M _{ \sun }
+\]
+What happens when we have a star more massive than this? 
+When the star continues to get more and more dense, 
+then inverse beta decay occurs where protons turn into neutrons. 
+Neutrons are fermions and they also have 
+degeneracy pressure. 
+Thus, there's a second class of 
+stars called Neutron stars where 
+gravity is balanced by neutron degeneracy pressure. 
+These stars are tiny. 
+
+If we took a neutron star with $  M \sim M _{ \sun } $, $ R \sim 10 km $. 
+Compare this to  $ R _{ \sun } \simeq 7 \times 10 ^ 5 km $. 
+They are very dense! The gravitational field is very strong. 
+If we have a Newtonian gravitational potential at the surface 
+\[
+ | \phi | \sim 0.1 
+\]  General relativity because important when $ | \phi | $ is order 1. 
+Hence, GR is important here.
+We can derive a maximum possible mass for neutrons stars as well. 
+We'll derive this bound which is independent of our knowledge of dense matter. 
+
+We need to make some 
+simplifying assumptions. 
+We assume spherical symmetry. 
+
+\subsection{Spherical Symmetry}
+Recall the unit round 
+metric on a two dimensional sphere $ S ^ 2 $, 
+\[
+ d \Omega ^ 2  = d \theta ^2 + \sin ^ 2 \theta d \phi ^ 2 
+\] The isometries are diffeomorphisms 
+which preseve the metric. 
+They form a group. 
+The isometry group of a two sphere with that metric is $ SO ( 3 ) $. 
+Essentially, we define a space time as spherically symmetric 
+if it has this as its isometry group. 
+\begin{defn}{Spherically Symmetric Spacetime}
+	A spacetime is spherically symmetric if its isometry group 
+	contains an $ SO ( 3 ) $ subgroup, whose orbits are
+	$ 2  $-spheres. 
+	In other words, if we pick a point and act on it with all 
+	$ SO ( 3 ) $ elements, it will fill out a sphere. 
+\end{defn}
+\begin{defn}{Area Radius function}
+	In a spherically symmetric spacetime $ ( M , g )$, 
+	the area radius function is 
+	\[
+		r : M \to \mathbb{ R } , r ( p ) = \sqrt{ \frac{ A ( p ) }{ 4 \pi } } 
+	\] where $ A ( p ) $ is the area of the $ S^ 2 $ orbit 
+	through the point $ p $. 
+	So we take a point $ p $, since its spherically symmetric, we 
+	can make a sphere out of it, and we take the area. 
+	This is linked to our understanding of the $ r $ coordinate, 
+	but this definition doesn't require a preferred origin. 
+	In other words, 
+	the $ S ^ 2 $ has induced metric $ r ( p ) ^ 2 d \Omega^ 2 $. 
+\end{defn}
+\subsection{Time independence}
+\begin{defn}{Stationarity}
+	$ \left(  M , g  \right)  $ is stationary if there exists a Killing vector field
+	$ k ^ a $
+	(KVF) which is everywhere timelike. 
+	We're saying that $ g _{ ab } k ^ a k ^ b < 0 $. We can introduce adapted coordinates. 
+	Let's pick some hypersurface $ \Sigma $ which is transverse to a vector field 
+	$ k $. We can then pick coordinates  $ x ^ i $ on $ \Sigma $, where $ i =  1, 2, 3 $. 
+	This gives us coordinates on our surface. 
+	We assign coordinates $ \left(  t, x ^ i  \right)  $ to point parameter 
+	distance $ t $ along the integral curve of  $ k ^ a $ through point on 
+	$ \Sigma $ with coords $ x ^ i $. This implies 
+	\[
+	 k  = \frac{\partial }{\partial t} 
+	\] This implies the metric is independent of $ t $, since $ k ^ a $ is a 
+	Killing vector field. Therefore, the metric looks like 
+	\[
+		ds ^ 2  = g _{ 00 } \left( x ^ k  \right) dt ^ 2  + 2 
+		g _{ 0i } dt d x ^ i + g _{ ij  }\left( x ^ k  \right)  dx ^ i dx ^ j 
+	\] This means that $ g _{ 00 } < 0 $. Thus, 
+	given a stationary spacetime, we can construct coordinates which 
+	the metric is time independent. 
+	Conversely, any metric of this form is stationary. 
+\end{defn}
+There's a more refined version of time independence which 
+we can use. 
+Imagine we have a hypersurface $ \Sigma $ where $ f = 0 $, $ f : M \to \mathbb{ R } $
+which is smooth, and $ df \neq 0  $ on $ \Sigma $. 
+Then, $ df $ is normal to $ \Sigma $. 
+If we let $ t ^ a $ tangent to $ \Sigma $, then we have that 
+\[
+ df ( t )  = t ( f )  = t ^ \mu \partial  _ \mu f = 0 \text{ since } f  \text{ is constant}
+\] A normal to a surface is 
+not unique. 
+Normals are not unique. What's the most general 
+form of a covector field which is normal to $ \Sigma $. 
+If $ n _ a$  also normal to $ \Sigma $, them 
+\[
+ n = g df + f n ' 
+\] where $ g $ is smooth and not equal to $ 0 $ on $ \Sigma $,
+and  $ n ' $ is a smooth 1-form. 
+Let's look at the exterior 
+derivative of this vector field. Using the rules 
+for the exterior derivative, 
+\[
+ dn = dg \wedge  df + df \wedge  n ' + f dn ' 
+\] Let's evaluate this 
+on $ \Sigma $. We have that 
+\[
+	\left. dn \right\vert_{ \Sigma }  = \left(  dg - n '  \right)  \wedge  df
+\] Hence, $ n \wedge  dn - 0 $   on $ \Sigma $. This is because 
+$ n \propto df $ on $ \Sigma $. The wedge product vanishes. 
+\begin{thm}{Frobenius}
+	If $ n \neq 0 $ is a one form such that $ n \wedge  dn  = 0 $  everywhere, 
+	then there exist functions $g, f $ such that 
+	$ n   = g df $. So $ n $ is normal 
+	to surfaces of constant $ f $, so 
+	$ n $ is 'hypersurface orthogonal'. 
+	$ n$ is orthogonal to all surfaces 
+	of constant $ f $. 
+\end{thm}
+
+\begin{defn}{Static spacetimes}
+	A spacetime  $ \left( M , g  \right)  $ is static 
+	if there exists a hypersurface orthogonal, timelike $ KVF$. 
+	In particular, static implies stationary. 
+	Why is this useful? Returning to the adapted coordinates, 
+	how does hypersurfaece orgonality help? 
+	We choose $ \Sigma $ orthogonal to $ k ^ a $ when defining 
+	adapted coordinates $ \left(  t, x ^ i  \right)   $. 
+	But, $ \Sigma $ is $  t = 0$, therefore the normal 
+	to $ \Sigma $ is $ dt $. 
+	So
+	\[
+		k _ \mu \mid _{ t = 0 } \propto \left( 1, 0 , 0 , 0  \right) 
+	\] In particular, we have that \[
+	 k _i \mid _{ t = 0 }  =0 
+ \] but, $ k _ i  = g _{ 0i } \left( x ^ k  \right)  $. 
+ Hence, $ g _{ 0i }  = 0$.
+ Thus, if we write down the metric, 
+ we have that 
+ \[
+	 ds ^ 2  = g _{ 00 } \left( x ^ k  \right)  dt ^ 2 + 
+	 g _{ ij} \left( x ^ k  \right)  dx ^ i dx ^ j , \quad g _{ 00 } < 0 
+ \] Thus we have a discrete time reversal isometry $ \left( t , x ^ i  \right)  \to 
+ \left(  - t , x ^ i  \right)  $. 
+ Thus,  
+ \[
+  \text{static} \iff \text{time independent and invariant under time reversal}
+ \] For example, for a rotating star, the metric 
+ may be time independent but not static since they're is no 
+ time reversal symmetry since it changes the sense of rotation. 
+\end{defn}
+
+\subsection{Static, Spherically Symmetric Spacetimes}
+The isometry group is $ \mathbb{ R } \times SO ( 3 )$. 
+We can show that this implies the metric must be static. 
+If it wasn't static, it would be rotating, but that breaks spherical symmetry. 
+On $ \Sigma $ choose coordinates $ x^ i  = \left(  r, \theta , \phi   \right)  $, 
+where $ r $ is our area radius function. 
+If we do this, then the metric 
+is 
+\[
+	ds ^ 2 \mid_{ \Sigma }  = e ^{ 2 \psi ( r )  } dr ^ 2 + r ^2 d \Omega ^ 2 
+\]  where due to spherical symmetry, everything depends on $ r $. 
+If we had $ dr d \phi $ or $ dr d \theta $ terms, 
+this would break spherical symmetry. 
+If we then go on to write down the full spacetime 
+metric, we 
+get that 
+\[
+	ds ^ 2   =  - e ^{ 2 \Phi ( r ) } ds ^ 2 + e ^{ 2 \Psi ( r ) } dr ^ 2 + r ^ 2 d \Omega ^ 2 
+\] At the moment, there's no origin. 
+\subsection*{Summary}
+
+\subsubsection*{Spherical symmetry}
+\begin{itemize}
+	\item A spacetime is spherically symmetric if 
+		the isometry group has an $ SO ( 3 ) $ subgroup. 
+	\item The orbit of $ p \in M $ is a $  S ^ 2 $ sphere. 
+	\item We define the area radius function
+		\[
+			r ( p )  = \sqrt{ \frac{ A( p ) }{ 4 \pi }} 
+		\] This has the interpretation of radius. 
+\end{itemize}
+\subsubsection*{Properties of Spacetimes}
+
+To help us, we can construct hyper-surfaces as follows 
+\begin{itemize}
+	\item We can define a hypersurface $ \Sigma $ to be the surface where $ f ( x )  = 0$
+	\item $df $ is normal to this surface as $ df ( t ) = 0 $ for any tangent vector. 
+	\item Normals $ n $ to the surface can be written as 
+		\[
+		 n = g df + f n' \implies n \wedge  dn \mid_{ \Sigma }  =0 
+		\] 
+	\item Frobenius says that if $ n \wedge  dn  =0  $  everywhere, then 
+		there exist $ f, g $ such that $ n = g d f$ so $ n $ is 
+		normal to surfaces of constant $ f $. 
+
+
+\end{itemize}
+We can classify different spacetimes as below. 
+\begin{itemize}
+	\item A spacetime is symmetric in a 
+		variable $ s $ if $ s $ is a coordinate
+		but the metric doesn't depend on $ s $. 
+	\item A spacetime is stationary if there exist coordinates $ x ^ \alpha $ 
+		such that $  x^ 0$ is timelike at infinity, and our metric 
+		doesn't depend on $ x^ 0 $ (equivalent to saying that there's a Killing vector
+		which is timelike at infinity). 
+	\item A spacetime is static if there are no cross terms in the metric like 
+		$ g _{ 0i } $. 
+	\item Construct stationary spacetimes by defining a Killing vector, 
+		then construct a hypersurface $ \Sigma $ nowhere tangent to 
+		that vector. Assign spatial coordinates $ x ^ i $ for positions in 
+		$ \Sigma $. Then, construct 
+		the coordinate $ t $ by moving a distance $ t $ in the parameter
+		orthogonal to the hypersurface. Then, the killing vector is 
+		\[
+		 k = \frac{\partial   }{\partial  t } 
+		\] 
+	\item Our final metric, including spherical symmetry is 
+		\[
+			- e ^{  2 \Psi ( r ) } dt ^ 2 + e^{ 2 \Phi ( r ) } dr ^ 2 + r ^ 2 d \Omega ^ 2 
+		\] 
+\end{itemize}
 
 \subfile{formation.tex}
 \subfile{useful_identities.tex}
+
+\section*{Example Sheet 1}
+
+\subsection*{Question 2}
+We want to show 
+Cartan's magic formula. 
+\[
+	\mathcal{ L } _{ X} Y   = \iota_{ X } d Y + d \left(\iota _ X Y   \right) 
+\] For a $ p$-form $ Y $ the Lie derivative 
+is 
+\[
+ \mathcal{ L } _{ X} Y = X ^ \alpha \partial  _ \alpha Y_{ 
+ \mu_1 \mu_1 \dots \mu_{ p } } + \left( \partial_{ \mu_1  } X^ \alpha \right) Y_{ 
+ \alpha \mu_2 \dots \mu_ p } + \dots + \left( \partial_{ \mu_{ p } } X ^ \alpha  \right)  
+ Y _{ \mu_1 \dots \alpha }
+\]  
+The basic thing to show here is 
+that 
+\[
+ d \left( \iota_ X Y  \right) _{ 
+ \mu_1 \dots \mu_ p }  = \sum_{ i  = 1, \dots n } \partial _{ \mu _ i } 
+ \left(  X ^{ \alpha } Y_{ \mu_1 \dots \alpha \dots \mu_{ p } } \right) 
+\] In addition, we have that 
+\[
+ \iota_X  d Y  = X ^{ \alpha } \partial  _ \alpha Y_{ 
+ \mu_1 \dots \mu _ p  }   - X^ \alpha \partial _{ \mu_1 } Y_{ \alpha \dots \mu_ p  }
+  - \dots  - X ^ \alpha \partial  _{ \mu_ p } Y_{ \mu _ 1 \dots \alpha }
+\] 
+We can use small cases 
+to work out the right signs here. 
 
 \end{document} 

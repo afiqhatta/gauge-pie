@@ -43,7 +43,7 @@
 \pagestyle{fancy}
 \fancyhf{}
 \rhead{Notes by Afiq Hatta}
-\lhead{String Theory}
+\lhead{Standard Model}
 \rfoot{Page \thepage}
 
 %% Commands for typesetting theorems, claims and other things.
@@ -98,8 +98,8 @@
 \usetikzlibrary{decorations.pathmorphing}
 
 
-\title{String Theory Lecture Notes}
-\author{Lectured by Dr. Reid-Edwards} 
+\title{Standard Model Lecture Notes}
+\author{Notes taken by Afiq Hatta} 
 \begin{document} 
 \maketitle
 \tableofcontents
@@ -109,71 +109,28 @@
 \section{Introduction}%
 \label{sec:introduction}
 
-\subsection*{Summary}
+\section{Spacetime Symmetries} 
 
-\subsubsection*{Worldline actions}
-\begin{itemize}[leftmargin=*]
-	\item Our action is 
-		\[
-			S =  - m \int_{ s_1 } ^{ s_2 } ds 
-			 = - m \int_{ \tau_1 } ^{ \tau_2 } d \tau \sqrt{ -
-			 \eta ^{ \mu \nu } \dot{ x } ^ \mu \dot{ x } ^ \nu   } 
-		\] 
-	\item We have conjugate momenta with on-shell mass condition  
-		\[
-		 P^ \mu = -  \frac{m \dot{ x } ^ \mu  }{\sqrt{  - \dot{ x } ^ 2  }  }, 
-		 \quad  P ^ 2 + m ^ 2 = 0 
-		\]  
-	\item It makes more sense to work with Einbeins,
-		since we can work in the $ m \to 0 $ limit 
-	\[
-		S  = \frac{1}{2 } \int d\tau\, \left( e^{ - 1} 
-		\eta _{ \mu \nu } \dot{ x } ^ \mu \dot{ x } ^ \nu   - e m ^ 2   \right)  
-	\] 
-\item Two equations of motion come from the Einbein action 
-	\[
-		\frac{d }{ d \tau } \left( e ^{ - 1} \dot{ x } ^ \mu   \right)   = 0 , \quad 
-		\dot{ x } ^ 2 + e ^ 2 m ^ 2 = 0  
-	\]
-\item This has symmetries 
-	\[
-	 \delta x ^ \mu  = \xi \dot{ x } ^ \mu , \quad \delta e  = \frac{ d }{ d \tau } 
-	 \left( \xi \dot{ e }   \right) 
-	\]
-\item In the massless limit, if we replace our Minkowski metric 
-	with a general metric, we recover the geodesic equations 
-	\[
-	 S  = \frac{1}{2 } \int d \tau  e^{ - 1} g_{ \mu \nu } \dot{ x } ^ \mu \dot{  x } ^ \mu , 
-	 \quad \ddot{x } ^ \mu + \Gamma ^ \mu _{ \alpha \beta }  \dot{ x } ^ \alpha 
-	 \dot{ x } ^ \beta  = 0 
-	\]  
-\end{itemize}
+\section{Gauge Symmetries}%
+\label{sec:gauge_symmetries}
 
-\subsubsection*{Strings}
-\begin{itemize}
-	\item A string is two dimensional, 
-		embedded with parameters $ \sigma, \tau $
-		\[
-			X^ \mu  \left( \sigma, \tau  \right)   = X^ \mu 
-			\left(  \sigma + 2 \pi n , \tau  \right) , \quad 
-			n \in \mathbb{ Z } 
-		\]
-	\item Our associated action is the Nambu-goto action 
-	\[
-		S[X] =  - \frac{1}{ 2 \pi \alpha ' }\int d \sigma d \tau 
-		\sqrt{  - \det\left( \eta_{ \mu \nu } 
-		\partial  _ a X ^ \mu \partial  _ b X ^ \beta \right) } 
-	\] 
-\item We add an extra degree of freedom $ h _{ ab } $ to introduce 
-	the Polyakov action 
-	\[
-	 S[X, h ] = - \frac{1}{4 \pi \alpha ' } 
-	 \int d ^ 2 \sigma \sqrt{  - h }  h ^{ ab } \eta _{ \mu \nu } 
-	 \partial  _ a X ^ \mu \partial  _ b X ^ \nu 
-	\]  
-\end{itemize}
+\section{Symmetry Breaking}%
+\label{sec:symmetry_breaking}
+
+\section{Electroweak Unification}%
+\label{sec:electroweak_unification}
+
+\section{QCD}%
+\label{sec:qcd}
+
+\section{Phenomenology of the SM}%
+\label{sec:phenomenology_of_the_sm}
+
+\section{EFT's and open questions}%
+\label{sec:eft_s_and_open_questions}
+
+
 
 \section*{Example Sheet 1}
-
  
 \end{document} 

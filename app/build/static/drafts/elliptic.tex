@@ -1,0 +1,98 @@
+
+\pagebreak 
+ 
+\section{Elliptic Partial Differential Equations}
+The most relevant text for learning this kind of 
+material is the book by Gilbert and Trudinger, called 
+Elliptic Partial Differential Equtions of 2nd order. 
+
+The key theory of this course is a theory 
+called Schrouder theory, but the treatment of 
+elliptic PDEs will be different from that of the textbook. 
+
+We will build a background on linear theory and then 
+move onto non-linear theory. 
+So what will we be talking about? Let's give 
+some backgorund theory and motivation for the things we will 
+be doing. 
+
+In this course, we will study second order linear PDEs of the 
+form 
+\[
+ Lu  = a ^{ ij } D _{ ij } u + b ^ i D _ i u + c u = f 
+\] We will be working in Euclidean space throughout. 
+$ L $ is our linear operator. 
+We will be working in a bounded domain (which is an open, connected set)
+$ \Omega \subset \mathbb{ R } ^ n $. 
+Here, we have that 
+\[
+	D _ i = \frac{\partial  }{\partial  x _ i }  , \quad D_{ ij }  = 
+	\frac{\partial  ^ 2 }{\partial  x _ i \partial  x _ j } 
+\] Throughout this course, 
+we will also keep summation convention implicit. 
+So we have that $ a ^{ ij }  D_{ ij } u $ means that 
+we sum over both the $ i , j $ indices to get 
+\[
+ \sum _{ i , j = 1 , \dots n } ^{ n } a ^{ ij } D _{ ij } u 
+\]  And similarly we have that $ b ^ i D _ i $ 
+means $ \sum b^ i D _ i u  $. 
+We have that $ a ^{ ij } , b ^ i , c , f $ are given functions on 
+$ \Omega $. 
+
+We also assume symmetry. $ a ^{ ij } = a ^{ ji } $ for each $ i , j $. 
+This will be without loss of generality of $ u $ is a classical solution, 
+in otherwords the second derivative is continuous. $ u \in  C^ 2 \left(  \Omega  \right)  $. 
+This is since we can replace $ a ^{ ij } $ with $ \overline{ a } ^{ ij }  = 
+\frac{ a ^{ ij }  + a ^{ ji } }{ 2 } $. 
+
+Under this symmetric assumption, 
+the matrix of top order coefficients $ A \left(  x  \right)   = a _{ ij } \left(  x  \right)  $ 
+is an $ n $ by $ n $ real symmetric matrix $ \forall x \in \Omega $. 
+This means you can find real eigenvalues. 
+If $ \lambda \left(  x  \right)  , \Lambda \left(  x  \right)  $ are 
+the smallest and largest eigenvalues ie $ \lambda ( x) | \xi | ^ 2 \leq a^{ ij } \xi _ i \xi_ j 
+\leq \Lambda \left(  x  \right)  | \xi | ^ 2  $ for any arbitrary vector 
+\[
+	\xi  = ( \xi_1 , \dots , \xi_ n ) \in \mathbb{ R } ^{ n } 
+\] 
+The operator  $ L  $ is said to be
+\begin{itemize}
+	\item Elliptic in $ \Omega $ if $ \lambda (x ) >  0 $  $ \forall x \in \Omega $./ 
+	\item Strictly elliptic in $ \Omega $ if $ \lambda (x  ) \geq \lambda _ 0 > 0 $
+	for some constant  $ \lambda_0 $ and all $ x \in \Omega $. 
+\item Is uniformly elliptic in  $ \omega $ if $ \lambda ( x) > 0 $ and 
+	\[
+		\sup_{ \Omega } \frac{\Lambda \left( x  \right)  }{ \lambda (x )} < \infty 
+	\] 
+\end{itemize}
+A main part of the course (Schauder theory) is to establish, 
+under suitable assumptions on $ L $, (including ellipticity), 
+and existence and regularity theory for the Dirichlet problem associated with $  L $. 
+What does this mean? 
+
+We would like to solve 
+\[
+ \begin{cases}
+	 L u = f & \text{ in } \Omega \\ 
+	 u = g \text{ on } \partial  \Omega \\ 
+ \end{cases}
+\] where $ f , g $ are given functions, and we seek $ u \in C ^ 2 \left(  \Omega  \right) $.
+We can solve this equation without integrating! 
+The main idea is to deform the Laplacian to the form above. 
+
+By solving we mean we prove existence of solutions. 
+We hope to squeeze some non-linear theory in, and will mention some non-linear theory.
+A key motivation for 
+developing such a linear theory is its applications 
+to certain natural non-linear PDEs elliptic PDEs, 
+arising in Geometry, Physics, 
+Calculus of Variations and other areas. 
+
+In the linear theory, 
+we'll be proving statements such as 
+\begin{itemize}
+	\item If $ a ^{ ij }, b ^ i, c, ,f   \in C ^{ 0 , \alpha } \left( \Omega  \right)  $, 
+		and that $ u \in C ^ \left( 2, \alpha  \right)  \left( \Omega \right) $
+\end{itemize}
+
+

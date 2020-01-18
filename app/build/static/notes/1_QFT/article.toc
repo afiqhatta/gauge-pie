@@ -181,7 +181,7 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {subsection}{\numberline {7.4}Warming up with spinors from the $SO(3)$ rotation group}{97}{subsection.7.4}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\numberline {7.4.1}Rotations in Euclidean space}{97}{subsubsection.7.4.1}
+\contentsline {subsubsection}{\numberline {7.4.1}Rotations in Euclidean space}{98}{subsubsection.7.4.1}
 \defcounter {refsection}{0}\relax 
 \contentsline {subsubsection}{\numberline {7.4.2}Transformations with Unitary matrices}{98}{subsubsection.7.4.2}
 \defcounter {refsection}{0}\relax 
@@ -189,11 +189,11 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {subsection}{\numberline {7.6}Constructing the Chiral representation for the Dirac equation}{101}{subsection.7.6}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {7.7}Motivating Lorentz invariance of the Dirac equation}{101}{subsection.7.7}
+\contentsline {subsection}{\numberline {7.7}Motivating Lorentz invariance of the Dirac equation}{102}{subsection.7.7}
 \defcounter {refsection}{0}\relax 
 \contentsline {subsection}{\numberline {7.8}Constructing boosts and rotations in block diagonal form}{103}{subsection.7.8}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {7.9}The Weyl equations}{104}{subsection.7.9}
+\contentsline {subsection}{\numberline {7.9}The Weyl equations}{105}{subsection.7.9}
 \defcounter {refsection}{0}\relax 
 \contentsline {subsection}{\numberline {7.10}Constructing Plane-Wave solutions to the Weyl equation}{105}{subsection.7.10}
 \defcounter {refsection}{0}\relax 
