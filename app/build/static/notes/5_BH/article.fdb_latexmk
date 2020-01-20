@@ -1,10 +1,10 @@
 # Fdb version 3
-["biber article"] 1575885209 "article.bcf" "article.bbl" "article" 1579338550
-  "article.bcf" 1579275729 90028 cbd81645b3fad370fbf0b8e4b1821886 ""
+["biber article"] 1575885209 "article.bcf" "article.bbl" "article" 1579341910
+  "article.bcf" 1579338554 90028 cbd81645b3fad370fbf0b8e4b1821886 ""
   (generated)
   "article.bbl"
   "article.blg"
-["pdflatex"] 1579338551 "article.tex" "article.pdf" "article" 1579338550
+["pdflatex"] 1579341910 "article.tex" "article.pdf" "article" 1579341910
   "/usr/local/texlive/2018/texmf-dist/fonts/enc/dvips/cm-super/cm-super-t1.enc" 1480098666 2971 def0b6c1f0b107b3b936def894055589 ""
   "/usr/local/texlive/2018/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc" 1480098666 2900 1537cc8184ad1792082cd229ecc269f4 ""
   "/usr/local/texlive/2018/texmf-dist/fonts/map/fontname/texfonts.map" 1511824771 3332 103109f5612ad95229751940c61aada0 ""
@@ -309,14 +309,14 @@
   "/usr/local/texlive/2018/texmf-var/fonts/map/pdftex/updmap/pdftex.map" 1523934492 2717033 f61a5287d9c22a39a74f1979fe3f905c ""
   "/usr/local/texlive/2018/texmf-var/web2c/pdftex/pdflatex.fmt" 1547565098 4220280 bdb790c3affd8222f3907c44ab0ae2b6 ""
   "/usr/local/texlive/2018/texmf.cnf" 1523934483 577 0b39adfd7c93507ff20c9c14c2f1a33f ""
-  "article.aux" 1579275729 2271 d766d106a9eaaa02dbfaa7d6343ba20e ""
+  "article.aux" 1579338554 2271 d766d106a9eaaa02dbfaa7d6343ba20e ""
   "article.bbl" 1575885214 0 d41d8cd98f00b204e9800998ecf8427e "biber article"
-  "article.out" 1579275729 484 af1498fe4ffad2abbd34c6abce71982f ""
-  "article.run.xml" 1579275729 2245 aac36eed3c889ef1f9bd29739b52ea87 ""
+  "article.out" 1579338554 484 af1498fe4ffad2abbd34c6abce71982f ""
+  "article.run.xml" 1579338554 2245 aac36eed3c889ef1f9bd29739b52ea87 ""
   "article.tex" 1579338550 15948 08d970ff9318d74a29d4332e8f98301c ""
-  "article.toc" 1579275729 980 f78e0aa8713b4bdfd0b2ad0abc1f9130 ""
+  "article.toc" 1579338554 980 f78e0aa8713b4bdfd0b2ad0abc1f9130 ""
   "formation.tex" 1575924936 2096 f76805f491fa530c2ec8b0f42dda8700 ""
-  "useful_identities.tex" 1579275725 4170 78df700badba5178885d8ccb5e588bf1 ""
+  "useful_identities.tex" 1579341908 4244 6ebb68d3777eaa08485f7a73c46c5955 ""
   (generated)
   "article.log"
   "article.run.xml"

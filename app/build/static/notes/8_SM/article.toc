@@ -3,16 +3,20 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {section}{\numberline {1}Introduction}{2}{section.1}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {2}Spacetime Symmetries}{2}{section.2}
+\contentsline {subsection}{\numberline {1.1}Introduction}{2}{subsection.1.1}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {3}Gauge Symmetries}{2}{section.3}
+\contentsline {subsection}{\numberline {1.2}Motivation}{3}{subsection.1.2}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {4}Symmetry Breaking}{2}{section.4}
+\contentsline {section}{\numberline {2}Spacetime Symmetries}{4}{section.2}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {5}Electroweak Unification}{2}{section.5}
+\contentsline {section}{\numberline {3}Gauge Symmetries}{4}{section.3}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {6}QCD}{2}{section.6}
+\contentsline {section}{\numberline {4}Symmetry Breaking}{4}{section.4}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {7}Phenomenology of the SM}{2}{section.7}
+\contentsline {section}{\numberline {5}Electroweak Unification}{4}{section.5}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {8}EFT's and open questions}{2}{section.8}
+\contentsline {section}{\numberline {6}QCD}{4}{section.6}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {7}Phenomenology of the SM}{4}{section.7}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {8}EFT's and open questions}{4}{section.8}

@@ -1,10 +1,10 @@
 # Fdb version 3
-["biber article"] 1575885209 "article.bcf" "article.bbl" "article" 1579249071
-  "article.bcf" 1579249071 90028 cbd81645b3fad370fbf0b8e4b1821886 ""
+["biber article"] 1575885209 "article.bcf" "article.bbl" "article" 1579521645
+  "article.bcf" 1579521644 90028 cbd81645b3fad370fbf0b8e4b1821886 ""
   (generated)
   "article.blg"
   "article.bbl"
-["pdflatex"] 1579249068 "article.tex" "article.pdf" "article" 1579249071
+["pdflatex"] 1579521641 "article.tex" "article.pdf" "article" 1579521645
   "/usr/local/texlive/2018/texmf-dist/fonts/enc/dvips/cm-super/cm-super-t1.enc" 1480098666 2971 def0b6c1f0b107b3b936def894055589 ""
   "/usr/local/texlive/2018/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc" 1480098666 2900 1537cc8184ad1792082cd229ecc269f4 ""
   "/usr/local/texlive/2018/texmf-dist/fonts/map/fontname/texfonts.map" 1511824771 3332 103109f5612ad95229751940c61aada0 ""
@@ -52,6 +52,7 @@
   "/usr/local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb" 1480098733 32726 0a1aea6fcd6468ee2cf64d891f5c43c8 ""
   "/usr/local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb" 1480098733 32569 5e5ddc8df908dea60932f3c484a54c0d ""
   "/usr/local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb" 1480098733 32626 4f5c1b83753b1dd3a97d1b399a005b4b ""
+  "/usr/local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/symbols/msam10.pfb" 1480098733 31764 459c573c03a4949a528c2cc7f557e217 ""
   "/usr/local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb" 1480098734 34694 ad62b13721ee8eda1dcc8993c8bd7041 ""
   "/usr/local/texlive/2018/texmf-dist/fonts/type1/public/cm-super/sfbx1095.pfb" 1480098737 154600 ea54091d31de803b613ba9e80ca51709 ""
   "/usr/local/texlive/2018/texmf-dist/fonts/type1/public/cm-super/sfbx1200.pfb" 1480098737 140176 d4962f948b4cc0adf4d3dde77a128c95 ""
@@ -305,17 +306,17 @@
   "/usr/local/texlive/2018/texmf-var/fonts/map/pdftex/updmap/pdftex.map" 1523934492 2717033 f61a5287d9c22a39a74f1979fe3f905c ""
   "/usr/local/texlive/2018/texmf-var/web2c/pdftex/pdflatex.fmt" 1547565098 4220280 bdb790c3affd8222f3907c44ab0ae2b6 ""
   "/usr/local/texlive/2018/texmf.cnf" 1523934483 577 0b39adfd7c93507ff20c9c14c2f1a33f ""
-  "article.aux" 1579249071 1373 1945d54852fd18a3d857856b0f3a3f38 ""
+  "article.aux" 1579521644 1534 2d81cbd786690b510a42fea4b2361596 ""
   "article.bbl" 1579182563 0 d41d8cd98f00b204e9800998ecf8427e "biber article"
-  "article.out" 1579249071 47 a02d95553e30b97ff125b1aa17cf9044 ""
-  "article.run.xml" 1579249071 2245 aac36eed3c889ef1f9bd29739b52ea87 ""
-  "article.tex" 1579249064 5805 6d0849e893c72165b17ab71bd7605794 ""
-  "article.toc" 1579249071 229 0cb1c16aeb2b2d34476af39a0239ad7c ""
+  "article.out" 1579521644 122 416715de28dbf0aa269ca3dac64de64a ""
+  "article.run.xml" 1579521644 2245 aac36eed3c889ef1f9bd29739b52ea87 ""
+  "article.tex" 1579521640 13007 de27590c8213fb2f5b3262fd670f10a3 ""
+  "article.toc" 1579521644 355 5ed7e2fb00492f430d931442f55b8a09 ""
   (generated)
+  "article.aux"
+  "article.toc"
+  "article.log"
+  "article.out"
+  "article.run.xml"
   "article.pdf"
   "article.bcf"
-  "article.log"
-  "article.toc"
-  "article.aux"
-  "article.run.xml"
-  "article.out"

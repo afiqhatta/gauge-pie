@@ -109,8 +109,192 @@
 \section{Introduction}%
 \label{sec:introduction}
 
-\subsection*{Summary}
+If you'd like to read about string theory, 
+check out 
+\begin{itemize}
+	\item String Theory, Vol 1, Polchinksi, CUP 
+	\item Superstrings, Vol 1, Green et al, CUP
+	\item A String Theory Primer, Schomerus, CUP
+	\item David Tong's Notes, at arXiv: 09080333
+	\item 'Why String Theory' Conlon, CRC  
+\end{itemize}
 
+What is string theory? 
+We don't really know what string theory is. 
+The question itself requires a little more 
+fleshing out to make sense of it. String theory 
+is a work in progress. A final version of string 
+theory would be a theory which we understand physically 
+and mathematically. 
+It's a work in progress - the final form will 
+be quite different from what we have now. 
+
+What do we know? 
+Well, in some sense, string theory 
+is an attempt to answer the question of how we quantise the 
+gravitational field. A theory of \textbf{quantum gravity}. 
+There are however, a number of obstacles.
+In particular, naive quantisation of the 
+Einstein Hilbert action presents a number of problems. 
+
+There are deep conceptual problems associated with this. 
+\begin{itemize}
+	\item  There's a question about the 
+		nature of time in quantum gravity. 
+	If we think about time in quantum mechanics, time 
+	is treated as a fixed clock in which the Hamiltonian 
+	governs the evolution. In GR, space and time are on the same footing. 
+	Thus, the descriptions are on a different footing 
+	in QM versus GR. This is not neseccarily a technical problem, 
+	just something to think about. 
+\item How do we quantise things without a pre-existing causal structure? 
+	What do we mean by this? We we quantise things in QFT, 
+	it's important to know whether two operators 
+	are timelike or spacelike separated. We have a notion 
+	that for all operators which are spacelike separated, 
+	commute. (One should not be able to influence the other). 
+	If we try to quantise GR, the metric is the object which 
+	we would like to quantise. But, this determines the casual 
+	structure. So, it's not immediately obvious 
+	what the algebra of operators should look like. 
+
+\item GR has a very big symmetry - diffeomorphism symmetry (symmetry under
+	coordinate reparametrisations). This is diffeomorphism 
+	invariance. This is something we'll discuss a bit later on. 
+	This is considered to be a gauge symmetry. 
+\item One thing we'll discuss is that there are no local 
+	diffeomorphism invariant observables in GR. It's 
+	not even clear what the observables should be. 
+\end{itemize}
+
+More importantly, 
+there are technical obstacles. The previous issues are hard, 
+but can we make some assumptions which help us make progress? 
+We can look at perturbation theory; we can take our 
+metric an expand it around some classical solution
+\[
+	g _{ \mu \nu } \left( X  \right)   = \eta _{ \mu \nu } + h _{ \mu \nu } \left( x \right) 
+\] for our purposes, this classical solution will be 
+Minkowski space-time. 
+This means we can use the causal structure of 
+the background metric (Minkowski) to 
+learn about the causal structure of the perturbation, 
+and quantise. 
+This immediately neutralises the first two 
+conceptual problems. We can call the fluctuations $ h _{ \mu \nu } $ 
+as gravitons. 
+So, if we take a background static spacetime, add a field, 
+then quantise. 
+
+There are some unsatisfactory things about this. 
+When we split the metric into two, 
+we hide a lot of the deep structure that we want. 
+Nonetheless, we can take our Einstein-Hilbert action and expand it out
+\[
+	S \left[ g  \right]   = \frac{1}{K_ 0 } \int d ^{ D } X \sqrt{  - g }  R ( g ) 
+\] Choose a gauge and expand out 
+\[
+	S \left[  h  \right]   = \frac{1}{K_0 } \int  d ^ D X \left( 
+	h _{ \mu \nu } \Box h ^{ \mu \nu } \right) 
+\] Since the Ricci scalar contains inverses, 
+this expansion goes on forever. This is called 
+a non-polynomial action. 
+The first quadratic term gives the propagator, 
+and the higher order term gives us our interactions. 
+
+The propagator is represented by a wiggly line. 
+The interaction term gives us vertices. (Three or four 
+wiggly lines coming together) 
+These lead to Feynman rules.
+
+However, when we compute loops, 
+we get divergences. But, in physical QFT, 
+we can absorb these divergences into coupling constants. 
+These can be dealt with using standard techniques. From
+advanced quantum field theory, this technique 
+is called renormalisation. 
+
+Thus, the difficulties run deeper than conceptual ones. 
+We simply don't know how to calculate. 
+So, string theory 
+provides a way to do quantum perturbation theory 
+of the gravitational 'field' 
+We put field in quotation marks because it's 
+not really a field which we'll be dealing with. 
+
+String theory answers some of the questions, 
+in the sense that it gives 
+us a framework to ask 
+meaningful questions in quantum gravity. 
+But not all of these questions are questions that 
+we can answer. 
+
+The viewpoint that  we're going to 
+take for this course will be from 
+perturbation theory. But we'll always 
+try to understand what this tells us about the 
+non-perturbative physics. 
+
+\subsection{Worldsheets and Embeddings}
+Let's try 
+to put together some sort of language 
+to get started. From any popular science book, 
+you may find that particles are described 
+as vibrating strings. 
+The starting point is to consider a 
+worldsheet $ \Sigma $ which is a 
+2-dimensional surface swept out by a string. 
+This is analogous to a 
+worldline swept out by a particle.
+
+(Insert diagram of line parametrised by $ \tau $  and pointlike 
+object, and diagram of cylinder object with surface called 
+$ \Sigma $, with two axes called $ \tau $ and $ \sigma $.   This 
+diagram is in 3d Minkwoski space). 
+We put coordinates $ \left( \sigma , \tau  \right)  $
+on $ \Sigma $, at least locally. 
+And, we can define an embedding of the worldsheet $ \Sigma $ 
+in the background spacetime, $ \mathcal{ M } $ (Minkowski space),
+by the functions $ X ^{ \mu } \left( \sigma, \tau  \right)  $, 
+where the $ X ^ \mu $ are coordinates on 
+$ \mathcal{ M }  $. So if you like, we have that 
+\[
+ X : \Sigma \to \mathcal{ M }
+\] Why is this an embedding? 
+A choice $ \sigma $ and $ \tau $ on $ \Sigma $ gives 
+us a location in Minkwoski space. 
+There are rules (which we shall investigate), 
+for gluing such worldsheets together 
+in a way which is consistent with 
+the symmetries of the theory. 
+
+So, we can not only describe the embeddings 
+of a single string propagating through space-time, 
+but multiple strings coming together. 
+
+(Draw a diagram of two tubes merging into one tube, 
+then splitting back again into two tubes - this looks like 
+a three point vertex)
+
+We shall see that such diagrams like the above 
+are in one-to-one 
+correspondence with correlation functions in some 
+quantum theory. 
+It is natural to interpret such diagrams 
+as Feynman diagrams in a perturbative expansion 
+of some theory about a given vacuum. 
+
+So what we have is a way of understanding 
+writing down Feynman rules, and performing 
+successively better approximations to 
+an exact result in field theory which we don't have. 
+
+So what we have here will turn out to be Feynman rules for a theory 
+which we don't yet have. Where do these Feynman rules come from? 
+Quantising is tremendously restrictive. 
+
+\subsection*{Summary}
+ 
 \subsubsection*{Worldline actions}
 \begin{itemize}[leftmargin=*]
 	\item Our action is 
