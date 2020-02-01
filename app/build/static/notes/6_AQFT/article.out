@@ -1,8 +1,16 @@
 \BOOKMARK [1][-]{section.1}{Path Integrals}{}% 1
-\BOOKMARK [2][-]{subsubsection.1.0.1}{Path Integral Derivations}{section.1}% 2
-\BOOKMARK [3][-]{subsubsection.1.0.2}{Feynman Diagrams}{subsubsection.1.0.1}% 3
-\BOOKMARK [1][-]{section.2}{Regularisation and Renormalisation}{}% 4
-\BOOKMARK [1][-]{section.3}{Gauge Theories}{}% 5
-\BOOKMARK [1][-]{section.4}{Formulating the Path Integral}{}% 6
-\BOOKMARK [2][-]{subsection.4.1}{Classical and Quantum Mechanics}{section.4}% 7
-\BOOKMARK [2][-]{subsection.4.2}{Formulating the Path Integral}{section.4}% 8
+\BOOKMARK [1][-]{section.2}{Integrals and their Diagrams}{}% 2
+\BOOKMARK [2][-]{subsection.2.1}{Free Theory}{section.2}% 3
+\BOOKMARK [2][-]{subsection.2.2}{Interacting Theory}{section.2}% 4
+\BOOKMARK [2][-]{subsection.2.3}{Quantum Effective Action}{section.2}% 5
+\BOOKMARK [3][-]{subsubsection.2.3.1}{Path Integral Derivations}{subsection.2.3}% 6
+\BOOKMARK [3][-]{subsubsection.2.3.2}{Free Partition Functions}{subsection.2.3}% 7
+\BOOKMARK [3][-]{subsubsection.2.3.3}{Feynman Diagrams}{subsection.2.3}% 8
+\BOOKMARK [3][-]{subsubsection.2.3.4}{Effective Actions}{subsection.2.3}% 9
+\BOOKMARK [1][-]{section.3}{Regularisation and Renormalisation}{}% 10
+\BOOKMARK [1][-]{section.4}{Gauge Theories}{}% 11
+\BOOKMARK [1][-]{section.5}{Formulating the Path Integral}{}% 12
+\BOOKMARK [2][-]{subsection.5.1}{Classical and Quantum Mechanics}{section.5}% 13
+\BOOKMARK [2][-]{subsection.5.2}{Formulating the Path Integral}{section.5}% 14
+\BOOKMARK [1][-]{section.6}{Useful Identities}{}% 15
+\BOOKMARK [2][-]{subsection.6.1}{Integral Identities}{section.6}% 16

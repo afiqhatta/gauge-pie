@@ -293,8 +293,948 @@ So what we have here will turn out to be Feynman rules for a theory
 which we don't yet have. Where do these Feynman rules come from? 
 Quantising is tremendously restrictive. 
 
-\subsection*{Summary}
+
+\section{The Classical Particle and String}
+In non-relativistic Q, we treat 
+time $ \left( t  \right)  $ as a parameter 
+and position $ \hat{ X } ^ i $ as an operator. 
+Obviously, this kind of restiriction shouldnt 
+survive very long in a relativistic string theory. 
+So, there are choices to be made here. 
+One of those choices is second quantisation.
+Second quantisation is when both $ X ^ i $ and $ t $ 
+are parameters. Then, 
+we quantise fields, for example $ \phi \left( x, t  \right)  $ 
+which are the fundamental objects of interest in our 
+theory. 
+We of course require that the fields 
+transform in an appropriate way under field transformations. 
+This is what we do in QFT. Most of what we know for example, 
+in the standard model, omes from this approach. 
+
+However, there is another way. 
+This is \textbf{first quantisation}. 
+We elevate $ t $ to be an operator, 
+and have something else in the background. 
+This is a natural framework for 
+describing the relativistic 
+embedding for worldline, worldsheet
+or worldvolume 
+in a spacetime.
+
+And here, $ X ^ \mu  = \left( X ^ i , t  \right)   $ 
+is an operator, which is the fundamental 
+object which we quantise (our basic variable), 
+and we have some other natural parameter 
+entering the theory. 
+We'll look at concrete examples of what that parameter 
+is through this section. 
+
+This other possibility, 
+where we think of our fundamental degrees of 
+freedom as some object embedded into spacetime, 
+is the path we'll take in string theory. 
+This is because this approach has been very successful. 
+
+There is string field theory however, which takes the first 
+approach, but this leads to most of the results 
+of first quantised string theory. 
+
+\subsection{Worldlines and Particles}
+Suppose we want to take this approach 
+with a particle. 
+We consider an embedding 
+of a worldline $ \mathcal{ L } $ 
+into spacetime $ \mathcal{ M } $. 
+We assume zero curvature. 
+The basic field is the embedding $ X ^ \mu : 
+\mathcal{ L } \to \mathcal{ M } $ 
+and an action might be 
+\[
+ S \left[  X  \right]   =  -m \int _{ x_0 } ^{ x_1 } ds  =  -m 
+ \int_{ \tau_1 }^{ \tau_2 } d \tau \sqrt{  - \eta _{ \mu \nu } \dot{ X  }^ \mu \dot{  X} ^ \nu   } 
+\] (Insert diagram of line connecting nodes $ x_ 1 ^ \mu $ and $ x _ 2 ^ \mu $  )
+where $ \tau $ (a parameter) is the proper time 
+and 
+\[
+	X ^ \mu \left( \tau _ 2  \right)   =  x _ 2 ^ \mu , \quad X ^ \mu \left( \tau _ 1  \right)   = x_1 ^ \mu  
+\] are endpoints of the worldline. 
+It makes sense 
+that our action 
+should be proportional to 
+the length of the worldline. 
+So, a reasonable guess for our action. 
+We're taking our space-time metric as $ \left(  -, + , + , +  \right)  $. 
+This seems like a reasonable starting point. 
+
+The constant $ m $ has dimensions of mass, 
+so a good guess is that this parameter 
+is interpreted as the mass. 
+We can do some things with this action. 
+We can first compute the 
+conjugate momentum
+to $ X ^ \mu \left( \tau  \right)  $, which is 
+\[
+ P _ \mu \left(\tau   \right)   =  - m \frac{ \dot{ X  }^ \mu   }{ 
+ \sqrt{  - \dot{ X} ^ 2   }  } , \quad \left( \dot{ X ^ 2 }  = \eta_{ \mu \nu } 
+ \dot{X } ^ \mu \dot{ X } ^ \nu   \right) 
+\] This satisfies $ P ^ 2 + m ^ 2  =  0 $. 
+This is what we call an 'on shell' condition. 
+There are two symmetries 
+associated with this action. 
+ \begin{itemize}
+	\item  We have a rigid symmetry, where 
+		\[
+		 X ^ \mu \left( \tau  \right)  \to \Lambda \indices{ ^ \mu _ \nu } 
+		 X^ \nu \left( \tau  \right)  +  a ^ \mu 
+	 \] where $ \Lambda \indices{ ^ \mu _ \nu }  $ is a Lorentz transformation 
+	 matrix and $ a ^ \mu $ is a constant displacement. 
+ \item Also, this action has 
+	 re parametrisation invariance. In other words, 
+	 in the physical variable of the $ x $ 's, $ \tau $ is 
+	 just a parameter which measures the distance along the line. 
+	 So, we can replace it. 
+	 If we take 
+	 \[
+		 \tau \to \tau + \xi \left( \tau  \right)  
+	 \] The embedding $ X ^ \mu $ changes as 
+	 \[
+	  X ^ \mu \left( \tau  \right)  \to 
+	  X ^ \mu \left( \tau + \xi  \right)   = X ^ \mu \left( \tau  \right)  
+	  + \xi \dot{ X } ^ \mu \left( \tau  \right)  + \dots  
+  \] To first order, we have that $ \delta X ^ \mu \left( \tau  \right)  
+  \xi \dot{ X } ^ \mu \left( \tau  \right)   $. 
+\end{itemize} 
+
+There's a rewriting 
+of this action which makes life a little bit easier. 
+Specifically, the action above is 
+hard to interpret in the massless case. 
+We can rewrite the action 
+as \[
+  X\left[  X , e  \right]    = \frac{1}{2 } \int 
+  d \tau \, (  e ^{ -1 } \eta _{ \mu \nu } \dot{ X } ^ \mu \dot{ X} ^ \nu   
+   - e m ^ 2 ) 
+\] There are no square roots, and we can take the massless limit. 
+We will show that this new action is equivalent to 
+the one we wrote down earlier. 
+$ e \left( \tau  \right)  $ is some new field on the worldline. 
+If you like, you might want to 
+think of $ e $ as some one-dimensional metric which 
+sets the scale of distances on the line. 
+
+The equations of motion for $ x ^ \mu \left( \tau  \right)  $ 
+and $ e \left( \tau  \right)  $ are as follows 
+\[
+	\frac{d }{ d \tau } \left( e ^{ - 1 } \dot{ X }   \right)  = 0 
+\] We notice that interestingly, $ e $ does not appear with a time 
+derivative. So its equation of 
+motion is purely algebraic. If you like, you 
+can think of $ e $ as being a lagrange multiplier 
+for every single point $ \tau $ on the worldline. 
+The $ e $ equation of motion is 
+\[
+ \dot{ X } ^ 2 + e ^ 2 m ^ 2  = 0  
+\] $ e \left( \tau  \right)  $ enters 
+algebraically 
+and it can be thought of 
+as a constraint! 
+The momentum conjugate to $ X ^ \mu $ 
+is 
+\[
+ P _ \mu  = e ^{ - 1 } \dot{ X } ^ \mu  
+\] If we combine this with the algebraic constraint
+for $ e $, we can combine this with the mass shell 
+condition 
+to get $ P ^ 2 + m ^ 2  = 0 $. 
+So interestingly, this auxillary field $ e $ 
+imposes a constraint but is equivalent to 
+the space-time energy momentum condition. 
+
+We can write $ e ^{ - 1 }  = \frac{ m }{ | \dot{ X }  |  } $, 
+plug this into the action 
+to find $ S \left[  X , e  \right]  $ 
+subject to the equations of motion 
+for $ e \left( \tau  \right)  $ gives 
+precisely the action 
+\[
+ S\left[  X  \right]   =  - m \int_{ C } \sqrt{  - \eta _{ \mu \nu } \dot{ X } ^ \mu 
+ \dot{ X } ^ \nu  }  
+\] What guarantees that $ e ^{ - 1 }  $ exists? 
+Well, a priori nothing. But, we 
+can motivate $ e $ coming from 
+the interpretation as being a metric, 
+which is invertible. 
+
+With a bit more work, 
+we can argue that the $ m $ goes to 
+$ 0 $ limit gives 
+us the description for null light. 
+This action is overall a lot nicer. 
+
+The action $ S \left[  X , e  \right]  $ has the 
+symmetries 
+\begin{itemize}
+	\item  Poincare invariance, where $ e $ is 
+		invariant. 
+	\item This also has re-parametrisation 
+		invariance, but since $ e $ depends on $ \tau  $, 
+		it also has to transform. 
+		Infinitesimally, 
+		\[
+		 \delta X ^ \mu  = \xi \dot{ X } ^ \mu , \quad \delta e  = \frac{ 
+		 d }{ d \tau } \left( \xi e  \right)  
+		\] provided these variations vanish on the endpoints. 
+		$ e $ is not a scalar function on the worldline, 
+		but this is the natural way to choose how it 
+		transforms so that the action is invariant. 
+\end{itemize}
+we have a couple of comments. 
+The first thing we could to is add curvature 
+to our spacetime. 
+We could generalise $ \eta _{ \mu \nu } \to g _{ \mu \nu } \left( X \left( \tau  \right)   \right)  $. Then, this becomes 
+a highly non-linear model. 
  
+\subsection{Classical Strings}
+\subsubsection{Nambu-Goto Action}
+The Nambu-Goto action 
+is the analog of the action above 
+but for a string. 
+(Diagram of cylinder with open ends with axes $ \sigma , \tau $ ). 
+The fundamental degree of freedom is 
+\[
+ X : \Sigma \to \mathcal{ M } 
+\] In this context, we refer to the object which 
+the sheet is embedded into as the target space. 
+Often, the thing we're embedding into may not 
+be space-time for historical reasons. 
+The Nambu-Goto action 
+is the proposed generalisation 
+so that for $ X ^ \mu \left( \sigma , \tau  \right)  $, we have 
+\[
+ S \left[  X  \right] =  - \frac{1}{2 \pi \alpha '  } 
+ \int d \sigma d \tau \sqrt{  - \det \left( \eta _{ \mu \nu } \partial  _ a X ^ \mu 
+ \partial  _ b X ^ \nu \right) } 
+
+\] This is an action which 
+is proportional to the area 
+spread out by the wordsheet. 
+$ \alpha  ' $ is a historically labelled 
+constant with dimensions of area as measured in 
+spacetime. 
+One often speaks of the string length $ l _s = 2 \pi \sqrt{ \alpha ' } $. 
+We introduce the string tension $ T  = \frac{1}{ 2 \pi \alpha ' } $, 
+where we assume throughout that $ \hbar = 1  =c  $. 
+These are some characteristic scales in the 
+theory. 
+
+The usual sort of issues from Nambu-Goto 
+are similar to the issues we faced from 
+the original worldline action. 
+A much better starting point 
+for us is the Polyakov action. 
+We place this game of removing the 
+square root at the price of introducing an 
+extra non-dynamical field. 
+\[
+ S\left[  X, h   \right] =  - \frac{1}{ 4 \pi \alpha ' } 
+ \int _{ \Sigma } d ^ 2 \sigma \sqrt{  -h }  h ^{ ab } \eta _{ \mu \nu } 
+ \partial  _ a X ^ \mu \partial  _ b X ^ \nu 
+\]  Our entire lecture course 
+will start from the 
+quantisation of this. 
+$ h _{ ab } $ is a metric on  $ \Sigma $ and is 
+non-dynamical  - there are no terms 
+involving derivatives $ h$ - it is 
+merely a constraint field like $ e $ was. 
+We will find however that $ h $ plays 
+an important role. 
+
+If we remember $ h $ as a metric, 
+this is a two dimensional quantum Klein-Gordon 
+field which is massless and in $ 2 $ dimensions. 
+if we treat this as a two dimensional quantum field theory, 
+there are other terms which we may want to add. 
+
+Let's have a look at 
+some equations of motion 
+
+...
+
+\subsection{Classical Hamiltonian Dynamics of the String}
+Today, we're 
+going to be interested in the quantisation 
+of our closed bosonic string. 
+To a first approximation, 
+the canonical quantisation theory is 
+quite straight forward. 
+
+We're going to continue to
+work in what we're going to 
+call conformal gauge. 
+This is when we take the metric 
+on the worldsheet to take 
+the form 
+\[
+ h _{ ab }  = e ^{ \Phi } \begin{pmatrix}  
+  - 1 ^ 0 \\ 0 & 1 \end{pmatrix} 
+\] So we have a sort of natural notion of time. 
+We can then define the 
+canonical momentum field 
+conjugate to $  X^ \mu $ 
+in the usual way. 
+This is just 
+\[
+ P _ \mu \left( \sigma, \tau  \right)   = \frac{\delta S \left[  X  \right]  }{ 
+ \delta X ^ \mu \left( \sigma, \tau  \right)  }  = \frac{1}{2 \pi \alpha   ' }\dot{ X } _ \mu   
+\] We can also do the usual stuff 
+and write down the Hamiltonian density. 
+Given the Lagrangian density 
+$ \mathcal{ L } $, the Hamiltonian 
+density is 
+\[
+ \mathcal{ H }  = P _ \mu \dot{ X } ^ \mu  - \mathcal{ L }  = \frac{1}{4 \pi \alpha  ' }
+ \left( \dot{ X } ^ 2 + X ^{ ' 2 }   \right)  
+\]  Recall that the 
+dot derivative is the derivative 
+with respect to $ \tau $, and the prime is the 
+derivative with respect to $ \sigma $. 
+It is always useful when looking at 
+Hamiltonian dynamics 
+to define the Poisson brackets. 
+We introduce the bracket as $ \left\{  ,  \right\}  _{ P B } $. 
+In particle theory, 
+where our coordinates 
+$ x ^ \mu \left( \tau  \right)  $ and 
+momenta $ p _ \mu \left( \tau  \right)  $ are 
+on fundamental variables, it is useful to define the following. 
+\[
+ \left\{  f, g,  \right\}  _{ P B }  = 
+ \frac{\partial  f }{\partial  X ^ \mu }  \frac{\partial  g }{\partial  p_ \mu }  
+  - \frac{\partial  f }{\partial  p _ \mu }  \frac{\partial  g }{\partial  x^ \mu } 
+\]  So, for example, we have that 
+$ \left\{ x ^ \mu , p _ \nu  \right\}   = \delta \indices{ ^ \mu _ \nu }  $. 
+The Hamiltonian $ \mathcal{ H } $ plays the 
+role as a generator 
+of time translations. For example, if we 
+have some function of $ x, p $ which is 
+\[
+ \frac{df }{ d \tau }  = \frac{\partial  f }{\partial \tau } + \left\{  f, H  \right\}   
+\] which can be shown from the chain rule. 
+Here, we're doing something slightly more 
+general because $ x , p $ depends 
+two parameters, not just the $ \tau $. 
+So, if you like, this 
+is a field theory generalisation. 
+Our field theoretic generalisation 
+requires that 
+\[
+	\left\{ X ^ \mu \left( \sigma, \tau  \right) , P _ \nu 
+	\left( \sigma ' , \tau  \right)  \right\}    = \delta \indices{ ^ \mu _ \nu } 
+	\delta \left( \sigma - \sigma  '  \right) 
+\]   This is a precurcsor 
+for equal time commutation relations. 
+This is a nice construction! 
+If we recall the form of $ X ^ \mu \left( \sigma, \tau  \right)  $ 
+to be written in terms of fourier modes $ \alpha^ \mu _ n  $
+and $ \overline{ \sigma } ^ \mu _ n $. 
+We have the 
+mode expansion 
+\[
+	X^ \mu \left( \sigma, \tau  \right)   = x ^ \mu 
+	+ \sqrt{ \alpha  ' }  p ^ \mu \tau  +  i \sqrt{ \frac{\alpha ' }{ 2 } }  
+	\sum_{ n \neq 0 } \frac{1}{n } \left( 
+	\alpha ^ \mu _ n e ^{   -in \left( \tau  - \sigma  \right)  } + 
+\overline{ \alpha } ^ \mu _ n e ^{  - in \left( \tau + \sigma  \right)  } \right) , 
+\quad \sigma \sim \sigma + 2 \pi 
+\]  So imposing 
+the natural commutation relations on 
+$ X ^ \mu $ and $ P ^ \mu $, gives 
+us natural Poisson bracket relations 
+for $ \alpha , \alpha ' $. 
+This requires 
+\[
+ \left\{  \sigma _ \mu ^ \nu , \sigma _ n ^ \nu  \right\}  _{ P B } 
+  = - i m \eta ^{ \mu \nu } \delta _{ m + n , 0 }, \quad 
+  \left\{  \alpha ^ \mu _ m , \overline{ \alpha } ^ \nu _ n  \right\}  _{ P B }  = 0 , \quad 
+  \left\{  \overline{ \alpha } ^ \mu _ m , \overline{ \alpha } ^ \nu _ n  \right\}  _{ P B } 
+   =   - i m \eta ^{ \mu \nu } \delta _{ m + n , 0 }
+\] The left hand side 
+vanishes unless $ n  =- m $. Why are we considering closed strings? 
+Apparently, they make life easier later, 
+and closed strings give rise to gravity. 
+Let's see if this is plausible. 
+The relation above is for equal times, 
+and the $ X , P $ commutation relation 
+is valid for equal times, 
+so let's check this holds for $ \tau  = 0$. 
+We'll see later on that this 
+choice of $ \tau $ is in actual fact not a special case. 
+Just for simplicity however, we'll do it this way. 
+
+Our string looks like, at $ \tau  =0 $, 
+\[
+ X ^ \mu \left( \sigma  \right)  = x ^ \mu 
+ + i  \sqrt{ \frac{ \alpha ' }{ 2 }}  \sum _{ n \neq  0 } \frac{1}{n } \left( 
+ \alpha ^ \mu _ n e^{ i n \sigma } + \overline{ \sigma } ^ \mu _ n e ^{  - i n \sigma } \right)
+\] Our conjugate momenta is then  
+\[
+ P _ \mu \left( \sigma  \right)   = \frac{p ^ \mu }{ 2 \pi } 
+ + \frac{1}{ 2 \pi } \sqrt{  \frac{1}{2 \alpha  ' }}  \sum _{ n \neq  0 } \left( 
+ \alpha _ n ^ \mu e ^{ i n \sigma } + \overline{ \alpha } _ n ^ \mu e ^{  - i n \sigma } \right)
+\] 
+Computing the commutation relation from this, 
+we have that 
+\begin{align*}
+	\left\{  X ^ \mu \left( \sigma  \right)  , P ^ \nu  \left( \sigma '  \right)   \right\}  _{ P B } &  = \frac{1}{2 \pi } \left\{  x ^ \mu , p^ \nu   \right\}  + 
+	\frac{i}{4 \pi } \sum _{ m , n \neq 0 } \frac{1}{m } 
+	\left( \left\{  \alpha _ m ^ \mu , \alpha _ n ^ \nu  \right\}  
+	e ^{ i \left( m \sigma + n \sigma  '  \right)   } + 
+\left\{  \overline{ \alpha } _ m ^ \nu , \overline{ \alpha } _ n ^ \nu  \right\}  
+_{ P B } e ^{  - i \left( m \sigma + n \sigma  '  \right)  }\right) \\
+&= \frac{\eta ^{ \mu \nu } }{ 2 \pi } + \frac{\eta ^{ \mu \nu } }{ 2 \pi } 
+\sum _{n \neq  0 } e ^{  i n \left( \sigma - \sigma '  \right)   }  \\
+&=  \frac{\eta ^{ \mu \nu }}{ 2 \pi } \sum _{ n  } e ^{ i n \left( \sigma - \sigma '  \right)  
+\end{align*}
+But, we have that $ \frac{1}{2 \pi } \sum _{ n } e ^{ i n \left( \sigma - \sigma '  \right)  } $ is just a periodic version of the Dirac delta function. 
+Thus, we get 
+exactly what we're looking for. 
+So, 
+\[
+	\left\{  X ^ \mu \left( \sigma  \right) , P ^ \nu \left( \sigma  '  \right)   \right\} _{ P B }   = \eta ^{\mu\nu 	 } \sigma \left( \sigma  - \sigma '  \right)  
+\] 
+The other way to go about 
+doing this is to find $ \alpha , \overline{\alpha } $ 
+in terms 
+of integral expressions, and 
+then use this to prove the commutation relations 
+the other way around. 
+
+\subsection{The Stress Tensor and Wit Algebra}
+Introduce the 
+worldsheet lightcone coordinates 
+\[
+ \sigma ^{ \pm }  = \tau \pm \sigma 
+\] which are a  natural choice of 
+coordinates in this gauge to 
+help us understand the structure 
+of this space a little but more. 
+
+In these coordinates, and this gayge, the 
+worldsheet metric 
+now looks like 
+\[
+	h  =e ^{ \phi } \begin{pmatrix}   0 & \frac{1}{2 } \\
+	\frac{1}{2 } & 0 \\ \end{pmatrix} 
+\] and $ \partial  _{ \pm }  = \frac{\partial  }{\partial  \sigma ^{ \pm } }   $. 
+The action and equations of motion 
+becomes 
+\[
+ S =  - \frac{1}{2 \pi \alpha ' } \int_{ \Sigma } d \sigma ^ + d \sigma ^  - 
+ \partial  _ + X \cdot  \partial  _ - X , \quad \partial  _+ \partial  _ - X ^ \mu  =0 
+\] The stress 
+tensor $ T _{ ab } $ becomes in these coordinates 
+\[
+ T _{ ++ }   =  - \frac{1}{\alpha ' } \partial _ + X \cdot  \partial _ + X 
+ , \quad T _{ -- }  = - \frac{1}{ \alpha ' } \partial _ - X \cdot  \partial  _ - X , 
+ \quad T _{ + - }   = T _{ - +  } =0 
+\] So we have two fields on the worldsheet, 
+the $ X  $s, and the metric which encodes 
+the vanishing stress tensor constraint. 
+
+The constraint is  $ T _{ \pm \pm }  =0 $. 
+Let's 
+pause a little and think
+about what these constraints 
+might look like in 
+terms of these modes. 
+It;s going to be very useful to introduce 
+the Fourier modes of $ T _{ \pm \pm } $. 
+We define at $ \tau  = 0$, the charges 
+\[
+	L _ n  = - \frac{1}{2 \pi } \int_{ 0 } ^{ 2 \pi } d \sigma T _{ -- } \left( \sigma  \right)  e ^{  - i n \sigma } , \quad 
+	\overline{ L } _ n  = -\frac{1}{2 \pi } \int _ 0 ^{ 2 \pi } d \sigma 
+	T _{ ++ } \left( \sigma  \right)  e ^{ i n \sigma }
+\] We're just starting out to take $ \tau  = 0 $, 
+but we'll see later that this doesn't matter. 
+What do these modes look like in terms of $ \alpha $ ? 
+We'll choose to explore one of them in detail, 
+with the awareness that the other moving mode 
+will have similar properties. 
+
+If we differentiate $ X ^ \mu $ as 
+\[
+	\partial  _ - X ^ \mu \left( \sigma , \tau  \right)    
+	\sqrt{ \frac{ \alpha  ' }{ 2 }  }  \sum _{ n } \alpha _ n e ^{  - i n \sigma ^{  -}  } , \quad \alpha _ 0 ^{ \mu }  = \sqrt{ \frac{ \alpha '  }{ 2 } }  p ^ \mu 
+\] We find 
+that 
+\begin{align*}
+	L_ n  &=  \frac{1}{2 \pi \alpha  ' } \int _ 0 ^{ 2 \pi } 
+	d \sigma \partial  _ - X ^ \mu \left( \sigma  \right)  \cdot  \partial  _  - 
+	X _ \mu \left( \sigma  \right)  \\ 
+	&=  \frac{1}{4 \pi } \sum _{ m , p } \alpha _ m \cdot  \alpha _ p \int 
+	_ 0 ^{ 2 \pi } d \sigma e ^{  - i \left( m + p - n  \right)  \sigma } \\
+	&=  \frac{1}{ 4 \pi } \sum _{ m , p } \alpha_ m \cdot  \alpha _ p 
+	2 \pi \delta _{ p , n  -m } 
+\end{align*}
+Similarly, this 
+holds for $ \overline{ L } _ n $. 
+This gives us the 
+relation that 
+\[
+ L _ n  = \frac{1}{2 } \sum _ m \alpha _{ n  - m } \cdot   \alpha _ m , 
+ \quad \overline{ L } _ n  = \frac{1}{2 } \sum _ m \overline{ \alpha } _{ n - m } \cdot  
+ \overline{ \alpha } _m 
+\]  This constraint can be written 
+as $ L _ n  = 0  = \overline{ L } _ n $. 
+Using the algebra for the $ \alpha _ n ^ \mu $ $ \left( \overline{ \alpha } _ n ^ \mu  \right)  $, we can compute the algebra for $ L _ n \left( \overline{ L } _ n  \right)  $. 
+It's 
+not to hard to show that the algebra 
+of these objects obey 
+the algebra 
+\[
+ \left\{  L _ m , L _ n  \right\}   = - i 
+ \left( m - n  \right)  L _{ m + n }, \quad 
+ \left\{  L _ m , \overline{ L } _ n  \right\}   = 0 , 
+ \quad \left\{  \overline{ L } _ m , \overline{ L } _ n  \right\}   = - i \left( m - n  \right)  \overline{ L } _{ m + n }
+\] 
+This is often called the Witt algebra. 
+We shall see, when we promote this 
+to quantum operators, 
+we see something very similar, but with an important difference. 
+We will see that if we set $ L _ n  = 0  = \overline{ L } _n $, 
+at a given  $ \tau $ , then 
+the evolution of the system 
+preserves $ L _ n   = 0  = \overline{ L } _ n $. 
+So what we find, underlying the constraints of 
+this theory, that there is this underlying 
+infinite dimensional symmetry. 
+
+\subsection{A First Look at the Quantum Theory}
+Given the work we've done
+on the classical theory, 
+this will be a striaghtforward extension. 
+There are two approaches we can take on this. 
+In the first instance, we can choose 
+our metric locally due to Weyl rescaling, 
+which gives us a two dimensional massless Klein-Gordon theory. 
+But, as a result, we 
+get constraints from the stress-energy tensor. 
+
+There are two ways we can proceed in imposing 
+the constraints. 
+We can constrain then quantise, which 
+is an apporach that has been reasonably successful
+(this is called light-cone quantisation). 
+The second approach is 
+to quantise the unconstrained 
+theory, then impose constraints 
+as a physical condition 
+on our Hilbert space. 
+This is the condition which we will be 
+working with.
+
+We will impose $ T _{ ab }  = 0 $  
+on the Hilbert space.
+
+\subsubsection{Canonical Quantisation}
+We quantise by 
+replacing out Poisson brackets 
+with commutators. So, functions on phase 
+space for example, are replaced by operators. 
+We do the transformation 
+\[
+ \left\{  ,  \right\}  _{ P B  }  \to  - i \left[  ,  \right] 
+\] So, the structure 
+of quantum mechanics is 
+similar to Hamiltonian dynamics. 
+These give rise to equal time comuttation 
+relations: 
+\[
+	\left[  X ^ \mu \left( \sigma \right) , X ^ \nu \left( \sigma '  \right)    \right]   = 0 , \quad \left[  P _ \mu \left( \sigma  \right)  , 
+	P _ \nu \left( \sigma '  \right)   \right]   = 0 , \quad 
+	\left[  P _ \mu \left( \sigma  \right)  , 
+	X ^ \nu \left(  \sigma '  \right)  \right]   =  - i \delta 
+	\indices{ _ \mu ^ \nu  } \delta \left( \sigma - \sigma '  \right)   
+\] Using 
+the mode expansion for $ X ^ \mu $ and $ P _ \nu $, 
+which is 
+\[
+ X ^ \mu \left( \sigma , \tau  \right)   = 
+ x ^ \mu + p ^ \mu \alpha ' \tau + i \sqrt{ \frac{ \alpha ' }{ 2 } }  
+ \sum _{ n \neq 0   } \frac{1}{n } \left( \alpha _ \nu ^ \mu 
+ e ^{  - i n \left( \tau  - \sigma  \right)  } + \overline{ \alpha } _ n ^ \mu 
+  e^{  - i n \left( \tau + \sigma  \right) }\right) 
+\] The commutation 
+relations for the modes are 
+\[
+ \left[  \alpha _ m ^ \mu , \alpha _ n ^ \nu  \right]   =
+ m \delta _{ m + n , 0 } \eta ^{ \mu \nu } , \quad 
+ \left[  \alpha _ m ^ \mu , \overline{ \alpha } _ n ^ \nu  \right]   = 0 , 
+ \quad \left[  \overline{ \alpha }_ m ^ \mu , \overline{ \alpha } _ n ^ \nu  \right] 
+  = m \delta_{ m +  n , 0 }\eta ^{ \mu \nu } 
+\] For each 
+dimension $ \mu $, these are an 
+infinite number of ladder operator relations 
+\[
+ \left( \alpha_ n ^ \mu  \right)  ^{ \dagger }  = \alpha _{  -n } ^ \mu 
+\] These are 
+creation and annihilation ladder 
+operators. 
+They are creating and annihilating 
+different modes on the string. 
+It use necessary to 
+introduce a vacuum state on $ \Sigma $, 
+$ \ket{ 0 } $ such that 
+\[
+ \alpha _ n ^ \mu \ket{ 0 }  = 0, \quad n \leq 0 
+\] It is 
+important to note that this is not a vacuum in spacetime, 
+it is a vacuum of vibrational modes. 
+We recall the 
+Fourier modes of $ T _{ ab } $
+are $ L _ n $ and $ \overline{ L } _ n $. 
+Just as before, 
+we can write those modes in terms of $ \alpha $ and $ \overline{ \alpha } $. 
+
+\[
+ L _ m  = \frac{1}{2 } \sum_ n \alpha _{ m - n } \cdot  \alpha _ n 
+\] 
+We call $ L _ m $ Virasoro 
+operators. This expression is 
+ambiguous for $ m   = 0 $, 
+going from the classical to the quantum theory, 
+operator ordering starts to matter.
+ This is because $ \alpha _ n $ and $ \alpha _{  - n  } $
+ do not commute. 
+ We shall take 
+ \[
+   L _ 0  = \frac{1}{2 } \alpha _ 0 ^ 2 + \sum _{ n > 0  } \alpha 
+   _{ -n  } \cdot  \alpha _ n 
+ \] 
+ We can adopt the usual notion of 
+ normal ordering. 
+ There are other normal ordering prescriptions 
+ we could use.
+
+ \subsubsection{Physics State Conditions}
+ Instead of thinking about 
+ the stress tensor and $ X  , P $, it's
+ more useful to talk about 
+ the Virasoro operators. 
+
+ We shall be imposing 
+ the condition $ T_{ ab }  = 0 $ on the 
+ Hilbert space of the theory. 
+
+ Let's first define 
+ some notation to make our lives easier. 
+ Define 
+ \[
+  N  = \sum _{ n > 0 } \alpha _{  -n  } \cdot \alpha _ n , 
+  \overline{ N }  = \sum _{ n > 0 } \overline{\alpha _{ - n }}  \cdot  
+  \overline{\alpha} _ n 
+ \] 
+ Given this, 
+ we can write for example, that
+ \[
+  L_0 = \frac{\alpha ' }{ 4 } p ^2 + N , 
+  \overline{ L } _ 0   = \frac{\alpha '  }{ 4 } p ^ 2 + \overline{ N } , 
+  \quad \left( \alpha _ 0 ^ \mu  = \sqrt{ \frac{\alpha '  }{ 2 } }  p ^ \mu  \right) 
+ \] We require
+ that $ T_{ ab   } \ket{ \phi }  = 0 $ 
+ for $ \ket{ \phi } $ to be a physical state. 
+ This means that 
+ \[
+  L _ n \ket{ \phi }   = 0, \quad \text{ for } n > 0 
+ \] under Hermitian conjugation, this also implies 
+ that $ \bra{ \phi } L _{  - n }  = 0  $. 
+ We shall also require 
+ \[
+  L _ 0 \ket{ \phi }  = a \ket{ \phi } , \quad \overline{ L } _ 0 
+  \ket{ \phi }  = a \ket{ \phi } 
+ \] allowing for the fact that $ L _ 0 $ 
+ may be true up to some constant, which is related to 
+ the normal ordering. The constant $ a $ reflects 
+ the ambiguity in defining $ L_0 $ in the quantum theory. 
+We'll come back as to what values $ a $ should take 
+depending on our perspective. For 
+now, we should take $ a = 1 $. 
+This justification is a posteori. 
+
+We define also the new operators 
+\[
+ L _ 0 ^{ \pm }  = L _ 0 \pm \overline{ L } _ 0 
+\] Our physical 
+conditions are 
+\[
+ \left( L_0 ^{ +  }  - 2 \right)  \ket{ \phi }  =0, \quad 
+ L_ 0 ^ - \ket{ \phi }  = 0 , \quad L_ n \ket{ \phi }  = 0 
+  = \overline{ L } _ n \ket{ \phi } \text{ for  } n > 0 
+\] The $ L _ n $ are difficult to interpreted, 
+but are related to polarisation 
+conditions. The first two conditions 
+are related to rotational invariance. 
+
+Let's look at the spectrum of this. 
+
+\subsection{The Spectrum}
+
+\subsubsection{The Tachyon}
+We can construct a space-time momentum 
+eigenstate as 
+\[
+\ket{ k }  = e ^{  i k \cdot  x } \ket{0} 
+\] 
+In terms of a position basis in 
+the target space, the 
+momentum operator is $  -i \frac{\partial   }{\partial  x ^ u }  
+ = p _ \mu $, so 
+ $ p _ \mu \ket{ k }  = k _ \mu \ket{ k } $. 
+ In addition, $ L _ n \ket{ k }  = 0  = \overline{ L } _ n \ket{ k } $
+ straightforwardly. 
+ We can write $ L_0 ^ -  $ as 
+ \[
+ L_0 ^  -  = N - \overline{ N } 
+ \] So the vanishing 
+ suggests a symmetry of 
+ right movers versus left movers. 
+ This is sometimes called level matching. 
+ It is the weighted count difference from 
+ either side. 
+ Here,  $ N  = \overline{ N }  = 0  $. 
+ We check that $ \left( L _ 0 ^ +   -2  \right)  \ket{ k } =0   $. 
+ Thus, we find that 
+ \begin{align*}
+	 \left( L_0 ^ +  - 2  \right)  \ket{ k} &=  
+	 \left( \frac{\alpha  ' }{ 2 } + N + \overline{ N }  - 2  \right)  \ket{ k } \\
+						&=  \left( 
+						\frac{\alpha ' }{  2 }
+					k ^ 2 - 2  \right)  \ket{ k } = 0  \\
+ \end{align*} 
+ This gives 
+		us the condition on $ k ^ 2  $, as $ k ^ 2   - \frac{4}{\alpha ' }  = 0 $. 
+		If we compare this with the energy-momentum condition 
+		$ k ^ 2 + M ^ 2   =0  $, 
+		with gives 
+		\[
+		 M ^ 2  =  - \frac{4}{\alpha ' } 
+		\]
+The state $ \ket{ k } $ has a spacetime interpretation as a tachyon. 
+This problem is 
+not going to go away. 
+We do have the tachyon, and its 
+cured by promoting this to the supersymmetric 
+string, and adding supersymmetry. 
+
+We'll now look at the next excited state, 
+which are the massless states.
+Consider states of the form 
+\[
+ \ket{ \epsilon }  = \epsilon _{ \mu \nu } \alpha _{ -1 } ^ \mu \overline{ \alpha } _{ - 1 } ^ \nu 
+ \ket{ k } 
+\]  NOw we want to look at the 
+condition which allows us to 
+view this as a physical state. 
+Clearly, $ N = \overline{ N }  = 1 $. 
+We can look at the energy momentum condition. 
+The condition 
+\[
+ \left( L_0 ^ +  - 2  \right) \ket{ \epsilon }  = 0 
+\] implies $ \frac{\alpha ' }{ 2 } k ^ 2  = 0 $, 
+so we require that $ k ^ 2  = 0 $ (null). 
+Consider the next condition, which 
+gives $ L _ 1 \ket{ \epsilon }   =0 $. 
+This condition gives 
+\[
+	\frac{1}{2 } \left( \sum _ n \alpha _{ 1 - n} \cdot  \alpha _ n  \right)  \epsilon 
+	_{ \mu \nu } \alpha _{ - 1 } ^ \mu \overline{ \alpha } _{  - 1  }^{ \nu } \ket{ k } 
+	= \epsilon _{ \mu \nu } \overline{ \alpha  }_{ - 1 } 
+	^ \nu \alpha _ 0 \cdot  \alpha_ 1 \alpha _{ -  1 } ^ \mu  \ket{ k } 
+\] recall that $ \alpha _ 0 ^ \mu  = \sqrt{ \frac{\alpha ' }{ 2 } }  p ^ \mu $. 
+We require then 
+\[
+ k _ \rho \alpha _ 1 ^ \rho \alpha _{ - 1 } ^ \mu \ket{ k }  = 0 
+\] we can use our commutator 
+to show that the above is 
+equal to 
+\[
+ \epsilon _{ \mu \nu } k _ \rho \left( \left[  \alpha _ 1 ^ \rho , \alpha _{ - 1 } ^ \mu  \right]  + 
+ \alpha _{ - 1 } ^ \mu \alpha _ 1 ^ \rho  \right)  \ket{ k }  = \epsilon _{ \mu\nu  } 
+ \eta ^{ \mu \rho } k _ \rho \ket{ k }  = \epsilon _{ \rho \nu } k ^ \rho \ket{ k }  = 0
+\] 
+This condition $ L _ 1 \ket{ \epsilon }   = 0 $ requires 
+us to impose $ \epsilon _{ \nu \mu } k ^ \mu  = 0 $. 
+In other words, we 
+can think of this condition as the fact that 
+there are no longitudinal polarisations.
+Similarly, $ \overline{ L }_ 1 \ket{ \epsilon }  =0 $  requires 
+$ \epsilon _{ \mu \nu } k ^ \nu  =0 $. 
+So, 
+we have three physical state conditions given to us. 
+There are no further conditions on this tensor. 
+
+We then have the conditions on $ \ket{ \epsilon } $.
+Our first condition is that it is null and massless, 
+so $ k ^ 2  = 0$, and no longitudinal polarisations 
+$ \epsilon _{ \mu \nu } k ^ \mu  = 0 $ and $ \epsilon _{ \mu \nu  } k ^ \nu  = 0 $, 
+thinking of 
+$ \epsilon $ as a polarisation tensor. 
+
+
+We can decompose $ \epsilon _{ \mu \nu } $ into 
+symmetric $ h _{ \mu \nu } $, anti-symmetric ($ b _{ \mu \nu }  $  ), 
+and trace $ \phi $ parts. 
+We first extract the trace bit, 
+which we call the Dilaton. 
+\[
+ \ket{ \phi }  = \phi \alpha _{ -  1 } ^ \mu \overline{ \alpha } _{ - 1 \mu } \ket{ k }  
+\]  
+
+We also have two other particles from this 
+\begin{align*}
+	\ket{ h }  &=  h _{ \mu \nu  } \alpha _{ - 1 } ^ \mu \overline{ \alpha }_{ - 1 } ^ \nu 
+	\ket{ k } \quad \text{Graviton}, \quad h _{ \mu \nu }  = h _{ \nu \mu  } \\
+	\ket{ b } &=  b _{ \mu \nu } \alpha _{ - 1 } ^ \mu \overline{ \alpha } _{ - 1 }^ \nu 
+	\ket{ k }, \quad \text{B-Field}, \quad b _{ \mu \nu }  = - b _{ \nu \mu } \\
+\end{align*}
+
+Now let's look at massive states. 
+We can now look at states with $ N = \overline{ N }  = 2 $. 
+We have 
+\[
+ A _{ \mu \nu } \alpha _{ - 2 } ^ \mu \overline{ \alpha } _{ - 2 } ^ \nu \ket{ k } 
+ + A_{ \mu \nu \lambda } \alpha _{ - 2 } ^ \mu \overline{ \alpha } _{ - 1 } ^ \nu 
+ \overline{ \alpha } _{ -  1 } ^ \lambda \ket{ k } + 
+ \tilde{ A }_{ \mu \nu \lambda } \overline{\alpha } _{ - 2 } ^ \mu \alpha _{ - 1 }^ \mu  \alpha _{ - 1}  
+ ^ \lambda \ket{ k } + A _{ \mu \nu \lambda \rho } \alpha _{ - 1 } ^ \mu \alpha _{ -1 } ^ \nu 
+ \overline{ \alpha  } _{ - 1 } ^ \lambda \overline{ \alpha } _{ -1 } ^ \rho \ket{ k } 
+\] and $ N $ and $ \overline{ N  } $ count 
+number of quanta going around the string. 
+There's no profit 
+in us solving the mass shell conditions. 
+The mass of such states is $ m ^ 2  = \frac{4}{\alpha ' }  $. 
+So the string is describing not only the tahcyon 
+and massless fields, but an infinite amount of massive 
+fields.
+
+For the most part, string theorists 
+have concerned themselves with the massless spectrum. 
+
+\subsection{The Big(ish) Picture}
+We started with our Polyakov action 
+which describes the embedding of our string in our manifold. 
+\[
+ S  = -\frac{1}{4 \pi \alpha ' } \int_{ \Sigma } d ^ \sigma \eta _{ \mu \nu } \partial  _ a X ^ \mu 
+ \partial  ^ a X ^ \nu 
+\] We could deform this 
+theory and add a perturbation to the metric. 
+This can be achieved by adding a 
+small plane wave deformation to the spacetime 
+metric.
+For example, we might take 
+$ \eta _{ \mu \nu } $ and replace it 
+by adding some plane wave. 
+\[
+ \eta _{ \mu \nu } \to \eta _{ \mu \nu } + h _{ \mu \nu  } e ^{ i k \cdot  x } 
+\] 
+The action changes by 
+\[
+ \Delta S  =  - \frac{1}{4 \pi \alpha ' } \int_{ \Sigma } d ^ 2 \sigma 
+ h _{ \mu \nu } \partial  _ a X ^ \mu \partial  ^ a X ^ \nu e ^{ ikx } 
+\] 
+For every deformation of the theory, 
+there is an associated operator 
+\[
+ \mathcal{ O }  = h _{ \mu \nu } \partial  _ a X ^ \mu \partial  ^ a X ^ \nu e ^{ ikx  }
+\] This is clearly associated with a 
+deformation of the spacetime metric. 
+
+In string theory, (2-dimensional CFTs), 
+to each operator $ \mathcal{ O } $ that 
+corresponds to a physical deformation 
+of the theory, (something that seems reasonable 
+is what we mean by a physical deformation), 
+there is a state in the Hilbert space. 
+
+In this case, 
+\[
+ \lim_{ \tau \to  - \infty } \mathcal{ O } \ket{ 0 }  = \ket{ h } 
+\] We will 
+do this more carefully later on. 
+This is called the state-operator correspondence. 
+One last comment on this. 
+
+What if we choose to start with a general metric?
+For example, we could've started off with 
+\[
+ S  =  - \frac{1}{4 \pi \alpha '  } \int _{ \Sigma } d ^ 2 \sigma 
+ g _{ \mu \nu } \left( x  \right)  \partial  _ a X^ \mu \partial  ^a X ^ \nu 
+\]  Thhis is highly non-linear. 
+How would we deal with this? 
+We could try expand this in terms of a power series 
+and then try to deal with the theory perturbatively.
+This is now an interacting theory, 
+and this is hard to do.
+
+Moreoever, the condition of Weyl invariance 
+in the quantum theory constrains what $ g _{ \mu \nu }\left( X  \right)   $ 
+we can have. 
+Weyl invariance is $ h _{ ab } \to e^{ \omega \left( \omega, \tau  \right)  } h _{ ab } $.
+One finds that $ G _{ \mu \nu } $ has to satisfy 
+\[
+	R _{ \mu \nu } \left( g  \right)  + \mathcal{ O } \left( \alpha '   \right)   =0 
+\] Which is the Einstein 
+tensor up to string corrections. 
+More generally, if we have other 
+background fields, 
+we find Weyl invariance requires 
+the full Einstein equations to be satisfied to 
+leading order in $ \alpha ' $.
+
+\subsection{Spurious states and gauge invariance}
+Before, when we mentioned $ L _ 0 $ to 
+have an ordering ambiguity, 
+we put our normal ordering constant  as $ a =1 $. 
+We took $ a = 1  $ in the 
+conditions $ \left( L_0  - a\right) \ket{ \phi }  = 
+\left( \overline{ L } _ 0 - a  \right)  \ket{ \phi }  = 0  $. 
+Why did we do this? 
+This is so that we can interpret states easily. 
+Consider the state 
+\[
+ \ket{ \chi }  = \sqrt{ \frac{2}{\alpha  ' } }  
+ \left( \lambda _ \mu \alpha _{ - 1 } ^ \mu \overline{ L } _{  1 } + \tilde{\lambda }_ \mu 
+ \overline{ \alpha } _{ - 1 } ^ \mu L _ 1  \right)  \ket{ k } 
+\] Clearly, $ \ket{ \chi } $ is orthogonal 
+to all physical states. 
+If $ \ket{ \phi } \in \mathcal{ H } $, then $ \bra{ \phi }\ket{ \chi }  = 0  $
+because $ L_1 \ket{ \phi }  = \overline{ L } _ 1 \ket{ \phi }   =0 $. 
+What conditions do $ \lambda _ \mu , \tilde{\lambda }_ \mu  ,k   $ 
+have to satisfy for $ \ket{ \chi }  $ to be physical. 
+
+Is is useful to write $ \ket{ \chi } $ as 
+\[
+	\ket{ \chi }  = \left(  \lambda _ \mu 
+	k _ \nu + \tilde{ \lambda } _ \nu k _ \mu  \right)  \alpha _{ - 1 } ^ \mu 	\overline{ \alpha }_{ - 1 } ^ \nu \ket{ k } 
+\] Keeping $ a  $ arbitrary, 
+we find that 
+\[
+	\left( L_0^ +  - 2 a  \right) \ket{ \chi }  = 0 \implies $ k ^ 2  = \frac{ 4 \left( 
+	a  - 1  \right)  }{ \alpha ' } $
+\] We also have that, by symmetry, 
+\begin{align*}
+	L_ 1 \ket{ \chi } =0 & \text{ if } \left( \lambda \cdot  k  \right)  
+	k _ \mu + \tilde{ \lambda } _ \mu k ^ 2  = 0 \\
+	\overline{ L } _ 1 \ket{ \chi }  = 0 & \text{ if } \left( 
+	\tilde{ \lambda } \cdot  k  \right)  k _ \mu + \lambda _ \mu k ^ 2  = 0 
+\end{align*}
+Finally, we have that 
+\[
+	\bra{ \chi }\ket{ \chi }  = \lambda ^ 2 k ^ 2 + 2 \left( 
+	\lambda \cdot  k \right)  \left( \tilde{ \lambda } \cdot  k   \right)  + \tilde{ \lambda } ^ 2 k ^ 2  
+\] If $ a = 1 $, $ k ^ 2  = 0  $ , $ \lambda \cdot  k , \tilde{ \lambda } \cdot  k  =0  $, 
+so $\bra{ \chi }\ket{ \chi } =0 $. 
 \subsubsection*{Worldline actions}
 \begin{itemize}[leftmargin=*]
 	\item Our action is 
@@ -357,7 +1297,43 @@ Quantising is tremendously restrictive.
 	\]  
 \end{itemize}
 
+
+\subsubsection*{Quantising the Bosonic String}
+
+\begin{itemize}
+	\item Expand out position and conjugate 
+		momenta in terms of Fourier modes
+	\item We use our gauge invariance to 
+		set 
+		\[
+			h_{ ab }  = e ^{ \phi } \begin{pmatrix}  - 1 &  0 
+			\\ 0 & 1 \end{pmatrix} 
+		\] The $ - 1 $ in the diagonal gives us a rough notion 
+		of time. 
+	\item Put this in our Polyakov action to get the 
+		conjugate momenta, which is 
+		\[
+			P_\mu  = \fdv{S}{\dot{ X } ^ \mu  }
+			 = \frac{1}{2 \pi \alpha '  } \dot{ X } ^ \mu  
+		\]  
+	\item Impose equal time commutation relations 
+		which are equivalent to commutation 
+		relations of the Fourier components. We use Poisson 
+		brackets for this
+		\[
+		 \left\{ X ^ \mu, P_ \nu  \right\}  = 
+		 \delta \indices{ ^ \mu _ \nu }  = \delta \left( \sigma  - \sigma '  \right) \iff \left\{ \alpha_ n , \alpha_ m  \right\}   = 
+	 - i m \delta_{ n + m , 0 } , \quad \left\{  \overline{ \alpha }_ n, 
+ \overline{ \alpha } _ m  \right\}   = - i m \delta _{ n + m , 0  } \]
+	
+	\item We can change coordinates to 
+		\[
+		 \sigma_{ \pm }  = \tau \pm \sigma 
+		\] 
+\end{itemize}
 \section*{Example Sheet 1}
 
- 
+\subsection{Question 1}
+Here we are showing equivalence 
+of the Nambu-Goto action and the Polyakov action. 
 \end{document} 

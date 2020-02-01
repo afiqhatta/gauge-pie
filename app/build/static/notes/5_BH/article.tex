@@ -64,6 +64,7 @@
 \newtheorem*{thm}{Theorem}
 \newtheorem*{claim}{Claim}
 \newtheorem{example}{Example}
+
 \newtheorem*{defn}{Definition}
 
 \newcommand{\Lagr}{\mathcal{L}} 
@@ -112,9 +113,9 @@ $ a, b$ are abstract indices which refer to any basis,
 from Roger Penrose. 
 For example, we have 
 \[
- \Gamma^ \mu _{ \nu \rho }  = \frac{1}{2 }g ^{ \mu \sigma } 
- \left( g _{ \sigma \nu , \rho } + g _{ \sigma \rho , \nu }  - g _{ \nu \rho , \sigma }  \right), 
- \quad R  = g ^{ ab } R _{ ab } 
+\Gamma^ \mu _{ \nu \rho }  = \frac{1}{2 }g ^{ \mu \sigma } 
+\left( g _{ \sigma \nu , \rho } + g _{ \sigma \rho , \nu }  - g _{ \nu \rho , \sigma }  \right), 
+\quad R  = g ^{ ab } R _{ ab } 
 \] Christoffel components are 
 basis dependent so they are written with greek indices. 
 
@@ -148,13 +149,13 @@ A white dwarf is a very dense kind of star. If we
 had a white dwarf with the same mass of our sum $ M  = M _{ \sun } $. 
 the radius would be $ R \sim \frac{R_{\sun } }{100 } $. 
 A white dwarf is how the sun will end its life. 
- 
+
 
 Can all stars end their life this way? 
 No. This is because there's a maximum mass for a white dwarf. 
 This is called the Chandrasekhar limit, where 
 \[
- M _{ WD } \leq 1.4 M _{ \sun }
+M _{ WD } \leq 1.4 M _{ \sun }
 \]
 What happens when we have a star more massive than this? 
 When the star continues to get more and more dense, 
@@ -171,7 +172,7 @@ Compare this to  $ R _{ \sun } \simeq 7 \times 10 ^ 5 km $.
 They are very dense! The gravitational field is very strong. 
 If we have a Newtonian gravitational potential at the surface 
 \[
- | \phi | \sim 0.1 
+| \phi | \sim 0.1 
 \]  General relativity because important when $ | \phi | $ is order 1. 
 Hence, GR is important here.
 We can derive a maximum possible mass for neutrons stars as well. 
@@ -185,7 +186,7 @@ We assume spherical symmetry.
 Recall the unit round 
 metric on a two dimensional sphere $ S ^ 2 $, 
 \[
- d \Omega ^ 2  = d \theta ^2 + \sin ^ 2 \theta d \phi ^ 2 
+d \Omega ^ 2  = d \theta ^2 + \sin ^ 2 \theta d \phi ^ 2 
 \] The isometries are diffeomorphisms 
 which preseve the metric. 
 They form a group. 
@@ -193,49 +194,49 @@ The isometry group of a two sphere with that metric is $ SO ( 3 ) $.
 Essentially, we define a space time as spherically symmetric 
 if it has this as its isometry group. 
 \begin{defn}{Spherically Symmetric Spacetime}
-	A spacetime is spherically symmetric if its isometry group 
-	contains an $ SO ( 3 ) $ subgroup, whose orbits are
-	$ 2  $-spheres. 
-	In other words, if we pick a point and act on it with all 
-	$ SO ( 3 ) $ elements, it will fill out a sphere. 
+A spacetime is spherically symmetric if its isometry group 
+contains an $ SO ( 3 ) $ subgroup, whose orbits are
+$ 2  $-spheres. 
+In other words, if we pick a point and act on it with all 
+$ SO ( 3 ) $ elements, it will fill out a sphere. 
 \end{defn}
 \begin{defn}{Area Radius function}
-	In a spherically symmetric spacetime $ ( M , g )$, 
-	the area radius function is 
-	\[
-		r : M \to \mathbb{ R } , r ( p ) = \sqrt{ \frac{ A ( p ) }{ 4 \pi } } 
-	\] where $ A ( p ) $ is the area of the $ S^ 2 $ orbit 
-	through the point $ p $. 
-	So we take a point $ p $, since its spherically symmetric, we 
-	can make a sphere out of it, and we take the area. 
-	This is linked to our understanding of the $ r $ coordinate, 
-	but this definition doesn't require a preferred origin. 
-	In other words, 
-	the $ S ^ 2 $ has induced metric $ r ( p ) ^ 2 d \Omega^ 2 $. 
+In a spherically symmetric spacetime $ ( M , g )$, 
+the area radius function is 
+\[
+	r : M \to \mathbb{ R } , r ( p ) = \sqrt{ \frac{ A ( p ) }{ 4 \pi } } 
+\] where $ A ( p ) $ is the area of the $ S^ 2 $ orbit 
+through the point $ p $. 
+So we take a point $ p $, since its spherically symmetric, we 
+can make a sphere out of it, and we take the area. 
+This is linked to our understanding of the $ r $ coordinate, 
+but this definition doesn't require a preferred origin. 
+In other words, 
+the $ S ^ 2 $ has induced metric $ r ( p ) ^ 2 d \Omega^ 2 $. 
 \end{defn}
 \subsection{Time independence}
 \begin{defn}{Stationarity}
-	$ \left(  M , g  \right)  $ is stationary if there exists a Killing vector field
-	$ k ^ a $
-	(KVF) which is everywhere timelike. 
-	We're saying that $ g _{ ab } k ^ a k ^ b < 0 $. We can introduce adapted coordinates. 
-	Let's pick some hypersurface $ \Sigma $ which is transverse to a vector field 
-	$ k $. We can then pick coordinates  $ x ^ i $ on $ \Sigma $, where $ i =  1, 2, 3 $. 
-	This gives us coordinates on our surface. 
-	We assign coordinates $ \left(  t, x ^ i  \right)  $ to point parameter 
-	distance $ t $ along the integral curve of  $ k ^ a $ through point on 
-	$ \Sigma $ with coords $ x ^ i $. This implies 
-	\[
-	 k  = \frac{\partial }{\partial t} 
-	\] This implies the metric is independent of $ t $, since $ k ^ a $ is a 
-	Killing vector field. Therefore, the metric looks like 
-	\[
-		ds ^ 2  = g _{ 00 } \left( x ^ k  \right) dt ^ 2  + 2 
-		g _{ 0i } dt d x ^ i + g _{ ij  }\left( x ^ k  \right)  dx ^ i dx ^ j 
-	\] This means that $ g _{ 00 } < 0 $. Thus, 
-	given a stationary spacetime, we can construct coordinates which 
-	the metric is time independent. 
-	Conversely, any metric of this form is stationary. 
+$ \left(  M , g  \right)  $ is stationary if there exists a Killing vector field
+$ k ^ a $
+(KVF) which is everywhere timelike. 
+We're saying that $ g _{ ab } k ^ a k ^ b < 0 $. We can introduce adapted coordinates. 
+Let's pick some hypersurface $ \Sigma $ which is transverse to a vector field 
+$ k $. We can then pick coordinates  $ x ^ i $ on $ \Sigma $, where $ i =  1, 2, 3 $. 
+This gives us coordinates on our surface. 
+We assign coordinates $ \left(  t, x ^ i  \right)  $ to point parameter 
+distance $ t $ along the integral curve of  $ k ^ a $ through point on 
+$ \Sigma $ with coords $ x ^ i $. This implies 
+\[
+ k  = \frac{\partial }{\partial t} 
+\] This implies the metric is independent of $ t $, since $ k ^ a $ is a 
+Killing vector field. Therefore, the metric looks like 
+\[
+	ds ^ 2  = g _{ 00 } \left( x ^ k  \right) dt ^ 2  + 2 
+	g _{ 0i } dt d x ^ i + g _{ ij  }\left( x ^ k  \right)  dx ^ i dx ^ j 
+\] This means that $ g _{ 00 } < 0 $. Thus, 
+given a stationary spacetime, we can construct coordinates which 
+the metric is time independent. 
+Conversely, any metric of this form is stationary. 
 \end{defn}
 There's a more refined version of time independence which 
 we can use. 
@@ -244,67 +245,67 @@ which is smooth, and $ df \neq 0  $ on $ \Sigma $.
 Then, $ df $ is normal to $ \Sigma $. 
 If we let $ t ^ a $ tangent to $ \Sigma $, then we have that 
 \[
- df ( t )  = t ( f )  = t ^ \mu \partial  _ \mu f = 0 \text{ since } f  \text{ is constant}
+df ( t )  = t ( f )  = t ^ \mu \partial  _ \mu f = 0 \text{ since } f  \text{ is constant}
 \] A normal to a surface is 
 not unique. 
 Normals are not unique. What's the most general 
 form of a covector field which is normal to $ \Sigma $. 
 If $ n _ a$  also normal to $ \Sigma $, them 
 \[
- n = g df + f n ' 
+n = g df + f n ' 
 \] where $ g $ is smooth and not equal to $ 0 $ on $ \Sigma $,
 and  $ n ' $ is a smooth 1-form. 
 Let's look at the exterior 
 derivative of this vector field. Using the rules 
 for the exterior derivative, 
 \[
- dn = dg \wedge  df + df \wedge  n ' + f dn ' 
+dn = dg \wedge  df + df \wedge  n ' + f dn ' 
 \] Let's evaluate this 
 on $ \Sigma $. We have that 
 \[
-	\left. dn \right\vert_{ \Sigma }  = \left(  dg - n '  \right)  \wedge  df
+\left. dn \right\vert_{ \Sigma }  = \left(  dg - n '  \right)  \wedge  df
 \] Hence, $ n \wedge  dn - 0 $   on $ \Sigma $. This is because 
 $ n \propto df $ on $ \Sigma $. The wedge product vanishes. 
 \begin{thm}{Frobenius}
-	If $ n \neq 0 $ is a one form such that $ n \wedge  dn  = 0 $  everywhere, 
-	then there exist functions $g, f $ such that 
-	$ n   = g df $. So $ n $ is normal 
-	to surfaces of constant $ f $, so 
-	$ n $ is 'hypersurface orthogonal'. 
-	$ n$ is orthogonal to all surfaces 
-	of constant $ f $. 
+If $ n \neq 0 $ is a one form such that $ n \wedge  dn  = 0 $  everywhere, 
+then there exist functions $g, f $ such that 
+$ n   = g df $. So $ n $ is normal 
+to surfaces of constant $ f $, so 
+$ n $ is 'hypersurface orthogonal'. 
+$ n$ is orthogonal to all surfaces 
+of constant $ f $. 
 \end{thm}
 
 \begin{defn}{Static spacetimes}
-	A spacetime  $ \left( M , g  \right)  $ is static 
-	if there exists a hypersurface orthogonal, timelike $ KVF$. 
-	In particular, static implies stationary. 
-	Why is this useful? Returning to the adapted coordinates, 
-	how does hypersurfaece orgonality help? 
-	We choose $ \Sigma $ orthogonal to $ k ^ a $ when defining 
-	adapted coordinates $ \left(  t, x ^ i  \right)   $. 
-	But, $ \Sigma $ is $  t = 0$, therefore the normal 
-	to $ \Sigma $ is $ dt $. 
-	So
-	\[
-		k _ \mu \mid _{ t = 0 } \propto \left( 1, 0 , 0 , 0  \right) 
-	\] In particular, we have that \[
-	 k _i \mid _{ t = 0 }  =0 
- \] but, $ k _ i  = g _{ 0i } \left( x ^ k  \right)  $. 
- Hence, $ g _{ 0i }  = 0$.
- Thus, if we write down the metric, 
- we have that 
- \[
-	 ds ^ 2  = g _{ 00 } \left( x ^ k  \right)  dt ^ 2 + 
-	 g _{ ij} \left( x ^ k  \right)  dx ^ i dx ^ j , \quad g _{ 00 } < 0 
- \] Thus we have a discrete time reversal isometry $ \left( t , x ^ i  \right)  \to 
- \left(  - t , x ^ i  \right)  $. 
- Thus,  
- \[
-  \text{static} \iff \text{time independent and invariant under time reversal}
- \] For example, for a rotating star, the metric 
- may be time independent but not static since they're is no 
- time reversal symmetry since it changes the sense of rotation. 
+A spacetime  $ \left( M , g  \right)  $ is static 
+if there exists a hypersurface orthogonal, timelike $ KVF$. 
+In particular, static implies stationary. 
+Why is this useful? Returning to the adapted coordinates, 
+how does hypersurfaece orgonality help? 
+We choose $ \Sigma $ orthogonal to $ k ^ a $ when defining 
+adapted coordinates $ \left(  t, x ^ i  \right)   $. 
+But, $ \Sigma $ is $  t = 0$, therefore the normal 
+to $ \Sigma $ is $ dt $. 
+So
+\[
+	k _ \mu \mid _{ t = 0 } \propto \left( 1, 0 , 0 , 0  \right) 
+\] In particular, we have that \[
+ k _i \mid _{ t = 0 }  =0 
+\] but, $ k _ i  = g _{ 0i } \left( x ^ k  \right)  $. 
+Hence, $ g _{ 0i }  = 0$.
+Thus, if we write down the metric, 
+we have that 
+\[
+ ds ^ 2  = g _{ 00 } \left( x ^ k  \right)  dt ^ 2 + 
+ g _{ ij} \left( x ^ k  \right)  dx ^ i dx ^ j , \quad g _{ 00 } < 0 
+\] Thus we have a discrete time reversal isometry $ \left( t , x ^ i  \right)  \to 
+\left(  - t , x ^ i  \right)  $. 
+Thus,  
+\[
+\text{static} \iff \text{time independent and invariant under time reversal}
+\] For example, for a rotating star, the metric 
+may be time independent but not static since they're is no 
+time reversal symmetry since it changes the sense of rotation. 
 \end{defn}
 
 \subsection{Static, Spherically Symmetric Spacetimes}
@@ -316,7 +317,7 @@ where $ r $ is our area radius function.
 If we do this, then the metric 
 is 
 \[
-	ds ^ 2 \mid_{ \Sigma }  = e ^{ 2 \psi ( r )  } dr ^ 2 + r ^2 d \Omega ^ 2 
+ds ^ 2 \mid_{ \Sigma }  = e ^{ 2 \psi ( r )  } dr ^ 2 + r ^2 d \Omega ^ 2 
 \]  where due to spherical symmetry, everything depends on $ r $. 
 If we had $ dr d \phi $ or $ dr d \theta $ terms, 
 this would break spherical symmetry. 
@@ -324,93 +325,1606 @@ If we then go on to write down the full spacetime
 metric, we 
 get that 
 \[
-	ds ^ 2   =  - e ^{ 2 \Phi ( r ) } ds ^ 2 + e ^{ 2 \Psi ( r ) } dr ^ 2 + r ^ 2 d \Omega ^ 2 
-\] At the moment, there's no origin. 
+ds ^ 2   =  - e ^{ 2 \Phi ( r ) } ds ^ 2 + e ^{ 2 \Psi ( r ) } dr ^ 2 + r ^ 2 d \Omega ^ 2 
+\] At the moment, there's no origin  - $ r $ is not the distance from 
+the origin! Because of spherical symmetry 
+and stacity, the functions only depend on $ r$. 
+
+We model the matter in the star 
+as a perfect fluid. This is a pretty good approximation, 
+where the stress tensor looks like 
+\[
+T _{ \alpha \beta  }  = \left( \rho  + p  \right)  u _ \alpha u _ \beta 
++ p g _{ \alpha \beta }
+\]  where $ u _ \alpha $ is the velocity of the fluid, and $ \rho , p $ are
+the energy desnity and pressure in the fluid's rest frame. 
+We have that $ g _{ ab } u ^ a u ^ b  = - 1$. 
+Time independence means that 
+\[
+u ^ a  = e ^{  - \Phi } \left( \frac{\partial  }{\partial  t }   \right)  ^ a 
+\] So the fluid velocity is fixed by 
+symmetry assumptions. 
+Symmetry implies that $ \rho  = \rho ( r ) $ and 
+$ p = p ( r  ) $. 
+Our final observation is 
+that outside the star, there is no fluid. 
+This means that $ p , \rho   = 0 $ for $ r > R $, 
+where $ R $ is the radius of the star. 
+
+\subsection{Tolman-Oppenheimer-Volkoff Equations}
+The equation of motion of a perfect fluid 
+is the conservation law for the energy momentum tensor, 
+which is guaranteed to hold from the Einstein equations 
+(from the Bianchi identity). The Einstein tensor inherits 
+the symmetries from the metric. 
+There are essentially only three independent 
+components, so only three independent equations 
+to solve. 
+We define a new function $ m ( r ) $ by 
+\[
+e ^{ 2 \Psi }  = \left( 1 - \frac{2m}{r }  \right) ^{ - 1 }
+\] In particular, the LHS is positive, which means that 
+$ m ( r ) < \frac{r}{2 } $. 
+We can then look at the $ t t $ component of the Einstein equation, 
+which gives 
+\[
+\frac{d m }{ dr }  = 4 \pi r ^ 2 \rho \quad \text{ TOV 1 }
+\] we also get 
+\begin{align*}
+\frac{ d \Phi }{ dr } &=  \frac{ m + 4 \pi  r^  3 \rho }{ r ( r - 2m ) } \quad 
+\text{TOV 2 }\\
+\frac{dp  }{dr } & = - \left( \rho + p  \right)  
+\frac{ m + 4 \pi r ^ 3 p }{ r \left( r - 2m  \right)  } \quad \text{TOV 3 }
+\end{align*}
+
+The last equation comes from imposing $ \nabla _ \mu T ^{ \mu r }  = 0 $. 
+We have 3 equations in 4 unknowns 
+$ \left( m , \Phi , p \rho  \right)  $. 
+But, we get extra information from 
+thermodynamics. 
+In the case of a cold star, we have $ T = 0 $, 
+but $ T = T \left( p , \rho  \right)  $, which 
+means that this implier $ p = p \left( \rho   \right) $, 
+which we call a 'barotropic' equation of state. 
+We assume that $ \rho , p > 0 $ and also that 
+$ \frac{ d p }{ d \rho } > 0 $. If this was not true, 
+then we would have an unstable fluid. 
+For example, if we had some region where 
+the energy density went up, the the pressure would go down, 
+which means that stuff flows into the region, and the density 
+of that region rises up even more. 
+
+\subsection{Outside the Star: Schwarzchild Solution}
+In the case where  $ r > R $, $ p = \rho = 0$. 
+This implies  by TOV 1 that $ m ( r ) = M $ which is 
+a constant. 
+Then TOV 2 implies that 
+\[
+\Phi ( r ) = \frac{1}{2 } \log \left( 1 - \frac{2M}{r }  \right) + \Phi _ 0 
+\] where $ \Phi _ 0 $ is a constant. This constant is not 
+physical. Since $ \Phi ( r ) \to \Phi _ 0 $ as  $ r \to \infty $, 
+then 
+\[
+g _{ t t } \to  - e^{  - 2 \Phi_0 } \text{ as } r \to \infty 
+\] We can eliminate $ \Phi _ 0 $ by a coordinate transform 
+$ t' = e^{ \Phi _ 0 } t$. 
+Putting this all together, we have that 
+\[
+ds ^ 2 =   - \left( 1 - \frac{2M}{r }  \right)  dt ^ 2 + \left( 
+1 - \frac{2M}{r } \right)  ^{ - 1 } dr ^ 2 + r ^ 2 d d\Omega ^ 2 \text{ Schw solution}
+\] What is $ M $ - a free parameter. 
+We discovered at large $ r $ this solution is Minkwoski space. If we 
+add a small correction, we can think of $ M $ as the mass of the star. 
+We will see later how we properly define mass in general relativity. 
+In particular, $ M > 0 $. 
+One thing we notice with this solution is that something 
+funny happens at $ r = 2M $. The metric $ g _{ \mu \nu } $ in 
+these coordinates is singular. This is 
+called the Schwarzchild radius. 
+This means that the star must have a radius bigger than $ 2M $, so $ R > 2M $. 
+For example, for the sun, $ 2M _{ \sun } \simeq 3km $, where as 
+$ R _{\sun} \simeq 7 \times 10 ^{ 5 } km $. 
+
+\subsection{Inside the Star - the Interior Solution}
+TOV 1 implies that, by integrating, 
+\[
+m ( r ) = 4 \pi \int_ 0 ^{ r }\rho ( r ' ) r ^{ '  2} dr ' + m _{ * }
+\] Let $ \Sigma _ 1 $ be a $ t  = const $ surface. 
+The pullback 
+\[
+ds ^ 2 \mid_{ \Sigma _ 1 }  = e ^{ 2 \Psi ( r ) } dr ^ 2 + r ^ 2 d \Omega
+\] This is smooth at $ r = 0$. This means that 
+close enough to this point, the metric is locally flat 
+at $ r  =0 $. So if we consider a sphere of radius  $ r $, 
+if that value of $ r $ is small enough, it should 
+be Euclidean space. A point on $ S ^ 2 $ of small radius $r $ 
+must be distance $ r $ from $ r = 0 $. 
+This is saying that 
+\[
+r \simeq  = \int_ 0 ^{ r } e ^{ \Psi ( r ' ) } dr ' \simeq e ^{ \Psi ( 0 ) } r  
+\] for small $r  $. So, smoothness at the origin tells us that 
+$ \Psi ( 0 )  = 0 $. 
+If we go back to the definition of 
+$ m $, this means that $ m ( 0 ) = 0 $. 
+This means that from the above, $ m _ *  =0 $. 
+
+By continuity, 
+we have that $ m ( R ) = M  $. This means 
+that $ M = 4 \pi \int_ 0 ^ R \rho ( r ) r ^ 2 dr $. 
+This is exactly the same equation we'd get from Newtonian physics. 
+This is just a coincidence. 
+Let's just think about GR here. 
+We should be integrating things with respect to the 
+appropriate volume form. 
+The volume form on $ \Sigma _ 1 $ is 
+\[
+e^{ \Phi ( r ) } r ^2 \sin \theta dr \wedge  d \theta \wedge  d \psi 
+\] The energy of matter on $ \Sigma _ 1 $ is the integral 
+of energy density with respect to the volume form. 
+This is 
+\[
+E = 4 \pi \int_ 0 ^ R e ^{ \psi ( r ) } \rho ( r ) r ^ 2 dr 
+\] The fact that $ m > 0 $ implies that $ e ^{ \Psi  } > 1 $. 
+That therefore means that $ E > M  = \text{total energy of star}$. 
+So, the energy of the matter of the star is made from 
+is larger than that of M. The total energy includes gravitational 
+binding energy. $ E -  M $ is gravitational binding energy. 
+
+Coming back to the bound $ R > 2M $, if we reinsert units, 
+the bound is 
+\[
+\frac{ G M }{ c ^2 R } < \frac{1}{ 2}
+\] To get to Newtonian theory, we take the speed of light $ c \to \infty $. 
+This equation becomes trivial and there is no Newtonian analogue of 
+this bound. This is an intrinsically GR effect. 
+
+Let's continue solving the equations. 
+If we look at TOV 3, 
+the right hand side is negative, so 
+\[
+\frac{ dp }{ dr } < 0 
+\] But since $ \frac{dp}{dr } > 0 $, we have that $ \frac{ d \rho }{ dr  } < 0 $. 
+In example sheet 1, we are asked to show 
+\[
+\frac{m ( r ) }{ r } < \frac{2}{9 } \left[  
+1 - 6 \pi r ^ 2 p ( r ) + \left(  1 + 6 \pi r ^2 p ( r )  \right)  ^{ \frac{1}{2 } }\right] 
+\] If we set $ r  = R $ at the surface of the star, 
+the pressure $ p = 0 $, we get that 
+\[
+R > \frac{9}{4 } M 
+\] So we've improved the previous bound. This 
+is called the Buchdahl inequality.
+This also holds for a hot star. 
+Can we improve on this bound? No, since we 
+can get close as we like to this for a star of constant 
+density. 
+
+Going back to solving our equations, 
+we can solve TOV 1 and TOV 3 as they 
+are coupled ordinary differential equations 
+using the fact that $ p = p (\rho ) $ is known 
+from the equation of state, given $ m ( 0 ) = 0 $, 
+and a specified parameter $ \rho ( 0 )  = \rho _ c $. 
+
+From TOV 3, $ p $ decreases as $ r $ increases, 
+so we define the radius of the star where $ p ( R )  = 0$. 
+This is how we define $ R $. This means that $ R =  R( \rho _ c ) $. 
+This implies that $ M = M ( \rho _ c )$. 
+The last thing we need to fix is $ \Phi $ by solving TOV 2 
+in $ r < R $, with the initial condition 
+$ \Phi ( R )  = \frac{1}{2 } \log \left( 1 - \frac{2M}{R }  \right)  $. 
+So we've shown that for a given equation of state, 
+cold stars form a 1 parameter family labelled by $ \rho _ c $. 
+
+\subsection{Maximum Mass of a cold star}
+If we plot the mass against $ \rho _ c $ (insert diagram), 
+we have that the maximum mass $ M _{ \text{ max } } $ depends on 
+the equation of state. 
+Experimentally, we only 
+know the equation of state up to 
+nuclear density $ \rho _ 0 $. 
+We will show that the maximum mass $ M _{ \text{max } } \leq 5 M_{ \sun } $, 
+whatever happens for $ \rho > \rho _ 0 $. 
+
+We have that $ \rho $ decreases with $ r$. 
+We define the core to be the region where $ \rho > \rho _ 0$, 
+or $ r < r_ 0 $. 
+We define the envelope as where $ \rho < \rho _0 $, where $ r_0 < r < R $. 
+
+Our core mass is $ m_0 = m ( r_0 ) $. 
+Our equation for mass previously
+implies that $ m_0 \ge  \frac{4}{3 }  \pi r_0 ^ 3 \rho _ 0 $. 
+
+The other thing we have is that 
+if we set $ r = r_0  $ , then we have 
+\[
+\frac{m_0}{r_0 }  = \frac{2}{9}  \left[  
+1 - 6 \pi r_0 ^ 2 p_0 + \left( 1 + 6 \pi r_0 ^ 2 p_0  \right)  ^{ \frac{1}{2} } \right] 
+\] where $ p_0 = p ( r_0 ) $ is known 
+from the equation of state. 
+
+The RHS of the equation above 
+decreases with $ p_0 $. So, at $ p_0  =0 $, we get the Buchdahl bound
+\[
+m_0 < \frac{4}{9 } r_0 
+\] so the core on its own satisfies the Buchdahl bound. 
+We have two inequalities which we can use to constrain 
+the parameters. 
+
+(Insert plot of $ m_0  $ against $ r_0 $  ). 
+
+This shows that the mass of the 
+core satisfies 
+\[
+m_0  < \sqrt{ \frac{ 16 }{ 243 \pi \rho _ 0 } }  \rho_0 \sim \text{ nuclear density }
+\le  5 M _{ \sun }
+\] for any $ \left( m_0 , r_0  \right)  $ in allowed region, 
+we can solve TOV 1 and TOV 3 in the envelope region with 
+$ \rho = \rho _ 0 , m = m_0 $  at $ r= r_0 $. 
+This fixes $ M $ in terms of $ \left( m_0 , r_0  \right)  $. 
+We find numerically that $ M $ is maximised when $ m_0 $ is 
+maximised. Furthermore, at that point, it turns out 
+the envelope is very small. So, the upper bound of the 
+total 
+\[
+M_{ \text{max } } \le  5 _{ \sun }
+\]
+
+\section{The Schwarzchild Solution}
+If we're given a Schwarzchild solution 
+with no matter present, what does this solution describe?
+In this section, we'll explore this 
+question and also look at the nature 
+of singularities in this spacetime. 
+\subsection{Birkhoff's Theorem}
+In Schw coordinates $ \left( t , r, \theta, \phi  \right)  $
+the Schwarzchild solution is 
+\[
+ds ^ 2  =  - \left( 1 - \frac{2M}{r }  \right) dt ^ 2 + 
+\left( 1 - \frac{2M}{r }  \right)  ^{ - 1 } dr ^ 2 + r ^ 2 d \Omega
+\] the only free parameter here is $ M $.
+The location $ r  = 2M $ is the Schwarzchild radius, 
+and we want to understand what happens here.
+To derive this metric, 
+what we assumed before was static and spherically symmetric.
+
+\begin{thm}{Birkhoff's Theorem}
+Birkhoff's theorem says that 
+any spherically symmetric solution 
+of the vacuum Einstein equations 
+is isometric to the Schwarzchild solution. 
+In other words, you don't need the static condition on
+
+So
+\[
+\text{Spherically symmetric}  + \text{Vacuum} \to \text{static}
+\] This is interesting. 
+If we have any star, even if it's time independent, 
+if it's spherically symmetric then the metric 
+outside the star will have a time independent solution. 
+Conversely, we can't have 
+spherically symmetric gravitational waves. 
+
+
+\end{thm}
+\subsection{Gravitational Redshift}
+(Diagram of Alice and Bob light rays, two vertical lines 
+with coordinate time interval $ \Delta t $ ). 
+So assume we have $ A, B $ at fixed $ \left( r, \theta, \phi  \right)  $. 
+Suppose sends $ A $ sends 2 photons to $ B $ separated 
+by $ \Delta t $. By time translation symmetry, 
+we have that the receiving of these photons 
+by Bob also has coordinate time difference
+$ \Delta t $. 
+Alice measures proper time. 
+We find that 
+\[
+\Delta \tau _ A  = \sqrt{ 1 - \frac{2M}{r_A } }  \Delta t 
+\] If $ r _ B > r _ A  $, the proper time 
+received by $ B $ is 
+\[
+\Delta \tau _ B  = \sqrt{ 1 - \frac{2M}{r _ B } }  \Delta t 
+\] Taking the ratio, 
+we have that 
+\[
+\frac{ \Delta \tau  _ A }{ \Delta \tau _ B  } = 
+\frac{ \sqrt{ 1 - 2M / r _ B } }{\sqrt{  1 - 2M / r _ A } } > 1 
+\]  We can also look at this 
+from the perspective of 
+successive wave crests. 
+The time interval in natural units between 
+two successive wave crests is 
+\[
+\Delta \tau = \lambda, \quad \lambda _ B > \lambda _ A \text{ redshift }
+\] The light has to crawl out 
+of a potential well. 
+A useful case to consider is 
+when Bob is very far from the Schwarzchild radius. 
+If Bob has radius $ r _ B \gg 2M $, then the 
+numerator is just $ 1 $. 
+We then have the redshift $ z $ as 
+\[
+1 + z  = \frac{ \lambda _ B }{ \lambda _ A }  = \frac{1}{ 1 - 2M / r _ A }
+\] which diverges as $ r _ A \to 2M $. 
+If we had a spherical star with $ A $ on the surface, 
+so that  $ r _ A  = R  > \frac{9}{4 } M $, due to the 
+Buchdahl bound this implies 
+that $ z < 2 $ for light on the surface of a spherical 
+star. 
+
+Let's explore the geometry of 
+the solutions. 
+
+\subsection{Geodesics}
+Let's assume we have 
+affinely parametrised geodesics where 
+$ x ^ \mu \left( \tau  \right)  $ , 
+and we define $ u ^ \mu  = \frac{ dx ^ \mu }{ d \tau } $. 
+If we let $ k  = \frac{\partial  }{\partial  t }  $, 
+this is one killing vector field, 
+and we have another one $ m   = \frac{\partial  }{\partial  d \phi }  $. 
+
+These give us conserved quantities 
+\[
+E =  - k \cdot  u  = \left( 1 - \frac{2M}{ r }  \right)  \frac{dt}{d \tau }, 
+\quad h = m \cdot  u  =  r^ 2 \sin ^ 2 \theta \frac{ d \phi }{ d \tau } 
+\]  These are constant along an affinely 
+parametrised geodesic. 
+On a timelike geodesic,  
+we normalise so that $ \tau $ is propertime. 
+At large r, the Schw spacetime becomes 
+Minkowski spaecetime, so we get special relativity. 
+Using special relativity to understand what these constants are, 
+we have that $ E $ represents the energy per unit rest mass, 
+and $ h $ represents the angular momentum per unit rest mass. 
+
+In the null case, these two quantities are not physical, 
+and rescaling $ \tau $ allows use to rescale $ E $ and $ h$ . 
+However, $ h / E $ is invariant. 
+This is the impact parameter $ b  = |\frac{ h  }{E} | $  
+
+What does this mean? 
+If we consider a light ray far away approaching a 
+star, we have that the impact parameter 
+is the closest distance of the ray to 
+the object. 
+From the Euler Lagrange equations, 
+we have that 
+\[
+r ^ 2 \frac{ d }{ dr } \left( r ^ 2 \frac{d \theta }{ dr }  \right)  
+ - h ^ 2 \frac{ \cos \theta }{ \sin ^ 2 \theta }  =0 
+\]  Rotate $  S^ 2 $ such that $ \theta \left( 0  \right)   = \sin \frac{\pi}{2 }$. 
+We can also rotate our coordinates again such that $ \dot{ \theta } \left( 0  \right)   = 0  $ . In other 
+words, our geodesic lies in, and moves 
+tangentially, to the equatorial plane $ \left( \theta  = \frac{\pi }{ 2 }  \right)  $. 
+By uniqueness of solutions, this must 
+be the unique solution 
+to the geodesic equation above. 
+So, the geodesic stays in the equatorial plane. 
+
+As an exercise, the normalisation 
+of our parameter means that 
+\[
+g _{ \mu \nu } u ^ \mu u ^ \nu  =  - \sigma , \quad 
+\sigma = \begin{cases}
+  1 & \text{timelike } \\
+  0 & \text{null } \\
+   -1 & \text{spacelike } 
+\end{cases}
+\] we can show that 
+we get an equation for $ r $ 
+which is 
+\[
+ \frac{1}{2 } \left( \frac{dr}{d \tau }  \right)  ^ 2 + V ( r ) 
+ = \frac{1}{2 } E ^ 2 , \quad V ( r )  = \frac{1}{2 } 
+ \left(  1 - \frac{2M}{r }  \right)  \left( \sigma + \frac{h ^ 2 }{ r ^ 2 } \right) 
+\] This looks like the equation 
+moving in a classical potential. 
+By looking at qualitative properties 
+of the potential, we 
+can figure out qualitative 
+properties of the potential. 
+
+\subsection{Eddington Finkelstein Coordinates}
+Let's start in the region $ r > 2M $. 
+The simplest geodesics are the 
+radial  null geodesics, where  $ \theta, \phi $ are constant. 
+This implies that $ h = 0 $. We can rescale $ \tau $ to 
+set $ E  = 1 $. 
+This gives us the equation 
+\[
+ \frac{ dt }{ d \tau }  =\left( 1 - \frac{2M}{2 }  \right) ^{  -1 } , \quad 
+ \frac{ dr }{dt }  = \pm 1 
+\] We have $ \frac{dr}{dt }  = 1 $ corresponding to 
+outgoing coordinates, and $ \frac{dr}{dt }  =  -1  $ 
+corresponding to ingoing. 
+
+Ingoing reaches  $ r  = 2M $ in finite time. 
+Dividing the equations above 
+\[
+\frac{ dt }{ dr }  = \pm \left( 1 - \frac{2M}{r }  \right)^{  -1 } \implies
+t \to \mp \infty \text{ as } r \to 2M $
+\] However, if we let $ dr _ *  = \frac{dr}{1 - \frac{2M}{r } } $, 
+then we get that 
+\[
+r _ *  = r + 2M \log | \frac{r}{2M }  -1  | 
+\] (Draw a diagram of this function). 
+
+Why have we defined this coordinate 
+as such? Well, if we 
+divide through, 
+we have that $ \frac{dt}{dr_ * }  = \pm 1 $. 
+This means that $ t \mp r _ *  = C $. 
+Let's define $ v  = t + r _  * $. 
+This is a constant on ingoing radial null geodesics. 
+Let's now introduce new coordinates $ (v, r, \theta, \phi )$, 
+which are called ingoing EF coordinates. 
+If we invert this transformation, 
+we get 
+\[
+t  = v - r _ *  \implies dt   = dv - \frac{ dr }{ 1 - \frac{2M}{r } }
+\] Thus, our new metric looks like 
+\[
+ds ^ 2  =  - \left( 1 - \frac{2M}{r }  \right)  dv ^ 2 + 2 dv dr + r ^ 2 d \Omega ^ 2 
+\] The 
+metric looks like 
+\[
+g _{ \mu \nu } = \begin{pmatrix}   - \left( 1  - \frac{2M}{r }  \right)  
+& 1 & 0 & 0 \\ 
+1 & 0 & 0 & 0 \\
+0  & 0 & r ^ 2 & 0 \\ 
+0 & 0 & 0 & r ^ 2 \sin ^ 2 \theta \end{pmatrix} 
+\] This is smooth $ \forall r > 0 $ ! 
+We get that $ \det g_{ \mu \nu }  =  - r ^  4 \sin ^ 2 \theta $. 
+Thus, this is non-degenerate $ \forall r > 0 $. 
+Thus, $ g _{ \mu \nu } $ is Lorentzian $ \forall r > 0 $. 
+
+We can extend this spacetime through $ r = 2M $ to 
+a new region $ 0 < r < 2M $. 
+(Look at analyticity). 
+For $ r < 2M $, we now define $ r _ * $ by 
+going back to the modulus sign, 
+and $ t$, by $ t = v - r _ * $. 
+We can transform the metric 
+to coordinates $ \left( t, r, \theta, \phi  \right)  $. 
+Our exercise is to show that it is the 
+$ r < 2M $ Schwarzchild solution. 
+
+An ingoing radial null geodesic 
+has $ \frac{dr }{ d \tau }  = - 1 $ and $ v = \text{const } $. 
+This reaches $ r = 0 $ at finite $ \tau $. 
+What happens here? Our curvature diverges. 
+The simplest scalar which 
+we can build from the Riemann tensor is 
+\[
+R _{ abcd } R ^{ ab cd }  \propto \frac{ M ^ 2 }{ r ^ 6 } \to \infty, \quad \text{ as } 
+r \to 0 
+\]  This scalar diverges in all charts. 
+We can't smoothly extend like we did with the change of coordinates. 
+The metric cannot be smoothly extended through $ r = 0 $. 
+At $ r = 0 $, 
+we get what is called a curvature singularity. 
+We get $ \infty$ tidal forces. 
+Strictly speaking, $ r   = 0$ is not defined 
+to be part of the spacetime since $ g _{ ab } $ is not smooth there. All we should be talking 
+about is the limiting behaviour as we approach $ r = 0 $. 
+
+Another important thing is to look at the 
+Killing vector field $ k  =\frac{\partial  }{\partial  t }  $ with $ \left( r > 2M   \right)  $. Converting this to EF coordinates. 
+This becomes 
+\[
+k = \frac{\partial  x ^ \mu }{\partial  t }  \frac{\partial  }{\partial  x ^ \mu }  
+= \frac{\partial  }{\partial  v } 
+\]  We can use this to define $ k $ for $ r \leq 2M $. 
+If we look at the norm of the Killing field in new coordinates, 
+\[
+k ^ 2 = g _{ v v }  =  - \left( 1 - \frac{2M}{r }  \right)  
+\] If we cross the region $ r  = 2M $, $ k $ is null. 
+And, inside the surface, it's spacelike. 
+Since the definiton of being static requires 
+the Killing vector field to be timelike, 
+this means that the interior is not static. 
+Only the $ r > 2M $ region is static. 
+
+\subsection{The Black Hole Region}
+In this section, 
+we attempt to make rigorous the 
+definition of a 'black hole region'. 
+
+\begin{defn}{Causal vector}
+A vector is causal if 
+it is either timelike or null. 
+A curve is causal if
+the tangent vector is everywhere causal. 
+\end{defn}
+
+At any given point in spacetime, 
+the set of causal vectors allows 
+us to define two lightcones, 
+the future lightcone and past lightcone. 
+
+\begin{defn}{Time Orientable Spacetime}
+A spacetime is time-orientable 
+if it 
+admits a time orientation, which is 
+some causal vector field $ T ^ a  $. 
+We say that a causal vector $ X ^ a  $
+is future-directed if, at that given 
+point, it lies in the same lightcone as $ T ^ a $. 
+We call it past directed otherwise. 
+
+Note that any other 
+time orientation on the spacetime $ U ^ a $
+necessarily lies everywhere in the 
+past or future lightcone of $ T ^ a $. 
+This means that any given 
+spacetime has two inequivalent time-orientations. 
+\end{defn}
+
+For ingoing Eddington-Finkelstein coordinates, 
+we have that $ k  = \partial  / \partial v  $  	 
+can't be a valid time orientation 
+since it's spacelike for the 
+region $ r < 2M $. 
+But, $ \pm \partial  / \partial  r $ is a 
+globally null vector field. 
+
+We would however, like to 
+choose the correct sign based on 
+making it have a consistent orientation 
+with the Killing vector field $ \partial  / \partial  t  = 
+\partial   / \partial  v $. 
+
+We find that $ k \cdot  \left(   - \partial  / \partial  r  \right)   = 
+- g_{ vr }  = -1 $. Thus, 
+the vectors lie 
+in the same light-cone, so $  - \partial   / \partial  r $ 
+is the time-orientation we'll use. 
+
+(Insert missing lecture notes here )
+We can see that the energy of a 
+circular orbit is 
+\[
+E  = \frac{ r -  2M }{ r ^{ \frac{1}{2 }} \left( r - 3M  \right)  ^{ \frac{1}{2 } } } 
+\] If we have  
+$ r \gg 2M $, we get that 
+\[
+E \simeq 1 - \frac{M}{2 r } 
+\] This implies that 
+the energy is given by 
+\[
+\text{energy }  = m  - \frac{ m M }{ 2 r}  
+\] where $ m $ is our initial rest mass, 
+and the second term is our 
+gravitational binding energy. 
+If we're talking about a 
+solar mass black hole, with $ M \leq 100 M_{ \sun} $, 
+these are the black holes 
+formed by gravitational collapse of a star. 
+
+How do we see this? 
+The first way that black holes 
+were observed is by looking at 
+binary systems. 
+(Diagram of star and black holes)
+When matter from the star is stripped 
+off due to tidal forces, the 
+matter surrounds the black hole 
+in an accretion disk. 
+Let's try to understand the properties of one of 
+these disks with a crude model. 
+
+Let's approximate the disc as particles following circular orbits. 
+Each particle in the disc has some energy. 
+There's friction 
+amongst the particles. Thus, energy is lost 
+due to friction, and hence the radius 
+decreases, until 
+it reaches the ISCO.
+The ISCO gives the disc an 
+inner edge of $ r = 6M $. 
+When it reaches this and loses more energy, it 
+just falls into the black hole. 
+The energy of the ISCO is $ E  = \sqrt{ 8 / 9 }   $. 
+The remaining energy fraction 
+is $ 1 - \sqrt{ 8 / 9 }   $, which is the energy 
+of the rest mass lost to friction. 
+This is carried away from the disc 
+in the form of electromagnetic radiation. 
+This is about $ 6 \pc $, which is a huge amount 
+of energy converted. This accretion discs 
+around black holes are very luminous. 
+The first detections are from X-rays in the 1980s. 
+
+Now there's another way 
+to detect black holes, which are gravitational waves. 
+
+
+\subsection{White Holes}
+Taking a step back, if 
+we define $ r > 2 M $ the coordinate $ u : = t - r _ * $, 
+constant along outgoing radial null geodesics, 
+we have the set of coordinates $ \left( u ,r  \theta, \phi  \right)  $, 
+which are outgoing EF coordinates. 
+$ ds^ 2  =  - \left( 1 - 2M  / r  \right)   - 2 du d r + r ^ 2 d \Omega ^ 2 	  $. 
+We can smoothly extend this 
+through $ r  = 2 M $ to  $ r \leq 2 M $, 
+with a curvature singularity at $ r  = 0$. 
+This is not the same as previous $ r  = 2 M $ region. 
+If we look at the outgoing radial null geodesics, 
+, $ u   = \text{const } $, and $ \frac{dr}{ d \tau }  =  1 $. 
+Here, $r  $  can only increase in $ r \leq 2 M $, 
+so it can't be the same region as we saw before 
+since it has different properties. 
+
+As an exercise, we can show 
+$ k  = \partial   / \partial  u $. 
+In outgoing EF coordinates, we can show $ \partial   / \partial  r $ , 
+is the time orientation equivalent to $ k $ in 
+$ r > 2M $.  
+The $ r < 2 M $ is a white hole. 
+This is a region which cannot receive a 
+signal from infinity. 
+To understand what a white hole is, 
+it is just the time reverse of a black hole. 
+So, $ u  = - v $ is an isometry which maps the white 
+hole to the black hole, and reverses the time orientation. 
+
+White holes are generally regarded as unphysical, 
+because there is no mechanism for 
+forming them. 
+To form a white hole, we'd 
+have to start with a singularity. 
+White holes are also unstable due to time reversal 
+since black holes are stable. 
+
+\subsection{The Kruskal Extension}
+Again, we start off 
+with $ r > 2 M $, the Kruskal-Szekeres 
+coordinates are 
+\[
+U  =   - e^{   - u  / 4 M }, U < 0 , \quad V  = e ^{ v / 4 M }, V > 0 
+\]  This gives $ \left( U , V , \theta, \phi  \right)  $. 
+Taking the product, we get that 
+\[
+U V  =  - e ^{  r _ *  / 2 M }  =   - e ^{ r / 2 M} \left( r / 2M  - 1  \right)  
+\] The right hand side 
+is monotonic, 
+which determines $ r \left( U , V  \right)  $ uniquely. 
+We $ V / U  = e ^{ t / 2 M } $ , fixes $ t \left( U , V  \right)  $. 
+Transforming coordinates, we 
+have $ ds ^ 2  =  - \frac{32 M ^ 3 }{ r \left( U , V  \right)  } e ^{ 
+- r \left( U , V  \right)   / 2 M } d U d V r \left( U , V  \right)  ^ 2 d \Omega^ 2  $. 
+To extend 
+to a larger range of $ U $ and $ V $, 
+we can use the equation above 
+to define $ r \left( U , V  \right)  $ for $ U \geq 0 $, 
+or $ V \leq 0 $. 
+Metric can then be analytically extended with 
+$ \det g _{ \mu \nu } \neq   0 $, to new regions $ U > 0 $ or $ V < 0 $. 
+
+At $ r = 2M $, $ U V  = 0 $. 
+This corresponds to $ U =  0 $ or $ V = 0 $. 
+At  $ r = 0 $, we require $ U V  = 1 $, 
+which are equations of hyperbola.
+
+The shaded regions are not apart of the diagram. 
+Radial null geodesics are 
+constant $ U $ or $ V $, 
+depending on ingoing or outgoing. 
+If we pick $ r > 2 M $, and constant $ r $, 
+this has hyperbolae on either side. 
+We have four regions. 
+Region I has $ r > 2 M $, 
+which is Schwarzchild. We have region II, which is 
+the black hole region, 
+region III, the white hole region, 
+and region IV, which is new. 
+
+Region IV with $ R > 2M $, 
+is Isometric to $ I $. 
+We should have $ \left( U , V  \right)  \to \left(  - U , - V  \right)  $. 
+The interior of a black hole is quite 
+similar to the collapse of a universe. 
+This is somewhat akin to the big crunch.
+You shouldn't think of a singularity as a place in space. 
+It's more like a region in time. 
+
+If we have a star which undergoes collapse, 
+the space time outside the star corresponds to this diagram. 
+(Draw diagram of surface of the star)
+
+Let's 
+now think about the symmetries of this. 
+As an exercise, 
+we can show that 
+\[
+k  = \frac{1}{4 M } \left( V \frac{\partial  }{\partial  V }   - 
+U \frac{\partial  }{\partial  U }   \right) , \quad k ^ 2 =  - 
+\left(  1- 2M / r  \right) 
+\] Thus, $ k $ is timelike in I and IV, 
+null at $ U  = 0  $ and $ V  = 0 $, 
+and spacelike in II or III. 
+Drawing the integral curves of $ k $, 
+we have the diagram below. 
+
+Note that the lines $ \left\{  U = 0  \right\}  , \left\{  V  = 0  \right\}  $, 
+are mapped to themselves, 
+and so are fixed by $ k $. $ k  = 0 $ 
+is on a bifurcation 2 -sphere 
+$ U  = V  =0 $ which is also fixed by $ k $.
+
+
+\subsection{Einstein Rosen Bridges}
+For $ t $ constant in region $ I $, 
+this happens if and only if $ V /  U $ is constant. 
+This manifold extends in to $ I V $. 
+If we 
+let $ r  = \rho + M + \frac{ M ^ 2  }{4  \rho } $, 
+the graph looks like below. 
+
+For a given value of $ r $, there are 
+two possible values of $ \rho $. 
+We choose $ \rho > M / 2 $ in region I, 
+and $ 0 < \rho < M / 2 $ in region $ I V $. 
+
+It is an exercise to show that 
+in isotropic coordinates, 
+we have that $ \left( t, \rho , \theta, \phi  \right)  $ 
+is 
+\[
+ds ^ 2 =  - \frac{\left(  1- \frac{M}{2 \rho }  \right)  ^ 2 }{ 
+\left(  1+ \frac{M}{2 \rho }  \right)  ^ 2 } dt ^ 2 
++ \left( 1 + \frac{M}{2 \rho }   \right)  ^ 4 
+\left(  d \rho ^ 2 + \rho ^ 2 d \Omega^ 2  \right)  
+\] We said earlier 
+that region $ I  $ and $ I V $ are 
+isometric. 
+Thus, we should have some isometry which 
+relates regions I and $ I V $. This is 
+\[
+\rho \to \frac{M^2}{4 \rho } 
+\] There is still a singularity in 
+these coordinates at the Schwarzchild radius. 
+If we set $ t  $ to be a constant, 
+then the induced metric 
+is 
+\[
+ds ^2 = \left(  1 + \frac{M}{2 \rho }  \right)  ^ 4 
+\left( d \rho ^ 2 + \rho ^ 2 d \Omega^ 2  \right) 
+\] This is smooth for $ \rho > 0 $. 
+We can embed this in four dimensional 
+Euclidean space. 
+If we surpress the theta direction, 
+we get that we have 
+two asymptotically flat hypersurfaces 
+connected by a throat region. 
+
+We're suppressing the theta directions 
+so it looks like cirles where we have the throat. 
+It is flat as $ r \to  0 $ since the space 
+is isometric to $ r \to \infty $. 
+This is called an Einstein-Rosen bridge. 
+
+\subsection{Extendibility}
+\begin{defn}{Extendibility}
+We define $ \left( M , g  \right)   $ to be 
+extendible if it is isometric 
+to a proper subset of another spacetime $ \left( M ' , g ' \right)   $. 
+This is called an extension of $ \left( M , g  \right)  $. 
+For example, take $ \left( M , g  \right)  $ to be 
+the $ r > 2M $ section of the Schwarzchild manifold. 
+Then, we can take $ \left( M ' , g'  \right)  $ 
+to be the extension of $ \left( M , g  \right)  $. 
+\end{defn}
+If we can make the spacetime bigger, 
+then we do. But, 
+the Kurskal spacetime for example is 
+inextendible.
+The Kruskal spacetime is an example 
+of a maximal analytic extension of 
+$ \left( M , g  \right)  $. 
+
+\subsection{Singularities}
+In general, we say that the metric 
+$ g _{ \mu \nu } $ is singular if it is not 
+smooth or $ \det g _{ \mu \nu }  = 0 $ somewhere. 
+A coordinate singularity 
+is a singularity which we can eliminate 
+via a change of coordinates. For example, 
+$ r = 2M $ in Schwarzchild coordinates. 
+These are unphysical. 
+
+We also have a scalar curvature 
+singularity, where a scalar build from $ R \indices{ ^ a _{ bcd  } }   $ 
+diverges. For example, $ r = 0$ in 
+Schwarchild. 
+
+We can also have examples of singularities 
+in which the curvature does not blow up. 
+These are called non-curvature singularities. 
+
+For example, take $ M  = \mathbb{ R  }^ 2 $, 
+with polar coordinates $ \left( r, \phi  \right)  $, 
+with $ \phi \sim \phi + 2 \pi $. 
+Take $ g  = dr ^ 2 + \lambda ^ 2 r ^ 2 d \phi ^ 2 $. 
+For $ \lambda > 0 $, the determinant 
+$ \det g _{ \mu \nu }  = 0 $ at $ r = 0   $. 
+At $ \lambda  = 1 $, 
+we have that this is Cartesian coordinates, which 
+implies $ r = 0 $ is a coordinate singularity. 
+
+For $ \lambda \neq 1 $, 
+set $ \phi  ' = \lambda \phi $, which implies $ g  = dr ^ 2 
++ r ^ 2 d \phi ^ 2 $. 
+This is locally isometric to Euclidean space, 
+so we have that $ R \indices{ ^ a _{ bcd } }  = 0  $. 
+This isometry is only local 
+because we've forgotten the period of $ \phi $. 
+Since $ \phi  ' \sim \phi ' + 2 \pi \lambda $, 
+this is not globally isometric. 
+At $ r = 0 $, 
+let's consider the circle $ r  = \epsilon $. 
+The circumference divided by the radius is 
+\[
+\frac{2 \pi \lambda \epsilon }{ \epsilon } = 2 \pi \lambda \neq 2 \pi , \quad 
+\text{as  } \epsilon \to 0 
+\] Taking the limit as $ \epsilon \to 0 $, 
+This is not 
+locally flat at $ r  = 0 $, so the metric can't be smoothly 
+extended to $ r = 0$. This is 
+an example of a conic singularity. 
+This is not a curvature singularity since 
+curvature is zero. 
+
+
+Singularities are not points in the manifold 
+since they're not included by construction. 
+
+\begin{defn}{Future endpoints}
+We say that $ p \in \mathcal{ M } $ is a future 
+endpoint of a future directed causual curve $ \gamma : \left( a,b  \right)  
+\to \mathcal{  M } $, if, for any neighbourhood
+$ \mathcal{ O } $ of $ p $, there 
+exists some $ t_0 $ such that $ \gamma \left(  t  \right)  
+\in \mathcal{ O } $ for all $ t > t_0  $. 
+We say that $ \gamma $ is future inextendible 
+if it has no future endpoint.
+\end{defn}
+
+For example, take our spacetime $ \left( M , g  \right)  $ 
+to be Minkwoski, and the curve 
+$ \gamma : \left(   - \infty, 0   \right)  \to M $, 
+$ \gamma \left( t  \right)   = \left( t, 0 , 0 , 0  \right)  $. 
+Then, $ \left( 0 , 0 , 0 , 0   \right)  $ is 
+a future endpoint. 
+However, if we define $ \left( M , g  \right)   = \text{ Mink } 
+\ \left\{  \left( 0 , 0 , 0 , 0  \right)   \right\}   $, 
+then the curve is future inextendible.
+
+\begin{defn}{Completeness}
+A geodesic is complete 
+if an affine parameter 
+extends to $ \pm \infty.$.
+We say that $ (M , g ) $
+is geodesically complete if all inextensible causal 
+geodesics are complete. 
+\end{defn}
+For example, 
+in Miknowski space, and the spacetime of a
+static, spherical star, these are geodesically complete. 
+
+In the Kruskal spacetime, 
+this is geodesically 
+incomplete since 
+some geodesics reach $ r =  0 $ in finite affine 
+parameter. 
+
+An extendible spacetime is trivially geodesically incomplete. 
+We say that 
+a spacetime is singular if and only if 
+$ \left( M , g  \right)  $ is inextendible and geodesically incomplete. 
+For example, the Kruskal spacetime. 
+
+
+\pagebreak
+\section{The Initial Value Problem}
+
+
+\subsection{Predictability}
+\begin{defn}{Partial Cauchy Surface}
+Suppose $ \left( M , g  \right)  $ is a 
+time orientable spacetime. A partial Cauchy surface 
+$ \Sigma $ is a hypersurface such that no 
+two points are connected by a causal curve in $ M $. 
+So, this could look like a $ t  = \text{const} $
+curve in Minkwoski spacetime, since 
+all points are spacelike separated. 
+The future domain of dependence of $ \Sigma $
+is defined as 
+\[
+  D^ + \left( \Sigma  \right)   = 
+  \left\{  p \in M : \text{every past-inextendible causal curve through }  p 
+  \text{ which intersects } \Sigma  \right\} 
+\] The past domain of 
+dependence $ D ^  - \left( \Sigma  \right)  $ is defined 
+similarly. The entire domain of 
+dependence is the union of the 
+future and past domains of dependence
+\[  D \left( \Sigma  \right)   = 
+D^ + \left( \Sigma  \right)  \cup D ^  - \left( \Sigma  \right)  \] 
+\end{defn}
+
+A causal geodesic in $ D \left( \Sigma  \right)  $ must intersect $ \Sigma $, 
+which is determined uniquely by tangent vectors on $ \Sigma $. 
+A causal geodesic is a timelike or null curve, 
+and is either future or past inextendible. 
+It is 
+in the domain of dependence since 
+geodesics are determined 
+by the tangent vector at $ p \in \Sigma $, 
+where curve intersects. 
+
+The solutions to hyperbolic 
+partial differential equations 
+in $ D \left( \Sigma  \right)  $ 
+can be uniquely determined from 
+initial data defined on $ \Sigma $.
+
+By hyperbolic partial differential equations, 
+we mean equations in the tensor field 
+$ T \indices{ ^{ \left( i  \right) a b \dots } 
+_{ cd \dots } }  $, with equations 
+of motion, $ i  = 1 , \dots N $
+equations of motion 
+\[
+g ^{ ef } \nabla _ e \nabla _ f T \indices{ ^{ i ab \dots } 
+_{ cd \dots } }  = \dots  
+\] where the right hand side depends on $ g $ and its derivatives, 
+and depends linearly on $ T  $ and it's first derivatives.
+These equations are satisfied for example, 
+by Maxwell's equations in the Lorentz gauge. 
+
+
+\begin{example}{Minkowski Spacetime with the positive 
+	$ x  $ axis as the partial Cauchy surface}
+
+	For example, let's have $ \left( M ,g  \right)  $ taken to 
+be 2 dimensional Minkwoski space, and 
+$ \Sigma $ to be the positive $ x $ axis. 
+Then, we can draw the domain of 
+dependence as shown in the figure.
+We draw the domain of dependence 
+by taking a point, and seeing 
+if there exists a timelike 
+curve which doesn't intersect the Cauchy surface. 
+If there is, it's not in the domain of dependence. 
+
+\begin{figure}[htpb]
+	\centering
+	\input{domain_of_dependence.pdf_tex}
+	\caption{The domain of dependence 
+	for the positive x-axis in Minkowski spacetime}%
+	\label{fig:}
+\end{figure} 
+
+If we have a look at the wave equation 
+\[
+ \nabla ^ a \nabla _ a \psi  =  - \partial  _ t ^ 2 \psi + 
+ \partial _ x ^ 2 \psi  = 0 
+\] the solution in $ D \left( \Sigma  \right)  $ 
+us uniquely determined by the data 
+$ \left( \psi , \partial  _ t \psi  \right)   $ on 
+$ \Sigma $. 
+\end{example}
+
+
+Generally, 
+if $ D \left( \Sigma  \right)  \neq M $, then physics 
+in $ M / D \left( \Sigma  \right) $ is not 
+determined by data on $ \Sigma $. 
+
+\begin{defn}{(Globally Hyperbolic)}
+	$ \left( M , g  \right)  $ is 
+	globally hyperbolic if there is a Cauchy surface. 
+	A Cauchy surface is a partial Cauchy surface 
+	such that $ D \left( \Sigma  \right)   = M $. 
+	The Cauchy Horizon is a boundary of $ D \left( \Sigma  \right)  $ 
+	in M. A space is globally hyperbolic if there is no Cauchy hoirzon for 
+	$ \Sigma  $. 
+\end{defn}
+
+Some examples of globally hyperbolic spacetimes 
+is the Minkowski metric ($ t = const  $  )
+are Cauchy surfaces. 
+Kruskal spacetime is also a globally hyperbolic 
+spacetime. 
+
+(Insert diagram here)
+
+We can also look 
+at spherical gravitational 
+collapse, 
+which also is a globally hyperbolic spacetime. 
+
+The Minkowski metric 
+with the origin removed is not since 
+there is a future inextendible curve. 
+
+\begin{thm}
+	Let $ \left( M , g  \right)  $ be globally hyperbolic.
+	Then, (i), there exists a global time function 
+	$ t : M \to \mathbb{ R } $ such that 
+	$  - \left( dt  \right)  ^ a $ is future directed and timelike. 
+	Secondly, $ t = \text{const}$ surfaces are Cauchy, 
+	and all have the same topology $ \Sigma $. 
+	Finally, $ M $ has topology $ \mathbb{ R } \times \Sigma $. 
+\end{thm}
+As an exercise, show that $ U + V $ is a global
+time function for Kruskal. 
+Note that the surface $ U + V  = 0 $ is an 
+Einstein-Rosen bridge. 
+Topologically, $ \Sigma \simeq \mathbb{ R } \times S ^ 2 $. 
+In this case, $ M \simeq \mathbb{ R  }^ 2 \times S ^ 2 $. 
+
+We can also introduce coordinates on the spacetime. 
+Let  $ x ^ i $ be coords on $ t =0 $ surface, $ \Sigma $. 
+Let $ T ^ a $ be a timelike vector field with $ p \in \mathcal{ M  } $. 
+The integral curve of $ T ^ a  $ through $ p $ 
+intersects $ \Sigma $ at a unique point. Let $ x ^ i(p) $ 
+be the coordinates of this. 
+This defined three maps $ x ^ i: M \to \mathbb{ R  }$. 
+Use $ \left( t, x ^ i  \right)   $ as 
+coordinates on $ M $. 
+So, we have a global 
+set of coordinates. 
+If we write down the most general 
+metric in these coordinates, 
+\[
+ ds ^ 2  =  - N ^ 2 dt ^2 + h _{ ij } 
+ \left(  d x^ i + N ^ i dt  \right)  \left( dx ^ j  + N ^ j dt  \right)  
+\] $ N \left( x, t  \right)  $ 
+is called the lapse function, $ N ^ i \left( t, x  \right)   $ 
+is called the shift vector, 
+and $ h _{ ij  } \left( t, x  \right)  $ 
+is a metric on surfaces of constant $ t $.
+
+\subsection{Extrinsic Curvature}
+\begin{defn}
+	We say the hypersurface $ \Sigma $ is spacelike 
+	if the normal $ n _ i $ everywhere is timelike. 
+	If $ X ^ a $ is tangent, then $ n _ a X ^ a  = 0 $ implies 
+	that $ X ^ a $ is spacelike.
+
+	Assume $ n _ a  n ^ a   = - 1 $. 
+	We now define the quantity $ h \indices{ ^ a _ b }  = 
+	\delta \indices{ ^  a _ b }  + n ^ a n _ b  $. 
+	This implies that $ h _{ ab }  =g _{ ab } + n _ a n _ b $. 
+\end{defn}
+Thus, if $ X ^ a, Y ^ a $ are tangent vectors, 
+then $ h _{ ab } X ^ a Y ^ b   = g _{ ab } X ^ a Y ^ b  $. 
+$ h _{ ab } $ is the induced metric of $ \Sigma $, 
+which is the pullback of $ g _{ ab } $. 
+Then $ h \indices{ ^ a _ b } n ^ b  = 0 $. 
+This means that $ h \indices{ ^ a _   c } h \indices{ ^ c _b } 
+ = h \indices{ ^ a _ b }  $. 
+ $ h \indices{ ^ a _ b }  $ is a projection 
+ onto $ \Sigma $.
+ We can decompose the vector as follows
+ \[
+  X ^ a  = \delta \indices{ ^ a _ b } X ^ b 
+   = h \indices{ ^ a _ b  } X ^ b   - n ^  a n _ b X ^ b  = 
+   X ^ a _{ \parallel} + X ^ a _{ \bot }
+ \] We have that $ N _ a $ is perpendicular to 
+ $ \Sigma $ at $ p $. 
+ Parallel transport $ N _ a $ along $ C : X ^ b \nabla _ b N _ a =0  $.
+ Does $N _ a 	 $ remain $ \bot $ to $ \Sigma $? 
+ Suppose that $ Y ^ a $ is tangent to $ \Sigma $. 
+ Then
+ \[
+	 X \left( N \cdot  Y  \right)  = X ^ b \nabla _ b 
+	 \left(  Y ^ a N _ a   \right)   = N _ a X ^ b \nabla _ b Y ^ a
+ \] If $ N \cdot  Y  = 0 $, 
+ then $ ( \nabla _ X Y )_{ \bot  } = 0 $
+
+ \begin{defn}
+ Extend $ n _a $ to neighbourhood $ \Sigma $,  $ n _ a n ^ a  = - 1 $. 
+ The Extrinsic curvature tensor $ K _{ ab } $ is defined 
+ at $ p \in \Sigma $ by $K \left( X, Y  \right)   =  - n _ a 
+ \left( \nabla _{ X _{ \parallel } } Y _{ \parallel  }  \right) ^ a $. 
+ \end{defn}
+
+ \begin{thm}
+ 	We have that, independent of the 
+	extension of $ n_ a $, 
+	we have that 
+	\[
+	 K _{ ab }  = h \indices{ _ a ^ c } h \indices{ 
+	 _ b ^ d  } \nabla_ c n _ d   
+	\]
+\begin{proof}
+	We have that 
+	\begin{align*}
+ - n _ d X _{ \parallel  } ^ c \nabla _ c Y_{ \parallel } ^ d &=   - X_{ \parallel } 
+ ^ c \nabla _ c \left( n _ d Y ^ d _{ \parallel }  \right)  + 
+ X _{ \parallel } ^ c Y _{ \parallel }^ c \nabla _ c n _ d  \\
+							      &=  \left( n \indices{ _ a 
+							      ^ c  } h \indices{_ b 
+					      ^ d } \nabla _ c n _ d     \right)  
+ X^ a Y ^ b \\
+	\end{align*}
+	Note that $ n ^ b \nabla _ c n _ b  = \frac{1}{2 } 
+	\nabla _ c \left( n _ b n ^ b   \right)   = 0 $. 
+	This implies that $ K _{ ab }  = h \indices{ _ a ^ c  } 
+	\nabla _ c n _ b $. 
+\end{proof}
+ \end{thm}
+
+ \begin{thm}
+ 	Our extrinsic curvature 
+	tensor is symmetric, with $ K_{ ab }  = K _{ b a } $. 
+	Let $ \Sigma  $ be a surface where 
+	$ f   $ is constant, with $ df \mid _{ \Sigma } \neq 0 $. 
+	Therefore, $ n _ a \mid _{ \Sigma }  = g (df )_ a $ 
+	for some $ g $, fixed by $ n _ a n ^ a  = - 1 $. 
+	We can use this to extend $ n _ a  $  off $ \Sigma $. 
+	\[
+		\nabla _ c n _ d  = g \nabla _ c \nabla _ d f 
+		+ \nabla _ c g \nabla _ d f 
+	\] this implies $ K _{ ab } = g h \indices{ _ a 
+	^ c  } h \indices{ _ b ^  d  } \nabla  c \nabla _ d f      $, 
+	which is symmetric. 
+	A lemma that we have is $K _{ ab }  = \frac{1}{2 } \mathcal{ L }  _n 
+	h _{ ab }  $. 
+ \end{thm}
+
+
+\subsection{Gauss-Codecci equations}
+The tensor at $ p \in \Sigma $ is 
+invariant under projection $ h \indices{ ^ a _ b }  $ 
+if 
+\[
+	T \indices{ ^{ a_1 \dots a_ r  } _{ b_1 \dots b_ s }  } 
+	 = h \indices{ ^{ a_1 } _{c_1 }  }  \dots 
+	 h \indices{^{ a _ r } _{ c _ r } } h \indices{ 
+	 ^{ d _ 1  } _{ b _  1}} \dots h \indices{ ^{ d _ s } _{ b _ s } } 
+	 T \indices{ ^{ c_1 \dots c _ r } _{ d_1 \dots d _ s }} 
+\]  can be identified 
+with tensors on $ \Sigma $. 
+Covariant derivatives on $ \Sigma $
+are defined as 
+\[
+ D _ a T \indices{ ^{ b_1 \dots b _ r } _{ c_1 \dots c _  s } } 
+  = h \indices{ _ a ^ d } h \indices{^{ b_1 } _{ c_1  }  } \dots 
+  h \indices{ ^{ b _ r  } _{ e _ r }  } 
+  h \indices{ ^{ f_1  } _{ c_1 } } \dots h \indices{ ^{ f _ s } 
+  _{ c _ s }  } \nabla _ d T \indices{ ^{ e_1 \dots e_ r }  _{ 
+  f_1 \dots f _s }}    
+\] 
+In actual fact, $  D_ a $ is the Levi-Civita connection 
+of $ \mathcal{ L } _{ ab }  $.
+The Riemann tensor of 
+$ D _ a $ is $ R ' \indices{ ^ a _{ bcd  } }  $. 
+We have that 
+\[
+ R  ' \indices{ ^ a _ { bcd  } }  = 
+ h \indices{ ^  a_ e } h \indices{ ^ f _ b } h \indices{ ^ g _ c } 
+ h \indices{ ^ h _ d } R \indices{ ^ e _{ fgh } }  - 2 K _{ [  c} ^ a  
+ K _{ d ] } b 
+\] 
+
+It is a lemma that the Ricci scalar of $ D _ a $ 
+is $ R   '  = R + 2 R _{ ab } n ^ a n ^ b  - K ^ 2 + K ^{ ab } K _{ ab } $. 
+We have that $ K  = K \indices{ ^ a _ a }  = g ^{ ab } K _{ ab }  = 
+h ^{ ab } K _{ ab } $. 
+
+\begin{thm}
+	\[
+	 D _a K _{ bc }  - D _ b K _{ ac  } = h \indices{ _ a ^ d } 
+	 h \indices{ _b ^  e } h \indices{ _ c ^ f  } n ^ g 
+	 R _{ de fg  }
+	\] This is Codavvi's equation. 
+\end{thm}
+
+\begin{thm}
+	\[
+		D _ a K \indices{ ^ a _ b  }  - D _b K 
+		 = h \indices{ ^ c _ b  } R _{ dc } n ^ d  
+	\] 
+\end{thm}
+
+\subsection{The Constraint Equations}
+If we set $ G _{ ab }  = 8 \pi T _{ab }$, 
+then 
+\[
+ G _{ ab } n ^ a n ^ b  = R _{ ab } n ^ a n ^ b + \frac{1}{2 } R 
+ = \frac{1}{2 } \left( R ' - K ^{ ab } K _{ ab } + K ^ 2  \right) 
+\] Thus, 
+\[
+ R '  - K ^{ ab } K _{ ab }  +   K ^ 2  = 16 \pi \rho 
+\] where $ T _{ ab } n ^ a n ^ b  $ is 
+energy density seen by the observer with velocity $ n ^ a $. 
+This is a Hamiltonian constraint. 
+\[
+ 8 \pi h \indices{ _ a ^ b } T _{ b c } n ^ c  = 
+ h \indices{ _ a ^ b } G _{ b c } n ^ c  = h \indices{ _ a ^ b  } R _{ b c } 
+ n ^ c 
+\] The last proposition above 
+tells us that 
+\[
+ D _ b K \indices{ ^ b _ a  }  - D _ a K  = 8 \pi h \indices{ _ a 
+ ^ b  } T _{ b c } n ^ c   
+\] The last quantity is minus the momentum density seen by the observer. 
+This involved the spatial derivative of $ K $. 
 \subsection*{Summary}
 
 \subsubsection*{Spherical symmetry}
 \begin{itemize}
-	\item A spacetime is spherically symmetric if 
-		the isometry group has an $ SO ( 3 ) $ subgroup. 
-	\item The orbit of $ p \in M $ is a $  S ^ 2 $ sphere. 
-	\item We define the area radius function
-		\[
-			r ( p )  = \sqrt{ \frac{ A( p ) }{ 4 \pi }} 
-		\] This has the interpretation of radius. 
+\item A spacetime is spherically symmetric if 
+the isometry group has an $ SO ( 3 ) $ subgroup. 
+\item The orbit of $ p \in M $ is a $  S ^ 2 $ sphere. 
+\item We define the area radius function
+\[
+	r ( p )  = \sqrt{ \frac{ A( p ) }{ 4 \pi }} 
+\] This has the interpretation of radius. 
 \end{itemize}
 \subsubsection*{Properties of Spacetimes}
 
 To help us, we can construct hyper-surfaces as follows 
 \begin{itemize}
-	\item We can define a hypersurface $ \Sigma $ to be the surface where $ f ( x )  = 0$
-	\item $df $ is normal to this surface as $ df ( t ) = 0 $ for any tangent vector. 
-	\item Normals $ n $ to the surface can be written as 
-		\[
-		 n = g df + f n' \implies n \wedge  dn \mid_{ \Sigma }  =0 
-		\] 
-	\item Frobenius says that if $ n \wedge  dn  =0  $  everywhere, then 
-		there exist $ f, g $ such that $ n = g d f$ so $ n $ is 
-		normal to surfaces of constant $ f $. 
+\item We can define a hypersurface $ \Sigma $ to be the surface where $ f ( x )  = 0$
+\item $df $ is normal to this surface as $ df ( t ) = 0 $ for any tangent vector. 
+\item Normals $ n $ to the surface can be written as 
+\[
+ n = g df + f n' \implies n \wedge  dn \mid_{ \Sigma }  =0 
+\] 
+\item Frobenius says that if $ n \wedge  dn  =0  $  everywhere, then 
+there exist $ f, g $ such that $ n = g d f$ so $ n $ is 
+normal to surfaces of constant $ f $. 
 
 
 \end{itemize}
 We can classify different spacetimes as below. 
 \begin{itemize}
-	\item A spacetime is symmetric in a 
-		variable $ s $ if $ s $ is a coordinate
-		but the metric doesn't depend on $ s $. 
-	\item A spacetime is stationary if there exist coordinates $ x ^ \alpha $ 
-		such that $  x^ 0$ is timelike at infinity, and our metric 
-		doesn't depend on $ x^ 0 $ (equivalent to saying that there's a Killing vector
-		which is timelike at infinity). 
-	\item A spacetime is static if there are no cross terms in the metric like 
-		$ g _{ 0i } $. 
-	\item Construct stationary spacetimes by defining a Killing vector, 
-		then construct a hypersurface $ \Sigma $ nowhere tangent to 
-		that vector. Assign spatial coordinates $ x ^ i $ for positions in 
-		$ \Sigma $. Then, construct 
-		the coordinate $ t $ by moving a distance $ t $ in the parameter
-		orthogonal to the hypersurface. Then, the killing vector is 
-		\[
-		 k = \frac{\partial   }{\partial  t } 
-		\] 
-	\item Our final metric, including spherical symmetry is 
-		\[
-			- e ^{  2 \Psi ( r ) } dt ^ 2 + e^{ 2 \Phi ( r ) } dr ^ 2 + r ^ 2 d \Omega ^ 2 
-		\] 
+\item A spacetime is symmetric in a 
+variable $ s $ if $ s $ is a coordinate
+but the metric doesn't depend on $ s $. 
+\item A spacetime is stationary if there exist coordinates $ x ^ \alpha $ 
+such that $  x^ 0$ is timelike at infinity, and our metric 
+doesn't depend on $ x^ 0 $ (equivalent to saying that there's a Killing vector
+which is timelike at infinity). 
+\item A spacetime is static if there are no cross terms in the metric like 
+$ g _{ 0i } $. 
+\item Construct stationary spacetimes by defining a Killing vector, 
+then construct a hypersurface $ \Sigma $ nowhere tangent to 
+that vector. Assign spatial coordinates $ x ^ i $ for positions in 
+$ \Sigma $. Then, construct 
+the coordinate $ t $ by moving a distance $ t $ in the parameter
+orthogonal to the hypersurface. Then, the killing vector is 
+\[
+ k = \frac{\partial   }{\partial  t } 
+\] 
+\item Our final metric, including spherical symmetry is 
+\[
+	- e ^{  2 \Psi ( r ) } dt ^ 2 + e^{ 2 \Phi ( r ) } dr ^ 2 + r ^ 2 d \Omega ^ 2 
+\] 
 \end{itemize}
+
+\subsection{The Schwarzchild Solution}
+
+\subsubsection{Conserved quantities and Geodesics}
+\begin{itemize}
+\item The Schwarzchild solution is 
+	\[
+		ds ^ 2  =  - \left( 1 - 2M  /r  \right)  dt ^ 2 
+		+ \left( 1 - 2M  /r   \right)  ^{ - 1 } dr ^ 2  + dr ^ 2 + 
+		r^ 2 d \Omega ^ 2 
+ \] 
+\item \textbf{Birkhoff's Theorem.} A spacetime which is spherically symmetric, 
+	and a solution of the vacuum Einstein 
+	equations is isometric to the Schwarzchild solution. 
+	The Schwarzchild solution is static. So spherical symmetry and 
+	vacuum matter implies staticity!
+\item Redshift is the difference between two proper times 
+	\[
+	 \frac{ \Delta \tau _ A }{ \Delta \tau _ B }  = \sqrt{ \frac{
+	 1 - 2M  / r _ B  }{ 1 - 2M  / r _ A }} 
+	\] 
+\item Conserved quantities along a geodesic $ x ^ \mu \left( \tau  \right)  $ 
+	and a Killing vector field are given by $ k \cdot  u $, where 
+	$ u ^ \mu  = \frac{d x ^ \mu }{ d \tau } $. These conserved 
+	quantities are $ E $ and $ h $. With null geodesics, 
+	we are free to rescale $ E $ by reparametrisation. 
+\item Geodesic equations from here 
+	allow rotations such that $ \theta = \pi / 2 $. 
+\end{itemize}
+
+\subsubsection{Eddington-Finkelstein Coordinates}
+
+\begin{itemize}
+\item The black hole 
+	is the region where a 
+	signal can't be sent to infinity - for any 
+	future directed causal curve, if $ r \left( \lambda _ 0  \right)  
+	\leq 2M $, then $ r \left( \lambda  \right)  \leq 2M  $
+	for all $ \lambda \geq \lambda _ 0 $. 
+\item We define white holes 
+	with the new coordinate $ u = t - r _ * $, 
+	which is constant on outgoing radial, 
+	null geodesics. 
+\item The metric in these new 
+	coordinates is 
+	\[
+	 ds ^ 2 =  - \left( 1 - 2M / r  \right)  du ^ 2 - 2 du dr 
+	 + dr ^ 2 + r ^ 2 d \Omega ^ 2 
+	\] 
+\item Setting $ v =  - u $ recovers ingoing 
+	Eddington-Finkelstein coordinates. The 
+	physical interpretation 
+	of doing this is time-reversal. 
+\end{itemize}
+
+\subsubsection{The Kruskal Extension}
+
+\begin{itemize}
+	\item We define Kruskal coordinates 
+		as 
+		\[
+		 U  =  - e ^{  - u  / 4M }, \quad V  = e ^{ v  / 4 M }
+		\]
+	\item Metric looks like 
+		\[
+		 ds ^ 2  =  - 32 M ^ 3 \frac{e ^{  - r / 2M } }{ r } dU d V 
+		 + r \left( U , V  \right)  ^ 2 d \Omega ^ 2 
+		\] 
+	\item A Kruskal diagram is a 
+		diagram showing lines of constant $ r $ and constant 
+		$ t $ on a 45 degree rotated $ \left( U , V  \right)  $ 
+		axis - there are four regions here. 
+
+\end{itemize}
+\[
+\frac{a}{b } \vec{v} \vec{v} \alpha \sigma \delta ` f
+\frac{a}{b} 
+\frac{a}{b} a_1 a_2 a_3 a_4 $ ^{ }$ 
+\begin{pmatrix}  
+\end{pmatrix} 
+\] 
 
 \subfile{formation.tex}
 \subfile{useful_identities.tex}
 
 \section*{Example Sheet 1}
 
+\subsection*{Question 0}
+We have two causal vectors $ X , Y $ 
+at $ p $. 
+We want to show that $ X \cdot  Y  \leq 0 $  
+if and only if they lie in the 
+same lightcone. 
+This is when we set 
+\[
+	g _{ \mu \nu } \left( p  \right)   = 
+	\eta _{ \mu \nu }  = \text{diag}\left( - 1 , 1 , \dots 1  \right) 
+\] 
+In the first case, where $ X $ is timelike, 
+we can always do a local Lorentz transformation 
+so that the time coordinate is 
+\[
+ X ^ \mu  = \left( X ^ 0 , 0 , \dots 0  \right)  
+\] Since 
+$ X , Y $ are causal, the time component $ X ^ 0 $
+and  $ Y ^ 0  $ are non zero. 
+This means 
+that $ X \cdot  Y  = - X ^ 0 Y ^  0 \leq 0 $ . 
+Thus, $ X ^ 0 Y ^  0 \leq 0 $. 
+So, they necessarily lie in 
+the same light-cone. 
+
+In the case where $ X $ is null, 
+we can write 
+\[
+ X ^ \mu  = \left(  X^ 0 , X ^ 0 , 0 , \dots 0  \right) 
+\] This means that 
+\[
+ X \cdot  Y  =  - X ^ 0 Y ^  0 + X ^ 1 Y ^ 1  = 
+ X ^ 0 \left( Y ^1  - Y ^ 0  \right)  \leq 0 
+\] If 
+
 \subsection*{Question 2}
 We want to show 
 Cartan's magic formula. 
 \[
-	\mathcal{ L } _{ X} Y   = \iota_{ X } d Y + d \left(\iota _ X Y   \right) 
+\mathcal{ L } _{ X} Y   = \iota_{ X } d Y + d \left(\iota _ X Y   \right) 
 \] For a $ p$-form $ Y $ the Lie derivative 
 is 
 \[
- \mathcal{ L } _{ X} Y = X ^ \alpha \partial  _ \alpha Y_{ 
- \mu_1 \mu_1 \dots \mu_{ p } } + \left( \partial_{ \mu_1  } X^ \alpha \right) Y_{ 
- \alpha \mu_2 \dots \mu_ p } + \dots + \left( \partial_{ \mu_{ p } } X ^ \alpha  \right)  
- Y _{ \mu_1 \dots \alpha }
+\mathcal{ L } _{ X} Y = X ^ \alpha \partial  _ \alpha Y_{ 
+\mu_1 \mu_1 \dots \mu_{ p } } + \left( \partial_{ \mu_1  } X^ \alpha \right) Y_{ 
+\alpha \mu_2 \dots \mu_ p } + \dots + \left( \partial_{ \mu_{ p } } X ^ \alpha  \right)  
+Y _{ \mu_1 \dots \alpha }
 \]  
 The basic thing to show here is 
 that 
 \[
- d \left( \iota_ X Y  \right) _{ 
- \mu_1 \dots \mu_ p }  = \sum_{ i  = 1, \dots n } \partial _{ \mu _ i } 
- \left(  X ^{ \alpha } Y_{ \mu_1 \dots \alpha \dots \mu_{ p } } \right) 
+d \left( \iota_ X Y  \right) _{ 
+\mu_1 \dots \mu_ p }  = \sum_{ i  = 1, \dots n } \partial _{ \mu _ i } 
+\left(  X ^{ \alpha } Y_{ \mu_1 \dots \alpha \dots \mu_{ p } } \right) 
 \] In addition, we have that 
 \[
- \iota_X  d Y  = X ^{ \alpha } \partial  _ \alpha Y_{ 
- \mu_1 \dots \mu _ p  }   - X^ \alpha \partial _{ \mu_1 } Y_{ \alpha \dots \mu_ p  }
-  - \dots  - X ^ \alpha \partial  _{ \mu_ p } Y_{ \mu _ 1 \dots \alpha }
+\iota_X  d Y  = X ^{ \alpha } \partial  _ \alpha Y_{ 
+\mu_1 \dots \mu _ p  }   - X^ \alpha \partial _{ \mu_1 } Y_{ \alpha \dots \mu_ p  }
+- \dots  - X ^ \alpha \partial  _{ \mu_ p } Y_{ \mu _ 1 \dots \alpha }
 \] 
 We can use small cases 
 to work out the right signs here. 
 
+\subsection{Question 3}
+The conformal Killing equation 
+reads 
+\[
+	\nabla _ a k _ b + \nabla _ b k _ a = \phi g _{ ab } 
+\] Consider 
+the quantity $ X _ a V ^ a $, where 
+$ V ^ a  $ is the tangent vector 
+field associated with a null geodesic. 
+\begin{align*}
+	\frac{d }{ d \tau} \left( X _ a V ^ a  \right)  
+	&=   V ^ b \nabla  _ b \left(  X_ a V ^ a  \right)   \\ 
+	&=  V ^ b V ^ a \nabla _ b X_ a  \\
+	&=  V ^ b V ^ a  \phi g _{ ab }  \\ 
+	&=   0 
+\end{align*} 
+Going into the second line, 
+we use the geodesic equation after the product rule. 
+Going into the third line, 
+we used the conformal Killing equation 
+after symmetrisation. 
+Finally, we use the fact that it's a null geodesic to 
+take it to zero. 
+
+Using the Leibniz property 
+of the Lie derivative, 
+if we have $ \Omega ^ 2 g _{ ab } $, 
+\[
+	\mathcal{ L } )_ k \left( \Omega ^ 2 g _{ ab }  \right)  
+	= \Omega^ 2 \phi g _{ ab }  + 2 g _{ ab } \Omega k ^ \mu \partial  _ \mu 
+	\Omega 
+\] But this is just a scalar multiple of $ g _{ ab } $, 
+so we're good.
+
+\subsection{Question 4}
+I can't 
+find any other convincing argument 
+that $ \left( \frac{m}{ r^ 3 }  \right) '  \leq 0 $ other 
+than the fact that at large $ r $, we have that 
+$\left( \frac{m}{r ^ 3 }  \right)  '  \leq 0 	$. 
+
+
+Using the fact that $ \frac{m\left( r_1  \right)  }{ r_1 } \geq m\left( r  \right)  
+\frac{r_1 ^ 3 }{ r ^ 3 } $, 
+we bound the integral from below 
+using this inequality. 
+\begin{align*}
+	\int_ 0 ^ r dr_1 \, r_1 \left( 1 -\frac{2m\left( r_1 \right)  }{ r_1} \right)
+	^{  - \frac{1}{2 } } & \geq \int_ 0 ^  r 
+	r_1 \left( 1 - \frac{2m\left( r )  \right)  r_1 ^ 2 }{ r ^ 3 }  \right)  \\ 
+			     &=  \frac{r ^ 3  }{ 2 m \left( r  \right)   } 
+			     \left[  1  - \left( 1 - \frac{2m}{ r }  \right)  ^{ \frac{1}{2}} \right]
+\end{align*} 
+
+\subsection{Question 5}
+With constant density, we 
+have that $ m  = \frac{4}{3 } \pi r ^ 3 \rho $. 
+Substituting this 
+in our differential equation for $ p $, gives us 
+\[
+	\frac{dp }{ dr }  = - \left( p + \rho  \right)  
+	\left( \rho + 3p  \right)  \frac{4 \pi r ^ 3 }{ 3 } 
+	\frac{1}{r \left( r - 2m  \right)  }
+\] Integrating this between 
+the centre and the surface of the star, 
+and rearranging, we arrive at the equation 
+\[
+	p_ c  = \rho \frac{\left( 
+	1 - \frac{2M}{R }  \right)^{ \frac{1}{ 2} }  - 1 \right) }{
+1 - 3 \left( 1 - \frac{2M}{R }  \right) ^{ \frac{1}{2 } } }
+\] 
+This value diverges at $ M / R  = \frac{4}{9  } $, 
+which means that the inequality is saturated. 
+
+If the inequality was not 
+saturated, then $ p _ c $ would not have 
+diverged there, which suggests 'room to grow'. 
+
+
+\subsection{Question 7}
+
+Starting from the 
+expression for a particle moving in the 
+Schwarzchild potential, we have our 
+equation as 
+\[
+	\frac{1}{2 } \dot{ r } ^ 2 + \frac{1}{2 } \left( 1 - 
+	\frac{2M}{r } \right)   \frac{b ^ 2 }{ r ^ 2 }  = \frac{1}{2 } 
+\] Here, we've rescaled $ E = 1 $ since 
+we're dealing with null geodesics. 
+At the closest point to the 
+origin, where $ \dot{ r  }  = 0  $, 
+we have that 
+\[
+ b  = \sqrt{ \frac{r ^ 3 }{ r - 2 M }} 
+\] If we seek a stationary point for $ b$, 
+this is at $ r _ *  = 3M $ for $ r _ *   >  2M $. 
+This corresponds to 
+$ b_{ \text{max } }  = 3 \sqrt{ 3 }  M $. 
+
+$ b $ is the distance 
+
+Hence, if you fire a photon with a 
+parameter smaller than this radius, it will 
+be 'captured'. So, we can 
+view this as equivalent to an absorbing
+disk of area $ \pi 27 M ^ 2 $. 
+
+\subsection{Question 9}
+The region II 
+in a Kruskal diagram is enclosed by 
+$ r = 0 $ on the top, 
+and the positive axes for $ U $ and $ V $. 
+In this region, $ 0 < r < 2M $. 
+
+For any time-like geodesic, 
+we have the equation of motion as
+\[
+ \dot{ r } ^ 2  = E ^ 2  - 1 + \frac{2M}{r }  
+\] Now, we can bound $ E ^ 2 $ below as $ E ^ 2 \leq 0 $. 
+Thus, we have that 
+\[
+	\dot{ r  }  = \sqrt{ \frac{\left( E ^ 2  - 1  \right)  r + 2 M }{ r } }  
+	\geq \sqrt{\frac{ - r + 2 M }{ r } } 
+\] Hence, 
+integrating over this inequality, we have 
+\[
+ 0 \leq \int_ 0 ^ r dr \, \sqrt{ 
+ \frac{r }{ 2 M  - r } }   = \int_ 0 ^{ \tau_{ \text{total }  } } 
+ \leq \int _ 0 ^{ 2 M } ^2 \, \sqrt{\frac{r }{ 2M  - r   }}   = M \pi 
+\] Thus, we 
+get a bound on the total proper time. 
+The right-hand expression 
+can actually be evaluated 
+using the substitution 
+$ r  = 2 M \sin ^ 2 \theta $. 
+
+A curve which yields $ E ^ 2  =0 $
+has $ \frac{dr }{ d\tau  }\mid_{ \tau  =0 }  = 0  $ 
+and $ r_0  = 2 M $. 
+
+\subsection{Question 10}
+Setting $ R  = R \left( \rho  \right)  $ and $ z  = z \left( \rho  \right)  $, 
+changing variables in our 
+metric gives 
+\[
+ ds ^ 2  = d \rho ^ 2 \left( 
+ \left( \frac{dR }{ d \rho }  \right) ^ 2 + \left( \frac{dz }{ d \rho }  \right)  
+ ^ 2  \right) + R \left( \rho  \right)  ^ 2 d \Omega ^ 2  
+\] Comparing coefficients, 
+we have that 
+\[
+	\frac{R ^ 2 }{ \left(  R '  \right)  ^ 2 + \left( 
+	z ' \right)  ^ 2 }  = \rho ^ 2 , \quad \left( R '  \right)  ^2 
+	+ \left( z '  \right)  ^ 2  = \left( 1 +  \frac{M}{2 \rho}  \right)  ^4 
+\] This implies that 
+\[
+ R  = \rho \left(  1 + \frac{M}{2 \rho }   \right)  ^2, 
+ \quad ( R ' )^ 2  = 1 - \frac{M^ 2 }{ 2 \rho ^ 2 } + \frac{M ^ 4 }{16 \rho ^ 4  }
+\]  Substituting this into the above, 
+we get that 
+\[
+	\left( z '  \right) ^2  = \frac{M }{ 2 \rho } \left( 2 
+	+ \frac{M}{\rho } \right)  ^2 , \quad 
+	\implies  z ' = \sqrt{ \frac{M }{ 2 \rho } }  (2 + \frac{M}{\rho }  )
+\] 
+We just integrate this expression to find $ z $ as a function 
+of $ \rho $. 
 \end{document} 

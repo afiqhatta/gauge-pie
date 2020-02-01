@@ -1,16 +1,76 @@
 \boolfalse {citerequest}\boolfalse {citetracker}\boolfalse {pagetracker}\boolfalse {backtracker}\relax 
 \babel@toc {english}{}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {1}Spherical Stars}{1}{section.1}
+\contentsline {section}{\numberline {1}Spherical Stars}{2}{section.1}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {1.1}Cold Stars}{1}{subsection.1.1}
+\contentsline {subsection}{\numberline {1.1}Cold Stars}{2}{subsection.1.1}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {1.2}Spherical Symmetry}{2}{subsection.1.2}
+\contentsline {subsection}{\numberline {1.2}Spherical Symmetry}{3}{subsection.1.2}
 \defcounter {refsection}{0}\relax 
 \contentsline {subsection}{\numberline {1.3}Time independence}{3}{subsection.1.3}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {1.4}Static, Spherically Symmetric Spacetimes}{4}{subsection.1.4}
+\contentsline {subsection}{\numberline {1.4}Static, Spherically Symmetric Spacetimes}{5}{subsection.1.4}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {2}The formation of black holes}{5}{section.2}
+\contentsline {subsection}{\numberline {1.5}Tolman-Oppenheimer-Volkoff Equations}{5}{subsection.1.5}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {3}Useful Identities in General Relativity for Black Holes}{6}{section.3}
+\contentsline {subsection}{\numberline {1.6}Outside the Star: Schwarzchild Solution}{6}{subsection.1.6}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {1.7}Inside the Star - the Interior Solution}{6}{subsection.1.7}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {1.8}Maximum Mass of a cold star}{8}{subsection.1.8}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {2}The Schwarzchild Solution}{8}{section.2}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {2.1}Birkhoff's Theorem}{8}{subsection.2.1}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {2.2}Gravitational Redshift}{9}{subsection.2.2}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {2.3}Geodesics}{10}{subsection.2.3}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {2.4}Eddington Finkelstein Coordinates}{10}{subsection.2.4}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {2.5}The Black Hole Region}{12}{subsection.2.5}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {2.6}White Holes}{13}{subsection.2.6}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {2.7}The Kruskal Extension}{14}{subsection.2.7}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {2.8}Einstein Rosen Bridges}{14}{subsection.2.8}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {2.9}Extendibility}{15}{subsection.2.9}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {2.10}Singularities}{15}{subsection.2.10}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {3}The Initial Value Problem}{17}{section.3}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {3.1}Predictability}{17}{subsection.3.1}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {3.2}Extrinsic Curvature}{18}{subsection.3.2}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {3.3}Gauss-Codecci equations}{19}{subsection.3.3}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {3.4}The Constraint Equations}{20}{subsection.3.4}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {3.5}The Schwarzchild Solution}{21}{subsection.3.5}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{\numberline {3.5.1}Conserved quantities and Geodesics}{21}{subsubsection.3.5.1}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{\numberline {3.5.2}Eddington-Finkelstein Coordinates}{22}{subsubsection.3.5.2}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{\numberline {3.5.3}The Kruskal Extension}{22}{subsubsection.3.5.3}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {4}The formation of black holes}{22}{section.4}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {5}Useful Identities in General Relativity for Black Holes}{23}{section.5}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {5.1}Question 3}{26}{subsection.5.1}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {5.2}Question 4}{26}{subsection.5.2}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {5.3}Question 5}{26}{subsection.5.3}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {5.4}Question 7}{27}{subsection.5.4}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {5.5}Question 9}{27}{subsection.5.5}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {5.6}Question 10}{28}{subsection.5.6}
