@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.19 (TeX Live 2018) (preloaded format=pdflatex 2019.1.15)  28 JAN 2020 13:38
+This is pdfTeX, Version 3.14159265-2.6-1.40.19 (TeX Live 2018) (preloaded format=pdflatex 2019.1.15)  4 FEB 2020 19:31
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -2349,16 +2349,16 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
 
 [2]
 ./article.tex:202: You can't use `macro parameter character #' in math mode.
-l.202 		We also have that $ #
-                              3 = # \overline{ 3 } $, and $ # 2 $ even.
+l.202 	We also have that $ #
+                             3 = # \overline{ 3 } $, and $ # 2 $ even.
 Sorry, but I'm not programmed to handle this case;
 I'll just pretend that you didn't ask for it.
 If you're in the wrong mode, you might be able to
 return to the right one by typing `I}' or `I$' or `I\par'.
 
 ./article.tex:202: You can't use `macro parameter character #' in math mode.
-l.202 		We also have that $ # 3 = #
-                                    \overline{ 3 } $, and $ # 2 $ even.
+l.202 	We also have that $ # 3 = #
+                                   \overline{ 3 } $, and $ # 2 $ even.
 Sorry, but I'm not programmed to handle this case;
 I'll just pretend that you didn't ask for it.
 If you're in the wrong mode, you might be able to
@@ -2375,16 +2375,16 @@ return to the right one by typing `I}' or `I$' or `I\par'.
 ./article.tex:228: Display math should end with $$.
 <to be read again> 
                     
-l.228 		 \alpha ^{ - 1 }  = $ 
-                              \overline{h} \frac{c}{e ^ 2 }$
+l.228 	 \alpha ^{ - 1 }  = $ 
+                             \overline{h} \frac{c}{e ^ 2 }$
 The `$' that I just saw supposedly matches a previous `$$'.
 So I shall assume that you typed `$$' both times.
 
 ./article.tex:228: Missing $ inserted.
 <inserted text> 
                 $
-l.228 		 \alpha ^{ - 1 }  = $ \overline{h}
-                                           \frac{c}{e ^ 2 }$
+l.228 	 \alpha ^{ - 1 }  = $ \overline{h}
+                                          \frac{c}{e ^ 2 }$
 I've inserted a begin-math/end-math symbol since I think
 you left one out. Proceed, with fingers crossed.
 
@@ -2395,8 +2395,8 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.229 		\]
-          
+l.229 	\]
+         
 Your command was ignored.
 Type  I <command> <return>  to replace it with another command,
 or  <return>  to continue without it.
@@ -2404,8 +2404,8 @@ or  <return>  to continue without it.
 ./article.tex:229: Missing $ inserted.
 <inserted text> 
                 $
-l.229 		\]
-          
+l.229 	\]
+         
 I've inserted something that you may have forgotten.
 (See the <inserted text> above.)
 With luck, this will get me unwedged. But if you
@@ -2415,8 +2415,8 @@ my insertion and my current dilemma will both disappear.
 ./article.tex:229: Display math should end with $$.
 <to be read again> 
                    \endgroup 
-l.229 		\]
-          
+l.229 	\]
+         
 The `$' that I just saw supposedly matches a previous `$$'.
 So I shall assume that you typed `$$' both times.
 
@@ -2497,8 +2497,8 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
 ./article.tex:928: Double superscript.
 \tnsr@Fin ->^
              {\the \tnsr@Sps }_{\the \tnsr@Sbs }
-l.928  \dot{ \beta }  } }
-                          \overline{ \chi } _{ \dot{ \beta }  }
+l.928 \dot{ \beta }  } }
+                         \overline{ \chi } _{ \dot{ \beta }  }
 I treat `x^1^2' essentially like `x^1{}^2'.
 
 
@@ -3072,6 +3072,35 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
 
 [11]
 
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `math shift' on input line 962.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `math shift' on input line 962.
+
+./article.tex:983: Missing { inserted.
+<to be read again> 
+                   ^
+l.983 J ^ 2  = J_ 1 ^ 2 + J _ 2 ^ 2 + J _ ^
+                                            2 \]
+A left brace was mandatory here, so I've put one in.
+You might want to delete and/or insert some corrections
+so that I will find a matching right brace soon.
+(If you're confused by all this, try typing `I}' now.)
+
+./article.tex:983: Missing } inserted.
+<inserted text> 
+                }
+l.983 J ^ 2  = J_ 1 ^ 2 + J _ 2 ^ 2 + J _ ^ 2 \]
+                                                
+I've inserted something that you may have forgotten.
+(See the <inserted text> above.)
+With luck, this will get me unwedged. But if you
+really didn't forget anything, try typing `2' now; then
+my insertion and my current dilemma will both disappear.
+
+
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
  Make it at least 13.59999pt.
  We now make it that large for the rest of the document.
@@ -3085,6 +3114,10 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  This may cause the page layout to be inconsistent, however.
 
 [13]
+Overfull \hbox (1.44014pt too wide) in paragraph at lines 1158--1161
+[]\T1/cmr/m/n/10.95 When $\OML/cmm/m/it/10.95 p[] \OT1/cmr/m/n/10.95 = []$\T1/cmr/m/n/10.95 , this is called the vac-uum. When $\OML/cmm/m/it/10.95 p[]p[] < \OT1/cmr/m/n/10.95 0$\T1/cmr/m/n/10.95 , these are called Tachyons. 
+ []
+
 
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
  Make it at least 13.59999pt.
@@ -3099,30 +3132,44 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  This may cause the page layout to be inconsistent, however.
 
 [15]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 1151.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 1151.
+
+Package Fancyhdr Warning: \headheight is too small (12.0pt): 
+ Make it at least 13.59999pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+
+[16]
+
+Package Fancyhdr Warning: \headheight is too small (12.0pt): 
+ Make it at least 13.59999pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+
+[17]
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 1359.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 1359.
  (./article.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 1151.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 1151.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 1359.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 1359.
 Package rerunfilecheck Info: File `article.out' has not changed.
-(rerunfilecheck)             Checksum: 0095D15B52731F637B29DB6D68DD5353;703.
+(rerunfilecheck)             Checksum: 3F8946C1F37F62CAE6497CA2DAAF6F0E;1018.
 Package logreq Info: Writing requests to 'article.run.xml'.
 \openout1 = `article.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 49161 strings out of 492649
- 1090450 string characters out of 6129622
+ 49169 strings out of 492649
+ 1090574 string characters out of 6129622
  1632330 words of memory out of 5000000
- 52256 multiletter control sequences out of 15000+600000
+ 52259 multiletter control sequences out of 15000+600000
  547429 words of font info for 68 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  62i,17n,96p,10402b,1688s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/local/texlive/2018/texmf-dist/fonts/enc/dvips/cm-super/cm-super-t1.enc}{/usr/local/texlive/2018/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc}</usr/local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy6.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/cm-super/sfbx1095.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/cm-super/sfbx1200.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/cm-super/sfbx1440.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/cm-super/sfrm0800.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/cm-super/sfrm1095.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/cm-super/sfrm1200.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/cm-super/sfrm1728.pfb>
-Output written on article.pdf (15 pages, 286177 bytes).
+Output written on article.pdf (17 pages, 298932 bytes).
 PDF statistics:
- 220 PDF objects out of 1000 (max. 8388607)
- 184 compressed objects within 2 object streams
- 33 named destinations out of 1000 (max. 500000)
- 109 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 247 PDF objects out of 1000 (max. 8388607)
+ 208 compressed objects within 3 object streams
+ 38 named destinations out of 1000 (max. 500000)
+ 133 words of extra memory for PDF output out of 10000 (max. 10000000)
 

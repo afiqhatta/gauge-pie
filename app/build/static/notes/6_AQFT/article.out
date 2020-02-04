@@ -3,14 +3,17 @@
 \BOOKMARK [2][-]{subsection.2.1}{Free Theory}{section.2}% 3
 \BOOKMARK [2][-]{subsection.2.2}{Interacting Theory}{section.2}% 4
 \BOOKMARK [2][-]{subsection.2.3}{Quantum Effective Action}{section.2}% 5
-\BOOKMARK [3][-]{subsubsection.2.3.1}{Path Integral Derivations}{subsection.2.3}% 6
-\BOOKMARK [3][-]{subsubsection.2.3.2}{Free Partition Functions}{subsection.2.3}% 7
-\BOOKMARK [3][-]{subsubsection.2.3.3}{Feynman Diagrams}{subsection.2.3}% 8
-\BOOKMARK [3][-]{subsubsection.2.3.4}{Effective Actions}{subsection.2.3}% 9
-\BOOKMARK [1][-]{section.3}{Regularisation and Renormalisation}{}% 10
-\BOOKMARK [1][-]{section.4}{Gauge Theories}{}% 11
-\BOOKMARK [1][-]{section.5}{Formulating the Path Integral}{}% 12
-\BOOKMARK [2][-]{subsection.5.1}{Classical and Quantum Mechanics}{section.5}% 13
-\BOOKMARK [2][-]{subsection.5.2}{Formulating the Path Integral}{section.5}% 14
-\BOOKMARK [1][-]{section.6}{Useful Identities}{}% 15
-\BOOKMARK [2][-]{subsection.6.1}{Integral Identities}{section.6}% 16
+\BOOKMARK [2][-]{subsection.2.4}{Fermions and Grassman Variables}{section.2}% 6
+\BOOKMARK [3][-]{subsubsection.2.4.1}{Fermionic Free Field Theory}{subsection.2.4}% 7
+\BOOKMARK [1][-]{section.3}{LSZ Reduction Formula}{}% 8
+\BOOKMARK [2][-]{subsubsection.3.0.1}{Path Integral Derivations}{section.3}% 9
+\BOOKMARK [3][-]{subsubsection.3.0.2}{Free Partition Functions}{subsubsection.3.0.1}% 10
+\BOOKMARK [3][-]{subsubsection.3.0.3}{Feynman Diagrams}{subsubsection.3.0.1}% 11
+\BOOKMARK [3][-]{subsubsection.3.0.4}{Effective Actions}{subsubsection.3.0.1}% 12
+\BOOKMARK [1][-]{section.4}{Regularisation and Renormalisation}{}% 13
+\BOOKMARK [1][-]{section.5}{Gauge Theories}{}% 14
+\BOOKMARK [1][-]{section.6}{Formulating the Path Integral}{}% 15
+\BOOKMARK [2][-]{subsection.6.1}{Classical and Quantum Mechanics}{section.6}% 16
+\BOOKMARK [2][-]{subsection.6.2}{Formulating the Path Integral}{section.6}% 17
+\BOOKMARK [1][-]{section.7}{Useful Identities}{}% 18
+\BOOKMARK [2][-]{subsection.7.1}{Integral Identities}{section.7}% 19

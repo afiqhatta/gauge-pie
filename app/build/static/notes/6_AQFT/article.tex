@@ -92,6 +92,8 @@
 \newcommand{\anop}[2]{ #1_\mathbf{#2}}
 \newcommand{\crop}[2]{#1_\mathbf{#2}^\dagger}
 \renewcommand{\op}[1]{\hat{\mathbf{#1}}}
+\let\vec\mathbf
+
 
 \usepackage{helvet} 
 
@@ -1039,6 +1041,346 @@ if it has no bridges.
 The irreducible parts are loops. 
 Buried within it, 
 $ \Gamma $ sums up the loop diagrams (1PI). 
+
+\subsection{Fermions and Grassman Variables}
+In zero dimensions, 
+we don't have a concept of spin, 
+since we don't even have a way to 
+orientate things correctly. 
+Thus, the best we can do is 
+to construct a set of $ N $ variables, 
+fermion fields, which anti-commute. 
+
+We call these fields $ \theta ^ a , a  = 1, \dots N $. 
+This has the characteristic property that 
+\[
+ \theta_ a \theta _ b  =  - \theta_ b \theta _ a , \quad a = 1 , \dots N 
+\] 
+This in particular implies that 
+for a given field $ \theta ^ a $, we have 
+\[
+ \theta ^ a \theta ^ a  =0
+\] They also 
+have the property that they commute with 
+scalar fields, 
+so we have that 
+\[
+ \phi _ a \psi _ b  = \psi _ b \phi _ a , \quad a = 1 , \dots N 
+\] 
+With this data, we can define functions 
+of these variables as a finite expansion.  
+\[
+ F \left( \theta  \right)  = f + \rho _ a \theta ^ a 	
+ + \frac{1}{2 ! }g _{ ab } \theta ^a \theta ^ b + \frac{1}{n ! }\dots h_{ ab \dots n } \theta ^ a \theta ^ b 
+ \dots \theta ^ n 
+\] In these 
+expansions, we have that each of the 
+tensors are totally anti-symmetric.
+Suppose that we only had one field 
+in the case that $ a = 1 $ only. 
+Then, the most 
+general function we could write with this is 
+\[
+ F \left( \theta  \right)   = f + \rho \theta 
+\] since any terms of higher order 
+go to zero by antisymmetry. 
+
+We define differentiation and 
+integration on these variables as follows.
+For differentiation, we have that 
+\[
+ \frac{\partial}{\partial \theta ^ a  } \theta ^ b + \theta ^ b \frac{\partial   }{\partial  \theta ^ a }  
+  = \delta \indices{ ^ b _ a }  
+\] We 
+also have the integration rules. 
+
+The integrals should be invariant under 
+translation, so 
+\[
+	\int d \theta \left( \theta + \eta  \right)   = \int d \theta \theta 
+\] If we're dealing with a single variable, 
+we can then integrate by parts, since clearly 
+\[
+	\int d \theta \frac{\partial   }{\partial  \theta }  F \left( \theta  \right)    = 0 	 
+\]  We can extend this to 
+integration rules for $ n $ variables. 
+Namely, we only have a non-vanishing integral when 
+our integrand is a product of one power 
+of each Grassman number.
+\[
+ \int d ^ n \theta ^ 1 \dots \theta ^ n  = 1 
+\] By antisymmetry, we have that for a 
+given ordering of the Grassman variables, we have that 
+\[
+ \int d ^ n \theta \, \theta ^{ a_1 } \dots \theta ^{ a _ n  }
+  = \epsilon ^{ a_1 \dots a_ n} 
+\] We can compute the Jacobian of 
+this measure as follows. Suppose 
+that we relate a set of new Grassman 
+variables $ \theta^{  ' a  }  = N \indices{^ a _ b } \theta ^ b  $, 
+where $ N \in GL \left( 2 , \mathbb{ C }  \right)   $. 
+This means that 
+we have, integrating over the variables, 
+\begin{align*}
+	\int d ^ n \theta \, \theta ^{ ' a_1  } \theta ^{ ' a_2  } \dots \theta ^{  ' a_ n  } 
+	&=  N \indices{ ^{ a_1 } _{ b_ 1 } } N \indices{ ^{ a_2  } _{ b_2 } } 
+	\dots N \indices{ ^{ a_n  } _{ b_n  }  } \int d^ n \theta ^{ b_ 1 } \dots \theta ^{ b _ n }  \\
+	&=  N \indices{ ^{ a_1 } _{ b_1 }  } \dots N \indices{ ^{ a_ n } _{b _ n } } 
+	\epsilon ^{ b_ 1 \dots b _ n }  \\
+	&=  \det N \epsilon ^{ a_1 \dots a_  n }  \\
+	&=  \det N \int d ^ n \theta ^{  ' } \theta^{ ' a_1 } \dots \theta ^{  ' a _n  }  
+\end{align*} 
+
+This implies that $ d ^ n  \theta  = \det N d ^ n \theta ' $.
+
+\subsubsection{Fermionic Free Field Theory}
+If we 
+want to build a bosonic theory out of fermions, 
+we need to include an even number of 
+fermions. 
+In full generality, this 
+means our action has to take the form 
+\[
+ S \left( \theta  \right)  = \frac{1}{2 } A_{ ab } \theta ^ a \theta ^ b 
+\] We have that this is 
+\begin{align*}
+	\mathcal{ Z }_ 0  &=  \int  d^{ 2m } \theta e ^{  - S\left( \theta  \right)   }  \\ 
+			  &=  \int d ^{ 2m } \theta e ^{  - \frac{1}{2  } A\left( \theta, \theta  \right) } \\
+			  &=  \int d ^{ 2m } \theta 
+			  \sum_{ n  =0 } ^{ 2m } \frac{\left(  - 1  \right)  ^ n }{ 
+			  \left( 2 \hbar  \right)  ^ n n !  } \left( A _{ ab } \theta ^ a 
+		  \theta ^ b \right)  ^ n 
+\end{align*}
+
+Notice however, that 
+when we perform Berezin integration, 
+only terms which 
+have a single power of each variable
+don't vanish. 
+Hence, the only term which doesn't 
+vanish is when $ n = 2m $, 
+\begin{align*}
+	\mathcal{  Z} _ 0 & = 
+	\int d ^2m \theta \frac{\left(  - 1  \right)  ^ n  }{ 
+	\left( 2 \hbar  \right)  ^ n n ! } A_{ a_1 a_2 } \dots A _{ a_{ 2m - 1 } a _{ 2m } } 
+	\theta ^{ a_1 } \theta ^{ a_2 } \dots \theta ^{ a _{ 2m } } \\
+			  &=  \frac{\left( - 1  \right)  ^ n }{ 
+			  \left( 2 \hbar  \right)  ^ n n ! } A_{ a_1 a_2 } \dots 
+			  A_{ a _{ 2m  - 1 } a _{ 2m }  } \epsilon ^{ 
+			  a_1 \dots a _{ 2m  } }
+\end{align*}
+
+
+\pagebreak 
+\section{LSZ Reduction Formula}
+We're going to 
+do an illustrative example here, 
+so we can get some intuition going on 
+in terms of a free theory. 
+The main result we'll be exploring 
+today is 
+scattering amplitudes in terms 
+of correlation functions. For example,
+let's look at $ 2 \to 2 $ scattering 
+of scalar particles. 
+Recall from the previous set of notes 
+from quantum field theory, that our scattering 
+amplitude can be written in the form $ \bra{ f }S\ket{ i } $. 
+Now, it is in our interest to try and find out 
+what this is in terms of our correlation functions of 
+our fields $ \phi \left( x  \right) $. 
+Recall that a correlation function looks like $ \bra{0}\mathcal{T }\phi ( x_1 )\phi(x_2 )\ket{0}    $. 
+This is what our LSZ reduction formula is. 
+
+Our motivation for proceeding 
+is as follows. 
+Since initial and final states $ \ket{ i }, \ket{ f }  $ 
+are written in terms of creation operators, 
+we will need to invert these to 
+get expressions in $ \phi $. 
+
+We write our free scalar field 
+which can be built out of plane waves. 
+\[
+	\phi \left( \vec{x}  \right)  = \int \frac{d^ 3 k }{ \left( 2 \pi  \right)  ^ 3 
+	2 E } \left[  a \left( \vec{k}  \right)  e^{  - i k \cdot  x } + 
+a ^\dagger \left( \vec{k}  \right)  e ^{ i k \cdot  x } \right] 
+\] where we have $ k \cdot  x  = E t  - \vec{k} \cdot  \vec{x} $ . 
+We have relativistic 
+normalisation for $ a \left( \vec{k}  \right)  $. 
+Now, it's convenient to 
+invert this expression via the inverse Fourier transform 
+of the field and it's derivative 
+\[
+	\int d ^ 3 x e ^{ i k \cdot  x } \phi \left( \vec{x}  \right)  , \quad 
+	\int d ^ 3 x e ^{ i k \cdot   x } \partial  _ 0 \phi \left( x    \right)  
+\] One 
+can easily verify that the identities below 
+hold, using the standard identities. 
+\begin{align*}
+	a\left( \vec{k}   \right)  &=  \int d ^ 3 x e ^{ i k \cdot  x } 
+	\left[  i \partial  _ 0 \phi \left( x \right) + E \phi \left( x  \right)    \right]  \\ 
+	a ^\dagger \left( \vec{k}  \right)  &=  \int d ^ 3 x e ^{  - i k \cdot   x } 
+	\left[   -  i \partial  _ 0 \phi (x ) + E \phi \left( x  \right)   \right] 
+\end{align*}
+We set our initial and final states for the free theory,
+to be one-particle momentum states, 
+created by applying a creation operator 
+to the particle vacuum. 
+\[
+	\ket{ k }  = a ^\dagger \left( k  \right)  \ket{ \Omega } 
+\] where $ \ket{ \Omega } $ is the true vacuum, 
+which in a weakly interacting theory is 
+not too different from the true free vacuum.
+This is a key assumption which 
+we have to make. 
+We have that $ \ket{ \Omega }  $ satisfies 
+$ a \left( k  \right)   \ket{ \Omega }  = 0 $, 
+for all  $ k $, and $ \bra{ \Omega }\ket{ \Omega }  = 1 $ . 
+We have the norm 
+\[
+	\bra{ \vec{k} }\ket{\vec{k}} = \left( 2 \pi  \right)  ^ 3 \left( 2 E  \right)  
+	\delta ^ 3 \left( \vec{k} - \vec{k}  '  \right)  , \quad E  = \sqrt{ \vec{k}^ 2 + m ^ 2 } 
+\] 
+The initial and
+final states we're interested in will 
+be time moving Gaussian wavepackets which we 
+construct from the creation operators. We introduce a Gaussian wavepacket 
+\[
+	a _ 1 ^\dagger : = \int d ^ 3 k f _ 1 \left( \vec{k}  \right)  a ^\dagger \left( \vec{k}  \right)  
+	, \quad f _ 1 \left( \vec{k}  \right)  \propto \exp \left[  
+	- \frac{\left( \vec{k}_ 1  - \vec{k} _ 2   \right)  ^ 2   }{ 4 \sigma ^ 2 }\right] 
+\] similarly, we define a different moving Gaussian wavepacket for $ a _ 2 ^\dagger $ 
+Now, we want to see what happens 
+when these wavepackets collide with each other. 
+
+We can evolve these Gaussians into the 
+distant past and future, 
+where the overlap in coordinate space is negligible. 
+Assume this works when including interactions. 
+
+We are going to evolve including the full Hamiltonian, so, 
+there will be a complication that there is 
+some time dependence. $ a ^\dagger \left( \vec{k}  \right)  $  
+becomes time dependent, so 
+we will get that $ a _  1 ^\dagger \left( t  \right)  $ and $ a _ 2 ^\dagger \left( t  \right)  $ 
+depend on time. 
+
+Assume that as $ t \to \pm \infty $, $ a _ 1 ^\dagger $ and $ a _ 2 ^\dagger $ 
+coincide with their free theory 
+expansions, and that we can Fourier transform 
+without worrying about this complication too much. 
+
+Define the initial and final states
+as two Gaussian wavepackets moving. 
+\begin{align*}
+	\ket{ i }  & = \lim _{ t \to- \infty } a _1 ^\dagger \left( t  \right)  a _ 2 ^\dagger \left( t  \right)  \ket{ \Omega } \\
+	\ket{ f } &=  \lim_{t \to \infty  } a _{1 ' } ^{ \dagger } \left(  t  \right)
+	a _{ 2 ' } ^\dagger \left( t  \right)  \ket{ \Omega } \\
+\end{align*}
+
+We assume that $ \bra{ i }\ket{ i }  = \bra{ f }\ket{ f }  = 1 $, 
+and that $ \vec{k} _ 1 \neq \vec{k} _ 2 $. 
+We want $ \bra{ f }\ket{ i }  $, the scattering  
+amplitude.
+To do this, we need to use a 
+trick. 
+Note for example, that 
+\begin{align*}
+	a _ 1 ^\dagger \left( \infty  \right)   - 
+	a_ 1 ^\dagger \left(  - \infty  \right)  &=  \int_{ - \infty } ^{ \infty } dt 
+	\partial  _ 0 a _ 1 ^\dagger \left( t  \right)  \\ 
+						 &=  \int d ^ 3 k _ 1  f_ 1 \left( k  \right)  
+						 \int d ^ 4 x \partial  _ 0 
+						 \left[  e ^{  - i k \cdot  x } 
+						 \left(  -i \partial  _ 0 \phi 
+					 + E \phi \right)  \right]   \\ 
+						 &=  - i \int d ^ 3 k _ 1 f _ 1 \left( k  \right)  
+						 \int d ^ 4 x e ^{  -i k \cdot  x } 
+						 \left(  \partial _ 0 ^ 2 
+						 +  E ^ 2 \right) \phi \\ 
+						 &=  \int \dots \int d ^ 4 x e ^{  -i k \cdot  x } \left( 
+					 \partial  _ 0 ^ 2  - \nabla ^{ \leftarrow 2 } 
+				 + m ^ 2 \right) \phi ^ 2    \\
+						 &=   -i \int d ^ 3 k f _ 1 \left( x  \right)  
+						 \int d ^ 4 x e ^{  -i k \cdot  x } 
+						 \left( \partial  ^2 + m^ 2   \right)  
+						 \phi  
+\end{align*} 
+This is great, because 
+in the last line, we simply have the Klein-Gordon operator. 
+Note in free theory, we have that 
+our fields solve the Klein-Gordon equation, 
+so in this case we have that the difference is zero. 
+\[
+	a _ 1 ^\dagger \left( \infty  \right)   - a _ 1 ^\dagger\left(  - \infty  \right)   = 0 
+\]
+We are however looking at the 
+weakly interacting case, so the 
+integrand doesn't necessarily evaluate to zero. 
+Now we can start to calculate the 
+scattering amplitude. 
+\[
+ \bra{ f }\ket{ i }  = 
+ \bra{ \Omega } \mathcal{ T } a _{ 1 ' } \left( \infty  \right)  
+ a _{ 2 ' } \left( \infty  \right)  a _{ 1 } ^\dagger \left( - \infty  \right)  
+ a _ 2 ^\dagger \left( - \infty  \right)  \ket{ \Omega } 
+\]  use $ a _ j ^\dagger \left(  - \infty   \right)  = a _ j ^\dagger \left( \infty  \right)   
++ i \int d ^ 3 k f _ j \left( k  \right)  \int d ^ 4 x e ^{  - i k \cdot   x } \left( 
+\partial  ^ 2 + m ^ 2 \right)  \phi $. 
+Similarly, we have that 
+\[
+	a _ j\left( \infty  \right)   =a _ j \left(  - \infty  \right)  
+	+ i \int \dots e ^{ i k \cdot   x } \dots 
+\] Then, the 
+only non-zero term is 
+\begin{align*}
+	\bra{ f }\ket{i } & = \left( i  \right)  ^ 4 
+	\int d ^ 4 x_ 1 d ^ 4 x _ 2 d ^ 4 x ' _ 1 d ^ 4 x ' _ 2 e ^{ 
+	 - k_ 1 \cdot  x } e ^{  - i k _  2 \cdot  x _ 2 } e ^{ i k _ 1 ' \cdot  x _ 1 ' } 
+	 e ^{ i k _ 2 ' \cdot  x _ 2 '  } \\
+			  & \times \left( \partial  _ 1 ^ 2 + m ^ 2  \right)  \left( \partial  _ 2 ^ 2 
+	 + m ^ 2 \right)  \left( \partial  _{ 1 ' } ^ 2 + m ^ 2  \right)  \left( 
+ \partial  _{2 ' } ^ 2 + m ^ 2 \right)  \\
+			  & \times \bra{\Omega } \mathcal{ T } 
+			  \phi \left( x_1  \right)  \phi \left( x_2  \right)  \phi 
+			  \left( x_1 '  \right)  \phi \left( x_2 '   \right) \ket{ \Omega } 
+\end{align*}
+having taken $ \sigma \to 0 $ such that 
+$ f \left( \vec{k} _ j  \right)  \to \delta ^ 3 \left( \vec{k} - \vec{k} _ j  \right)  $. 
+Let's examine 
+assumptions here. 
+The general deviation requires 
+only weaker assumptions. 
+
+\begin{itemize}
+	\item We need a unique $ \Omega $, such that 
+		the first excited state is a single particle. 
+	\item We want $ \phi \ket{ \Omega }  $ to be a 
+		single particle state. In 
+		other words, we want 
+		\[
+		 \bra{ \Omega} \phi \ket{ \Omega}  = 0 
+		\] If not, and $ \bra{ \Omega } \phi \ket{ \Omega }  = v \neq 0 $, 
+		then let $ \tilde{ \phi }  = \phi  -v   $. 
+	\item We want $ \phi $ normalised such that 
+		\[
+			\bra{ k }\phi ( x )\ket{ 0 }  = e ^{ i k \cdot  x } 
+		\] as in the free case. Usually interactions require us 
+		to rescale $ \phi \to Z_{ \phi } ^{ \frac{1}{2 } } \phi $.
+		We see the need to renormalise, for example, 
+		\[
+		 \mathcal{ L } = \frac{1}{2 } \partial _ \mu \phi \partial  ^ \mu 
+		 \phi  - \frac{1}{2 } m ^ 2 \phi ^ 2  - \frac{\lambda }{ 4 ! } \phi ^ 4 
+		\] From here, the coefficients 
+		may spoil the LSZ formula. 
+		\[
+		 \mathcal{ L }  = \frac{Z _ \phi }{ 2 } 
+		 \partial  _ \mu \phi \partial  ^ \mu \phi  - \frac{1}{2 } 
+		 Z _ m m ^ 2 \phi ^ 2  - \frac{ \lambda }{ 4 ! } Z _ \lambda \phi ^ 4 
+		\] 
+\end{itemize}
+
 
 \subsection*{Summary}
 

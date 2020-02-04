@@ -11,24 +11,30 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {subsection}{\numberline {2.3}Quantum Effective Action}{12}{subsection.2.3}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\numberline {2.3.1}Path Integral Derivations}{14}{subsubsection.2.3.1}
+\contentsline {subsection}{\numberline {2.4}Fermions and Grassman Variables}{14}{subsection.2.4}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\numberline {2.3.2}Free Partition Functions}{14}{subsubsection.2.3.2}
+\contentsline {subsubsection}{\numberline {2.4.1}Fermionic Free Field Theory}{15}{subsubsection.2.4.1}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\numberline {2.3.3}Feynman Diagrams}{14}{subsubsection.2.3.3}
+\contentsline {section}{\numberline {3}LSZ Reduction Formula}{16}{section.3}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\numberline {2.3.4}Effective Actions}{15}{subsubsection.2.3.4}
+\contentsline {subsubsection}{\numberline {3.0.1}Path Integral Derivations}{18}{subsubsection.3.0.1}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {3}Regularisation and Renormalisation}{15}{section.3}
+\contentsline {subsubsection}{\numberline {3.0.2}Free Partition Functions}{19}{subsubsection.3.0.2}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {4}Gauge Theories}{15}{section.4}
+\contentsline {subsubsection}{\numberline {3.0.3}Feynman Diagrams}{19}{subsubsection.3.0.3}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {5}Formulating the Path Integral}{15}{section.5}
+\contentsline {subsubsection}{\numberline {3.0.4}Effective Actions}{19}{subsubsection.3.0.4}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {5.1}Classical and Quantum Mechanics}{15}{subsection.5.1}
+\contentsline {section}{\numberline {4}Regularisation and Renormalisation}{20}{section.4}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {5.2}Formulating the Path Integral}{16}{subsection.5.2}
+\contentsline {section}{\numberline {5}Gauge Theories}{20}{section.5}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {6}Useful Identities}{20}{section.6}
+\contentsline {section}{\numberline {6}Formulating the Path Integral}{20}{section.6}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {6.1}Integral Identities}{20}{subsection.6.1}
+\contentsline {subsection}{\numberline {6.1}Classical and Quantum Mechanics}{20}{subsection.6.1}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {6.2}Formulating the Path Integral}{21}{subsection.6.2}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {7}Useful Identities}{25}{section.7}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {7.1}Integral Identities}{25}{subsection.7.1}

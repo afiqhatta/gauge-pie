@@ -1,10 +1,10 @@
 # Fdb version 3
-["biber article"] 1575885209 "article.bcf" "article.bbl" "article" 1580402326
-  "article.bcf" 1580218730 90028 cbd81645b3fad370fbf0b8e4b1821886 ""
+["biber article"] 1575885209 "article.bcf" "article.bbl" "article" 1580844696
+  "article.bcf" 1580844318 90028 cbd81645b3fad370fbf0b8e4b1821886 ""
   (generated)
-  "article.blg"
   "article.bbl"
-["pdflatex"] 1580218726 "article.tex" "article.pdf" "article" 1580402326
+  "article.blg"
+["pdflatex"] 1580844696 "article.tex" "article.pdf" "article" 1580844696
   "/usr/local/texlive/2018/texmf-dist/fonts/enc/dvips/cm-super/cm-super-t1.enc" 1480098666 2971 def0b6c1f0b107b3b936def894055589 ""
   "/usr/local/texlive/2018/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc" 1480098666 2900 1537cc8184ad1792082cd229ecc269f4 ""
   "/usr/local/texlive/2018/texmf-dist/fonts/map/fontname/texfonts.map" 1511824771 3332 103109f5612ad95229751940c61aada0 ""
@@ -309,17 +309,17 @@
   "/usr/local/texlive/2018/texmf-var/fonts/map/pdftex/updmap/pdftex.map" 1523934492 2717033 f61a5287d9c22a39a74f1979fe3f905c ""
   "/usr/local/texlive/2018/texmf-var/web2c/pdftex/pdflatex.fmt" 1547565098 4220280 bdb790c3affd8222f3907c44ab0ae2b6 ""
   "/usr/local/texlive/2018/texmf.cnf" 1523934483 577 0b39adfd7c93507ff20c9c14c2f1a33f ""
-  "article.aux" 1580218729 3458 6eb5edc9ae0be99b8b1779cca742337b ""
+  "article.aux" 1580844318 4025 9326557eda63d95d7bc5f57599ba14de ""
   "article.bbl" 1579338410 0 d41d8cd98f00b204e9800998ecf8427e "biber article"
-  "article.out" 1580218729 703 0095d15b52731f637b29db6d68dd5353 ""
-  "article.run.xml" 1580218730 2245 aac36eed3c889ef1f9bd29739b52ea87 ""
-  "article.tex" 1580218725 42542 15b695649b48d097d37011f5f2d73ff4 ""
-  "article.toc" 1580218730 1477 8eb0658b1fa0fb0e9ea495535a228592 ""
+  "article.out" 1580844318 1018 3f8946c1f37f62cae6497ca2daaf6f0e ""
+  "article.run.xml" 1580844318 2245 aac36eed3c889ef1f9bd29739b52ea87 ""
+  "article.tex" 1580844695 50304 8e72d4bee498144bf583beeaaf3ffdf6 ""
+  "article.toc" 1580844318 1939 32a88df3ccd6cd0b156ccb169559ddb7 ""
   (generated)
-  "article.run.xml"
-  "article.aux"
+  "article.bcf"
+  "article.toc"
   "article.log"
   "article.pdf"
-  "article.bcf"
+  "article.aux"
+  "article.run.xml"
   "article.out"
-  "article.toc"
