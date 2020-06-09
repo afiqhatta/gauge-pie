@@ -146,7 +146,7 @@ In the Schrodinger picture, we have that
 \begin{itemize}
 \item States evolve in time 
 \item Operators and their eigenstates 
-	are constant in time (fixed). 
+are constant in time (fixed). 
 \end{itemize}
 Wavefunctions in position space are denoted
 \[
@@ -229,8 +229,8 @@ e ^{ \hat{ A } / n } e ^{ \hat{B } / n  }\right) ^ n
 Also take $ n $ large such that $ n \delta t  = T $. 
 Then we can write that 
 \[
- e ^{ \frac{ - i \hat{ H } \delta t }{ \planck } }  = \exp\left( \frac{ 
- - i \hat{ p } ^ 2 \delta t }{ 2 m \planck }  \right)  \exp\left( 
+e ^{ \frac{ - i \hat{ H } \delta t }{ \planck } }  = \exp\left( \frac{ 
+- i \hat{ p } ^ 2 \delta t }{ 2 m \planck }  \right)  \exp\left( 
 - \frac{ i V ( \hat{ x } ) \delta t }{ \planck }\right) \left[  
 1 + O ( \delta t ) ^ 2  \right]  
 \] 
@@ -331,7 +331,7 @@ What we want to do is look at the partition function
 as if we are in imaginary time. 
 Let 
 \[
-	\mathcal{ Z }  = \int _{ \R} d \phi  e^{  - S ( \phi  ) / \hbar} 
+\mathcal{ Z }  = \int _{ \mathbb{ R }} d \phi  e^{  - S ( \phi  ) / \hbar} 
 \] We will add some assumptions for this. 
 We assume that $ S \left( \phi  \right)  $ is a polynomial, 
 which is even, and we want it 
@@ -340,8 +340,8 @@ as $ \phi \to \pm \infty  $ .
 What we are concerned with are our expectation values, 
 where 
 \[
- \left< f  \right>  = \frac{1}{\mathcal{ Z }  } 
- \int d \phi f ( \phi ) e ^{  - S / \hbar }
+\left< f  \right>  = \frac{1}{\mathcal{ Z }  } 
+\int d \phi f ( \phi ) e ^{  - S / \hbar }
 \] Again, we assume that 
 $ f $ is well behaved and does not 
 grow too fast as $ \phi \to \infty $. 
@@ -358,8 +358,8 @@ We label these
 $ \phi _ a , a = 1 , \dots N $. 
 The action will be denoted as 
 \[
- S _ 0 \left( \phi  \right)   = 
- \frac{1}{2 } M _{ ab} \phi _ a \phi _ b  = \frac{1}{2 } \phi ^ T M \phi 
+S _ 0 \left( \phi  \right)   = 
+\frac{1}{2 } M _{ ab} \phi _ a \phi _ b  = \frac{1}{2 } \phi ^ T M \phi 
 \] we want $ M $ to be symmetric, $ N \times N $ and positive 
 definite, so that $ \det M > 0 $. 
 So, as we go to a large number of dimensions, 
@@ -371,22 +371,22 @@ We'll generalise this when we go to higher dimensions.
 Here, we can just diagonalise. 
 Looking at the partition function, 
 \[
- M = P \Lambda P ^ T 
+M = P \Lambda P ^ T 
 \] where $ \Lambda $ is diagonal and $ P $ is orthogonal. 
 Lets also do a field redefinition where 
 $ \chi  = P ^ T \phi $. 
 Then, we get that the free partition function 
 \[
-	\mathcal{ Z } _ 0  = \int d ^ N \phi \, \exp \left( 
-	 - \frac{1}{\hbar} \phi ^ T M \phi \right)  = 
-	 \int d ^ N \chi \exp  \left(  - \frac{1}{\hbar } 
-	 \chi ^ T \Lambda \chi \right) 
+\mathcal{ Z } _ 0  = \int d ^ N \phi \, \exp \left( 
+ - \frac{1}{\hbar} \phi ^ T M \phi \right)  = 
+ \int d ^ N \chi \exp  \left(  - \frac{1}{\hbar } 
+ \chi ^ T \Lambda \chi \right) 
 \] We can write this as the product of independent 
 integrals. 
 \[
- \dots  = \int_{ c = 1 } ^ N \int d \chi _ c e ^{
-  - \lambda _ c \chi ^ 2  / 2 \hbar }  = \sqrt{ 
-  \left( 2 \pi \hbar  \right)  ^{ N } / \det M } 
+\dots  = \int_{ c = 1 } ^ N \int d \chi _ c e ^{
+- \lambda _ c \chi ^ 2  / 2 \hbar }  = \sqrt{ 
+\left( 2 \pi \hbar  \right)  ^{ N } / \det M } 
 \] This 
 is a very useful result. 
 When we have to introduce anti-commuting numbers, 
@@ -401,19 +401,19 @@ which we call $ J $, an $ N $ component external
 force. 
 In this case, we map 
 \[
-	S _ 0 \left( \phi  \right)  \to S_ 0 \left( \phi  \right)  + J ^ T \phi 
+S _ 0 \left( \phi  \right)  \to S_ 0 \left( \phi  \right)  + J ^ T \phi 
 \] Now, 
 we extend the definition of the partition function 
 which we call the generating function. 
 \[
- Z_ 0 \left( J  \right)   = \int d ^ 4 \phi \exp 
- \left[   - \frac{1}{2 \hbar } \phi ^ T M \phi  - \frac{1}{\hbar} J ^ T \phi  \right] 
+Z_ 0 \left( J  \right)   = \int d ^ 4 \phi \exp 
+\left[   - \frac{1}{2 \hbar } \phi ^ T M \phi  - \frac{1}{\hbar} J ^ T \phi  \right] 
 \] we now have to complete the square, 
 and set $ \tilde{ \phi }  = \phi + M ^{  -1 } J  $. 
 This allows us to rewrite the generating function as 
 \[
-	Z _ 0 \left( J  \right)   = \mathcal{ Z } _ 0 \left( 0  \right)  
-	\exp \left( \frac{1}{2 \hbar } J ^ T M ^{ - 1} J  \right) 
+Z _ 0 \left( J  \right)   = \mathcal{ Z } _ 0 \left( 0  \right)  
+\exp \left( \frac{1}{2 \hbar } J ^ T M ^{ - 1} J  \right) 
 \] We see here that this is 
 our free theory multiplied by the 
 sources coupled to the matrix that 
@@ -421,24 +421,24 @@ appears in the action.
 This is something that we call a 'generating function', and it will allow us to calculate correlation 
 functions from differentiating with respect to $ J $. 
 \[
-	\left< \phi _ a \phi _ b  \right>  = \frac{1}{\mathcal{ Z } _ 0 \left( 0  \right)  } 
-	\int d ^ N \phi \, \phi _ a \phi _ b \exp 
-	\left(  - \frac{1}{2 \hbar} \phi ^ T M \phi  - \frac{1}{\hbar }
-	J ^ T \phi \right) \mid_{ J = 0 }
+\left< \phi _ a \phi _ b  \right>  = \frac{1}{\mathcal{ Z } _ 0 \left( 0  \right)  } 
+\int d ^ N \phi \, \phi _ a \phi _ b \exp 
+\left(  - \frac{1}{2 \hbar} \phi ^ T M \phi  - \frac{1}{\hbar }
+J ^ T \phi \right) \mid_{ J = 0 }
 \] we can get the $ \phi $ in the integrand by 
 differentiating the exponential with respect to $ J $. 
 So, 
 \begin{align*}
- \left< \phi _ a \phi _ b  \right> &=  \frac{1}{\mathcal{ Z } _ 0 } 
- \int d ^ N \phi \left(   - \hbar \frac{\partial  }{\partial  J _ a }   \right)  
- \left(  - \hbar \frac{\partial  }{\partial  J_ b }   \right)  \exp \left( 
- \dots \right)  \mid_{ J = 0 } \\
-				   &=  \frac{1}{ \mathcal{ Z } _ 0 \left( 0  \right)  } 
-				   \left(  - \hbar \frac{\partial  }{\partial J_ a }  \right)
-				   \left(  - \hbar \frac{\partial  }{\partial  J _ b }   \right)  \mathcal{ Z } _ 0 \left( J  \right)  \mid _{ J = 0 } \\
-				   &=  \hbar \left( M ^{ - 1 }  \right) _{ ab }  \\
-				   &=  \text{(diagram of two nodes 
-				   connected by a line, called free propagator)} \\
+\left< \phi _ a \phi _ b  \right> &=  \frac{1}{\mathcal{ Z } _ 0 } 
+\int d ^ N \phi \left(   - \hbar \frac{\partial  }{\partial  J _ a }   \right)  
+\left(  - \hbar \frac{\partial  }{\partial  J_ b }   \right)  \exp \left( 
+\dots \right)  \mid_{ J = 0 } \\
+			   &=  \frac{1}{ \mathcal{ Z } _ 0 \left( 0  \right)  } 
+			   \left(  - \hbar \frac{\partial  }{\partial J_ a }  \right)
+			   \left(  - \hbar \frac{\partial  }{\partial  J _ b }   \right)  \mathcal{ Z } _ 0 \left( J  \right)  \mid _{ J = 0 } \\
+			   &=  \hbar \left( M ^{ - 1 }  \right) _{ ab }  \\
+			   &=  \text{(diagram of two nodes 
+			   connected by a line, called free propagator)} \\
 \end{align*}
 This is a pairing of the two fields
 which are given by the indices. 
@@ -453,33 +453,33 @@ All these expectation values are linear so we can do
 this. 
 So we write 
 \[
- l \left(  \phi   \right)   = \int_{ a = 1 } ^ N l _ a \phi _ a , \quad 
- l _ a \in \mathbb{ R } 
+l \left(  \phi   \right)   = \int_{ a = 1 } ^ N l _ a \phi _ a , \quad 
+l _ a \in \mathbb{ R } 
 \]  Then, the steps above 
 are equivalent 
 to swapping 
 \[
-	l \left( \phi  \right)  \text{ for } l \left( 
-	 - \hbar \frac{\partial  }{\partial  J } \right)  
-	  = - \hbar \sum_{ a = 1 }^ N l _ a \frac{\partial }{\partial J_ a } 
+l \left( \phi  \right)  \text{ for } l \left( 
+ - \hbar \frac{\partial  }{\partial  J } \right)  
+  = - \hbar \sum_{ a = 1 }^ N l _ a \frac{\partial }{\partial J_ a } 
 \] Our correlation function 
 is thus 
 \[
-	\left< l ^{ \left( 1  \right)  } \left( \phi  \right)  \dots 
-	l ^{ \left( p \right) } \left( \phi  \right)  \right>
-	 = \frac{1}{\mathcal{ Z } _ 0 } \int d ^ N \phi 
-	 \prod_{ i =  1} ^ p l ^{ \left( i  \right)  } \left( \phi  \right) 
-	 e ^{  - \frac{1}{ 2 \hbar } \phi ^ T M \phi  - \frac{1}{\hbar } J ^ T \phi } \mid_{ J =  = 0 }
+\left< l ^{ \left( 1  \right)  } \left( \phi  \right)  \dots 
+l ^{ \left( p \right) } \left( \phi  \right)  \right>
+ = \frac{1}{\mathcal{ Z } _ 0 } \int d ^ N \phi 
+ \prod_{ i =  1} ^ p l ^{ \left( i  \right)  } \left( \phi  \right) 
+ e ^{  - \frac{1}{ 2 \hbar } \phi ^ T M \phi  - \frac{1}{\hbar } J ^ T \phi } \mid_{ J =  = 0 }
 \] Moving the functions of $ \phi $ to functions 
 of derivatives, 
 we find that this is equal to 
 \[
-	\left< \lambda ^{ \left( 1  \right)  } \left( \phi  \right)  
-	\dots l ^{\left( p  \right)  }\left( \phi  \right)  \right>  
-	 = \left(  - \hbar  \right)  ^ p 
-	 \prod _{ i = 1 } ^ p l ^{ \left( i  \right)  } 
-	 \left( \frac{\partial  }{\partial  J }   \right)  \exp \left( 
-	 \frac{1}{  2 \hbar} J ^{ T } M ^{ - 1 } J \right) \mid_{ J = 0 } 
+\left< \lambda ^{ \left( 1  \right)  } \left( \phi  \right)  
+\dots l ^{\left( p  \right)  }\left( \phi  \right)  \right>  
+ = \left(  - \hbar  \right)  ^ p 
+ \prod _{ i = 1 } ^ p l ^{ \left( i  \right)  } 
+ \left( \frac{\partial  }{\partial  J }   \right)  \exp \left( 
+ \frac{1}{  2 \hbar} J ^{ T } M ^{ - 1 } J \right) \mid_{ J = 0 } 
 \]  
 Now, if $ p$  is odd the answer is zero, 
 then the integrand is odd in some $ \phi _a $ 
@@ -506,13 +506,13 @@ We can represent this as connecting different lines.
 The number of terms is the number of 
 ways of forming pairs, which os 
 \[
-	\frac{\left(  2k  \right)  ! }{ 2 ^ k k ! }  = \text{ # ways of permutating points }
-	/ ( \text{ permute inside pair }  \times \text{ permute pairs } ) 
+\frac{\left(  2k  \right)  ! }{ 2 ^ k k ! }  = \text{ number ways of permutating points }
+/ ( \text{ permute inside pair }  \times \text{ permute pairs } ) 
 \]  If we have a complex matrix, 
 $ \phi _ a $ complex and $ M $ hermitian, 
-then $ \left< \phi _ a \phi _ b ^ *  \right>  =  \hbar M ^{ab  }^{ - 1 } $ 
+then $ \left< \phi _ a \phi _ b ^ *  \right>  =  \hbar ( M { - 1 }) ^{ ab } $ 
 is represented by a line with an arrow from $ a $ to $ b $. 
- 
+
 \subsection{Interacting Theory}
 We want to go beyond 
 the free theory and add higher power terms 
@@ -527,7 +527,7 @@ because the expansion may not even be convergent.
 
 Lets look at integrals like 
 \[
-	\int d \phi f \left( \phi  \right)  e ^{  - S / \hbar}
+\int d \phi f \left( \phi  \right)  e ^{  - S / \hbar}
 \] which do not have a Taylor expansion 
 about $ \hbar   = 0 $. 
 The proof is by Dyson. 
@@ -552,26 +552,26 @@ at origin).
 
 So, our $ \hbar $  - expansion is at best asymptotic. 
 \[
- I \left( \hbar  \right)  \sim \sum_{ n = 0 } ^{ \infty } c _ n \hbar ^  n 
+I \left( \hbar  \right)  \sim \sum_{ n = 0 } ^{ \infty } c _ n \hbar ^  n 
 \] where $ \sim $ means asymptotic to. 
 This means that 
 \[
-	\lim _{ \hbar \to 0 } \frac{1}{ \hbar^ N  } | I \left( \hbar  \right)  
-	 - \sum_{ n = 0 } ^ N c _ n \hbar ^ n | = 0 
- \]  where the limit is taken with $ N $ fixed. 
- As we take $ \hbar$ to zero, the series
- is arbitrarily close to zero. 
+\lim _{ \hbar \to 0 } \frac{1}{ \hbar^ N  } | I \left( \hbar  \right)  
+ - \sum_{ n = 0 } ^ N c _ n \hbar ^ n | = 0 
+\]  where the limit is taken with $ N $ fixed. 
+As we take $ \hbar$ to zero, the series
+is arbitrarily close to zero. 
 
- It is important to note that 
- the series misses out a transcendental terms 
- like $ e^{  - \frac{1}{\hbar ^ 2 } } \sim 0  $. 
- But, $ e ^{  - \frac{1}{\hbar ^ 2 } } $ for finite $ \hbar$. 
- These are what we call 'non-perturbative contributions'. 
+It is important to note that 
+the series misses out a transcendental terms 
+like $ e^{  - \frac{1}{\hbar ^ 2 } } \sim 0  $. 
+But, $ e ^{  - \frac{1}{\hbar ^ 2 } } $ for finite $ \hbar$. 
+These are what we call 'non-perturbative contributions'. 
 Let's get 
 back to the theory we're interested in. 
 Take our action to be 
 \[
- S \left( \phi  \right)   = \frac{1}{2 } m ^ 2 \phi ^ 2 + \frac{\lambda }{ 4 ! } \phi ^ 4 
+S \left( \phi  \right)   = \frac{1}{2 } m ^ 2 \phi ^ 2 + \frac{\lambda }{ 4 ! } \phi ^ 4 
 \] where we set $ S_ 0 \left( \phi  \right)  $ to be the first term, 
 and $ S _ 1 \left( \phi  \right)  $ to be the second term. 
 Here, we also assume that $ m ^ 2 > 0 $ and $ \lambda > 0 $. 
@@ -580,9 +580,9 @@ We can expand about the minimum of $ S \left( \phi  \right)  $,
 where $ \phi  = 0 $. 
 We expand about the saddle point, so that 
 \begin{align*}
-	\mathcal{ Z } &=  \int d \phi e ^{  - S / \hbar }  \\
-	&=  \int d \phi e ^{  - S_0 / \hbar } \sum_{ v  = 0  } ^{ \infty } 
-	\frac{1}{ V! } \left(  - \frac{\lambda}{4 !  \hbar }  \right) ^{ v } \phi ^{ 4 v } 
+\mathcal{ Z } &=  \int d \phi e ^{  - S / \hbar }  \\
+&=  \int d \phi e ^{  - S_0 / \hbar } \sum_{ v  = 0  } ^{ \infty } 
+\frac{1}{ V! } \left(  - \frac{\lambda}{4 !  \hbar }  \right) ^{ v } \phi ^{ 4 v } 
 \end{align*}
 what we'll do is that we'll truncate the series 
 so that we miss out transcendental terms. 
@@ -593,20 +593,20 @@ like what we had before.
 
 In the end what we have, is a series that 
 \[
- \mathcal{ Z } \sim \frac{\sqrt{ 2 \hbar }  }{ m } \sum_{ v = 0 }^{ N } \frac{1}{v ! } 
- \left(  - \frac{\hbar \lambda }{ 4 ! m ^ 4   }  \right)^ v 2 ^{ 2v } 
- \int _ 0 ^ \infty d x \, e ^{ - x } x^{ 2v + \frac{1}{2 }  - 1 } 
+\mathcal{ Z } \sim \frac{\sqrt{ 2 \hbar }  }{ m } \sum_{ v = 0 }^{ N } \frac{1}{v ! } 
+\left(  - \frac{\hbar \lambda }{ 4 ! m ^ 4   }  \right)^ v 2 ^{ 2v } 
+\int _ 0 ^ \infty d x \, e ^{ - x } x^{ 2v + \frac{1}{2 }  - 1 } 
 \]  where $ x  = \frac{1}{ 2 \hbar } m ^ 2 \phi ^ 2 $. 
 The integrand is just a gamma function, where 
 \[
- \int _ 0 ^{ \infty } dx \, e ^{ - x } x ^{ 2 v + \frac{1}{2 } - 1 } 
- = \Gamma \left(  2v + \frac{1}{2 }  \right)   = \frac{ \left( 4v  \right)  ! 
- \sqrt{ \pi }  }{ 4 ^{ 2v } \left( 2v  \right)  ! }
+\int _ 0 ^{ \infty } dx \, e ^{ - x } x ^{ 2 v + \frac{1}{2 } - 1 } 
+= \Gamma \left(  2v + \frac{1}{2 }  \right)   = \frac{ \left( 4v  \right)  ! 
+\sqrt{ \pi }  }{ 4 ^{ 2v } \left( 2v  \right)  ! }
 \] In closed form, we have 
 \[
- Z \sim \frac{ \sqrt{ 2 \pi \hbar }  }{ m } 
- \sum _{ v = 0 }^{ N } \left(  - \frac{ \hbar \lambda  }{ m }  \right)^{ v } 
- \frac{1}{\left( 4 !  \right)  ^{ v } v ! } \frac{\left( 4v   \right) ! }{ }
+Z \sim \frac{ \sqrt{ 2 \pi \hbar }  }{ m } 
+\sum _{ v = 0 }^{ N } \left(  - \frac{ \hbar \lambda  }{ m }  \right)^{ v } 
+\frac{1}{\left( 4 !  \right)  ^{ v } v ! } \frac{\left( 4v   \right) ! }{ }
 \] From String's approximation, 
 we have that $ v ! \sim e ^{ v \log v } $, 
 then the factors which are multiplied together 
@@ -622,23 +622,23 @@ method.
 If we write the action 
 including a source term 
 \begin{align*}
-	\mathcal{ Z } \left( J  \right)  & = \int d \phi  \exp \left\{  
-	-\frac{1}{\hbar } \left( S _ 0 \left( \phi  \right)  + S _ 1 \left( \phi  \right)  
+\mathcal{ Z } \left( J  \right)  & = \int d \phi  \exp \left\{  
+-\frac{1}{\hbar } \left( S _ 0 \left( \phi  \right)  + S _ 1 \left( \phi  \right)  
 + J \phi \right)   \right\} \\
-					 &=  \exp \left[  - \frac{1}{\hbar } S_ 1 \left(  - \hbar \frac{\partial }{\partial  J }  \right)  \right] \int 
-					 d \phi \exp \left\{  
-					 - \frac{1}{\hbar } \left( 
-				 S_ 0 + J \phi \right) \right\} \\
-				 & \propto 
-				 \exp \left[  
-				 - \frac{ \lambda  }{ 4 ! \hbar } \left( 
-			 \hbar \frac{\partial  }{\partial  J }  \right)  ^ 4 \right]
-			 \exp \left( \frac{1}{ 2 \hbar  } J ^ T 
-			 M ^{ - 1 } J \right) \\
-			 & \sim \sum_{ v  =0 } ^ N \frac{1}{ v ! } 
-			 \left[   - \frac{ \lambda }{ 4 ! \hbar } \left( 
-			 \hbar \frac{\partial  }{\partial  J }   \right) ^ 4   \right] ^ V 
-			 \sum_{ p = 0  } \frac{1}{p !  } \left( \frac{1}{ 2 \hbar } J m ^{ - 2 }  J \right) ^ P  
+				 &=  \exp \left[  - \frac{1}{\hbar } S_ 1 \left(  - \hbar \frac{\partial }{\partial  J }  \right)  \right] \int 
+				 d \phi \exp \left\{  
+				 - \frac{1}{\hbar } \left( 
+			 S_ 0 + J \phi \right) \right\} \\
+			 & \propto 
+			 \exp \left[  
+			 - \frac{ \lambda  }{ 4 ! \hbar } \left( 
+		 \hbar \frac{\partial  }{\partial  J }  \right)  ^ 4 \right]
+		 \exp \left( \frac{1}{ 2 \hbar  } J ^ T 
+		 M ^{ - 1 } J \right) \\
+		 & \sim \sum_{ v  =0 } ^ N \frac{1}{ v ! } 
+		 \left[   - \frac{ \lambda }{ 4 ! \hbar } \left( 
+		 \hbar \frac{\partial  }{\partial  J }   \right) ^ 4   \right] ^ V 
+		 \sum_{ p = 0  } \frac{1}{p !  } \left( \frac{1}{ 2 \hbar } J m ^{ - 2 }  J \right) ^ P  
 \end{align*}
 
 This has the associated diagrams below. 
@@ -648,7 +648,7 @@ we require that the number of derivative is equal to
 the number of propagators. 
 This means we require 
 \[
- E = 2P - 4 V  =0 
+E = 2P - 4 V  =0 
 \]  where $ E $ is the number of sources 
 left undifferentiated. 
 Our first non-trivial terms include 
@@ -666,17 +666,17 @@ The denominator od the $ \mathcal{ Z } \left( J  \right)  $
 expansion is just, reading off, 
 is 
 \[
-	F = \left( V !  \right)  \left( 4 !  \right)  ^{ v } \left( p !  \right)  
-	2 ^ p  = 4  ! \cdot  2 \cdot  2 
+F = \left( V !  \right)  \left( 4 !  \right)  ^{ v } \left( p !  \right)  
+2 ^ p  = 4  ! \cdot  2 \cdot  2 
 \] Thus, the figure of $ 8 $ comes 
 with a pre factor of $ \frac{A}{F }  = \frac{1}{8 } $ multiplied 
 by $ - \frac{h \lambda }{ m ^  4 }  $. 
 More generally, $ F $ accounts for permutations of 
 \begin{itemize}
-	\item all vertices $ v ! $ 
-	\item each vertex legs $ 4 ! $ 
-	\item All propagators $ p ! $ 
-	\item both ends of each propagator $ 2 $ 
+\item all vertices $ v ! $ 
+\item each vertex legs $ 4 ! $ 
+\item All propagators $ p ! $ 
+\item both ends of each propagator $ 2 $ 
 \end{itemize}
 Symmetry of particular graph is 
 important. 
@@ -686,7 +686,7 @@ Consider swapping $ a \iff a'  $  and $ 1 \iff 2  $,
 gives exactly the same graph. 
 So 
 \[
- \frac{A}{F }   = \frac{1}{\mathcal{ S } }, \quad \mathcal{ S } \text{ is the symmetry factor}
+\frac{A}{F }   = \frac{1}{\mathcal{ S } }, \quad \mathcal{ S } \text{ is the symmetry factor}
 \] $ \mathcal{ S } $ is the number of 
 ways of redrawing unlabelled graph, 
 leaving it unchanged. 
@@ -701,36 +701,36 @@ and swapping the vertices.
 (Insert pre-diagram drawing here)
 
 \[
-	\frac{ Z( 0 ) }{ Z _ 0 \left( 0  \right)  } 
-	 = 1 - \frac{ \hbar \lambda }{ 8 m ^ 4 } + \frac{ \hbar ^ 2 \lambda ^ 2 }{ m ^ 8 } 
-	 \left( \frac{1}{48 } + \frac{1}{16 } + \frac{1}{128 } \right) 
+\frac{ Z( 0 ) }{ Z _ 0 \left( 0  \right)  } 
+ = 1 - \frac{ \hbar \lambda }{ 8 m ^ 4 } + \frac{ \hbar ^ 2 \lambda ^ 2 }{ m ^ 8 } 
+ \left( \frac{1}{48 } + \frac{1}{16 } + \frac{1}{128 } \right) 
 \]
 
 From last time 
 we have that \[
-	\mathcal{ Z } \left( J  \right) 
-	\sim \sum_{ v = 0 } ^{ N } \frac{1}{v ! } \left[  
-	- \frac{\lambda}{4 ! \hbar } \left( \hbar \frac{\partial  }{\partial  J }   \right)  
+\mathcal{ Z } \left( J  \right) 
+\sim \sum_{ v = 0 } ^{ N } \frac{1}{v ! } \left[  
+- \frac{\lambda}{4 ! \hbar } \left( \hbar \frac{\partial  }{\partial  J }   \right)  
 ^ 4 \right]  ^ v \sum _{ p = 0  } \frac{1}{p ! } \left[  
 \frac{1}{2 \hbar } \frac{J ^ 2 }{ m ^ 2 } \right]   ^ p 
 \] 
 If we focus on the case with $ E   =   2 $, 
 we have that 
 \[
- Z \left( J  \right)  \superset \text{all diagrams with two external points}
+Z \left( J  \right)  \subset \text{all diagrams with two external points}
 \] 
 We can factor out the vacuum bubble diagrams so that 
 \[
- Z ( J )  = \left[  \text{No vacuum bubbles}  \right]  \left[  
- Z ( 0 ) \text{ vacuum bubbles }\right] 
+Z ( J )  = \left[  \text{No vacuum bubbles}  \right]  \left[  
+Z ( 0 ) \text{ vacuum bubbles }\right] 
 \] 
 Our expectation values 
 are hence 
 \begin{align*}
-	\left< \phi ^ 2  \right> &=  \frac{ \left(  - \hbar  \right)^ 2   }{ 
-	\mathcal{ Z } ( 0 ) } \left( \frac{\partial  }{\partial  J }   \right)^ 2  
-	\mathcal{ Z } ( J ) \mid _{ J = 0 } \\ 
-	&=  \left[  \text{ connected diagrams} \right]  \\
+\left< \phi ^ 2  \right> &=  \frac{ \left(  - \hbar  \right)^ 2   }{ 
+\mathcal{ Z } ( 0 ) } \left( \frac{\partial  }{\partial  J }   \right)^ 2  
+\mathcal{ Z } ( J ) \mid _{ J = 0 } \\ 
+&=  \left[  \text{ connected diagrams} \right]  \\
 \end{align*}
 
 In terms of our symmetry factors, 
@@ -738,92 +738,126 @@ from $ Z ( J ) $ the $ E = 2 $ , $ V  = 0 $, $ P = 1 $
 term 
 gives a contribution of 
 \[
-  = \frac{1}{2 \hbar } \frac{J^2}{m ^ 2 } , \quad F = 2, A = 1 , \frac{A}{F } 
-   = \frac{1}{2 }  = \frac{1}{\mathcal{ S } }
+= \frac{1}{2 \hbar } \frac{J^2}{m ^ 2 } , \quad F = 2, A = 1 , \frac{A}{F } 
+= \frac{1}{2 }  = \frac{1}{\mathcal{ S } }
 \] So the first order contribution is 
 $ \left< \phi ^ 2  \right> = \frac{\hbar}{m ^ 2 }  = \text{line diagram}$., 
 $ \left< \phi ^{ 2n }  \right> $ proceeds similarly, but note 
 there are disconnected diagrams. 
 (Insert diagram here). 
 
-\subssection{Effective actions}
-Define the Wilsonian effective action $ \mathcal{ W } \left( J  \right)  $ 
-such that 
-\[
-	\mathcal{ Z }\left( J \right)   = e ^{  - \mathcal{ W } \left( J  \right)  / \hbar }
-\] We want to show that 
-\[
-	\mathcal{ W } \left( 0 \right)  = \sum \text{ all connected vacuum diagrams }
-\] and 
-\[
-	\mathcal{ W } \left( J  \right)   = \sum \text{ all connected diagrams}
-\] 
-Any diagram $ D $ is a product of connected diagrams $ C _ I $. 
- \[
-	 D  = \frac{1}{S _ D}\prod_{ I } \left( C _ I  \right)  ^{ n _ I } \text{ I : index over unique 
-	 connected diagrams }, \quad n _ I  = \text{numbers of times } C _ I \text{ appears in } $ D $ 
-\] Assume $ C _ I $ includes appropriate symmetry factor $ \frac{1}{S _ I } $. 
-where $ S_ D $ is a symmetry factor 
-associated with rearranging $ C _ I 's $. 
-\[
-	S _ D  = \prod _ I  \left( n _ I  \right)   !
-\]
-For example,  
-if we take $ D  = $ (Insert diagram here)
-The since the disconnected parts commute, 
-we have  $ n_1  = 3 , n_2  = 1 $. 
-This means the total symmetry factor $ S _ D = 3 ! 1!  = 6 $. 
+\subsection{Effective actions}
 
-If we write $ \left\{  n _ I  \right\}  $ as the set of integers 
-specifying $ D $, we have that 
+We will now define \textbf{effective actions}, 
+which are ways of simplifying calculations 
+by manipulating our partition function, and then cutting 
+out different kinds of graphs we can have. 
+The first kind of action we'll explore 
+is the Wilsonian effective action, 
+which allows us to consider connected diagrams only. 
+
+\begin{defn}{Wilsonian Effective Action}
+The Wilsonian effective 
+action is defined as 
+\[
+Z \left( J  \right)   = e^{  - \mathcal{ W } \left( J  \right)   / \hbar  }, 
+\quad \mathcal{ W } \left( J  \right)  =  - \hbar \log Z \left( J  \right) 
+\] This action is useful since 
+we can calculate it by summing just over 
+connected diagrams, which we will prove. 
+For example, 
+we know that in the absence of a source, we 
+have 
 \begin{align*}
-	\frac{\mathcal{ Z } }{ \mathcal{ Z } _ 0 } &=  \sum_{ n _ I } D  \\ 
-						   &=  \sum _{ \left\{  n _ I  \right\}  } \prod_ I \frac{1}{ n _ I ! } \left( C _ I  \right)  ^{ n_  I }  \\
-						   &=  \prod_ I 
-						   \sum _{ n _ I } \frac{1}{n _ I ! }
-						   \left( C _ I  \right)  ^{ n _ I } 
-						   \\
-						   &=  \exp \left( \sum _ I c _ I  \right)  \\
-						   &=  \exp \left( \text{ 
-						   \sum of unique connected diagrams }  \right)   \\
-						   &=  e ^{  - \left( \mathcal{ W } 
-						    - \mathcal{ W } _ 0 \right)   / \hbar }  \\
+\frac{\mathcal{ Z } \left( 0  \right)  }{
+\mathcal{ Z } _ 0\left( 0 \right)  }  & = \sum \text{ all diagrams with no external points
+(vacuum diagrams) } \\ 
+		      & = \exp\left( \sum \text{ connected vacuum diagrams } \right) 
+\end{align*}
+But the above fact tells us that 
+this is indeed the exponential of connected diagrams. Since 
+$ \frac{Z }{ Z_0 }  = e ^{  -  \left( \mathcal{ W }  - \mathcal{ W } _ 0  \right)   \ \hbar }  $, 
+we then have that 
+\[
+- \mathcal{ W } + \mathcal{ W } _ 0  = \hbar \sum \text{connected diagrams}
+\] In this case, 
+we have that $ \mathcal{ W }_ 0 $  is a 
+constant and we can ignore it. 
+\end{defn}
+
+\begin{thm}{The Wilsonian effective 
+action is proportional to sum of connected diagrams.}
+
+\begin{proof}
+First observe that we can break down any 
+diagram into it's connected components. We 
+write a given diagram $ D $ as 
+\[
+D = \frac{1}{S _ D } \prod_ I \left( C_ I  \right)  ^{ n _  I}
+\] where $ C _ I $ are connected diagrams indexed 
+by the set $ I $, whose own symmetry factors 
+are already absorbed into the definition of $ C_ I $. 
+We denote $ n _ I $ as the number of $ C _ I $ diagrams
+in $ D $. $ S _ D $ is the symmetry factor of the diagram, 
+and since we can swap each of the $ n _ I $ $C _ I $ diagrams, 
+\[
+S_ D  = \prod_ I \left( n _ I  \right)  !  
+\] 
+Now we it's a matter of 
+just rearranging the sums to get what we want
+\begin{align*}
+\frac{\mathcal{ Z } }{ \mathcal{ Z } _ 0 } &=  \sum_{ n _ I } D  \\ 
+   &=  \sum _{ \left\{  n _ I  \right\}  } \prod_ I \frac{1}{ n _ I ! } \left( C _ I  \right)  ^{ n_  I }  \\
+   &=  \prod_ I 
+   \sum _{ n _ I } \frac{1}{n _ I ! }
+   \left( C _ I  \right)  ^{ n _ I } 
+   \\
+   &=  \exp \left( \sum _ I c _ I  \right)  \\
+   &=  \exp \left( \text{ 
+   sum of unique connected diagrams }  \right)   \\
+   &=  e ^{  - \left( \mathcal{ W } 
+    - \mathcal{ W } _ 0 \right)   / \hbar }  \\
 \end{align*}
 so that we have $ \mathcal{ W }  = \mathcal{ W } _ 0  - \hbar \sum _ I c _ I $. 
 $ \mathcal{ W } \left( J  \right)  $ is the 
 generating functional for connected 
 correlation functions. 
+
+\end{proof}
+\end{thm}
+
+
 This means that we have 
 \begin{align*}
-	-\frac{1}{\hbar } W \left( J  \right)   &=  \log Z \left( J  \right)   \\ 
-	 - \frac{1}{\hbar } \frac{\partial  ^ 2 }{\partial  J ^ 2 }  W \mid 
-	_{ J = 0 } &= \frac{1}{ \mathcal{ Z } \left( 0  \right)  } 
-	 \frac{\partial  ^ 2 \mathcal{ Z } }{\partial  J ^ 2 }  \mid_{ J = 0 } 
-	 - \frac{1}{\left( \mathcal{ Z } \left( 0  \right)   \right)  ^ 2 } 
-	 \left( \frac{\partial  \mathcal{ Z } }{\partial  J }   \right)  ^ 2 \mid _{ J = 0 } \\
-	 &=  \frac{1}{\hbar ^ 2 } \left[  
-	 \left< \phi ^ 2  \right>  - \left< \phi  \right> ^ 2 \right]   \\
-	 & = \frac{1}{\hbar^  2 } \left< \phi ^ 2  \right> _{ \text{ connected }}
+-\frac{1}{\hbar } W \left( J  \right)   &=  \log Z \left( J  \right)   \\ 
+- \frac{1}{\hbar } \frac{\partial  ^ 2 }{\partial  J ^ 2 }  W \mid 
+_{ J = 0 } &= \frac{1}{ \mathcal{ Z } \left( 0  \right)  } 
+\frac{\partial  ^ 2 \mathcal{ Z } }{\partial  J ^ 2 }  \mid_{ J = 0 } 
+- \frac{1}{\left( \mathcal{ Z } \left( 0  \right)   \right)  ^ 2 } 
+\left( \frac{\partial  \mathcal{ Z } }{\partial  J }   \right)  ^ 2 \mid _{ J = 0 } \\
+&=  \frac{1}{\hbar ^ 2 } \left[  
+\left< \phi ^ 2  \right>  - \left< \phi  \right> ^ 2 \right]   \\
+& = \frac{1}{\hbar^  2 } \left< \phi ^ 2  \right> _{ \text{ connected }}
 \end{align*}
 Less trivially, we may encounter theories where the expecation of 
 $ \phi $ is non zero, but we're not discussing that. 
 Less trivially, 
 \[
-  - \frac{1}{\hbar } \frac{\partial  ^ 4 \mathcal{ W } }{\partial  J ^ 4 }  \mid_{ J = 0 } 
-  = \frac{1}{ \mathcal{ Z } \left(  0  \right)  } \frac{\partial  
-  ^ 4 \mathcal{ Z } }{\partial  J ^ 4 }  \mid _{ J = 0 }  - 
-  \left( \frac{1}{ \mathcal{ Z } \left(  0   \right) } \frac{\partial  ^ 2  
-  \mathcal{ Z } }{\partial J ^ 2  }    \right)  \mid_{ J = 0 } 
+- \frac{1}{\hbar } \frac{\partial  ^ 4 \mathcal{ W } }{\partial  J ^ 4 }  \mid_{ J = 0 } 
+= \frac{1}{ \mathcal{ Z } \left(  0  \right)  } \frac{\partial  
+^ 4 \mathcal{ Z } }{\partial  J ^ 4 }  \mid _{ J = 0 }  - 
+\left( \frac{1}{ \mathcal{ Z } \left(  0   \right) } \frac{\partial  ^ 2  
+\mathcal{ Z } }{\partial J ^ 2  }    \right)  \mid_{ J = 0 } 
 \]   This implies that 
 \[
- \left< \phi ^ 4  \right>_{ \text{ connected } }  = \left< \phi ^ 4  \right>  - 
- \left< \phi ^ 2  \right> ^ 2 
+\left< \phi ^ 4  \right>_{ \text{ connected } }  = \left< \phi ^ 4  \right>  - 
+\left< \phi ^ 2  \right> ^ 2 
 \]  
 Let's consider an action 
 with two real fields. 
 \[
- S \left( \phi , \chi  \right)  = \frac{m ^ 2 }{ 2 } \phi ^ 2 
- + \frac{ M ^ 2 }{ 2 } \chi ^2  + \frac{\lambda}{4 } \phi ^ 2 \chi ^ 2 
+S \left( \phi , \chi  \right)  = \frac{m ^ 2 }{ 2 } \phi ^ 2 
++ \frac{ M ^ 2 }{ 2 } \chi ^2  + \frac{\lambda}{4 } \phi ^ 2 \chi ^ 2 
 \] Note that we don't have a factorial here. 
 With two fields, 
 we now have two sets of Feynman rules. 
@@ -831,25 +865,25 @@ We can look at the
 Wilson effective action 
 by looking at the connected vacuum diagrams. 
 \[
-  - \mathcal{ W } / \hbar   = \text{diagram of connected vacuum diagrams }
+- \mathcal{ W } / \hbar   = \text{diagram of connected vacuum diagrams }
 \] Counting 
 the symmetry factors of 
 this diagram are 
 \[
-  - \frac{\mathcal{ W } }{ \hbar }  = 
-   - \frac{\hbar \lambda }{ 4 m^ 2 M ^ 2 } + \frac{\hbar ^ 2 \lambda ^ 2 }{ 
-   m ^ 4 M ^ 4 } \left[  \frac{1}{16 } + \frac{1}{16 } + \frac{1}{8 } \right] 
+- \frac{\mathcal{ W } }{ \hbar }  = 
+- \frac{\hbar \lambda }{ 4 m^ 2 M ^ 2 } + \frac{\hbar ^ 2 \lambda ^ 2 }{ 
+m ^ 4 M ^ 4 } \left[  \frac{1}{16 } + \frac{1}{16 } + \frac{1}{8 } \right] 
 \] Also, from 
 Feynman diagrams, 
 the 
 \[
-	\left< \phi ^ 2  \right>    = \text{(connected diagrams with external lines)}
+\left< \phi ^ 2  \right>    = \text{(connected diagrams with external lines)}
 \] Again, counting the 
 symmetry factors, we get that 
 \[
- \left< \phi ^ 2  \right>  = \frac{\hbar}{m ^ 2 }
-  - \frac{\hbar ^ 2 \lambda }{ 2 m ^ 4 M^ 2 } + \frac{\hbar ^ 3 \lambda ^ 2  }{ 
-  \m ^ 6 M ^ 4 } \left[  \frac{1}{4  } + \frac{1}{2 } + \frac{1}{4 } \right] 
+\left< \phi ^ 2  \right>  = \frac{\hbar}{m ^ 2 }
+- \frac{\hbar ^ 2 \lambda }{ 2 m ^ 4 M^ 2 } + \frac{\hbar ^ 3 \lambda ^ 2  }{ 
+m ^ 6 M ^ 4 } \left[  \frac{1}{4  } + \frac{1}{2 } + \frac{1}{4 } \right] 
 \] say we don't care about $ \chi $ 
 explicitly,
 maybe because we don't know that much about $ \chi $, 
@@ -859,8 +893,8 @@ produced on experimental scales.
 We define $ \mathcal{ W } \left(  \phi  \right)  $, 
 to give 
 \[
-	e ^{  - \mathcal{  W } \left( \phi  \right)   / \hbar } 
-	= \int d \chi e ^{  - S \left( \phi , \chi  \right)   / \hbar }
+e ^{  - \mathcal{  W } \left( \phi  \right)   / \hbar } 
+= \int d \chi e ^{  - S \left( \phi , \chi  \right)   / \hbar }
 \] Thus, $ \phi ^ 2 \chi ^ 2 $ is treated 
 as a source term with $ J  = \phi ^ 2 $ in earlier 
 notation. We're using our low energy 
@@ -870,23 +904,23 @@ and using them as a source.
 We want to look at correlation 
 functions only involving $ \psi $ fields. 
 \[
-	\left< f ( \phi )  \right>  = \frac{1}{2
-	} \int d \phi d \chi f \left( \phi  \right)  e ^{  - S \left( 
+\left< f ( \phi )  \right>  = \frac{1}{2
+} \int d \phi d \chi f \left( \phi  \right)  e ^{  - S \left( 
 \phi , \chi  \right)  / \hbar  }  = \frac{1}{\mathcal{ Z } } 
 \int d \phi f \left( \phi  \right)  e ^{  - W \left( \phi  \right)  / \hbar }
 \]  In this simple example, we 
 have that 
 \[
-	\int d \chi e ^{  - S \left( \phi , \chi  \right)  / \hbar } 
-	 = e ^{  - m ^ 2 \phi ^ 2  / 2 \hbar } \sqrt{ \frac{2 \pi \hbar }{ 
-	 M ^ 2 + \left( \lambda \phi ^ 2  \right)   / 2 }} 
+\int d \chi e ^{  - S \left( \phi , \chi  \right)  / \hbar } 
+= e ^{  - m ^ 2 \phi ^ 2  / 2 \hbar } \sqrt{ \frac{2 \pi \hbar }{ 
+M ^ 2 + \left( \lambda \phi ^ 2  \right)   / 2 }} 
 \]  This implies that, 
 solving for $ W \left( \phi  \right)  $, 
 we have 
 \[
- W \left( \phi  \right)   = \frac{1}{2 } m ^ 2 \phi ^ 2  + 
- \frac{\hbar}{2 } \log \left( 1 + \frac{ \lambda }{ 2 M^ 2 } \phi ^ 2   \right)  
- + \frac{\hbar}{2 } \log \frac{ M ^ 2 }{ 2 \pi \hbar } 
+W \left( \phi  \right)   = \frac{1}{2 } m ^ 2 \phi ^ 2  + 
+\frac{\hbar}{2 } \log \left( 1 + \frac{ \lambda }{ 2 M^ 2 } \phi ^ 2   \right)  
++ \frac{\hbar}{2 } \log \frac{ M ^ 2 }{ 2 \pi \hbar } 
 \] The final term is a constant. 
 One way to think about this 
 is in the context of the cosmological 
@@ -899,23 +933,23 @@ $ \hbar $, so expansions in the logarithm
 term are quantum effects. 
 This gives us 
 \[
- W \left( \phi  \right)   = 
- \left( m ^ \frac{2}{ 2 } + \frac{\hbar \lambda }{ 4 M ^ 2 }  \right)  \phi ^ 2 
-  - \frac{\hbar \lambda ^ 2 }{ 16 M ^ 4 } \phi ^ 4 + 
-  \frac{ \hbar \lambda ^ 3 }{ 48 M ^ 6} \phi ^ 6 + \dots 
+W \left( \phi  \right)   = 
+\left( m ^ \frac{2}{ 2 } + \frac{\hbar \lambda }{ 4 M ^ 2 }  \right)  \phi ^ 2 
+- \frac{\hbar \lambda ^ 2 }{ 16 M ^ 4 } \phi ^ 4 + 
+\frac{ \hbar \lambda ^ 3 }{ 48 M ^ 6} \phi ^ 6 + \dots 
 \]One 
 can think of these as an effective 
 mass term. So, we have that 
 \[
-  W\left( \phi  \right)   = 
-  \frac{ m _{ \text{eff } } ^ 2 }{ 2 } \phi ^ 2 + \frac{ \lambda ^ 4 }{ 4 ! } 
-  \phi ^ 4 + \frac{ \lambda ^ 6  }{6  ! } \phi ^ 6 + \dots \frac{ \lambda _{ 2k } }{ \left( 2k  \right)  ! } \phi ^{ 2k } + \dots 
+W\left( \phi  \right)   = 
+\frac{ m _{ \text{eff } } ^ 2 }{ 2 } \phi ^ 2 + \frac{ \lambda ^ 4 }{ 4 ! } 
+\phi ^ 4 + \frac{ \lambda ^ 6  }{6  ! } \phi ^ 6 + \dots \frac{ \lambda _{ 2k } }{ \left( 2k  \right)  ! } \phi ^{ 2k } + \dots 
 \] where we have defined $ m_{ \text{ eff } } ^ 2  = m ^   2 + 
 \frac{\hbar \lambda }{ 2 M } $, 
 and we define 
 \[
-	\lambda _{ 2k }  = \left( - 1  \right) ^{ k + 1 } \hbar 
-	\frac{ \left(  2k  \right)  ! }{ 2 ^{ k + 1 } k } \frac{\lambda ^ k }{ M ^{ 2 k }}
+\lambda _{ 2k }  = \left( - 1  \right) ^{ k + 1 } \hbar 
+\frac{ \left(  2k  \right)  ! }{ 2 ^{ k + 1 } k } \frac{\lambda ^ k }{ M ^{ 2 k }}
 \] In $ \dim > 0  $ , we 
 usually need to calculate 
 $ W \left( \phi  \right)  $ perturbatively. 
@@ -928,19 +962,19 @@ Putting the integrals
 together, we have that 
 this makes it equal to 
 \[
-	W \left( \phi  \right)   = S \left( \phi  \right)  
-	+ \frac{1}{2 } \frac{ h \lambda }{ 2 M ^ 2 }\phi ^ 2  - 
-	\frac{1}{4 } \frac{ \hbar \lambda ^ 2 }{ 4 M ^ 4 } \phi ^ 4 
-	+  \frac{1}{3 ! } \frac{ \hbar \lambda ^ 3 }{ 8 M ^ 6 } \phi ^ 6 + \dots 
+W \left( \phi  \right)   = S \left( \phi  \right)  
++ \frac{1}{2 } \frac{ h \lambda }{ 2 M ^ 2 }\phi ^ 2  - 
+\frac{1}{4 } \frac{ \hbar \lambda ^ 2 }{ 4 M ^ 4 } \phi ^ 4 
++  \frac{1}{3 ! } \frac{ \hbar \lambda ^ 3 }{ 8 M ^ 6 } \phi ^ 6 + \dots 
 \]  
 Using the effective action, 
 we can also calculate the correlation 
 function 
 \begin{align*}
-	\left< \phi ^ 2  \right> &=  \frac{1}{ \mathcal{ Z } } 
-	\int d \phi \phi ^ 2 e ^{  - W \left( \phi  \right)   / \hbar  }\\
-	 = \frac{ \hbar  }{ m _{ \text{eff} }^ 2  } - \frac{ \lambda _ 4 \hbar ^ 2 }{2 
-	 m _{ \text{ eff } } ^ 6 }
+\left< \phi ^ 2  \right> &=  \frac{1}{ \mathcal{ Z } } 
+\int d \phi \phi ^ 2 e ^{  - W \left( \phi  \right)   / \hbar  }\\
+= \frac{ \hbar  }{ m _{ \text{eff} }^ 2  } - \frac{ \lambda _ 4 \hbar ^ 2 }{2 
+m _{ \text{ eff } } ^ 6 }
 \end{align*}
 
 \subsection{Quantum Effective Action}
@@ -949,64 +983,64 @@ We want to define the
 average field in the 
 presence of an external source. 
 \[
-	\Phi  : = \frac{\partial  W }{\partial  J } =  \left< \phi  \right> _ J 	=  - \frac{ \hbar }{ Z \left( J  \right) }
-	\frac{\partial  }{\partial  J } \int d \phi e ^{  - \left(  S + J \phi  \right)   / \hbar } , S \left( 
-	\phi \right)  \text{ same as before }
+\Phi  : = \frac{\partial  W }{\partial  J } =  \left< \phi  \right> _ J 	=  - \frac{ \hbar }{ Z \left( J  \right) }
+\frac{\partial  }{\partial  J } \int d \phi e ^{  - \left(  S + J \phi  \right)   / \hbar } , S \left( 
+\phi \right)  \text{ same as before }
 \] We define the Legendre transformation from $ W \left( J  \right)  
 \to \Gamma \left( \Phi  \right)  $.
 This is 
 \[
-	\Gamma ( \Phi ) = W \left(  J  \right)   - \Phi J 
+\Gamma ( \Phi ) = W \left(  J  \right)   - \Phi J 
 \]  Note that 
 \[
- \frac{\partial  \Gamma }{\partial  \Phi }   = 
- \frac{\partial  W }{\partial  \Phi }   - J -  \Phi \frac{\partial  J }{\partial  
- \Phi }   = \frac{\partial W }{\partial  J }  \frac{\partial  J }{\partial  \Phi }  
-  - J  -\Phi \frac{\partial  J }{\partial  \Phi } 
+\frac{\partial  \Gamma }{\partial  \Phi }   = 
+\frac{\partial  W }{\partial  \Phi }   - J -  \Phi \frac{\partial  J }{\partial  
+\Phi }   = \frac{\partial W }{\partial  J }  \frac{\partial  J }{\partial  \Phi }  
+- J  -\Phi \frac{\partial  J }{\partial  \Phi } 
 \] This means 
 that 
 \[
- \frac{\partial  J }{\partial  \Phi }   = - J 
+\frac{\partial  J }{\partial  \Phi }   = - J 
 \] so $ J $ is the minimum of the quantum effective 
 action. If $ J  = 0 $, then 
 \[
- \left. \frac{\partial  \Gamma }{\partial  \Phi }  \right\vert_{ J  =0 }  = 0
+\left. \frac{\partial  \Gamma }{\partial  \Phi }  \right\vert_{ J  =0 }  = 0
 \] So, $ J \to  0 $ corresponds to an 
 extremum of $ \Gamma \left(  \Phi  \right)  $. 
 
 In higher dimensions, 
 one performs a derivative expansion 
 \[
- \Gamma \left( \Phi   \right)   = 
- \int d ^ d x \left[   -V \left( \Phi  \right)  
-  - \frac{1}{2 } \partial  ^ \mu \Phi \partial  _ \mu \Phi + \dots \right] 
+\Gamma \left( \Phi   \right)   = 
+\int d ^ d x \left[   -V \left( \Phi  \right)  
+- \frac{1}{2 } \partial  ^ \mu \Phi \partial  _ \mu \Phi + \dots \right] 
 \] where $ V \left( \Phi  \right)  $ is the effective potential. 
 There is some analogy 
 here with statistical mechanics. $ h $ is a magnetic field. 
 \[
-	e ^{  - \beta F (h  ) }  = \int \mathcal{ D } s \exp 
-	( - \beta \mathcal{ H } )
+e ^{  - \beta F (h  ) }  = \int \mathcal{ D } s \exp 
+( - \beta \mathcal{ H } )
 \] The magentization 
 $ M  = - \frac{\partial  F }{\partial  h }  $. The Gibbs free energy 
 is \[
- G ( M  )  = F \left( h  \right)  + M h 
+G ( M  )  = F \left( h  \right)  + M h 
 \] as $ h \to 0 $ , $ M $ of the system is the 
 minimum of $ G $. 
 
 We do a perturbative calculation of ,$ \Gamma \left(  \Phi   \right) $
 We write 
 \[
-	e ^{  - W _{ \Gamma } \left( J  \right)   / g }  = \int d \Phi e ^{ 
-	- \left( \Gamma \left(  \Phi  \right)   + J \Phi  \right)   / g } 
+e ^{  - W _{ \Gamma } \left( J  \right)   / g }  = \int d \Phi e ^{ 
+- \left( \Gamma \left(  \Phi  \right)   + J \Phi  \right)   / g } 
 \] We define a new Planck fictitious constant, 
 and include the source term $ g $. 
 We know that 
 $ W _{ \Gamma } \left(  J  \right)  $ is the 
 sum of connected vacuum diagrams. 
 \[
-	W _{\Gamma }\left( J  \right) 
-	= \int_{ l  =0 } ^{ \infty } g ^ l W _{ \Gamma } ^{ \left(  l  \right)   } 
-	\left( J  \right) 
+W _{\Gamma }\left( J  \right) 
+= \int_{ l  =0 } ^{ \infty } g ^ l W _{ \Gamma } ^{ \left(  l  \right)   } 
+\left( J  \right) 
 \]  We know that 
 $ W  _{ \Gamma } ^{ \left(  0  \right)   }$ 
 is composed of tree diagrams. 
@@ -1017,11 +1051,11 @@ Also as $ g \to 0 $, integral over $ \Phi $ is
 dominated by the minimum of the exponent, 
 in other words the $ \Phi $ such that 
 \[
- \frac{\partial  \Gamma }{\partial  \Phi }   =  - J 
+\frac{\partial  \Gamma }{\partial  \Phi }   =  - J 
 \]  But then 
 \[
-	W _{ \Gamma } ^{ \left(  0  \right)  } \left(  J \right)   = 
-	\Gamma ( \Phi ) + J \Phi  = W \left( J  \right)  
+W _{ \Gamma } ^{ \left(  0  \right)  } \left(  J \right)   = 
+\Gamma ( \Phi ) + J \Phi  = W \left( J  \right)  
 \] where the $ W ( J ) $ is from earlier 
 with action  $ S ( \phi  )  + J \phi  $. 
 The moral of the 
@@ -1054,25 +1088,25 @@ fermion fields, which anti-commute.
 We call these fields $ \theta ^ a , a  = 1, \dots N $. 
 This has the characteristic property that 
 \[
- \theta_ a \theta _ b  =  - \theta_ b \theta _ a , \quad a = 1 , \dots N 
+\theta_ a \theta _ b  =  - \theta_ b \theta _ a , \quad a = 1 , \dots N 
 \] 
 This in particular implies that 
 for a given field $ \theta ^ a $, we have 
 \[
- \theta ^ a \theta ^ a  =0
+\theta ^ a \theta ^ a  =0
 \] They also 
 have the property that they commute with 
 scalar fields, 
 so we have that 
 \[
- \phi _ a \psi _ b  = \psi _ b \phi _ a , \quad a = 1 , \dots N 
+\phi _ a \psi _ b  = \psi _ b \phi _ a , \quad a = 1 , \dots N 
 \] 
 With this data, we can define functions 
 of these variables as a finite expansion.  
 \[
- F \left( \theta  \right)  = f + \rho _ a \theta ^ a 	
- + \frac{1}{2 ! }g _{ ab } \theta ^a \theta ^ b + \frac{1}{n ! }\dots h_{ ab \dots n } \theta ^ a \theta ^ b 
- \dots \theta ^ n 
+F \left( \theta  \right)  = f + \rho _ a \theta ^ a 	
++ \frac{1}{2 ! }g _{ ab } \theta ^a \theta ^ b + \frac{1}{n ! }\dots h_{ ab \dots n } \theta ^ a \theta ^ b 
+\dots \theta ^ n 
 \] In these 
 expansions, we have that each of the 
 tensors are totally anti-symmetric.
@@ -1081,7 +1115,7 @@ in the case that $ a = 1 $ only.
 Then, the most 
 general function we could write with this is 
 \[
- F \left( \theta  \right)   = f + \rho \theta 
+F \left( \theta  \right)   = f + \rho \theta 
 \] since any terms of higher order 
 go to zero by antisymmetry. 
 
@@ -1089,31 +1123,31 @@ We define differentiation and
 integration on these variables as follows.
 For differentiation, we have that 
 \[
- \frac{\partial}{\partial \theta ^ a  } \theta ^ b + \theta ^ b \frac{\partial   }{\partial  \theta ^ a }  
-  = \delta \indices{ ^ b _ a }  
+\frac{\partial}{\partial \theta ^ a  } \theta ^ b + \theta ^ b \frac{\partial   }{\partial  \theta ^ a }  
+= \delta \indices{ ^ b _ a }  
 \] We 
 also have the integration rules. 
 
 The integrals should be invariant under 
 translation, so 
 \[
-	\int d \theta \left( \theta + \eta  \right)   = \int d \theta \theta 
+\int d \theta \left( \theta + \eta  \right)   = \int d \theta \theta 
 \] If we're dealing with a single variable, 
 we can then integrate by parts, since clearly 
 \[
-	\int d \theta \frac{\partial   }{\partial  \theta }  F \left( \theta  \right)    = 0 	 
+\int d \theta \frac{\partial   }{\partial  \theta }  F \left( \theta  \right)    = 0 	 
 \]  We can extend this to 
 integration rules for $ n $ variables. 
 Namely, we only have a non-vanishing integral when 
 our integrand is a product of one power 
 of each Grassman number.
 \[
- \int d ^ n \theta ^ 1 \dots \theta ^ n  = 1 
+\int d ^ n \theta ^ 1 \dots \theta ^ n  = 1 
 \] By antisymmetry, we have that for a 
 given ordering of the Grassman variables, we have that 
 \[
- \int d ^ n \theta \, \theta ^{ a_1 } \dots \theta ^{ a _ n  }
-  = \epsilon ^{ a_1 \dots a_ n} 
+\int d ^ n \theta \, \theta ^{ a_1 } \dots \theta ^{ a _ n  }
+= \epsilon ^{ a_1 \dots a_ n} 
 \] We can compute the Jacobian of 
 this measure as follows. Suppose 
 that we relate a set of new Grassman 
@@ -1122,13 +1156,13 @@ where $ N \in GL \left( 2 , \mathbb{ C }  \right)   $.
 This means that 
 we have, integrating over the variables, 
 \begin{align*}
-	\int d ^ n \theta \, \theta ^{ ' a_1  } \theta ^{ ' a_2  } \dots \theta ^{  ' a_ n  } 
-	&=  N \indices{ ^{ a_1 } _{ b_ 1 } } N \indices{ ^{ a_2  } _{ b_2 } } 
-	\dots N \indices{ ^{ a_n  } _{ b_n  }  } \int d^ n \theta ^{ b_ 1 } \dots \theta ^{ b _ n }  \\
-	&=  N \indices{ ^{ a_1 } _{ b_1 }  } \dots N \indices{ ^{ a_ n } _{b _ n } } 
-	\epsilon ^{ b_ 1 \dots b _ n }  \\
-	&=  \det N \epsilon ^{ a_1 \dots a_  n }  \\
-	&=  \det N \int d ^ n \theta ^{  ' } \theta^{ ' a_1 } \dots \theta ^{  ' a _n  }  
+\int d ^ n \theta \, \theta ^{ ' a_1  } \theta ^{ ' a_2  } \dots \theta ^{  ' a_ n  } 
+&=  N \indices{ ^{ a_1 } _{ b_ 1 } } N \indices{ ^{ a_2  } _{ b_2 } } 
+\dots N \indices{ ^{ a_n  } _{ b_n  }  } \int d^ n \theta ^{ b_ 1 } \dots \theta ^{ b _ n }  \\
+&=  N \indices{ ^{ a_1 } _{ b_1 }  } \dots N \indices{ ^{ a_ n } _{b _ n } } 
+\epsilon ^{ b_ 1 \dots b _ n }  \\
+&=  \det N \epsilon ^{ a_1 \dots a_  n }  \\
+&=  \det N \int d ^ n \theta ^{  ' } \theta^{ ' a_1 } \dots \theta ^{  ' a _n  }  
 \end{align*} 
 
 This implies that $ d ^ n  \theta  = \det N d ^ n \theta ' $.
@@ -1141,15 +1175,15 @@ fermions.
 In full generality, this 
 means our action has to take the form 
 \[
- S \left( \theta  \right)  = \frac{1}{2 } A_{ ab } \theta ^ a \theta ^ b 
+S \left( \theta  \right)  = \frac{1}{2 } A_{ ab } \theta ^ a \theta ^ b 
 \] We have that this is 
 \begin{align*}
-	\mathcal{ Z }_ 0  &=  \int  d^{ 2m } \theta e ^{  - S\left( \theta  \right)   }  \\ 
-			  &=  \int d ^{ 2m } \theta e ^{  - \frac{1}{2  } A\left( \theta, \theta  \right) } \\
-			  &=  \int d ^{ 2m } \theta 
-			  \sum_{ n  =0 } ^{ 2m } \frac{\left(  - 1  \right)  ^ n }{ 
-			  \left( 2 \hbar  \right)  ^ n n !  } \left( A _{ ab } \theta ^ a 
-		  \theta ^ b \right)  ^ n 
+\mathcal{ Z }_ 0  &=  \int  d^{ 2m } \theta e ^{  - S\left( \theta  \right)   }  \\ 
+&=  \int d ^{ 2m } \theta e ^{  - \frac{1}{2  } A\left( \theta, \theta  \right) } \\
+&=  \int d ^{ 2m } \theta 
+\sum_{ n  =0 } ^{ 2m } \frac{\left(  - 1  \right)  ^ n }{ 
+\left( 2 \hbar  \right)  ^ n n !  } \left( A _{ ab } \theta ^ a 
+\theta ^ b \right)  ^ n 
 \end{align*}
 
 Notice however, that 
@@ -1160,14 +1194,14 @@ don't vanish.
 Hence, the only term which doesn't 
 vanish is when $ n = 2m $, 
 \begin{align*}
-	\mathcal{  Z} _ 0 & = 
-	\int d ^2m \theta \frac{\left(  - 1  \right)  ^ n  }{ 
-	\left( 2 \hbar  \right)  ^ n n ! } A_{ a_1 a_2 } \dots A _{ a_{ 2m - 1 } a _{ 2m } } 
-	\theta ^{ a_1 } \theta ^{ a_2 } \dots \theta ^{ a _{ 2m } } \\
-			  &=  \frac{\left( - 1  \right)  ^ n }{ 
-			  \left( 2 \hbar  \right)  ^ n n ! } A_{ a_1 a_2 } \dots 
-			  A_{ a _{ 2m  - 1 } a _{ 2m }  } \epsilon ^{ 
-			  a_1 \dots a _{ 2m  } }
+\mathcal{  Z} _ 0 & = 
+\int d ^2m \theta \frac{\left(  - 1  \right)  ^ n  }{ 
+\left( 2 \hbar  \right)  ^ n n ! } A_{ a_1 a_2 } \dots A _{ a_{ 2m - 1 } a _{ 2m } } 
+\theta ^{ a_1 } \theta ^{ a_2 } \dots \theta ^{ a _{ 2m } } \\
+&=  \frac{\left( - 1  \right)  ^ n }{ 
+\left( 2 \hbar  \right)  ^ n n ! } A_{ a_1 a_2 } \dots 
+A_{ a _{ 2m  - 1 } a _{ 2m }  } \epsilon ^{ 
+a_1 \dots a _{ 2m  } }
 \end{align*}
 
 
@@ -1202,8 +1236,8 @@ get expressions in $ \phi $.
 We write our free scalar field 
 which can be built out of plane waves. 
 \[
-	\phi \left( \vec{x}  \right)  = \int \frac{d^ 3 k }{ \left( 2 \pi  \right)  ^ 3 
-	2 E } \left[  a \left( \vec{k}  \right)  e^{  - i k \cdot  x } + 
+\phi \left( \vec{x}  \right)  = \int \frac{d^ 3 k }{ \left( 2 \pi  \right)  ^ 3 
+2 E } \left[  a \left( \vec{k}  \right)  e^{  - i k \cdot  x } + 
 a ^\dagger \left( \vec{k}  \right)  e ^{ i k \cdot  x } \right] 
 \] where we have $ k \cdot  x  = E t  - \vec{k} \cdot  \vec{x} $ . 
 We have relativistic 
@@ -1212,23 +1246,23 @@ Now, it's convenient to
 invert this expression via the inverse Fourier transform 
 of the field and it's derivative 
 \[
-	\int d ^ 3 x e ^{ i k \cdot  x } \phi \left( \vec{x}  \right)  , \quad 
-	\int d ^ 3 x e ^{ i k \cdot   x } \partial  _ 0 \phi \left( x    \right)  
+\int d ^ 3 x e ^{ i k \cdot  x } \phi \left( \vec{x}  \right)  , \quad 
+\int d ^ 3 x e ^{ i k \cdot   x } \partial  _ 0 \phi \left( x    \right)  
 \] One 
 can easily verify that the identities below 
 hold, using the standard identities. 
 \begin{align*}
-	a\left( \vec{k}   \right)  &=  \int d ^ 3 x e ^{ i k \cdot  x } 
-	\left[  i \partial  _ 0 \phi \left( x \right) + E \phi \left( x  \right)    \right]  \\ 
-	a ^\dagger \left( \vec{k}  \right)  &=  \int d ^ 3 x e ^{  - i k \cdot   x } 
-	\left[   -  i \partial  _ 0 \phi (x ) + E \phi \left( x  \right)   \right] 
+a\left( \vec{k}   \right)  &=  \int d ^ 3 x e ^{ i k \cdot  x } 
+\left[  i \partial  _ 0 \phi \left( x \right) + E \phi \left( x  \right)    \right]  \\ 
+a ^\dagger \left( \vec{k}  \right)  &=  \int d ^ 3 x e ^{  - i k \cdot   x } 
+\left[   -  i \partial  _ 0 \phi (x ) + E \phi \left( x  \right)   \right] 
 \end{align*}
 We set our initial and final states for the free theory,
 to be one-particle momentum states, 
 created by applying a creation operator 
 to the particle vacuum. 
 \[
-	\ket{ k }  = a ^\dagger \left( k  \right)  \ket{ \Omega } 
+\ket{ k }  = a ^\dagger \left( k  \right)  \ket{ \Omega } 
 \] where $ \ket{ \Omega } $ is the true vacuum, 
 which in a weakly interacting theory is 
 not too different from the true free vacuum.
@@ -1239,17 +1273,17 @@ $ a \left( k  \right)   \ket{ \Omega }  = 0 $,
 for all  $ k $, and $ \bra{ \Omega }\ket{ \Omega }  = 1 $ . 
 We have the norm 
 \[
-	\bra{ \vec{k} }\ket{\vec{k}} = \left( 2 \pi  \right)  ^ 3 \left( 2 E  \right)  
-	\delta ^ 3 \left( \vec{k} - \vec{k}  '  \right)  , \quad E  = \sqrt{ \vec{k}^ 2 + m ^ 2 } 
+\bra{ \vec{k} }\ket{\vec{k}} = \left( 2 \pi  \right)  ^ 3 \left( 2 E  \right)  
+\delta ^ 3 \left( \vec{k} - \vec{k}  '  \right)  , \quad E  = \sqrt{ \vec{k}^ 2 + m ^ 2 } 
 \] 
 The initial and
 final states we're interested in will 
 be time moving Gaussian wavepackets which we 
 construct from the creation operators. We introduce a Gaussian wavepacket 
 \[
-	a _ 1 ^\dagger : = \int d ^ 3 k f _ 1 \left( \vec{k}  \right)  a ^\dagger \left( \vec{k}  \right)  
-	, \quad f _ 1 \left( \vec{k}  \right)  \propto \exp \left[  
-	- \frac{\left( \vec{k}_ 1  - \vec{k} _ 2   \right)  ^ 2   }{ 4 \sigma ^ 2 }\right] 
+a _ 1 ^\dagger : = \int d ^ 3 k f _ 1 \left( \vec{k}  \right)  a ^\dagger \left( \vec{k}  \right)  
+, \quad f _ 1 \left( \vec{k}  \right)  \propto \exp \left[  
+- \frac{\left( \vec{k}_ 1  - \vec{k} _ 2   \right)  ^ 2   }{ 4 \sigma ^ 2 }\right] 
 \] similarly, we define a different moving Gaussian wavepacket for $ a _ 2 ^\dagger $ 
 Now, we want to see what happens 
 when these wavepackets collide with each other. 
@@ -1274,9 +1308,9 @@ without worrying about this complication too much.
 Define the initial and final states
 as two Gaussian wavepackets moving. 
 \begin{align*}
-	\ket{ i }  & = \lim _{ t \to- \infty } a _1 ^\dagger \left( t  \right)  a _ 2 ^\dagger \left( t  \right)  \ket{ \Omega } \\
-	\ket{ f } &=  \lim_{t \to \infty  } a _{1 ' } ^{ \dagger } \left(  t  \right)
-	a _{ 2 ' } ^\dagger \left( t  \right)  \ket{ \Omega } \\
+\ket{ i }  & = \lim _{ t \to- \infty } a _1 ^\dagger \left( t  \right)  a _ 2 ^\dagger \left( t  \right)  \ket{ \Omega } \\
+\ket{ f } &=  \lim_{t \to \infty  } a _{1 ' } ^{ \dagger } \left(  t  \right)
+a _{ 2 ' } ^\dagger \left( t  \right)  \ket{ \Omega } \\
 \end{align*}
 
 We assume that $ \bra{ i }\ket{ i }  = \bra{ f }\ket{ f }  = 1 $, 
@@ -1287,25 +1321,25 @@ To do this, we need to use a
 trick. 
 Note for example, that 
 \begin{align*}
-	a _ 1 ^\dagger \left( \infty  \right)   - 
-	a_ 1 ^\dagger \left(  - \infty  \right)  &=  \int_{ - \infty } ^{ \infty } dt 
-	\partial  _ 0 a _ 1 ^\dagger \left( t  \right)  \\ 
-						 &=  \int d ^ 3 k _ 1  f_ 1 \left( k  \right)  
-						 \int d ^ 4 x \partial  _ 0 
-						 \left[  e ^{  - i k \cdot  x } 
-						 \left(  -i \partial  _ 0 \phi 
-					 + E \phi \right)  \right]   \\ 
-						 &=  - i \int d ^ 3 k _ 1 f _ 1 \left( k  \right)  
-						 \int d ^ 4 x e ^{  -i k \cdot  x } 
-						 \left(  \partial _ 0 ^ 2 
-						 +  E ^ 2 \right) \phi \\ 
-						 &=  \int \dots \int d ^ 4 x e ^{  -i k \cdot  x } \left( 
-					 \partial  _ 0 ^ 2  - \nabla ^{ \leftarrow 2 } 
-				 + m ^ 2 \right) \phi ^ 2    \\
-						 &=   -i \int d ^ 3 k f _ 1 \left( x  \right)  
-						 \int d ^ 4 x e ^{  -i k \cdot  x } 
-						 \left( \partial  ^2 + m^ 2   \right)  
-						 \phi  
+a _ 1 ^\dagger \left( \infty  \right)   - 
+a_ 1 ^\dagger \left(  - \infty  \right)  &=  \int_{ - \infty } ^{ \infty } dt 
+\partial  _ 0 a _ 1 ^\dagger \left( t  \right)  \\ 
+	 &=  \int d ^ 3 k _ 1  f_ 1 \left( k  \right)  
+	 \int d ^ 4 x \partial  _ 0 
+	 \left[  e ^{  - i k \cdot  x } 
+	 \left(  -i \partial  _ 0 \phi 
+ + E \phi \right)  \right]   \\ 
+	 &=  - i \int d ^ 3 k _ 1 f _ 1 \left( k  \right)  
+	 \int d ^ 4 x e ^{  -i k \cdot  x } 
+	 \left(  \partial _ 0 ^ 2 
+	 +  E ^ 2 \right) \phi \\ 
+	 &=  \int \dots \int d ^ 4 x e ^{  -i k \cdot  x } \left( 
+ \partial  _ 0 ^ 2  - \nabla ^{ \leftarrow 2 } 
++ m ^ 2 \right) \phi ^ 2    \\
+	 &=   -i \int d ^ 3 k f _ 1 \left( x  \right)  
+	 \int d ^ 4 x e ^{  -i k \cdot  x } 
+	 \left( \partial  ^2 + m^ 2   \right)  
+	 \phi  
 \end{align*} 
 This is great, because 
 in the last line, we simply have the Klein-Gordon operator. 
@@ -1313,7 +1347,7 @@ Note in free theory, we have that
 our fields solve the Klein-Gordon equation, 
 so in this case we have that the difference is zero. 
 \[
-	a _ 1 ^\dagger \left( \infty  \right)   - a _ 1 ^\dagger\left(  - \infty  \right)   = 0 
+a _ 1 ^\dagger \left( \infty  \right)   - a _ 1 ^\dagger\left(  - \infty  \right)   = 0 
 \]
 We are however looking at the 
 weakly interacting case, so the 
@@ -1321,30 +1355,30 @@ integrand doesn't necessarily evaluate to zero.
 Now we can start to calculate the 
 scattering amplitude. 
 \[
- \bra{ f }\ket{ i }  = 
- \bra{ \Omega } \mathcal{ T } a _{ 1 ' } \left( \infty  \right)  
- a _{ 2 ' } \left( \infty  \right)  a _{ 1 } ^\dagger \left( - \infty  \right)  
- a _ 2 ^\dagger \left( - \infty  \right)  \ket{ \Omega } 
+\bra{ f }\ket{ i }  = 
+\bra{ \Omega } \mathcal{ T } a _{ 1 ' } \left( \infty  \right)  
+a _{ 2 ' } \left( \infty  \right)  a _{ 1 } ^\dagger \left( - \infty  \right)  
+a _ 2 ^\dagger \left( - \infty  \right)  \ket{ \Omega } 
 \]  use $ a _ j ^\dagger \left(  - \infty   \right)  = a _ j ^\dagger \left( \infty  \right)   
 + i \int d ^ 3 k f _ j \left( k  \right)  \int d ^ 4 x e ^{  - i k \cdot   x } \left( 
 \partial  ^ 2 + m ^ 2 \right)  \phi $. 
 Similarly, we have that 
 \[
-	a _ j\left( \infty  \right)   =a _ j \left(  - \infty  \right)  
-	+ i \int \dots e ^{ i k \cdot   x } \dots 
+a _ j\left( \infty  \right)   =a _ j \left(  - \infty  \right)  
++ i \int \dots e ^{ i k \cdot   x } \dots 
 \] Then, the 
 only non-zero term is 
 \begin{align*}
-	\bra{ f }\ket{i } & = \left( i  \right)  ^ 4 
-	\int d ^ 4 x_ 1 d ^ 4 x _ 2 d ^ 4 x ' _ 1 d ^ 4 x ' _ 2 e ^{ 
-	 - k_ 1 \cdot  x } e ^{  - i k _  2 \cdot  x _ 2 } e ^{ i k _ 1 ' \cdot  x _ 1 ' } 
-	 e ^{ i k _ 2 ' \cdot  x _ 2 '  } \\
-			  & \times \left( \partial  _ 1 ^ 2 + m ^ 2  \right)  \left( \partial  _ 2 ^ 2 
-	 + m ^ 2 \right)  \left( \partial  _{ 1 ' } ^ 2 + m ^ 2  \right)  \left( 
- \partial  _{2 ' } ^ 2 + m ^ 2 \right)  \\
-			  & \times \bra{\Omega } \mathcal{ T } 
-			  \phi \left( x_1  \right)  \phi \left( x_2  \right)  \phi 
-			  \left( x_1 '  \right)  \phi \left( x_2 '   \right) \ket{ \Omega } 
+\bra{ f }\ket{i } & = \left( i  \right)  ^ 4 
+\int d ^ 4 x_ 1 d ^ 4 x _ 2 d ^ 4 x ' _ 1 d ^ 4 x ' _ 2 e ^{ 
+- k_ 1 \cdot  x } e ^{  - i k _  2 \cdot  x _ 2 } e ^{ i k _ 1 ' \cdot  x _ 1 ' } 
+e ^{ i k _ 2 ' \cdot  x _ 2 '  } \\
+& \times \left( \partial  _ 1 ^ 2 + m ^ 2  \right)  \left( \partial  _ 2 ^ 2 
++ m ^ 2 \right)  \left( \partial  _{ 1 ' } ^ 2 + m ^ 2  \right)  \left( 
+\partial  _{2 ' } ^ 2 + m ^ 2 \right)  \\
+& \times \bra{\Omega } \mathcal{ T } 
+\phi \left( x_1  \right)  \phi \left( x_2  \right)  \phi 
+\left( x_1 '  \right)  \phi \left( x_2 '   \right) \ket{ \Omega } 
 \end{align*}
 having taken $ \sigma \to 0 $ such that 
 $ f \left( \vec{k} _ j  \right)  \to \delta ^ 3 \left( \vec{k} - \vec{k} _ j  \right)  $. 
@@ -1354,31 +1388,31 @@ The general deviation requires
 only weaker assumptions. 
 
 \begin{itemize}
-	\item We need a unique $ \Omega $, such that 
-		the first excited state is a single particle. 
-	\item We want $ \phi \ket{ \Omega }  $ to be a 
-		single particle state. In 
-		other words, we want 
-		\[
-		 \bra{ \Omega} \phi \ket{ \Omega}  = 0 
-		\] If not, and $ \bra{ \Omega } \phi \ket{ \Omega }  = v \neq 0 $, 
-		then let $ \tilde{ \phi }  = \phi  -v   $. 
-	\item We want $ \phi $ normalised such that 
-		\[
-			\bra{ k }\phi ( x )\ket{ 0 }  = e ^{ i k \cdot  x } 
-		\] as in the free case. Usually interactions require us 
-		to rescale $ \phi \to Z_{ \phi } ^{ \frac{1}{2 } } \phi $.
-		We see the need to renormalise, for example, 
-		\[
-		 \mathcal{ L } = \frac{1}{2 } \partial _ \mu \phi \partial  ^ \mu 
-		 \phi  - \frac{1}{2 } m ^ 2 \phi ^ 2  - \frac{\lambda }{ 4 ! } \phi ^ 4 
-		\] From here, the coefficients 
-		may spoil the LSZ formula. 
-		\[
-		 \mathcal{ L }  = \frac{Z _ \phi }{ 2 } 
-		 \partial  _ \mu \phi \partial  ^ \mu \phi  - \frac{1}{2 } 
-		 Z _ m m ^ 2 \phi ^ 2  - \frac{ \lambda }{ 4 ! } Z _ \lambda \phi ^ 4 
-		\] 
+\item We need a unique $ \Omega $, such that 
+the first excited state is a single particle. 
+\item We want $ \phi \ket{ \Omega }  $ to be a 
+single particle state. In 
+other words, we want 
+\[
+\bra{ \Omega} \phi \ket{ \Omega}  = 0 
+\] If not, and $ \bra{ \Omega } \phi \ket{ \Omega }  = v \neq 0 $, 
+then let $ \tilde{ \phi }  = \phi  -v   $. 
+\item We want $ \phi $ normalised such that 
+\[
+\bra{ k }\phi ( x )\ket{ 0 }  = e ^{ i k \cdot  x } 
+\] as in the free case. Usually interactions require us 
+to rescale $ \phi \to Z_{ \phi } ^{ \frac{1}{2 } } \phi $.
+We see the need to renormalise, for example, 
+\[
+\mathcal{ L } = \frac{1}{2 } \partial _ \mu \phi \partial  ^ \mu 
+\phi  - \frac{1}{2 } m ^ 2 \phi ^ 2  - \frac{\lambda }{ 4 ! } \phi ^ 4 
+\] From here, the coefficients 
+may spoil the LSZ formula. 
+\[
+\mathcal{ L }  = \frac{Z _ \phi }{ 2 } 
+\partial  _ \mu \phi \partial  ^ \mu \phi  - \frac{1}{2 } 
+Z _ m m ^ 2 \phi ^ 2  - \frac{ \lambda }{ 4 ! } Z _ \lambda \phi ^ 4 
+\] 
 \end{itemize}
 
 
@@ -1386,93 +1420,2295 @@ only weaker assumptions.
 
 \subsubsection{Path Integral Derivations}
 \begin{itemize}
-	\item You get path integrals from repeatedly inserting 
-		the completeness relation 
-		\[
-		 I = \int dx_0 \, \ket{x_0 }\bra{ x_0 } 
-		\]
-	\item The kernel is 
-		\[
-		 K \left( x, x_0 ,t   \right)   = \bra{x}e^{ -\frac{i \hat{H } t }{ \planck}}\ket{ x_0}
-		\] 
-	\item Our action is defined as 
-		\[
-			S  = \int_{ 0 } ^ T dt L \left(  x , \dot{ x }  \right) 
-		\] 
-	\item Our measure is the two-way limit 
-		\[
-			\mathcal{ D } x  = \lim_{ \delta t \to 0 , n \delta \text{ fixed}} 
-			\sqrt{\frac{m}{ 2 \pi i \planck \delta t } }  \prod_{ r  = 1 } ^ n 
-			\left( \sqrt{  \frac{m  }{2 \pi i \planck \delta t  }} dx _r  \right) 
-		\] 
+\item You get path integrals from repeatedly inserting 
+the completeness relation 
+\[
+I = \int dx_0 \, \ket{x_0 }\bra{ x_0 } 
+\]
+\item The kernel is 
+\[
+K \left( x, x_0 ,t   \right)   = \bra{x}e^{ -\frac{i \hat{H } t }{ \planck}}\ket{ x_0}
+\] 
+\item Our action is defined as 
+\[
+S  = \int_{ 0 } ^ T dt L \left(  x , \dot{ x }  \right) 
+\] 
+\item Our measure is the two-way limit 
+\[
+\mathcal{ D } x  = \lim_{ \delta t \to 0 , n \delta \text{ fixed}} 
+\sqrt{\frac{m}{ 2 \pi i \planck \delta t } }  \prod_{ r  = 1 } ^ n 
+\left( \sqrt{  \frac{m  }{2 \pi i \planck \delta t  }} dx _r  \right) 
+\] 
 \end{itemize}
 
 \subsubsection{Free Partition Functions}
 \begin{itemize}
-	\item The free theory is defined as 
-		\[
-		 S_0\left( \phi  \right)   = \frac{1}{2 } M _{ ab } \phi _ a \phi _b 
-		\] 
-	\item The free partition function 
-		\[
-			\mathcal{ Z } _ 0  = \int d ^N \phi e^{  - S \left( \phi  \right)  
-			 / \hbar } 
-		\] 
-	\item With a source term, $ S_ 0 + J \phi $, this free partition 
-		function as a function of $ J $ is 
-		\[
-			\mathcal{ Z } \left(  J  \right)   = 
-			Z\left( 0  \right)  \exp ( \frac{1}{2\hbar  } J ^ T 
-			M J ) 
-		\] 
+\item The free theory is defined as 
+\[
+S_0\left( \phi  \right)   = \frac{1}{2 } M _{ ab } \phi _ a \phi _b 
+\] 
+\item The free partition function 
+\[
+\mathcal{ Z } _ 0  = \int d ^N \phi e^{  - S \left( \phi  \right)  
+/ \hbar } 
+\] 
+\item With a source term, $ S_ 0 + J \phi $, this free partition 
+function as a function of $ J $ is 
+\[
+\mathcal{ Z } \left(  J  \right)   = 
+Z\left( 0  \right)  \exp ( \frac{1}{2\hbar  } J ^ T 
+M J ) 
+\] 
 \end{itemize}
 
 
 \subsubsection{Feynman Diagrams}
 \begin{itemize}
-	\item For each graph with $ n $ vertices, we add a combinatoric factor of 
-		\[
-		 \frac{| D _ n |  }{ | G _ n  | }  = \sum \frac{1}{ | \text{Aut } \Gamma | }
-		\]
-	\item There are two ways to generate diagrams. 
-		See which combinations of exponents 
-		reduce the source terms to zero, 
-		then construct the possible diagrams. 
+\item For each graph with $ n $ vertices, we add a combinatoric factor of 
+\[
+\frac{| D _ n |  }{ | G _ n  | }  = \sum \frac{1}{ | \text{Aut } \Gamma | }
+\]
+\item There are two ways to generate diagrams. 
+See which combinations of exponents 
+reduce the source terms to zero, 
+then construct the possible diagrams. 
 \end{itemize}
 
 \subsubsection{Effective Actions}
 \begin{itemize}
-	\item The Wilsonian effective action 
-		is the logarithm of the partition 
-		function 
-		\[
-		 \mathcal{ W } =  - \hbar \log \mathcal{ Z } 
-		\]
-	\item The connected correlation function for $ n $ 
-		variables is the $ n $ the derivative 
-		of the Wilsonian effective action. 
-	\item With two real 
-		fields, derive the Feynman rules 
-		\[
-			S\left( \phi , \chi  \right)   = \frac{1}{2 } m ^2  \phi ^ 2 
-			+ \frac{1}{2 } M ^ 2 \xi ^ 2  + \frac{\lambda}{4 } 
-			\chi ^ 2 \phi ^ 2 
-		\] The Wilsonian effective action 
-		\[
-		  - \mathcal{ W }  / \hbar = \text{connected vacuum bubbles} 
-		\] 
-	\item Integrate out high energy fields with 
-		\[
-			e ^{  - \mathcal{ W } \left( \phi  \right)   / \hbar } 
-			= \int d \chi \, e ^{  - S \left( \phi , \chi  \right)   \ \hbar } 
-		\] 
+\item The Wilsonian effective action 
+is the logarithm of the partition 
+function 
+\[
+\mathcal{ W } =  - \hbar \log \mathcal{ Z } 
+\]
+\item The connected correlation function for $ n $ 
+variables is the $ n $ the derivative 
+of the Wilsonian effective action. 
+\item With two real 
+fields, derive the Feynman rules 
+\[
+S\left( \phi , \chi  \right)   = \frac{1}{2 } m ^2  \phi ^ 2 
++ \frac{1}{2 } M ^ 2 \xi ^ 2  + \frac{\lambda}{4 } 
+\chi ^ 2 \phi ^ 2 
+\] The Wilsonian effective action 
+\[
+- \mathcal{ W }  / \hbar = \text{connected vacuum bubbles} 
+\] 
+\item Integrate out high energy fields with 
+\[
+e ^{  - \mathcal{ W } \left( \phi  \right)   / \hbar } 
+= \int d \chi \, e ^{  - S \left( \phi , \chi  \right)   \ \hbar } 
+\] 
 \end{itemize}
+
+\subsection{Scalar Field Theory}
+In this section, 
+we'll first make our integrals more convergent 
+by Wick rotating from Minkowski space (with metric $\left( +, - , -, - \right) $) to Euclidean space, 
+with metric $ \left( +, +, + , +  \right) $.
+We know the standard form of a Lagrangian 
+of a scalar field.
+Recall, doing a Wick rotation 
+is when we simultaneous change our time coordinate 
+and set $ t \to t ' = i t $and switch our metric from Minkowski 
+to Euclidean.
+
+Recall from 
+the previous course in quantum field theory that our expression for our 
+free propagator here 
+is
+\[
+\Delta _ 0 \left( k  \right)   = \frac{i}{\left( k_0  \right)^ 2  - | \vec{k} | ^2  - 	 m ^ 2 + i \epsilon }
+\] We will derive 
+the expression for this in an alternate way shortly below. 
+The reason why we do the Wick rotation is because the 
+free propagator above has the addition of $ + i\epsilon $ 
+since our poles land on the real line. Thus, 
+we need the Feynman prescription to shift the poles. 
+This is annoying. We Wick rotate in Euclidean 
+space to get a different propagator with imaginary poles, 
+so we don't have any issues. 
+Thus, if we have the Lagrangian in Minkowski space, 
+\[
+\mathcal{ L }  = \frac{1}{2 } \partial _ \mu \phi \partial  ^ \mu \phi   - V \left( \phi  \right), 
+\quad V \left(\phi  \right)  = \frac{1}{2 } m ^ 2 \phi ^ 2 + 
+\sum _{ n > 2} V ^{ \left( n  \right)  } \phi ^ n 
+\] and our associated partition function is 
+$ \mathcal{ Z }  = \int \mathcal{ D } \phi \exp\left( i \int dt  \mathcal{ L }  \right)    $, 
+then doing a change of variables and setting 
+$ i t  =  \tau $ gives 
+\begin{align*}
+i \int dt \mathcal{ L } &=  i \int dt \, 
+\left( \partial  _ t \phi  \right)  ^ 2  - \left( \nabla \phi  \right)^ 2 
+- V \left( \phi  \right)  	 \\
+&=  \int d \tau \,  - \left( 
+\partial  _ \tau \phi \right)  ^ 2 
+- \left( \nabla \phi  \right)  ^ 2 
+- V \left( \phi  \right)  \\ 
+&=  \int d \tau 
+- \delta ^{ \mu \nu } \partial  _ \mu \phi \partial  _ \nu \phi 
+- V \left( \phi  \right)  	 \\
+&=   - \int d \tau \, \mathcal{ L ' } 
+\end{align*}
+where we have now redefined $ L ' $ to 
+to use the Euclidean metric, along with the 
+shown change of sign, so that 
+\[
+L '  = \delta ^{ \mu \nu } \partial  _\mu \phi \partial  _ \nu \phi + V \left( \phi  \right) 
+\] So, up to relabelling and switching signs, 
+we have that a Wick rotation gives us $ \mathcal{ Z }  = 
+\int \mathcal{ D } \phi \exp \left(  - \int d t \mathcal{ L }  \right)  $. 
+Now we are in a good place, 
+since our propagator can be written, as we shall see, 
+as \[
+\Delta _ 0 \left( k \right) = \frac{1}{k ^ 2 + m ^ 2 }  = 
+\frac{1}{\left( k_0  \right)^ 2 + | \vec{k} | ^2 + m ^ 2 }
+\] Now our poles lie on the imaginary axis. 
+This means that we don't have the issue 
+of evaluating the contour integral. 
+
+We show how to calculate the free propagator 
+as in chapter 2, where we 
+looked at the vacuum expectation $ \left< \phi _ a \phi _ b  \right>$, 
+which turned out to be $ \hbar \left( M ^{ -1 }  \right)_{ ab } $. 
+This was obtained by first finding the partition function 
+with a source term, differentiating twice, where
+the source term is zero.
+
+Following the same process but 
+with infinite degrees of freedom, we 
+consider the partition function 
+but with a source term
+\[
+\mathcal{ Z } _ 0 \left( J  \right)   = 
+\int \mathcal{ D } \phi \exp \left(  - S_ 0  \left( \phi , J \right)  \right) 
+\] in the free case, 
+where 
+\[
+S_0 \left( \phi , J  \right)   = 
+\int d ^ 4 x \frac{1}{2 } \partial  ^ \mu \phi \partial  _ \mu \phi 
++ \frac{1}{2 }m ^ 2 \phi ^ 2 + J \phi 
+\] where we're working with the Euclidean metric 
+as we've already Wick rotated. 
+Now, it's easier to work with this 
+in Fourier space. Fourier transforming 
+gives us 
+\begin{align*}
+S_0\left( \tilde{ \phi },  \tilde{ J }    \right)  &=  
+\int d ^ 4 k \, \frac{1}{2 }k ^ 2 
+\tilde{ \phi  }\left( k  \right)  \tilde{ \phi } \left( - k  \right)  
++ \frac{1}{2 } m ^ 2 \tilde{ \phi } \left( k   \right) 
+\tilde{ \phi } \left( - k  \right)  + 
+\tilde{ J } \left( k  \right)   \tilde{ \phi } \left( - k  \right)    \\ 
+&=  \frac{1}{2 } 
+\int d ^ 4 k \left( k ^ 2 + m ^2   \right) \tilde{ \phi } \left( k  \right)  \tilde{\phi  } 
+\left( - k  \right)  + \tilde{J } \left( k  \right)  \tilde{ \phi } 
+\left(  -k  \right)  + \tilde{ J } \left( -k   \right)  \tilde{ \phi } 
+\left( k  \right) \\
+&=  \frac{1}{2 } \int  d^ 4 k \, 
+\left( k ^ 2 + m ^ 2   \right)  
+\left( \tilde{ \phi } \left( k  \right) + \frac{ \tilde{J } \left( k \right)  }{
+k ^ 2 + m ^  2 	 	 }   \right) \left( 
+\tilde{ \phi } \left( -k   \right)  + \frac{ \tilde{ J } \left( - k   \right)   }{ 
+\left( k^ 2 + m ^ 2  \right)  }  \right) - \frac{ \tilde{ J } \left( k  \right)  
+\tilde{ J } \left( - k   \right)   }{ k ^2 + m ^ 2 }  \\
+&=  \frac{1}{2 } \int d ^ 4 k \left( k ^ 2 + m ^ 2    \right)  
+\tilde{ \chi } \left( k  \right)  \tilde{ \chi  } \left( -k   \right) - 
+\frac{ \tilde{ J } \left( k  \right)  \tilde{ J } \left( -k  \right)    }{ 
+k ^ 2 + m ^ 2 }
+\end{align*}
+In the second step, 
+we symmetrised and switched integration variables 
+so that we could complete the square above. 
+Now, we stick this into our 
+path integral! 
+\[
+\mathcal{ Z } _ 0 \left( J  \right)  
+= \int \mathcal{ D } \phi 
+\exp \left( -\frac{1}{2 } \int d ^ 4 k 
+\left( k ^ 2 + m ^ 2  \right)  \tilde{ \chi } \left( k  \right)  
+\tilde{\chi } \left( -k  \right)    \right)  \exp 
+\left( \frac{1}{2 } \frac{ \tilde{ J  } \left( k  \right) \tilde{ J } \left( 
+-k \right)    }{ k ^  2 + m ^ 2 }  \right)  
+=   \exp 
+\left( \frac{1}{2 } \frac{ \tilde{ J  } \left( k  \right) \tilde{ J } \left( 
+-k \right)    }{ k ^  2 + m ^ 2 }  \right)  Z _ 0 \left( 0  \right) 
+\] where we realise that the factor 
+which is actually integrated over 
+is just the partition function without a 
+source term included.
+We then assume a normalisation 
+factor where $ \mathcal{  Z } _{ 0 } \left( 0  \right)  =1  $. 
+Hence, for a source term in our 
+free theory, we have that in a Fourier 
+expansion, our free theory partition function 
+with a source is given by 
+\[
+Z _ 0 \left[  \tilde{ j }   \right]  
+= \exp \left[  \frac{1}{2} 
+\int \frac{ d^ 4 k }{ \left( 2 \pi  \right)  ^ 4 } \frac{ \tilde{ j } \left( -k  \right)  
+\tilde{ j } \left( k  \right)   }{ k ^ 2 +  m ^ 2}\right] 
+\] 
+Our Fourier space propagator 
+is given by the second functional 
+derivative of this function, much like 
+our derivation before in zero dimensional quantum field
+theory. 
+
+\begin{align*}
+\Delta \left( q  \right)  &=  
+\frac{\delta ^ 2 Z_0 \left[  \tilde{j }     \right]  }{ 
+\delta \tilde{ j } \left(  q  \right)  \delta 
+\tilde{ j } \left( - q     \right)   } \mid _{ \tilde{ j } = 0  } \\ 
+&=   \frac{1}{q ^ 2 + m ^ 2 }
+\end{align*}
+As convention due to 
+the fact that we have momentum conservation, 
+we've stripped off the $ \left( 2 \pi  \right)  ^ 4 \delta \left( 0  \right)  $  
+which comes automatically from 
+momentum conservation. 
+
+The position space 
+propagator is achieved simply by 
+Fourier transforming this back into 
+position space. 
+Thus, our position space propagator is 
+\[
+\Delta \left( x - x '  \right)   = \int \frac{d ^ 4 k }{ \left( 
+2 \pi \right)  ^ 4 } \frac{ e ^{ i k \cdot  \left(  x -x '   \right)   } }{ 
+k ^  2 + m ^ 2  }
+\] Fourier transforming our 
+partition function with source 
+back into position space, 
+we can write it nicely as 
+\[
+Z _ 0 \left[  j  \right]  
+= \exp \left( \frac{1}{2 } \int d x_1 dx_2 j \left( x_1  \right)  
+\Delta  \left( x_ 1  - x_2  \right) j \left( x _ 2  \right)   \right)  
+\] This has
+the nice interpretation 
+of averaging across the propagator 
+of all points in space, and then 
+summing this to get the partition function. 
+
+\subsubsection{Incorporating Interactions}
+We now incorporate 
+interaction terms into this picture. 
+Our Lagrangian splits up into 
+$ \mathcal{ L }  = \mathcal{ L }_ 0 + \mathcal{ L } _{\text{int}}$ 
+
+\subsection{Vertex Functions}
+Recall that we
+have our Wilsonian effective 
+action 
+$ W \left[ J  \right]   $ 
+which corresponds to the sum of connected diagrams, 
+and our quantum effective action $ \Gamma \left[  \Phi  \right]  $, 
+which corresponds to the sum of our 1PI 
+diagrams (diagrams with no bridges). 
+We generalise our definition of 
+the quantum effective action to the 
+case of scalar fields, by integrating in the 
+Legendre transform
+\[
+\Gamma \left[ \Phi  \right]  = W \left[  J  \right]  
+- \int d ^ 4 x J \left( x  \right) \Phi \left( x  \right)  
+\]. As a result, doing some 
+functional integration, this implies that 
+\[
+\fdv{W \left[  J  \right]   }{J \left( x  \right)  }
+= \Phi \left( x  \right) , \quad 
+\fdv{\Gamma \left[  \Phi  \right]  }{\Phi \left( x  \right) }
+= - J \left( x  \right) 
+\]  As we shown for three points in 
+the example sheet, 
+our connected n-point functions 
+in full generality is 
+\[
+G ^{ \left( n  \right)   } 
+\left( x_1 ,\dots , x_ n  \right)  
+= \left( - 1  \right)  ^{ n + 1 } 
+\prod_{ i = 1 } ^ n \frac{\delta }{ \delta J\left( x_ i  \right)  } 
+W \left[  J  \right]   = 
+\left< \phi \left( x_1  \right)  \dots \phi \left( x _ n  \right)   \right> 
+^{ \text{ conn}}
+\] Recall that what we mean by connected is as follows. 
+Suppose we compute $ \left< \phi _ a \phi _ b  \right>_ J  $ 
+from differentiating our partition function 
+twice with respect to $ J $ for example. Then, 
+in this case, we might get some disconnected diagrams, 
+encoded in $ \left< \phi _ a  \right> $. In this case, we 
+would define 
+\[
+\left< \phi _ a \phi _ b  \right> ^{ \text{conn}} = \left< 
+\phi _ a \phi _ b  \right>  - \left< \phi _ a  \right> _ J \left< \phi _ b  \right> _ J 
+\] We also define the 
+n-point vertex functions 
+\[
+\Gamma ^{ \left( n  \right)  } \left( x_1, \dots x _ n  \right)  
+= \left( - 1  \right)  ^{ n } \prod _{ i = 1 } ^ n 
+\frac{\delta  }{ \delta \Phi \left( x _ i  \right)  } \Gamma \left[  \Phi  \right] 
+\] In this case, 
+we get the expectation value of 1PI diagrams. 
+It's worth noting that the set of all connected diagrams 
+are diagrams whose vertices are 1PI diagrams.
+There's also a duality between n-point vertex
+functions and connected n-point functions. For example, 
+in the case where $ n = 2 $, we have that 
+\begin{align*}
+G ^{ \left( 2  \right)  } \left( x, y  \right)   = 
+- \frac{\delta ^ 2 W }{ \delta J \left( x  \right)  \delta J \left( y  \right)  } 
+& = - \frac{\delta \Phi \left( y  \right)   }{ \delta J \left( x  \right)  } \\
+\Gamma ^{ \left( 2  \right)  } \left( x, y  \right)  
+&=  \frac{ \delta ^ 2 \Gamma  }{ \delta \Phi \left( x \right) \delta \Phi \left( y  \right)   }
+=  - \frac{\delta J \left(  x  \right)  }{ \delta \Phi \left( y  \right) }
+\end{align*} Note that the 
+expressions are inverses 
+of each other, 
+so that 
+\[
+\int d ^ 4 z G ^{ \left( 2  \right)  } \left( x, z  \right)  
+\Gamma ^{ \left( 2  \right)  } \left( z, y  \right)   = \delta ^ 4 
+\left( x - y  \right) 
+\] This can be seen from just substituting the 
+functional derivatives above and taking 
+out the Dirac delta functions. 
+From example sheet 1, we have that 
+\[
+G ^{ \left( 3  \right) } \left( x_1, x_2, x_3  \right)  
+= \int d ^ 4 z_1 d ^ 4 z_2 d ^ 4 z_3 
+G ^{ \left( 1  \right)  } \left( x_1 , z_1  \right)  
+G ^{ \left( 2  \right)  }\left( x_2, z_2  \right)  
+G ^{ \left( 3  \right)  } \left( x_3, z_3  \right)  
+\left(  - \frac{ \delta ^  3 \Gamma }{ \delta \Phi \left( z_1  \right)  
+\delta \Phi \left( z_2  \right)  \delta \Phi \left( z_3  \right)   }  \right) 
+\] where the last term is defined 
+as $ \Gamma ^{ \left(  3  \right)   } \left( z_1, z_2, z_3   \right)  $. 
+Diagrammatically, we 
+decompose the three point function 
+into IPI and two point functions. 
+The above expression can be inverted to give 
+\[
+\Gamma ^{ \left( 3  \right)   } \left( 
+y_1, y_2, y_3 \right)   = \int 
+d ^ 4 x_1 d^ 4 x_2 d ^ 4 x_3 \Gamma ^{ \left( 2  \right)  } 
+\left( x_1 , y_1  \right)  \Gamma ^{ \left( 2  \right)  } 
+\left( x_2 , y_2  \right)  \Gamma ^{ \left( 3  \right)  } 
+\left( x_3 , y_3  \right)  G ^{ \left( 3  \right)  } 
+\left( x_1, x_2, x_3  \right) 
+\] which we can compare to the LSZ reduction formula. 
+These arguments carry forward to general $ n $
+and in momentum space. This is 
+discussed in Ryder, section 7.3. 
 
 \section{Regularisation and Renormalisation}%
 \label{sec:regularisation_and_renormalisation}
+Consider $ \phi ^ 4 $ theory
+in Euclidean space time. 
+\[
+S\left[  \phi   \right]  = \frac{1}{2 } \partial  _ \mu \phi \partial  ^ \mu \phi 
++ \frac{1}{2 } m ^ 2 \phi ^ 2 + \frac{\lambda }{ 4 ! } \phi ^ 4 
+\] Let's look at the full propagator $ \tilde{ G } ^ 2 \left( p  \right)  
+= \int d ^ 4 x e ^{  - i p \cdot  x } \left< \phi \left( x  \right)  \phi \left( 0  \right)   \right> 
+^{ \text{conn}}$. Even without 
+perturbation theory, we 
+can still write this as a geometric series. 
+This is given by 
+\begin{align*}
+\tilde{ G } ^{ \left( n  \right)  } \left( p  \right)  
+&=  \frac{1}{p ^ 2 + m ^ 2  } + \frac{1}{p ^ 2 + m ^ 2 }\Pi \left( p ^ 2  \right)  
+\frac{1}{p ^ 2+ m ^ 2 } \\
+&=  \frac{1}{p ^ 2 + m ^ 2  - \pi \left( p ^ 2  \right) } 
+\end{align*} where $ \Pi \left( p ^ 2  \right)   = \tilde{ \Gamma } ^{ \left( 2  \right)   }
+\left( p  \right)  $. 
+Our contribution 
+from the first loop integral with amputations 
+is 
+\[
+= \frac{ - \lambda}{ 2 } \int \frac{ d ^ 4 k }{ \left( 2 \pi  \right)  ^ 4 } 
+\frac{1}{k ^ 2 + m ^ 2 }
+\] When doing these things, 
+since it depends just on radial coordinates, 
+we have that $ d ^ 4 k  = k ^{ 4  - 1 } dk d \Omega $. 
+In general we have that 
+$ d ^ d k  =  S_ d | k | ^{ d - 1 } d | k | $, 
+with $ S _ d  = \frac{ 2 \lambda ^{ d / 2 } }{ \Gamma \left( \frac{d}{ 2  }  \right)  } $. 
+This integral diverges. 
+To examine this integral and it's divergence, 
+we set 
+\begin{align*}
+I  &=   - \frac{\lambda }{ 2 } \int ^ \Lambda 
+\frac{ d ^ 4 k }{ \left( 2 \pi  \right)  ^ 4 } \frac{1}{ k ^ 2 + m ^ 2 } \\ 
+&=  - \frac{\lambda S _ 4  }{ 4 \left( 2 \pi  \right)  ^ 4 } 
+\int ^{ \Lambda / m ^ 2 } \frac{u d u }{ 1 + u }, \quad u  = \frac{k ^2}{m ^ 2 } \\
+&=  - \frac{\lambda }{ 32 \pi ^ 2 } \left[  
+\Lambda ^ 2  - m ^ 2 \log \left( 1 + \frac{\Lambda ^ 2 }{ m ^ 2 }  \right) \right]  \\
+\end{align*} this 
+is divergent as $\Lambda \to \infty $, which 
+is what we call UV divergent. 
+Let's look at the 
+four point function at one loop. 
+We sum over these diagrams, 
+which give a contribution of 
+\[
+I  = \int ^ \Lambda \frac{ d^ 4 k }{ \left( 2 \pi  \right)  ^ 4 } 
+\frac{1}{k ^ 2 + m ^ 2  } \sum _{ 
+P \in \left\{  p_1 + p_2 , p_1 + p_3 , p_1 + p_4  \right\}  } 
+\frac{1}{\left( P + k  \right)  ^ 2 + m ^ 2 }  = \tilde{ \Gamma } 
+^{ \left( 4  \right)  } \left( p_1 , p_2, p_3, p_4 \right) 
+\] as $ k \to \infty $, we have 
+out leading contribution as $ \frac{d ^ 4 k }{ k ^ 4 } $, 
+expect $ \log \left( \Lambda  / m    \right)  $. 
+We evaluate integral with zero external momenta. 
+This gives 
+\begin{align*}
+\tilde{ \Gamma } ^{ \left( 4  \right)  } 
+\left( 0 , 0 , 0 , 0  \right)  & = 
+\frac{3 \lambda ^ 2 }{ 2  } \int ^ \Lambda \frac{d ^ 4 k }{ \left( 
+2 \pi \right)  ^ 4 } \frac{1}{\left( k ^ 2 + m ^ 2  \right)  ^ 2 } \\
+&=  \frac{ 3 \lambda ^ 2 }{ 16 \pi ^ 2 } \int ^ \Lambda \frac{k ^ 3 dk }{ 
+\left( k ^ 2 + m ^ 2  \right)  ^ 2 }   \\ 
+&=  \frac{ 3 \lambda ^ 2 }{ 32 \pi ^ 2 } \left[  
+\log \left( 1 + \frac{\Lambda ^ 2 }{ m ^ 2 }  \right)  + \frac{\Lambda^ 2 }{ m ^ 2 + \Lambda ^ 2 }\right]  
+\end{align*}
+These divergences 
+must be dealt with. On general grounds, 
+we expect the full propagator to 
+have the form
+\begin{align*}
+\tilde{ G } ^ 2 \left( p  \right)  &=  \sum _ n \frac{
+| \bra{\Omega  } \tilde{ \phi } \left( 0  \right)  \ket{1 } |^ 2  }{
+p ^ 2 + m _{ n } ^ 2 } \\ 
+&=  \frac{| \bra{\Omega  } \tilde{ \phi } \left( 0 \right)  \ket{1} | ^ 2  }{
+p ^ 2 + m _{\text{phys}}^ 2 }  + \dots\\
+\end{align*}
+The sum is over a continuum of physical 
+states. The first term 
+is an excited state, and crucially, we have that 
+$ m _{\text{phys } } $ is some measured 
+mass from experiment. 
+We will now go through the process of renormalisation 
+to understand how to make these divergences 
+finite. From the LSZ formula, we 
+required the normalisation $ \bra{ k } \phi \left( x   \right)  \ket{ \Omega }  =
+e ^{ i k \cdot  x } $. This is consistent with the condition 
+that we 
+keep $ \bra{ \Omega } \tilde{ \phi } \left( 0  \right)  \ket{ 1 }  =1   $. 
+You can check this independently (admittedly I don't
+know how to do this with Fourier transforms yet). 
+
+Due to the contribution from 
+loop diagrams, we have unfortunately that 
+$ \bra{ \Omega} \tilde{ \phi } \left( 0  \right) \ket{1} \neq 1 $, 
+and that the mass of our Lagrangian 
+doesn't match our physical mass that 
+we have measured, so $ m \neq m _{ \text{phys}}$ 
+How do we remedy this? We use a renormalisation scheme. 
+
+Take our original Lagrangian; the 
+very first Lagrangian which we have written down. We differentiate 
+this from a 'new' Lagrangian by writing down 
+a 0 subscript
+to the original Lagrangian 
+fields and couplings. So, our original Lagrangian, our 'bare' Lagrangian
+as it is sometimes called, is denoted as 
+\[
+\mathcal{ L } _ 0  = \frac{1}{2 } \left( \partial  \phi _ 0  \right)  ^ 2 
++ \frac{1}{2 } m_0^ 2 \phi _ 0 ^ 2 + \frac{\lambda _ 0 }{ 4 ! } \phi _ 0 ^  4  
+\] From this original Lagrangian, we apply a rescaling 
+so that it fits with our LSZ normalisation convention. 
+In general, rescale $ \phi _ 0  = Z _{ \phi } ^{ \frac{1}{2 } } \phi  $ , 
+with $  Z_ \phi  $  determined 
+by requiring proper normalisation for 
+LSZ $ \bra{ \Omega } \tilde{ \phi } \left( 0  \right)  \ket{ 1 }   = 1 $. 
+This is okay since the normalisation factor 
+is just one condition, so we can do this. 
+We write these normalisation factors explicit in $ \mathcal{ L }_ 0  $, 
+so that 
+\[
+\mathcal{ L }_ 0 = \frac{Z_ \phi }{ 2 } \left( \partial  \phi  \right)  ^ 2 
++ \frac{ Z _ \phi }{ 2 }m_0^ 2 \phi ^ 2 + \frac{Z _ \phi ^ 2 \lambda _ 0 }{ 4 ! } \phi ^ 4
+\] Now, we separate out 
+2 sets of terms into a renormalised 
+part of our Lagrangian and counter terms. 
+\[
+\mathcal{ L }_ 0  = \mathcal{ L }_{\text{ren}} + \mathcal{ L } _{ \text{ct}}
+\] Inventing new 
+notation for new couplings, we want to write our 
+new Lagrangian as 
+\[
+\mathcal{ L } _ 0  = 
+\left[  \frac{1}{2 } \left( \partial  \phi  \right)  ^ 2 
++ \frac{1}{2 } m ^ 2 \phi ^ 2 + \frac{\lambda }{ 4 ! } \phi ^ 4 \right]  
++ \left[  \frac{\delta Z _ \phi }{ 2  } \left( \partial  
+\phi \right)  ^ 2 + \frac{ \delta m ^ 2  }{ 2 } \phi ^ 2 + \frac{\delta \lambda }{ 4 ! } 
+\phi ^ 4 \right] 
+\] Now, we equate coefficients 
+\[
+\delta Z _ \phi  = Z _ \phi  - 1, \quad \delta m ^ 2  = Z _ \phi m_0 ^ 2  - m ^ 2 , 
+\quad \delta \lambda  = Z _ \phi ^ 2 \lambda _ 0  - \lambda 
+\] Now we need to calculate some Feynman rules. 
+What we can do is to construct Feynman rules 
+for the renormalised Lagrangian as well as the counter term 
+Lagrangian separately. 
+
+For $ \mathcal{ L } _{\text{ren}}$, it's the same as $ \mathcal{ L } _ 0 $, 
+with $ m ^ 2 $ and $ \lambda  $ the renormalised values. 
+For $ \mathcal{ L } _{\text{ct} } $, we need new ones. 
+For example, we have derivative terms 
+and quadratic terms to worry about which 
+wouldn't have been in the original Lagrangian. 
+The new coupling 
+terms have their own Feynman rules and are denoted with the new vertices as shown 
+in figure \ref{fig:vertices}. 
+
+\begin{figure}[htpb]
+\centering
+\input{vertices.pdf_tex}
+\caption{Vertices from our renormalised theory}%
+\label{fig:vertices}
+\end{figure}
+
+The terms here are order $ \hbar $ to 
+counter quantum effects. Generally, 
+$ \delta Z _ \phi $, $ \delta m ^ 2 $ and $ \delta \lambda $ 
+are order $ O \left( \hbar  \right)  $ at most. 
+Therefore, tree diagrams containing $ \mathcal{ L } _{CT } $ 
+vertices are the same order as l opp diagrams 
+from $ \mathcal{ L } _{ \text{ren }}$. 
+
+\subsubsection{Renormalising with our first loop contribution}
+Recall that our contribution from 
+our 1-loop diagram is denoted 
+$ \Pi _ 1 \left( p ^ 2  \right)  $, and originally, it diverges.
+However, we define a new renormalised 
+one-loop contribution by setting 
+\[
+\Pi_{1, \text{ren}} \left( p ^ 2  \right) = \Pi_{ 1}\left( p ^ 2  \right) 
++ \Pi _{ 1, \text{ct}} \left( p ^  2  \right) 
+\] 
+Once again, our intention is to 
+cancel out the one-loop divergence 
+with our counter terms. 
+
+We had from earlier the two point vertex 
+expression, which we obtained 
+by summing over a geometric series of 1PI diagrams. 
+\[
+\tilde{ \Gamma } ^{ \left( 2  \right)  } \left( p  \right)   = 
+\left[ \tilde{ G } ^{ \left( 2  \right)  } \left( p  \right)    \right]  ^{ - 1 } 
+ = p ^ 2 + m ^ 2  - \Pi \left( p ^ 2  \right) 
+\] From $ \mathcal{ L  } _{\text{ren } } $, we 
+still compute
+$ \Pi _ 1 \left( p ^ 2  \right)  $ in the exact same 
+way as before, but this time our values of 
+$ m ^ 2 $ and $ \lambda $ are the different, rescaled and renormalised quantities of our 
+original Lagrangian. 
+$ \mathcal{ L } _ 0  = \mathcal{ L } _{ ren } + \mathcal{ L  } _{ ct } $. 
+From $ \mathcal{ L } _{\text{ct} } $, we have 
+The finite result for 
+$ \Pi _{ 1 , \text{ren } }  = \Pi _{1 } \left( p ^ 2  \right)  + \Pi _{1,  \text{ct}}$, 
+is obtained by choosing $ \delta Z _ \phi  = 0$, and 
+\[
+\delta m ^ 2  =  - \frac{\lambda }{32 \pi ^ 2 }\left[  \Lambda ^ 2 
+- m ^ 2 \log \left( 1 + \frac{\Lambda ^ 2 }{ m ^ 2 }  \right)  \right] 
+\]  With this choice, $ \Pi _{ 1, \text{ren }} = 0 $.
+We will explain this a bit more. We previously suppressed 
+a factor of $ \hbar$ since we're working in 
+natural units, but we have that when we expand this object out again, 
+we have that 
+\[
+\mathcal{ L }  \to \mathcal{ L } + \hbar \mathcal{ L } _{CT}
+\] so we add a loop contribution 
+from the first part, which is order $ \hbar $ and 
+the vertices, which are also order $ \hbar $.
+We get that 
+\[
+\Pi_{1, \text{ren}} = \Pi_ 1\left( p ^ 2   \right) + 
+\Pi_{ 1, \text{CT}} = 
+ - \frac{\lambda }{ 32 \pi ^ 2 } \left[  
+ \Lambda ^ 2  - m ^ 2 \log \left( 1 + 
+\frac{\Lambda ^ 2 }{ m ^ 2 }\right) \right] - p ^ 2 \delta Z  - \delta m ^ 2 
+\] The first term is just our loop contribution which 
+we computed before, and the second terms come from 
+our counter term vertex contributions.
+We can't include $ \delta \Lambda $ yet because 
+this term is of order $ \hbar ^ 2 $. 
+Correspondingly, we require at two loops 
+the following counter term contributions as well. 
+The freedom to choose where to put 
+finite points is called the renormalisation 
+scheme. The scheme above is called 
+the on shell scheme, 
+because of the fact that we require 
+\begin{itemize}
+\item  Require 
+	\[
+		\Pi _{\text{ren } } \left(  - m ^ 2 _{ \text{phys} } \right) 
+		 = m ^ 2  - m ^ 2_{\text{phys } } 
+	\] which is usually 0 
+\item We also require this to have a 
+	finite derivative 
+	\[
+	 \frac{\partial  \Pi _{ \text{ren } } }{\partial  p ^ 2 }  \mid_{ p ^ 2 
+	  = - m ^ 2 _{ \text{phys } } }  =0 
+	\] 
+\end{itemize}
+Then, we have that 
+\[
+\tilde{ G } ^ \left( 2  \right)  \left( p  \right)   = 
+\frac{1}{p ^ 2 + m ^ 2  - \Pi _{\text{ren} } \left( p ^ 2  \right)   } 
+ = \frac{1}{p ^ 2 + m ^ 2 _{\text{phys} } } 
+\] Here, we have a pole at $ p ^ 2  =   - m ^ 2 _{\text{phys } } $, 
+and the residue is 1 from LSZ. 
+The $ m ^ 2 $ in the renormalised Lagrangian 
+should be equal to the observed mass. 
+Next, we choose 
+$ \delta \lambda $ to cancel divergences in $ \Lambda ^{ \left( 4  \right)   } 
+\left( 0 , 0 , 0, 0  \right)  $. 
+We set $ \Phi _{ 1, \text{ct } } ^{ \left( 4  \right)  }  = - \delta \lambda $, 
+choose $ \delta \lambda  = \frac{3 \lambda ^ 2 }{ 32 \lambda ^ 2 } \log \left( 
+\frac{\Lambda ^ 2 }{ m ^ 2 } - 1 \right) $  
+This gives 
+\begin{align*}
+\lambda _{ eff} : =& \tilde{ \Gamma } ^{ \left( 4  \right)  } _{\text{ren} } 
+\left(  0 , 0 , 0 , 0  \right)   = \lambda + \tilde{ \Gamma } _ 1 ^{ \left( 4  \right)  } 
+\left( 0 , 0 , 0 , 0  \right)  + \tilde{ \Gamma } _{ 1, \text{ct } } ^{ \left( 4  \right)  } 
+&=  \lambda - \frac{3 \lambda ^ 2 }{ 32 \pi ^ 2 } \left[  
+\log \left( 1 + \frac{m^ 2 }{ \Lambda ^ 2 } + \frac{m ^ 2 }{ 
+m ^ 2 + \Lambda ^ 2 }  \right)  \right]  \\
+\end{align*} This is finite as $ \Lambda ^ 2 \to \infty  $. 
+In fact, the finite piece chosen so that $ \lambda_{\text{eff }} \to \lambda $. 
+
+\subsection{Dimensional Regularisation}
+Applying a momentum cutoff as a 
+strategy to regute the 
+1-loop integrals doesn't work if 
+we are dealing with non-Abelian gauge theories. 
+What we need to do instead is 
+work by varying the dimension. 
+In the context of perturbation theory, 
+divergences can be regulated by working in $ d  = 4 - \epsilon $ 
+Usually, this is $ 0 < \epsilon \ll 1$. 
+If we start with 
+\[
+S  = \int d ^ d  \left[  \frac{1}{2 } \left( 
+\partial  \phi ^ 2  \right)  + \frac{1}{2 } m ^ 2 \phi ^ 2  + \frac{\lambda }{ 4 ! }
+\phi ^ 4 \right] 
+\]  Dimensional analysis can be used here. Given that 
+$ \left[ S  \right]   =0,\left[  \partial   \right]  = \left[  
+m \right]  = \left[  X  \right]   = 1    $. 
+So, 
+\[
+\left[  \phi ^2 m ^ 2  \right]   = 2 \left[  m  \right]  + 2 \left[  \phi  \right]  
+= d , \to \left[  \phi  \right]   = \frac{d}{2 } - 1
+\] Also, $ \left[  \lambda \phi ^ 4  \right]   $, 
+thus $ \left[  \lambda  \right]  = 4 - d  = \epsilon $.
+Introducing arbitrary scale $ u $, we 
+have $ \left[  u  \right]   = 1 $. 
+We write $ \lambda  = \mu ^{ \epsilon  } g \left( u  \right)   $. 
+such that $ g $ is dimensionless coupling 
+in terms of mass dimension. 
+We interpret $ \mu $ as a 
+a renormalisation scale, but in this 
+case it is not to be taken 
+to $ \infty $. 
+
+\subsection{Mathematical Identities which are useful}
+Before we go into the mechanics 
+of regularisation, we will prove some useful
+identities which will help us 
+calculate things. These identities are important, 
+so remember them!
+
+\begin{thm}{The surface area of an n-dimensional sphere}
+We evaluate the surface 
+area of an n-dimensional sphere in 
+terms of gamma functions. To do this, we 
+start from integrating over $ d $ gaussian integrals 
+then do a change of variables.
+Furthermore, once we 
+figure out an expression for $ d $ when $ d $ is real, 
+we can analytically continue this for when $ d \in \mathbb{ C } $, 
+which we will need to do when we are doing 
+the epsilon expansion. 
+\begin{align*}
+\left( \sqrt{ \pi }   \right)  ^{ d } 
+&=  \left( \int_{ - \infty } ^{ \infty } e ^{ - x ^ 2 }   \right) ^{ d }  \\
+&=  \int _{ \mathbb{ R } ^{ d  } } dx _ 1 \dots dx _ d 
+e ^{  - x_1 ^ 2 + \dots + x_ d ^ 2 } \\ 
+&=  S_ d \int d r \, r ^{ d - 1 } e ^{ - r ^ 2  } \\
+&=  \frac{S _ d }{  2 } \int du \, u ^{ \frac{d}{2 }  - 1 } e^{ - u  } 
+\quad r ^ 2  =u  \\
+&=  \frac{S _ d }{  2 } \Gamma \left( \frac{d}{2 }  \right) 
+\end{align*}
+This means that 
+\[
+S _ d  = \frac{2 \pi ^{ \frac{d}{2 } } }{ \Gamma \left( \frac{d}{2 }  \right)  }
+\] which is 
+an expression which we can analytically continue. 
+Be careful - sometimes the definitions of $ S _ d $ can differ!
+\end{thm}
+
+Our gamma function $ \Gamma \left( \alpha  \right) $ is initially defined 
+only in the domain where $ \alpha \in \mathbb{ R } _ +  $. 
+Hwoever, we can use analytic continuation by 
+appealing to the fact that 
+$ \alpha \Gamma \left( \alpha  \right)   = \Gamma \left( \alpha + 1  \right)  $,
+and extended the definition of the gamma function 
+to $ \alpha \in \mathbb{ R }  $ and include negative numbers. 
+It's worth remembering that 
+\[
+\Gamma \left( 1  \right)   = 1 , \quad \Gamma \left( \frac{1}{2} \right)  = 
+\frac{1}{2 } , \quad \Gamma \left( \alpha \right)  
+ = \int _ 0 ^{ \infty } dx x ^{ \alpha  -1 } e ^{ - x }
+\]
+\subsubsection{Deriving a small expansion of the Gamma function}
+We will, without proof, 
+use the fact that the log Taylor expansion 
+of the gamma function is 
+\[
+\log \Gamma \left( \alpha + 1  \right)  
+= - \gamma \alpha  - \sum_{ k = 2  }^{ \infty  } \left( - 1  \right)  ^{ k } 
+\frac{1}{k } \zeta \left( k  \right) 
+\] The first constant $ \gamma $ has a special name, 
+it is called the Euler-Mascheroni constant, with 
+$ \gamma  = \gamma _ E  \sim 0.58 $, 
+and we have that  $ \zeta \left( k  \right)  $ is the 
+Riemann-Zeta function
+\[
+\zeta \left( k  \right)  = \sum _{ n = 1  } ^{ \infty } \frac{1}{n ^ k } 
+\] We can use the expansion 
+above to show derive 
+a small $ \alpha  $ expansion for $ \Gamma \left(  \alpha  \right)  $. 
+Taking the first term of the expansion, we 
+have 
+\begin{align*}
+\log \Gamma \left( \alpha + 1  \right)  &=  - \gamma \alpha + \dots  \\ 
+\alpha \Gamma \left( \alpha  \right)  & = e ^{ - \gamma \alpha } \\
+\alpha \Gamma \left( \alpha  \right)   &= 1- \gamma \alpha + O \left( \alpha ^ 2  \right)   \\
+\Gamma \left( \alpha  \right)  &=  \frac{1}{\alpha } - \gamma + 
+O \left( \alpha  \right)   
+\end{align*}
+We also define a new function 
+$ B \left( s, t  \right)  $ which is 
+called the Euler beta function, where 
+\[
+B \left( s, t  \right)   = \int _ 0 ^ 1 
+du \, u ^{ s- 1 } \left(  1 - u  \right)  ^{ t - 1 }   = 
+\frac{\Gamma \left( s  \right)  \Gamma \left(  t  \right)  }{ 
+\Gamma \left( s + t \right) }
+\] 
+
+\subsubsection{Regulating our 1-loop 
+integral}
+We replace our 
+constant $ \lambda $ with 
+$ \lambda  = g \left( \mu  \right)  \mu ^{ \epsilon } $, 
+and then, use our new found knowledge to 
+write our divergent one loop integral as the following. 
+\begin{align*}
+\Pi _ 1  &=  
+- \frac{\lambda}{2 } \int \frac{ d ^ d k }{ \left( 2 \pi  \right)  ^ d } \frac{1}{
+k ^ 2 + m ^ 2 } \\
+	 &=  - \frac{g \left( \mu  \right) 
+	 \mu ^{ \epsilon } }{ 2 \left( 
+ 2 \pi \right) ^{ d }} S _ d \int _ 0 ^{ \infty } 
+	 \frac{k ^{ d - 1  }  }{ k ^ 2 + m ^ 2 } dk 
+\end{align*}
+Let's focus on the integrand. 
+Writing the integrand as an integral
+over $ d k ^ 2 $, and then using 
+a $ u =  m ^ 2 / \left( k ^ 2 + m ^ 2  \right)  $ 
+substitution, we can show that 
+\[
+\mu ^{ \epsilon } \int_{ 0 } ^{ \infty } 
+\frac{k ^{ d - 1  } }{ k ^ 2 + m ^ 2 } d k  
+= \frac{m ^ 2 }{ 2 } \left( \frac{\mu }{ m }  \right) ^{ \epsilon } 
+\frac{\Gamma \left( \frac{d}{2 }  \right)  \Gamma \left( 1 - \frac{d}{2 }  \right)  }{
+\Gamma \left( 1  \right) }
+\] Now, using our value for
+the surface area $ S _ d  $, we substitute in the 
+value $ \left( \pi  \right) ^{ d / 2 }  = \frac{S _ d }{ 2 } \Gamma 
+\left( \frac{d}{2 }  \right)  $, which 
+gives us 
+\[
+\Pi _ 1 = - \frac{g m ^ 2 }{ 2 \left( 4 \pi  \right) ^{ \frac{d}{2 } } } 
+\left( \frac{\mu }{  m } \right)^{ \epsilon } \Gamma \left( 
+1 - \frac{d}{2 } \right)  
+\] Now, the idea here 
+is to set $ d  = 4 - \epsilon $, and 
+expand out the gamma function 
+perturbatively.
+First we use the fact that in 
+our scheme, we're setting $ d  = 4 - \epsilon $. 
+Then, we use our logarithm expansion to 
+show that  
+\[
+\Gamma \left( 1 - \frac{d}{2 }  \right)   = 
+\Gamma \left( \frac{\epsilon }{ 2 }  - 1  \right)   = - \frac{1}{
+1 - \frac{\epsilon}{ 2 } } \Gamma \left( \frac{\epsilon}{2 }  \right)  
+= - \frac{2}{\epsilon } + \gamma  - 1 + O \left( \epsilon  \right)  
+\] Furthermore, 
+we expand out our exponent $\left( \frac{4 \pi \mu ^ 2 }{ m ^ 2 } \right)^{ 
+\frac{\epsilon}{2 } }  = 1 + \frac{\epsilon }{ 2 } \log \left( 
+\frac{4 \pi \kappa ^ 2 }{  m ^ 2 }  \right) + O \left( \epsilon ^ 2  \right)  	  $. 
+Substituting this in all together, 
+we have that 
+\[
+\Pi _ 1 \left( p ^ 2  \right)   =  -   \frac{gm ^ 2 }{ 32 \pi ^ 2 } 
+\left[  \frac{2 }{ \epsilon } - \gamma + 1 + \log \left( \frac{
+4 \pi \mu ^ 2 }{ m ^ 2 }  \right)  + O \left( \epsilon ^ 2  \right)  \right] 
+\] So effectively, what we've done here is 
+isolate the divergence and factored it out 
+it in the form of $ \frac{2}{\epsilon } $. 
+
+This means that we now ought to add counter-terms 
+into the mix, which come from  $ \frac{\delta m ^ 2 }{ 2 } \phi ^ 2  $, 
+with  $ \mathcal{ L } _ 0  = \mathcal{ L }_{\text{ren}} + \mathcal{ L }_{\text{CT}} $. 
+We can choose one of two different schemes 
+to subtract our factor of $ \frac{gm ^ 2  }{ 16 \pi ^ 2 \epsilon } $. 
+Note the funny signs here. Recall, when 
+we're taking the contribution of the counter-terms 
+we add by $ - \delta m ^ 2 $. 
+\begin{itemize}
+\item We can employ the minimal subtraction scheme 
+	where we set $ \delta m ^ 2  = -\frac{gm ^ 2 }{ 16 \pi ^ 2 \epsilon } $, 
+	which is basically the simplest thing we can do. We 
+	call this the \textbf{MS} scheme, for short. 
+\item We can subtract more constants from the mix in the 
+	modified minimal subtraction scheme, 
+	denoted $\overline{\text{MS}}$, where in this case we
+	set
+	\[
+	 \delta m ^ 2  = 
+	 - \frac{gm ^2 }{32 \pi ^ 2 }\left( \frac{2}{\epsilon } 
+	  - \gamma + \log 4 \pi \right)  
+	\] 
+\end{itemize}
+Note that with these schemes, $ m $ doesn't
+necessarily denote the physical mass 
+of the system. 
+In the case of the modified minimal subtraction scheme, 
+we have that 
+\[
+\Pi _ 1 ^{\overline{\text{MS}}} = \frac{gm ^ 2 }{32 \pi ^ 2  }
+\left( \log \left( \frac{\mu ^ 2 }{m ^ 2  }  \right) - 1 \right) 
+\] 
+At this point, we have 
+several ways to subtract this off 
+so that we get a finite answer. We can repeat this 
+same story exactly with the four-point vertex function. 
+Just to the same integral but this 
+time with the four point function and 
+approximate it using the same Taylor expansions 
+as above. 
+We find that, at 1-loop, 
+we have a counter term that needs to 
+be added which looks like
+\begin{itemize}
+\item In the case of the minimal subtraction scheme, 
+	our counter term removes simply just 
+	the divergent part, so we have 
+	that 
+	\[
+\mu ^{ \epsilon } \delta g 
+= \frac{3 g ^ 2 \mu ^{ \epsilon } }{ 32 \pi ^ 2 } 
+\left( \frac{2}{\epsilon }  \right) 
+\] where we recall that $ \lambda _ 0 = \left( g + \delta g  \right)  
+\mu  ^{ \epsilon } $. 
+\item In the case of the modified minimal subtraction 
+	scheme, we 
+	subtract a bit more 
+	from the mix, and include the 
+	Euler-Mascheroni constant. 
+	\[
+	 \mu ^{ \epsilon } \delta g  = \frac{3 g ^ 2 \mu ^{ \epsilon } }{ 32 \pi ^ 2 } 
+\left( \frac{2}{\epsilon }  - \gamma + \log 4 \pi  \right) 
+	\]  
+\end{itemize}
+Now one may ask the 
+obvious question. We've put in 
+this dimensionless constant $ \mu $, 
+but our physics shouldn't 
+rely on this. Thus, we need to 
+fix how $\mu $  evolves. To learn how to 
+do this, we take a look at our original 
+form for the Lagrangian. This technique 
+is called subtracting to infinity and is an 
+old-fashioned approach to eliminating $ \mu $ 
+dependence. 
+We had 
+\begin{align*}
+\mathcal{ L } _ 0 &=  
+\frac{1}{2 } \left( \phi _ 0  \right)  ^ 2 + \frac{1}{2  } m_0 ^ 2
++ \frac{\lambda _ 0 }{ 4 ! } \phi _ 0 ^ 4 \\
+\mathcal{ L } _{\text{ren}} + \mathcal{ L } _{\text{CT}} &=
+\frac{1+   \delta \mathcal{ Z } _{ \phi } }{ 2 } \left( 
+\partial  \phi \right)  ^ 2 + \frac{m ^ 2 + \delta m ^ 2 }{ 2 } \phi ^ 2 
++ \frac{g + \delta g  }{ 4 !  } \mu ^{ \epsilon } \phi ^ 4 
+\end{align*}
+Now, the point is that our original 
+parameters $ \lambda _ 0 , m_0 ^ 2 $  and so on
+were  $ \mu $ independent. We use this 
+as a condition to see how 
+$ g $ depends on $ \mu $ and how to coupling runs. For
+this purpose, we define the \textbf{beta} function.
+\begin{defn}{Beta function.}
+Our beta function of some coupling constant, say 
+$ g $, denoted as $ \beta \left( g  \right)  $, is 
+defined as 
+\[
+\beta \left( g  \right) 
+= \mu \frac{d  }{ d \mu } g  = \frac{d g }{ d \left( \log \mu  \right)  } 
+\] 
+\end{defn}
+With this definition, we can solve 
+for the $ \beta $ function of $ g $ knowing 
+full well that $ \lambda _ 0  = 
+\left( g + \delta g  \right)  u ^{ \epsilon } $  shouldn't 
+depend on $ \mu $. In our next calculation, we 
+crucially work to lowest order in 
+$ \epsilon $. Writing $ u ^{ \epsilon  } = e 
+^{ \epsilon \log \mu } $ to simplify the calculations, we 
+have that in the MS scheme,  
+\begin{align*}
+0 &=  \frac{d }{ d \log \mu } \lambda _ 0  \\
+  &=  \frac{d }{ d\log \mu } \left[  \left( 
+  \gamma + \delta g \right)  \mu ^{ \epsilon }  \right]   \\
+  &=  \epsilon g \left(  1 + \frac{ 3g }{ 16 \pi ^ 2 \epsilon }  \right)  
+  + \beta \left( g  \right)  \left(  1 + \frac{ 3g }{ 8 \pi \epsilon ^ 2 }  \right)  
+\end{align*}
+This means we can write our $ \beta $ function 
+explicitly as 
+\begin{align*}
+\beta \left( g  \right)  &=  - \left( \frac{3 g ^ 2 }{ 16 \pi ^ 2 } 
++ \epsilon g \right)  \left( 1 + \frac{3g }{ 8 \pi \epsilon ^ 2 }   \right) 
+^{ - 1 } \\ 
+			 &=  \frac{3g ^ 2 }{ 16 \pi ^ 2 }  - \epsilon g + O \left( 
+			 \frac{g ^ 2 }{ \epsilon ^ 2 } \right)  \\
+			 &=  \mu \frac{ dg }{ d \mu } + \text{two-loop order 
+			 calculations}, \quad \beta \left( g  \right)  > 0 
+\end{align*}
+Let's now try to 
+solve this differential equation 
+we have to first order. 
+To first order in $ \epsilon $, 
+from the above derivation, we have that 
+\[
+\beta \left( g  \right)   = \mu \frac{dg }{ d \mu }  = 
+\frac{3 g ^ 2 }{ 16 \pi ^ 2 } + \dots 
+\] since the first thing came from 
+the 1-loop diagram we have that the first term is of 
+order $ \hbar $, and the rest of the terms 
+are of order $ \hbar ^ 2 $. 
+This has the associated differential equation 
+\[
+\frac{dg }{ g ^2  }  = \frac{3 }{ 16 \pi ^ 2  } \frac{d \mu }{ \mu } 
+\]  When we integrate 
+$ \mu \to \mu  '  $, 
+we have that the solution is 
+\[
+\frac{1}{g \left( \mu  '  \right)  }  = \frac{1}{g \left( \mu  \right)  } 
+ - \frac{3}{16 \pi ^ 2 } \log \frac{\mu ' }{ \mu } 
+\] Rearranging, we get that 
+\[
+g \left( \mu  '  \right)   = \frac{g \left( \mu  \right)  }{ 
+1 - \frac{ 3g }{ 16 \pi ^ 2 } \log \left( \frac{\mu ' }{ \mu }  \right)  } 
+\simeq g \left( \mu  \right)  + \frac{ 3 \left( g \left(  \mu  \right)   \right)^  2  }{ 
+16 \pi ^ 2 } \log \frac{\mu ' }{ \mu } 
+\]  We can 
+use this to show that the 
+running of our coupling $ g $ increases 
+with our dimensionless 
+parameter $ \mu$. For $ \mu ' > \mu  $, the added
+second term is positive, and hence we have that $ g \left(  \mu '   \right) > 
+g \left( \mu  \right)  $. 
+The coupling runs to larger values as $ \mu $ increases. This 
+is a clever way to show this 
+without having to differentiate 
+our function in the 
+first place. 
+We also have that, looking 
+at the denominator of our fraction, 
+that our value of $ g \left( \mu  '  \right)  $ diverges 
+when $ \mu $ approaches $ \mu ^ * $ such that 
+\[
+\frac{6g }{ 16 \pi ^ 2 } \log \frac{\mu ^ * }{ \mu }  = 1
+\] We call this dimensional 
+parameter $ \Lambda _{ \phi ^ 4 } $, so that  
+if $ \mu ' \to \Lambda _{ \phi ^ 4}$, 
+where $ \Lambda _{ \phi ^ 4 }$ is defined via 
+\[
+\frac{3g }{ 16 \pi ^ 2 } \log \frac{\Lambda_{ \phi ^ 4 }}{ \mu }  = 1 , \quad \text{1-loop}
+\] then we have that 
+$ g \left( \mu  '  \right) \to \infty $. 
+This $ \Lambda _{ \phi ^4 }  $ can be used 
+as a scheme-dependent reference mass scale. 
+\[
+g \left( \mu  \right)   = \frac{16 \pi }{ 3 } \frac{1}{
+\log \frac{\Lambda_{ \phi ^ 4 } }{ \mu } }
+\] The appearance of 
+$ \Lambda _{ \phi } $ scale 
+is called dimensional transmutation, since 
+this parameter has a mass scale, but 
+comes out from the parameter $ \mu $ which 
+was dimensionless by construction.
+In this spirit,  we only 
+trust perturbation theory when $ \mu \ll \Lambda _{ \phi ^ 4 }  $, 
+although I'm not quite 
+sure how to interpret our cutoff $ \Lambda _{ \phi ^ 4 } $. 
+
+\subsection{The second approach to Renormalisation}
+We will now explore 
+a different way to explore how the 
+coupling $ g \left(  \mu  \right)  $  runs, 
+using the Callan-Symanzik equations.
+We have our quantum effective 
+action $ \Gamma \left( \phi  \right) $ and the vertex functions 
+$ \Gamma ^{ \left(  n  \right)  }  $. 
+These quantities go into the LSZ formula, which 
+means that they should be physical quantities. 
+should be physical. These go into LSZ formula, 
+from which we obtain physical predictions. This is a 
+big hint, because as a result, our quantities 
+$ \Gamma $ should be independent of $ \mu $, 
+which means we should get zero if we differentiate 
+the quantities by $ \mu $. 
+Recall that, when we had to rescale our 
+fields $ \phi $ was properly normalised, 
+we set $ \phi _ 0 = Z_{ \phi } ^{\frac{1}{2}} \phi $. 
+\[
+\Gamma _ 0 ^{ \left(  n  \right)  }
+\left( x_1, \dots x _ n  \right)   = 
+\left(  - 1  \right)  ^{ n } \frac{\delta ^{ \left( n  \right)  } 
+\Gamma \left[  \phi _ 0  \right]  }{ \delta 
+\phi _ 0 \left( x _ 1  \right)  \dots \delta \phi _ 0 \left( x _ n  \right)  }
+= \left(  - 1  \right)  ^{ n } Z ^{  - n / 2 } _ \phi 
+\frac{\delta ^{ \left( n  \right)  } \Gamma \left[  \phi  \right]  }{ 
+\delta \phi \left( x _ 1  \right)  \dots \delta \phi \left(  x_ n  \right)  }
+\] Here, we used the 
+chain rule to take out the rescaling when 
+moving from $ \phi _ 0 $ to $ \phi $. We define 
+the anomalous dimension of $ \phi $, 
+so that 
+\[
+\gamma _{ \phi }  = - \frac{ \mu }{ 2 } \frac{d  }{ d \mu } 
+\log Z _{ \phi} 
+\] We then 
+have 
+\[
+\mu \frac{ d  }{ d \mu  } Z _{ \phi } ^{  - n  / 2} = 
+- \frac{n}{ 2 } Z _{ \phi } ^{  - n  / 2 } \mu 
+\frac{ d }{ d \mu } \log Z_{ \phi }  = \left( n 
+\gamma _{ \phi } \right)  Z _{ \phi } ^{  - n  / 2 }
+\] The steps here can 
+be shown straightforwardly by just writing 
+$ Z _ \phi ^{ - n / 2 }  = e ^{  - \frac{n}{2 } \log Z _ \phi } $. 
+We require that terms 
+in $ \Gamma $ should be independent of scale.
+So, differentiating this object with respect to 
+$ \mu $ should equal zero. We have that $ \Gamma $ has 
+both explicit dependence on $ \mu $, as 
+well as implicit dependence via our couplings 
+$ g \left( \mu  \right)  $. 
+This means that we require 
+\[
+\mu \frac{d }{ d \mu } \Gamma ^{ \left( n  \right)  } 
+ = 0 = \left( \mu \frac{\partial   }{\partial  \mu }  
+ + \mu \frac{d m ^ 2 }{ d \mu } \frac{\partial  }{\partial  m ^ 2 }  
++ \beta \left( g  \right) \frac{\partial  }{\partial  g }  
++ n \gamma _{ \phi }  \right)  \Gamma_{\text{ren}}^{ \left( n  \right)  }  
+\left( x_1 \dots x _n  \right) 
+\] These are called the Callan-Symanzik equations. 
+We can substitute different values 
+of $ n $ in this case, to how our beta functions 
+evolve. We will repeat this procedure 
+in the case of  $ n = 2 $ and $  n = 4  $ 
+and check we get the same answers, and also 
+see how this relates to the anomalous dimension. 
+The last three terms are of 
+order $ \hbar $ at 1-loop. 
+In $ \phi ^ 4 $ theory, we have 
+that $ Z _{ \phi }  = 1$ to one loop order, 
+so we don't have to consider this in the calculations 
+below? 
+Recall that our value for the one loop 
+integral, 
+in the modified minimal subtraction scheme is 
+\[
+\Pi _ 1 ^{ \overline{\text{MS}}} =  \frac{g m ^ 2 }{ 32 \pi ^ 2 } 
+\left( \log \left( \mu ^ 2  / m ^ 2  \right)   -1  \right)  
+\] This gives us an expression for our vertex function, 
+which we previously derived using the 
+geometric series argument 
+behaves like 
+\[
+\tilde{ \Gamma } ^{ \left(   2  \right)  } 
+\left(  p ^ 2  =0  \right)   = p ^ 2 + m ^ 2  - 
+\frac{gm ^ 2  }{ 32 \pi ^ 2} \left( \log \frac{\mu ^ 2 }{ m ^ 2 }  - 1  \right)   = 
+0 + \dots 
+\] We then have that 
+\[
+0 = \mu \frac{d }{ d \mu } \tilde{ \Gamma } ^{ \left( 2  \right)   } 
+\left(  0  \right)    = \mu \frac{d m ^ 2  }{d \mu }  - \frac{gm ^ 2 }{ 
+16 \pi ^ 2 } + O \left( \hbar ^ 2  \right)  
+\implies \mu \frac{ d m ^ 2 	  }{ \mu 	 } = \frac{g m ^ 2 }{ 16 \pi ^ 2 }
+\]  
+Similarly, for our fourth order term, 
+we have that 
+\begin{align*}
+\tilde{\Gamma }^{ \left( 4  \right)   } 
+\left(  0 , 0 , 0 , 0  \right)   & = - g \mu ^{ \epsilon } 
++ \frac{3 g ^ 2 \mu ^{ \epsilon }  }{32 \pi ^ 2  } 
+\log \frac{ \mu ^ 2 }{ m ^ 2 } + \\
+0 &=  \mu \frac{d  }{d \mu  } \tilde{\Gamma } ^{ \left( 4  \right)  }  = 
+- \beta (g ) + \frac{3 g ^ 2 \mu ^{ \epsilon }  }{ 16 \pi ^ 2 } + \dots  \\ 
+\end{align*}This implies that $ \beta (g )  = \frac{3 g ^ 2 }{ 16 \pi ^ 2 } $. 
+
+\pagebreak 
+\section{Renormalisation Group}
+Quantum field theory is not 
+defined by the Lagrangian alone. To 
+do this, we have a renormalisation scheme - for example 
+the minimal subtraction scheme or the modified minimal subtraction scheme. However, 
+having a renormalisation scheme doesn't fix parameters 
+on its own, and we need to fix parameters with renormalisation conditions
+(for example, doing things on shell). 
+
+The idea is that QFT is not well defined 
+without a regulator. This regulator is introduced, 
+and we see how things change as we change this. 
+
+We explore the concept of universality. 
+This is when we impose an arbitrary cutoff in UV, 
+and then at low energies we see universal IR physics 
+emerging from 
+theories with different regularisation and 
+renormalisation schemes (and scale). 
+The renormalisation group is the 
+study of how microscopic details 
+change along lines of constant IR physics. 
+For a real scalar field, momentum cutoff 
+$ \Lambda _ 0 $, in d dimensions $ d \in \mathbb{ Z }_ +  $, 
+we write the action 
+\[
+S _{ \Lambda_ 0 } \left[  \phi  \right]   = \int d ^ d x 
+\left[  \frac{1}{2 } \partial  _ \mu \phi \partial  ^ \mu \phi 
++ \sum _{ i \text{ terms } } \frac{1}{\Lambda _ 0 ^{ 
+d _ i - d } } g _{ i 0  }  \mathcal{ O } _ i \left( x \right) \right] 
+\] where $ \mathcal{ O } _ i \left[  \phi \left( x  \right)   \right]   $
+local operators with mass dimension $ d _ i > 0 $, 
+and they can be made up of fields and their derivatives, 
+for example $ \mathcal{ O }_ i  = \left( \partial  
+\phi \right)  ^{ r _ i } \phi ^{ s _ i  }  $. 
+Right 
+now, we're ignoring the mass coupling. 
+The partition function is 
+defined as 
+\[
+\mathcal{ Z } _{ \Lambda _ 0 } \left( g _{ i \mathcal{ O }}  \right)  
+ = \int ^{ \Lambda _ 0  } \mathcal{ D } \phi e ^{  - S _{ \Lambda _ 0 } \left[  \phi  \right]  }
+\] The integral is over fields 
+such that $ | \phi | \leq \Lambda _ 0 $. 
+What do we mean in this context that 
+the path integral has an upper cutoff $ \Lambda _ 0 $? 
+We mean that the Fourier mode expansion has 
+momentum modes bounded by this limit. 
+In other words, the $ \phi $ in $ \mathcal{ Z } _{ \Lambda _ 0 } $ 
+is such that 
+\[
+ \phi ( x) = \int _{ | p | \leq \Lambda _ 0 } \frac{d ^ d p }{ \left( 2 \pi  \right)  
+ ^{ d }  } e ^{ i p \cdot  x } \tilde{ \phi  } \left( p  \right)  
+\]
+
+\subsection{Effective actions}
+We will now study effective 
+actions, where 
+we will provide a low momentum cutoff
+and integrate over our high momentum modes. 
+When we say momentum modes, we 
+mean the values of $ p $ in our 
+Fourier space decomposition. 
+This is what we mean by 'physics in the IR'. 
+\[
+S_{ \Lambda _ 0 } \left[  \phi  \right]   = \int d ^ d x 
+\left[  \frac{1}{2 } \left( \partial  \phi  \right)^ 2 + \sum _{ i } 
+\frac{g _{ i 0  } }{ \Lambda ^{ d_ i - d  } } \mathcal{ O }_{ i } \left(  x  \right) \right] 
+\] We write our 
+field $ \phi $ and decompose it 
+into two functions. One function retains 
+just the low momentum modes, and is the one to keep, 
+whilst the other function 
+integrates over the high momentum modes. 
+\begin{align*}
+\phi (x )  &=  \phi ^{ - } \left( x  \right)  + \phi ^ + \left(  x  \right)   \\ 
+&=  \int_{ | p | < \Lambda } \frac{d ^ d p }{ 
+\left(  2 \pi  \right)  ^{ d } } e ^{ i p \cdot  x } 
+\tilde{ \phi } \left( p  \right)   + \int _{ \Lambda < p < \Lambda _ 0    } \frac{d ^ d p }{ 
+\left( 2 \pi  \right)  ^{ d } } \tilde{\phi } \left( p  \right)  
+e ^{ i p \cdot  x }
+\end{align*}
+In this step, we integrate 
+out the $ \phi ^ + $ to get the Wilsonian effective 
+action, like a $ W $. In our 
+path integral notation, this looks like 
+a path integral from $ \Lambda $ to $ \Lambda _ 0 $. 
+Remembering to keep the exponent in the first step, we 
+thus have that
+\begin{align*}
+e ^{ S_{\text{eff}}\left[ \phi _ -  \right]  } &=  
+\int _{ \Lambda } ^{ \Lambda _ 0 } \mathcal{ D } \phi _ + e ^{ 
+- S \left[  \phi _ + + \phi _ -  \right]  } \\
+S_{\text{eff}} \left[  \phi _ -  \right]  &=  
+- \log \int_{ \Lambda } ^{ \Lambda _ 0 } \mathcal{  D } \phi _ + 
+e ^{ - S \left[  \phi _ + + \phi _ -  \right] }
+\end{align*} 
+From this 
+the RG equations will tell us how 
+$ S _{ \Lambda } ^{ \text{eff}}$ and $ S _{ \Lambda _ 0 } $ 
+are related. 
+We write 
+\[
+S _{ \Lambda _ 0 } \left[  \phi 
+^ - + \phi ^ +  \right]  = S ^{ 0 } \left[  \phi ^ -  \right]  
++ S ^ 0 \left[  \phi ^ +  \right]  + 
+S_{ \Lambda _ 0 } ^{\text{int}} \left[  \phi ^ - , \phi ^  + \right] 
+\] with free $ S ^ 0 \left[  \phi  \right]  
+= \int d ^ d x \frac{1}{2 } \left[  \left( \partial  \phi  \right)  ^ 2 
++ m ^ 2 \phi ^ 2 \right] $
+There is no quadratic term $ \phi ^ - \phi ^ + $. 
+In Fourier space, this gives 
+us $ \tilde{ \phi } ^ - \left( k  \right)  \tilde{ \phi } ^ + 
+\left(  k'  \right)  \delta ^{ \left(  d  \right)  } \left( 
+k + k ' \right)  $. 
+Vanish because of disjoint support. 
+A term like the following is non-zero 
+\[
+\tilde{ \phi } ^ - \left( k  \right)  \tilde{ \phi } ^ - \left( k'  \right) 
+\tilde{ \phi } ^ + \left( k ''  \right)  \delta 
+\left(  k + k ' + k ''  \right) 
+\] We use these to 
+construct effective interactions. 
+\[
+S _{ \Lambda } ^{ \text{int}} \left[  \phi  \right]  
+ = - \log \int \mathcal{ D } \phi ^ + e ^{  -  S^ 0 
+ \left[  \phi ^ +  \right]   - S _{ \Lambda _ 0 } ^{ \text{int}} \left[  
+\phi ^ - , \phi ^ + \right] }
+\] 
+\subsection{Running couplings}
+The physics being independent of $ \Lambda , \Lambda _ 0 $ 
+implies that our partition functions should 
+look the same 
+regardless of momentum cutoff. 
+In other words, we should have the condition 
+that 
+\[
+\zeta_{ \Lambda } \left( g _ i 
+\left(  \Lambda  \right)  \right)   = \zeta_{ \Lambda _ 0 } 
+\left(  g _{ i 0   } ; \Lambda _ 0  \right) 
+\] The right hand side independent 
+of $ \Lambda $ implies that the left hand side is independent 
+of $ \Lambda $. 
+This means that the couplings $ g _ i \left(  \Lambda  \right)  $ 
+must run to compensate. 
+\[
+\Lambda \frac{ d \zeta _{ \Lambda } \left(  g  \right)  }{ 
+d \Lambda }  = \left( \Lambda \frac{\partial   }{\partial  \Lambda }  
+\mid _{ g _ i } + \Lambda \frac{ d g _ i }{ d \Lambda } \frac{\partial   }{\partial  g _ i }  \right)
+\zeta _{ \Lambda } \left( g  \right)   = 0 
+\] This is the Callan-Symanzik equation 
+or the RG equation. 
+We have that $ S _{ \Lambda } ^{ \text{eff}}$ has 
+the same form as $ S _{ \Lambda _ 0 } $. 
+\[
+S _{ \Lambda } ^{ \text{eff}} \left[  \phi  \right]   = 
+\int d ^ d x \left[  \frac{Z _{ \Lambda } }{ 2 } 
+\left( \partial  \phi  \right)  ^ 2 + \sum _ i \frac{
+Z _{ \Lambda } ^{ n _ i  / 2 }  }{\Lambda ^{ d _ i - d } } g _ i 
+\left(  \Lambda  \right)  \mathcal{ O } _ i \left( x  \right) \right]  
+\] here, $ n _ i $ is the number of 
+$ \phi $ fields in $ \mathcal{ O } _ i \left(  x  \right)  $. 
+Integrating out $ \phi ^ +  $ modes 
+may force $ Z_{ \Lambda } \neq 1 $. 
+So, we renormalise the fields so that 
+$ \phi ^ r  = Z _{ \Lambda } ^{ 1 / 2 } \phi $. 
+Any remaining $ \Lambda $ dependence must be 
+described by $ g _ i \left( \Lambda  \right)  $. 
+In terms 
+of beta functions 
+\[
+\beta ^{ \text{cl} }_ i  = (d _ i  - d)g_i , \quad 
+\beta ^{ \text{qu }} _ i  = \Lambda \frac{d g _ i }{ d \Lambda } , 
+\beta  = \beta ^{ cl } + \beta ^{ qu } 
+\] 
+
+\subsection{Vertex functions}
+We'll now look at the 
+procedure in how we rescale vertex functions. 
+When we renormalise, in general 
+we have that $ \delta Z \neq 0 $, which means 
+that $ Z $ changes non-trivially. 
+This information is encoded in the anomoulous dimension. 
+Recall the definition of 
+the anomalous dimension, which is a derivative 
+of our partition function multiplied by a cutoff
+\[
+\gamma _{ \phi  }  = - \frac{\Lambda }{ 2 } \frac{d }{ d \Lambda  } 
+\log Z _{ \Lambda }
+\] To study what goes on 
+in terms of how couplings run, we 
+once again appeal to 
+functions which are phsyical, and 
+therefore don't depend on our chosen momentum 
+cutoff $ \Lambda  $. 
+In this case, we'll look at n-point vertex functions. 
+We will iterate 
+over a 'mode thinning' procedure, where 
+we repeatedly adjust the threshold of our momentum cutoff.  
+Let $ 0 < s < 1 $.  
+\[
+Z _{ s \Lambda } ^{  - n / 2 } \Gamma 
+_{ s \Lambda } ^{ \left( n  \right)  } \left( 
+x _ 1 , \dots, x _ n ; g _ i \left( s \Lambda  \right)  \right)  
+= Z _{ \Lambda } ^{  - n / 2 } \Gamma _{ \Lambda  }^{ \left( n  \right)  } 
+\left( x _ 1, \dots , x_ n ; g \left(  \Lambda  \right)   \right)  
+\] Infinitesimally, if we 
+Taylor expand out the left hand side 
+by doing a perturbation $ s =  1 - \delta s $, 
+then expanding out both $ Z $ and well as 
+$ \Gamma^{ \left( n  \right)  }  $ gives 
+us the relation 
+\[
+0 = \Lambda \frac{ d  }{ d \Lambda } \Gamma _{ \Lambda } ^{ \left( n  \right)  } 
+\left(  x _ 1 , \dota , x _ n ; g \left( \Lambda  \right)   \right)  
+ = \left( \Lambda \frac{\partial  }{\partial  \Lambda }  + 
+ \beta _ i  \frac{\partial  }{\partial  g _ i }  + n \gamma _ \phi  \right) 
+ \Gamma _{ \Lambda } ^{ \left( n  \right)  } \left( x _ 1 , \dots 
+ x_ n ; g \left(  \Lambda  \right)  \right) 
+\] For example, 
+let $ s \Lambda  = \Lambda ' $ for fixed $ \Lambda  $. 
+Differentiate this with respect to $ s $. 
+\[
+s \frac{ d }{ds  } Z _ s ^{  - n / 2 }  = n \gamma _{ \phi } , \quad \text{ using }
+s \frac{ d  }{ ds }   = \Lambda  ' \frac{ d }{ d \Lambda   '}
+\] then relabel $ \Lambda  ' $ as $ \Lambda $. 
+The whole RG transformation 
+is
+\begin{itemize}
+\item Integrate out momentum modes $ ( s \Lambda , \Lambda  ] $. 
+\item Rescale coordinates  $ x  ' = s  x $. 
+\end{itemize}
+Under rescaling, our kinetic 
+term must be made properly normalised. 
+\[
+\phi ^ r \left( s x  \right)   = s ^{1 - \frac{d}{2 } } \phi ^ r (x) 
+\] Then the rest of the action is invariant 
+is we also rescale $ \Lambda \to \Lambda / s $.
+
+\begin{align*}
+\Gamma _{ \Lambda } ^{ \left(  n  \right)  } 
+\left(  x _ 1, \dots , x _ n ; g ( \Lambda  ) \right)  &=  
+\left( \frac{Z _ \Lambda }{ Z _{ s \Lambda } }  \right) ^{ n / 2 } 
+\Gamma ^{ \left( n  \right)  } _{ s \Lambda } 
+\left( x _ 1, \dots , x _ n ; g (s \Lambda  ) \right)  \\
+						       &=  \left( s ^{  2-  d } 
+						       \frac{Z _ \Lambda }{ 
+					       Z _{ s \Lambda } } \right)
+					       ^{ n / 2 } \Gamma 
+					       _{ \Lambda } ^{ \left(  n  \right)  } 
+					       \left(  s x_ 1 ,\dots , s x _ n ; 
+					       g \left(  s \Lambda  \right)  \right) \\
+\end{align*} 
+Going into the second step, we've 
+rescaled coordinates, cutoff and fields. 
+But, numerical values of $ Z _{ s \Lambda }  $ and 
+$ g \left(  s \Lambda  \right)  $ don't get rescaled. 
+Now, we reconsider the points which we 
+look at. Instead of $ x _ i $ in argument, 
+look at $ x _ i  / s $. 
+\[
+\Gamma _{ \Lambda } ^{ \left( n  \right)  } 
+\left( \frac{x_1}{s} , \dots, \frac{ x_ n }{ s } ; 
+g (\left( \Lambda  \right)  \right) = 
+\left( s ^{ 2 - d } \frac{ Z _{ \Lambda }  }{ Z _{ s \Lambda } }    \right)^{ n / 2 } 
+\Gamma _{ \Lambda } ^{ \left( n  \right)  } \left( 
+x_ 1 , \dots , x _ n  , g \left( s \Lambda  \right)  \right)  
+\] As $ s $ get s smaller, on the left hand 
+side, we have that $ | x _ i - x _ j | $ gets bigger. 
+In the right hand side, the coupling runs 
+to the infrared. 
+For small  $ \delta \sigma  = 1 - s $. 
+we have that 
+\[
+\left( s ^{ 2 - d } \frac{ Z_ \Lambda }{ 
+Z _{ s \Lambda } }   \right) ^{ 1  / 2 } = 1 
++ \left( \frac{ d - 2 }{ 2 } + \gamma _ \phi    \right) \delta s 
+\] The fields behave as if their mass dimension were
+\[
+\frac{ d - 2 }{ 2 } + \gamma _{ \phi}  = \Delta _ \phi 
+\] where the first term is our  engineering dimension, 
+and our second term is the anomalous dimension. 
+These combined give our scaling dimension. 
+The anomalous dimension comes 
+from a correction from our rescaling. 
+In the running of the $ n $ point functions, 
+they don 't run exactly as they should. 
+
+\subsection{Renormalisation group flow}
+
+We look at coupling constant space, 
+which is a high dimensional space 
+parametrised with values of $ g _ i  $. 
+Renormalisation group flows 
+are lines in coupling constant space 
+corresponding to how 
+the set of couplings $ k\left\{  g _ i  \right\}  $ 
+change as we integrate modes. 
+This is governed by $ \left\{  
+\beta _ i \left( \left\{  g _  i  \right\}   \right) \right\} $
+which is the set of beta functions. 
+
+Theories lying along the 
+same flow line describe the same infrared
+physics. 
+We're thinking of the physics 
+now in terms of differential equations 
+of the $ \beta $ functions. Thus, we're 
+interested in fixed points and such.
+
+\subsubsection{Fixed Points of RG equations ($\beta $ functions)}
+Fixed points are where 
+$ \beta $ functions vanish.
+Denote the points with an 
+asterisk, so the set of fixed point $ \left\{  g ^ *_ j  \right\}  $, 
+such that 
+\[
+\beta _ i \mid_{ \beta _ j }  =0 
+\] Recall that 
+\[
+\beta _ i \left( \left\{  g _ i  \right\}   \right)  
+= \left( d _ i - d  \right)  + \Lambda \frac{d g _ i }{ d \Lambda } \left( 
+\left\{  g _ i  \right\} \right) 
+\] which is the sum of the classical 
+part and the quantum part. 
+For example, Gaussian fixed point
+$ g ) j ^{ * }   =0 , \forall j $
+in the free massless theory. 
+We also have non-trivial fixed points, 
+which require cancellation of $ \beta ^{ cl} $ abd 
+$ \beta ^{ qu }  $. 
+
+
+\subsubsection{Scale invariance at fixed points}
+$ g _ i ^ * $ is independent of scale 
+implies that other dimensionless functions 
+of $ g _ i $ are scale invariant, 
+for example, $ \gamma _ \phi \left( g _ i ^ *  \right)  
+= \gamma _ \phi ^*  $. 
+Now, if the $ \beta $ functions vanish, 
+the Callan-Symanzik equations become 
+\[
+\Lambda \frac{\partial   }{\partial  \Lambda }  \Gamma _{ \Lambda } 
+^{ \left(  2  \right)  } \left( x, y  \right)   = -  2 \gamma _ \phi ^ * 
+\Gamma ^{ \left(  2  \right)  } \left( x, y  \right)  
+\] If we impose translational 
+and rotational invariance, 
+then $ \Gamma ^{ \left(  2  \right)  } \left( x, y  \right)  
+= \Gamma ^{ \left(  2  \right)  } \left( | x - y |  \right)   $. 
+We know the mass dimensions. 
+Thus, we have that like 
+$ \left< \phi \left(  x  \right) \phi \left( y  \right)   \right>  $, 
+the engineering dimension of $ \Gamma ^{ \left(  2  \right)  }    = 
+\Lambda ^{ d - 2 } $. 
+Accounting for anomalous dimension, 
+we have 
+\[
+ \Gamma _{  \Lambda }^{ \left(  2  \right)   } 
+ \left( x, y ; g _ i ^*   \right)  = \frac{
+ \Lambda ^{ d- 2  } }{ \Lambda ^{ 2 \Delta _ \phi } } 
+ \frac{ c \left(  g _ i ^ *   \right)  }{| x - y | 
+ ^{ 2 \Delta _ \phi }  }
+\] where $ \Delta _{ \phi }  = \frac{1}{2 } \left( d - 2  \right)  + 
+\gamma _{ \phi } ^{ *  }  $  is 
+the scaling dimension of $ \phi $. 
+This power law behaviour of two point functions 
+is characteristic of scale invariant theories. 
+We can contrast this to theories with a characteristic scale
+$ M  =\frac{1}{\xi } $ which is inverse correlation length. 
+In a theory with scale $ M \sim \frac{1}{\xi } $, then 
+we have that $ \Gamma ^{ \left(  2  \right)  } \left( x, y  \right)  
+\sim \frac{e ^{ - M | x - y |  } }{ | x - y |^{ 2 \Delta _{ \phi } } }$ 
+Near a fixed point, 
+we can linearise the RG equations. 
+If we let $ \delta g _ i  = g _ i - g _ i ^ * $, 
+then we can write the RG equations as 
+\[
+\Lambda \frac{d g _ i  }{ d \Lambda } \mid_{ g _ i ^ * 
++ \delta g _ i }  = \beta _{ ij } \delta g_ j + O \left( \delta g ^  2  \right) 
+\]  So now what we want to 
+do is to look at eigenvalues and eigenvectors of $ \beta $  
+to see how these things behave. 
+Let's call the eigenvector $ \sigma _ i $, 
+and the eigenvalue $ \Delta _ i - d  $, 
+where $ \Delta _ i $ is the scaling dimension 
+associated with $ \sigma _ i $. 
+Note that the $ \sigma _ i $ generally 
+represent some combination of 
+directions in coupling space, 
+which is a linear combination of 
+operators $ O _ i $ in $ S \left[  \phi  \right]   $. 
+Our linearised RG flow equations are now 
+\[
+\Lambda \frac{d \sigma _ i }{ d \Lambda }  = \left( 
+\Delta _ i - d _ i \right)  \sigma _ i 	 
+\] This means 
+that 
+\[
+\sigma _ i \left( \Lambda  \right)  
+= \left( \frac{\Lambda }{ \Lambda _0  }^{ \Delta _ i - d }   \right)  \sigma _ i 
+\left( \Lambda _ 0  \right)  
+\] with initial scale $ \Lambda _ 0 > \Lambda $. 
+We have a few cases to consider. 
+$ \Delta _ i > d $ implies $ \sigma _i \left( \Lambda  \right)  < \sigma _ i 
+\left( \Lambda _ 0  \right)  $. These flow back to the 
+fixed point as $ \Lambda $ decreases. These are called 
+irrelevant directions. 
+Conversely, we have 
+$ \Lambda _ i < d $ which implies $ \sigma _ i \left( \Lambda  \right)  > 
+\sigma  _ i \left( \Lambda _ 0  \right)   $. 
+These flow away from the fixed point. 
+These are called relevant interactions. 
+When $ \Delta _ i  = d  $, this is 
+called a marginal interaction. 
+We have a diagram here in infinite dimensional 
+coupling space. The critical surface 
+we have infinite dimensions. 
+The codimension is finite, 
+which is the number of relevant operators. 
+The trajectory leaving the 
+fixed point is the 'renormalised trajectory'. 
+It takes an infinite amount of time to leave the fixed point. 
+
+\subsection{Quantum Electrodynamics}
+Quantum electrodynamics 
+studies interactions between electrons, which 
+is mediated by photons. 
+We will revise some concepts from QED from QFT. 
+Recall that the action is 
+constructed from our electromagnetic field tensor as 
+well as a Dirac Lagrangian which dictates what the 
+electrons do. 
+In this case, we put our new found knowledge of Grassman variables to 
+good use here. 
+Our full action is 
+\[
+S\left[ \phi , \overline{ \phi } , A  \right]  = 
+\int d ^ 4 x \frac{1}{4 } F _{ \mu \nu } F ^{ \mu \nu } + \overline{ \psi } \left( 
+\slashed{D} + m 	 \right) \psi 
+\]  in this expression, $ \slashed{D} = \gamma ^ \mu \left( 
+\partial  _ \mu + i e A _ \mu \right)  $ is 
+required so that we have gauge invariance when 
+under the $ U \left(  1  \right)  $ transformation given by 
+\begin{align*}
+\psi & \to e ^{ i e \alpha \left( x  \right)  } \psi \\
+\overline{ \psi} & \to e ^{ - i e \alpha \left(  x  \right)  } \overline{\psi } \\
+A _ \mu & \to A _ \mu  - \partial  _ \mu \alpha 
+\end{align*} 
+We need the covariant derivative in 
+the Lagrangian term since our $ U \left(  1  \right)  $ field 
+$ \alpha\left(  x  \right)  $ varies in space, to cancel out 
+some extra terms when we do a derivative. 
+For now, we will work in 
+Euclidean spacetime, where our matrices $ \gamma ^ \mu $ 
+satisfy the Clifford algebra (which now involves the Dirac 
+delta function)
+\[
+\left\{ \gamma ^ \mu , \gamma ^ \nu  \right\}   = 2 \delta ^{ \mu \nu } 
+\] This means of course that we 
+have to adapt our representation slightly. 
+
+\subsubsection{The Propagator in the free Case}
+In the free Fermion action, there is an absence 
+of the field $ A _ \mu $ and the field tensor $ F _{ \mu \nu  }$.
+This means that our action is reduced to 
+\[
+S \left[  \psi , \overline{ \psi }  \right]   = 
+\int d ^ 4 x \overline{ \psi } \left( \gamma ^ \mu \partial  _ \mu + m  \right) \psi 
+\]  If we Fourier 
+transform, we get that that our action in terms of Fourier modes 
+is \[
+S _ 0 \left[  \psi , \overline{ \psi }  \right]   = 
+\int \frac{d ^ 4 p }{ \left( 2 \pi  \right)  ^ 4 } \tilde{\overline{\psi }  } \left( - p  \right)   
+\left( i p + m  \right)  \tilde{ \psi } 
+\]
+Now looking 
+at the source electromagnetic fields with source term, 
+we have that our equation of motion is 
+\[
+\partial  _ \nu F ^{ \mu \nu }  = j ^ \mu 
+\] This motivates our 
+action to be of the form 
+\[
+Z_ 0 \left[  J \right]   = 
+\int \mathcal{ D } A \exp \left(  - \int d ^ 4 x \frac{1}{4 } F _{ \mu \nu } F ^{ \mu \nu } + j ^ \mu A _ \mu   \right) 
+\] We want to 
+check that this action is gauge invariant under 
+the transformation 
+$ A _ \mu \to A _ \mu - \partial  _ \mu \alpha $
+We have that our $ F_{ \mu \nu } F ^{ \mu \nu } $ part 
+is invariant under this gauge transformation, 
+but we need to check that the  $ j _ \mu A ^ \mu $ 
+integral of our action is also invariant. 
+Under this transformation, we
+have that 
+\[
+\int d ^ 4 x j ^\mu \left( A _ \mu ' 
+- A _ \mu \right)   = \int d ^ 4 x j ^ \mu \partial  _ \mu \alpha 
+= \int \alpha \partial  _ \mu j ^ \mu  =0 
+\] since we have that $ \partial  _ \mu j ^ \mu  =0 $ 
+by the antisymmetry of $ F _{ \mu \nu  } $. 
+Now, when we consider the 
+full action $ S $
+we have that our action is, upon Fourier 
+transforming 
+\[
+S _ g \left[ \tilde{ A }, \tilde{ j }    \right] 
+= \frac{1}{2 } \int \frac{d ^ 4 k }{ \left( 2 \pi  \right)  ^  4} 
+\left[  \tilde{A } _ \mu \left( - k  \right)  \left( k ^ 2 
+\delta ^{ \mu \nu } - k ^ \mu k ^ \nu \right)  \tilde{A } _ \nu \left( k  \right)  
++ \tilde{ j } ^{ \mu } \left( -k  \right)  \tilde{ A } _ \mu \left( k  \right)  
++ \tilde{ j } ^ \mu \left( k  \right)  \tilde{ A } _ \mu \left( - k  \right)     \right] 
+\] Now, something to note is that 
+we encounter problems when we consider 
+fields which are gauge equivalent to 
+$ A _ \mu \left( x  \right)  = 0 $, and correspondingly when 
+$ \tilde{ A } \left( k  \right)   = 0 	$. 
+This is due to the fact that the partition function will 
+start to diverge. Let's see why. 
+Under a $ U \left(  1  \right)  $
+gauge transformation, we can transform 
+our field to pick up a gauge term $ A _ \mu  = \partial  _ \mu \alpha $. 
+The corresponding Fourier transform
+is $ \tilde{ A } _ \mu \left( k  \right)   = k _\mu \tilde{ \alpha } \left( k  \right)    $. 
+We want to show that the gauge fields cause the 
+action to vanish. We can 
+write the part of the action 
+\[
+\tilde{ A } _ \mu \left( -k  \right)  \left( k ^ 2 
+\delta ^{ \mu \nu } - k ^ \mu k ^ \nu  \right)  \tilde{ A}_ \nu \left( k  \right)
+= \tilde{ A } _ \mu \left(  -k  \right)   k ^2 P ^{ \mu \nu } \tilde{ A } _ \nu \left( k  \right)    
+\] One can easily confirm that $ P $ is indeed 
+actually a projection operator, in other words 
+the condition 
+\[
+P ^{ \mu \nu } P \indices{_ \nu ^ \rho  }   = P ^{ \mu \rho } 
+\] A nice side comment about this 
+is that we know that $ P $ has eigenvalues which 
+are either $ 0 $ or $ 1 $. Observe further 
+that the trace of  $ P $ is $ 3 $, which means 
+that we have one eigenvector with eigenvalue $ 0 $ 
+and three other vectors which have eigenvalue $ 1 $. 
+One can also 
+check that $ P ^{ \mu \nu } k _ \nu  = 0 $. 
+This means that we have the above term 
+in the action vanishing. In addition, the fact that 
+our source is conserved $ \partial  _ \mu j ^ \mu  = 0 $
+implies that the Fourier transform 
+$ k _ \mu j ^ \mu  =0 $. This in turn means 
+that our $ \tilde{ j } \tilde{ A }   $ terms 
+in our action vanish. 
+The point of this exercise is that 
+since we have an infinite amount of fields 
+which are gauge equivalent to $ A _ \mu  = 0 $, 
+then $ \int \mathcal{ D } A  =  \infty $. 
+
+We choose to integrate 
+over the subspace where $ k _ \mu \tilde{ A } ^ \mu \left( k  \right)   =0  $, 
+or in position space, where $ \partial  ^ \mu A _ \mu \left( x  \right)  = 0 $.
+In this subspace, we have 
+that our projection operator 
+acts as the identity on all $ \tilde{ A } \left( k \right)   $. 
+This means that we have 
+\[
+P^{ \mu \nu }\left( k  \right)  A_ \nu \left( k  \right)   = A ^{ \mu }   
+\] Since 
+the inverse of $ P ^{ \mu \nu } $  is $ \frac{1}{k ^ 2 } P ^{ \mu \nu } $, 
+we have that, repeating 
+the same procedure of completing the 
+square, that our 
+partition function with source is given by 
+\[
+Z _ 0 \left[  \tilde{ J }   \right]   = \exp \left[  
+\frac{1}{2 } \int \frac{d ^ 4 k }{ \left( 2 \pi  \right)  ^{ 4 } } \tilde{ j } _ \mu \left( -k  \right)  
+\frac{P ^{ \mu \nu } }{ k ^ 2 }  \tilde{j } _ \nu \left( k  \right)  \right] 
+\] Now, we can simplify this 
+expression even more. Since our expression for $ P ^{ \mu \nu }$  
+involves $ k ^{ \mu } k ^{ \nu}  $, 
+when we contract this with $ \tilde{ j }  $, since $ \partial  _ \mu j ^ \mu  = 0 $,
+these terms cancel out. Thus we're left with 
+a partition function which is akin to working 
+in the Feynman gauge. 
+\[
+Z _ 0 \left[  \tilde{ j }   \right] 
+= \exp \left[  \frac{1}{2 } \int \frac{ d ^ 4 k }{ \left( 2 \pi  \right)  ^{ 4 } }
+\tilde{ j } _ \mu \left( -k   \right) \frac{\delta ^{ \mu \nu } }{ k ^ 2 } \tilde{ j } _ \nu 
+\left( k  \right) \right] 
+\] Our original action involved the 
+covariant derivative $ D _ \mu  = \partial  _ \mu + i e A  _ \mu $. 
+The interaction term in all this which couples 
+the field $ A _ \mu$ (electromagnetism), and 
+our fermion field  $ \psi $, is precisely 
+the $  A_ \mu $ term which comes from $ D_ \mu $. 
+This term, making the indices explicit 
+is the term 
+\[
+ie A _ \mu \left( x  \right)  \overline{ \psi } ^{ \alpha } 
+\left( x   \right)  \left( \gamma ^{ \mu }   \right) _{ \alpha \beta } \psi ^{ \beta } \left(  x  \right) 
+\] Now, to add in an 
+interaction term, we follow 
+the same procedure as we did previously. 
+Our free partition function 
+with source term has action 
+\[
+S _ 0  = \int d^ 4 x \frac{1}{4 } F _{ \mu \nu   } 
+F ^{ \mu \nu } + \overline{ \psi } \slashed{\partial} \psi 
++ m \overline{ \psi } \psi + \overline{\psi }  \overline{ \eta } 
++ \eta \psi + A _ \mu j ^ \mu 
+\] We differentiate with
+respect to these source terms to 
+pull out the required terms. 
+This means our full partition function is 
+\[
+Z \left[ \eta , \overline{ \eta } , j \right]  
+\propto \exp \left[  - i e \left( \gamma ^{ \mu }  \right) ^{ \mu \nu } \int d ^ 4 x 
+\left( - \fdv{  }{J \left( x \right) } \right) \left( 
+- \fdv{}{\eta ^{ \alpha  }   \right)\left( \fdv{}{\overline{\eta}^{ \beta }} \right)   \right] 
+Z _ 0 \left[  \eta , \overline{ \eta }  \right]  Z _ 0 \left[  J  \right]  
+\]   
+Recall that our notation for the propagator is 
+$ S _ F ^{\alpha \beta } \left( x - y  \right)   = \left< \psi  ^{ \alpha } \left( x  \right)  
+\overline{ \psi } ^{ \beta } \left( y  \right)  \right>$. 
+In this spirit, consider 
+a single fermion loop with two external 
+photon legs. Each external photon 
+leg with associated position $ x _ 1 $ and $ x _ 2 $
+and index $ \mu , \nu $ respectively
+contributes $A _ \mu \left( x_1  \right)  $ and $ A _ \nu \left( x _ 2  \right)  $ 
+to the integral. Remembering to 
+integrate over all position space we have 
+that 
+\[
+I \propto \left( - i e  \right)  ^{ 2 } 
+\int d ^ 4 x d ^ 4 y \left< A _ \mu \left( x  \right)  
+\overline{ \psi  } ^{ \alpha } \left(  x   \right) \slashed{A}^{\alpha\beta } \left( x  \right)  
+\psi ^{ \beta } \left(  x \right)  \overline{ \psi } ^{ \gamma } \slashed{A}^{ 
+\gamma \delta } \left( y  \right)  \psi^{ \delta } \left( y  \right)  
+A \left( x_ 2  \right)  
+\right> = \left( - i e  \right)  ^{ 2 } \int d ^ 4 x d ^ 4 y 
+\left< A \dots \left( - 1  \right)  ^{ 3 }  S_F ^{ \delta \alpha } \left( y - x  \right)  S _ F 
+^{ \beta \gamma } \left( x -y  \right)  \right> 
+\] We have to add an additional $ \left( -1  \right)  ^{ l } $ 
+contribution from any loops that we get. 
+
+\subsection{Vacuum Polarisation}
+We'll now look at quantum corrections 
+to the photon propagator, which is 
+the set of all graphs with 
+two external photon legs. Using the standard argument 
+with a geometric series, we have that 
+the full propagator gives the contribution 
+\[
+I = \frac{1}{1 - \Pi \left( p \right) }
+\] Now, at one loop order, 
+the set of all 1PI graphs with amputations 
+on both external legs is given by
+\[
+\Pi ^{ \mu \nu }  = \text{1 loop contribution} + \text{2 loops contribution}
+\] The 1 loop contribution is the contribution 
+we computed earlier but without our external photon legs 
+contributing a factor of $ A _ \mu $. 
+To compute this in a meaningful fashion, we 
+resort to our previous technique of dimensional 
+regularisation. 
+We have two vertices, each contributing 
+a factor of  $ \left( i e  \right)  ^{ 2 } $. 
+We introduce the dimensional regularisation 
+by setting $ d = 4-\epsilon   $, and also 
+by setting $ e ^{ 2 }  = \mu ^{ \epsilon } g ^ 2 \left( \mu  \right)  $. 
+Each vertex contributes a gamma matrix 
+indexed by $  i e \gamma ^{ \mu } $ and $ i e \gamma ^{ \nu } $. 
+As before, our fermionic propagator 
+contributes factors of $ \frac{1}{i \slashed{p} + m  }$ 
+and $ \frac{1 }{i \left( \slashed{q}  - \slashed{p} \right) + m }$. 
+If we 
+combine this all together and take the 
+trace of this object, we get that 
+our 1-loop contribution is 
+\[
+\Pi_{\text{1-loop}}^{\mu \nu } \left( q ^2 \right) 
+= - \mu ^{ \epsilon } \left( i g  \right)  ^ 2 
+\int \frac{d ^ d p }{ \left(  2 \pi  \right)  ^{ d } } \frac{
+\tr \left[ \left( - i \slashed{p} + m   \right) \gamma ^{ \mu } \left( 
+- i \left( \slashed{p} - \slashed{q} \right)  + m \right)  \gamma ^{ \nu } \right] }{
+\left( p ^ 2 + m ^ 2  \right) \left( \left( p - q  \right)  ^ 2 + m ^ 2  \right)  }
+\] Now here, we use Feynman's 
+trick to split a product 
+into integral form; 
+\[
+\frac{1}{AB} = \int_ 0 ^{ 1 } dx \int _ 0 ^ 1 dy \frac{\delta \left(  x + y - 1  \right)   }{
+\left( A y + B x  \right)  ^ 2 }
+\] If we look just at the denominator here, 
+we get that our integral is given by 
+\[
+\int _ 0 ^ 1 \frac{dx }{ \left[  \left( p - qx  \right) ^ 2 + m ^ 2 
++ q ^2 x \left( 1 - x  \right)  \right]  ^ 2  }
+\] Now, we can translate this integral and redefine 
+$ p '  = p - qx $, so that our total one loop contribution 
+is 
+\[
+\Pi_{\text{1-loop}}^{ \mu \nu } \left( q  \right)   = 
+\mu ^{ \epsilon } g ^ 2 \int \frac{d ^ d p  }{ \left( 2 \pi  \right)  ^ d } 
+\int_ 0 ^ 1 dx \frac{\tr \left\{  
+\left[  - i \left( \slashed{p} + \slashed{q}x   \right) + m   \right] \gamma ^ \mu 
+\left[  - i \left( \slashed{p} - \slashed{q}\left( 1 - x  \right)   \right) + m  \right]
+\right\} }{\left( p ^ 2 + \Delta    \right) ^{ 2 } }
+\]  where our adjusted mass is 
+$ \Delta  = m ^ 2 + q ^ 2 x \left( 1 - x  \right)  $. 
+
+To proceed with this 
+calculation, we need to following 
+trace indices
+\begin{align*}
+ \tr \left( \gamma ^{ \mu } \gamma ^{ \nu }  \right)  &=  4 \delta ^{ \mu \nu }  \\ 
+ \tr \left( \gamma ^ \mu \gamma ^ \rho \gamma ^ \nu \gamma ^ \sigma  \right)  
+						      &=  4 \left( \delta ^{ \mu \rho } \delta ^{ \nu \sigma } 
+						      - \delta ^{ \mu \nu } \delta ^{ \rho \sigma } 
+					      + \delta ^{ \mu \sigma } \delta ^{ \nu \rho } \right)  
+\end{align*}
+Hence, the numerator becomes 
+\[
+\tr \left\{   \right\}   = 4 \left\{  - \left(p + xq   \right)^{ \nu } 
+\left\{  p - q \left( 1 - x   \right)   \right\}  ^{ \nu } 
++ \left( p + q x  \right)  \cdot  \left[  p - q \left( 1 -x  \right)    \right]  
+\delta ^{ \mu \nu }  - \left( p + q x   \right)  ^{ \nu } \left[  
+p - q \left( 1 - x  \right)   \right]  ^ \nu  + m ^ 2 \delta ^{ \mu \nu } \right\}  
+\] 
+We can see a lot of terms 
+will vanish since the integrand is 
+odd in terms of changes in indices. 
+As $ d \to 4 $, integrals over odd powers 
+of $ p ^{ \nu }  $ vanish, we can drop these 
+terms. Similarly, only the diagonal parts of $ p ^ \nu p ^ \mu $  
+will integrate to something non-zero, 
+since this is an even power. Thus, we
+are able to replace the following expressions 
+\begin{align*}
+p ^ \mu p ^ \nu & \to \frac{1}{ d } \delta ^{ \mu \nu  } p ^ 2 \\
+p ^ \mu p ^ \rho p ^ \nu p ^ \sigma  & \to \frac{\left( p ^ 2  \right)  ^ 2  }{ d \left( d + 2  \right)   } 
+\left( \delta ^{ \mu \rho } \delta ^{ \nu \sigma }  - \delta ^{ \mu \nu } \delta ^{ \rho \sigma } 
++ \delta ^{ \mu \sigma } \delta ^{ \nu \rho }  \right) 
+\end{align*} 
+This means 
+that we're left with an integrand which depends only on 
+$ p ^ 2 $. 
+This means we can change the 
+measure as follows. 
+We change variables 
+\[
+\frac{d ^ d p  }{ \left( 2 \pi  \right)  ^{ d } } 
+\to S _ d \frac{ d p ^{ d - 1  } }{ \left( 2 \pi  \right)  ^ d } 
+= \frac{\left( p ^ 2  \right)  ^{ \frac{d}{2 }  - 1 }  d p ^ 2 }{ \left( 4 \pi  \right)  ^{ \frac{d}{2 }  } 
+\Gamma \left( \frac{d}{2  }  \right) } 
+\] Putting things together, 
+we then find that 
+\begin{align*}
+\Pi _ 1 ^{ \mu \nu } \left( q  \right)  &=  4 \mu ^{ \epsilon } \frac{g ^ 2 }{ 
+\left( 4 \pi  \right)  ^{ \frac{d}{2 } } \Gamma \left( \frac{d}{2  }  \right)    }
+\int _ 0 ^ 1 dx \int _ 0 ^{ \infty } dp ^ 2 \left( p ^ 2   \right) ^{ \frac{d}{2 } -1  } \frac{1}{\left( 
+p ^ 2 + \Delta \right)  ^ 2  } \\
+					& \times 
+					\left[  
+					p ^2 \left( 1 - \frac{2}{d }   \right)  \delta ^{ \mu \nu } 
+				+ 	 \left( 2 q ^ \mu q ^ \nu  - q ^ 2 \delta ^{ \mu \nu }  \right)  
+			x \left( 1  - x  \right)  + m ^ 2 \delta ^{ \mu \nu } \right]  
+\end{align*}
+These are Euler-beta functions. 
+If we let $ u  = \frac{\Delta }{ p ^ 2 + \Delta } $, 
+then we get that these objects are 
+\begin{align*}
+\int d p ^ 2 \frac{\left( p ^ 2  \right)  ^{ \frac{d}{2 }  - 1 }  }{
+\left( p ^ 2 _ \Delta  \right)  ^ 2   } &= \left( \frac{1}{\Delta }  \right)  
+^{ 2 - \frac{d}{2 } } \frac{\Gamma \left( 2 - \frac{d}{2 }  \right)  \Gamma \left( \frac{d}{2 }  \right)   }{
+\Gamma \left(  2  \right)  } \\
+\int_ 0 ^ \infty dp ^2 \frac{\left( p ^ 2  \right)  ^{ \frac{d}{2    } }  }{ 
+\left( p ^2 + \Delta  \right)  ^ 2 } & = \left( \frac{1}{\Delta }   \right) ^{ 1- \frac{d}{2 } } 
+\frac{\Gamma \left( 1 + \frac{d}{2 }  \right)  \Gamma \left( 1 - \frac{d}{2 }  \right)   }{\Gamma \left( 2  \right)  }
+\end{align*}
+This calculation gives the result 
+\[
+\Pi _ 1 ^{ \mu \nu } \left( q  \right)    = 
+\frac{4 q ^ 2 \mu ^{ \epsilon } }{ \left( 4 \pi  \right) ^{\frac{d}{2 }}} \Gamma \left( \frac{\epsilon}{2  }   \right) 
+\int_ 0 ^ 1 dx \frac{1}{\Delta ^{ \frac{\epsilon}{2 } } } \left[ \delta ^{ \mu \nu } 
+\left[  m ^ 2  - x \left( 1 - x  \right)  q ^ 2  \right]  - \delta ^{ \mu \nu } 
+\left[  m ^ 2 + x \left( 1 - x   \right)  q ^ 2   \right]  + 2 x \left( 1 - x  \right)  q ^ \mu q ^ \nu \right] 
+\]   
+This simplifies to 
+\begin{align*}
+... & = \frac{8 g ^  2\mu ^{ \epsilon  } }{ \left( 4 \pi  \right)  ^{ \frac{d}{2 } }  } 
+\Gamma \left( \frac{\epsilon}{2 }  \right)  \int_ 0 ^ 1 dx 
+\frac{1}{ \Delta ^{ \frac{\epsilon}{2  } }  } \left( - q ^ 2 \delta ^{ \mu \nu } + q ^ \mu q ^ \nu  \right)  x \left( 1-  x  \right) \\
+    &=  \left( q ^2 \delta ^{ \mu \nu }  - q ^ \mu q ^ \nu   \right)  \Pi _ 1 \left( q ^ 2   \right)  
+\end{align*} where 
+\[
+\Pi_ 1 \left( q   \right)   = - \frac{8 g ^  2 \Gamma \left( \frac{\epsilon}{2 }  \right)    }{ 
+\left( 4 \pi  \right)  ^{ \frac{d}{2 } }  } \int_ 0 ^ 1 dx x \left( 1 - x    \right)  \left( \frac{\mu  ^   2 }{ 
+\Delta  }  \right) ^{ \frac{\epsilon}{2 }  }
+\] Note that $ q _ \mu \Pi _ 1 ^{ \mu \nu }  = 0 $. 
+In the $ d \to 4 $ limit, we 
+have that 
+\[
+\Pi _ 1 \left( q ^ 2  \right)    = \frac{ - g ^ 2   }{ 2 \pi ^ 2 } 
+\int_ 0 ^ 1 dx x \left( 1 - x  \right) \left[  \frac{2}{\epsilon } - \gamma + \log \frac{4 \pi \mu ^ 2 }{ \Delta }  \right]  + 
+\mathcal{ O } \left(  e^ 2   \right) 
+\] Now, we renormalise this object 
+so that 
+\begin{align*}
+\mathcal{ L } _ 0  & = \mathcal{ L } + \mathcal{ L } _{ CT} \\
+S _ 0 &=  S + S _{ CT  }  \\ 
+e _ 0  = Z _ e  e & = \left(  1+ \delta Z _ e  \right)   e \\
+m_ 0 =  Z _ m m &=  \left( 1 + \delta Z _ m  \right)  m  \\ 
+\psi _ 0 &=  \sqrt{ Z  _  2 } \psi  \\ 
+A _ 0 &=  \sqrt{ Z _ 3  }  A  
+\end{align*}
+We write the RHS as 
+\[
+S + S _{ CT } &=  \int d ^ 4  x \left[  \frac{1}{4 } Z _ 3 F _{ \mu \nu } F ^{ \mu \nu } 
++ Z _ 2 \overline{ \psi } \slashed{ \gamma } \psi  + Z _ m Z _ 2 m \overline{ \psi } \psi
++ ie Z _ 1 \overline{ \psi } \slashed{A} \psi  \right]   \\ 
+\] where $ Z _ 1  =  Z_ e Z _ 2 \sqrt{ Z_  3 }  $. 
+Let $ Z _ K  =  1 +  \delta Z _ k $ for $ k  = e, m , 1, 2, 3  $, 
+and note that 
+\[
+\delta Z _ e  = \delta Z _ 1  - \delta Z _ 2  - \frac{1}{2  } \delta  Z_  3 + \text{small}
+\] and we will show that gauge invariance implies that
+$ \delta  Z_ e  = -\frac{1}{2 } \delta Z _ 3 $ since 
+$ Z _ 1  = Z _ 2 $ 
+
+Below we show a counter-term diagram 
+\[
+S ^{ CT } \subset \int d ^ 4  x \frac{\delta  Z _ 3  }{ 4  } F ^ 2 
+\]The new 2-point interaction gives us a 
+contribution \[
+=  -\left( k ^ 2 \delta _{ \mu \nu  } - \left( 1 - \epsilon  \right)  k ^ \mu k ^ \nu   \right)  \delta  Z_ 3  
+\] with $ \delta Z _ 3 $ chosen so that  $ \Pi _ 1 ^{ \text{ren}} \left( q ^  2  \right)  $ is finite. 
+We then have 
+\[
+\delta Z _ 3  = \frac{ - g ^ 2 \left( \mu  \right)   }{ 12 \pi ^ 2  } \left( 
+\frac{2}{\epsilon  } - \gamma + \log 4 \pi \right)  
+\] in the minimal subtraction scheme. 
+Then, we have that $ \left( \Pi _ 1 ^{ \mu \nu  }\left( q   \right)    \right) ^{ \text{ren}}$ 
+calculated in renormalised perturbation theory 
+yields 
+
+\subsection{QED $ \beta $ functions}
+We can infer the QED beta functions 
+from what we did just now. 
+\[
+e_ 0  = Z _ e e  = Z ^{ - 1 } _ 1 Z _ 2 ^{ - 1 } Z _ 3 ^{ - \frac{1}{ 2 } } e 
+\] we will show why $ Z _ 1 Z _ 2 ^{ - 1 }  =1 $. 
+We have that 
 
 \section{Gauge Theories}%
 \label{sec:gauge_theories}
+
+We showed in the previous section 
+that QED has a beta function which 
+looks like 
+\[
+ \beta \left( g  \right)   = \frac{g ^ 3 }{ 12 \pi ^ 2 } 
+\] which is positive for positive $ g  $. 
+We will show in this section that in the 
+non-Abelian gauge theory case, we can 
+have signs that flip. 
+
+\subsection{Lie groups - Facts and Conventions}
+We will assume that 
+all the Lie groups which we are dealing with 
+are connected, such that all group 
+elements are connected to the identity. 
+For any  $ u \in G $, 
+we can write the element as 
+the exponential 
+$ u  = \exp \left( i \theta ^ a T ^ a   \right)  1 $, 
+where $ \theta ^ a $ are numbers and $ a $ runs 
+over the index of our Lie group. 
+
+The $ T ^ a $ are the generators 
+of our Lie algebra, and under the Lie bracket we have 
+that 
+\[
+	\left[  T ^ a, T ^ b  \right]   = i f ^{ ab c } T ^ c  
+\] where $ f ^{ ab c } $ are our structure constants. 
+We can always choose a basis such that $ f ^{ abc } $ is antisymmetric 
+in all its indices and we will do so. The 
+bracket is also endowed with the Jacobi identity
+\[
+ \left[  A, \left[ B , C  \right]    \right] + \left[  B , \left[  C, A  \right]   \right]  
+ + \left[  C , \left[  A, B  \right]    \right]   = 0 
+\] If we set $ A  = T ^ a, B  = T ^ b , C = T ^ c $
+and factor out $ T  $, we get the 
+relation 
+\[
+	f ^{ ab d } f ^{ dce } + f ^{ bcd }  f ^{ dae  } + f ^{ cad } f ^{ db e }  = 0 
+\] We can normalise our structure 
+constants according to 
+the convention that 
+\[
+ f ^{ acd } f ^{ b cd  } = N \delta ^{ ab } 
+\] We have several classes 
+of Lie groups - unitary, orthogonal, 
+symplectic. In this section, we 
+will focus on unitary groups, which have the property that 
+$ U \in G $ means that $ U ^\dagger U = 1  $. 
+Being in the special unitary group 
+means that we have $ \det \left( U   \right)  = 1 $. 
+$ G  = SU \left( N  \right)   $ has $ N ^ 2 - 1  $ generators
+(in the fundamental representation where $ SU \left( N  \right)  $  
+is represented by $ N \times N $ matrices, we have $ N ^ 2  -1  $ generators). 
+
+\subsection{Representations}
+There are several ways to represent 
+a Lie group or Lie algebra. 
+Firstly, we have in our convention 
+that the Lie algebra of $SU \left( N  \right)  $, in the fundamental representation, consists 
+of $ N \times N $ traceless, Hermitian matrices. 
+In this space, infinitesimally we have that 
+a $ SU \left( N  \right)  $ transformation is given by 
+\[
+ \phi _ i  \to \phi _ i  + i \alpha ^ a \left( T ^ a _{fund}   \right) _{ ij } 
+ \phi _ j , \quad \alpha ^ a \in \mathbb{ R } , \quad a  = 1 , \dots N ^ 2 - 1 , 
+ \quad i , j  = 1,  \dots N 
+\] Additionally, we can 
+make use of the anti-fundamental representation 
+defined as 
+\[
+	\left( T_{\text{a-fund}} ^ a  \right)  ^ a  =  -\left( T _{\text{fund}} ^a  \right)  ^ * 
+\]
+Acting on the anti-fundamental 
+representation space, we have that
+since $ T $ is hermitian
+\[
+ \phi ^ * _ i \to \phi _ i ^ * + i \alpha  ^ a \left( T _{\text{a-fund }  }^  a  \right)  _{ ij } \phi _ j ^ * 
+  = \phi _ i ^ *  - i \alpha ^ a \phi _ j ^ * \left( T _{\text{fund}} ^ a  \right)_{ji  } 
+\] To save ink, from now on we'll be dropping the 
+'fund' subscript. 
+In the adjoint representation, we have that 
+the vector space on which we act on 
+is precisely the set of generation matrices. 
+To this end, our adjoint representation of an element 
+$ T  $, denoted $ \left( T _{\text{adj}} ^ a  \right)_{ ij  }    =  - i f ^{ a ij  } $ 
+is itself the structure constant. 
+Gauge fields transform in the adjoint representation. 
+
+\subsection{Classifying representations}
+Each representation $ R  $ has an associated 
+index which we can construct, which we shall call $ T \left(  R  \right)  $, 
+defined by the inner product 
+\[
+	\tr\left( T _ R ^ a T _ R ^ b  \right)    = T \left( R  \right)  \delta ^{ ab } 
+\] where we do the sum over the indices of our 
+representation. 
+In the fundamental representation, this turns 
+out to be $\frac{1}{2 }$, where 
+\[
+ T _{ ij } ^ a T _{ ji  } ^ b  = \frac{1}{2 } \delta ^{ ab } 
+\] We can check this 
+condition for $ SU \left( 2  \right)  $ and $ SU \left( 3  \right)  $ 
+using our standard generators for the Lie algebra. 
+In our adjoint representation 
+\[
+	f ^{ acd  } f ^{ bcd  }  = N \delta ^{ ab } , \quad \implies T \left( \text{adj} \right)  = N 
+\] Here, $ N $ comes from $ SU \left( N   \right)  $. 
+From 
+this we can construct a quadratic 
+Casimir given by $ C _ 2 \left( R  \right)   $ with 
+\[
+ T _ R ^ a T _ R ^ a   = C _ 2 \left( R  \right)  1 
+\] If we set $ a  =b  $ and sum over 
+the representation indices, we get that 
+\begin{align*}
+	T \left( R   \right)  d \left( G  \right)  &=  C _ 2 \left( R   \right) d \left(  R  \right)   \\ 
+	C _ 2 \left( \text{fund }  \right)  &=  C _ F  = \frac{N ^  2- 1  }{ 2 N }   \\ 
+	C _ 2 \left( \text{adj}   \right)  &=  C _  a = N  \\
+\end{align*}
+The dimension of the representation space, $ V $ in which 
+representations of group elements act on
+is the dimension of the representation. For instance, 
+we have that the dimension of the fundamental representation of $ SU \left( N \right) $
+is $ N $ since our matrices act on 
+vectors, and the dimension of our adjoint representation 
+is $ N ^ 2  - 1 $ since this is the number of generators themselves. 
+
+\subsection{Gauge invariance and Wilson Lines}
+Wilson lines are a natural 
+construction to construct gauge invariant fields. 
+They allow us to meaningfully compare to different points 
+in spacetime, since fields should be invariant 
+under a phase transformation $ \phi \left(  x  \right) \to e ^{  i \alpha \left(  x  \right)  } \phi \left(  x  \right)  $, 
+but this phase is not generally the same at each point. 
+Thus, gauge fields are in themselves a \textbf{connection}, 
+as in general relativity, since they allow 
+us to meaningfully compare fields at different points.
+This is elaborated more in Schwartz.
+Let's revisit QED, where fermions have 
+a $ U \left(  1  \right)  $ gauge symmetry. 
+Under this gauge transformation, we 
+have that 
+\[
+	\phi \left(  x  \right)  \to e ^{ i \alpha \left(  x  \right)  } \phi \left(  x  \right) , 
+	\quad \overline{ \phi } \left(  x  \right)  \to \overline{ \phi } \left(  x  \right)  
+	e ^{  - i \alpha \left(  x  \right)  } 
+\] Under this transformation however, 
+since $ \alpha \left(  x  \right)  $ depends on $ x $, 
+our kinetic term $ \overline{ \phi } \slashed{\partial } $
+is not invariant. Consider a derivative 
+in the direction 
+\begin{align*}
+	\phi \left( x + an  \right)  - \phi \left(  x \right)  &=  e ^{ i \alpha \left(  x + an  \right)  } \phi \left( 
+	x + an \right)   - e ^{ i \alpha \left(  x  \right)  } \phi \left(  x  \right)   \\ 
+	n ^ \mu \partial  _ \mu \phi  &=  \lim_{ a \to 0 } \frac{1}{a } 
+	\left[  \phi \left(  x+ an  \right)   - \phi \left(  x \right)  \right] \\
+\end{align*}
+The gauge covariant derivative 
+is defined to be the object which 
+just picks up a phase under this transformation, 
+so 
+\[
+	D _ \mu \phi \left(  x  \right)   = e ^{  i \alpha \left( x  \right) } D _ \mu \phi \left(  x  \right) 
+\] 
+\begin{defn}{Wilson Lines}
+	We define a Wilson line (or parallel transporter)
+	as a function (denoted as a line from $ x $ to $ y $), 
+	such that its gauge transformation takes it
+	$ e ^{ i  \alpha \left( y  \right)  } W \left( y , x  \right)  e ^{  - i \alpha \left(  x  \right)  } $. 
+	The convention here is that $ W\left( x, x  \right)   = 1$. 
+	This then implies that $ W \left( y , x  \right)  $ is a pure phase, 
+	so we can write $ W \left( y , x  \right)   = e ^{i \phi \left( y , x  \right)   }  $. 
+	We will assume the convention that $ W \left( x, y  \right)   = \left(   W \left( y , x  \right)   \right)  
+	^ * $. 
+\end{defn}
+With Wilson lines, we can also define 
+the covariant derivative in a given direction as 
+follows.
+We set 
+\[
+ n ^ \mu D _ \mu \phi  = \lim_{ a \to 0  } \frac{1}{ a } 
+ \left[  \phi \left( x + an  \right)   - W \left( x + an, x  \right) \phi \left(  x  \right) \right] 
+\] One can check that this is 
+gauge invariant by just transforming the 
+expression in the brackets under $ U \left(  1  \right) $, 
+and we find that the whole term just adjusts by the 
+phase $ e ^{ i \alpha \left(  x+ an   \right)  } $. 
+Since our $ n   $ was arbitrary, we thus have 
+that $ \overline{ \psi  }\slashed{D}\psi   $
+is gauge invariant. Now, from this Wilson line, we
+can define the gauge field $ A _ \mu $ as the infinitesimal 
+parameter in the exponential. 
+We write 
+\[
+	W \left(  x + an , x  \right)  = \exp \left[ ie a n ^ \mu A _\mu \left( 
+	x + \frac{1}{2   } an \right)    \right] 
+\]   If we expand our exponential in $  a $ since 
+we're taking the limit where it's small, we 
+get that the form our our covariant derivative is 
+\[
+	D_ \mu \phi \left(  x  \right)   = \left[  \partial  _ \mu  - i eA _ \mu \left(  x  \right)    \right] 
+	\phi \left(  x  \right)  
+\] From doing the gauge transformations 
+infinitesimally, we have the following identities
+\begin{align*}
+	D _ \mu \psi \to e ^{ i \alpha \left(  x  \right)  } D _ \mu \phi , 
+	\quad A _ \mu \left(  x  \right)  \to A_ \mu \left(  x  \right)   + \frac{1}{ e } \partial  _ \mu 
+	\phi \left(  x  \right) 
+\end{align*}
+Thus, since $ D _ \mu  $  doesn't add anything 
+extra to the transformation of a field 
+which transforms as $ \phi \left(  x  \right)  \to e ^{ i \alpha \left( x   \right) } \phi \left(  x  \right)$, 
+we then get that the composite operator $ D _ \nu D _ \mu $  
+doesn't add anything. 
+In particular, this means that 
+\[
+	\left[  D _ \mu , D _ \nu   \right]  \phi \to ie ^{ i \alpha \left(  x  \right)  } 
+	D_\nu \left( D _ \mu \phi  \right)  
+\] It's easy to see that 
+\[
+	\left[  D _ \mu , D _ \nu   \right]  = i e\left( \partial  _ \mu 
+	A _ \nu  - \partial  _ \nu A _ \nu  \right)   = ie F _{ \mu \nu } 
+\] This is precisely 
+the electromagnetic field. 
+Alternatively, 
+we can build a 'plaquette', 
+which is constructed as a square with vertices
+\begin{align*}
+	y_1  &=  x  \\ 
+	y_2  &= x + a \hat{ e } _ 1  \\
+	y_3 &=  x + a \left( \hat{ e  } _ 1 + \hat{ e  }_ 2   \right)   \\ 
+	y_ 4 &=  x + a \hat{ e } _ 2   \\ 
+\end{align*}
+We can expand this about small $ a   $, 
+and once we cancel everything we get  
+something which looks like 
+\[
+	P _{ 12 } \left(  x  \right)   = 1 - i e a ^ 2 F _{ 12 } \left(  x  \right)  + O \left(  a ^ 3  \right)  
+\] So we get the 
+electromagnetic tensor dropping out 
+for free when we construct this square. 
+On the other hand, Wilson lines 
+need not be small and with the field $A _ \mu $ being 
+continuous, we can construct a curve $ C $ which 
+is a Wilson line 
+\[
+	W\left( z, y  \right)    = \exp \left[  i e \int_ C dx ^ \mu A _ \mu \left(  x  \right)   \right]  
+\]  This is a loop if 
+$ y  = z $, with $ C   =\partial  \Sigma  $
+where $ \Sigma $ is the enclosed area. 
+From Stokes' theorem, we get that 
+\[
+ \oint_{C = \partial  \Sigma  } A _ \mu dx ^ \mu  = \frac{1}{2 } \int_{ \Sigma } F _{ \mu \nu } d \sigma ^{ \mu \nu }
+\]
+
+\subsection{Fadeev-Popov Gauge Fixing}
+We'll start by explaining this 
+concept with an analogy. Consider integrating 
+the exponential of an action over 
+two real variables instead of one; 
+\[
+	Z  = \int dx dy e ^{  - S \left(  x  \right)  } 
+\] Now, in this case, since our 
+action $ S $ depends on $ x  $ only, we have that 
+the variable $ y $ is redundant to any physics. 
+However, nevertheless, integrating $ y $ 
+from $ \left(  - \infty, \infty  \right)  $  still 
+leads to a divergent integral. 
+In $ U \left(  1  \right)    $, Abelian gauge theory, we 
+have that we can just ignore this and 
+remove $ y $ so that $  Z = \int dx e ^{  - S \left(  x  \right)  } $. 
+However, this doesn't work in non-Abelian gauge theory. 
+Instead, we require that 
+\begin{align*}
+	Z &=  \int dx dy \delta \left( y  \right)  e ^{  - S\left( x  \right)  }  \\
+	  &=  \int dx dy \delta \left( y  - f \left(  x  \right)   \right)  e ^{  - S\left(  x   \right)  } 
+\end{align*}
+This fixes $ y  =0 $ and $ y  = f\left(  x  \right)  $ respectively. 
+Maybe we don't have $ y $ explicitly in terms of $ x $, 
+and in this case all we need is that $ y  = f \left(  x  \right)  $
+is the unique solution to the equation 
+\begin{align*}
+	 G \left( x , y  \right)   &=  0   \\ 
+	 f \left(  x  \right)  &=  y  \\
+\end{align*}
 
 
 \section{Formulating the Path Integral} 
@@ -1481,7 +3717,7 @@ In this section, we'll be moving on from
 our standard procedure of quantising a given Hamiltonian 
 in quantum mechanics. We'll be introducing 
 the concept of a path integral. The path integral 
-is a 'functional integral' where we integrate over 
+Iis a 'functional integral' where we integrate over 
 all possible paths with a Gaussian probability factor.
 
 \subsection{Classical and Quantum Mechanics}
@@ -1634,6 +3870,14 @@ have that
 	\bra{q _{ r +  1} } \exp \left(  - i \op{ H } 
 \left(  t _{ r + 1 }  - t _ r  \right)  \right) \ket{q _ r }\right)\bra{q _  1}\exp\left(  - i \op{H } \left( t_1 - t_0  \right)   \right) \ket{q ' } 
 \end{equation}
+
+
+\pagebreak 
+
+\section{Review of Renormalisation}
+Let's review the steps 
+we need to make a physical prediction. 
+
 
 \pagebreak
 \section*{Example Sheet 1}

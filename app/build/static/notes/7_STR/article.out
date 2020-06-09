@@ -4,13 +4,49 @@
 \BOOKMARK [2][-]{subsection.2.1}{Worldlines and Particles}{section.2}% 4
 \BOOKMARK [2][-]{subsection.2.2}{Classical Strings}{section.2}% 5
 \BOOKMARK [3][-]{subsubsection.2.2.1}{Nambu-Goto Action}{subsection.2.2}% 6
-\BOOKMARK [2][-]{subsection.2.3}{Classical Hamiltonian Dynamics of the String}{section.2}% 7
-\BOOKMARK [2][-]{subsection.2.4}{The Stress Tensor and Wit Algebra}{section.2}% 8
-\BOOKMARK [2][-]{subsection.2.5}{A First Look at the Quantum Theory}{section.2}% 9
-\BOOKMARK [3][-]{subsubsection.2.5.1}{Canonical Quantisation}{subsection.2.5}% 10
-\BOOKMARK [3][-]{subsubsection.2.5.2}{Physics State Conditions}{subsection.2.5}% 11
-\BOOKMARK [2][-]{subsection.2.6}{The Spectrum}{section.2}% 12
-\BOOKMARK [3][-]{subsubsection.2.6.1}{The Tachyon}{subsection.2.6}% 13
-\BOOKMARK [2][-]{subsection.2.7}{The Big\(ish\) Picture}{section.2}% 14
-\BOOKMARK [2][-]{subsection.2.8}{Spurious states and gauge invariance}{section.2}% 15
-\BOOKMARK [2][-]{subsection.2.9}{Question 1}{section.2}% 16
+\BOOKMARK [2][-]{subsection.2.3}{Equations of Motion}{section.2}% 7
+\BOOKMARK [3][-]{subsubsection.2.3.1}{Classical Equivalence of the Nambu-Goto action with the Polyakov action}{subsection.2.3}% 8
+\BOOKMARK [2][-]{subsection.2.4}{Extending the Polyakov action}{section.2}% 9
+\BOOKMARK [2][-]{subsection.2.5}{Classical solutions}{section.2}% 10
+\BOOKMARK [2][-]{subsection.2.6}{Classical Hamiltonian Dynamics of the String}{section.2}% 11
+\BOOKMARK [2][-]{subsection.2.7}{The Stress Tensor and Wit Algebra}{section.2}% 12
+\BOOKMARK [2][-]{subsection.2.8}{A First Look at the Quantum Theory}{section.2}% 13
+\BOOKMARK [3][-]{subsubsection.2.8.1}{Canonical Quantisation}{subsection.2.8}% 14
+\BOOKMARK [3][-]{subsubsection.2.8.2}{Physics State Conditions}{subsection.2.8}% 15
+\BOOKMARK [2][-]{subsection.2.9}{The Spectrum}{section.2}% 16
+\BOOKMARK [3][-]{subsubsection.2.9.1}{The Tachyon}{subsection.2.9}% 17
+\BOOKMARK [3][-]{subsubsection.2.9.2}{The First Excited State}{subsection.2.9}% 18
+\BOOKMARK [2][-]{subsection.2.10}{The Big\(ish\) Picture}{section.2}% 19
+\BOOKMARK [2][-]{subsection.2.11}{Spurious states and gauge invariance}{section.2}% 20
+\BOOKMARK [2][-]{subsection.2.12}{Recap}{section.2}% 21
+\BOOKMARK [2][-]{subsection.2.13}{Moduli space of unpunctured Riemann Surfaces}{section.2}% 22
+\BOOKMARK [2][-]{subsection.2.14}{Conformal Killing Vectors}{section.2}% 23
+\BOOKMARK [2][-]{subsection.2.15}{Moduli Space of Punctured Riemann Surfaces \040M \040g, n \040}{section.2}% 24
+\BOOKMARK [1][-]{section.3}{The Faddeev-Popov Determinant}{}% 25
+\BOOKMARK [2][-]{subsection.3.1}{Gauge-Fixing the Path Integral}{section.3}% 26
+\BOOKMARK [3][-]{subsubsection.3.1.1}{An aside on Grassman Variables}{subsection.3.1}% 27
+\BOOKMARK [2][-]{subsection.3.2}{Calculating Observables}{section.3}% 28
+\BOOKMARK [1][-]{section.4}{Conformal Field Theory}{}% 29
+\BOOKMARK [2][-]{subsection.4.1}{Conformal invariance in general dimension}{section.4}% 30
+\BOOKMARK [3][-]{subsubsection.4.1.1}{Connection to the Witt Algebra}{subsection.4.1}% 31
+\BOOKMARK [2][-]{subsection.4.2}{Conformal Fields}{section.4}% 32
+\BOOKMARK [2][-]{subsection.4.3}{Conformal transformations and the Stress Tensor}{section.4}% 33
+\BOOKMARK [2][-]{subsection.4.4}{Complex Coordinates}{section.4}% 34
+\BOOKMARK [2][-]{subsection.4.5}{Ward Identities and Conformal Transformations}{section.4}% 35
+\BOOKMARK [2][-]{subsection.4.6}{Radial Ordering}{section.4}% 36
+\BOOKMARK [2][-]{subsection.4.7}{Mode expansions and Conformal Weights}{section.4}% 37
+\BOOKMARK [2][-]{subsection.4.8}{Radial Ordering and Normal Ordering}{section.4}% 38
+\BOOKMARK [2][-]{subsection.4.9}{Operator Product Expansions}{section.4}% 39
+\BOOKMARK [2][-]{subsection.4.10}{The OPE of \040T \( z \) : e \040i k X \( w \) \040}{section.4}% 40
+\BOOKMARK [2][-]{subsection.4.11}{The Virasoro Algebra}{section.4}% 41
+\BOOKMARK [2][-]{subsection.4.12}{The \040b , c \040ghost system}{section.4}% 42
+\BOOKMARK [2][-]{subsection.4.13}{The b, c \040OPE}{section.4}% 43
+\BOOKMARK [3][-]{subsubsection.4.13.1}{The conformal weight of \040b \( z \) \040}{subsection.4.13}% 44
+\BOOKMARK [2][-]{subsection.4.14}{Mode expansions for ghosts}{section.4}% 45
+\BOOKMARK [2][-]{subsection.4.15}{The State-Operator Correspondence}{section.4}% 46
+\BOOKMARK [2][-]{subsection.4.16}{BRST Symmetry}{section.4}% 47
+\BOOKMARK [2][-]{subsection.4.17}{Question 1}{section.4}% 48
+\BOOKMARK [1][-]{section.5}{Example Sheet 2}{}% 49
+\BOOKMARK [2][-]{subsection.5.1}{Question 1}{section.5}% 50
+\BOOKMARK [2][-]{subsection.5.2}{Question 2}{section.5}% 51
+\BOOKMARK [2][-]{subsection.5.3}{Question 3}{section.5}% 52

@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.19 (TeX Live 2018) (preloaded format=pdflatex 2019.1.15)  4 FEB 2020 15:00
+This is pdfTeX, Version 3.14159265-2.6-1.40.19 (TeX Live 2018) (preloaded format=pdflatex 2019.1.15)  6 MAR 2020 23:46
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -2327,13 +2327,13 @@ File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 LaTeX Font Info:    Try loading font information for U+msb on input line 108.
  (/usr/local/texlive/2018/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
-) (./article.toc)
+) (./article.toc [1
+
+{/usr/local/texlive/2018/texmf-var/fonts/map/pdftex/updmap/pdftex.map}])
 \tf@toc=\write7
 \openout7 = `article.toc'.
 
- [1
 
-{/usr/local/texlive/2018/texmf-var/fonts/map/pdftex/updmap/pdftex.map}]
 
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
  Make it at least 13.59999pt.
@@ -2341,10 +2341,6 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  This may cause the page layout to be inconsistent, however.
 
 [2]
-Overfull \hbox (55.55359pt too wide) detected at line 245
-[] [] [] [] \OT1/cmr/m/n/10.95 = \OML/cmm/m/it/10.95 e[]K[]\OT1/cmr/m/n/10.95 (\OML/cmm/m/it/10.95 x[]; x[]\OT1/cmr/m/n/10.95 ; \OML/cmm/m/it/10.95 ^^Nt\OT1/cmr/m/n/10.95 ) = [] [] []
- []
-
 
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
  Make it at least 13.59999pt.
@@ -2352,14 +2348,9 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  This may cause the page layout to be inconsistent, however.
 
 [3]
-./article.tex:334: Undefined control sequence.
-l.334 	\mathcal{ Z }  = \int _{ \R
-                                  } d \phi  e^{  - S ( \phi  ) / \hbar}
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
+Overfull \hbox (55.55359pt too wide) detected at line 245
+[] [] [] [] \OT1/cmr/m/n/10.95 = \OML/cmm/m/it/10.95 e[]K[]\OT1/cmr/m/n/10.95 (\OML/cmm/m/it/10.95 x[]; x[]\OT1/cmr/m/n/10.95 ; \OML/cmm/m/it/10.95 ^^Nt\OT1/cmr/m/n/10.95 ) = [] [] []
+ []
 
 
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
@@ -2375,46 +2366,6 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  This may cause the page layout to be inconsistent, however.
 
 [5]
-./article.tex:509: You can't use `macro parameter character #' in restricted horizontal mode.
-<argument>  ##
-               ways of permutating points 
-l.509 ...  = \text{ # ways of permutating points }
-                                                  
-Sorry, but I'm not programmed to handle this case;
-I'll just pretend that you didn't ask for it.
-If you're in the wrong mode, you might be able to
-return to the right one by typing `I}' or `I$' or `I\par'.
-
-./article.tex:509: You can't use `macro parameter character #' in restricted horizontal mode.
-<argument> \firstchoice@false  ##
-                                  ways of permutating points 
-l.509 ...  = \text{ # ways of permutating points }
-                                                  
-Sorry, but I'm not programmed to handle this case;
-I'll just pretend that you didn't ask for it.
-If you're in the wrong mode, you might be able to
-return to the right one by typing `I}' or `I$' or `I\par'.
-
-./article.tex:509: You can't use `macro parameter character #' in restricted horizontal mode.
-<argument> \firstchoice@false  ##
-                                  ways of permutating points 
-l.509 ...  = \text{ # ways of permutating points }
-                                                  
-Sorry, but I'm not programmed to handle this case;
-I'll just pretend that you didn't ask for it.
-If you're in the wrong mode, you might be able to
-return to the right one by typing `I}' or `I$' or `I\par'.
-
-./article.tex:509: You can't use `macro parameter character #' in restricted horizontal mode.
-<argument> \firstchoice@false  ##
-                                  ways of permutating points 
-l.509 ...  = \text{ # ways of permutating points }
-                                                  
-Sorry, but I'm not programmed to handle this case;
-I'll just pretend that you didn't ask for it.
-If you're in the wrong mode, you might be able to
-return to the right one by typing `I}' or `I$' or `I\par'.
-
 
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
  Make it at least 13.59999pt.
@@ -2422,11 +2373,6 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  This may cause the page layout to be inconsistent, however.
 
 [6]
-./article.tex:513: Double superscript.
-l.513 ...phi _ b ^ *  \right>  =  \hbar M ^{ab  }^
-                                                  { - 1 } $
-I treat `x^1^2' essentially like `x^1{}^2'.
-
 
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
  Make it at least 13.59999pt.
@@ -2434,6 +2380,13 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  This may cause the page layout to be inconsistent, however.
 
 [7]
+
+Package Fancyhdr Warning: \headheight is too small (12.0pt): 
+ Make it at least 13.59999pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+
+[8]
 Overfull \hbox (0.5348pt too wide) in paragraph at lines 620--624
 []\T1/cmr/m/n/10.95 We will now fol-low the di-a-gram-matic method. If we write the ac-tion in-clud-ing a source term 
  []
@@ -2444,1466 +2397,7 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[8]
-./article.tex:720: Undefined control sequence.
-l.720  Z \left( J  \right)  \superset
-                                      \text{all diagrams with two external p...
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-
-Package Fancyhdr Warning: \headheight is too small (12.0pt): 
- Make it at least 13.59999pt.
- We now make it that large for the rest of the document.
- This may cause the page layout to be inconsistent, however.
-
 [9]
-./article.tex:749: Undefined control sequence.
-l.749 \subssection
-                  {Effective actions}
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-./article.tex:764: Display math should end with $$.
-<to be read again> 
-                    
-l.764 ...s of times } C _ I \text{ appears in } $ 
-                                                  D $
-The `$' that I just saw supposedly matches a previous `$$'.
-So I shall assume that you typed `$$' both times.
-
-
-Overfull \hbox (35.74544pt too wide) detected at line 764
-\OML/cmm/m/it/10.95 D \OT1/cmr/m/n/10.95 = [] [] [][] []\OML/cmm/m/it/10.95 ;  n[] \OT1/cmr/m/n/10.95 = []\OML/cmm/m/it/10.95 C[][]
- []
-
-./article.tex:765: Missing $ inserted.
-<inserted text> 
-                $
-l.765 \]
-         Assume $ C _ I $ includes appropriate symmetry factor $ \frac{1}{S ...
-I've inserted something that you may have forgotten.
-(See the <inserted text> above.)
-With luck, this will get me unwedged. But if you
-really didn't forget anything, try typing `2' now; then
-my insertion and my current dilemma will both disappear.
-
-./article.tex:791: Missing $ inserted.
-<inserted text> 
-                $
-l.791 \end{align*}
-                  
-I've inserted a begin-math/end-math symbol since I think
-you left one out. Proceed, with fingers crossed.
-
-./article.tex:791: Extra }, or forgotten $.
-\textdef@ ...th {#1}\let \f@size #2\selectfont #3}
-                                                  }
-l.791 \end{align*}
-                  
-I've deleted a group-closing symbol because it seems to be
-spurious, as in `$x}$'. But perhaps the } is legitimate and
-you forgot something else, as in `\hbox{$x}'. In such cases
-the way to recover is to insert both the forgotten and the
-deleted material, e.g., by typing `I$}'.
-
-./article.tex:791: Extra }, or forgotten $.
-\textdef@ ...h {#1}\let \f@size #2\selectfont #3}}
-                                                  
-l.791 \end{align*}
-                  
-I've deleted a group-closing symbol because it seems to be
-spurious, as in `$x}$'. But perhaps the } is legitimate and
-you forgot something else, as in `\hbox{$x}'. In such cases
-the way to recover is to insert both the forgotten and the
-deleted material, e.g., by typing `I$}'.
-
-./article.tex:791: Extra }, or forgotten $.
-\text@ ...e {\textdef@ \displaystyle \f@size {#1}}
-                                                  {\textdef@ \textstyle \f@s...
-l.791 \end{align*}
-                  
-I've deleted a group-closing symbol because it seems to be
-spurious, as in `$x}$'. But perhaps the } is legitimate and
-you forgot something else, as in `\hbox{$x}'. In such cases
-the way to recover is to insert both the forgotten and the
-deleted material, e.g., by typing `I$}'.
-
-./article.tex:791: Missing $ inserted.
-<inserted text> 
-                $
-l.791 \end{align*}
-                  
-I've inserted a begin-math/end-math symbol since I think
-you left one out. Proceed, with fingers crossed.
-
-./article.tex:791: Extra }, or forgotten $.
-\textdef@ ...th {#1}\let \f@size #2\selectfont #3}
-                                                  }
-l.791 \end{align*}
-                  
-I've deleted a group-closing symbol because it seems to be
-spurious, as in `$x}$'. But perhaps the } is legitimate and
-you forgot something else, as in `\hbox{$x}'. In such cases
-the way to recover is to insert both the forgotten and the
-deleted material, e.g., by typing `I$}'.
-
-./article.tex:791: Extra }, or forgotten $.
-\textdef@ ...h {#1}\let \f@size #2\selectfont #3}}
-                                                  
-l.791 \end{align*}
-                  
-I've deleted a group-closing symbol because it seems to be
-spurious, as in `$x}$'. But perhaps the } is legitimate and
-you forgot something else, as in `\hbox{$x}'. In such cases
-the way to recover is to insert both the forgotten and the
-deleted material, e.g., by typing `I$}'.
-
-./article.tex:791: Extra }, or forgotten $.
-\text@ ...xtstyle \f@size {\firstchoice@false #1}}
-                                                  {\textdef@ \textstyle \sf@...
-l.791 \end{align*}
-                  
-I've deleted a group-closing symbol because it seems to be
-spurious, as in `$x}$'. But perhaps the } is legitimate and
-you forgot something else, as in `\hbox{$x}'. In such cases
-the way to recover is to insert both the forgotten and the
-deleted material, e.g., by typing `I$}'.
-
-./article.tex:791: Missing $ inserted.
-<inserted text> 
-                $
-l.791 \end{align*}
-                  
-I've inserted a begin-math/end-math symbol since I think
-you left one out. Proceed, with fingers crossed.
-
-./article.tex:791: Extra }, or forgotten $.
-\textdef@ ...th {#1}\let \f@size #2\selectfont #3}
-                                                  }
-l.791 \end{align*}
-                  
-I've deleted a group-closing symbol because it seems to be
-spurious, as in `$x}$'. But perhaps the } is legitimate and
-you forgot something else, as in `\hbox{$x}'. In such cases
-the way to recover is to insert both the forgotten and the
-deleted material, e.g., by typing `I$}'.
-
-./article.tex:791: Extra }, or forgotten $.
-\textdef@ ...h {#1}\let \f@size #2\selectfont #3}}
-                                                  
-l.791 \end{align*}
-                  
-I've deleted a group-closing symbol because it seems to be
-spurious, as in `$x}$'. But perhaps the } is legitimate and
-you forgot something else, as in `\hbox{$x}'. In such cases
-the way to recover is to insert both the forgotten and the
-deleted material, e.g., by typing `I$}'.
-
-./article.tex:791: Extra }, or forgotten $.
-\text@ ...tstyle \sf@size {\firstchoice@false #1}}
-                                                  {\textdef@ \textstyle \ssf...
-l.791 \end{align*}
-                  
-I've deleted a group-closing symbol because it seems to be
-spurious, as in `$x}$'. But perhaps the } is legitimate and
-you forgot something else, as in `\hbox{$x}'. In such cases
-the way to recover is to insert both the forgotten and the
-deleted material, e.g., by typing `I$}'.
-
-./article.tex:791: Missing $ inserted.
-<inserted text> 
-                $
-l.791 \end{align*}
-                  
-I've inserted a begin-math/end-math symbol since I think
-you left one out. Proceed, with fingers crossed.
-
-./article.tex:791: Extra }, or forgotten $.
-\textdef@ ...th {#1}\let \f@size #2\selectfont #3}
-                                                  }
-l.791 \end{align*}
-                  
-I've deleted a group-closing symbol because it seems to be
-spurious, as in `$x}$'. But perhaps the } is legitimate and
-you forgot something else, as in `\hbox{$x}'. In such cases
-the way to recover is to insert both the forgotten and the
-deleted material, e.g., by typing `I$}'.
-
-./article.tex:791: Extra }, or forgotten $.
-\textdef@ ...h {#1}\let \f@size #2\selectfont #3}}
-                                                  
-l.791 \end{align*}
-                  
-I've deleted a group-closing symbol because it seems to be
-spurious, as in `$x}$'. But perhaps the } is legitimate and
-you forgot something else, as in `\hbox{$x}'. In such cases
-the way to recover is to insert both the forgotten and the
-deleted material, e.g., by typing `I$}'.
-
-./article.tex:791: Extra }, or forgotten $.
-\text@ ...style \ssf@size {\firstchoice@false #1}}
-                                                  \check@mathfonts }
-l.791 \end{align*}
-                  
-I've deleted a group-closing symbol because it seems to be
-spurious, as in `$x}$'. But perhaps the } is legitimate and
-you forgot something else, as in `\hbox{$x}'. In such cases
-the way to recover is to insert both the forgotten and the
-deleted material, e.g., by typing `I$}'.
-
-./article.tex:791: Extra }, or forgotten $.
-\text@ ...firstchoice@false #1}}\check@mathfonts }
-                                                  
-l.791 \end{align*}
-                  
-I've deleted a group-closing symbol because it seems to be
-spurious, as in `$x}$'. But perhaps the } is legitimate and
-you forgot something else, as in `\hbox{$x}'. In such cases
-the way to recover is to insert both the forgotten and the
-deleted material, e.g., by typing `I$}'.
-
-./article.tex:791: Extra \right.
-<argument> ...unique connected diagrams } \right )
-                                                   \\ &= e ^{ - \left ( \mat...
-l.791 \end{align*}
-                  
-I'm ignoring a \right that had no matching \left.
-
-./article.tex:791: Misplaced alignment tab character &.
-\math@cr@@@ ->&
-               \omit \global \advance \row@ \@ne \ifst@rred \nonumber \fi \i...
-l.791 \end{align*}
-                  
-I can't figure out why you would want to use a tab mark
-here. If you just want an ampersand, the remedy is
-simple: Just type `I\&' now. But if some right brace
-up above has ended a previous alignment prematurely,
-you're probably due for more error messages, and you
-might try typing `S' now just to see what is salvageable.
-
-./article.tex:791: Misplaced \omit.
-\math@cr@@@ ->&\omit 
-                     \global \advance \row@ \@ne \ifst@rred \nonumber \fi \i...
-l.791 \end{align*}
-                  
-I expect to see \omit only after tab marks or the \cr of
-an alignment. Proceed, and I'll ignore this case.
-
-./article.tex:791: Misplaced \cr.
-\math@cr@@@ ... \else \global \@eqnswtrue \fi \cr 
-                                                  
-l.791 \end{align*}
-                  
-I can't figure out why you would want to use a tab mark
-or \cr or \span just now. If something like a right brace
-up above has ended a previous alignment prematurely,
-you're probably due for more error messages, and you
-might try typing `S' now just to see what is salvageable.
-
-./article.tex:791: Misplaced \noalign.
-\math@cr@@ ... \iffalse }\fi \math@cr@@@ \noalign 
-                                                  {\vskip #1\relax }
-l.791 \end{align*}
-                  
-I expect to see \noalign only after the \cr of
-an alignment. Proceed, and I'll ignore this case.
-
-./article.tex:791: Missing $ inserted.
-<inserted text> 
-                $
-l.791 \end{align*}
-                  
-I've inserted a begin-math/end-math symbol since I think
-you left one out. Proceed, with fingers crossed.
-
-./article.tex:791: Missing } inserted.
-<inserted text> 
-                }
-l.791 \end{align*}
-                  
-I've inserted something that you may have forgotten.
-(See the <inserted text> above.)
-With luck, this will get me unwedged. But if you
-really didn't forget anything, try typing `2' now; then
-my insertion and my current dilemma will both disappear.
-
-./article.tex:791: Missing } inserted.
-<inserted text> 
-                }
-l.791 \end{align*}
-                  
-I've inserted something that you may have forgotten.
-(See the <inserted text> above.)
-With luck, this will get me unwedged. But if you
-really didn't forget anything, try typing `2' now; then
-my insertion and my current dilemma will both disappear.
-
-./article.tex:791: Missing } inserted.
-<inserted text> 
-                }
-l.791 \end{align*}
-                  
-I've inserted something that you may have forgotten.
-(See the <inserted text> above.)
-With luck, this will get me unwedged. But if you
-really didn't forget anything, try typing `2' now; then
-my insertion and my current dilemma will both disappear.
-
-./article.tex:791: Missing $ inserted.
-<inserted text> 
-                $
-l.791 \end{align*}
-                  
-I've inserted a begin-math/end-math symbol since I think
-you left one out. Proceed, with fingers crossed.
-
-./article.tex:791: Missing } inserted.
-<inserted text> 
-                }
-l.791 \end{align*}
-                  
-I've inserted something that you may have forgotten.
-(See the <inserted text> above.)
-With luck, this will get me unwedged. But if you
-really didn't forget anything, try typing `2' now; then
-my insertion and my current dilemma will both disappear.
-
-./article.tex:791: Missing } inserted.
-<inserted text> 
-                }
-l.791 \end{align*}
-                  
-I've inserted something that you may have forgotten.
-(See the <inserted text> above.)
-With luck, this will get me unwedged. But if you
-really didn't forget anything, try typing `2' now; then
-my insertion and my current dilemma will both disappear.
-
-./article.tex:791: Missing } inserted.
-<inserted text> 
-                }
-l.791 \end{align*}
-                  
-I've inserted something that you may have forgotten.
-(See the <inserted text> above.)
-With luck, this will get me unwedged. But if you
-really didn't forget anything, try typing `2' now; then
-my insertion and my current dilemma will both disappear.
-
-./article.tex:791: Missing $ inserted.
-<inserted text> 
-                $
-l.791 \end{align*}
-                  
-I've inserted a begin-math/end-math symbol since I think
-you left one out. Proceed, with fingers crossed.
-
-./article.tex:791: Missing } inserted.
-<inserted text> 
-                }
-l.791 \end{align*}
-                  
-I've inserted something that you may have forgotten.
-(See the <inserted text> above.)
-With luck, this will get me unwedged. But if you
-really didn't forget anything, try typing `2' now; then
-my insertion and my current dilemma will both disappear.
-
-./article.tex:791: Missing } inserted.
-<inserted text> 
-                }
-l.791 \end{align*}
-                  
-I've inserted something that you may have forgotten.
-(See the <inserted text> above.)
-With luck, this will get me unwedged. But if you
-really didn't forget anything, try typing `2' now; then
-my insertion and my current dilemma will both disappear.
-
-./article.tex:791: Missing } inserted.
-<inserted text> 
-                }
-l.791 \end{align*}
-                  
-I've inserted something that you may have forgotten.
-(See the <inserted text> above.)
-With luck, this will get me unwedged. But if you
-really didn't forget anything, try typing `2' now; then
-my insertion and my current dilemma will both disappear.
-
-./article.tex:791: Missing $ inserted.
-<inserted text> 
-                $
-l.791 \end{align*}
-                  
-I've inserted a begin-math/end-math symbol since I think
-you left one out. Proceed, with fingers crossed.
-
-./article.tex:791: Missing } inserted.
-<inserted text> 
-                }
-l.791 \end{align*}
-                  
-I've inserted something that you may have forgotten.
-(See the <inserted text> above.)
-With luck, this will get me unwedged. But if you
-really didn't forget anything, try typing `2' now; then
-my insertion and my current dilemma will both disappear.
-
-./article.tex:791: Missing } inserted.
-<inserted text> 
-                }
-l.791 \end{align*}
-                  
-I've inserted something that you may have forgotten.
-(See the <inserted text> above.)
-With luck, this will get me unwedged. But if you
-really didn't forget anything, try typing `2' now; then
-my insertion and my current dilemma will both disappear.
-
-./article.tex:791: Missing } inserted.
-<inserted text> 
-                }
-l.791 \end{align*}
-                  
-I've inserted something that you may have forgotten.
-(See the <inserted text> above.)
-With luck, this will get me unwedged. But if you
-really didn't forget anything, try typing `2' now; then
-my insertion and my current dilemma will both disappear.
-
-./article.tex:791: Missing $ inserted.
-<inserted text> 
-                $
-l.791 \end{align*}
-                  
-I've inserted a begin-math/end-math symbol since I think
-you left one out. Proceed, with fingers crossed.
-
-./article.tex:791: Missing } inserted.
-<inserted text> 
-                }
-l.791 \end{align*}
-                  
-I've inserted something that you may have forgotten.
-(See the <inserted text> above.)
-With luck, this will get me unwedged. But if you
-really didn't forget anything, try typing `2' now; then
-my insertion and my current dilemma will both disappear.
-
-./article.tex:791: Missing { inserted.
-<to be read again> 
-                   $
-l.791 \end{align*}
-                  
-A left brace was mandatory here, so I've put one in.
-You might want to delete and/or insert some corrections
-so that I will find a matching right brace soon.
-(If you're confused by all this, try typing `I}' now.)
-
-./article.tex:791: Missing } inserted.
-<inserted text> 
-                }
-l.791 \end{align*}
-                  
-I've inserted something that you may have forgotten.
-(See the <inserted text> above.)
-With luck, this will get me unwedged. But if you
-really didn't forget anything, try typing `2' now; then
-my insertion and my current dilemma will both disappear.
-
-./article.tex:791: Missing { inserted.
-<to be read again> 
-                   $
-l.791 \end{align*}
-                  
-A left brace was mandatory here, so I've put one in.
-You might want to delete and/or insert some corrections
-so that I will find a matching right brace soon.
-(If you're confused by all this, try typing `I}' now.)
-
-./article.tex:791: Missing } inserted.
-<inserted text> 
-                }
-l.791 \end{align*}
-                  
-I've inserted something that you may have forgotten.
-(See the <inserted text> above.)
-With luck, this will get me unwedged. But if you
-really didn't forget anything, try typing `2' now; then
-my insertion and my current dilemma will both disappear.
-
-./article.tex:791: Missing { inserted.
-<to be read again> 
-                   $
-l.791 \end{align*}
-                  
-A left brace was mandatory here, so I've put one in.
-You might want to delete and/or insert some corrections
-so that I will find a matching right brace soon.
-(If you're confused by all this, try typing `I}' now.)
-
-./article.tex:791: Missing } inserted.
-<inserted text> 
-                }
-l.791 \end{align*}
-                  
-I've inserted something that you may have forgotten.
-(See the <inserted text> above.)
-With luck, this will get me unwedged. But if you
-really didn't forget anything, try typing `2' now; then
-my insertion and my current dilemma will both disappear.
-
-./article.tex:791: Missing } inserted.
-<inserted text> 
-                }
-l.791 \end{align*}
-                  
-I've inserted something that you may have forgotten.
-(See the <inserted text> above.)
-With luck, this will get me unwedged. But if you
-really didn't forget anything, try typing `2' now; then
-my insertion and my current dilemma will both disappear.
-
-./article.tex:791: Missing \right. inserted.
-<inserted text> 
-                \right .
-l.791 \end{align*}
-                  
-I've inserted something that you may have forgotten.
-(See the <inserted text> above.)
-With luck, this will get me unwedged. But if you
-really didn't forget anything, try typing `2' now; then
-my insertion and my current dilemma will both disappear.
-
-./article.tex:791: Missing } inserted.
-<inserted text> 
-                }
-l.791 \end{align*}
-                  
-I've inserted something that you may have forgotten.
-(See the <inserted text> above.)
-With luck, this will get me unwedged. But if you
-really didn't forget anything, try typing `2' now; then
-my insertion and my current dilemma will both disappear.
-
-./article.tex:791: Missing } inserted.
-<inserted text> 
-                }
-l.791 \end{align*}
-                  
-I've inserted something that you may have forgotten.
-(See the <inserted text> above.)
-With luck, this will get me unwedged. But if you
-really didn't forget anything, try typing `2' now; then
-my insertion and my current dilemma will both disappear.
-
-./article.tex:791: Missing } inserted.
-<inserted text> 
-                }
-l.791 \end{align*}
-                  
-I've inserted something that you may have forgotten.
-(See the <inserted text> above.)
-With luck, this will get me unwedged. But if you
-really didn't forget anything, try typing `2' now; then
-my insertion and my current dilemma will both disappear.
-
-./article.tex:791: Missing \cr inserted.
-<inserted text> 
-                \cr 
-l.791 \end{align*}
-                  
-I'm guessing that you meant to end an alignment here.
-
-./article.tex:791: Missing { inserted.
-<inserted text> 
-                {
-l.791 \end{align*}
-                  
-I've put in what seems to be necessary to fix
-the current column of the current alignment.
-Try to go on, since this might almost work.
-
-./article.tex:791: Missing { inserted.
-<inserted text> 
-                {
-l.791 \end{align*}
-                  
-I've put in what seems to be necessary to fix
-the current column of the current alignment.
-Try to go on, since this might almost work.
-
-./article.tex:791: Extra }, or forgotten $.
-<recently read> }
-                 
-l.791 \end{align*}
-                  
-I've deleted a group-closing symbol because it seems to be
-spurious, as in `$x}$'. But perhaps the } is legitimate and
-you forgot something else, as in `\hbox{$x}'. In such cases
-the way to recover is to insert both the forgotten and the
-deleted material, e.g., by typing `I$}'.
-
-./article.tex:791: Missing $ inserted.
-<inserted text> 
-                $
-l.791 \end{align*}
-                  
-I've inserted a begin-math/end-math symbol since I think
-you left one out. Proceed, with fingers crossed.
-
-./article.tex:791: Missing } inserted.
-<inserted text> 
-                }
-l.791 \end{align*}
-                  
-I've inserted something that you may have forgotten.
-(See the <inserted text> above.)
-With luck, this will get me unwedged. But if you
-really didn't forget anything, try typing `2' now; then
-my insertion and my current dilemma will both disappear.
-
-./article.tex:791: Misplaced alignment tab character &.
-<argument> ...e connected diagrams } \right ) \\ &
-                                                  = e ^{ - \left ( \mathcal ...
-l.791 \end{align*}
-                  
-I can't figure out why you would want to use a tab mark
-here. If you just want an ampersand, the remedy is
-simple: Just type `I\&' now. But if some right brace
-up above has ended a previous alignment prematurely,
-you're probably due for more error messages, and you
-might try typing `S' now just to see what is salvageable.
-
-./article.tex:791: Misplaced alignment tab character &.
-\@tempa ->\endgroup &
-                     &
-l.791 \end{align*}
-                  
-I can't figure out why you would want to use a tab mark
-here. If you just want an ampersand, the remedy is
-simple: Just type `I\&' now. But if some right brace
-up above has ended a previous alignment prematurely,
-you're probably due for more error messages, and you
-might try typing `S' now just to see what is salvageable.
-
-./article.tex:791: Misplaced alignment tab character &.
-\@tempa ->\endgroup &&
-                      
-l.791 \end{align*}
-                  
-I can't figure out why you would want to use a tab mark
-here. If you just want an ampersand, the remedy is
-simple: Just type `I\&' now. But if some right brace
-up above has ended a previous alignment prematurely,
-you're probably due for more error messages, and you
-might try typing `S' now just to see what is salvageable.
-
-./article.tex:791: Misplaced \omit.
-\math@cr@@@ ...@ \@ne \add@amps \maxfields@ \omit 
-                                                  \kern -\alignsep@ \iftag@ ...
-l.791 \end{align*}
-                  
-I expect to see \omit only after tab marks or the \cr of
-an alignment. Proceed, and I'll ignore this case.
-
-./article.tex:791: Misplaced \cr.
-\math@cr@@@ ...wtrue \fi \global \lineht@ \z@ \cr 
-                                                  
-l.791 \end{align*}
-                  
-I can't figure out why you would want to use a tab mark
-or \cr or \span just now. If something like a right brace
-up above has ended a previous alignment prematurely,
-you're probably due for more error messages, and you
-might try typing `S' now just to see what is salvageable.
-
-./article.tex:791: Misplaced \noalign.
-\math@cr@@ ... \iffalse }\fi \math@cr@@@ \noalign 
-                                                  {\vskip #1\relax }
-l.791 \end{align*}
-                  
-I expect to see \noalign only after the \cr of
-an alignment. Proceed, and I'll ignore this case.
-
-./article.tex:791: Missing $ inserted.
-<inserted text> 
-                $
-l.791 \end{align*}
-                  
-I've inserted a begin-math/end-math symbol since I think
-you left one out. Proceed, with fingers crossed.
-
-./article.tex:791: Missing } inserted.
-<inserted text> 
-                }
-l.791 \end{align*}
-                  
-I've inserted something that you may have forgotten.
-(See the <inserted text> above.)
-With luck, this will get me unwedged. But if you
-really didn't forget anything, try typing `2' now; then
-my insertion and my current dilemma will both disappear.
-
-./article.tex:791: Missing \endgroup inserted.
-<inserted text> 
-                \endgroup 
-l.791 \end{align*}
-                  
-I've inserted something that you may have forgotten.
-(See the <inserted text> above.)
-With luck, this will get me unwedged. But if you
-really didn't forget anything, try typing `2' now; then
-my insertion and my current dilemma will both disappear.
-
-./article.tex:791: Display math should end with $$.
-<to be read again> 
-                   \vskip 
-l.791 \end{align*}
-                  
-The `$' that I just saw supposedly matches a previous `$$'.
-So I shall assume that you typed `$$' both times.
-
-./article.tex:791: Extra }, or forgotten \endgroup.
-\math@cr@@ ...th@cr@@@ \noalign {\vskip #1\relax }
-                                                  
-l.791 \end{align*}
-                  
-I've deleted a group-closing symbol because it seems to be
-spurious, as in `$x}$'. But perhaps the } is legitimate and
-you forgot something else, as in `\hbox{$x}'. In such cases
-the way to recover is to insert both the forgotten and the
-deleted material, e.g., by typing `I$}'.
-
-./article.tex:791: Misplaced \cr.
-\math@cr@@@ ->\cr 
-                  
-l.791 \end{align*}
-                  
-I can't figure out why you would want to use a tab mark
-or \cr or \span just now. If something like a right brace
-up above has ended a previous alignment prematurely,
-you're probably due for more error messages, and you
-might try typing `S' now just to see what is salvageable.
-
-./article.tex:791: Misplaced alignment tab character &.
-\@tempa ->\endgroup &
-                     &
-l.791 \end{align*}
-                  
-I can't figure out why you would want to use a tab mark
-here. If you just want an ampersand, the remedy is
-simple: Just type `I\&' now. But if some right brace
-up above has ended a previous alignment prematurely,
-you're probably due for more error messages, and you
-might try typing `S' now just to see what is salvageable.
-
-./article.tex:791: Misplaced alignment tab character &.
-\@tempa ->\endgroup &&
-                      
-l.791 \end{align*}
-                  
-I can't figure out why you would want to use a tab mark
-here. If you just want an ampersand, the remedy is
-simple: Just type `I\&' now. But if some right brace
-up above has ended a previous alignment prematurely,
-you're probably due for more error messages, and you
-might try typing `S' now just to see what is salvageable.
-
-./article.tex:791: Misplaced \cr.
-\measure@ ...olumn@ \z@ \add@amps \maxfields@ \cr 
-                                                  }}\restorecounters@ \ifodd...
-l.791 \end{align*}
-                  
-I can't figure out why you would want to use a tab mark
-or \cr or \span just now. If something like a right brace
-up above has ended a previous alignment prematurely,
-you're probably due for more error messages, and you
-might try typing `S' now just to see what is salvageable.
-
-./article.tex:791: Extra }, or forgotten \endgroup.
-\measure@ ...lumn@ \z@ \add@amps \maxfields@ \cr }
-                                                  }\restorecounters@ \ifodd ...
-l.791 \end{align*}
-                  
-I've deleted a group-closing symbol because it seems to be
-spurious, as in `$x}$'. But perhaps the } is legitimate and
-you forgot something else, as in `\hbox{$x}'. In such cases
-the way to recover is to insert both the forgotten and the
-deleted material, e.g., by typing `I$}'.
-
-./article.tex:791: Extra }, or forgotten \endgroup.
-\measure@ ...umn@ \z@ \add@amps \maxfields@ \cr }}
-                                                  \restorecounters@ \ifodd \...
-l.791 \end{align*}
-                  
-I've deleted a group-closing symbol because it seems to be
-spurious, as in `$x}$'. But perhaps the } is legitimate and
-you forgot something else, as in `\hbox{$x}'. In such cases
-the way to recover is to insert both the forgotten and the
-deleted material, e.g., by typing `I$}'.
-
-./article.tex:791: Missing number, treated as zero.
-<to be read again> 
-                   >
-l.791 \end{align*}
-                  
-A number should have been here; I inserted `0'.
-(If you can't figure out why I needed to see a number,
-look up `weird error' in the index to The TeXbook.)
-
-./article.tex:791: Illegal unit of measure (pt inserted).
-<to be read again> 
-                   >
-l.791 \end{align*}
-                  
-Dimensions can be in units of em, ex, in, pt, pc,
-cm, mm, dd, cc, nd, nc, bp, or sp; but yours is a new one!
-I'll assume that you meant to say pt, for printer's points.
-To recover gracefully from this error, it's best to
-delete the erroneous units; e.g., type `2' to delete
-two letters. (See Chapter 27 of The TeXbook.)
-
-./article.tex:791: Missing $ inserted.
-<inserted text> 
-                $
-l.791 \end{align*}
-                  
-I've inserted a begin-math/end-math symbol since I think
-you left one out. Proceed, with fingers crossed.
-
-./article.tex:791: Extra }, or forgotten $.
-\textdef@ ...th {#1}\let \f@size #2\selectfont #3}
-                                                  }
-l.791 \end{align*}
-                  
-I've deleted a group-closing symbol because it seems to be
-spurious, as in `$x}$'. But perhaps the } is legitimate and
-you forgot something else, as in `\hbox{$x}'. In such cases
-the way to recover is to insert both the forgotten and the
-deleted material, e.g., by typing `I$}'.
-
-./article.tex:791: Extra }, or forgotten $.
-\textdef@ ...h {#1}\let \f@size #2\selectfont #3}}
-                                                  
-l.791 \end{align*}
-                  
-I've deleted a group-closing symbol because it seems to be
-spurious, as in `$x}$'. But perhaps the } is legitimate and
-you forgot something else, as in `\hbox{$x}'. In such cases
-the way to recover is to insert both the forgotten and the
-deleted material, e.g., by typing `I$}'.
-
-./article.tex:791: Extra }, or forgotten $.
-\text@ ...e {\textdef@ \displaystyle \f@size {#1}}
-                                                  {\textdef@ \textstyle \f@s...
-l.791 \end{align*}
-                  
-I've deleted a group-closing symbol because it seems to be
-spurious, as in `$x}$'. But perhaps the } is legitimate and
-you forgot something else, as in `\hbox{$x}'. In such cases
-the way to recover is to insert both the forgotten and the
-deleted material, e.g., by typing `I$}'.
-
-./article.tex:791: Missing $ inserted.
-<inserted text> 
-                $
-l.791 \end{align*}
-                  
-I've inserted a begin-math/end-math symbol since I think
-you left one out. Proceed, with fingers crossed.
-
-./article.tex:791: Extra }, or forgotten $.
-\textdef@ ...th {#1}\let \f@size #2\selectfont #3}
-                                                  }
-l.791 \end{align*}
-                  
-I've deleted a group-closing symbol because it seems to be
-spurious, as in `$x}$'. But perhaps the } is legitimate and
-you forgot something else, as in `\hbox{$x}'. In such cases
-the way to recover is to insert both the forgotten and the
-deleted material, e.g., by typing `I$}'.
-
-./article.tex:791: Extra }, or forgotten $.
-\textdef@ ...h {#1}\let \f@size #2\selectfont #3}}
-                                                  
-l.791 \end{align*}
-                  
-I've deleted a group-closing symbol because it seems to be
-spurious, as in `$x}$'. But perhaps the } is legitimate and
-you forgot something else, as in `\hbox{$x}'. In such cases
-the way to recover is to insert both the forgotten and the
-deleted material, e.g., by typing `I$}'.
-
-./article.tex:791: Extra }, or forgotten $.
-\text@ ...xtstyle \f@size {\firstchoice@false #1}}
-                                                  {\textdef@ \textstyle \sf@...
-l.791 \end{align*}
-                  
-I've deleted a group-closing symbol because it seems to be
-spurious, as in `$x}$'. But perhaps the } is legitimate and
-you forgot something else, as in `\hbox{$x}'. In such cases
-the way to recover is to insert both the forgotten and the
-deleted material, e.g., by typing `I$}'.
-
-./article.tex:791: Missing $ inserted.
-<inserted text> 
-                $
-l.791 \end{align*}
-                  
-I've inserted a begin-math/end-math symbol since I think
-you left one out. Proceed, with fingers crossed.
-
-./article.tex:791: Extra }, or forgotten $.
-\textdef@ ...th {#1}\let \f@size #2\selectfont #3}
-                                                  }
-l.791 \end{align*}
-                  
-I've deleted a group-closing symbol because it seems to be
-spurious, as in `$x}$'. But perhaps the } is legitimate and
-you forgot something else, as in `\hbox{$x}'. In such cases
-the way to recover is to insert both the forgotten and the
-deleted material, e.g., by typing `I$}'.
-
-./article.tex:791: Extra }, or forgotten $.
-\textdef@ ...h {#1}\let \f@size #2\selectfont #3}}
-                                                  
-l.791 \end{align*}
-                  
-I've deleted a group-closing symbol because it seems to be
-spurious, as in `$x}$'. But perhaps the } is legitimate and
-you forgot something else, as in `\hbox{$x}'. In such cases
-the way to recover is to insert both the forgotten and the
-deleted material, e.g., by typing `I$}'.
-
-./article.tex:791: Extra }, or forgotten $.
-\text@ ...tstyle \sf@size {\firstchoice@false #1}}
-                                                  {\textdef@ \textstyle \ssf...
-l.791 \end{align*}
-                  
-I've deleted a group-closing symbol because it seems to be
-spurious, as in `$x}$'. But perhaps the } is legitimate and
-you forgot something else, as in `\hbox{$x}'. In such cases
-the way to recover is to insert both the forgotten and the
-deleted material, e.g., by typing `I$}'.
-
-./article.tex:791: Missing $ inserted.
-<inserted text> 
-                $
-l.791 \end{align*}
-                  
-I've inserted a begin-math/end-math symbol since I think
-you left one out. Proceed, with fingers crossed.
-
-./article.tex:791: Extra }, or forgotten $.
-\textdef@ ...th {#1}\let \f@size #2\selectfont #3}
-                                                  }
-l.791 \end{align*}
-                  
-I've deleted a group-closing symbol because it seems to be
-spurious, as in `$x}$'. But perhaps the } is legitimate and
-you forgot something else, as in `\hbox{$x}'. In such cases
-the way to recover is to insert both the forgotten and the
-deleted material, e.g., by typing `I$}'.
-
-./article.tex:791: Extra }, or forgotten $.
-\textdef@ ...h {#1}\let \f@size #2\selectfont #3}}
-                                                  
-l.791 \end{align*}
-                  
-I've deleted a group-closing symbol because it seems to be
-spurious, as in `$x}$'. But perhaps the } is legitimate and
-you forgot something else, as in `\hbox{$x}'. In such cases
-the way to recover is to insert both the forgotten and the
-deleted material, e.g., by typing `I$}'.
-
-./article.tex:791: Extra }, or forgotten $.
-\text@ ...style \ssf@size {\firstchoice@false #1}}
-                                                  \check@mathfonts }
-l.791 \end{align*}
-                  
-I've deleted a group-closing symbol because it seems to be
-spurious, as in `$x}$'. But perhaps the } is legitimate and
-you forgot something else, as in `\hbox{$x}'. In such cases
-the way to recover is to insert both the forgotten and the
-deleted material, e.g., by typing `I$}'.
-
-./article.tex:791: Extra }, or forgotten $.
-\text@ ...firstchoice@false #1}}\check@mathfonts }
-                                                  
-l.791 \end{align*}
-                  
-I've deleted a group-closing symbol because it seems to be
-spurious, as in `$x}$'. But perhaps the } is legitimate and
-you forgot something else, as in `\hbox{$x}'. In such cases
-the way to recover is to insert both the forgotten and the
-deleted material, e.g., by typing `I$}'.
-
-./article.tex:791: Extra \right.
-<argument> ...unique connected diagrams } \right )
-                                                   \\ &= e ^{ - \left ( \mat...
-l.791 \end{align*}
-                  
-I'm ignoring a \right that had no matching \left.
-
-./article.tex:791: Misplaced alignment tab character &.
-<recently read> &
-                 
-l.791 \end{align*}
-                  
-I can't figure out why you would want to use a tab mark
-here. If you just want an ampersand, the remedy is
-simple: Just type `I\&' now. But if some right brace
-up above has ended a previous alignment prematurely,
-you're probably due for more error messages, and you
-might try typing `S' now just to see what is salvageable.
-
-./article.tex:791: Misplaced \cr.
-\math@cr@@@ ->\cr 
-                  
-l.791 \end{align*}
-                  
-I can't figure out why you would want to use a tab mark
-or \cr or \span just now. If something like a right brace
-up above has ended a previous alignment prematurely,
-you're probably due for more error messages, and you
-might try typing `S' now just to see what is salvageable.
-
-./article.tex:791: Misplaced \noalign.
-\math@cr@@ ... \iffalse }\fi \math@cr@@@ \noalign 
-                                                  {\vskip #1\relax }
-l.791 \end{align*}
-                  
-I expect to see \noalign only after the \cr of
-an alignment. Proceed, and I'll ignore this case.
-
-./article.tex:791: Missing $ inserted.
-<inserted text> 
-                $
-l.791 \end{align*}
-                  
-I've inserted a begin-math/end-math symbol since I think
-you left one out. Proceed, with fingers crossed.
-
-./article.tex:791: Missing } inserted.
-<inserted text> 
-                }
-l.791 \end{align*}
-                  
-I've inserted something that you may have forgotten.
-(See the <inserted text> above.)
-With luck, this will get me unwedged. But if you
-really didn't forget anything, try typing `2' now; then
-my insertion and my current dilemma will both disappear.
-
-./article.tex:791: Missing } inserted.
-<inserted text> 
-                }
-l.791 \end{align*}
-                  
-I've inserted something that you may have forgotten.
-(See the <inserted text> above.)
-With luck, this will get me unwedged. But if you
-really didn't forget anything, try typing `2' now; then
-my insertion and my current dilemma will both disappear.
-
-./article.tex:791: Missing } inserted.
-<inserted text> 
-                }
-l.791 \end{align*}
-                  
-I've inserted something that you may have forgotten.
-(See the <inserted text> above.)
-With luck, this will get me unwedged. But if you
-really didn't forget anything, try typing `2' now; then
-my insertion and my current dilemma will both disappear.
-
-./article.tex:791: Missing $ inserted.
-<inserted text> 
-                $
-l.791 \end{align*}
-                  
-I've inserted a begin-math/end-math symbol since I think
-you left one out. Proceed, with fingers crossed.
-
-./article.tex:791: Missing } inserted.
-<inserted text> 
-                }
-l.791 \end{align*}
-                  
-I've inserted something that you may have forgotten.
-(See the <inserted text> above.)
-With luck, this will get me unwedged. But if you
-really didn't forget anything, try typing `2' now; then
-my insertion and my current dilemma will both disappear.
-
-./article.tex:791: Missing } inserted.
-<inserted text> 
-                }
-l.791 \end{align*}
-                  
-I've inserted something that you may have forgotten.
-(See the <inserted text> above.)
-With luck, this will get me unwedged. But if you
-really didn't forget anything, try typing `2' now; then
-my insertion and my current dilemma will both disappear.
-
-./article.tex:791: Missing } inserted.
-<inserted text> 
-                }
-l.791 \end{align*}
-                  
-I've inserted something that you may have forgotten.
-(See the <inserted text> above.)
-With luck, this will get me unwedged. But if you
-really didn't forget anything, try typing `2' now; then
-my insertion and my current dilemma will both disappear.
-
-./article.tex:791: Missing $ inserted.
-<inserted text> 
-                $
-l.791 \end{align*}
-                  
-I've inserted a begin-math/end-math symbol since I think
-you left one out. Proceed, with fingers crossed.
-
-./article.tex:791: Missing } inserted.
-<inserted text> 
-                }
-l.791 \end{align*}
-                  
-I've inserted something that you may have forgotten.
-(See the <inserted text> above.)
-With luck, this will get me unwedged. But if you
-really didn't forget anything, try typing `2' now; then
-my insertion and my current dilemma will both disappear.
-
-./article.tex:791: Missing } inserted.
-<inserted text> 
-                }
-l.791 \end{align*}
-                  
-I've inserted something that you may have forgotten.
-(See the <inserted text> above.)
-With luck, this will get me unwedged. But if you
-really didn't forget anything, try typing `2' now; then
-my insertion and my current dilemma will both disappear.
-
-./article.tex:791: Missing } inserted.
-<inserted text> 
-                }
-l.791 \end{align*}
-                  
-I've inserted something that you may have forgotten.
-(See the <inserted text> above.)
-With luck, this will get me unwedged. But if you
-really didn't forget anything, try typing `2' now; then
-my insertion and my current dilemma will both disappear.
-
-./article.tex:791: Missing $ inserted.
-<inserted text> 
-                $
-l.791 \end{align*}
-                  
-I've inserted a begin-math/end-math symbol since I think
-you left one out. Proceed, with fingers crossed.
-
-./article.tex:791: Missing } inserted.
-<inserted text> 
-                }
-l.791 \end{align*}
-                  
-I've inserted something that you may have forgotten.
-(See the <inserted text> above.)
-With luck, this will get me unwedged. But if you
-really didn't forget anything, try typing `2' now; then
-my insertion and my current dilemma will both disappear.
-
-./article.tex:791: Missing } inserted.
-<inserted text> 
-                }
-l.791 \end{align*}
-                  
-I've inserted something that you may have forgotten.
-(See the <inserted text> above.)
-With luck, this will get me unwedged. But if you
-really didn't forget anything, try typing `2' now; then
-my insertion and my current dilemma will both disappear.
-
-./article.tex:791: Missing } inserted.
-<inserted text> 
-                }
-l.791 \end{align*}
-                  
-I've inserted something that you may have forgotten.
-(See the <inserted text> above.)
-With luck, this will get me unwedged. But if you
-really didn't forget anything, try typing `2' now; then
-my insertion and my current dilemma will both disappear.
-
-./article.tex:791: Missing $ inserted.
-<inserted text> 
-                $
-l.791 \end{align*}
-                  
-I've inserted a begin-math/end-math symbol since I think
-you left one out. Proceed, with fingers crossed.
-
-./article.tex:791: Missing } inserted.
-<inserted text> 
-                }
-l.791 \end{align*}
-                  
-I've inserted something that you may have forgotten.
-(See the <inserted text> above.)
-With luck, this will get me unwedged. But if you
-really didn't forget anything, try typing `2' now; then
-my insertion and my current dilemma will both disappear.
-
-./article.tex:791: Missing { inserted.
-<to be read again> 
-                   $
-l.791 \end{align*}
-                  
-A left brace was mandatory here, so I've put one in.
-You might want to delete and/or insert some corrections
-so that I will find a matching right brace soon.
-(If you're confused by all this, try typing `I}' now.)
-
-./article.tex:791: Missing } inserted.
-<inserted text> 
-                }
-l.791 \end{align*}
-                  
-I've inserted something that you may have forgotten.
-(See the <inserted text> above.)
-With luck, this will get me unwedged. But if you
-really didn't forget anything, try typing `2' now; then
-my insertion and my current dilemma will both disappear.
-
-./article.tex:791: Missing { inserted.
-<to be read again> 
-                   $
-l.791 \end{align*}
-                  
-A left brace was mandatory here, so I've put one in.
-You might want to delete and/or insert some corrections
-so that I will find a matching right brace soon.
-(If you're confused by all this, try typing `I}' now.)
-
-./article.tex:791: Missing } inserted.
-<inserted text> 
-                }
-l.791 \end{align*}
-                  
-I've inserted something that you may have forgotten.
-(See the <inserted text> above.)
-With luck, this will get me unwedged. But if you
-really didn't forget anything, try typing `2' now; then
-my insertion and my current dilemma will both disappear.
-
-./article.tex:791: Missing { inserted.
-<to be read again> 
-                   $
-l.791 \end{align*}
-                  
-A left brace was mandatory here, so I've put one in.
-You might want to delete and/or insert some corrections
-so that I will find a matching right brace soon.
-(If you're confused by all this, try typing `I}' now.)
-
-./article.tex:791: Missing } inserted.
-<inserted text> 
-                }
-l.791 \end{align*}
-                  
-I've inserted something that you may have forgotten.
-(See the <inserted text> above.)
-With luck, this will get me unwedged. But if you
-really didn't forget anything, try typing `2' now; then
-my insertion and my current dilemma will both disappear.
-
-./article.tex:791: Missing } inserted.
-<inserted text> 
-                }
-l.791 \end{align*}
-                  
-I've inserted something that you may have forgotten.
-(See the <inserted text> above.)
-With luck, this will get me unwedged. But if you
-really didn't forget anything, try typing `2' now; then
-my insertion and my current dilemma will both disappear.
-
-./article.tex:791: Missing \right. inserted.
-<inserted text> 
-                \right .
-l.791 \end{align*}
-                  
-I've inserted something that you may have forgotten.
-(See the <inserted text> above.)
-With luck, this will get me unwedged. But if you
-really didn't forget anything, try typing `2' now; then
-my insertion and my current dilemma will both disappear.
-
-./article.tex:791: Missing } inserted.
-<inserted text> 
-                }
-l.791 \end{align*}
-                  
-I've inserted something that you may have forgotten.
-(See the <inserted text> above.)
-With luck, this will get me unwedged. But if you
-really didn't forget anything, try typing `2' now; then
-my insertion and my current dilemma will both disappear.
-
-./article.tex:791: Missing } inserted.
-<inserted text> 
-                }
-l.791 \end{align*}
-                  
-I've inserted something that you may have forgotten.
-(See the <inserted text> above.)
-With luck, this will get me unwedged. But if you
-really didn't forget anything, try typing `2' now; then
-my insertion and my current dilemma will both disappear.
-
-./article.tex:791: Missing } inserted.
-<inserted text> 
-                }
-l.791 \end{align*}
-                  
-I've inserted something that you may have forgotten.
-(See the <inserted text> above.)
-With luck, this will get me unwedged. But if you
-really didn't forget anything, try typing `2' now; then
-my insertion and my current dilemma will both disappear.
-
-./article.tex:791: Missing \cr inserted.
-<inserted text> 
-                \cr 
-l.791 \end{align*}
-                  
-I'm guessing that you meant to end an alignment here.
-
-./article.tex:791: Missing { inserted.
-<inserted text> 
-                {
-l.791 \end{align*}
-                  
-I've put in what seems to be necessary to fix
-the current column of the current alignment.
-Try to go on, since this might almost work.
-
-./article.tex:791: Missing { inserted.
-<inserted text> 
-                {
-l.791 \end{align*}
-                  
-I've put in what seems to be necessary to fix
-the current column of the current alignment.
-Try to go on, since this might almost work.
-
-./article.tex:791: Extra }, or forgotten $.
-<recently read> }
-                 
-l.791 \end{align*}
-                  
-I've deleted a group-closing symbol because it seems to be
-spurious, as in `$x}$'. But perhaps the } is legitimate and
-you forgot something else, as in `\hbox{$x}'. In such cases
-the way to recover is to insert both the forgotten and the
-deleted material, e.g., by typing `I$}'.
-
-./article.tex:791: Missing $ inserted.
-<inserted text> 
-                $
-l.791 \end{align*}
-                  
-I've inserted a begin-math/end-math symbol since I think
-you left one out. Proceed, with fingers crossed.
-
-./article.tex:791: Missing } inserted.
-<inserted text> 
-                }
-l.791 \end{align*}
-                  
-I've inserted something that you may have forgotten.
-(See the <inserted text> above.)
-With luck, this will get me unwedged. But if you
-really didn't forget anything, try typing `2' now; then
-my insertion and my current dilemma will both disappear.
-
-./article.tex:791: Too many }'s.
-\math@cr@@ ...th@cr@@@ \noalign {\vskip #1\relax }
-                                                  
-l.791 \end{align*}
-                  
-You've closed more groups than you opened.
-Such booboos are generally harmless, so keep going.
-
-./article.tex:791: Misplaced \noalign.
-\black@ #1->\noalign 
-                     {\ifdim #1>\displaywidth \dimen@ \prevdepth \nointerlin...
-l.791 \end{align*}
-                  
-I expect to see \noalign only after the \cr of
-an alignment. Proceed, and I'll ignore this case.
-
-./article.tex:791: Too many }'s.
-\endalign ->\math@cr \black@ \totwidth@ \egroup 
-                                                \ifingather@ \restorealignst...
-l.791 \end{align*}
-                  
-You've closed more groups than you opened.
-Such booboos are generally harmless, so keep going.
-
-
-./article.tex:791: LaTeX Error: \begin{document} ended by \end{align*}.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.791 \end{align*}
-                  
-Your command was ignored.
-Type  I <command> <return>  to replace it with another command,
-or  <return>  to continue without it.
-
-./article.tex:791: Missing $ inserted.
-<inserted text> 
-                $
-l.791 \end{align*}
-                  
-I've inserted something that you may have forgotten.
-(See the <inserted text> above.)
-With luck, this will get me unwedged. But if you
-really didn't forget anything, try typing `2' now; then
-my insertion and my current dilemma will both disappear.
-
-./article.tex:791: Display math should end with $$.
-<to be read again> 
-                   \endgroup 
-l.791 \end{align*}
-                  
-The `$' that I just saw supposedly matches a previous `$$'.
-So I shall assume that you typed `$$' both times.
-
-./article.tex:791: Extra \endgroup.
-<recently read> \endgroup 
-                          
-l.791 \end{align*}
-                  
-Things are pretty mixed up, but I think the worst is over.
-
 
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
  Make it at least 13.59999pt.
@@ -3911,17 +2405,6 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  This may cause the page layout to be inconsistent, however.
 
 [10]
-./article.tex:852: Undefined control sequence.
-<argument>  \m 
-               ^ 6 M ^ 4 
-l.852   \m ^ 6 M ^ 4 }
-                       \left[  \frac{1}{4  } + \frac{1}{2 } + \frac{1}{4 } \...
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
 
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
  Make it at least 13.59999pt.
@@ -3972,10 +2455,6 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
 
 [17]
 
-Package hyperref Warning: Difference (2) between bookmark levels is greater 
-(hyperref)                than one, level fixed on input line 1387.
-
-
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
  Make it at least 13.59999pt.
  We now make it that large for the rest of the document.
@@ -3990,6 +2469,10 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
 
 [19]
 
+Package hyperref Warning: Difference (2) between bookmark levels is greater 
+(hyperref)                than one, level fixed on input line 1421.
+
+
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
  Make it at least 13.59999pt.
  We now make it that large for the rest of the document.
@@ -4003,19 +2486,21 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  This may cause the page layout to be inconsistent, however.
 
 [21]
+Overfull \hbox (28.50246pt too wide) in paragraph at lines 1559--1564
+\T1/cmr/m/n/10.95 So, up to re-la-belling and switch-ing signs, we have that a Wick ro-ta-tion gives us $\OMS/cmsy/m/n/10.95 Z \OT1/cmr/m/n/10.95 = [] \OMS/cmsy/m/n/10.95 D\OML/cmm/m/it/10.95 ^^^ [] []$\T1/cmr/m/n/10.95 .
+ []
+
 
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
  Make it at least 13.59999pt.
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[22] (./e1_q1.pdf_tex
-<e1_q1.pdf, id=227, page=1, 390.18707pt x 263.3337pt>
-File: e1_q1.pdf Graphic file (type pdf)
-<use e1_q1.pdf, page 1>
-Package pdftex.def Info: e1_q1.pdf , page1 used on input line 52.
-(pdftex.def)             Requested size: 390.18709pt x 263.35312pt.
-)
+[22]
+Overfull \hbox (63.89415pt too wide) detected at line 1637
+\OMS/cmsy/m/n/10.95 Z[] [] \OT1/cmr/m/n/10.95 = [] \OMS/cmsy/m/n/10.95 D\OML/cmm/m/it/10.95 ^^^ [] [] [] [] \OT1/cmr/m/n/10.95 = [] [] \OML/cmm/m/it/10.95 Z[] []
+ []
+
 
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
  Make it at least 13.59999pt.
@@ -4029,7 +2514,11 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[24 <./e1_q1.pdf>]
+[24]
+Overfull \hbox (10.39194pt too wide) detected at line 1786
+\OML/cmm/m/it/10.95 G[] [] \OT1/cmr/m/n/10.95 = [] \OML/cmm/m/it/10.95 d[]z[]d[]z[]d[]z[]G[] [] G[] [] G[] [] []
+ []
+
 
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
  Make it at least 13.59999pt.
@@ -4037,31 +2526,440 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  This may cause the page layout to be inconsistent, however.
 
 [25]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 1730.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 1730.
- (./article.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 1730.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 1730.
+
+Package Fancyhdr Warning: \headheight is too small (12.0pt): 
+ Make it at least 13.59999pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+
+[26] (./vertices.pdf_tex
+<vertices.pdf, id=374, page=1, 339.6412pt x 56.93936pt>
+File: vertices.pdf Graphic file (type pdf)
+<use vertices.pdf, page 1>
+Package pdftex.def Info: vertices.pdf , page1 used on input line 52.
+(pdftex.def)             Requested size: 339.6412pt x 56.9418pt.
+
+./vertices.pdf_tex:55: Missing { inserted.
+<to be read again> 
+                   _
+l.55 ...)[lb]{\smash{ $- p^2 \delta Z__{\phi}$ }}}
+                                                  %
+A left brace was mandatory here, so I've put one in.
+You might want to delete and/or insert some corrections
+so that I will find a matching right brace soon.
+(If you're confused by all this, try typing `I}' now.)
+
+./vertices.pdf_tex:55: Missing } inserted.
+<inserted text> 
+                }
+l.55 ...)[lb]{\smash{ $- p^2 \delta Z__{\phi}$ }}}
+                                                  %
+I've inserted something that you may have forgotten.
+(See the <inserted text> above.)
+With luck, this will get me unwedged. But if you
+really didn't forget anything, try typing `2' now; then
+my insertion and my current dilemma will both disappear.
+
+)
+
+Package hyperref Warning: Difference (2) between bookmark levels is greater 
+(hyperref)                than one, level fixed on input line 1981.
+
+
+Package Fancyhdr Warning: \headheight is too small (12.0pt): 
+ Make it at least 13.59999pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+
+[27 <./vertices.pdf>]
+./article.tex:2060: Missing { inserted.
+<to be read again> 
+                   \left 
+l.2060 \tilde{ G } ^ \left
+                          ( 2  \right)  \left( p  \right)   =
+A left brace was mandatory here, so I've put one in.
+You might want to delete and/or insert some corrections
+so that I will find a matching right brace soon.
+(If you're confused by all this, try typing `I}' now.)
+
+./article.tex:2063: Missing } inserted.
+<inserted text> 
+                }
+l.2063 \]
+          Here, we have a pole at $ p ^ 2  =   - m ^ 2 _{\text{phys } } $,
+I've inserted something that you may have forgotten.
+(See the <inserted text> above.)
+With luck, this will get me unwedged. But if you
+really didn't forget anything, try typing `2' now; then
+my insertion and my current dilemma will both disappear.
+
+
+Package Fancyhdr Warning: \headheight is too small (12.0pt): 
+ Make it at least 13.59999pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+
+[28]
+
+Package Fancyhdr Warning: \headheight is too small (12.0pt): 
+ Make it at least 13.59999pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+
+[29]
+
+Package Fancyhdr Warning: \headheight is too small (12.0pt): 
+ Make it at least 13.59999pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+
+[30]
+
+Package Fancyhdr Warning: \headheight is too small (12.0pt): 
+ Make it at least 13.59999pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+
+[31]
+
+Package Fancyhdr Warning: \headheight is too small (12.0pt): 
+ Make it at least 13.59999pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+
+[32]
+
+Package Fancyhdr Warning: \headheight is too small (12.0pt): 
+ Make it at least 13.59999pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+
+[33]
+
+Package Fancyhdr Warning: \headheight is too small (12.0pt): 
+ Make it at least 13.59999pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+
+[34]
+
+Package Fancyhdr Warning: \headheight is too small (12.0pt): 
+ Make it at least 13.59999pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+
+[35]
+
+Package Fancyhdr Warning: \headheight is too small (12.0pt): 
+ Make it at least 13.59999pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+
+[36]
+./article.tex:2785: Undefined control sequence.
+l.2785 \left(  x _ 1 , \dota
+                             , x _ n ; g \left( \Lambda  \right)   \right)
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+
+Package Fancyhdr Warning: \headheight is too small (12.0pt): 
+ Make it at least 13.59999pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+
+[37]
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `math shift' on input line 2881.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `\beta' on input line 2881.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `math shift' on input line 2881.
+
+
+Package Fancyhdr Warning: \headheight is too small (12.0pt): 
+ Make it at least 13.59999pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+
+[38]
+
+Package Fancyhdr Warning: \headheight is too small (12.0pt): 
+ Make it at least 13.59999pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+
+[39]
+
+Package Fancyhdr Warning: \headheight is too small (12.0pt): 
+ Make it at least 13.59999pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+
+[40]
+Runaway argument?
+{\eta ^{ \alpha } \right )\left ( \fdv {}{\overline {\eta }^{ \beta }\ETC.
+./article.tex:3214: Paragraph ended before \functionalderivative  was complete.
+<to be read again> 
+                   \par 
+l.3214 
+       
+I suspect you've forgotten a `}', causing me to apply this
+control sequence to too much text. How can we recover?
+My plan is to forget the whole thing and hope for the best.
+
+./article.tex:3214: Missing $ inserted.
+<inserted text> 
+                $
+l.3214 
+       
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+./article.tex:3214: Missing \right. inserted.
+<inserted text> 
+                \right .
+l.3214 
+       
+I've inserted something that you may have forgotten.
+(See the <inserted text> above.)
+With luck, this will get me unwedged. But if you
+really didn't forget anything, try typing `2' now; then
+my insertion and my current dilemma will both disappear.
+
+./article.tex:3214: Missing \right. inserted.
+<inserted text> 
+                \right .
+l.3214 
+       
+I've inserted something that you may have forgotten.
+(See the <inserted text> above.)
+With luck, this will get me unwedged. But if you
+really didn't forget anything, try typing `2' now; then
+my insertion and my current dilemma will both disappear.
+
+./article.tex:3214: Display math should end with $$.
+<to be read again> 
+                   \par 
+l.3214 
+       
+The `$' that I just saw supposedly matches a previous `$$'.
+So I shall assume that you typed `$$' both times.
+
+
+Package Fancyhdr Warning: \headheight is too small (12.0pt): 
+ Make it at least 13.59999pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+
+[41]
+Overfull \hbox (49.791pt too wide) detected at line 3297
+[] [] \OT1/cmr/m/n/10.95 = 4 []
+ []
+
+
+Package Fancyhdr Warning: \headheight is too small (12.0pt): 
+ Make it at least 13.59999pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+
+[42]
+Overfull \hbox (26.09543pt too wide) detected at line 3356
+\OT1/cmr/m/n/10.95 ^^E[] [] = []^^@ [] [][] \OML/cmm/m/it/10.95 dx[] []
+ []
+
+
+Package Fancyhdr Warning: \headheight is too small (12.0pt): 
+ Make it at least 13.59999pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+
+[43]
+./article.tex:3387: Misplaced alignment tab character &.
+l.3387 S + S _{ CT } &
+                      =  \int d ^ 4  x \left[  \frac{1}{4 } Z _ 3 F _{ \mu \...
+I can't figure out why you would want to use a tab mark
+here. If you just want an ampersand, the remedy is
+simple: Just type `I\&' now. But if some right brace
+up above has ended a previous alignment prematurely,
+you're probably due for more error messages, and you
+might try typing `S' now just to see what is salvageable.
+
+./article.tex:3388: Missing \endcsname inserted.
+<to be read again> 
+                   \gamma 
+l.3388 ..._ 2 \overline{ \psi } \slashed{ \gamma }
+                                                   \psi  + Z _ m Z _ 2 m \ov...
+The control sequence marked <to be read again> should
+not appear between \csname and \endcsname.
+
+./article.tex:3388: Missing \endcsname inserted.
+<to be read again> 
+                   \gamma 
+l.3388 ..._ 2 \overline{ \psi } \slashed{ \gamma }
+                                                   \psi  + Z _ m Z _ 2 m \ov...
+The control sequence marked <to be read again> should
+not appear between \csname and \endcsname.
+
+./article.tex:3388: Extra \endcsname.
+\slashed ...else \csname sla@\string #1\endcsname 
+                                                  \fi 
+l.3388 ..._ 2 \overline{ \psi } \slashed{ \gamma }
+                                                   \psi  + Z _ m Z _ 2 m \ov...
+I'm ignoring this, since I wasn't doing a \csname.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `math shift' on input line 3415.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `\beta' on input line 3415.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `math shift' on input line 3415.
+
+
+Package Fancyhdr Warning: \headheight is too small (12.0pt): 
+ Make it at least 13.59999pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+
+[44]
+
+Package Fancyhdr Warning: \headheight is too small (12.0pt): 
+ Make it at least 13.59999pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+
+[45]
+
+Package Fancyhdr Warning: \headheight is too small (12.0pt): 
+ Make it at least 13.59999pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+
+[46]
+
+Package Fancyhdr Warning: \headheight is too small (12.0pt): 
+ Make it at least 13.59999pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+
+[47]
+
+Package Fancyhdr Warning: \headheight is too small (12.0pt): 
+ Make it at least 13.59999pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+
+[48]
+
+Package Fancyhdr Warning: \headheight is too small (12.0pt): 
+ Make it at least 13.59999pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+
+[49]
+
+Package Fancyhdr Warning: \headheight is too small (12.0pt): 
+ Make it at least 13.59999pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+
+[50]
+
+Package Fancyhdr Warning: \headheight is too small (12.0pt): 
+ Make it at least 13.59999pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+
+[51]
+
+Package Fancyhdr Warning: \headheight is too small (12.0pt): 
+ Make it at least 13.59999pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+
+[52] (./e1_q1.pdf_tex
+<e1_q1.pdf, id=491, page=1, 390.18707pt x 263.3337pt>
+File: e1_q1.pdf Graphic file (type pdf)
+<use e1_q1.pdf, page 1>
+Package pdftex.def Info: e1_q1.pdf , page1 used on input line 52.
+(pdftex.def)             Requested size: 390.18709pt x 263.35312pt.
+)
+
+Package Fancyhdr Warning: \headheight is too small (12.0pt): 
+ Make it at least 13.59999pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+
+[53]
+
+Package Fancyhdr Warning: \headheight is too small (12.0pt): 
+ Make it at least 13.59999pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+
+[54 <./e1_q1.pdf>]
+
+Package Fancyhdr Warning: \headheight is too small (12.0pt): 
+ Make it at least 13.59999pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+
+[55]
+
+./article.tex:3974: LaTeX Error: \begin{equation*} on input line 3183 ended by \end{document}.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.3974 \end{document}
+                     
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 3974.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 3974.
+(./article.aux)
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 3974.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 3974.
 Package rerunfilecheck Info: File `article.out' has not changed.
-(rerunfilecheck)             Checksum: D1FD5B8B29C5C7168BFDD25701C148A5;1332.
+(rerunfilecheck)             Checksum: EE2772DB4ACE090B192F92D26A3A0AE8;3447.
 Package logreq Info: Writing requests to 'article.run.xml'.
 \openout1 = `article.run.xml'.
 
- ) 
+ )
+(\end occurred inside a group at level 1)
+
+### semi simple group (level 1) entered at line 3183 (\begingroup)
+### bottom level 
 Here is how much of TeX's memory you used:
- 48940 strings out of 492649
- 1086432 string characters out of 6129622
- 1625215 words of memory out of 5000000
- 52009 multiletter control sequences out of 15000+600000
- 549756 words of font info for 75 fonts, out of 8000000 for 9000
+ 49025 strings out of 492649
+ 1087585 string characters out of 6129622
+ 1628215 words of memory out of 5000000
+ 52038 multiletter control sequences out of 15000+600000
+ 548118 words of font info for 69 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 62i,23n,96p,10402b,1688s stack positions out of 5000i,500n,10000p,200000b,80000s
-{/usr/local/texlive/2018/texmf-dist/fonts/enc/dvips/cm-super/cm-super-t1.enc}{/usr/local/texlive/2018/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc}</usr/local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx8.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cmextra/cmex7.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cmextra/cmex8.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi5.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi6.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmr5.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy5.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy6.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm5.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm7.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/cm-super/sfbx1095.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/cm-super/sfbx1200.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/cm-super/sfbx1440.pfb></usr/local/texlive/2018/texmf-dist/fonts/typ
-e1/public/cm-super/sfrm0800.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/cm-super/sfrm1095.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/cm-super/sfrm1200.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/cm-super/sfrm1728.pfb>
-Output written on article.pdf (25 pages, 431805 bytes).
+ 62i,12n,96p,10402b,1966s stack positions out of 5000i,500n,10000p,200000b,80000s
+{/usr/local/texlive/2018/texmf-dist/fonts/enc/dvips/cm-super/cm-super-t1.enc}{/usr/local/texlive/2018/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc}</usr/local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx8.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi6.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy6.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm7.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/cm-super/sfbx1095.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/cm-super/sfbx1200.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/cm-super/sfbx1440.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/cm-super/sfrm0600.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/cm-super/sfrm0800.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/cm-super/sfrm1095.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/cm-super/sfrm1200.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/cm-super/sfrm1728.pfb></usr/local/texlive/2018/texmf-dist/fonts/ty
+pe1/public/cm-super/sfti1095.pfb>
+Output written on article.pdf (55 pages, 565530 bytes).
 PDF statistics:
- 483 PDF objects out of 1000 (max. 8388607)
- 367 compressed objects within 4 object streams
- 53 named destinations out of 1000 (max. 500000)
- 170 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 753 PDF objects out of 1000 (max. 8388607)
+ 606 compressed objects within 7 object streams
+ 111 named destinations out of 1000 (max. 500000)
+ 391 words of extra memory for PDF output out of 10000 (max. 10000000)
 

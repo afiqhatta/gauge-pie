@@ -1,5 +1,5 @@
 [0] Config.pm:302> INFO - This is Biber 2.11
-[0] Config.pm:305> INFO - Logfile is 'article.blg'
-[34] biber-darwin:313> INFO - === Mon Dec  9, 2019, 17:53:34
-[52] Biber.pm:371> INFO - Reading 'article.bcf'
-[136] Utils.pm:193> WARN - No data sources defined!
+[10] Config.pm:305> INFO - Logfile is 'article.blg'
+[79] biber-darwin:313> INFO - === Sun Mar  1, 2020, 16:47:56
+[98] Biber.pm:371> INFO - Reading 'article.bcf'
+[181] Utils.pm:193> WARN - No data sources defined!

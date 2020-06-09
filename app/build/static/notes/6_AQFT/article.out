@@ -2,18 +2,45 @@
 \BOOKMARK [1][-]{section.2}{Integrals and their Diagrams}{}% 2
 \BOOKMARK [2][-]{subsection.2.1}{Free Theory}{section.2}% 3
 \BOOKMARK [2][-]{subsection.2.2}{Interacting Theory}{section.2}% 4
-\BOOKMARK [2][-]{subsection.2.3}{Quantum Effective Action}{section.2}% 5
-\BOOKMARK [2][-]{subsection.2.4}{Fermions and Grassman Variables}{section.2}% 6
-\BOOKMARK [3][-]{subsubsection.2.4.1}{Fermionic Free Field Theory}{subsection.2.4}% 7
-\BOOKMARK [1][-]{section.3}{LSZ Reduction Formula}{}% 8
-\BOOKMARK [2][-]{subsubsection.3.0.1}{Path Integral Derivations}{section.3}% 9
-\BOOKMARK [3][-]{subsubsection.3.0.2}{Free Partition Functions}{subsubsection.3.0.1}% 10
-\BOOKMARK [3][-]{subsubsection.3.0.3}{Feynman Diagrams}{subsubsection.3.0.1}% 11
-\BOOKMARK [3][-]{subsubsection.3.0.4}{Effective Actions}{subsubsection.3.0.1}% 12
-\BOOKMARK [1][-]{section.4}{Regularisation and Renormalisation}{}% 13
-\BOOKMARK [1][-]{section.5}{Gauge Theories}{}% 14
-\BOOKMARK [1][-]{section.6}{Formulating the Path Integral}{}% 15
-\BOOKMARK [2][-]{subsection.6.1}{Classical and Quantum Mechanics}{section.6}% 16
-\BOOKMARK [2][-]{subsection.6.2}{Formulating the Path Integral}{section.6}% 17
-\BOOKMARK [1][-]{section.7}{Useful Identities}{}% 18
-\BOOKMARK [2][-]{subsection.7.1}{Integral Identities}{section.7}% 19
+\BOOKMARK [2][-]{subsection.2.3}{Effective actions}{section.2}% 5
+\BOOKMARK [2][-]{subsection.2.4}{Quantum Effective Action}{section.2}% 6
+\BOOKMARK [2][-]{subsection.2.5}{Fermions and Grassman Variables}{section.2}% 7
+\BOOKMARK [3][-]{subsubsection.2.5.1}{Fermionic Free Field Theory}{subsection.2.5}% 8
+\BOOKMARK [1][-]{section.3}{LSZ Reduction Formula}{}% 9
+\BOOKMARK [2][-]{subsubsection.3.0.1}{Path Integral Derivations}{section.3}% 10
+\BOOKMARK [3][-]{subsubsection.3.0.2}{Free Partition Functions}{subsubsection.3.0.1}% 11
+\BOOKMARK [3][-]{subsubsection.3.0.3}{Feynman Diagrams}{subsubsection.3.0.1}% 12
+\BOOKMARK [3][-]{subsubsection.3.0.4}{Effective Actions}{subsubsection.3.0.1}% 13
+\BOOKMARK [2][-]{subsection.3.1}{Scalar Field Theory}{section.3}% 14
+\BOOKMARK [3][-]{subsubsection.3.1.1}{Incorporating Interactions}{subsection.3.1}% 15
+\BOOKMARK [2][-]{subsection.3.2}{Vertex Functions}{section.3}% 16
+\BOOKMARK [1][-]{section.4}{Regularisation and Renormalisation}{}% 17
+\BOOKMARK [2][-]{subsubsection.4.0.1}{Renormalising with our first loop contribution}{section.4}% 18
+\BOOKMARK [2][-]{subsection.4.1}{Dimensional Regularisation}{section.4}% 19
+\BOOKMARK [2][-]{subsection.4.2}{Mathematical Identities which are useful}{section.4}% 20
+\BOOKMARK [3][-]{subsubsection.4.2.1}{Deriving a small expansion of the Gamma function}{subsection.4.2}% 21
+\BOOKMARK [3][-]{subsubsection.4.2.2}{Regulating our 1-loop integral}{subsection.4.2}% 22
+\BOOKMARK [2][-]{subsection.4.3}{The second approach to Renormalisation}{section.4}% 23
+\BOOKMARK [1][-]{section.5}{Renormalisation Group}{}% 24
+\BOOKMARK [2][-]{subsection.5.1}{Effective actions}{section.5}% 25
+\BOOKMARK [2][-]{subsection.5.2}{Running couplings}{section.5}% 26
+\BOOKMARK [2][-]{subsection.5.3}{Vertex functions}{section.5}% 27
+\BOOKMARK [2][-]{subsection.5.4}{Renormalisation group flow}{section.5}% 28
+\BOOKMARK [3][-]{subsubsection.5.4.1}{Fixed Points of RG equations \( functions\)}{subsection.5.4}% 29
+\BOOKMARK [3][-]{subsubsection.5.4.2}{Scale invariance at fixed points}{subsection.5.4}% 30
+\BOOKMARK [2][-]{subsection.5.5}{Quantum Electrodynamics}{section.5}% 31
+\BOOKMARK [3][-]{subsubsection.5.5.1}{The Propagator in the free Case}{subsection.5.5}% 32
+\BOOKMARK [2][-]{subsection.5.6}{Vacuum Polarisation}{section.5}% 33
+\BOOKMARK [2][-]{subsection.5.7}{QED \040 functions}{section.5}% 34
+\BOOKMARK [1][-]{section.6}{Gauge Theories}{}% 35
+\BOOKMARK [2][-]{subsection.6.1}{Lie groups - Facts and Conventions}{section.6}% 36
+\BOOKMARK [2][-]{subsection.6.2}{Representations}{section.6}% 37
+\BOOKMARK [2][-]{subsection.6.3}{Classifying representations}{section.6}% 38
+\BOOKMARK [2][-]{subsection.6.4}{Gauge invariance and Wilson Lines}{section.6}% 39
+\BOOKMARK [2][-]{subsection.6.5}{Fadeev-Popov Gauge Fixing}{section.6}% 40
+\BOOKMARK [1][-]{section.7}{Formulating the Path Integral}{}% 41
+\BOOKMARK [2][-]{subsection.7.1}{Classical and Quantum Mechanics}{section.7}% 42
+\BOOKMARK [2][-]{subsection.7.2}{Formulating the Path Integral}{section.7}% 43
+\BOOKMARK [1][-]{section.8}{Review of Renormalisation}{}% 44
+\BOOKMARK [1][-]{section.9}{Useful Identities}{}% 45
+\BOOKMARK [2][-]{subsection.9.1}{Integral Identities}{section.9}% 46

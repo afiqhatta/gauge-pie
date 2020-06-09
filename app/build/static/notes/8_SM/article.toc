@@ -19,6 +19,8 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {subsubsection}{\numberline {2.2.2}Building representations of the Poincare group}{12}{subsubsection.2.2.2}
 \defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {2.3}Discrete Spacetime Symmetries}{14}{subsection.2.3}
+\defcounter {refsection}{0}\relax 
 \contentsline {section}{\numberline {3}Gauge Symmetries}{14}{section.3}
 \defcounter {refsection}{0}\relax 
 \contentsline {section}{\numberline {4}Symmetry Breaking}{14}{section.4}

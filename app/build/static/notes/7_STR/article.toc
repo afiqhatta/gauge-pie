@@ -1,34 +1,106 @@
 \boolfalse {citerequest}\boolfalse {citetracker}\boolfalse {pagetracker}\boolfalse {backtracker}\relax 
 \babel@toc {english}{}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {1}Introduction}{2}{section.1}
+\contentsline {section}{\numberline {1}Introduction}{3}{section.1}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {1.1}Worldsheets and Embeddings}{3}{subsection.1.1}
+\contentsline {subsection}{\numberline {1.1}Worldsheets and Embeddings}{4}{subsection.1.1}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {2}The Classical Particle and String}{4}{section.2}
+\contentsline {section}{\numberline {2}The Classical Particle and String}{5}{section.2}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {2.1}Worldlines and Particles}{5}{subsection.2.1}
+\contentsline {subsection}{\numberline {2.1}Worldlines and Particles}{6}{subsection.2.1}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {2.2}Classical Strings}{7}{subsection.2.2}
+\contentsline {subsection}{\numberline {2.2}Classical Strings}{8}{subsection.2.2}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\numberline {2.2.1}Nambu-Goto Action}{7}{subsubsection.2.2.1}
+\contentsline {subsubsection}{\numberline {2.2.1}Nambu-Goto Action}{8}{subsubsection.2.2.1}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {2.3}Classical Hamiltonian Dynamics of the String}{7}{subsection.2.3}
+\contentsline {subsection}{\numberline {2.3}Equations of Motion}{8}{subsection.2.3}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {2.4}The Stress Tensor and Wit Algebra}{9}{subsection.2.4}
+\contentsline {subsubsection}{\numberline {2.3.1}Classical Equivalence of the Nambu-Goto action with the Polyakov action}{9}{subsubsection.2.3.1}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {2.5}A First Look at the Quantum Theory}{10}{subsection.2.5}
+\contentsline {subsection}{\numberline {2.4}Extending the Polyakov action}{10}{subsection.2.4}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\numberline {2.5.1}Canonical Quantisation}{11}{subsubsection.2.5.1}
+\contentsline {subsection}{\numberline {2.5}Classical solutions}{10}{subsection.2.5}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\numberline {2.5.2}Physics State Conditions}{12}{subsubsection.2.5.2}
+\contentsline {subsection}{\numberline {2.6}Classical Hamiltonian Dynamics of the String}{11}{subsection.2.6}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {2.6}The Spectrum}{12}{subsection.2.6}
+\contentsline {subsection}{\numberline {2.7}The Stress Tensor and Wit Algebra}{12}{subsection.2.7}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\numberline {2.6.1}The Tachyon}{12}{subsubsection.2.6.1}
+\contentsline {subsection}{\numberline {2.8}A First Look at the Quantum Theory}{14}{subsection.2.8}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {2.7}The Big(ish) Picture}{14}{subsection.2.7}
+\contentsline {subsubsection}{\numberline {2.8.1}Canonical Quantisation}{14}{subsubsection.2.8.1}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {2.8}Spurious states and gauge invariance}{15}{subsection.2.8}
+\contentsline {subsubsection}{\numberline {2.8.2}Physics State Conditions}{15}{subsubsection.2.8.2}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {2.9}Question 1}{17}{subsection.2.9}
+\contentsline {subsection}{\numberline {2.9}The Spectrum}{16}{subsection.2.9}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{\numberline {2.9.1}The Tachyon}{16}{subsubsection.2.9.1}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{\numberline {2.9.2}The First Excited State}{17}{subsubsection.2.9.2}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {2.10}The Big(ish) Picture}{18}{subsection.2.10}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {2.11}Spurious states and gauge invariance}{19}{subsection.2.11}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {2.12}Recap}{20}{subsection.2.12}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {2.13}Moduli space of unpunctured Riemann Surfaces}{20}{subsection.2.13}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {2.14}Conformal Killing Vectors}{22}{subsection.2.14}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {2.15}Moduli Space of Punctured Riemann Surfaces $ M _{ g, n } $}{23}{subsection.2.15}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {3}The Faddeev-Popov Determinant}{24}{section.3}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {3.1}Gauge-Fixing the Path Integral}{25}{subsection.3.1}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{\numberline {3.1.1}An aside on Grassman Variables}{26}{subsubsection.3.1.1}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {3.2}Calculating Observables}{27}{subsection.3.2}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {4}Conformal Field Theory}{29}{section.4}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {4.1}Conformal invariance in general dimension}{29}{subsection.4.1}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{\numberline {4.1.1}Connection to the Witt Algebra}{30}{subsubsection.4.1.1}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {4.2}Conformal Fields}{31}{subsection.4.2}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {4.3}Conformal transformations and the Stress Tensor}{32}{subsection.4.3}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {4.4}Complex Coordinates}{32}{subsection.4.4}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {4.5}Ward Identities and Conformal Transformations}{33}{subsection.4.5}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {4.6}Radial Ordering}{36}{subsection.4.6}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {4.7}Mode expansions and Conformal Weights}{37}{subsection.4.7}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {4.8}Radial Ordering and Normal Ordering}{38}{subsection.4.8}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {4.9}Operator Product Expansions}{40}{subsection.4.9}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {4.10}The OPE of $ T \left ( z \right ) : e ^{ i k \cdot X \left ( w \right ) } $}{42}{subsection.4.10}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {4.11}The Virasoro Algebra}{43}{subsection.4.11}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {4.12}The $ b , c $ ghost system}{44}{subsection.4.12}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {4.13}The $b, c $ OPE}{45}{subsection.4.13}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{\numberline {4.13.1}The conformal weight of $ b \left ( z \right ) $ }{46}{subsubsection.4.13.1}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {4.14}Mode expansions for ghosts}{47}{subsection.4.14}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {4.15}The State-Operator Correspondence}{47}{subsection.4.15}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {4.16}BRST Symmetry}{48}{subsection.4.16}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {4.17}Question 1}{49}{subsection.4.17}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {5}Example Sheet 2}{50}{section.5}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {5.1}Question 1}{50}{subsection.5.1}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {5.2}Question 2}{51}{subsection.5.2}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {5.3}Question 3}{52}{subsection.5.3}

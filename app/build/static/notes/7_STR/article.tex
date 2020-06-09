@@ -557,10 +557,191 @@ field which is massless and in $ 2 $ dimensions.
 if we treat this as a two dimensional quantum field theory, 
 there are other terms which we may want to add. 
 
-Let's have a look at 
-some equations of motion 
+\subsection{Equations of Motion}
+In this section, we'll be varying the 
+Polyakov action to find our equations 
+of motion. The first thing 
+we do is to vary the metric. When varying the metric, 
+we use an important identity.
+Taking the Polyakov action, if we vary it 
+with respect to $ h _{ ab } $, we get that 
+our change is 
+\begin{align*}
+	\delta S &=   - \frac{1}{4 \pi \alpha ' } 
+	\int d ^ 2 \sigma \, \sqrt{  -h }  h ^{ ab } T _{ ab }  \\ 
+	T_{ ab }  &=  \partial  _ a X ^ \mu \partial  _ b X _ \mu 
+	- \frac{1}{2 } h _{ ab } h ^{ cd } \partial  _ c X ^ \mu \partial  
+	_ d X _ \mu 
+\end{align*}
+Here, we used the important 
+fact that 
+\[
+ \delta \sqrt{ - h }  =  - \frac{1}{2 } \sqrt{ - h }  h ^{ ab } \delta h _{ ab  }
+\] 
+Since our action doesn't depend on 
+derivatives of our added metric $ h _{ ab } $, 
+we then impose that $ T _{ ab }  = 0 $, 
+which is our stress-energy tensor condition. 
 
-...
+There are two important remarks to 
+make here about $ T _{ ab } $. Since 
+we're in two dimensions, we have that 
+$ h ^{ ab } T _{ ab }  =0 $ since we can 
+diagonalise $ h $ to be Minkowski, and then $ h _{ ab } h ^{ ab }  =2 $. 
+
+We get the equation of motion 
+from the Euler-Lagrange equations on 
+just $ X ^ \mu $. 
+\[
+	\partial  _ a \left( 
+	\frac{\partial  L }{\partial  \partial  _ a 
+X _ \mu }  \right)    =0 \implies = \partial  _ a 
+\left( \sqrt{ - h }  h ^{ ab } \partial  _ b X ^ \mu  \right)   =0 
+\] 
+As we will show, we can use 
+diffeomorphisms and Weyl transformations 
+so that we can pick $ h_{ ab } $  to be 
+the Minkwoski metric. 
+In this case, the equation of motion 
+above reduces to the wave equation.
+
+\subsubsection{Classical Equivalence of the 
+Nambu-Goto action with the Polyakov action}
+
+We show that the Polyakov action 
+is equivalent to the Nambu-Goto action. 
+To do this, we take the equations 
+of motion with the stress tensor and 
+back substitute into the action. We use a 
+trick and some notation here. We write 
+firstly that $ G_{ ab }  = \partial _ a X \cdot  \partial  _ b X $. 
+Our stress tensor condition then reads 
+\[
+	G _{ ab }   =  \frac{1}{2 } h _{ ab} h ^{ cd } G _{ cd }  
+\] Now, if we take the determinant 
+on both sides, remembering to square the scale factor 
+of the right hand side, 
+we have that 
+\begin{align*}
+	G  & = \frac{1}{4 } \left( h ^{ cd } G _{ cd }   \right)  ^ 2
+	h \\ 
+	\sqrt{ - G }  &=  \pm \frac{1}{2 } 
+	\sqrt{ - h }  \left( h ^{ cd } G _{ cd }  \right)   
+\end{align*} We took the negative and square root
+going into the second line. The Polyakov action is 
+\[
+ S\left[  X, h  \right]  
+  = - \frac{1}{4 \pi \alpha ' } \int d ^ 2 \sigma h ^{ab  }
+  \sqrt{-h }  G _{ ab } = - \frac{1}{2 \pi \alpha '  } \int d ^ 2 \sigma \sqrt{ - G }  
+\] The final expression 
+is the Nambu-Goto action! 
+
+There's a remark to be made 
+about which symmetries we have associated with each action. 
+We had that the Nambu-Goto action had reparametrisation (or diffeomorphism) invariance, 
+but the Polyakov action had Weyl invariance and reparametrisation invariance. 
+Namely, these symmetries are represented as follows. 
+
+\begin{itemize}
+	\item Our diffeomorphism invariance 
+		comes from an infinitesimal change of coordinates 
+		\[
+		 \sigma ^ a \left( \sigma, \tau  \right)  \to 
+		 \sigma ^a \left( \sigma, \tau  \right)  + \epsilon ^ a \left( \sigma, \tau  \right)  
+		\] We have that our embedding $ X ^ \mu$ changes 
+		the normal way through a Taylor expansion, with 
+		\[
+		X ^ \mu \to X ^ \mu + \partial _ \nu \epsilon ^ \nu X ^ \mu 
+		\] Our metric on the other hand transforms 
+		with the Lie derivative of $ h _{ ab } $ 
+		with $ \epsilon ^ \nu $ as the generating vector field. 
+		We have that 
+		\[
+		 \delta h _{ ab }  = \nabla _ a \epsilon _ b 
+		 + \nabla _ b \epsilon _ a  
+		\] We can write this explicitly by expanding the 
+		covariant derivative using $ h _{ ab } $ as 
+		the metric on our worldsheet.
+	\item We also have Weyl invariance 
+		which comes from leaving the 
+		embedding itself fixed, but 
+		changing the metric $ h ^{ ab } $ by 
+		a Weyl transformation. 
+		So, 
+		\[
+		 X^ \mu \left( \sigma, \tau  \right)  \to 
+		 X ^ \mu \left( \sigma, \tau  \right), 
+		 \quad h _{ ab } \to e ^{ 2 \Lambda } h _{ ab } 
+		\]  
+\end{itemize}
+What's going on? Well, since we're adding a field $ h _{ ab } $, 
+since it's a 2 by 2 symmetric matrix, we're 
+adding 3 degrees of freedom. 
+However, our Weyl parametrisation and diffeomorphism invariance 
+allows us to fix these degrees of freedom back to zero, 
+so we have no net change in the amount of degrees of freedom. 
+Now previously, notice that we 
+had 
+
+\subsection{Extending the Polyakov action}
+There are a couple of things we can do 
+to extend our Polyakov action further. 
+We list them here. 
+\begin{itemize}
+	\item Recall that in our action 
+		we're always using the Minkowski metric to 
+		contract the derivatives of our embedding 
+		field $ X ^ \mu $. 
+		We could explore changing this to a general 
+		metric $ G_{ \mu \nu }\left( X \right) $. 
+		We'll look at this more in detail later.
+	\item We could add an Einstein-Hilbert term 
+		into the mix, which is 
+		equal to what we call an Euler characteristic, 
+		which is a topologically invariant term. 
+		\[
+		 S + \int_{ \Sigma } d ^ 2 \sigma 
+		 \sqrt{ - h }   R\left( h  \right)   = \chi
+		\] 
+	\item We could explore adding a cosmological 
+		constant term, which looks like 
+		\[
+		 S + \Lambda \int _{ \Sigma } d ^ 2 \sigma \sqrt{ - h }  
+		\] 
+	\item We could try include a background field 
+		(more detail on this later). 
+\end{itemize}
+
+\subsection{Classical solutions}
+From our action, we can use 
+diffeomorphism invariance to take away two degrees 
+of freedom from our metric field $ h _{ ab } $, 
+and to set our field to have one scalar degree of freedom: 
+\[
+	h _{ ab }  = e ^{ 2 \phi  } \begin{pmatrix}  
+	- 1 & 0 \\ 0 & 1 \end{pmatrix} 
+\]  This on it's own is enough to 
+force our action to look like 
+\[
+ S  = \int _{ \Sigma } d ^ 2 \sigma  - \dot{X } ^ 2 + 
+ X^{  ' 2 } 
+\] Our scalar factor of $ e ^{ 2 \phi } $ 
+cancels out in the end. In fact, we could've used 
+our Weyl invariance to take our metric 
+$ h _{ ab }  = \eta _{ ab } $ right off the bat.
+Alternatively, 
+we can go straight to our equation of 
+motion and then set our metric to 
+be the flat Minkowski metric at a given 
+point locally. 
+\[
+	\partial  _ a \left( \sqrt{ - h }  h ^{ ab } 
+	\partial  _ b X ^ \mu \right)   =  \Box X ^ \mu  =0  
+\] So, we have the wave equation which govern 
+our dynamics. 
+This is good because we already know how to deal 
+with the wave equation - we split it up 
+into left and right moving modes. 
 
 \subsection{Classical Hamiltonian Dynamics of the String}
 Today, we're 
@@ -1024,7 +1205,8 @@ momentum operator is $  -i \frac{\partial   }{\partial  x ^ u }
  \[
  L_0 ^  -  = N - \overline{ N } 
  \] So the vanishing condition 
- $ L_0 ^  - \ket{ \phi }  = 0 $
+ $ L_0 ^  - \ket{ \phi }  = 0 $ implies
+ that $ N  = \overline{ N }$, and  
  suggests a symmetry of 
  right movers versus left movers. 
  This is sometimes called level matching. 
@@ -1034,8 +1216,9 @@ momentum operator is $  -i \frac{\partial   }{\partial  x ^ u }
  to any of the states of the form $ \ket{ k } $, 
  we will always find that since $ N $ is the sum 
  of $ \alpha _ n \cdot  \alpha _{ - n } $ , we 
- can always commute the annihilation operator forward.
- $ N  = \overline{ N }  = 0  $. 
+ can always commute the annihilation operator forward, 
+ so on the space of states $ \ket{ k } $, 
+ we have that the eigenvalues are $ N  = \overline{ N }  = 0  $. 
  We check that $ \left( L _ 0 ^ +   -2  \right)  \ket{ k } =0   $. 
  Thus, we find that 
  \begin{align*}
@@ -1043,7 +1226,7 @@ momentum operator is $  -i \frac{\partial   }{\partial  x ^ u }
 	 \left( \frac{\alpha  ' }{ 2 } + N + \overline{ N }  - 2  \right)  \ket{ k } \\
 						&=  \left( 
 						\frac{\alpha ' }{  2 }
-					k ^ 2 - 2  \right)  \ket{ k } = 0  \\
+					k ^ 2 - 2  \right)  \ket{ k } = 0 
  \end{align*} 
  This gives 
 		us the condition on $ k ^ 2  $, as $ k ^ 2   - \frac{4}{\alpha ' }  = 0 $. 
@@ -1053,38 +1236,62 @@ momentum operator is $  -i \frac{\partial   }{\partial  x ^ u }
 		\[
 		 M ^ 2  =  - \frac{4}{\alpha ' } 
 		\]
-The state $ \ket{ k } $ has a spacetime interpretation as a tachyon. 
+The state $ \ket{ k } $ has a spacetime interpretation as a tachyon, 
+which is a state with negative mass, 
+and is therefore unphysical. 
 This problem is 
 not going to go away. 
 We do have the tachyon, and its 
 cured by promoting this to the supersymmetric 
 string, and adding supersymmetry. 
 
+\subsubsection{The First Excited State}
 We'll now look at the next excited state, 
 which are the massless states.
+Since we have that for a state to be physical, we 
+need $ N  = \overline{ N } $, the 
+next best thing you can do is to excite 
+our state with $ \alpha_{ - 1 }   $ as well 
+as $ \overline{ \alpha } _{ - 1 } $. 
 Consider states of the form 
 \[
  \ket{ \epsilon }  = \epsilon _{ \mu \nu } \alpha _{ -1 } ^ \mu \overline{ \alpha } _{ - 1 } ^ \nu 
  \ket{ k } 
-\]  NOw we want to look at the 
-condition which allows us to 
-view this as a physical state. 
-Clearly, $ N = \overline{ N }  = 1 $. 
+\] One thing to spot here is that by construction 
+$ N = \overline{ N }  = 1 $, which 
+can be shown by commuting the operators. 
+Is this state even physical? 
+Let's look at some conditions which we need to view this as a physical state. 
 We can look at the energy momentum condition. 
-The condition 
-\[
- \left( L_0 ^ +  - 2  \right) \ket{ \epsilon }  = 0 
-\] implies $ \frac{\alpha ' }{ 2 } k ^ 2  = 0 $, 
+Let's look at the first condition we have to check:  
+\begin{align*}
+	\left( L_0 ^ +  - 2  \right) \ket{ \epsilon }  &=  \left( 
+	\frac{\alpha ' }{ 2} p ^ 2 + N + \overline{ N }  - 2 \right) \ket{ \epsilon}   \\
+						       &=  ( \frac{\alpha  ' }{ 2 } k ^ 2 + 2 - 2
+						       ) \ket{ \epsilon } \\
+						       &=  0  
+\end{align*}
+
+This condition implies $ \frac{\alpha ' }{ 2 } k ^ 2  = 0 $, 
 so we require that $ k ^ 2  = 0 $ (null). 
+Since we have $ \alpha _{ - 1 } $ and $ \overline{ \alpha } _{ - 1 } $
+involved, we have another physical condition to check. 
 Consider the next condition, which 
 gives $ L _ 1 \ket{ \epsilon }   =0 $. 
 This condition gives 
 \[
 	\frac{1}{2 } \left( \sum _ n \alpha _{ 1 - n} \cdot  \alpha _ n  \right)  \epsilon 
 	_{ \mu \nu } \alpha _{ - 1 } ^ \mu \overline{ \alpha } _{  - 1  }^{ \nu } \ket{ k } 
-	= \epsilon _{ \mu \nu } \overline{ \alpha  }_{ - 1 } 
-	^ \nu \alpha _ 0 \cdot  \alpha_ 1 \alpha _{ -  1 } ^ \mu  \ket{ k } 
-\] recall that $ \alpha _ 0 ^ \mu  = \sqrt{ \frac{\alpha ' }{ 2 } }  p ^ \mu $. 
+	= \frac{1}{2} \epsilon _{ \mu \nu } \overline{ \alpha  }_{ - 1 } 
+	^ \nu \left( \alpha _ 0 \cdot  \alpha_ 1 \right) \alpha _{ -  1 } ^ \mu  \ket{ k } 
+\] We arrived at the 
+equation above by recognising that the only thing which produces a non-trivial 
+equation is when $ n  =0$.
+Recall that $ \alpha _ 0 ^ \mu  = \sqrt{ \frac{\alpha ' }{ 2 } }  p ^ \mu $. 
+We use this fact to commute $ p ^ \mu $ past the 
+modes, and then pick up a 
+factor of $ k ^ \mu $. 
+
 We require then 
 \[
  k _ \rho \alpha _ 1 ^ \rho \alpha _{ - 1 } ^ \mu \ket{ k }  = 0 
@@ -1157,8 +1364,10 @@ have concerned themselves with the massless spectrum.
 \subsection{The Big(ish) Picture}
 We started with our Polyakov action 
 which describes the embedding of our string in our manifold. 
+We then used diffeomorphism and Weyl symmetry 
+which allowed us to choose $ h _{ ab } $ to be Minkowksi. 
 \[
- S  = -\frac{1}{4 \pi \alpha ' } \int_{ \Sigma } d ^ \sigma \eta _{ \mu \nu } \partial  _ a X ^ \mu 
+ S  = -\frac{1}{4 \pi \alpha ' } \int_{ \Sigma } d ^2 \sigma \eta _{ \mu \nu } \partial  _ a X ^ \mu 
  \partial  ^ a X ^ \nu 
 \] We could deform this 
 theory and add a perturbation to the metric. 
@@ -1177,7 +1386,9 @@ The action changes by
  h _{ \mu \nu } \partial  _ a X ^ \mu \partial  ^ a X ^ \nu e ^{ ikx } 
 \] 
 For every deformation of the theory, 
-there is an associated operator 
+there is an associated operator that 
+we get from perturbing the action. 
+In this case, it's the 
 \[
  \mathcal{ O }  = h _{ \mu \nu } \partial  _ a X ^ \mu \partial  ^ a X ^ \nu e ^{ ikx  }
 \] This is clearly associated with a 
@@ -1187,9 +1398,11 @@ In string theory, (2-dimensional CFTs),
 to each operator $ \mathcal{ O } $ that 
 corresponds to a physical deformation 
 of the theory, (something that seems reasonable 
-is what we mean by a physical deformation), 
-there is a state in the Hilbert space. 
-
+is what we mean by a physical deformation)
+we have a Hilbert space
+This state in the Hilbert space is given 
+by applying the operator onto our vacuum, 
+then taking the limit as $ \tau $ goes to $  - \infty$. 
 In this case, 
 \[
  \lim_{ \tau \to  - \infty } \mathcal{ O } \ket{ 0 }  = \ket{ h } 
@@ -1253,8 +1466,8 @@ Is is useful to write $ \ket{ \chi } $ as
 \] Keeping $ a  $ arbitrary, 
 we find that 
 \[
-	\left( L_0^ +  - 2 a  \right) \ket{ \chi }  = 0 \implies $ k ^ 2  = \frac{ 4 \left( 
-	a  - 1  \right)  }{ \alpha ' } $
+	\left( L_0^ +  - 2 a  \right) \ket{ \chi }  = 0 \implies  k ^ 2  = \frac{ 4 \left( 
+	a  - 1  \right)  }{ \alpha ' } 
 \] We also have that, by symmetry, 
 \begin{align*}
 	L_ 1 \ket{ \chi } =0 & \text{ if } \left( \lambda \cdot  k  \right)  
@@ -1306,6 +1519,2229 @@ so $\bra{ \chi }\ket{ \chi } =0 $.
 	\]  
 \end{itemize}
 
+
+\subsection{Recap}
+
+We have that 
+\[
+	\delta h_{ ab }  = \left( P _ v  \right)  _{ ab } + 2 \overline{ \omega } h _ ab 
+	+ t ^ I P _{ ab I }
+\]  where $ \left( P_ v  \right) _{ ab } 	  $
+represents our traceless Lie derivative, the second term represents 
+Weyl transformations, and $ p _{ ab I }  =\frac{\partial  h _{ ab } }{\partial  m ^ I }  $. 
+$ m^ I $ are coordinates on the moduli space 
+of Riemann surfaces $ M _ g $, and $ t ^ I \simeq \delta m ^ 2 $ 
+are tangent vectors to $ M _ g $. 
+
+\subsection{Moduli space of unpunctured Riemann Surfaces}
+Moduli spaces are a space of objects 
+like a metric, but we quotient out some symmetry. 
+In this case, we quotient out the space of metrics 
+by diffeomorphisms and Weyl transformations. 
+
+\begin{defn}{Moduli Space}
+The moduli space $ M _ g $ of a genus $ g $ Riemann surface 
+$ \Sigma_ g $ is 
+\[
+ M _ g  = \frac{\left\{  \text{Metrics} \right\} }{\left\{  \text{Diff} \times \text{Weyl}  \right\} }
+\] We can view this 
+as a slice of physically inequivalent metrics 
+on the whole space of $ h _{ ab } $. 	
+\end{defn}
+Amazingly 
+this is a finite dimensional object. 
+We won't prove this, but the dimension, over the field of the 
+reals, of $ M _ g $ is 
+\[
+	\text{dim}\left( M _ g  \right)  : = s  = \begin{cases}
+		0 \text{ if } & g  = 0 \\
+		2 \text{ if } & g  = 1 \\
+		6g  - 6 \text{ if } & g \geq 2 
+	\end{cases}
+\] The first thing might be 
+a sphere, the second thing might be a donut, 
+and the last thing might include double donuts. 
+
+Let's look at some examples.
+\begin{itemize}
+	\item For $ g  = 0 $, all metrics on $ g  =0 $ surfaces 
+	may be brought to the form $ e ^{ 2 \omega } \begin{pmatrix}  1 & 0 \\ 0 & 1  \end{pmatrix}  $ 
+	by diffeomorphisms, so they're trivial 
+	up to Weyl transformations. One way 
+	to show this is via the Riemann-Roch theorem or 
+	the Atiyah-Singer index theorem. 
+	Alternatively, we can see this by just looking 
+	at our dimension for moduli spaces - we have that $ \dim \left( M_  g  \right)   =0 $, 
+	and roughly speaking, forgetting about diffeomorphism transformations, 
+	we have that $ \left\{ \text{metric} \right\} \simeq \left\{ \text{Weyl} \right\}  $. 
+
+	
+	This agrees with the thinking we did last time about 
+	using reparametrization to take $ h _{ ab } $ to be the identity.
+
+	In terms of the interaction picture, we relate and are
+	sort of thinking about these things 
+	as perhaps tree level contributions from $ g  =0 $, 
+	and not want to worry too much about moduli space. 
+
+\item Now what about genus  1? Genus 1 objects are tori, 
+	and there's a standard way to construct these objects 
+	in the complex plane. We take the complex plane 
+	and two lattice vectors $ \lambda_ 1 , \lambda _ 2 \in \mathbb{ C } $, 
+	and identify points which differ by these lattice vectors 
+	with one another.
+	\[
+		z \sim z + \lambda _1 m + \lambda _2 n , \quad \lambda _ 1, \lambda _ 2 
+		\in \mathbb{ Z}
+\] Choosing different $ \lambda _ i $ makes us choose 
+tori with different shapes. Notice that $ \lambda _ i $ 
+change under diffeomorphisms of the complex plane. Thus, they're
+not really a good set of parameters in which to choose 
+a tori modulo Weyl transformations and diffeomorphisms. 
+But, it can be shown that the ratio 
+\[
+ \tau  = \frac{\lambda _ 1 }{ \lambda _ 2 } 
+\] is invariant under the transformation group $\text{Diff}\times\text{Weyl}$.
+
+\begin{defn}{Complex Structure}
+	We call $ \tau $ the complex structure, 
+	not to be confused with our time parameter. 
+	\[
+	 \tau  = \frac{\lambda _ 1  }{ \lambda _ 2 } 
+	\] 
+\end{defn}
+It can be shown that our 
+metric on the complex plane can be rewritten as 
+$ ds^ 2 = |dz^ 2 + \tau d \overline{ z } | ^ 2 	$. 
+with $ \text{Diff} \times \text{Weyl}$ transformations. In fact, 
+we can choose as well that  $ \text{Im} \tau > 0 $. 
+So, we're restricting to the upper half plane. 
+Even \textbf{if} we're just restricting to the upper half plane, 
+there is \textbf{still} some extra redundancy to get rid of. 
+
+
+However, there's a lot of redundancy here. 
+We can write the identification
+\[
+ z \sim z + n_ a \lambda ^ a , \quad n _a   = \left( m , n  \right)  , \quad 
+ \lambda ^ a  = \begin{pmatrix}  \lambda _ 1 \\ \lambda _ 2  \end{pmatrix} 
+\] If we act with an $SL(2 )  $ transformation
+$ n _ a \to U \indices{ ^ b _ a  } n _ b  $ and $ \lambda ^ a \to \left( U ^{ -  1 }  \right)  
+\indices{ ^ a _ b  } \lambda ^ b  $, 
+this statement is preserved. 
+Moreover, if $ U \in SL \left( 2, \mathbb{ Z  }  \right)  $, 
+then $ \left( n , m  \right)  $ remain integers, and 
+we still have a valid identification. 
+Thus, we still have a symmetry 
+of the lattice. 
+
+So, the moduli space at $ g  = 1 $ 
+can be identified with 
+the upper half plane modulo $ SL \left( 2, \mathbb{Z  }   \right)  $, which 
+is denoted 
+\[
+	\frac{\text{UHP}}{SL\left( 2, \mathbb{ Z }   \right)  } = M _ 1 
+\] What does this look like? 
+
+\begin{figure}[htpb]
+	\centering
+	\input{fundamental.pdf_tex}
+	\caption{The space of non-physically equivalent $ \tau $ }%
+	\label{fig:}
+\end{figure}
+\end{itemize}
+We show this in the diagram. 
+There's no analogue for this 
+on world lines. 
+For higher genus, things are hard. For $ g \geq 2 $, 
+it gets hard. But, there are analogues of the $ SL \left( 2, \mathbb{ Z }  \right)  $
+(modular group) in all cases. So, 
+we can make very strong statements from modular groups 
+that order by order, we have UV finiteness. 
+This is one of the first times we see that string 
+theory is very different from field theory. 
+Other data we can introduce, as well as counting 
+inequivalent worldsheets and Riemann surfaces, 
+are punctures. 
+
+Before we do that, there's 
+a subtlety we have to address. 
+
+\subsection{Conformal Killing Vectors}
+ There is an overlap $ \text{Diff} \cap \text{Weyl}$, 
+ called the conformal Killing group (CKG), where 
+ a diffeomorphism is also a Weyl transformation. 
+So, you can think of a diffeomorphism
+that can be undone by a Weyl transformation. 
+In other words, is it possible such that 
+\[
+	\delta h _{ ab }  = \nabla _a v _ b  +  \nabla _ b v _ a  + 2 \omega h _{ ab }  = 0 
+\] So that the diffeomorphism
+and Weyl transformation cancel out.
+We take the trace to find that 
+\[
+ \omega   =  - \frac{1}{2 } \nabla _ a v ^ a 
+\] We defined 
+\[
+	\left( P _ v  \right)  _{ ab }  = \nabla _ a v _ b + \nabla _ b v _ a  - 
+	h _{ ab } \left( \nabla _ c v ^ c  \right)  
+\] Vectors that satisfy 
+$ \left( P _ v  \right)  _{ ab }  =0 $ can be what we 
+shall call conformal Killing vectors, 
+which we shall abbreviate as CKV's. 
+This is a sensible name because 
+we want Killing vectors up to conformal transformations. 
+So the CKG is generated by 
+the CKVs. 
+For a given genus, the dimension of a conformal 
+Killing group 
+\[
+	\text{dim}_{\mathbb{R }}\left( \text{CKG} \right) : = \kappa  = 
+	\begin{cases}
+		6, & g  =0: \quad SL\left( 2, \mathbb{ C } \right)  \\
+		2, & g  = 1: \quad U \left( 1  \right) \times U \left( 1 \right)    \\
+		0, & g \geq 2: \quad  - \\ 
+	\end{cases}
+\] On the sphere, this is 
+the Mobius group. For the torus, it's two 
+circles. 
+For example, 
+\begin{itemize}
+	\item $ g  = 0$ the CKG is $ SL \left( 2, \mathbb{ C }  \right)  $. 
+		This is the Mobius group. If $ z \in \mathbb{ C } $, 
+		then this is the group 
+		 \[
+			 z \to \frac{az +  b }{ c z + d } , \quad a, b, c, d \in \mathbb{ Z }, 
+			 \quad ad  - b c  =  1 
+		\] We can specify a particular 
+		element of the CKG at genus $ g = 0 $ by 
+		describing how three distinct points transform under 
+		a given map. 
+		We just need three points since 
+		we're dealing with complex coordinates, 
+		which takes two real numbers each. 
+\end{itemize}
+
+\subsection{Moduli Space of Punctured Riemann Surfaces $ M _{ g, n }  $}
+Imagine we have a Riemann 
+surface of genus $ g $, 
+with $ n $ punctures (or marked points). 
+What is it's moduli space? 
+The naive thing we might expect 
+\[
+ M _{ g, n  }  = M _ g \otimes \Sigma ^ n 
+\] This is the product of the 
+non-trivial information we get from the 
+locations of the punctures. 
+But, we also have to worry about the CKG. 
+If we have a $ g = 0  $ surface 
+with $ n $ punctures, we 
+can use the conformal Killing group to fix 3 of the 
+locations of the punctures. In other words, 3 degrees of 
+freedom. This leaves only $ n  - 3 $ free punctures. 
+
+Similarly, we can fix the conformal Killing group 
+on the torus $ g = 1  $ by fixing the location of one puncture. 
+So, we should really take 
+\[
+ M _{ g, n  }  = M _ g \otimes \Sigma ^{ n  - \kappa / 2 } 
+\] and 
+\[
+ \dim \left( M _{ g, n }  \right)   = 6g  - 6 + 2n 
+\] So the space which we 
+will be integrating over, which is 
+the space of physically inequivalent metrics. 
+When the above quantity is negative, 
+or correlation function goes to zero. 
+
+\pagebreak 
+
+
+\section{The Faddeev-Popov Determinant}
+We recall 
+how we classify small changes from our underlying metric. 
+We will need this later. 
+Remember, $ \left( P _v  \right) _{ ab } $ is defined 
+as the function whose kernel is the conformal 
+Killing group, which is the set of diffeomorphisms 
+which also happen to be Weyl transformations. 
+
+When we vary $ \delta h _{ab } $, 
+we need to vary $ h $ from diffeomorphisms, 
+Weyl transformations, and changes in the moduli space.
+
+Our task in this section will be to calculate a Jacobian
+factor associated with the path integral. 
+As we have seen before, the partition function in 
+absence of a source term 
+is the path integral over all Riemann surfaces, 
+and physically inequivalent metrics. This is given by 
+the following path integral, dividing out by diffeomorphisms 
+and Weyl transformations 
+\[
+ \mathcal{ Z} \left[ 0  \right]  
+   = \frac{1}{| \text{Diff} \times \text{Weyl}| } \int \mathcal{ D } X \mathcal{ D } h 
+   e ^{  - i S \left[  h , X  \right]  } 
+\] Introduce the Faddeev-Popov determinant 
+$ \Delta _{ FP } $  as the factor which 
+gives the following identity relation: 
+\[
+ 1  = \int_{ M _ g } d ^ s t \int _{ \text{Diff} \times \text{Weyl}} \mathcal{ D } \omega  
+ \mathcal{ D } v  \, \delta \left[  h - \hat{ h } \right]  \left( \sigma, \tau  \right)  \right) \Delta _{ FP } \left[  h  \right] 
+ \prod _{ i , a = 1 ,2 }^ \kappa  \delta\left( v ^ a \left( \tilde{ \sigma } _ i   \right)  \right) 
+\] where the integrand is a $ \delta $-functional.
+In the factor $ \int _{ \text{Diff} \times \text{Weyl}}$, 
+we are integrating over Weyl transformations 
+parametrised by the function $ \omega $, and diffeomorphisms 
+generated by the function $ v $. 
+The factor which is the product of $ \delta \left( v\left( \tilde{\sigma }  _ i  \right)   \right)  $ 
+represents where we have punctures on our Riemann surface. 
+We define 
+\[
+ \delta \left[  h - \hat{ h }   \right]  
+ = \prod _{ a, b , \sigma , \tau } \delta \left( 
+	 h _{ ab } \left( \sigma,  \tau  \right)  - \hat{ h } _{ ab } \left( 
+ \sigma, \tau \right)  \right) 
+\]  where $ h _{ ab }  - \hat{ h } _{ ab }  = \delta h _{ ab } 
+ = \left( P v  \right)  _{ ab } + 2 \overline{ \omega } h _{ ab } + t ^ I  \mu_{ I ab } $ . 
+ In this case, a common choice for 
+ $ \hat{ h } _{ ab } $ is  $ \eta _{ ab }  $ or 
+ some other fixed metric. $ h _{ ab  }  $ is 
+ the metric then obtained by applying a transformation. 
+ This is somewhat analogous to 
+ looking at $ \int d x \delta \left( f \left( x  \right)   \right)  $, 
+ where we have to be a bit careful about the 
+ vanishing set. 
+ We need some way to fix 
+ the conformal killing group, which is $ \text{Diff} \cap \text{Weyl}$. 
+ This is only worth 
+ worrying about in genus 0 and genus 1. 
+ To fix the conformal killing group, 
+ we ask that the Diffeomorphisms 
+ vanish at particular points, 
+ which is why we added a factor at the end. 
+ We now want a explicit expression for 
+ $ \Delta _{ FP } $. 
+
+ Since we have 
+ a delta function inside the integral, we can actually take out the 
+ Jacobian and evaluate it on the support of 
+ the delta functions. 
+
+ \[
+ 1  = \Delta _{ FP } \left[  \hat{ h }  \right] 
+ \int_{ M _ g } d ^ 3 t \int _{ \text{Diff} \times \text{Weyl}} \mathcal{ D } \omega  
+ \mathcal{ D } v \delta \left[  h - \hat{ h } \right]  \left( \sigma, \tau  \right)  \right)  \prod _{ i,  a = 1 ,2 }^ \kappa  \delta \left( v ^ a \left( \tilde{ \sigma } _ i   \right)  \right) 
+\]
+
+\subsection{Gauge-Fixing the Path Integral}
+Let us now try to 
+gauge fix the path integral. 
+We substitute the identity integral 
+into the expression for our partition function. 
+If we do this, we find that 
+\[
+ \mathcal{ Z } \left[  0  \right] 
+  = \frac{1}{| \text{Diff} \times \text{Weyl} | }
+  \int _{ \text{ Diff } \times \text{Weyl}} 
+  D \omega  D v \, \prod_{ a , i } 
+  \delta \left( v ^ a \left( \sigma _ i  \right)   \right)  
+  \int _{ M _ g } d ^ s t \int \mathcal{ D } X \mathcal{ D } h 
+  \delta \left[  h - \hat{ h }  \right]  \Delta _{ FP }
+  \left[  \hat{ h }  \right] e ^{ i S \left[  X , h  \right]  } 
+\]
+Now, rearranging this object, 
+we have that 
+this is equal to 
+\[
+ \mathcal{ Z } \left[  0  \right]  
+  = \frac{1}{| \text{Diff} \times \text{Weyl} | }
+  \int \mathcal{ D } X \int _{ M _ g } d ^ s t 
+  \left( \int_{ \text{Diff } \times \text{ Weyl}}  
+	  \mathcal{ D } \omega \mathcal{ D } v 
+  \prod_{ a , i } \delta \left( 
+  v ^ a \left( \tilde{ \sigma }_ i    \right) \right) \right)
+  e ^{ i S \left[  \hat{ h } , X  \right]  } \Delta _{ FP } \left[  \hat{h  } \right] 
+\] Throughout this, 
+we are considering 
+over a particular genus. 
+In the brackets, 
+we have 
+\[
+ \int _{ \text{Diff} \times \text{Weyl}} 
+ \mathcal{ D } \omega \mathcal{ D } v \prod _{ a, i } \delta \left( 
+ v ^ a ( \tilde{ \sigma } _ i)   \right)   = \frac{| \text{Diff} \times \text{Weyl} | }{
+ | \text{CKG} | }
+\] Let's go over this expression. 
+It looks like that we are just integrating 
+over all of the diffeomorphism and Weyl transformation 
+space, but we still have these points 
+given by the delta function which fixes 
+our conformal killing group, so we have 
+to divide out by this. We find perhaps a more respectable starting point. 
+This substituting this into the above integral gives 
+us the somewhat more reasonable expression 
+\[
+ \mathcal{ Z } \left[  0  \right]   = 
+ \frac{1}{|\text{CKG }|  } \int \mathcal{ D } X \int_{ M _ g }
+ d ^ s t \Delta _{ FP } \left[  \hat{ h } \right] e ^{ i S 
+ \left[  \hat{ h } , t  \right] }
+\] 
+Let's find a field theory 
+representation for $ \Delta _{ FP } $. 
+Now, 
+we can invert this expression, and move 
+the Faddeev-Popov determinant 
+over to the other side to give 
+\[
+ \Delta _{ FP } ^{ - 1 } \left[  \hat{ h }  \right]  
+  = \int _{ M _ g } d ^ s t \int _{ \text{Diff} \times \text{Weyl}} \mathcal{ D } w 
+  \mathcal{ D } v \, \delta \left[  \delta h  \right]  
+  \prod_{ i , a } \delta \left( v ^ a \left( \tilde{ \sigma }_ i    \right)  \right) 
+\] In this 
+case, we write, somewhat confusingly, 
+that $ \delta h  = h - \hat{h}$, and 
+we have that since the difference 
+is generated by a diffeomorphism 
+and a Weyl transformation, $ \delta h _{ ab }  = \left( P v  \right)  _{ ab } 
++ 2 \overline{ \omega } h _{ ab } + \mu _{ I ab } t ^ I $, 
+and $ \overline{ \omega }  = \omega  + $
+some other terms. 
+We 
+introduce what we might think of as auxiliary fields 
+$  \beta _{ ab } \left( \sigma, \tau  \right)    $ 
+and $ \xi ^ i _ a $ and write these 
+$ \delta $ functionals as integrals. 
+The idea is that we write 
+the deltas as integrals, exactly how 
+$\delta \left( x  \right)  = \int d ^ k e ^{ i k \cdot  x } $. 
+\[
+\Delta ^{ - 1 } _{ FP } \left[  \hat{ h }  \right]  
+= \int _{ M _g } d ^ 3 t \int \mathcal{ D } v \mathcal{ D } \omega 
+\mathcal{ D } \beta d ^{ 2k } \xi \exp \left( i \left( 
+\beta \mid P v + 2 \overline{ \omega } h + t ^ I \mu _ I \right)  + 
+i \sum _{ i =  1} ^ k \xi ^ i _ a v ^ a \left( \tilde{ \sigma } _ i   \right) \right) 
+\] where we define which is a
+result over taking the continuum product 
+over $ \sigma , \tau $ and absorbing this 
+into the exponential 
+\[
+\left( \beta \mid P v + 2 \overline{ \omega  } h + t ^ I \mu _ I  \right) 
+: = \int _{ \Sigma } d ^2 \sigma \sqrt{ - h }  \beta  ^{ ab } 
+\left( \left( P v  \right)  _{ ab } + 2 \overline{ \omega  } h _{ab } + 
+t ^ I \mu _{ I ab } \right) 
+\] 
+
+\subsubsection{An aside on Grassman 
+Variables}
+
+As an aside, we have $ \Delta ^{ - 1 }_{ FP } $, and we 
+want $ \Delta _{ FP } $. 
+We introduce Grassman variables. These are variables 
+$ \theta _ i $ that anti-commute, 
+so we have that $ \theta _ 1 \theta _ 2 =  - \theta _ 2 \theta _ 1 $. 
+These obey lots of interesting properties, 
+for example $ \theta _ i ^ 2  = 0 $. We 
+also have the Berezin integration rules, where 
+when we integrate over a constant, we get zero, 
+and when we integrate over a sole $ \theta $ variable, we get $ 1 $. 
+\[
+\int d \theta 1  = 0, \quad \int d \theta \theta = 1 
+\] 
+We have that 
+\[
+f \left( x, \theta  \right)   = f\left( x  \right) + \theta f ' \left( x  \right) , 
+\delta \left( \theta  \right)   = \theta , \quad 
+\int d \theta f \left( \theta  \right)   = \frac{\partial  f }{\partial  \theta } 
+\] where the differentiation is 
+with respect to $ \theta $, and when 
+we omit $ \theta $ we mean where $ \theta = 0 $. Let us consider a finite 
+dimensional Gaussian integral. 
+\[
+\frac{1}{\det M }  = \int _ V dz d \overline{ z  } e ^{  - \left( \overline{ z }, 
+M z  \right) }
+\] Writing the same type of integral with Grassmann variables, 
+we have that 
+\[
+\det M  = \int d \theta d \overline{ \theta } e ^{  - \left( 
+\overline{ \theta } , M \theta \right) }
+\] See Ryder's QFT book if curious 
+This suggests that what we want to do 
+is replace everything with Grassman valued fields, 
+so that we invert this thing properly. 
+We replace all of our fields we integrate over 
+in $ \Delta ^{ - 1 } _{ FP } $ Grassman valued 
+fields. 
+We replace \[
+v ^ a \left( \sigma, \tau  \right)  \to c ^ a \left( \sigma, \tau  \right), \quad  
+\quad \beta \left( \sigma, \tau  \right)  \to b _{ab } \left( \sigma, \tau  \right) ,\quad 
+t ^ I \to \zeta ^ I , \quad \xi ^ i _ a \to \eta ^ i _ a 
+\] and we take $ \Delta _{ FP } \left[  \hat{ h }  \right]  $ 
+to be given by 
+\[
+\Delta _{ FP } \left[ \hat{ h }   \right]  
+ = \int d ^ s \zeta 
+ \mathcal{ D }c \mathcal{ D}c \mathcal{ D } b d ^{ 2k } \eta 
+ \exp \left(  i b \mid P c + \zeta ^ I \mu _ I + 
+ i \sum _{ i = 1 } ^ \kappa \eta ^ i _ a  c ^ a \left( 
+\tilde{ \sigma  } _ i  \right) \right)  
+\] We can do the finite dimensional integralw. 
+We have done the $ \overline{ \omega } $ integral which gives us 
+a delta function which 
+constrains $ \beta _{ ab } h ^{ ab }  = 0 $ everywhere. 
+When we move to Grassmann valued fields, 
+we can take $ b _{ ab } $ to be tracelss also. 
+Due to the fact that we're
+dealing with Grassman variables, the integral over 
+$ \zeta ^ I $ gives us a delta functional, and we have that 
+\[
+\prod_{ I  = 1 }^ s \delta\left( b\mid \mu _ I  \right)  
+= \prod_{ I  = 1 } ^ s \left( b \mid \mu _ I  \right) 
+\] On the other hand, we have that the integral involving 
+$ \eta _ a ^ i $ gives us 
+\[
+\prod_{ a = 1 , 2 , i = 1 \dots \kappa }  
+\delta \left( c ^ a \left( \tilde{ \sigma } _ i   \right)   \right) 
+= \prod _{ i , a } c ^ a \left( \tilde{ \sigma } _ i   \right) 
+\] Thus, 
+our final result for our determinant is 
+\[
+\Delta _{ FP } \left[  \hat{ h }  \right]  
+= \int \mathcal{D } c \mathcal{ D } b 
+e ^{ i S \left[  b, c  \right]  } \prod_{ I  = 1 } ^ s 
+\left( b \mid \mu _ I  \right)  \prod_{ i , a } c ^ a 
+\left( \tilde{ \sigma } _ i   \right) 
+\] In this case, our action for the 
+$ b, c  $ Grassmann fields is given by 
+\[
+S \left[  b, c  \right]  
+= \left( b \mid P c  \right)  
+= \int d ^ 2 \sigma \sqrt{  -h }  b ^{ ab } \left( P c  \right)  _{ ab } 
+= 2 \int _{ \Sigma } d ^ 2 \sigma \sqrt{  - \hat{ h } }  b ^{ ab } 
+\left( \nabla _ a c _ b  \right) 
+\]
+
+We shall refer to the 
+(Grassmann) fields $ b _{ab } $ and $ c ^ a $ as 
+Faddeev-Popov ghosts. 
+From this, we can 
+calculate observables 
+from our path integral. 
+
+\subsection{Calculating Observables}
+We substitute our expression for 
+the Faddeev-Popov determinant into our entire 
+path integral. In the previous section, we 
+were only working with a particular worldsheet 
+with a genus $ g $. Now, we aim to sum
+over all genera, and add an exponential 
+factor to make sure this sum converges. 
+
+We now piece together everything we did in the 
+last section.
+Our Faddeev-Popov determinant is given 
+by 
+\[
+\Delta _{ FP }  = \int \mathcal{ D } b \mathcal{ D } c e ^{ i S \left[  b, c  \right]  } 
+\prod_ I \left( b \mid \mu _I   \right)  \prod _ a c ^ a \left( 
+\tilde{\sigma } ^ i  \right) 
+\]  where our action here is defined as 
+\[
+S \left[  b, c  \right]   = 
+\left( b \mid P c  \right)   = \int d ^ 2 \sigma 
+\sqrt{ - \hat{ h }  }  b ^{ ab } \left( \nabla _ a c _b  \right)  
+\] 
+
+
+Our final form for $ \mathcal{ Z } \left[  0  \right]  $, 
+summing over all possible Riemann surfaces, with some weight, is 
+\[
+\mathcal{ Z } \left[  0  \right]   = \sum _{ g = 0 } ^ \infty 
+e ^{ \lambda \chi }
+\frac{1}{|\text{CKG}|} \int _{ M _ g } \int d ^ s t \int \mathcal{ D } X \mathcal{ D } b 
+\mathcal{ D } c \, e ^{  i S \left[  X, \hat{ h }, b, c  \right]  } 
+\prod_{ I } \left( b \mid \mu _ I  \right)  \prod _{ i , a } c ^ a \left( 
+\tilde{ \sigma }_ i   \right) 
+\] Here, $ \lambda $ is a constant and $ \chi  = 2g - 2 $ is 
+the Euler characteristic of the worldsheet. 
+Now we want to think about computing 
+observables. We can compute correlation functions 
+of observables, by including them 
+in our path integral. 
+\[
+\left< \phi _1 , \quad \phi _ n  \right> 
+= \mathcal{ N }\int \mathcal{ D } \phi \, \phi _ 1 \dots \phi _ n e ^{ i S \left[  \phi  \right] }
+\] We're summing over connected worldsheets, 
+and oriented worldsheets. The orientedness condition is not 
+necessarily needed though. 
+What might observables look like? They need 
+to be invariant under the symmetries. So, we
+can build diff invariant observables by taking 
+an operator $ \mathcal{ O } \left( \sigma, \tau  \right)  $ 
+on the genus $ g $ worldsheet $ \Sigma _ g $ and 
+integrating it over $ \Sigma _ g $. For instance, 
+\[
+\mathcal{ O }  = \int _{ \Sigma _ g } d ^ 2 \sigma \mathcal{ O } \left( \sigma, \tau  \right) 
+\] We also need $ \mathcal{ O } $ to be Weyl-invariant, 
+which means that when we change our metric 
+on our worldsheet and integrate by a Weyl transformation, 
+when we scale this metric by a Weyl transformation we get 
+the same answer. 
+
+Much like how we deal with expectation values 
+of observables in quantum mechanics 
+by inserting them into a 
+probability distribution, observables 
+are the sort of thing you could think about 
+inserting into this path integral. 
+So, a correlation function of such observables 
+would be 
+\[
+\left< \mathcal{ O }_ 1  \dots 
+\mathcal{ O } _ n   \right>  = 
+\sum _{ g = 0 } ^ \infty \frac{e ^{ \lambda \chi } }{ |\text{CKG}|}
+\int \prod_{ i  =1  }^ n d ^ 2 \sigma _ i \int _{ M _ g } 
+d ^ s t \int \mathcal{ D } X \mathcal{ D } b 
+\mathcal{ D } c e ^{  i S \left[  X, h  \right]   } 
+\prod _ I \left( b \mid \mu _ I  \right)  
+\prod_{ i , a } c ^ a \left( \tilde{ \sigma } _ i   \right)  
+\mathcal{ O  }_ 1 \left( \sigma _ 1  \right)  \dots 
+\mathcal{ O} _ n \left( \sigma _n  \right)  
+\] Notice that 
+\[
+\frac{1}{|\text{CKG}|} \int _{M _ g } d ^ s t \int \prod_{ i = 1 } ^ n 
+d ^ 2 \sigma _ i  = \int _{ \mathcal{ M } _ g } d ^ s t \int _{ i  = 1 } 
+^{ n - \kappa } d ^ 2 \sigma _ I  = \int _{ M _ {g, n }}
+\] This is because we're dividing 
+out by the space with some points fixed.
+So, we have 
+\[
+\left< \mathcal{ O } _ 1  \dots \mathcal{ O } _ n  \right> 
+= \sum_{ g = 0 } ^ \infty e ^{ \lambda \chi } 
+\int _{ M _{g, n } } \int \mathcal{ D } X \mathcal{ D } b \mathcal{ D } c 
+e ^{ i S \left[  X, b, c  \right]  } \prod_{ I } \left( b \mid \mu _ I  \right)  
+\prod _{ i ,a  } c ^ a \left( \tilde{ \sigma } _ i   \right)  \mathcal{ O } _ 1 
+\dots \mathcal{ O } _ n 
+\] 
+
+\pagebreak 
+\section{Conformal Field Theory}
+CFT is a wonderful topic with 
+important applications in condensed matter theory, 
+string theory and more. If you really want to 
+understand quantum field theory with mathematical rigour, 
+the best place to start is with low dimensional 
+CFT. 
+
+\subsection{Conformal invariance in general dimension}
+We're going to highlight 
+how interesting things become when our dimension is 
+2, the dimension of our worldsheet. In two dimensions, 
+we explore transformations which preserve 
+angles, which are called conformal transformations. 
+This happens when our metric at some 
+point is scaled by a particular function. 
+
+\begin{defn}{Conformal transfomation}
+A conformal transformation 
+is a transformation which leaves the 
+angles between any two given 
+vectors on our space invariant. 
+In other words, we require 
+that the metric (which determines the inner product)
+only be transformed up to a local scaling. 
+
+
+More precisely, imagine some coordinate $ x ^ \mu \to x ^{ ' \mu } \left( x  \right)  $ 
+such that the metric on our space 
+transforms as 
+\[
+\eta _{ \rho \sigma  } \frac{\partial x ^{ ' \rho } }{\partial  x ^ \mu }  
+\frac{\partial x ^{  ' \sigma } }{\partial  x ^ \nu }  =  \Lambda \left( x  \right) 
+\eta _{ \mu \nu }, \Lambda \left( x  \right)  > 0,  
+\] Infinitesimally, 
+we can view this as \[
+x ^ \mu \to x ^ \mu \left( x  \right)   = x ^ \mu 
++ \epsilon v ^ \mu \left( x  \right)  + \dots 
+\] where $ \epsilon $ is a small number, and $ v ^ \mu $ is 
+the what we call the generator of our transformation.
+\end{defn}
+Now, in a similar fashion to 
+coming up with a condition that a vector lies in 
+the conformal Killing group, we will now 
+cook up a condition to determine 
+whether the transformation associated with $ v^ \mu $  
+is a conformal transformation. 
+To first order in $ \epsilon $, we have that 
+\[
+\eta _{ \mu \nu } \to \eta _{ \mu \nu } + \epsilon \left( 
+\partial  _ \mu v _ \nu + \partial  _ \nu v _ \mu \right)  
+ = \Lambda \left(  x  \right) \eta _{ \mu \nu }
+\] Now we parametrise 
+our scaling parameter and let $ \Lambda \left(  x  \right)   = e ^{ \epsilon w \left( x  \right)  } 
+ \simeq 1 + \epsilon w \left( x  \right)  $. 
+ Substituting this on both sides, 
+ we arrive at the equation 
+ \[
+	 \partial  _ \mu v _ \nu + \partial  _ \nu v _ \mu  = \omega \left( x  \right)  
+	 \eta _{ \mu \nu }
+ \] We now solve for $ \omega $, and the 
+ obvious way to do this is to take the trace 
+ of the equation. Taking the trace of this equation, we 
+ require 
+ \[
+	 \omega \left( x  \right)  = \frac{2}{d } \left( \partial  _ \mu v ^ \mu  \right) 
+ \] Vector fields that generate 
+ such conformal transformations 
+ satisfy 
+ \[
+  \partial  _ \mu v _ \nu + \partial  _ \nu v _ \mu 
+  = \frac{2}{d } \left( \partial  _ \lambda v ^ \lambda   \right)  \eta _{ \mu \nu } 
+ \] In two dimensions, 
+ we have that $ d = 2 $, 
+and something special happens. 
+Let us take the coordinates to be $ \sigma, \tau $, and 
+we have enough gauge freedom 
+choose $ \eta $ to be the Euclidean 
+metric $ \begin{pmatrix}  1 & 0 \\ 0 & 1  \end{pmatrix} $. 
+With this metric, our condition for a vector field 
+which generates conformal transformations becomes, 
+by choosing either $ \left( \mu , \nu  \right)  = 
+\left( \sigma, \tau  \right)   $  or $ \left( \mu , \nu  \right)  
+ = \left( \tau , \tau  \right)  $, 
+\[
+ \frac{\partial  v_ \tau  }{\partial  \tau }   = \frac{\partial  v _ \sigma }{\partial  \sigma } , 
+ \quad \frac{\partial  v _\sigma }{\partial  \tau }  =  - \frac{\partial  
+ v _ \tau }{\partial  \sigma }  
+\] This is amazing, since you 
+may recognise these equations as the Cauchy Riemann equations.
+
+Let's make these conditions more compact. 
+Let's first write $ v  = v _ \tau + i v _ \sigma $. 
+If we introduce 
+complex coordinates 
+\[
+ w = \tau + i \sigma ,\quad  \overline{ w }   = \tau  - i \sigma , \quad 
+ w \in \mathbb{ C } 
+\] The condition for $ v $ to generate a conformal transformation 
+is that $ v  $ is holomorphic, 
+where 
+\[
+ \overline{ \partial   }v = 0  
+\] So, we have a 
+conserved charge here, and we will show a 
+way to generate an infinite amount of conserved 
+charges which govern a lot of the dynamics here. 
+A particularly useful 
+set of coordinates for our 
+worldsheet is 
+\[
+  z  = e ^{ \tau + i \sigma }, \quad 
+ \overline{ z }  = e ^{ \tau  - i \sigma }
+\] Under this map, the cylindrical worldsheet is 
+mapped to the complex plane, 
+if we choose a Euclidean metric. 
+Time evolution $ \left( \tau   \right)   $ 
+on the cylinder becomes radial evolution 
+on the complex plane.
+
+\subsubsection{Connection to the Witt Algebra}
+Let's return to the Witt algebra in the context 
+of CFT. 
+We saw last time that the conformal transformations 
+are generated by holomorphic and anti-holomorphic 
+vector fields, $ v \left( z  \right)  $, and $ \overline{ v } \left( 
+\overline{ z } \right)  $. 
+In other words, we 
+have the map 
+\[
+  z \to z + v \left( z  \right)  + \dots, \quad \overline{ z } \to 
+  \overline{ z } + \overline{ v } \left( \overline{ z }  \right)  + \dots
+\]  We can write $ v \left( z  \right)  $ as a series expansion 
+\[
+ v \left( z   \right)   = \sum _ n v _ n z ^{ n + 1  } 
+\] we might have some issues here if 
+$ v \left( z  \right)  $ has a pole. 
+We may find the $ n + 1 $ factor a weird convention to put, 
+but we'll see why this is later on. 
+Then, we have infinitesimally, our generator gives 
+$ z \to z + \sum _ n v _ n z ^{ n + 1 } $. 
+We can think of this infinitesimal transformation 
+as being generated by the operators $ l _ n  =  -z ^{ n + 1 } 
+\frac{\partial }{\partial z} $. 
+In other words, we have that 
+\[
+ z \to z  - \sum _ n v _ n l_ n  z 
+\] The negative sign 
+here right now is a stylistic convention. We have the similar analog for the 
+conjugate $ \overline{  z  } $. 
+The $ l_ n  $  satisfy
+\[
+ \left[  l _ n , l _ m  \right]   = 
+ \left( n - m  \right)  l _{ n + m } 
+\] which is the Witt algebra. This can 
+be checked directly by substituting in 
+our expressions. The proof is straightforward.  
+We're going to talk about these sorts of transformations 
+and how things in our field theory 
+transform with these types of transformations. 
+The defining feature of the string theory is that 
+stress tensor. 
+
+\subsection{Conformal Fields}
+We'll need a bit of Jargon first. 
+Let's have some definitions. To begin with. 
+
+\begin{defn}{Chiral Field.}
+	A chiral field is a field $ \Phi \left(  z  \right)  $ that depends on 
+	$ z $ alone. This is also called 
+	a homomorphic field. 
+\end{defn}
+\begin{defn}{Conformal Dimension.}
+	The conformal dimension is a number 
+	$ \Delta  = h + \overline{ h } $  which 
+	tells us how a field transforms under scaling. 
+	Suppose we rescale $ \left( z, \overline{ z }  \right)  $ by some 
+	number as $ \left( z, \overline{ z }  \right)  \to \left( 
+	\lambda z ,  \overline{\lambda} \overline{ z } \right)  $. 
+	If our field transforms as 
+	\[
+	 \Phi \left( z, \overline{ z }  \right)  \to 
+	 \Phi  ' \left( z', \overline{ z }   '  \right)  = 
+	 \lambda ^ h \overline{ \lambda } ^{ \overline{ h } } \Phi 
+	 \left( \lambda z , \overline{ \lambda } \overline{  z  }  \right) 
+ \] A chiral field has $ \overline{ h }  = 0  $
+\end{defn}
+
+\begin{defn}{Primary Field.}
+	Under the transformation $ z \to f \left( z  \right)  $, 
+	a primary field transforms as 
+	\[
+	 \Phi \left( z, \overline{ z }  \right)  \to 
+	 \left( \frac{\partial  f }{\partial  h }   \right) ^{ h } 
+	 \left( \frac{\partial  \overline{ f } }{\partial  \overline{ z } }   \right)  
+	 ^{ \overline{ z }  } \Phi \left( f \left( z \right)  , 
+	 \overline{ f } \left( \overline{ z }  \right)  \right) 
+ \] Here we will find that 
+ the theory factors into two sectors. But we say almost 
+ factors because we still have this level matching condition 
+ which link the anti-holomorphic and holomorphic parts. 
+ When we study the chiral theory, we might have 
+the exact same thing in the anti-chiral sector. 
+However, there are theories in which the left and 
+right moving parts behave differently, 
+and this is called heterotic string theory. 	
+\end{defn}
+
+We can write the transformation functions 
+$ f \left(  z  \right)  $ and $ \overline{ f } \left( \overline{ z }  \right)  $ 
+infinitesimally. Note however that 
+$ \overline{ f } $  isn't necessarily the complex 
+conjugate, just a different function! 
+For an infinitesimal transformation 
+$ f \left( z  \right)    = z + v \left( z  \right)   + \dots $, 
+and the corresponding anti-holomorphic function, 
+we have that 
+\[
+ \left( \frac{\partial  f }{\partial  z }   \right)  ^{ h } 
+ \simeq \left(  1 + \partial  v  \right)  ^{ h }  = 1 + h \partial  v , 
+ \quad \left( \frac{\partial \overline{ f } }{\partial \overline{ z }  } \right)
+ ^{ \overline{ h } }  \simeq 1
+\] Our corresponding field changes as 
+\[
+	\phi \left( f \left(  z  \right)   \right)   = 
+	\phi \left( z + v + \dots  \right)   = 
+	\phi \left( z  \right)  + v \partial  \phi \left( z  \right)  + \dots 
+\] and similarly, we find that for $\overline{z} \to \overline{ z  } 
++ \overline{ v } \left( \overline{ z   }  \right)  $, 
+and we find that 
+\[
+	\delta _{ v, \overline{ v }  } \phi \left( z, \overline{ z }  \right)  
+	 = \left( h \partial  v + \overline{ h } 
+	 \overline{ \partial   } \overline{ v } + 
+ v \partial  + \overline{ v }  \overline{\partial } \right) \phi \left( z, \overline{  z } \right) 
+\] 
+
+\subsection{Conformal transformations and the Stress Tensor}
+
+We start with the action 
+\[
+ S \left[  X  \right]   =  - \frac{1}{4 \pi \alpha ' } \int_{ \Sigma } 
+ d ^ 2 \sigma \partial  _ a X ^ \mu \partial  ^ a X ^ \nu \eta _{ \mu \nu } 
+\] Under a conformal transformation, we have that 
+$ \delta _ v X ^ \mu  = v ^ a \partial  _ a X ^ \mu $. 
+Under such a transformation, we have that the action 
+changes by 
+\[
+ \delta _ v S \left[  X  \right]   = 
+ \frac{1}{2 \pi } \int _{ \Sigma  } d ^ 2 \sigma \left( 
+ \partial  ^ a v ^ b \right)  T _{ ab }  =  - \frac{1}{2 \pi } 
+ \int _{ \Sigma } d ^ 2 \sigma v ^ a \left( \partial  ^ b 
+ T _{ ab } \right)   = 0 
+\] The first step is shown 
+quite straightforwardly by 
+substituting in our form of $ T _{ ab } $ 
+where $ h _{ ab }  = \eta _{ ab } $, and 
+then doing some integration by parts, 
+and you should find that the factors of 
+$\frac{1}{2 } $ in our definition of $ T _{ ab } $ add up 
+to the right amount.
+Then, we use the symmetry 
+of the stress tensor and then integrate by parts 
+again to get the second identity.
+This implies a conserved current, which satisfies 
+\[
+ \partial  ^ a T _{ ab } = 0  = \partial  ^ b T _{ ab } 
+\] We could define conserved 
+charges $ Q _{  \pm  } $  which in 
+light cone coordinates $ \sigma ^{ \pm }  = \tau \pm \sigma $ look like 
+\[
+ Q _{ \pm }  = \frac{1}{2 \pi } \oint d \sigma v ^{ \pm } 
+ \left( \sigma  \right)  T _{ \pm \pm } \left( \sigma  \right) 
+\] Why are these charges conserved? I 
+am not sure. Infinitesimal conformal transformations 
+are given by the Poisson bracket of a field with $ \phi_{\pm }  $. 
+We have that 
+\[
+ \delta _ v X ^ \mu  = \left\{  Q _ + + Q _  - , X ^ \mu  \right\}  
+ _{ PB}
+\] where our bracket here is the classical 
+Poisson bracket. 
+We want to understand how symmetries 
+give rise to space time symmetries. 
+We want to recast this into having conformal symmetries 
+give rise to space time structure. 
+
+\subsection{Complex Coordinates}
+
+To simplify things, we'll change our coordinate system 
+We shall use $ z  = e ^{ \tau  +i \sigma }  $, $ \overline{ z }  = 
+e ^{ \tau  - i \sigma } $ and take $ h _{ ab } $
+to be Euclidean on $ \Sigma $ in the 
+$ \sigma, \tau $ coordinates. First, if we
+ write down our Polyakov action 
+ with $ h _{ab  } $ chosen to be Euclidean, 
+ and then change coordinates such that 
+ \[
+  \partial  _ \tau  = z \partial  + \overline{ z } \overline{ \partial   }, 
+  \quad \partial  _ \sigma  = i \left( z \partial  
+   - \overline{ z} \overline{ \partial  } \right) 
+ \] In these coordinates, 
+the stress tensor becomes: 
+\[
+ T_{ z z} :  = T  = - \frac{1}{\alpha ' } \partial X ^ \mu X ^ \nu \eta _{ \mu \nu } , 
+ \quad T _{ \overline{ z } \overline{ z } }  = \overline{ T }  = 
+  - \frac{1}{\alpha ' } \overline{ \partial   } X ^ \mu \overline{ \partial  } 
+  X ^ \nu \eta _{ \mu \nu } 
+\] 
+Recall that, 
+regardless of coordinate choice, 
+we have that the stress tensor 
+is traceless, since $ h _{ ab } T ^{ 
+ab }  = 0 $. In these new set 
+of coordinates, we have that $ T _{ z \overline{ z } }  = 0 $ as it is the trace 
+of the stress tensor. 
+We now explore how 
+our action an equations of motion 
+change under these change of coordinates. 
+First, we look at how our measure 
+in our integral for the action changes. 
+Here we have that 
+\[
+ d \tau d \sigma  = - \frac{d z d \overline{ z } }{ 2 i | z | ^ 2 }
+\] The path integral becomes 
+\[
+ \int \mathcal{ D } X e ^{ i S \left[  X  \right]  } \to 
+ \int \mathcal{ D } X e ^{  - S\left[  X  \right]  } 
+\]  our action is 
+\[
+ S \left[  X  \right]   = - \frac{1}{2 \pi \alpha ' } 
+ \int _{ \Sigma } d ^ 2 z \partial  X ^ \mu 
+ \overline{ \partial  } X ^ \nu \eta _{ \mu \nu }
+\] The equation of motion for the $ X ^ \mu $ is 
+now $ \partial  \overline{ \partial } X ^ \mu  = 0  $. 
+We have that $ X ^ \mu \left( z, \overline{ z }  \right)   = 
+X _ L ^ \mu \left(  z   \right)  + X _ R ^{ \mu } \left( \overline{ z }  \right)  $
+The conservation equation $ \partial  ^ a T _{ ab }  =0 $, 
+becomes 
+\[
+	\overline{ \partial   } T \left( z  \right)   =0 , \quad 
+	\partial  \overline{ T } \left( \overline{ z }  \right)   = 0 
+\] 
+\subsection{Ward Identities and Conformal Transformations}
+The point of this section is 
+to explore the quantum version of Noether's 
+theorem. 
+Previously, we saw that 
+if we transform a field to give $ \delta \phi   = 
+\epsilon   f \left(  \phi , \partial  \phi , \dots  \right)  $, 
+and the action stays invariant 
+then if $ \epsilon $ is a constant, we have a 
+\textbf{classical} symmetry of the action.
+
+However, our generator $ \epsilon ^ a $ might also 
+depend on our location on the worldsheet. 
+As we saw before, this means that our 
+change in the action $ \delta S $ (which is zero by 
+construction), is now 
+\[
+	\delta S  = \int_{ \Sigma } d ^ 2 \sigma \, \left( 
+	\partial  ^ a v ^  b  \right)  T_{ ab } 
+\] Using integration by parts 
+and shifting the derivative to hit 
+the stress tensor, we get that 
+out of this, we have a conservation law 
+\[
+ \partial  ^a  T _{ ab }  =0 
+\] 
+Now we will focus on the quantum analogue of 
+this principle. 
+We will describe a general primary field 
+as some field which is a 
+function of $ z , \overline{ z }  $, sufficiently 
+well-behaved. $ \phi \left( z, \overline{ z }  \right)  $. 
+Later we shall choose $ \phi $ to be either $ X ^ \mu $ 
+or one of the $ b , c $ ghost fields. 
+The first thing we do will be 
+to consider the change in a correlation function 
+\[
+ \left< \phi _ 1 \dots \phi _ n  \right>  = 
+ \int \mathcal{ D } \phi e ^{  - S \left[  \phi  \right]  } \phi _ 1 \dots 
+ \phi _ n 
+\] resulting from an infinitesimal transformation $ \phi \to \phi + \delta \phi = \phi  '$. 
+In particular we would like to see what happens when we change 
+the field under a conformal transformation. 
+We have 
+\[
+	\left< \phi  ' \left( z _ 1  \right)  \dots 
+	\phi  ' \left( z _ n  \right)   \right>
+	 = \int \mathcal{ D } \phi  ' e ^{  - S \left[  \phi  '  \right]  } 
+	 \phi _ 1  '\left( z _ 1  \right)  \dots \phi  ' \left( z _ n  \right) 
+\] We shall assume that 
+$ \mathcal{ D } \phi  = \mathcal{ D } \phi  ' $. 
+When we change the field, we 
+have that 
+\[
+	\left< \phi  ' (z_1 ) \dots \phi  ' \left( z _ n  \right)  \right> 
+	 =\int \mathcal{ D } \phi e ^{  - S \left[  \phi  \right]  
+	 - \delta S \left[  \phi  \right]  } \left( 
+ \phi \left( z_1  \right)  + \delta \phi \left(  z_1  \right)  \right)  \dots 
+ \left( \phi \left( z_ n   \right)  + \delta \phi \left( z _ n  \right)  \right) 
+\]  This is, to the first order in 
+$ \delta \phi $, 
+\[
+	\dots = \left< \phi \left( z_1  \right)  \dots \phi \left( z_ n  \right)   \right> 
+	 - \int \mathcal{ D } \phi e ^{  - S \left[  \phi  \right]   } 
+	 \delta S \left[  \phi  \right]  \phi \left( z_1  \right)  
+	 \dots \phi \left( z _ n  \right)  
+	 + \int \mathcal{ D } \phi e ^{  - S \left[  \phi  \right]   } 
+	 \sum _{ k = 1 } ^{ n } \phi \left( z _ 1  \right) \phi \left( z _{ k - 1 }  \right)  
+	 \delta \phi  \left( z _ k  \right)  \dots \phi \left( z _ n  \right) 
+\] to leading order. 
+Now matter what kinds of 
+fields we use, we expect 
+that the physics of our theory to be invariant under the change 
+$ \phi \to \phi  '  $. 
+This means that we impose 
+the condition that the correlation 
+functions should be the same. 
+We thus require
+\[
+  \left< \phi _ 1 ' \dots \phi _ n  '  \right> 
+= \left< \phi _ 1 \dots \phi _ n  \right> 
+\]
+This means that we're 
+left with the identity that 
+the correlation function, including a change in 
+the metric, is a sum of correlation 
+functions with some insertions. 
+\[
+ \left< \delta S \left[  \phi  \right]  \phi 
+ \left( x_1  \right)  \dots \phi \left( z _ n  \right)  \right>  = 
+ \sum _{  k = 1 } ^ n \left< \phi \left( z_1  \right)  \dots \delta 
+ \phi \left( z _ k  \right)  \dots \phi \left( z _ n  \right) \right> 
+\] 
+For a change $ \phi \to \phi + \delta \phi $, 
+the action undergoes some $ S \left[  \phi  \right]  
+\to S \left[  \phi  \right]  + \delta S \left[  \phi  \right]  $. 
+We then found that 
+our associated correlation function 
+\[
+ \left< \delta S \left[  \phi  \right]  
+ \phi _ 1 \dots \phi _ n \right>  = \sum_{ k = 1 } ^ n 
+ \left< \phi _ 1 \dots \delta \phi _ k \dots \phi _ n   \right> 
+\] where we have that $ \phi _ i  = \phi \left( z_ i , 
+\overline{ z } _ i \right)  $. 
+Let's now take $ S $ to be the Polyakov 
+action with fixed worldsheet metric, and 
+$ \delta \phi  = v ^ a \partial  _ a \phi $. 
+We can use the fact that the 
+variation of the action 
+under such a transformation 
+gives 
+\[
+ \delta S  \left[ \phi  \right]  = \frac{1}{2 \pi } 
+ \int_{ \Sigma } d ^ 2 \sigma \left( \partial  _ a v _ b  \right) T ^{ ab }  
+\] where $ T ^{ ab } $ is the stress tensor. 
+We have that $ v ^ a $ are just 
+vector parameters which we can 
+pull out of the integrand and the 
+correlation function. 
+From the equation above, we have 
+\[
+ \frac{1}{2 \pi }  
+ \int_{ \Sigma } d ^ 2 \sigma \left( 
+ \partial  ^ a v ^ b \right)  \left< T _{ ab }
+ \phi _ 1 \dots \phi _ n \right>  = \sum _{ k =  1 } ^ n 
+ \left< \phi _ 1 \dots \delta _  k \dots \phi _ n  \right> 
+\] What does our worldsheet look like? 
+In this case, in our $ \left( \sigma, \tau  \right)  $ 
+coordinates, it looks like multiple cylinders 
+coming in and then emerging out into different cylinders. 
+However, we observed before that we can 
+map cylinders in $ \left( \sigma, \tau  \right)  $ 
+coordinates to circles in $ \left( z, \overline{ z}  \right) $ coordinates. 
+Thus, our worldsheet looks like, in the $ \left( z, \overline{ z }   \right)  $ plane, 
+as the complex plane except with discs centred on 
+each insertion $ z _ i   $. We call these discs 
+$ \mathcal{ D }_ i $, and we label the boundary 
+$ c _ i $. 
+(diagram here). 
+
+we map each of these cylinders 
+to the complex place using $ z  = e ^{ \tau + i \sigma } $,
+and glue the regions together 
+using holomorphic transition functions. 
+If we take the boundaries 
+$ c _ i $ to points 
+(the local $ \tau $ coordinate goes to $ \tau \to  - \infty $ ), 
+then these circles go to points.
+We can associate the state on the boundary 
+$ c _ i $ to a local 
+operator $ \phi \left( z, \overline{  z} _ i  \right)  $. 
+We'll choose some $ v $ which is 
+completely general on the bulk of the worldsheet, 
+and vanishes on all the boundaries except 1. 
+We choose our parameter 
+$ v ^ a $ to be 
+\begin{itemize}
+	\item zero on all $ c _ i $, as well  
+		as in the disk $ \mathcal{ D } _ i$, 
+		except $ c _{ \omega } $ which is 
+		the boundary associated to 
+		the operator at $ z _ i  = \omega $. 
+		In other words, $ \delta _ v \phi _ i   = 0 $
+		except for $ \delta_ v \phi \left( \omega, 
+		\overline{ \omega } \right)  $. 
+	\item We will choose $ v ^ a $ to be 
+		of the form $ v ^ a  = 
+		\left( v \left( z  \right)  , \overline{ v } 
+		\left( \overline{ z }  \right)  \right)  $. 
+	\item We could choose multiple fields to vary, 
+		but for simplicity we'll choose 
+		just one field to vary right now. 
+	\item  $ v ^ a $ is arbitrary otherwise in $ \Sigma $ 
+		otherwise. 
+\end{itemize}
+To summarise, we have that 
+for $ i \neq k$, our value of the field $ v ^ a $ satisfies 
+ \[
+    v ^  a \left( z, \overline{ z }  \right)  \mid _{ C _ i} =0 
+\] On the other hand, we 
+on the boundary of the circle 
+which contains $ z _ k  = \omega $, 
+we have that our generator field $ v ^ a $ is arbitrary, 
+and is defined to be split up 
+into the holomorphic and anti-holomorphic parts 
+\[
+	v ^{ z } \left( z, \overline{ z }  \right)   = v \left(  z  \right) , 
+	\quad v ^{ \overline{ z } } \left( z, \overline{ z }  \right)   = 
+	\overline{ v } \left( \overline{ z }  \right)  
+\] By construction, we take the boundary of 
+our worldsheet to be these discs, specifically so that 
+\[
+ \partial  \Sigma  = C _{ \omega } \cup _{ i \neq k  } C _ i 
+\] and we have that the value of $ v ^ a $ 
+is arbitrary everywhere else on the worldsheet. 
+
+Thus, substituting this in 
+the only value of $ \delta \phi _ k $ which 
+is non-zero on this world sheet is when 
+$ z _ k  = \omega $, for 
+a particular choice of disc indexed 
+with $ k$ . We denote 
+$ \delta \phi _ k  = \delta \phi \left( \omega, \overline{ \omega }  \right)  $. 
+This means that, for this choice of $ v ^ a $, 
+we have 
+\[
+ \frac{1}{2 \pi } \int _{ \Sigma } d ^ 2 \sigma 
+ \left( \partial  _ a v _ b  \right) \langle T ^{ ab }
+ \phi _ 1 \dots \phi _ n \rangle = 
+ \left< \phi _ 1 \dots \delta \phi \left( \omega , 
+ \overline{ \omega } \right)  \dots \phi _ n  \right>
+\] 
+The left hand side expression is, 
+using integration by parts 
+to take out a boundary term, is 
+\[
+ \frac{1}{2 \pi } \int d ^ 2 \sigma 
+ \partial  ^ a \left(  v ^ b \left< 
+ T _{ ab } \left( \sigma  \right)  \phi _  1 \dots \phi _ n \right>   \right)  
+   - \frac{1}{2 \pi } \int_{ \Sigma } d ^ 2 \sigma 
+   v ^ b \partial  ^ a \left< 
+   T _{ ab } \left( \sigma  \right)  \phi _ 1 \dots \phi _ n \right> 
+\] To evaluate the first 
+term in the expression above, we 
+appeal to Stokes' theorem 
+on the complex plane. In differential 
+geometry, Stokes theorem 
+is the statement that, in two dimensions
+\[
+ \int_{ M}  dw = \int _{ \partial  M } w , \ d w  = 
+ \left( \frac{\partial w _ 2 }{\partial  x ^ 1  }  - \frac{\partial w_ 1 }{\partial  
+ x ^  2 }   \right)  dx ^ 1 \wedge  dx ^ 2, 
+ \quad w = w_1 dx ^ 1 + w_2 dx ^ 2 
+\] We set, in the above, 
+that $ x^ 2  = z , x^ 2 = \overline{ z } , w _ 1  = - j ^  z, w_2  = j ^{ \overline{ z } }$. 
+The first term 
+is a boundary term $ \partial  \Sigma  = 
+\cup _ i C _ i $. 
+The only boundary 
+contribution comes from 
+$ c _{ \omega } $ where $ v ^ a $ has homomorphic 
+$ v \left(  z  \right)  $ and anti-holomorphic 
+$ \overline{ v } \left( \overline{ z }  \right)  $ components
+and is 
+\[
+	\frac{1}{2 \pi i } \oint _{ c _ \omega } dz v \left(  z  \right) 
+	\left< T \left(  z  \right)  \phi _ 1 \dots \phi _ n  \right> 
+	 - \frac{1}{2 \pi i } \oint _{ c _ \omega } 
+	 d \overline{ z } \overline{ v } \left( \overline{ z } \right)  \langle \overline{ T } \left( \overline{ z }  \right)  
+	 \phi _ 1 \dots \phi _ n \rangle 
+ \] where $ T _{ zz } \left( z  \right)   =  T\left(  z  \right)   $, 
+ Thus, we have 
+ that 
+ \begin{align*}
+ 	\left< \phi _ 1 \dots 
+	\dots \delta _ v \phi \left( \overline{ \omega } , \omega  \right)
+	\dots \phi _ n \right> &=   -\frac{1}{2 \pi } 
+	\int _{ \Sigma } d ^ 2 \sigma v ^ b 
+	\left( \partial  ^ a \left< T _{ ab } \phi _ 1 \dots 
+	\phi _ n \right>  \right)  \\
+			       & + \frac{1}{2 \pi i } \oint_{ c _{ \omega } } 
+			       d zv \left(  z  \right)  \left< T ( z) 
+			       \phi _ 1 \dots \phi _ n \right>
+			        - \frac{1}{ 2 \pi i } \oint _{ c _ \omega  } 
+				d \overline{ z  } \overline{ v } 
+				\left( \overline{ z }  \right)  \left< 
+				\overline{ T } \left(  \overline{ z }  \right)  
+				\phi _ 1 \dots \phi _ n \right> 
+ \end{align*}
+ Since this is valid for arbitrary $ v $ 
+ we have that this is 
+ \[
+	 \partial  ^ a \left< T _{ ab } \left( \sigma  \right), 
+	 \phi _ 1 \dots \phi _ n \right>  =0 
+ \] This is the analogue of the classical 
+ Nether statement that $ \partial  ^ a T _{ ab }  =0  $. 
+ This then means that 
+ \[
+  	\left< \phi _ 1 \dots 
+	\dots \delta _ v \phi \left( \overline{ \omega } , \omega  \right)
+	\dots \phi _ n \right>  = \frac{1}{2 \pi i } \oint_{ c _{ \omega } } 
+			        - \frac{1}{ 2 \pi i } \oint _{ c _ \omega  } 
+				d \overline{ z  } \overline{ v } 
+				\left( \overline{ z }  \right)  \left< 
+				\overline{ T } \left(  \overline{ z }  \right)  
+				\phi _ 1 \dots \phi _ n \right> 
+ \] 
+ Note that $ \phi _ i \neq \phi \left(  \omega, \overline{ \omega }  \right)  $ 
+ didn't contribute to the 
+ calculation and we conclude that 
+ \[
+	 \delta _{ v } \phi \left( \omega, 
+	 \overline{ \omega } \right)   = 
+	 \oint_{ c _ \omega } \frac{d z }{ 2 \pi i } v \left( z  \right)  
+	 T \left(  z  \right)  \phi \left( \omega, \overline{ \omega }  \right)   - 
+	 \oint _{ c _ \omega } \frac{ d \overline{  z } }{ 2 \pi i } 
+	 \overline{ v } \left(  \overline{ z }  \right)  
+	 \overline{ T } \left(  \overline{ z }  \right)  \phi 
+	 \left( \omega, \overline{ \omega }  \right) 
+ \] this is understood to hold up on insertion 
+ into a correlation function. 
+
+ \subsection{Radial Ordering}
+ Here, we're 
+ working with the Euclidean metric, 
+ so we don't have an a-priori notion of 
+ time. There is  a
+ notion that radial separation plays 
+ an analogous role of time. 
+We see that time ordering 
+$ \tau _ 1 > \tau _ 2 $ translates into radial 
+ordering $ | z _ 1 | > | z _ 2 |  $. We introduce the
+notion of radial ordering. 
+The radial ordering of 
+two operators 
+is 
+\[
+	\mathcal{ R } \left( A \left(  z \right)  B \left(  
+	w\right)  \right)
+	 = \begin{cases}
+		 A \left(  z  \right)  B ( w) &  \text{ if  } | z | > | w | \\
+		 B \left(  w  \right)  A \left(   z \right)  & 
+		 \text{ if  } | z | < | w| 
+	 \end{cases}
+\] Consider 
+the expression $ \oint_{ C \left( w \right) } 
+dz \mathcal{ R } \left( A \left( z  \right)  B \left(  w  \right)   \right)  $, 
+where $ C \left( w  \right)  $ is the contour 
+around $ z  =w $ . 
+How do we make sense of this? As 
+shown in the diagram, on the circle around 
+$ w  $, some parts of the contour 
+have $ | z |  $ larger than $ | w | $, 
+and smaller on other parts. We can 
+make sense of this contour 
+by looking at it 
+as the difference of two contours, 
+which both have a well defined 
+ordering.
+\begin{figure}[htpb]
+	\centering
+	\input{ordering.pdf_tex}
+	\caption{}%
+	\label{fig:}
+\end{figure}
+On $ C _ 1 $, we have $  | z | > | w |  $, 
+and otherwise on $ C_ 2 $. 
+This means that on $ C _ 1 $, we have 
+that 
+\[
+	\oint_{ C _ 1 } dz \mathcal{ R } \left( 
+	A \left(  z \right)  B \left(  w  \right)  \right)  
+	= \oint dz A \left(  z \right)  B \left(  w  \right) 
+\] On $ C _ 2 $, we have that 
+\[
+	\oint_{ C _  2} dz \mathcal{ R } \left( 
+	A \left( z  \right)  B \left(  w  \right)  \right)  
+	= \oint _{ C _ 2 } dz B \left(  w  \right)  A \left(  z  \right) 
+\] Thus, we have that, on the 
+specific contour $ C _ w $ around $ w $, 
+we have decomposed this into a commutator of sorts. 
+\[
+	\oint_{ 
+		C_ w } dz \mathcal{ R  } \left( A \left(  z  \right) B 
+	\left(  w  \right)  \right)   = 
+	\oint_{ C _ 1 } dz A \left( z  \right)  B \left(  w  \right)  
+	- \oint_{ C _  2 } B \left(  w  \right)  A 
+	\left(  z  \right) 
+\] In particular, 
+consider 
+\[
+	O  = \oint dz A \left(  z  \right) \dots , \dots B \left(  w  \right) 
+\] Consider 
+the integral which we define as 
+the radial ordering part. 
+\[
+	\oint_{ C \left(  w  \right)  } 
+	dz \mathcal{ R } \left( A \left(   z \right)  , 
+	B \left(  w  \right)   \right)  : = 
+	\left[  O , B \left(  w  \right)   \right] 
+\] This plays the role of a 
+commutator in our radially ordered theory. 
+If we consider the variation of a 
+chiral primary field 
+$ \phi \left(  w  \right)  $, 
+we get a contribution 
+from our stress energy tensor $ T_{ zz } \left(   z  \right)   $ 
+(since $ \phi $ is chiral we have zero contribution from 
+the anti-holomorphic component of our stress tensor $ \overline{T }  $ ). 
+This can be encoded into a 
+charge $ Q$, and so the $ \delta $ function 
+can be written as such. 
+\begin{align*}
+	 \delta _ v \phi \left(  w  \right)  
+	 &=  \oint _{ C \left(  w  \right)  } 
+	 \frac{ d z }{ 2 \pi i } \mathcal{ R } \left( v 
+	 \left(  z  \right)  T \left(  z  \right)  \phi \left(  w  \right)  \right)  \\
+	 &=  \oint_{ | z |  >  | w |      }
+	 \frac{d z }{ 2 \pi i  } v \left(  z  \right)  T \left( z   \right)  
+	 \phi \left(  w  \right)   - \oint_{ 
+	  | z | \leq | w |  } \frac{ d z }{ 2 \pi i } 
+	  \phi \left( w  \right)  v \left(  z  \right)  T \left(  z  \right)  \\
+	  &=  \left[  Q , \phi \left(  w  \right)  \right] 
+\end{align*}
+where the charge $ Q $ is given 
+by 
+\[
+	Q = \int_{ C \left(  w  \right)  } 
+	\frac{ d z }{ 2 \pi i } v \left(  z  \right)  T \left(  z  \right) 
+\] This is similar to 
+the classical poisson bracket expression 
+for the transformation of a field $ \phi \left(  w  \right)  $. 
+We're extracting 
+some information about the pole structure here, 
+and we want to explore this. 
+
+\subsection{Mode expansions and Conformal Weights}
+We previously considered the 
+transformation from a cylinder to 
+a flat plane. We want to see how the 
+mode expansions change from the 
+cylindrical worldsheet to the plane. 
+On the cylinder the mode 
+expansion for a field $ \phi \left( \sigma, \tau  \right)  $
+which only depends on $ w  = \tau + i \sigma $, 
+and therefore only depends on $ z  = e ^{ w } $ (and
+is hence a chiral field)
+might be naturally written as 
+\[
+	\phi _{\text{cyl}} \left( \omega  \right)  
+	  = \sum_ n \phi _ n e ^{  - n \omega } 
+  \] and similarly for a field with $ \overline{ \omega } $ 
+  dependence. This would be the left-moving part. 
+  Suppose $ \phi _{ \text{cyl}}$ has 
+  conformal weight $ h $, in other words 
+  $ \phi _{\text{ cyl} } $ is a chiral primary.
+  The definition of a chiral primary field 
+  is that it transforms like 
+\[
+	\phi \left( w  \right)  \to \phi ' \left( w  \right)  
+	 = \left( \frac{\partial  z }{\partial  w }   \right)^{ h } 
+	 \phi \left( z \left(  w  \right)   \right)  
+\] Now, if we switch around 
+our $ z $ and $ w $ variables, we get that 
+\[
+	\phi' \left(  z  \right)  
+	= \left( \frac{\partial w }{\partial  z  }   \right)^{ 
+	h  } \phi \left(  w  \right)  
+\] 
+  If we now transform to the complex plane $ 
+   z = e ^{ w }  = e ^{ \tau + i \sigma  } $, 
+   we have that 
+   \[
+	   \phi _{ \text{cyl } } \left( w  \right)  \to \phi
+	   _{\text{plane}}\left( z   \right) 
+	    = \left( \frac{\partial  z }{\partial  w }   \right)  ^{ - h } 
+	    \phi _{\text{cyl} } \left( w  \right)   = 
+	    z ^{ - h } \phi _{\text{cyl}} \left( w  \right) 
+   \] This is what 
+   our field on our cylinder looks like 
+   mapped to our complex plane. 
+   To save ink, we'll instead 
+   write $ \phi _{\text{plane}}\left(  z  \right)  =\phi\left( z \right)  $. 
+   We have that 
+   \[
+    \phi \left(  z  \right)   = \sum _ n \phi _ n z ^{ -  n - h } 
+   \] Previously, the natural 
+   thing to do was to do a Fourier 
+   expansion. Now, we have 
+   that on the complex plane with Euclidean worldsheet 
+   that this is the natural form 
+   of mode expansion, for chiral primary fields. 
+   More generally, for 
+   a primary of weight $ \left( h , \overline{ h }  \right)   $, 
+   we have that 
+   \[
+	   \phi \left( z, \overline{ z }  \right)  
+	    =\sum _{ n , m } \phi _{ n , m } z^{ - n - h } \overline{ z } 
+	    ^{ - m - \overline{ h } }
+   \] For example, as 
+   we shall see, the stress tensor has weight 
+   $ \left( h , \overline{ h }  \right)   = \left( 2, 0  \right)  $ 
+   for $ T \left(  z  \right)  $ and $ \left(  0 , 2  \right)  $ 
+   for $ \overline{ T } \left( \overline{ z }  \right)  $. 
+   We're shifting how 
+   we count the modes here. 
+   \[
+	   T \left( z  \right)   = \sum _ n 
+	   L _ n z ^{ -n - 2 } , \quad 
+	   \overline{ T } \left(  \overline{ z }  \right)  
+	    = \sum _ n \overline{ L } _ n \overline{ z } 
+	    ^{ -n  - 2  }
+   \]  For reference 
+   \[
+    X ^ \mu \left( z, \overline{ z }  \right)  
+     = x ^ \mu  - i \frac{ \alpha ' }{ 2 } p ^ \mu \ln | z | ^ 2 
+     + i \sqrt{ \frac{\alpha '  }{ 2 } }  \sum _{ n \neq 0 }
+     \frac{1}{n } \left( \alpha _ n ^ \mu z ^{ - n }  - \overline{ \alpha } _ n 
+     ^{ \mu } \overline{ z } ^{ - n } \right) 
+   \] and we have that 
+   our holomorphic 
+   derivative gives 
+   \[
+	   \partial X ^ \mu \left(  z  \right)  
+	    = - i \sqrt{ \frac{ \alpha ' }{ 2  } }  \sum _ n 
+	    \alpha _ n ^ \mu z ^{ - n - 1 } , \quad \alpha _ 0 ^ \mu 
+	     = \sqrt{ \frac{ \alpha  ' }{  2 } }  p ^ \mu 
+     \]  in other words, it looks like 
+     $ \partial   X^ \mu  $ looks to be a conformal 
+     field with weight $ \left( 1, 0  \right)  $. 
+     In some sense, we're working backwards here.
+
+\subsection{Radial Ordering and Normal Ordering}
+To a large extent 
+we can go through the same route in 
+QFT to relate radial ordering to normal ordering. 
+Consider the weight $ \left( 1, 0  \right)  $ chiral 
+field $ j ^ \mu \left(  z  \right)  = \sum _ n 
+\alpha _ n ^ \mu z ^{ - n - 1 } $. 
+We shall think of $ j ^ \mu \left(  z  \right)  $ 
+as 
+\[
+ j ^ \mu \left( z  \right)   = i \sqrt{\frac{\alpha  }{  2  } } \partial  
+ X ^ \mu \left(  z  \right) 
+\] 
+Since $ \alpha  n ^ \mu \ket{ 0 } $ for $ n \geq 0 $ , 
+we can split $ j ^ \mu \left( z   \right)  $ into 
+creation and annihilation parts. 
+\[
+	j ^ \mu \left(  z \right)   = j _ + ^ \mu (z) + 
+	j _ - ^ \mu \left(  z  \right) 
+\] where we have $ j _ + ^ \mu \left(  z  \right)  
+ = \sum _{ n \geq 0 } \alpha _ n ^ \mu z ^{ - n - 1 } $. 
+ We define normal ordering 
+ $ :  : $ in the usual way, as moving 
+ all creation operators to the left, 
+ in any string of operators. In this case, 
+ in particular, that means 
+ \[
+	 : j ^ \mu \left(  z  \right)  j ^ \nu \left(  w  \right)  : 
+	  = j _ + ^ \mu \left( z  \right)  j _ + ^ \nu 
+	  \left(  w  \right)  + j _ - ^{ \mu  } \left(  z  \right)  
+	  j _ + ^{ \nu } \left(  w  \right)  
+	  + j _ - ^ \nu \left(  w  \right)  j _ + ^ \mu \left(  z  \right)  
+	  + j _ - ^ \mu \left(  z  \right)  j _ - ^ \nu \left(  w  \right) 
+ \] Note that 
+ \[
+	 : j ^ \mu \left(  z  \right)  j ^ \nu \left(  w  \right)  : 
+	 = j ^ \mu \left( z  \right)  j ^ \nu \left(  w  \right)  
+	 + \left[  j _ - ^ \nu \left(  w  \right)  , 
+	 j _ + ^{ \mu } \left(  z  \right)  \right]  
+ \] Recall from the point pf Wick's theorem 
+ that we could think of this commutator as a 
+ contraction. 
+ There are many ways we could evaluate this 
+ commutator. We can 
+ use the mode expansion to evaluate 
+ the commutator. So, 
+ \[
+	 \left[  j _ - ^ \mu \left(  w  \right)  , 
+	 J _ +^\nu  \left(  z   \right)  \right] 
+	  = \sum_{ m \ge  0 , n \ge 0 } \left[  
+	  \alpha _{ - m  } ^ \mu , \alpha _{ n  }^{ \nu } \right]  w 
+	  ^{ m - 1  } z ^{ - n -  1} = - n \sum 
+	  _{ m , n  } n \delta _{ m , n } \eta ^{ \mu \nu } w ^{ m - 1 } 
+	  z ^{ - n -  1 }  
+ \] This gives us 
+ \[
+  \dots =  - \frac{ \eta ^{ \mu \nu  } }{ z ^  2 } \sum _{ n > 0  }
+  n \left( \frac{ w }{ z }  \right)  ^{ n - 1 } = \frac{\eta ^{ \mu \nu  } }{ 
+  \left(  z -  w  \right)^ 2  }
+ \] This will converge if $  | z | > | w |  $. 
+ This tells us that 
+ the relationship 
+ \[
+	 : j ^ \mu \left(  z  \right)  j ^ \nu \left(  w  \right)  : 
+	 = j ^ \mu \left(  z  \right)  j ^ \nu \left(  w  \right)  
+	 + \frac{ \eta ^{ \mu \nu  } }{ \left(  z - w  \right)  ^  2 } 
+ \] where $ | z |  > | w |  $. 
+ We see that this relationship, 
+ the different between the normal product and 
+ the generic product is something that is 
+ singular. This is useful 
+ when evaluating contour integrals. 
+
+ Recall that $ j \left(  z  \right)  $ is a chiral 
+ primary, with conformal weight $\left( h , \overline{ h }  \right)   = 
+ \left( 1, 0  \right)  $. 
+ We also said that 
+ for $ | z | > |w | $, we have that 
+  \[
+	  j ^ \mu \left(  z  \right)  j ^ \nu \left(  w  \right)  
+	  = : j ^ \mu \left(  z  \right) j ^ \nu \left(  w   \right)  : 
+	  + \frac{\eta ^{ \mu \nu  }}{ \left(  z - w  \right)  ^{ 2 } } 
+ \] Similarly, we have 
+ that the converse statement 
+ reads for $ | w | > | z| $, 
+  \[
+	  j ^ \nu  \left(  w  \right)  j ^ \mu \left( z  \right)  
+	  = : j ^ \mu \left(  z  \right)  j ^ \nu \left(  w  \right)  : 
+	  + \frac{\eta ^{ \mu \nu } }{ \left(  z - w  \right)  ^ 2 } 
+ \] This means 
+ we have an expression for the 
+ radial ordered product. 
+ In the spirit for Wick's theorem, we 
+ write the radial ordering 
+ of the $ j $ operators 
+ as the sum of a normal ordered part plus a contraction part. 
+ We have 
+ \[
+	 \mathcal{ R } \left( j ^ \mu \left(  
+	 z \right)  j ^ \nu\left( w  \right)   \right) 
+	 = : j ^ \mu \left( z  \right)  j ^ \nu \left( w  \right)  : 
+	 + \wick{\c j ^\mu \left(  z  \right)  \c 
+	 j ^ \nu \left( w  \right)  }
+ \] Where, we have 
+ that in this case, $ \wick{\c j ^ \mu \left(  z  \right)  
+ \c j ^ \nu \left(  w  \right)  }$.  
+ This is referred to as a contraction. Recall from 
+ earlier that we defined the derivative of the 
+ mode expansion as $ \partial  X ^ \mu \left( z  \right)  
+ = - i \sqrt{\frac{\alpha'  }{ 2 }} j ^ \mu \left(  z  \right)    $. 
+ This means that the 
+ corresponding contraction 
+ between these derivative fields is 
+ \[
+	 \wick{ \c \partial  _ z X ^ \mu 
+	 \left(  z  \right)  \c \partial  _ w X ^ \nu 
+ \left(  w  \right)  } = \frac{- \alpha'  }{ 2 } \frac{\eta ^{ \mu \nu } }{ 
+ \left( z - w  \right)  ^ 2  } 
+ \] We get a contraction for 
+ free between the fields $ X ^ \mu \left( z  \right)  $ 
+ and $ X ^ \nu \left(  w  \right)  $ when 
+ we integrate this object through. 
+ When we integrate with respect to $  w $ then $ z $, 
+ we then get 
+ \[
+	 X ^ \mu \left(  z  \right)  X ^ \nu \left( w  \right)   = 
+	 - \frac{\alpha '   }{ 2 } \eta ^{ \mu \nu } 
+	 \log \left(  z-  w  \right) 
+ \] This is 
+ generalised in Wick's theorem
+ where we take all possible contractions 
+ of the fields in normal 
+ ordering. 
+ \begin{align*}
+	 \mathcal{ R } \left( \phi _ 1\left( z _ 1  \right)  \dots 
+	 \phi _ n \left( z _ n  \right)  \right)  &=  : \phi _1  
+	 \left(  z_ 1  \right)  \dots \phi _ n \left( z _ n  \right)  : 
+	 \\
+						  &+ \sum_{ i , j } 
+						  : \phi _ 1 \left( z _ 1  \right)  \dots 
+						  \wick{\c \phi _ i \left( z _ i  \right)  
+						  \dots \c \phi _ j \left( z _ j  \right)  }
+						  \dots \phi _ n \left(  z _ n   \right) \\
+						  + \dots 
+ \end{align*}
+
+ \subsection{Operator Product Expansions}
+ We construct something called an 
+ operator expansion.
+ This is a way to characterise the 
+ behaviour of a set of local 
+ operators at short distances. 
+ In particular, 
+ we are interested in the limit 
+ \[
+	 \lim_{ z \to w } O _ i \left( w  \right)  
+	 O _ j  \left( z \right)  \sum_ k f_{ij } ^ k \left( z - w  \right)  O _ k \left( w  \right)  
+ \] For example, we showed 
+ just now that 
+ \[
+	 \mathcal{ R } \left( \partial  X ^ \mu \left(  z  \right)  X ^ \nu \left(  w  \right)   \right)  
+	 = : \partial X ^ \mu \left(  z  \right)  \partial X ^ \nu \left(  w  \right)  : 
+	 - \frac{\alpha' }{  2  } \frac{\eta ^{ \mu \nu } }{ \left(  z -w  \right)  ^ 2 } 
+ \] This term 
+ is regular as $ z \to w $. 
+ We write that the average 
+ expected value, since our normal ordering term vanishes
+ \[
+	 \left< \mathcal{ R } \left(\partial  X^ \mu 
+		 \left(  z  \right)  \partial  X ^ \nu \left( w  \right)  \right>
+		 =  - \frac{\alpha'  }{ 2 } \frac{\eta ^{ \mu \nu } }{ \left( 
+		 z - w \right)  ^ 2 } 
+ \]  From now on, we weill 
+ implicitly assume radial ordering everywhere unless otherwise stated. 
+We could compute the correlation 
+function, which as in quantum field theory is just the
+correlation function between 
+\begin{align*}
+	\left< X ^ \mu \left(  z  \right)  X ^ \nu \left(  w  \right)   \right> 
+	&= \left< : X ^ \mu \left( z  \right)  X^ \nu \left(  w  \right)  :\right> 
+	- \frac{\alpha'}{2}  \eta ^{\mu \nu } \log \left(  z - w  \right)  \\
+	&=   - \frac{\alpha'  2 }{ 2 } \eta ^{ \mu \nu } \log \left( z - w   \right) 
+ \end{align*}
+ Recall from QFT last term that the two point 
+ propagator is 
+ precisely the Green's function for 
+ our Klein Gordon equation. Thus, we have 
+ that $ - \frac{\alpha'  }{ 2 } \eta ^{ \mu \nu } \log \left( z - w  \right)   $ 
+ is the solution for the Green's function for $ \frac{1}{ 2 \pi \alpha'  } \partial  
+ \overline{ \partial    } $. Similarly, we 
+ have our OPE expansions for $ \overline{  X }^ \mu  $ 
+ and their respective anti-holomorphic variables. 
+ This means that 
+ \[
+	 \overline{  X} ^ \mu \left( \overline{ z }   \right)  
+	 \overline{  X} ^ \nu \left( \overline{ w }  \right)  = - \frac{\alpha' }{  2 } 
+	 \eta ^{ \mu \nu } \log \left( \overline{ z } - \overline{ w }  \right) 
+ \]  So, we still have a singular 
+ part when we have $ z $ approach $ w $. 
+ On the other hand, when we take 
+ the radial ordering $ \overline{ X } ^ \mu X ^ \nu $, we 
+ have that this object is regular. We can use the knowledge 
+ of the  $ X ^ \mu $ OPE to now define operators like the stress tensor. 
+ In the classical treatment of our theory, we 
+ had that our stress tensor 
+ in terms of holomorphic variables is 
+ given by 
+ \[
+	 T \left(  z  \right)   = -\frac{1}{\alpha'}\partial  X ^ \mu \left(  z  \right)  
+	 \partial  X _ \mu \left(  z  \right) 
+ \] But, this doesn't apply when 
+ we are working with conformal field theory. 
+ In this case, we need to 
+ define the normal ordered part 
+ as the physical part of 
+ what we require. 
+ This means we take the sum of our radial ordered part 
+ as well as our contraction. 
+ We can take a look at why we 
+ need to do the $ T \left( z  \right)   X ^ \mu \left( z  \right)  $ 
+ OPE, for the purpose of finding out how things transform 
+ conformally. 
+ and take the sum. 
+ Since by definition, we have that 
+ the stress tensor is $ T (z ) $ physical, and therefore normal 
+ ordered, 
+ we have the product 
+ \[
+	 T \left(  z  \right) X ^ \mu \left( w  \right)   = 
+	 - \frac{1}{\alpha' } : \partial  X ^ \nu \left(  z  \right)  \partial  X _ \nu \left(  z  \right) : 
+	 X ^\mu \left(  w  \right) 
+ \] 
+ We make use of the contraction expression 
+ for $ \partial  ^ \mu \left( z   \right)  X ^ \nu \left(  w   \right)  = - \frac{\alpha' }{ 2 } \frac{\eta 
+ ^{ \mu \nu } }{ z -  w }  $. 
+Observing that the contraction 
+of a normal ordered product has a zero 
+contraction, we get that 
+when we apply Wick's theorem, 
+\begin{align*}
+	T \left(  z  \right)  X ^ \mu \left(  w  \right)  
+	&=  - \frac{2}{\alpha' } : \partial  X^ \nu \wick{
+	\c \partial  X _ \nu \left( z \right) : \c X^ \mu \left(  w  \right)  } + \dots \\
+	&=  - \frac{2}{ \alpha'  } \partial  X _ \nu \left(  z  \right)  
+	\left( - \frac{\alpha '}{ 2} \frac{\eta ^{ \mu \nu } }{ z - w }   \right) + \dots \\
+	&=  \frac{\partial  X^ \mu \left( z  \right)  }{z- w } + \dots
+\end{align*} 
+We could now just Taylor expand $ \partial  X^ \mu \left(  z  \right)  $ 
+about $ z = w $, which gives us 
+\[
+	\partial X^ \mu \left( z  \right)   = \partial  X ^ \mu \left( w  \right)  
+	+ \left( z - w  \right)  \partial  ^ 2 X ^ \mu \left( w  \right)  + \dots 
+\] The second part of this equation is regular so we 
+don't really care about this. Substituting this 
+into the above, we find that our expression for 
+the stress tensor combined with our 
+position field is 
+\[
+	T \left( z  \right)  X^ \mu \left(  w  \right)  
+	 = \frac{\partial  X ^ \mu  }{ z - w } 
+\] We can now compute the conformal transformation 
+associated with the generating vector $ v  $, of 
+$ X ^ \mu \left( w  \right)  $. We expect that 
+since this is a field, that we have $ X^ \mu \left(  w  \right)  $
+not to transform, so that $ h = 0$. Let's confirm our 
+suspicions here. Our conformal 
+transformation of the field is 
+\begin{align*}
+	\delta _ v X ^ \mu \left( w  \right)  &=  
+	\oint_{ z = w } \frac{dz }{ 2 \pi i } v \left( z  \right)  T \left(  z  \right)  X ^ \mu 
+	\left(  w  \right)  \\ 
+					      &=  \oint_{ z = w } \frac{dz }{ 2 \pi i } v \left(  z \right)  \frac{
+					      \partial  X ^ \mu \left( w   \right)  }{ \left(  z- w  \right)  }  \\
+					      &=  v \left(  w  \right)  \partial  X ^ \mu \left(  w  \right)  
+\end{align*} One can check 
+that this gives the correct conformal transformation 
+for $ X ^ \mu \left( z  \right)  $. Recall that 
+a general operator transforms under conformal transformations $ f \left(  z  \right)  
+ = z + v \left( z  \right)  $ exactly and infinitesimally as follows: 
+ \[
+	 \phi \left(  z  \right) = \left( \frac{df }{ dz }  \right)^{ h } \phi \left( 
+	 f \left(  z  \right)  \right) , \quad 
+	 \delta _ v \phi \left(  z  \right)   = 
+	 v \partial  \phi + h ( \partial  v  )  \phi 
+ \] Comparing this to the expression of 
+ $ \delta _ v \phi \left( v  \right)  $, this suggest 
+ that we have $ h = 0 $ for the conformal transformation 
+ of $ X ^ \mu (z)$. Recall that in 
+ general, we have that a conformal transformation 
+ can be written as 
+ and this gives us 
+\[
+   \delta _ v \phi \left(  z  \right)   = 
+   \int \frac{d w}{2 \pi i  } \mathcal{ R } \left( v \left( w  \right)  T \left(  w  \right) \phi 
+   \left(  z  \right)  \right)  
+\] Making use of the residue theorem, 
+which is 
+\[
+	\frac{1}{\left( n- 1  \right)  ! } 
+	\partial  _ z ^{ n -1  } f \left(  z \right)   = \oint_{ w = z } 
+	\frac{d w}{ 2 \pi i } \frac{ f \left(  w  \right)  }{\left(  w - z  \right) ^ n}
+\] This requirement fixes the 
+$ T \left( w  \right)  \phi \left(  z  \right)  $ OPE 
+to have the form
+\[
+	T \left(  w  \right)  \phi \left(  z  \right)  = \frac{h }{ \left( z - w  \right)  ^ 2 } 
+	\phi \left( z    \right)  + \frac{1}{ z - w  } \partial  \phi \left(  z  \right)  + \dots 
+\] For formal purposes, we will now take this AS 
+the definition for a field $ \phi \left(  z  \right)   $ 
+to be a chiral primary of weight $ \left( h , 0  \right)  $. 
+
+\subsection{The OPE of $ T \left(  z  \right)  : e ^{ i k \cdot  X \left(  w  \right)  } $}
+Let's calculate the OPE 
+expansion of the object $ T \left(  z  \right)  : e ^{ i k \cdot  X \left(  w  \right)  } : $. 
+Throughout this calculation we'll use a 
+few tricks, including contracting 
+things multiple times. 
+The first thing to do is to 
+recall the definition of the stress tensor 
+in holomorphic coordinates, the $ T _zz \left(  z  \right)  = T \left(  z  \right)  $ 
+component of the stress tensor is given by 
+\[
+ T \left(  z  \right)   = - \frac{1}{\alpha ' } : \partial  _ \mu X_1
+\] After single 
+contractions, and Taylor expanding out 
+$ \partial  ^ \nu \left( z \right) = \partial X ^ \nu \left( w   \right) 
++ \left( z - w  \right)  + \partial  ^  2 X ^ \nu \left(   w  \right)  $, 
+we find that the expansion from 
+single contractions is $ \frac{1}{z - w } \partial  \left(  e 
+^{ i k \cdot  X\left(  w  \right)  }\right) $. 
+The only other contraction we can 
+have are with two sets of contractions 
+from both of the terms in $ T \left( z   \right)  $. 
+Using the fact that we can have $ n \left( n - 1  \right)  $ contractions. 
+
+This term is 
+given by 
+\begin{align*}
+	T _ 2 &= - \frac{1}{\alpha '  } \sum _{ n \geq  2 } k _{ \mu _ 3 } \dots k _{ \mu _ n } 
+	\frac{i^ n  }{ n ! } n \left( n - 1  \right)  X^{ \mu _ 3 } \left(  w  \right)  
+	\dots X ^{ \mu _ n } \left( - \frac{\alpha '  }{ 2  } \right)  ^2 \frac{k ^  2 }{ \left( z - w  \right)  ^ 2 } \\
+	      &=  -\frac{\alpha'  }{4 } \frac{k ^ 2  }{ \left( z - w  \right)  ^ 2 } 
+	      \sum_{ n \geq 2 } \left( k \cdot  X  \right) ^{n - 2 } i ^ 2 i ^{ n - 2  }
+	      \frac{n  ! }{n ! \left( n - 2  \right)! }\\
+	      &=  \frac{\alpha ' }{ 4 } \frac{k ^ 2  }{ \left( z - w  \right)  ^ 2 } : e ^{ i k \cdot  X } : 
+\end{align*}
+Since this is all the possible 
+contractions, we 
+have that our OPE is 
+\[
+	T \left( z  \right)  : e ^{ i K \cdot  X \left(  w  \right)  } : = 
+	\left( \frac{\alpha ' k ^ 2 /  4 }{ \left(  z - w  \right)  ^ 2 } + \frac{\partial   }{ 
+	\left( z - w  \right)   }  \right)  e ^{ i k \cdot  X }
+\] This gives us an 
+indication of what the value of $ h = \frac{\alpha ' k ^  2 }{ 4} $. 
+It is easy to see that a similar 
+result holds for $ \overline{ T } \left( \overline{ z }  \right)  e ^{ i k \cdot  \overline{ X  } \left( 
+\overline{ w } \right)  } $. 
+More generally, 
+the operator which is a function of 
+both variables $: \exp \left( i k  _\mu X ^ \mu \left( w , \overline{ w }  \right)   \right)  :$
+has the conformal weight $ \left( h , \overline{ h }  \right)   = \left( 
+\frac{\alpha  'k ^ 2 }{ 4} , \frac{\alpha ' k ^ 2 }{ 4 } \right) $. 
+I'm not sure why this is true, but there's 
+a sense this is a purely quantum mechanical result. 
+
+Now, since $ T $ is such an important 
+object, it is of interest of us 
+to explore how $ T $ itself transforms 
+conformally. What is it's conformal weight, for example? 
+
+We now try to find out what the 
+$ T \left( z  \right)  T \left(  w  \right)  $ operator product expansion is. 
+This is related to something called the Virasoro algebra. 
+We use the fact that 
+\[
+ T \left( z  \right)   = - \frac{1}{\alpha' } : \partial  X \partial  X :
+\] From our previous analysis we found 
+that $ \partial X ^ \mu \left(  z  \right)  \partial  X ^ \nu \left(  w  \right)   = 
+- \frac{\alpha ' }{ 2 } \frac{\eta ^{ \mu \nu } }{ \left( z -  w  \right)  ^{ 2 } } $. 
+Again, we use Wick's theorem 
+and do some contractions. In terms 
+of single contractions, we have 4 of the same type of contraction, 
+where we contract $ \partial  X _ \mu \left( z \right) $ with $ \partial  X _ \nu 
+\left( w  \right)  $. In terms of double contractions, 
+we have two contributions. This 
+means that we ultimately have 
+\[
+	T \left( z  \right)  T \left( w  \right)  
+	= -\frac{2}{\alpha ' } \frac{\eta ^{ \mu \nu } }{ \left( z - w  \right)  ^ 2 } 
+	: \partial  X ^ \mu \left(  z  \right)  \partial  X ^ \nu \left(  w  \right)  : 
+	+ \frac{1}{2 } \frac{\eta ^{ \mu \nu } \eta _{ \mu \nu } }{\left( z  - w  \right)  ^ 4 }
+\] Ideally we want to rewrite this in terms 
+of $ T \left( w  \right)   $ so we 
+can compare it to the form of the conformal transformation. 
+To do this, we Taylor expand $ \partial  X ^ \mu \left(  z \right)  
+= \partial  X ^ \mu \left( w   \right)  + \left( z - w  \right)  \partial  ^ 2 X ^ \mu 
+\left( w  \right)  + \dots $. 
+This means we get a total expansion of 
+the form 
+\[
+	T \left( z  \right)  T \left( w  \right)   = 
+	\frac{D  / 2 }{ \left( z - w  \right)  ^{ 4 }  }  - \frac{2}{\alpha ' } \frac{1}{\left( z- w  \right)  ^ 2 } 
+	: \partial  X ^ \mu \partial  X _ \mu \left( w  \right)  :  - \frac{2}{\alpha ' } 
+	\frac{1}{z - w } : \partial  X _ \mu \partial  ^  2 X ^ \mu : 
+\] Therefore, we have 
+that, in terms of the 
+expression $ T \left( w  \right)  $, 
+that our operator product expansion 
+\[
+	T \left( z  \right)  T \left( w  \right)  
+	= \frac{D}{2 } \frac{1}{\left( z - w  \right)  ^{ 4 } } + 
+	\frac{2}{\left( z - w  \right) ^ 2  } T \left(  w \right)  
+	+ \frac{1}{z - w  } \partial  T + \dots 
+\]  The pole 
+of order 4 only vanishes if $ D = 0 $, which 
+suggests that $ T $ only transforms conformally if $ D  =0 $. 
+This suggests that $ T $ in fact isn't 
+the full form of the stress tensor - we need to consider 
+ghost fields. 
+
+\subsection{The Virasoro Algebra}
+We think a bit harder about this and introduce 
+a mode expansion. 
+From our reasoning above, 
+we have that the stress tensor is a field with weight $ 2 $, 
+so we can expand it in terms of these modes $ L _ n $. 
+\[
+ T \left(  z \right)   = \sum_ n L _ n z ^{ - n - 2 } 
+\] This may be 
+ inverted to give 
+ \[
+	 L _ n  = \oint_{ z  =0 } \frac{dz }{ 2 \pi i } z ^{ n + 1  } T \left(  z \right) 
+ \] and similarly for $ \overline{ T } \left( \overline{ z  }  \right)  $. 
+Consider the commutator 
+of these fields. 
+\[
+ \left[  L _ m , L _ n  \right]   = \oint_{ z = 0 } 
+ \frac{dz }{ 2 \pi i } \oint_{ w = 0 } \frac{dw }{ 2 \pi i } z ^{ m + 1 } w ^{ n + 1 } \left[ 
+ T \left( z  \right)  , T \left(  w  \right)  \right]  
+\] We have already argued 
+that we should think of 
+\[
+	\oint_{ z = 0 } \frac{dz }{ 2 \pi i } z ^{ m + 1 } \left[  T \left(  z  \right)  , T \left( w  \right)   \right]  
+	= \oint _{  z = w }  R\left( T \left( z  \right)  T \left( w  \right)   \right)  z ^{ m + 1 } 
+\] and so, what we're interested in then 
+is 
+\[
+ \left[  L _ m , L _ n  \right]   = \oint _{ w = 0 } 
+ \frac{dw }{ 2 \pi i } w ^{ n + 1 } \oint _{ z = w  } \frac{dz }{ 2 \pi i } z ^{ m + 1 } \mathcal{ R } 
+ \left( T \left(  z   \right)  T \left(   w  \right)  \right) 
+\] we use the TT OPE to evaluate this. 
+So, the only thing we care about is the 
+singular structure, since this is a 
+countour integral and regular terms 
+don't contribute. 
+Hence, this is 
+\[
+  = \oint_{ w = 0 } \frac{dw  }{ 2 \pi i } w ^{ n + 1 } 
+  \oint \frac{dz }{ 2 \pi i } z ^{ m + 1 } \left( 
+  \frac{D  /  2 }{ \left( z - w  \right)  ^{ 4 } } + \frac{ 2 T \left(  w  \right)  }{\left( 
+  z -  w \right)  ^{  2}   } + \frac{\partial  T \left(  w  \right)  }{z - w   }\right) 
+\] 
+Noting that 
+\begin{align*}
+	\oint \frac{dz  }{ 2 \pi i } \frac{z ^{ m + 1 } }{ \left( z - w  \right)  ^ 2 }  & = \left( m + 1  \right)  w ^{ m } \\
+	\oint_{ z = w } \frac{d z }{ 2 \pi i } \frac{z ^{ m + 1 } }{ \left( z - w  \right)  ^ 4 }
+											 & = \frac{1}{3 ! } \left( m + 1  \right)  m \left( m - 1  \right)  w ^{ m - 2 } 
+\end{align*}
+And so, we have that 
+the final result of the 
+commutator is that 
+\begin{align*}
+	\left[  L _ m ,  L _ n  \right]  &=  \oint_{ w = 0 } 
+	\frac{dw }{ 2 \pi i } w ^{ n + 1 } \left( \frac{D}{12 } m \left( m ^ 2 - 1  \right)  w ^{ m - 2 } 
+	+ 2 T \left(  w  \right)  \left( m + 1  \right)  w ^{ m } + \partial  T \left(  w  \right) w ^{ m + 1 } \right) \\
+					 &=  \frac{D }{ 12 } m \left(  m^ 2 - 1  \right)  \delta _{ m + n , 0} 
+					 + \left( m - n  \right)  L _{ m + n } \\
+\end{align*}
+The additional term is sometimes referred to as a 
+central extension or an anomaly term. 
+This is the Virasoro algebra. If you look 
+at just the terms generated by $ L _ 0 , L _{ \pm 1 } $, there is no 
+anomaly. 
+Similarly, for $ \left[  \overline{ L } _ m , \overline{ L } _ n  \right]  $ 
+this result holds. Note that the 
+$ T \left( z    \right)  \overline{ T } \left( w  \right)  $ OPE 
+is regular so $ \left[  L _ m , \overline{ L } _ n  \right]   = 0 $. 
+ 
+\subsection{The $ b , c $ ghost system}
+We will now work on a way to 
+remove the anomalous terms that we 
+get in the Virasoro algebra. To do this, we 
+will need to introduce ghost fields as we did 
+looking at our FP determinant. 
+The Faddeev Popov procedure 
+required us to to introduce 
+anti-commuting ghost fields: $ b _{ ab } \left(  z  \right)   $ 
+and $ c ^ a \left( z  \right)  $ such that 
+$ c ^ a \left( z   \right)  c ^ b \left(  w  \right)   = - c ^ b \left(  w  \right)  c ^ a \left(  z \right)  $. 
+
+Our ghost action is 
+\[
+	S \left[  b, c  \right]   = \frac{1}{2 \pi } \int_{ \Sigma } d ^ 2 \sigma \sqrt{ - h }  h ^{ ac } b _{ ab } \left( 
+	\nabla _ c c ^ b\right) 
+\] So, the total action 
+$ S = S _ p \left[  X  \right]  + S _{ gh } \left[  b, c \right]  $. 
+This allows us to cook up a stress tensor 
+which exhibits the conformal symmetry 
+that we want. 
+The ghost stress tensor is then, upon varying 
+the metric $ h _{ ab } $ appropriately in 
+our action, 
+\[
+	T_{ ab }  = - i \left( \frac{1}{2 } c ^ c \nabla _{ ( a  } b _{ b ) c  } 
+	+ \left( \nabla _{ ( a  } c ^ c  \right) b _{ b ) c }    - h _{ ab } \text{trace}\right)  
+	\] Notice that by
+	construction, this object is traceless, 
+	since we've removed the 
+	trace term at the end.
+	This is a bit of a difficult expression to work with, 
+	so let's fix $ h _{ ab }  = e ^{ \phi } \delta _{ ab } $ 
+	by working in the conformal gauge. 
+The total stress tensor is the contribution that we 
+get from the field $ X $ and the stress tensor which we got from the 
+ghost field. 
+\[
+ \mathcal{ T }  = T _ X + T _{ \text{gh}}
+\] Instead of working in 
+general indices $ b , c $  lets 
+now work with a Euclidean metric on 
+$ \Sigma $ and complex coordinates as before. 
+We cam write the two degrees of freedom 
+in $ b _{ab } $ as $ b \left( z  \right)  $ and $ \overline{ b } \left( \overline{ z }  \right)  $, 
+and the 2 degrees of freedom in $ c ^ a $ 
+as $ c \left( z  \right)   $ and $ \overline{ c } \left(  \overline{ z }  \right)  $. 
+The action then becomes 
+\[
+ S _{\text{gh}} \left[  b,  c  \right]   = \frac{1}{ 2 \pi } \int_{ \Sigma } d ^ 2 z 
+ b \overline{ \partial  } c + \frac{1}{2 \pi } \int_{ \Sigma }  d ^ 2 z \overline{ b } \partial  \overline{ c } 
+\] The total stress 
+tensor 
+\[
+	\mathcal{ T } \left(  z  \right)  = T _ X \left(  z  \right)  + 
+	T_{\text{gh } } \left( z  \right)  
+\] where we have 
+\begin{align*}
+	T \left( z   \right)  & =  - \frac{1}{\alpha ' } : \partial   X^ \mu \partial  X _ \mu \left( z  \right)  : \\
+	T _{\text{gh}}\left( z  \right)  &=  : \left( \partial  b  \right)  c \left( z  \right)  : 
+	-  2 \partial  \left( : bc \left( z   \right)  :   \right) 
+\end{align*}
+with similar expressions for the anti-homomorphic variables. 
+Since we have now $ X $ dependence from the ghost fields 
+and vice versa, we have only regular terms 
+when we do $ T _{\text{gh}} T_{ X } $ OPE. 
+So, we want to find the OPE of the ghost field on it's own, 
+which is going to be spacetime independent. 
+ 
+\subsection{The $b, c  $ OPE}
+The two point function (a Green's function) gives 
+the singular part of the $ b \left( z  \right)  c \left( w  \right)  $ OPE. 
+The two point function is 
+\[
+	\left< b \left( z  \right)  c \left( w  \right)    \right>  = 
+	\left< : b \left( z  \right)  c \left( w  \right)  :  \right> + \wick{ \c b \left(  z  \right)  \c 
+	c \left(  w  \right)  } = \wick{\c b \left( z  \right)  \c c \left(  w \right) }
+\]  This is also the green's function 
+for the holomorphic part of the action. 
+Recall that the 
+propagator of some field configuration 
+is the green's function of the 
+associated equation of motion. 
+In terms of the holomorphic part, our action is 
+$ \int d ^ 2 z b \overline{ p   } c $. Our 
+associated operator then, for the equation of motion of $ c $, 
+is the $ \overline{ \partial  } $ operator. 
+The classical green's function for $ \overline{ \partial  }  $ on the 
+sphere is just $ \frac{1}{ z - w }  $ is just $ \frac{1}{ z - w } $. 
+This can be shown using Stokes' theorem.
+We want to show that 
+\[
+	\overline{ p } G \left( b, c  \right)   = 2 \pi \delta \left( z - w  \right)  
+\] 
+so we have 
+\[
+	b \left( z  \right)  c \left( w   \right)  = \frac{1}{ z - w } + \dots c \left( z  \right)  b \left(  w \right) 
+\] if we swap $ w $ and $ z $ we get a change in sign, 
+but if we commute $ b  $ and see past each other we also 
+pick up a minus sign. 
+
+\subsubsection{The conformal weight of $ b \left( z  \right)  $ }
+The stress tensor is $ T  = \left( \partial  b  \right)  c  - 2 \partial  \left( bc \right)   $, 
+and so the OPE we want is 
+\begin{align*}
+	T \left( z  \right)  b \left( w  \right)  &=  
+	\left( \partial  b \left( z  \right)    \right) \wick{\c c \left( z  \right)  \c b \left(  w  \right) }
+	- 2 \partial  _ z ( b \left(  z  \right)  \wick{  \c c \left(  z \right)   ) \c b \left(  w  \right)   }\dots  
+	\\ 
+						  &= \frac{\partial  b \left(  z  \right)   }{ z -w } 
+						  - 2 \partial  _ z \left( \frac{b \left(  z  \right)  }{ z - w }  \right)  + \dots\\
+						  &=  
+						  \frac{\partial  b \left(  z  \right)  }{ \left( z - w   \right)   }
+						  - 2 \frac{ \partial  b \left(  z  \right)   }{z - w } 
+						  + 2 \frac{ b \left(  z  \right)   }{ \left( z - w  \right)  ^ 2 } + \dots \\
+						  &=  - \frac{\partial  b \left(  z  \right)   }{ z - w } + 
+						  \frac{ 2 b \left(  z  \right)   }{\left( z - w  \right)  ^  2 }  + \dots \\
+						  &=  - \frac{\partial  b \left(  w \right)   }{z - w} 
+						  + 2 \frac{ b \left(  w  \right)  }{\left(  z- w  \right)  ^ 2 } 
+						  + 2 \frac{\partial  b \left(  w  \right)  }{ \left(  z - w   \right)   } + \dots\\
+\end{align*} 
+Now, putting this in the form where 
+we can read off the conformal weight, 
+we get the result as 
+\[
+	T _{ gh } \left(  z  \right) b \left( w  \right)   = 2 \frac{ b \left(  w  \right)  }{ \left(  z - w  \right)  ^ 2 } 
+	+ \frac{\partial  b \left(  w  \right)   }{ z - w } 
+\] We conclude $ b \left( w  \right)   $ has weight $ h = 2 $. 
+We cought do $ c \left( w  \right)  $ to find $ h  = - 1 $,
+with similar expressions for the anti-holomorphic part.
+This gives the expression 
+\[
+	T _{gh }\left(  z  \right)  c \left(  w  \right)   = -\frac{1}{\left( z - w  \right)  ^ 2 } 
+	c \left(  w \right)  + \frac{1}{z - w } \partial  c \left(  w  \right)  + \dots 
+\] Hence we have that 
+$ c \left( w  \right)   $ has weight $ \left( h , \overline{ h }   \right)   = \left(  - 1 , 0  \right)  $. 
+This feels like the sort of thing 
+we should be getting, because we have the object $ b _{ ab } $ 
+which is some modified two form, and $ c ^ a $ has index 
+upstairs. So, this is roughly what we 
+expect. 
+We can now find the OPE between the ghost stress tensor and 
+itself, which is $ T_{gh}\left( z  \right)  T _{ gh } \left(  w  \right)   $. 
+Life is two short to do 
+this explicitly, and we get that 
+\[
+	T_{gh} \left( z  \right)  T _{gh } \left(  w  \right)  
+	=  - \frac{26 /2 }{\left( z - w  \right)  ^ 4  } + \frac{2}{\left( z - w  \right)  ^ 2 } T _{gh } \left(  w  \right)  
+	+ \frac{1}{z - w } \partial  T _{gh } \left( w  \right)  + \dots 
+\] Recall that from our 
+fields we have that 
+\[
+	T _ X \left(  z  \right)  T  _ X \left(  w  \right)  
+	= \frac{D / 2  }{ \left( z - w  \right)  ^ 4  } + \frac{2}{\left( z - w  \right)  ^ 2  }
+	T _ X \left(  w  \right)  + \frac{1}{z - w } \partial  T _  X \left(  w  \right) 
+\] and we have that $ T _ X \left( z   \right)  T _{ gh } \left( w   \right) $ 
+is regular. 
+This means that the OPE of the total stress tensor, 
+which is the stress tensor of the whole 
+theory $ T \left( z  \right)   = T  _  X \left( z  \right)  + T _{gh } \left(  z  \right)   $ 
+has the OPE expansion
+\[
+	\mathcal{ T } \left(  z  \right)  \mathcal{ T } \left( w  \right)  
+	= \frac{\left(  D - 26  \right)   / 2 }{ \left(  z - w  \right)  ^  4 }
+	+ \frac{2}{\left( z - w  \right)  ^ 2} \mathcal{ T } \left(  w  \right)  + \frac{1}{z -  w } \partial \mathcal{ T } \left(  w \right) 
+\] This is assuming 
+that we can treat the ghost fields independently. 
+If $ D = 26 $, the anomaly term, which is a pole of order 4, 
+vanishes and we have a consistent quantum conformal theory (the bosonic theory). 
+We got this result by looking at the contributions of two sectors. 
+The solution to resolving the tachyonic problem 
+is using supersymmetry. 
+To make this supersymmetric we need to add some world sheet fermions, 
+and add this on to the stress tensor. 
+If we do this, we get $ D = 10 $. 
+We'll say something briefly about reactions to this fact. 
+One reaction is that this is nonsense. Another reaction 
+is that this is interesting because we have a theory which 
+spits out a dimension, unlike other theories. 
+It could be that macroscopically, we have 4 dimensions with 
+the other dimensions compactified. 
+It may be that in quantum theories, that dimensions of 
+space-time are emergent from quantum theories in 
+some classical limit. 
+
+\subsection{Mode expansions for ghosts}
+In this section, we'll explore how to 
+build anti-commutation relation 
+We have that the conventional mode expansion 
+for the ghosts, given by the conformal weights, 
+are 
+\[
+	b \left(  z  \right)   = \sum _ n b _ n z ^{  -n -  2 } , \quad c \left(  z  \right)  
+	 = \sum _ n c _ n z ^{ - n + 1 } 
+\] thus, we have that 
+\[
+	b _ n  = \oint \frac{dz }{ 2 \pi i } z ^{ n + 1 } b \left( z  \right)  , \quad 
+	c _ n  = \oint \frac{dz  }{ 2 \pi i  } z ^{ n - 2 } c \left(  z  \right) 
+\]  Then, we have that 
+\[
+ b _ m c _ n + c _ n b _ m  = \left\{  b _ m , c _ n  \right\} 
+\] They obey fermionic statistics, 
+integer spin. 
+The above expression is 
+\[
+ \dots = \oint_{ z = 0 } \frac{dz   }{ 2 \pi i } z ^{ m + 1 } 
+ \oint _{ z = 0  } \frac{dw   }{ 2 \pi i } w ^{ n -2  } \left\{  b \left(  z  \right)  , c \left(  w  \right)   \right\} 
+   = \oint_{ z  =0 } \frac{dz  }{ 2 \pi i } \oint _{ z = w } \frac{dw }{ 2 \pi i } 
+   z ^{ m + 1  } w ^{ n -  2 } \mathcal{ R } \left( b \left(  z  \right)  c \left(  w  \right)   \right) 
+\] Now, using the 
+$ b \left( z   \right)  c \left( w   \right)  $ OPE 
+we can evaluate this anti-commutation relation as 
+\[
+ \left\{  b _ m , c _ n  \right\}   = \delta _{ m + n , 0 }
+\] 
+
+\subsection{The State-Operator Correspondence}
+For example, 
+we have the states $ \ket{ k }  = e ^{ i k \cdot  X } \ket{ 0 } $, 
+and $ \epsilon _{ \mu \nu } \alpha _{ -  1 } \overline{ \alpha } _{ - 1 } \ket{ 0 } $. 
+In 2 dimensional conformal field theory, to each physical 
+state there is an operator in the 
+operator algebra of the theory. 
+For example, 
+\[
+	\partial  X ^ \mu \left( z  \right)   =  - i \sqrt{ \frac{\alpha }{ 2 } }  \sum _ n \alpha _ n ^{ \mu } 
+	z ^{ - n - 1 } 
+\] We can construct a non-physical state as follows. 
+\[
+	\lim_{ z \to 0 } \partial  X ^ \mu \left( z  \right)  \ket{ 0 } 
+\] recalling that $ \alpha _ n ^ \mu \ket{ 0 }  =0 $ for $ n \geq 0$. 
+This gives 
+\[
+  - i \sqrt{\frac{\alpha ' }{  2 } }  \lim _{ z \to 0 } \sum _ n \frac{\alpha _ n ^ \mu }{ z ^{ n + 1 }  } \ket{ 0 } 
+   = - i \sqrt{\frac{\alpha '  }{  2 } }  \lim _{ z \to 0 } \sum _{ n \geq - 1 } \frac{\alpha _ n ^ \mu  }{ z 
+   ^{ n + 1  } } \ket{ 0 } 
+\] but since $ \alpha _ n ^ \mu \ket{ 0 }  = 0 $ for $ n \geq 0 $, this is 
+the state 
+\[
+- i \sqrt{ \frac{\alpha }{  2 } }  \alpha _{ - 1 } ^ \mu \ket{ 0 } 
+\] There are operators that  
+do not ...
+Similarly, we have that $ \lim _{ z , \overline{ z }  \to 0  } \partial  X ^ \mu \overline{ \partial   } X ^ \nu 
+e ^{ i k \cdot  X \left( z, \overline{ z  }    \right)   } \ket{ 0 }  = \alpha _{ -  1 } ^ \mu \overline{ \alpha  } _{ - 1 }^ \nu 
+\ket{ k }  $. 
+More generally, if we have a weight $ h $ chiral field 
+$ \phi \left(  z  \right)   $, then $ \phi \left( z  \right)   = \sum _ m \phi _ m z ^{ - n - h }  $. 
+Then, for 
+\[
+	\lim _{ z \to 0 } \phi \left(  z  \right)  \ket{ 0 } \text{ to exist }
+\] we require that $ \phi _ n \ket{ 0 }  = 0  $ for $ n > - h $. 
+Then, we have that 
+\[
+	\lim _{ z \to 0 } \phi \left( z  \right)  \ket{ 0 }  = \phi _{- h } \ket{ 0 } 
+\]  We will now look at the conditions for 
+this to be a physical state. 
+
+\subsection{BRST Symmetry}
+After Faddeev-Popov we had the action 
+\[
+ S \left[  X , b, c  \right]   = S \left[  X  \right]  + S _{ gh } \left[  b, c  \right]  
+\] and $ h _{ ab } $ was fixed to $ \hat{ h }_{ ab }  $. 
+We would like to see how the choice 
+$ \hat{ h}_{ab }  $ (doesn't influence the physics). 
+Let usa introduce a Lagrange multiplier field 
+$ B _{ ab } $ and the gauge fixing term in the action 
+\[
+ S _{gf} \left[  h , B  \right]   = \frac{1}{4 \pi \alpha ' } \int _{ \Sigma } 
+ d ^ 2 \sigma \sqrt{ - h }  B ^{ ab } \left( \hat{ h } _{ ab }  - h _{ ab }  \right) 
+\] This thoery has a residual rigid symmetry. 
+Invariance gives us clear physcial consistency conditions 
+and operators of the theory. 
+\pagebreak 
 \subsubsection*{Strings}
 \begin{itemize}
 	\item A string is two dimensional, 
@@ -1368,5 +3804,157 @@ so $\bra{ \chi }\ket{ \chi } =0 $.
 
 \subsection{Question 1}
 Here we are showing equivalence 
-of the Nambu-Goto action and the Polyakov action. 
+of the Nambu-Goto action and the Polyakov action.
+ 
+
+\pagebreak
+
+\section{Example Sheet 2}
+
+\subsection{Question 1}
+We are asserting that 
+our variations in moduli space should 
+be orthogonal to arbitrary diffeomorphism 
+variations generated by the vector $ v^ a  $. 
+This means for arbitrary $ v ^ a  $, we 
+have that 
+\[
+ \left( \delta _ v h _{ ab } \mid \delta _ t h _{ ab }  \right)   = 0
+\] This implies that, by the definition of 
+orthogonality of tensors provided in the definition of 
+the question, 
+\begin{align*}
+	0 &=  \int_{ \Sigma } d ^ 2 \sigma \sqrt{ - h }  
+	h ^{ ab } h ^{ cd } \delta _ v h _{ ab } \delta _ t h _{ cd} \\
+	&=  \int_{ \Sigma } d ^ 2 \sigma \sqrt{ - h}  
+	h ^{ ab } h ^{ cd } \left( \nabla _ a v _ b 
+	+ \nabla _ b v _  a  \right)  \delta _ t h _{ cd } \\
+	&=  2 \int _{ \Sigma  } d ^ 2 \sigma \left( 
+	\sqrt{ -h }  h ^{ ab } \nabla _ a v _ b \right)  h ^{ cd } 
+	\delta _ t h _{ cd }  \\
+	&=  0 
+\end{align*}
+Now the thing to notice here is that 
+this holds for arbitrary $ v $. This means that 
+supposing we can choose $ v $ appropriately, we find 
+$ h ^{ cd } \delta _ t h _{ cd } = 0 $.
+This is because we have an integral 
+of the form $ \int d ^ 2 \sigma f \left(  x  \right)  g \left( x  \right)    =0   $ 
+for arbitrary $ f = \sqrt{ -h }  h ^{ ab } \nabla _ a v _ b  $.
+So, $ g \left(  x  \right)   =0 $. This means 
+we're left with the result that 
+\[
+ h ^{ ab } \delta _ t h _{ ab }  = 0 
+\] 
+
+For the second part of the 
+question, we know we can write
+a diffeomorphsim and Weyl transformation as
+the sum of it's traceless part and a modified Weyl part. 
+\[
+ \delta _ v h _{ ab } + \delta _{\omega } h _{  ab }  
+ = \left( P v  \right)  _{ ab } + \left(  2 \omega - \partial  _ c 
+ v ^ c  \right)  h _{ ab }  = 
+ \left( P v  \right)  _{ ab } +  \left( 2 \overline{ \omega }  \right) h _{ ab }  =0  
+\] 
+This means that we 
+have 
+\begin{align*}
+	0 &=  \left( \delta _ t h _{ ab } \mid \left( P v  \right)  _{ ab } 
+	+ 2 \overline{ \omega } h _{ ab } \right)    \\ 
+	  &=  \left( \delta _ t h _{ ab } \mid (P v ) _{ ab }  \right)  
+	  + 2 \int d ^ 2 \sigma \sqrt{ -h }  h ^{ cd } h ^{ ab } \overline{ \omega } 
+	  h _{ cd } \delta _ t h _{ ab } \\ 
+	  &=  \left( \delta _ t h_{ ab } \mid \left( P v  \right)  _{ ab }  \right)  
+	  + 4 \int d ^ 2 \sigma \sqrt{ - h }  \overline{ \omega } h ^{ ab } \delta _ t h _{ ab }  \\ 
+	  & = \left( \delta _t h _{ ab } \mid \left( P v  \right) _{ ab }  \right)  
+\end{align*}
+
+\pagebreak 
+
+\subsection{Question 2}
+To calculate the variation with respect to 
+$ h $ in this question, we apply the usual rules 
+of differentiation but with variations instead.
+\[
+ \delta _ h \left< O _ 1 \dots O _ n \right> 
+ = \int \mathcal{ D } X i \delta _ h S e ^{ i S \left[  X, h  \right]  } O _ 1 \dots O _ n 
+\]
+However, from lectures, we know 
+what the variation of $ S $ with respect to $ h $ is. 
+\[
+ \delta _ h S  = -\frac{1}{4 \pi } \int d ^ 2 \sigma 
+ \delta h^{ ab  } T _{ ab }
+\] This means that our 
+corresponding variation in 
+our expectation value of 
+the observables is 
+\[
+ \delta _ h \left( O _ 1 
+ \dots O _ n \right)   = \int \mathcal{ D } X \left( 
+ \int d ^ 2 \sigma \sqrt{ - h  } \delta h ^{ ab } T _{ ab } \right)  e ^{ i S \left[  
+ X,  h \right]  } O _ 1 \dots O _ n 
+\] However, we switch 
+the order of integration here 
+and absorb $ T _{ ab} $ into 
+the definition of our expectation value. Thus, we find 
+that 
+\[
+	\delta _ h \left< O _1 \dots O _ n  \right> 
+	= -\frac{1}{4 \pi } 
+	\int d ^ 2 \sigma \sqrt{ -h } \delta h ^{ ab } 
+	\left< T _{ ab } O _ 1 \dots O _ n  \right>
+\] In the 
+case of a Weyl transformation, we have 
+that $ \delta h _{ ab }  = \omega h _{ ab } $. 
+Since our expectation value 
+should be invariant of transformations
+to the metric, we have that 
+\begin{align*}
+	0 &=   -\frac{1}{4 \pi} \int d ^ 2 \sigma 
+	\sqrt{ - h }  \delta h^{ ab } \left< T 
+	_{ ab } O _ 1 \dots O _ n \right> \\
+	&=  - \frac{1}{4 \pi } \int d ^ 2\sigma 
+	\sqrt{ - h }  \omega h ^{ ab } \left< T _{ ab } O _ 1 
+	\dots O _ n \right> \\ 
+	&=   - \frac{1}{4 \pi } \int d ^ 2 \sigma 
+	\sqrt{ - h }  \omega \left< T \indices{ ^ a _ a } 
+	O _ 1 \dots O _ n \right>
+\end{align*}
+Since we can pick $ \omega $ to be arbitrary 
+here, we must necessarily have 
+\[
+ 0  = \left< T \indices{ ^ a _ a } O _ 1 \dots O _ n   \right>
+\] 
+
+\subsection{Question 3}
+In this question, it's a matter of 
+going through the motions. 
+\begin{align*}
+	\delta S &=  - \frac{1}{4 \pi \alpha ' } 
+	\int d ^ 2 \sigma 2 \delta \left( \partial  _ a X  \right)  
+	\cdot  \partial  ^ a X \\ 
+	&=  - \frac{1}{2 \pi \alpha ' } \int d ^ 2 \sigma 
+	\partial _ a \left( v ^ b \partial _ b X  \right)  \cdot  \partial  ^ a 
+	X \\
+	&=  - \frac{1}{2 \pi \alpha ' } 
+	\int d ^ 2 \sigma \, \left(  \partial  _ a v ^ b  \right)  
+	\partial  _ b X \cdot  \partial  ^ a ^  X + v ^ b 
+	\partial  _ a \partial  _ b X \cdot  \partial  ^ a X \\ 
+	&=  -\frac{1}{2 \pi \alpha '  } \int d^ 2 \sigma \, 
+	\left( \partial  ^ a v ^ b   \right)  \partial  _ b X \partial  _ a 
+	X + \frac{1}{2 } v ^ b \partial  _ b \left( \partial  _ c X
+	\cdot  \partial  ^ c X  \right) \\
+	&=  - \frac{1}{2 \pi \alpha ' } 
+	\int d ^ 2 \sigma \left( \partial  ^ a v ^ b  \right)  
+	\partial  _ a X  \cdot  \partial  _ b X - \frac{1}{2 } 
+	\left( \partial  ^ a v ^ b  \right)  h _{ ab } 
+	\left( \partial  _ c X \cdot  \partial  ^ c X  \right)  \\
+	&=  \frac{1}{2 \pi  } \int d ^ 2 \sigma \partial  ^ a 
+	v ^ b \left[  \left( - \frac{1}{\alpha' }  \right)  
+	\left( \partial  _ a X \cdot  \partial  _ b X - 
+\frac{1}{2} h _{ ab } \partial  _ c \cdot  \partial  ^ c X   \right) \right] \\
+	&=  \frac{1}{2 \pi } \int d ^ 2 \sigma \left( \partial  ^ a 
+	v ^ b \right)  T _{ ab }  
+\end{align*} 
 \end{document} 
