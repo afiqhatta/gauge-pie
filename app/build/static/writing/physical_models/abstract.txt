@@ -1,0 +1,2 @@
+A set of notes on recent interesting developments in the space of 
+physically based modelling, computer graphics and physics simulation. 
