@@ -39,10 +39,16 @@ h2 {
   font-weight: normal; 
 }
 
+h3 { 
+  font-weight: normal; 
+}
 
+h4 {
+  font-weight: normal; 
+} 
 
 body {
-  font-family: HoeflerText-Regular, Cochin, Georgia, serif;
+  font-family: "Helvetica Neue", sans-serif;  
 }
 
 /* This is a thin line */
@@ -64,7 +70,8 @@ div.main{
   font-variant-caps: normal;
   font-variant-numeric: normal; 
   font-weight: 50;
-  margin-left: 170px;
+  margin-left: 250px;
+  margin-right: 600px;
   padding: 1px 16px;
   height: 1000px;
 }
@@ -79,3 +86,30 @@ div.mast {
   font-family: sans-serif; 
   margin-left: 50px;
 } 
+
+/* unvisited link */
+a:link {
+    text-decoration:none;
+}
+
+/* visited link */
+a:visited {
+    text-decoration:none;
+}
+
+/* mouse over link */
+a:hover {
+    text-decoration:none;
+}
+
+/* selected link */
+a:active {
+    text-decoration:none;
+}
+
+.center {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
+}

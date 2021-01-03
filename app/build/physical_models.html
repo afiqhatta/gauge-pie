@@ -44,6 +44,141 @@ Methods in Physically-based Modelling
 </h1>
     </div>
      
+<h2> Material Point Methods </h2> 
+
+<p>I think it is an amazing fact of life that humans can computationally model physical systems with such a high degree of accuracy. Perhaps more importantly for me, a good physical animation model just looks inspiring. This post is dedicated to some of the mathematical and computational methods which go into a high quality physically based animation. 
+
+In particular, I will start with a discussion on general continuum mechanics, and then outline some algorithms which are used for physically based modelling. 
+</p> 
+<img src="/static/snowolaf.gif" class="center"> 
+
+<h3> The basic language of continuum mechanics </h3> 
+
+<h4>  What is the framework in which we describe how particles move in the first place? What is the language in which we analyse how a system evolves? </h4>  
+<p> 
+Well, the first natural thing to do 
+would be to define some set in which particles 
+lie at some given time. 
+In this article, we start with an initial set of particles 
+at time zero, and we will call this domain \( \Omega^ 0 \subset \mathbb{ R } ^ d \). 
+Similarly, the set of particles at a given time \( t \) will lie 
+in a domain \( \Omega ^ t \subset \mathbb{ R} ^ d \). 
+Now, in studying deformations, we are 
+precisely looking at how particles move from 
+the domain at the initial time \( t = 0 \) to 
+the domain at some given time \( t \).
+</p> 
+
+<p> 
+How do we then denote specific particles in these domains? 
+Well, the notation which we will use throughout this article is 
+that the vector \( \mathbf{ X }  \) shall denote some arbitrary position 
+of a particle in our initial time domain \(  \Omega ^ 0 \). 
+And, at some reference time \( t \), the position of a particle shall be denoted 
+with the small case vector \(  \mathbf{ x } \). 
+</p>
+
+<p>
+Now that we have a starting point, 
+what is the language we use to describe a deformation? 
+Well, we use a map called a deformation map \( \phi( - , t ) : 
+\Omega^0 \to \Omega^ t  \)
+which takes a point \( \mathbf{ X }   \) 
+in our initial domain and maps it to the point \(  \mathbf { x} \)  
+as follows 
+
+$$ \mathbf { x }  = \phi ( \mathbf { X } , t ) $$
+This is already a good starting point to define some 
+basic transformations on a body of material. 
+For example, we can describe a rotation of 
+using the deformation map 
+$$ \mathbf { x }  = \mathbf{ R } \mathbf { X } $$ 
+
+</p> 
+<p>
+From this, we can define, based on some initial configuration \(  \mathbf { X }  \), 
+the velocity and acceleration simply by differentiating the 
+deformation map with respect to time. It is important to note that these 
+maps are still reliant on 
+our initial configuration \(  \mathbf { X } \), so we  
+call this the Lagrangian point of view. 
+\begin{align} 
+\mathbf { V } ( \mathbf{ X }, t )  &= \frac{ \partial }{ \partial t } \phi( \mathbf{ X }, t ) \\
+\mathbf { A }( \mathbf{ X } , t ) & = \frac{ \partial } { \partial t } \mathbf{ V } ( \mathbf{ X}, t ) 
+\end{align}
+The Lagrangian point of view is labelled as 
+such because since we are always referring to the 
+initial vector at \(  t = 0 \), 
+we are essentially tracking a single particle as 
+we evolve throughout time. 
+</p>
+
+<h3> Deformation </h3> 
+
+<p> 
+Given our deformation map, we can derive a quantity called the Jacobian, which will 
+prove essential in modelling elasticity of our object, 
+as well as looking at infinitesimal volume changes. 
+The Jacobian is a matrix of partial derivatives, given by 
+$$ \mathbf{F}  = \frac{ \partial \phi ( \mathbf { X } , t ) }{ \partial \mathbf { X } } $$ 
+Physically, applying this matrix to a 
+vector in our initial time domain 
+gives us the first order approximated motion. 
+
+</p> 
+
+<h2> Push-forwards, Pull-backs and the material derivative </h2> 
+
+<p> 
+Throughout the remainder of this article, we will make the assumption 
+that our deformation given by our flow map 
+\( \phi \) is a diffeomorphism, which just means that 
+this map is smooth and has an inverse. 
+So, think of this map as the kinds of 
+deformations we can get by moulding play-doh. 
+</p> 
+
+<p>
+The power of this assumption now means that we can 
+switch freely between some a configuration of material 
+at some point in time, and a configuration of material 
+at our initial time \(  t =0 \). 
+We define the lowercase \( \mathbf { v } ( \mathbf { x } ,t ) \)  
+to denote our velocity of a particle from the Eulerian point of view, 
+which means that we view it from a fixed frame since it's a function 
+of \(  \mathbf { x } \), which is a fixed position in a single reference frame. 
+</p>
+
+<p>
+As an exercise, one can prove that the velocity varies differently with 
+respect to time in the Eulerian picture as opposed 
+to the Lagrangian picture. 
+In the Eulerian picture, our acceleration is the 
+material derivative with respect to time of the velocity in the Eulerian picture. 
+This is given by
+$$ \frac{ D a_ i  ( \mathbf{ x} , t ) }{ Dt } = \frac{ \partial v _ i  ( \mathbf { x } , t ) }{ \partial t } + \frac { \partial v _ i ( \mathbf{ x } , t ) } {  \partial { x _ j } }  v _ j ( \mathbf{ x } ,  t )  $$
+</p> 
+
+
+<h2>Surface integrals for a push-forward</h2> 
+We can write a surface integral 
+for a function and it's pullback. This is given by 
+$$ \int_{ \partial B _ t } h ( \mathbf{ x }, t ) \cdot \mathbf { n } ( \mathbf { x } ) ds = \int_{ \partial B _ 0 } \mathbf{ H} ( \mathbf { X } ) \cdot \mathbf { F } ^ { -  T} ( \mathbf { X } , t )  J ( \mathbf { X } , t )  dS ( \mathbf { X} ) $$ 
+
+<h2> Stress tensors </h2> 
+<p> 
+There is a thing called the First Piola-Kirchoff stress. 
+This is derived from a strain energy density function given by 
+$$ \mathbf{ P }  = \frac{ \partial \psi }{ \partial \mathbf { F } }  $$ 
+There is a relationship with the 
+Piola-Kirchoff stress and the Cauchy stress. 
+$$ \sigma  = \frac{ 1}{ J } \mathbf{ P } \mathbf{ F } ^ T $$ 
+We have several ways to model \(  \psi \). 
+</p> 
+<h3>Neo-Hookean</h3> 
+<p> 
+
+</p> 
 
 
   </div> 
