@@ -35,7 +35,9 @@ h1 {
   font-weight: normal; 
 }
 
+/* The post names and links are h2 */ 
 h2 {
+  font-size: 32px; 
   font-weight: normal; 
 }
 
