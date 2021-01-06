@@ -35,7 +35,15 @@
 \usepackage{pgfplots}
 \usepackage[compat=1.0.0]{tikz-feynman}
 \usepackage{subfiles}
+\usepackage{comment} 
+\usepackage{fancyhdr}
 
+% fancy formatting
+\pagestyle{fancy}
+\fancyhf{}
+
+\lhead{An Introduction to Quantum Field Theory}
+\rhead{Afiq Hatta}  
 %% Commands for typesetting theorems, claims and other things.
 \newtheoremstyle{newline}
 {\topsep} 
@@ -97,11 +105,18 @@
 \title{Part III Quantum Field Theory}
 \author{Afiq Hatta } 
 \begin{document} 
+
 \maketitle
+
+\hypersetup{
+    hidelinks=true, 
+    colorlinks = false,
+    linkbordercolor = {white}
+}
+\pagebreak 
 \tableofcontents
 
-
-\pagebreak 
+\pagebreak
 
 \section{Why do we care about Quantum Field Theory? } 
 
@@ -2304,6 +2319,7 @@ Now we're in good shape to multiply our spinor by the Lorentz boost object.
 
 
 \pagebreak 
+\begin{comment}
 \section{Example sheet 1}
 
 Solved exercises and notes from example sheet 1. 
@@ -2692,7 +2708,9 @@ So in 4 spacetime dimensions, p = 4.
 \subsubsection*{Constructing a Noether current} 
 Working in 4 space time dimensions with $D = 1$, our field changes like $\phi \rightarrow \lambda^{ -1} \phi  = ( 1 - \log \lambda ) \phi$ for $\lambda $ close to $1$. In the argument above, we asserted that $\mathcal{ L} \rightarrow \lambda^{ - 4} \mathcal{L }  = ( 1  - 4 \log \lambda ) \mathcal{ L} $.  
 Hence $\delta \phi  =  - \phi  \log \lambda \delta $.  
-\pagebreak 
+\pagebreak
+\end{comment}
+\begin{comment} 
 \section{Example Sheet 2} 
 \subsection{Question 1} 
 
@@ -2761,6 +2779,5 @@ I just wanted to note that here, when we write $\phi( x)$, this is condensed not
 \[ \dot{\phi}(x) = \frac{i}{2} \int d^3 y \, [ \pi(y)^2, \phi(x) ] \] 
 However, we can apply the 'product rule' for operator commutators which is \[ [AB, C] = A[B, C] + [A, C]B \] 
 so that the above expression reads as follows: 
-
-
+\end{comment}
 \end{document}

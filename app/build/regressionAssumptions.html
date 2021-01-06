@@ -44,6 +44,30 @@ Interpreting Linear Regression
 </h1>
     </div>
      
+<p>One of the key strengths of linear regression in terms of modeling some phenomena is that it's easy to interpret. Whether we are econometricians, statisticians or physicists, we are ultimately trying to pin down whether some factor  $$A$$ *causes* another factor $$B$$, and a basic regression can be a powerful tool in fleshing out what this means.
+</p> 
+
+<p>
+Now, there will always be ongoing debate on the definition of causality, and I will cheekily avoid it by proposing what I think is a simple enough idea that everyone can agree on - we could use is the idea of 'ceteris paribus' - that is, 'if I keep everything else equal, and change $x$, does y change'?
+</p>
+
+<h2>Are our dependent variables random or fixed?</h2> 
+
+<p>
+First we ask: are we, as experimenters, in control of changing $X$ in the first place? Well, there are roughly speaking two things which could happen.</p>  
+
+<p>
+For example, suppose we wanted to see the effect of rainfall on atmospheric temperature in a specific place. It is not possible for us as feeble humans to control rainfall! However, we could just sit back and wait for the days in which it *does rain,* measure the rainfall, and also take measurements of the temperature at the time.</p> 
+
+<p>
+On the other, suppose we wanted to find out how quickly ice melts in a water bath. We could control the temperature of the water bath somewhat easily, and in this case we have *determined* X ourselves.</p>  
+
+<p>
+In the first case, we treat $X$ - the level of rainfall on a given day - as a random variable. As a random variable, this has some probability distribution, and each time we observe the rainfall on a given day, we are taking a *sample.* In the second case, we are controlling explicitly what the temperature is in this case. In the second case, we are treating $X$ as some fixed constant, a vector of real numbers in this case.</p> 
+
+<p>
+Economics is difficult because we cannot often run experiments with people and therefore can't control for other factors. So, the best we can do is observe, and hence in economics for a regression, we tend to treat our regressor as a random variable, and in say physics, we might not.</p> 
+
 
 
   </div> 
