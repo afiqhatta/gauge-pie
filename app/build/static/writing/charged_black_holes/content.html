@@ -1,0 +1,239 @@
+<p>
+
+In their 2006 paper "Kaluza Klein Black Holes with Squashed Horizons", Ken Mastuno and Hideki Ishihara
+construct a solution for a electrically charged black hole in five-dimensional Einstein Maxwell theory. 
+
+In that paper, the gauge potential is given as 
+\[ A = \pm \frac{ \sqrt 3 }{ 2 } \frac{ k } { r ^ 2 } dt. \]
+In this case, \( k\)  is a constant which is related to 
+the metric itself. This article will merely be a calculational exercise. I  will merely 
+go through an explicit calculation to get the charge associated with this this gauge potential, in 
+the far field metric, assuming that the gauge potential has this form.  
+
+We will be integrating over the constant time 
+and radial slice of the metric presented in eq (12) of (2006). 
+
+\[ ds^ 2 =  - V dT ^ 2 + \frac{ K ^ 2 } { V } d \rho^ 2 + 
+R^ 2 d \Omega_ { S^ 2 } ^ 2 + W^ 2 \chi ^ 2   , \quad R = \rho ^ 2 K ^ 2 , \, W ^ 2 = \frac{ r _ \infty ^ 2 } { 4 } K ^ { - 2},  \, K ^ 2 = \frac{ \rho +\rho_0 }{ \rho } \] 
+
+For details on the meaning of the various constants, refer to the paper. 
+</p> 
+
+<p> 
+To do compute a charge in a non-standard space-such as this, I will 
+<ul> 
+	<li> Compare the gauge potential in this case to the one with Coulomb's law to get a fell first.</li> 
+	<li> Outline the metric we are using to integrate over. </li> 
+	<li> Compute the electromagnetic field in these new coordinates. </li> 
+	<li> Compute the hodge product and do the integrate to get the charge, taking relevant limits. </li> 
+	<li> Attempt the above, but with a different metric (the 3 sphere), as well as dicuss whether the charge of an object is radius dependent, philosophically speaking </li> 
+</ul> 	
+
+<h3><b>Does this look familiar? </b> </h3> 
+
+<p>
+The first interesting to note is that this gauge potential 
+already looks similar to Coulomb's law in 3 dimensions. 
+In this case, we have an extra power 
+on the radial component. Coulomb's law usually 
+asserts that \( A \sim  r^ { - 1} dt \), when we write the gauge 
+potential as a one-form.
+</p>  
+
+<h3> <b> Switching to the appropriate coordinates </b> </h3> 
+<p>
+First, we change our 
+coordinate system to match the coordinates 
+used in the metric outlined in eq (12) of (2006). 
+We need to be careful to switch both the time and radial components. 
+We find that 
+
+\[ \begin{aligned} 
+A & = \frac{ \sqrt 3} { 2 } \frac{ 1 } { r ^ 2 } r _ + r _-  dt \\
+ & = \frac{ \sqrt 3 } { 2 } \frac{ r_ + r _ - } { r _ \infty ^ 2 } \left ( 1 + \frac{ \rho_ 0 } { \rho } \right) \frac { 1 } { \sqrt { k _ 0 }} d T 
+\end{aligned} \] 
+</p> 
+
+<p> 
+Next, we 
+calculate the 
+exterior derivative of this object to get the elecetromagnetic field tensor. 
+We differentiate with respect to \( \rho \) and attach the wedge. 
+We also make use of the substitution, in line (11) of the paper, 
+that \( \rho_ 0 / r _ \infty  = \sqrt{ k _ 0 } / { 2 } \) 
+This gives us that the 
+two form representing the electromagnetic field tensor 
+is given by 
+
+\[ 
+F =  dA = \frac{ \sqrt  3 } { 4 } \frac{ r _ + r _ - } { r _ \infty \rho ^ 2 } dT \wedge d \rho \] 
+
+</p> 
+
+
+<h3><b> Computing the hodge dual</b></h3> 
+<p> 
+It is straightforward to 
+show that the metric in the constant radial and time slice, 
+as shown in (12) of (2006), 
+satisfies the relation
+
+\[ \sqrt { \det g } = \sqrt{ 1 + \frac{ \rho_ 0 } { \rho } } \rho ^ 2 \frac{ r _ \infty } { 2 } \sin \theta  \] 
+
+We can use this to compute the Hodge dual. 
+Due to the antisymmetry of the elctromagentic tensor, 
+we can just multiply the prefactor of the two form
+by the square root of the determinant of the metric 
+and this is magically our component that we need for 
+the hodge dual. 
+We have that 
+
+\[ 
+( * F ) _ { \theta \phi \psi } = \sqrt { 1 + \frac{ \rho _ 0 } { \rho } } \left( - \frac{ \sqrt 3 } { 4 } r _ + r _ - \right ) \sin \theta \] 
+
+</p> 
+<p> 
+
+The metric defines our range 
+for the angular components as \( 0 \leq \theta <  \pi, \, 0 \leq \phi < 2 \pi, \, 0 \leq d \psi <  4 \pi \)  
+Now, all we have to do is compute the change by 
+integrating over this range, and then we take the radial component in the expression to infinity.  
+
+\[ Q = \frac{ 1 } { 8 \pi G } \int ( * F ) = \frac{ \sqrt 3 r _ + r _ -  }{ 32 \pi G } \int_ 0 ^ \pi   d \theta \sin \theta \, \int_0 ^ { 2 \pi }  d \phi \int_ 0 ^ { 4 \pi }  d \psi  = \frac{ \sqrt 3 } { 2 G } \pi r _ + 
+r _ - \] 
+
+</p>
+
+<h3> <b> We seem to get the same results using a standard 3-sphere </b></h3> 
+<p> 
+Note, in the standard case, 
+one can verify that using hyperspherical coordinates over the standard 3-sphere 
+with the gauge potential of the same form, 
+that we recover the exact same result, without having to integrate 
+taking \( \rho \to \infty \) as in the above derivation. 
+In other words, in the case of the standard 3-sphere, we 
+recover the same handy cancellation for which charge is never a function of 
+the radius of the surface at which we integrate it over. 
+
+This is distinct to the case where we have here, 
+where integrating over a given radius does alter our charge. 
+</p>
+<br> 
+<br> 
+<br>  
+</p> 
+
+<p> 
+</p> 
+
+<!--
+
+<p>
+The paper uses a change of 
+coordinates to show that the singularity in the 
+original metric is spatial infinity. 
+This is the coordinate change 
+\[ \rho = \rho_0 \frac{ r^ 2 }{ r^ 2 _ \infty - r^ 2 } \]
+
+This leads to a new metric which looks like 
+\[ ds^ 2 =  - V dT ^ 2 + \frac{ K ^ 2 } { V } d \rho^ 2 + 
+R^ 2 d \Omega_ { S^ 2 } ^ 2 + W^ 2 \chi ^ 2   , \quad R = \rho ^ 2 K ^ 2 , \, W ^ 2 = \frac{ r _ \infty ^ 2 } { 4 } K ^ { - 2},  \, K ^ 2 = \frac{ \rho +\rho_0 }{ \rho } \] 
+Since we are just looking to confirm what 
+the charge is, we will take \( \rho, T \) 
+as constant. This is equivalent to taking a constant time slice, and a constant radius. 
+Becuase we are doing this, the only constants we need to concern ourselves
+with are \( K , W\) and \( R \). 
+In the above, our last two components 
+consist of the metric for 
+the 2 sphere, as well as another component 
+which is added on. We have that 
+\[ d \Omega _ { S ^ 2 } ^ 2 = d \theta ^ 2 + \sin ^ 2 \theta d \phi ^ 2 , \quad \chi = d \psi + \cos \theta d \phi \] 
+ 
+</p> 
+
+<p> 
+Let's now calculate what the 
+electromagnetic field for this vector potential is. 
+In field theory, the components of the 
+electromagentic field tensor, 
+given some gauge potential \( A ^ \mu \), is usually written in 
+terms of its components as  
+
+\[ F _ { \mu \nu } = \partial _ \mu A _ \nu - \partial \nu A _ \mu \] 
+
+In differential geometry, 
+we can actually write the 
+gauge potential as a one form, and then compute the 
+exterior derivative to get the electromagnetic tensor 
+in the form of a two form. 
+In terms of our new coordinates, 
+our one form is 
+\[ A  = \pm \frac{ \sqrt { 3 } }{ 2 } \frac{ k } { r _ \infty ^ 2 } \left( 1 + \frac{ \rho_0 } { \rho } \right) dt \] 
+
+To compute the two-form, 
+we compute the exterior derivative 
+of this object. The computation of an exterior derivative 
+is relatively simple. We compute the 
+partial derivatives for each coordinate 
+and then put a wedge of that coordinate in front of the component. 
+In thise case, our electromagnetic field tensor 
+is 
+\[ F = dA = \mp \frac{ \sqrt   3} { 2 } \frac{ k } { r _ \infty ^ 2 } \frac{ 1 } { \rho ^ 2 } d \rho \wedge dt \] 
+
+</p>
+
+<h3> <b> Computing the charge in the metric </b> </h3> 
+
+<p> 
+The charge is the integral of the Hodge dual 
+of our electromagentic field in the entire space.
+We integrate over 
+the submanifold which is a constant slice in time, and constant radius. 
+First, we compute the determinant 
+of the metric in this slice. 
+It is easy to show that the angular part of the metric 
+has determinant 
+\[ \sqrt{\det g }  = R^ 2 W \sin ^ 2 \theta = \rho^ 2 \left( 1 + \frac{ \rho_ 0 } { \rho} \right) \frac{ r _ \infty } { 2 }  \] 
+
+This means that, 
+in components, we have that the 
+hodge dual of the electromagentic tensor 
+is  
+
+\[ (* F ) _{ \theta \phi \psi } = \frac{ \sqrt 3 } { 4 } \frac{ \rho_ 0 k } { r_ \infty } \left( 1 + \frac{ \rho_0 } { \rho } \right) \] 
+ 
+Alternatively, 
+we can write the Hodge dual as 
+\[ (* F ) _ { \theta \phi \psi } = \frac{ \sqrt 3 } { 2 } \frac{ \rho _ 0 } { \rho _ \infty ^ 2 } \sqrt { ( \rho_ 
++ + \rho _ 0 ) ( \rho _ - + \rho _ 0 ) } \sqrt{ 1  +\frac{ \rho_ 0 } { \rho } } \] 
+
+It is easy to show that 
+\[ r_ + r _ =  2 r _ \infty \sqrt{ \rho _ + \rho _ - }, \quad r _ \infty = 2    \sqrt { ( \rho_ 
++ + \rho _ 0 ) ( \rho _ - + \rho _ 0 ) } \] 
+
+Hence, upon doing these substituions, 
+we find that our Hodge dual simplifies 
+to 
+
+\[ ( * F ) _ { \theta \phi \psi } = \sqrt 3 \sqrt { \rho _ + \rho_ - } \frac{ \sqrt {  ( \rho_ + + \rho _ 0 ) ( \rho _ - + \rho _- ) } } { r _ \infty } \rho _ 0
+ = \frac{ \sqrt 3 } { 2 } \rho_ 0  \sqrt { \rho_ + \rho _ - }  \] 
+
+Integrating this over 
+the surface implies that 
+
+\[ Q = \frac{ 1 } { 8 \pi G }\int ( * F )  = \frac{ \sqrt 3  \pi \rho _ 0  } { G } \sqrt{ \rho _+ \rho _ - }  \] 
+
+This seems to disagree with the result in 
+the paper. 
+</p> 
+<p> 
+our first order of business is to 
+construct the 
+Questions 
+We generally do not expect the charge to dependent around the area of integration - it should be 
+well defined. 
+The far field case is well defined here; there seem to be no dependence on 
+rho as a function. 
+I am worried about the non far field case - does it cancel out?  
+
+-->  
