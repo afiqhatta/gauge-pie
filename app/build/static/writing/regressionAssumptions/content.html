@@ -1,24 +1,93 @@
-<p>One of the key strengths of linear regression in terms of modeling some phenomena is that it's easy to interpret. Whether we are econometricians, statisticians or physicists, we are ultimately trying to pin down whether some factor  $$A$$ *causes* another factor $$B$$, and a basic regression can be a powerful tool in fleshing out what this means.
-</p> 
-
 <p>
-Now, there will always be ongoing debate on the definition of causality, and I will cheekily avoid it by proposing what I think is a simple enough idea that everyone can agree on - we could use is the idea of 'ceteris paribus' - that is, 'if I keep everything else equal, and change $x$, does y change'?
+One of the key strengths of linear regression in terms of modelling some phenomena is that it's easy to interpret. Whether we are econometricians, statisticians or physicists, we are ultimately trying to pin down whether some factor \( A\)  *causes* another factor \( B \)  and a basic regression can be a powerful tool in fleshing out what this means. 
+</p> 
+<p>
+Now, there will always be ongoing debate on the definition of causality, and I will cheekily avoid it by proposing what I think is a simple enough idea that everyone can agree on - we could use is the idea of 'ceteris paribus' - that is, 'if I keep everything else equal, and change \( x \) , does \( y \) change'?
+</p>
+<h2>Are our dependent variables random or fixed?</h2>
+
+<p> 
+First we ask: are we, as experimenters, in control of changing \(X\)in the first place? Well, there are roughly speaking two things which could happen. 
+</p> 
+<p> 
+For example, suppose we wanted to see the effect of rainfall on atmospheric temperature in a specific place. It is not possible for us as feeble humans to control rainfall! However, we could just sit back and wait for the days in which it *does rain,* measure the rainfall, and also take measurements of the temperature at the time. 
+</p>
+<p> 
+On the other, suppose we wanted to find out how quickly ice melts in a water bath. We could control the temperature of the water bath somewhat easily, and in this case we have <i> determined</i> \( X \) ourselves. 
+</p>
+<p> 
+In the first case, we treat \(X\) - the level of rainfall on a given day - as a random variable. As a random variable, this has some probability distribution, and each time we observe the rainfall on a given day, we are taking a *sample.* In the second case, we are controlling explicitly what the temperature is in this case. In the second case, we are treating \( X \) as some fixed constant, a vector of real numbers in this case. 
+</p>
+<p> 
+Economics is difficult because we cannot often run experiments with people and therefore can't control for other factors. So, the best we can do is observe, and hence in economics for a regression, we tend to treat our regressor as a random variable, and in say physics, we might not.
+
 </p>
 
-<h2>Are our dependent variables random or fixed?</h2> 
+<h2>Modeling Ceteris Paribus</h2> 
 
 <p>
-First we ask: are we, as experimenters, in control of changing $X$ in the first place? Well, there are roughly speaking two things which could happen.</p>  
 
-<p>
-For example, suppose we wanted to see the effect of rainfall on atmospheric temperature in a specific place. It is not possible for us as feeble humans to control rainfall! However, we could just sit back and wait for the days in which it *does rain,* measure the rainfall, and also take measurements of the temperature at the time.</p> 
+Let's get down to business and attempt to write down a model for some phenomena we're interested in, and let's take \( x_i \) to be random this time. Our model of a linear regression means we would write down, for some samples \( y_i \) and \(x_i \), that 
 
-<p>
-On the other, suppose we wanted to find out how quickly ice melts in a water bath. We could control the temperature of the water bath somewhat easily, and in this case we have *determined* X ourselves.</p>  
+\[ y_i = \alpha + \beta x_i  + u_i \] 
 
-<p>
-In the first case, we treat $X$ - the level of rainfall on a given day - as a random variable. As a random variable, this has some probability distribution, and each time we observe the rainfall on a given day, we are taking a *sample.* In the second case, we are controlling explicitly what the temperature is in this case. In the second case, we are treating $X$ as some fixed constant, a vector of real numbers in this case.</p> 
+</p> 
 
-<p>
-Economics is difficult because we cannot often run experiments with people and therefore can't control for other factors. So, the best we can do is observe, and hence in economics for a regression, we tend to treat our regressor as a random variable, and in say physics, we might not.</p> 
+<p> 
 
+Now, what is \(u_i\) in this model? Well, in this case it must be that \( u_i \)  contains unobserved factors which our model can't explain. In the same vein as asking whether \( x_i \) causes \(y _i \) in a predictable way, we need to ask whether that a change in \( x \), all else equal, leads to a change in \( y \). The point in OLS is that we have a ceteris paribus assumption, that is, all else equal, one unit change in  \( x \) will lead to a \( \beta \)  unit change in the dependent variable. Now, for this ceteris paribus assumption to hold, it means that on average, the contribution from our unobserved factors should remain the same if we change \( x \). 
+
+</p> 
+
+<p> 
+
+This ceteris paribus assumption is encoded in one of the Gauss-Markov assumptions. For a correct, meaningful interpretation of a linear regression, we should check that on average, our unexplained factors shouldn't budge in response to changing our regressor.
+
+</p> 
+
+<p> 
+
+We can verify this by taking the average value of the residual sampled around different points, and then seeing if it changes, roughly by eye. 
+
+In this case, the residual here is interpreted as all other unobserved factors. This gives some restrictions on \( u \). First, we can without loss of generality set the expected value of \( u \) to be 0, since this information can be encoded in the intercept. How can we learn if our ceteris paribus assumptions hold from this model? 
+
+Well, we can check one of the first Gauss Markov assumptions, which is the conditional expectation of our unobserved component on our predictors.
+
+\[ E (u \mid x )= E( u ) = 0 \] 
+
+For a great resource on this, check out 
+
+[http://web.vu.lt/mif/a.buteikis/wp-content/uploads/PE_Book/3-9-chapter-summary.html](http://web.vu.lt/mif/a.buteikis/wp-content/uploads/PE_Book/3-9-chapter-summary.html)
+
+</p>
+<h2>The classic example about wages and education</h2> 
+
+<p> 
+
+If we were to pose a simple linear model, that wages are some linear function of years in education plus a residual. Is it true, that holding all else equal, increasing years in education will increase wages? 
+
+</p> 
+
+<p> 
+
+If the residual contains say innate ability, and the innate ability is expected to increase along with education, then the ceteris paribus assumption is now violated. Our estimates on the coefficients now become unreliable. 
+
+</p> 
+
+<p> 
+
+Posed another way, suppose an economist writes down a model such as 
+
+\[ wages = \alpha + \beta * edu + u \] 
+
+We ask the question: does this model allow us to make ceteris paribus conclusions about the causality of years in education on wages? We can of course write down this model, but we cannot keep \( u \) fixed, we can't ignore it. 
+
+We can only make a ceteris paribus effect estimate if our residual empirically satisfies the firat Gauss-Markov assumption. 
+
+</p> 
+
+<br> 
+
+<br>
+
+<br>

@@ -1,0 +1,178 @@
+<!doctype html>
+
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+
+  <script src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
+  <script src="js/scripts.js"></script>
+  <link rel="stylesheet" href="static/styles.css?v=1.0">
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+  <script>
+    MathJax = {
+     tex: {
+      inlineMath: [['$', '$'], ['\\(', '\\)']]
+     }
+    };
+    window.MathJax = {
+      loader: {load: ['[tex]/physics']},
+      tex: {packages: {'[+]': ['physics']}}
+    };
+  </script>
+  <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+  <meta charset="utf-8">
+  
+</head>
+
+<body>
+  <div class="mast">
+    <h3>Afiq Hatta's blog</h3> 
+  </div> 
+  <div class="sidebar">
+    <a href="index.html">Home</a>
+    <a href="writing.html">Writing</a> 
+    <a href="notes.html">Notes</a> 
+    <a href="about.html">About</a> 
+  </div>
+  <div class="main">
+    <div class="title">
+      <h1> 
+Examining Policy Uncertainty in Malaysia
+ 
+<hr class="thin">
+</h1>
+    </div>
+     
+<h2>Introduction</h2> 
+<p>
+In 2017, I did a project as a research intern 
+for the Malaysian Central Bank. The project was to examine ways in 
+which one could visualise the public's uncertainty about 
+government policy. To do this, I wrote some code to
+ scrape, and then filter out, several Malaysian websites related to policy uncertainty.  
+If you're too lazy to read on - here is the main result. I  
+used the data to construct an index of sorts to visualise the 'density' 
+of significant words which comprise this 
+uncertainty index.  
+</p>
+
+<img src="/static/epu.png" class="center">
+
+<p>
+After that, I tried to cluster news articles to 
+see if I could find meaningful groups as part of an exploratory analysis. 
+Finally, I then tried to create a metric which visualised the degree of Malaysian policy uncertainty 
+over time. 
+</p> 
+
+<h2>Plan</h2> 
+<ul>
+	<li>Motivation</li> 
+	<li>Writing a web scraper</li>
+	<li>Filtering out noise</li> 
+	<li>Constructing the index</li> 
+</ul>
+
+<h2>Motivation</h2> 
+
+<p>
+Baker, Bloom and Davis (2016) construct an index 
+of economic policy uncertainty based on newspaper coverage. 
+It is of interest to create something similar but in 
+the Malaysian context, but it would be an improvement 
+if there was an automated way of constructing such an index. 
+That is what I set out to do for this project. 
+In addition, I had a secondary goal which was more explanatory in nature. In index 
+is merely a measurement tool. Surely, however, the 
+<i>content</i> of an index and the story behind it 
+is just as interesting as the index itself. 
+This prompted me to look at other ways to visualise Malaysian policy uncertainty. 
+</p>
+
+<h2>Constructing a web scraper</h2> 
+<p> 
+First, I selected a range of popular Malaysian websites which 
+I thought would be a good sample of the general Malaysian news ecosystem. 
+I also made sure (from my own heuristics) that my choice of websites 
+were not from overtly opiniated sources.  
+</p> 
+
+<p> 
+I then used a mix of scrapy, beautifulsoup and the requests package 
+to set up an automated process to scrape the 
+links which were found in the search pages of these websites. I used 
+different keywords for  
+for each different newpaper.  
+Something which makes this job much easier 
+is understanding how to 
+select the right webpage elements using the XPath syntax - one can 
+look this up in https://devhints.io/xpath. I then wrote an 
+automated loop to download the text content associated 
+with each article that appeared in the search through a 
+web service. The diagram here 
+shows the flow:   
+</p>
+
+<img src="/static/scrape.png" class="center">
+
+<h2>Filtering out what we want</h2>
+<p>Even though I only scraped articles which appear 
+in the search - there was still a lot of 
+junk present in our articles. Spot checking showed 
+that only around 10 percent of the articles 
+contained content which one could say was related to 'policy uncertainty'. 
+I decided to use some simple heuristics to 
+help me choose the articles that matted. 
+</p>  
+
+<p>
+I chose articles which contained at least 
+one word from each of these lists: 
+<ul>
+	<li>Economy, economics, market</li>
+	<li>Uncertainty, uncertainties, uncertain</li>
+	<li>Najib, government, parliament, bnm, BNM</li> 
+	<li>Malaysia, malaysia, Kuala Lumpur</li>
+</ul> 
+</p> 
+<h2>Clustering the content of the articles</h2>
+<p> 
+Some thing simple that I tried to 
+help me visualise the content of the articles which 
+were selected was using simple k-means clustering.
+I converted the documents into a term-frequency, inverse-document frequency
+matrix and then clustered the documents into 5 clusters. 
+An image of the cluster and the composite documents is shown below.
+</p> 
+
+<img src="/static/clusteringLarge.png" class="center">
+
+<p> 
+The clusters seem to revolve around politics, ministers, currencies, growth and investment.
+I used this to guide what should 'constitute' our uncertainty index. 
+</p> 
+
+<h2>Constructing the visual index</h2> 
+<p> 
+To construct the final 
+index, I took the groups from the 
+unsupervised cluster and 
+literally just looked at the fraction of all articles which 
+were contained in this group.
+This generated the following kind of plot:   
+</p>
+
+<img src="/static/indexAnnotated.png" class="center">
+
+
+
+
+<br> 
+<br> 
+<br> 
+
+
+  </div> 
+</body>
+</html>
