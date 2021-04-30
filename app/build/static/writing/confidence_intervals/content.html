@@ -1,0 +1,59 @@
+<h2> Clearing up the mystery around the confidence interval </h2> 
+
+<p> 
+I often see confidence intervals used in statistical literature. However, its interpretation and true meaning was quite a difficult thing 
+for me to grasp - and I see the words misused quite often. 
+</p> 
+
+<p>
+Let's review how confidence intervals are constructed in the first place.
+Confidence intervals are meant to convey some degree of certainty around
+an estimated quantity taken from a sample of a population.
+
+As an example, we wanted to estimate the mean height of a certain population. Since measuring every single person would be 
+too taxing, we take a sample. For example, suppose we take a sample of 10 people taken from this Earth's population 
+of 7 billion people. Our estimated mean \( \hat \mu \) would just 
+be the arithmetic mean of the heights of those 10 people. 
+
+</p> 
+
+<p> 
+We would then construct a confidence interval around that. 
+In standard literature, the confidence interval for this mean would 
+be given by 
+
+\[ \left[  \hat \mu - z \frac{ s }{ \sqrt n } , \hat \mu + z \frac{ s }{ \sqrt n } \right]  \] 
+
+In the above, \( s , n \) are the sampling standard deviation and 
+the size of the sample respectively. We set \( z = 1.96 \) to build a 95% 
+confidence interval. 
+
+Now, on to the main point of the article. 
+What does this <i>mean</i> exactly? I initially thought that 
+this was the probability that the true value is contained in the interval. 
+However, in the frequentist view of the world, this doesn't really make 
+any sense as a statement since our true mean is a fixed object. 
+
+</p> 
+
+<p> 
+The way to square this philosophical fiddliness is it to modify our interepretation slightly and reframe it 
+in terms of repeated experimentation. For example, if I estimate the mean with some procedure and come up with two bounds, for example (90, 110) as some 95% confidence interval - this is **not the probability that the true value lies in the confidence interval.** 
+
+Instead, we are '95% sure the confidence interval <i>contains</i> the true value'. This means that, if we were to repeat the same procedure of constructing this interval 100 times, then we would construct an interval which contains the true value 95% of the time. 
+Hence, the nice definition of a 95% confidence interval is - 'if a were to repeat the same sampling procedure 100 times and construct a confidence interval each time, then 
+I expect that 95 times the confidence interval should capture the true value'. 
+</p>
+
+<h2>What does it mean to say am x% sure about something?</h2> 
+
+<p>
+For example, if I am 80% confident that I am right, what does that mean? Let's take a simpler case. For example, if I am 50% sure that the next coin flip would turn up heads, what does this mean? Does this equate to me saying that there's a 50% chance that it will? Asserting that the probability of something is not necessarily the same as being 'sure'. 
+
+There's a really nice article written [https://hbr.org/2018/07/if-you-say-something-is-likely-how-likely-do-people-think-it-is](https://hbr.org/2018/07/if-you-say-something-is-likely-how-likely-do-people-think-it-is)
+
+This has a nice example. Suppose we are asked how sure we were that a company was going to go bankrupt. Suppose we are given a million dollars if it does. We are at most 20% sure that it will go bankrupt if we'd rather win a million dollars from selecting say 20 green balls from a bag with 20 green balls and 80 blue balls, then choosing to bet on the company
+</p> 
+<br> 
+<br> 
+<br> 
