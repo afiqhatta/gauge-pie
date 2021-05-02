@@ -1,0 +1,111 @@
+<!doctype html>
+
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+
+  <script src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
+  <script src="js/scripts.js"></script>
+  <link rel="stylesheet" href="static/styles.css?v=1.0">
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+  <script>
+    MathJax = {
+     tex: {
+      inlineMath: [['$', '$'], ['\\(', '\\)']]
+     }
+    };
+    window.MathJax = {
+      loader: {load: ['[tex]/physics']},
+      tex: {packages: {'[+]': ['physics']}}
+    };
+  </script>
+  <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+  <meta charset="utf-8">
+  
+</head>
+
+<body>
+  <div class="mast">
+    <h3>Afiq Hatta's blog</h3> 
+  </div> 
+  <div class="sidebar">
+    <a href="index.html">Home</a>
+    <a href="writing.html">Writing</a> 
+    <a href="notes.html">Notes</a> 
+    <a href="about.html">About</a> 
+  </div>
+  <div class="main">
+    <div class="title">
+      <h1> 
+Mass to Grid transfers in Material Point Methods
+ 
+<hr class="thin">
+</h1>
+    </div>
+     
+<p>
+A previous post of mine outlined some math 
+that is used in physical modelling of materials used 
+in animation.
+
+Recall that in the Lagrangian 
+formulation of simulating particles, we track each particle as we go, since the 
+functions which encode its information (such as position, momentum and 
+the deformation gradient) are function of its initial position 
+
+</p> 
+<p> 
+The 'material point method' is relatively new in material simulation. 
+However, it was used in Frozen and Big Hero 6. It combines 
+both Lagrangian and Eulerian methods by first 
+transferring particle state information on to a grid, thereby working 
+in the Eulerian framework like it's a scratchpad.  
+Why are Eulerian methods better? Well, we get fracture and topological changes 
+for free. 
+
+<p>
+Next, we solve for velocities in the Eulerian 
+view and then switch back into the Lagrangian, 
+where deformation gradients are updated. 
+</p> 
+
+<p> 
+How do we switch from the Lagrangian point of view to the Eulerian? 
+Well, the first step is 
+finding a meaningful way to 
+transfer mass information about particles onto tthe grid. 
+To do this, we use the 
+interpolation functions outlined in 'A Material Point Method 
+for Snow Simulation' by Stomakhin et al (2013). 
+We write out grid masses like 
+
+\[ m _ i ^ n = \sum _ p m _ p w _{ip} ^ m \] 
+
+In this example, we decompose  
+the mass of the particle into 
+mass elements on fixed grid nodes, so that we are ready 
+to use the Eulerian framework. The functions act like smooethers 
+to spread out the mass of a single particle across 
+several nodes.  
+</p>
+
+<p> 
+In the animation below, 
+I coded a visulation of a blue particle moving in a circle, 
+accompanied with red particles on the grid 
+to show the mass weighting for each of the nodes throughout time. 
+As you can see, 
+when the particle moves to the respective grid notes, 
+the mass weighting of the node gets larger.
+</p>    
+<img src="/static/mass_transfer.gif" class="center">
+
+<br> 
+<br> 
+<br> 
+
+
+  </div> 
+</body>
+</html>

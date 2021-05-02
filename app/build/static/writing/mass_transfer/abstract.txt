@@ -1,0 +1,1 @@
+This is a quick visualisation of transferring the mass of particles and interpolating them onto a grid.
