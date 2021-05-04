@@ -1,0 +1,44 @@
+<p>
+In Landau, Lifshitz Volume 1 (Mechanics), there are a set of problems 
+in chapter 3 where one has to find the 
+period of a particle oscillating around in a potential well. 
+In problem 2b), the potential and its corresponding 
+Hamiltonian that is given is 
+\[ U = -U_ 0 / \cosh \alpha x , \quad  - U _ 0 < E < 0 \quad \text { with } E = \frac{ 1 } { 2 } \dot { x } ^ 2 - U _ 0 / \cosh ^ 2 \alpha x  \] 
+This is an interesting potential because in quantum mechanics, 
+this potential is known to be reflectionless under some conditions. 
+It is known as Poschl-Teller potential.
+</p> 
+
+<p> 
+To find the period of 
+the potential, we integrate from the stationary points 
+at which \( \dot{ x }  = 0 \). 
+
+\[ T = 2 \sqrt 2 \int _ 0 ^ { x ^ * } \frac{ dx}{ E  - U ( x ) }, \quad E = ( x ^ * ) \] 
+To simplify matters, we set \( \alpha, \, m  = 1 \), and we are left to 
+find the solution to the integral
+\[ T = 2 \sqrt 2 \int _ 0 ^ { x ^ * } \frac{ dx} { U _ 0 \sech ^ 2 x - | E | } \propto \int \frac{ dx \, \cosh x }{ \sqrt { U _ 0 - | E | \cosh ^ 2 x } }\] 
+In the above, we have that the 
+equilibirum point satisfies \( - U _ 0 \sech ^ 2 x ^ *  = E \). 
+ Now, this is a pretty tricky integral 
+to solve. The trick is to try to shoe-horn in a substitution 
+which will get rid of the numerator, and simplifies the denominator 
+with a trigonometric identity of some kind. 
+ 
+</p> 
+<p> 
+It turns out that after some fiddling, we 
+get that the right substitution to use 
+is 
+\[ \sinh x = \sqrt{ \frac{ U _ 0 - | E | }{ | E | } } \sin \theta \implies dx \, \cosh x  = \sqrt{ \frac{ U _ 0 - | E | }{ | E |} } d \theta \] 
+
+For this substituion, we find that the equilibrium point \( x ^ * \) is substituted out 
+to the value \(  \theta  ^ *  = \frac{ \pi } { 2 } \). If we 
+substitute the above into the expression, we get that the integral evaluates to 
+\[ \begin{aligned} T &= 2 \sqrt 2 \int 0 ^ { \frac{ \pi }{ 2 } } \sqrt { \frac{ U _ 0  + | E| }{ | E | } } \frac{ d \theta \cos \theta}{ \sqrt{ ( U _ 0 - | E | ) ( 1  - \sin ^ 2 \theta ) }} \\ & =  \frac{ \pi \sqrt 2  } { \sqrt { E } } \end{aligned} \]   
+</p> 
+<br> 
+<br> 
+<br> 
+<br> 

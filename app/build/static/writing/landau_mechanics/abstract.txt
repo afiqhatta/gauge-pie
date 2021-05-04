@@ -1,0 +1,4 @@
+Landau's book on mechanics contains problems 
+where the explicit calculation is sometimes omitted. 
+These calculations are sometimes not obvious. For the ones which I did manage to do, 
+I document them in this post. 

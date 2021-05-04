@@ -1,0 +1,85 @@
+<!doctype html>
+
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+
+  <script src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
+  <script src="js/scripts.js"></script>
+  <link rel="stylesheet" href="static/styles.css?v=1.0">
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+  <script>
+    MathJax = {
+     tex: {
+      inlineMath: [['$', '$'], ['\\(', '\\)']]
+     }
+    };
+    window.MathJax = {
+      loader: {load: ['[tex]/physics']},
+      tex: {packages: {'[+]': ['physics']}}
+    };
+  </script>
+  <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+  <meta charset="utf-8">
+  
+</head>
+
+<body>
+  <div class="mast">
+    <h3>Afiq Hatta's blog</h3> 
+  </div> 
+  <div class="sidebar">
+    <a href="index.html">Home</a>
+    <a href="writing.html">Writing</a> 
+    <a href="notes.html">Notes</a> 
+    <a href="about.html">About</a> 
+  </div>
+  <div class="main">
+    <div class="title">
+      <h1> 
+Modelling Snow
+ 
+<hr class="thin">
+</h1>
+    </div>
+     
+<p>
+The stress of a Cauchy stress of a material is 
+an essential thing to compute when running any sort of material 
+simulation algorithm. 
+For example, knowledge of the Cauchy stress is required 
+to compute any type of force update on grid nodes, if the 
+algorithm uses sn Eulerian approach. The Cauchy stress \( \sigma \) 
+can be conviniently written in terms of the elastic part of 
+the deformation gradient. 
+
+\[ \sigma _ F = \frac{ 1 } { J } \frac{ \partial \psi } { \partial \mathbf F _ E } \mathbf F _ E ^ T \] 
+ 
+
+For snow, Stomakhin et al. (2013) propose that a realistic model has elasto-plastic energy density which can be written as 
+
+\[ \psi ( \mathbf F _ { E } , \mathbf F _ P ) = \mu ( \mathbf F _ P ) | \mathbf F _ E  - U V ^ T | ^ 2  +  \frac{1 } { 2 } \lambda ( \mathbf F _ P ) ( J _ E  - 1) ^2 \] 
+
+where in this case, we can decompose the elastic part of the deformation gradient 
+into a singular value decomposition: \( \mathbf F _ { E}  = U \Sigma V ^ T \). In the above, 
+\( \mu , \lambda \) are hardening functions called Lame parameters, which are 
+functions of the plastic part of our energy density.  
+</p> 
+
+<p> 
+A simple computation using the fact that \( \frac{ \partial } { \partial \mathbf F _ E } \det ( J )  = J  \mathbf F _  E ^ { - T } \) 
+reveal that our Cauchy stress can be written as 
+
+\[ \sigma = 2 \mu ( \mathbf F _ E  - U V ^ T ) F _ E ^ T + \lambda ( J _ E  - 1 ) J  \] 
+In the material point method, Stomakhin clamps the 
+eigenvalues of \( \mathbf F _ E \) between critical values, so that plastic deformation is induced 
+to occur. 
+In practice, we then update these values in an algorithm like MPM. 
+</p> 
+
+
+
+  </div> 
+</body>
+</html>
