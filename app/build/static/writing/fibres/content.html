@@ -1,0 +1,152 @@
+<p> 
+In general relativity, we work with vector spaces attached to 
+points on manifolds. Recall that a manifold 
+is a space where for each point, there is a neighbourhood which can 
+be mapped smoothly to a subset of \( \mathbb{ R } ^ n \).
+
+In undergraduate general relativity, 
+these kinds of spaces are only considered locally 
+around a point on this manifold. However, it is useful to 
+consider how the vector spaces 'roll' across the manifold.
+In other words, we want to formalise the entire space of tangent spaces 
+attached to each point of the manifolds. For this purpose, 
+we need to use some math in the fields of geometry and topology.   
+This article will flesh out what a fibre bundle and a fbration, and will give some examples. 
+</p> 
+
+<p> 
+To analyse this kind of science, we use 
+the idea of a fibration - which in topology is  
+when we use one space as a parameter space for a bunch of other spaces. 
+For example, think of a sphere and attach a tangent
+plane to every single point. 
+We can think of this as a space in which locally, 
+every point looks like a 'product space'.  
+</p>  
+
+<h2>Some basic point-set topology</h2> 
+<p>
+A topological space has a pretty formal definition. 
+It is a space in which the idea of 'closeness' and 'neighbourhoods'
+are well defined in terms of open sets. Formally, 
+a topological space is defined to be a space endowed with a set of 'open sets'. 
+\( T = ( x , \tau \) \), where \(x \in X \), and \( \tau \in P ( X ) \). 
+
+A topological space has to satisfy a few axioms. 
+Firstly, the empty set and the set itself must be open sets. 
+Secondly, any union of open sets must be an open set. 
+Finally, an finite intersection of open sets must be an open set. 
+</p> 
+
+<p> 
+To understand what a fibre bundle is, we have to understand what a 
+product topology is. A product topology is 
+a topological space induced when we have multiple spaces. The product topology
+is the coarsest topology such that the projection function is 
+a continuous function (defined in the topological sense). 
+</p>
+
+<p> 
+For example, let \( X _ 1 = \mathbf{ R } \), and \( X _ 2 \) also be the real line. 
+Let the topologies for both sets be the topologies induced by the standard Euclidean metric. 
+We define the projections 
+\[ p _ i ( x _ 1 , x_ 2 ) \mapsto x_ i \]
+and it is clear to see that this projection is continuous with respect to the 
+topology induced by the two dimensional Euclidean metric, and hence the product topology is 
+precisely this. 
+</p> 
+
+<h2>Fibre bundles</h2> 
+<p> 
+A fibre bundle is a space in which we can 'push down' the space to a smaller base space. 
+The inverse function of this projection must map any given neighbourhood to a product space locally. 
+More formally, a fibre bundle is a set of topological spaces \( E, B , F\), paired with a continuous 
+surjection \( \pi \), which satisfy some conditions. 
+
+<ul> 
+	<li> Firstly, we must have that \( \pi : E \to B \) is a continuous surjection. </li>
+	<li> Secondly, given some neighbourhood in our base space, there exists some continuous, invertible map which gives 
+		us a homeomorphism from the inverse of the projection to a product space \( B \times F \), of the base space and 
+		fibre. In other words, given some \( b \in B \), a point in our base space, we can construct a local neighbourhood 
+		\( b \in U _ b \), and we find the homeomorphism 
+		\[ \pi ^ { -1 } ( U _ b ) \simeq B \times F \] </li> 
+	<li> Finally, there is a compatibility condition here. The homeomorphism which takes \( \pi ^ { - 1} ( U _ b ) \) to 
+		\( B \times F \) should satisfy 
+		\[ \text{Proj_1} \circ \phi = \pi \] defined on \( \pi ^ { - 1} ( U _ b ) \) </li>
+</ul>
+
+The interesting part is that this is a weaker condition than 
+being a product space globally. For example, there are 'non-trivial' fibre bundles 
+in which the space itself can't be written as a product space globally, but locally 
+we have that neighbourhoods of the base space are homeomorphic to fibre bundles. 
+<h3> Trivial fibre bundles </h3> 
+<p>
+An example of a 
+trivial fibre bundle with a base space \( S ^ 1 \) and with fibres 
+\( [ 0, 1 ] \) is just a cylinder. 
+We construct the product space 
+\[ S ^ 1 \times [ 0 , 1 ] = \{ (x, y, z) \mid x^ 2 + y ^ 2 = 1, \quad 0 \leq z \leq 1 \}  \]
+We define our projection from the total space 
+to the base space as the map \( p : S ^ 1 \times I \to S ^ 1 \), 
+given by mapping 
+\[ ( x , y, z ) \mapsto ( x, y ) \] 
+Given a small neighbourhood on this circle after the projection,
+the inverse map is homeomorphic to the product space by definition. 
+If we take a small segment from the circle, the 
+pre-image of the map is just a slice of this circle.  
+</p>
+<h2>Non-trivial fibre bundle examples</h2> 
+<p>
+Given a pair of topological spaces, it 
+is easy to construct a fibre bundle in which our global space looks like a
+product. For example, if we take our manifold 
+to be be a sphere \( S ^ 2 \), and another space \( \mathbb { R} \), 
+we could take the product space of the two and define a projection map 
+onto our base space. 
+</p> 
+
+<p> 
+The first interesting example of a non-trivial fibre bundle 
+is a Mobius strip. If we call the total space of the 
+Mobius strip \( E \), and let the base space \(B\) be the centre circle of this space, 
+then we can use the following parametrisation to show that it is indeed a fibre bundle. 
+</p> 
+<p> 
+First, parametrise our Mobius strip with 
+the coordinates
+\[ x ( u, v ) = ( 1 + \frac{ v }{ 2 } \cos \frac{ u } { 2} ) \cos u, \quad y ( u , v ) = ( 1 + \frac{ v } { 2 } \cos \frac{ u } { 2 } ) \sin u , \quad z ( u , v) = \frac{ v }{ 2 } \sin \frac{ u } { 2 } \]
+
+<h3><b>Projecting onto our base space</b></h3>
+Our projection map \( \pi \) shall be the map when we set 
+\[ ( x ( u, v ), y ( u, v ), z ( u , v) ) \mapsto ( x ( u , 0) , y ( u, 0 ) , z ( u , 0 )) \mapsto ( x( u , 0 ) , y ( u , 0 )) = ( \cos u, \sin u )\]  
+This is continuous and surjective.
+Now, for this example, let's take \( u = \delta \in ( - \delta ^ * , \delta ^ * ) \). 
+where \( \delta ^ * \) is small, so that we have no problems with invertability. 
+In this case, our base neighbourhood is 
+\[ U _ 0 = \{ ( 1 , \delta ) | \delta \in ( - \delta^ * , \delta ^ * ) \} \] 
+
+<h3><b>Building the inverse map into the product space</b></h3> 
+The inverse space is 
+\[ \pi ^ { -1 } ( U _ 0 ) = \left( \left( 1 + \frac{ v } { 2 } \cos \frac{ \delta } { 2 } \right) \cos \delta , \left( 1 + \frac{ v} { 2} \cos \frac{ \delta } { 2 } \right) \sin \delta , \frac{ v } { 2 } \sin \frac{ u } {2} \right) = \left( \left(1 + \frac{ v} { 2} \right) , \left( 1 + \frac{ v } { 2 } \right) \delta , \frac{ \delta v} { 4 } \right) \] 
+
+We construct the map to the product space 
+as follows.
+We take the map 
+\[ \phi : ( x , y, z ) \mapsto ( 1 , y / x, z / x ) \]
+This is a homeomorphism since the map has a well defined derivative in our neighbourhood
+and so an inverse exists. 
+Applying this to the preimage, we have that 
+\[ \phi ( \pi ^ { -1 } (U _ 0 ) ) = \{ ( 1 , \delta, \frac{ \delta v } { 4 + 2 v } ) \}  = \{ ( 1 , \delta) \}  \times \{ \frac{ \delta v } { 4 + 2 v } \}  \simeq  B \times F \] 
+If we project down onto our first factor (the first two components), we get our 
+original section of our base space. 
+So, this is a fibration. 
+ 
+ 
+</p> 
+<br> 
+<br> 
+<br> 
+
+
+
+</p>

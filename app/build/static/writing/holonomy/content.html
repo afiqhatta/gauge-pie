@@ -1,0 +1,134 @@
+<p> 
+Let's first warm up with some differential 
+geometry. Given a manifold \( M \), we 
+can take a point \( p \) on the manifold 
+and then define a tangent space on it. This tangent space 
+is has a basis of vectors, which are differential operators 
+which take a function defined on the manifold, to the derivative 
+in that given direction. 
+</p> 
+
+<p> 
+For example, let's take a two sphere. 
+We can parametrise the upper hemisphere of the two 
+sphere in terms of coordinates \( \theta, \phi \), 
+and define a function \( f : S ^2 \to S ^ 2 \) locally 
+around the point \( p \) that is differentiable. 
+For example, we may wish to define  
+\[ f ( \theta , \phi ) = \frac{ \theta } { \phi} , \quad \phi \neq  0 \] 
+In this case, we could apply the vector 
+\( X = \partial _ \theta \) at the point \( p = ( 1, 1) \), 
+and this would spit out a real number. 
+</p> 
+
+<p> 
+The tangent space is a vector space. 
+Like all vector spaces, we can define the dual vector space which 
+is the space of linear maps from the vector space. 
+This is also called the space of one forms. 
+We can wedge one forms together which, 
+is the antisymmetric sum of the tensor 
+product of the one forms. 
+This is called the exterior product, and 
+is akin to the cross product in a vector space. 
+For example, the 
+exterior product is 
+\[ dx^ 1 \wedge dx ^ 2 = dx^ 1 \otimes dx ^ 2 - dx^ 2 \otimes dx ^ 1 \] 
+</p> 
+
+<p>
+The vector bundle is a space 
+in which every point on the manifold locally looks like a product space 
+with a vector space. By this, we mean that 
+a vector bundle \( E \) can be characterised by 
+a map \( E \to M \) such that for all \( m \in M \), 
+the inverse map applied to a single point looks like a vector space.
+The easiest example to grasp is just \( R ^ 2 \) for example. 
+
+Take \( M = \mathbb { R } \), and construct the map 
+\[ \mathbf { R } \times \mathbf { R } \to \mathbf { R } \] 
+by just projecting down into the first coordinate. 
+Furthermore, we also notice that the inverse of a local neighbourhood of 
+the target manifold also looks like a product space locally. 
+</p> 
+
+<p> 
+A principle bundle is a group theoretic version of a
+vector bundle. Similarly to a vector bundle, 
+it is a space endowed with a projection 
+into the base manifold. However, 
+in this case, if we have a point on the manifold - the 
+inverse no longer needs to be a vector space. It 
+is instead a Lie group. 
+
+For the principle bundle, we have a smooth and 
+free group action acting on the bundle. In addition, 
+the projection must be a fibration - that is, 
+the inverse must be a group orbit acting on a point. 
+The Lie group acts on the point in the manifold freely. 
+
+</p>  
+<h2>Basic group theory</h2> 
+<p> 
+
+Suppose we have a space, such as a manifold. 
+We can transform this space according to a group action. 
+A group action of a group \( G \) onto a space 
+\( X \) is a mapping 
+\[ \phi : G \times X \to X \] 
+which satisfies a few axioms. Firstly, the 
+idenitity element acting on the space should do nothing 
+to the space. Secondly, the 
+composition of transformations should 'make sense', 
+in the sense that combining two group transformations should essentially be a 
+homomorphism. In other words, we should have 
+that 
+\[ \begin{aligned} e \cdot x & = x \text{ for all } x \in X \\ g \cdot ( h \cdot x )  &= ( g \cdot h ) \cdot x, \quad \forall g, h \in G, \, \forall x \in X \end{aligned} \]
+In other words, group actions are a homomorphism from 
+a group to the set of transformations of a set \( X \), where 
+the binary operation on the set of transformations of a given set is just 
+function composition. 
+
+</p> 
+<p> 
+A free group action is 
+an action in which for all \( g \in G \), 
+if there exists a fixed point, then the point is the identity. 
+There is a 
+</p>
+<h2>Vector and Principle bundles</h2>
+<p>
+A princple bundle is a fibration of 
+a manifold which has some associated group action. 
+A vector bundle is a manifold with a fibre which locally looks like a vector 
+space. 
+<p> 
+
+Lie groups are groups which 
+have a manifold structure - the group can 
+be parametrised in terms of a set of coordinates 
+on some space. Cartan classified these kinds 
+of groups in the Cartan classification, which includes 'exceptional groups' 
+which don't fall into any sort of classification. 
+Funnily enough, these groups have nice applications in theoretical physics. 
+</p> 
+
+<p>
+\( G _ 2 \leq GL ( 7 , \mathbb { R } ) \) is a 14 dimensional Lie group represented by 
+the Dynkin diagram with two nodes and three arrows. The manifold associated 
+with the Lie group is semi-simple, simply connected and 14 dimensional. 
+Lie groups can be defined in terms of forms which they leave invariant.
+</p> 
+
+<p> 
+How does the a group action act on an n-form? 
+For example, for a 3 dimensional manifold, we can 
+define the n-form 
+\[ F = dx \wedge dy + dy \wedge dz + dz \wedge dx \] 
+How does a group action apply to this? Well, one 
+thing we can do is to apply Cartan's magic formula to 
+see if the forms are invariant under the Lie derivative. 
+</p> 
+<p> 
+
+</P 
