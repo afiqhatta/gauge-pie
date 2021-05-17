@@ -1,0 +1,95 @@
+<!doctype html>
+
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+
+  <script src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
+  <script src="js/scripts.js"></script>
+  <link rel="stylesheet" href="static/styles.css?v=1.0">
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+  <script>
+    MathJax = {
+     tex: {
+      inlineMath: [['$', '$'], ['\\(', '\\)']]
+     }
+    };
+    window.MathJax = {
+      loader: {load: ['[tex]/physics']},
+      tex: {packages: {'[+]': ['physics']}}
+    };
+  </script>
+  <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+  <meta charset="utf-8">
+  
+</head>
+
+<body>
+  <div class="mast">
+    <h3>Afiq Hatta's blog</h3> 
+  </div> 
+  <div class="sidebar">
+    <a href="index.html">Home</a>
+    <a href="writing.html">Writing</a> 
+    <a href="notes.html">Notes</a> 
+    <a href="about.html">About</a> 
+  </div>
+  <div class="main">
+    <div class="title">
+      <h1> 
+Classifying bundles
+ 
+<hr class="thin">
+</h1>
+    </div>
+     
+<p>
+A Mobius strip is a fibre bundle with the base space of a 
+circle, and interval fibre,  
+and  with a structure group \( \mathbb{ Z } _2  \).
+since the transition function can be chosen 
+to be \( t \mapsto -t \) on one side of the Mobius strip. 
+
+This is the only function which 
+seems to be consistent with the transition function 
+conditions, due to the invertibility condition. 
+</p>
+
+
+<p> 
+Fibre bundles are defined 
+by a base space, a structure group, and a projection. 
+For example, we can construct a Mobius band by taking a certin base space, \(S^ 1\), 
+and then pairing it with a interval as a fibre bundle. As above. 
+However, is this the only way to attach fibres onto a circle base space?
+It turns out that there is only two ways to do this - which 
+can be proven with Cech cohomolgy. 
+</p> 
+<p> 
+The first way to do this would be to just glue 
+the two ends, there by making a cylinder and creating a trivial fibre bundle. 
+The second way is to flip the transition function negative on the 
+lower hemisphere of the circle, 
+</p> 
+
+<p> 
+A space with a interval fibration is called a line bundle. 
+Line bundles have a Cech cohomology with coefficients in \( GL ( \mathbb{ R } , 1 ) \), 
+which is equivalent to just, after normalising, linear 
+multiplication by either 1 or -1. 
+</p> 
+
+<p>
+Hence, a cylinder and Mobius strip are 
+the only two line bundles over a circle up to isomorphism. 
+</p> 
+
+<h2>Classification in Gauge theory</h2>  
+
+
+
+
+  </div> 
+</body>
+</html>

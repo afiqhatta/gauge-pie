@@ -125,6 +125,57 @@ The interesting part is that this is a weaker condition than
 being a product space globally. For example, there are 'non-trivial' fibre bundles 
 in which the space itself can't be written as a product space globally, but locally 
 we have that neighbourhoods of the base space are homeomorphic to fibre bundles. 
+
+<h3>Structure groups</h3> 
+<p>
+In Nakamara, fibre bundles can be endowed with 
+<i>structure groups</i>, which are the group structures associated 
+with mapping fibres to fibres where we have a different diffeomoprhisms 
+which intersect in a common region on our manifold. 
+</p> 
+
+<p> 
+For example, supposd that we have a manifold \( M \),
+and take this with a fibre \( F \). Now, at some point \( p \), 
+around the neighbourhood, there exists a diffeomorphism (a differentiable, 
+invertible map), between the inverse of the projection of the total space to the base space, 
+and the direct product topology. Suppose this this on a region \( U _ 1 \subset B \), 
+then, we have that there is a diffeomorphism 
+
+\[ \phi _ 1 : F \times P \to \pi ^ { -1 } ( U _ 1 ) \]
+Similarly, if we have another region \( U _ 2 \) in which 
+the intersection of \( U _ 1 \) and \( U _ 2 \) is non-zero, 
+then we have also define another diffeomorphism on the intersection. 
+The transition function 
+\[ t _ i j : F \to F \] 
+which takes a fibre in one coordinate system to another should be an element 
+of the structure group. 
+</p> 
+
+<h2>Important kinds of Fibre bundles</h2> 
+<p>
+We have a few important kinds of fibre bundles. 
+The first two important types are tangent bundles and 
+frame bundles. 
+<ul>
+	<li> A tangent bundle is a bundle where our typical fibre at any given 
+point is \( \mathbb { R } ^ n \), for an n dimensional manifold. So, for 
+any given point \( p \in M \) such that we have two coordinate systems defined 
+in the open neighbourhoods \( U_ n , U_ m \), with \( p \in U _ n \cap U _ m \), 
+we have two different fibres, which are vector coordinates. 
+In other words, 
+\[ \phi ^ { -1 } ( u ) = ( p, \{ V ^ \mu \} ), \quad \tilde{ \phi } ^ { -1 } ( u ) = ( p, \{ \tilde { V } ^ \mu \} ) \] 
+The transformation relating these coordinate systems is the Jacobian, which is an element of \( GL ( n ) \).  
+	</li>
+	<li> The frame bundle is a similar construct, but is a mapping where the fibres are 
+		a basis of the vector space instead of the components, like the above. 
+		If the manifold is endowed with a metric, we may also employ the 
+		an orthonormal basis. 
+	</li> 
+</ul>  
+<p> 
+We can have different kinds of fibre bundles on a Manifold. 
+  
 <h3> Trivial fibre bundles </h3> 
 <p>
 An example of a 

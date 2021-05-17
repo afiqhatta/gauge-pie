@@ -177,7 +177,44 @@ see if the forms are invariant under the Lie derivative.
 </p> 
 <p> 
 
-</P 
+<h2>What is holonomy?</h2> 
+<p>A connection of a manifold encodes information 
+of how a vector evolves over a certain path in a manifold. 
+We need the machinery of a connection since this transport is not 
+necessarily sensical with just any method. 
+</p>
+<p> 
+The Levi-Civita connection is the unique 
+connection which preserves the metric on a manifold, and is torsion 
+free. This means that the inner-product on a metric bundle will 
+be preserved under parallel transport, and that the covariant derivative satisfies 
+\[ \nabla _ X Y - \nabla _ Y X  = [ X , Y ] \] 
+</p> 
+<p> 
+Given a connection, we can define the holonomy of 
+a point \( x \in M \) as the set of possible linear transformations 
+it induces on the tangent space, given that we transported 
+the vectors around a closed loop. For formally,
+suppose that \( E \) is a tangent bundle, such that we have a tangent space 
+defined at each point in the manifold. Then, pushing a tangent vector around the manifold, 
+through a loop, transforms the inital tangent space through a map \( P : E _ x \to E _ x \).  
+\[ \text{Hol} _ x ( \nabla ) = \{ P _ \gamma \in GL ( E _ x ) \mid \gamma \text{ is a loop in } M \]
+</p> 
+<h2>Joyce's Results on G-2 Structures</h2>
+<p> 
+
+<p>
+If we have a \( G _ 2 \) strucutre on a 7 manifold, then 
+if the holonomy group is a subset of the \( G _ 2 \), 
+then the structure is torsion free. The converse is also true. In addition, 
+if \( \nabla \) is the Levi-Civita connection on \( g \), 
+then we also find that \( \nabla g = 0 \) 
+</p> 
+
+<br> 
+<br> 
+<br> 
+
 
 
   </div> 
