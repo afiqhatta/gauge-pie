@@ -45,6 +45,69 @@ Some problems in geometry
     </div>
      
 <h2>What does the Whitney sum bundle of a Mobius strip look like?</h2>
+<p> 
+A Mobius trip cannot be parametrised globally 
+by a set of coordinates on the product 
+\( ( s, t ) \) since it is not a trivial bundle. 
+However, we find that the Whitney sum of 
+two Mobius bands is a trivial bundle. 
+</p> 
+
+<p> 
+The transition function associated with the 
+Whitney sum of a Mobius trip in the 
+top hemisphere of the circle is \( I \), 
+and is \( - I \) in the bottom hemisphere. 
+We need to show a change of coordinates which will trivialise 
+this function everywhere. 
+Just multiply by diag(1, -1), and diag(-1, 1), by 
+setting a new coordinate local trivialisations 
+to be defined as \( \tilde{ \phi \} _ 1 ( p )  = (t, -t) \) on the upper hemisphere, 
+and the corresponding reverse map on the lower hemiphere. 
+This gives \( g1 = diag(1, -1) \) , and the corresponding \( g_ 2 \) 
+element. This change of coordinates allows us to transform 
+our transition functions,  
+and this should make the transition functions trivial everywhere. 
+
+We cannot do this in the single dimensional case, 
+since one of the charts will have to be taken to be the 
+identity, which is a contradiction. 
+<p> 
+To construct the Whitney sum, we will show that 
+the transition functions anywhere on the 
+manifold can be taken to be trivial. 
+Given some fibre bundle \( E \to B \), if there 
+is a point in the intersection of two 
+open covers \( p \in U _ i \cap U _ j \), then
+there exists two diffeomorphisms which 
+between this and the fibre space. 
+In other words, we have that 
+\[ \phi _ i : U _ i \times F \to \pi ^ { - 1} ( U _ i ) \]  
+</p>
+<p> 
+The transition function defined at the point \(p\) 
+in the manifold is the function which 
+maps the fibres associated with the diffeomorphisms 
+to one another. For a bundle to be trival, we 
+must be able to take these as the identity everywhere. 
+</p> 
+
+\[ t _ ij ( x) : F \to F \] 
+<p> 
+For a Mobius band, the two transition functions 
+on the disjoint open sets are the identity and the sign flip 
+functions respectively. 
+For the Whitney sum, it is \( I , -I \). 
+</p> 
+
+<p> 
+The 1 dimensional case is not trivial 
+because there does not exist a way 
+to make the transition function the identity by construction. 
+To see this, it suffices to observe that t_12 is not the identity 
+by construction. 
+However, on the product bundle, we can convert -I to I 
+by 
 <p>
 If we have two vector bundles on a given space,
 we can construct a <b>Whitney sum bundle</b>, which 
@@ -67,7 +130,7 @@ Moreover, this fibration should
 preserve the properties of the original 
 manifold. This means that, when we projecto down, we should still get the base space. 
 
-<h3>Constructing the Whitney Sum</p>
+<h3>Constructing the Whitney Sum</h3>
 <p>
 A Mobius strip is constructed by making a unit interval \( I \) as the 
 fibre over the circle \( S ^ 1 \). 
@@ -111,9 +174,11 @@ the group \( Z _ 2 \) is not connected and not a Lie group.
 <p>
 
 <p> 
-We cannot call the group function g(x) = x, and g(x) = - x trivialisable 
+For the case in which we are working 
+with just a single Mobius band, we cannot call the group function  \( g(x_1) = x_1, \, g(x_2) = - x \) trivialisable 
 on the different sections of the mobius strip since this group is not connected, 
-and so this operation is not smooth. 
+and so this operation is not smooth. However, we are at liberty to do this 
+when we are working with the direct sum.  
 </p> 
 
 <br>
