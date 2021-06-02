@@ -1,0 +1,143 @@
+<!doctype html>
+
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+
+  <script src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
+  <script src="js/scripts.js"></script>
+  <link rel="stylesheet" href="static/styles.css?v=1.0">
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+  <script>
+    MathJax = {
+     tex: {
+      inlineMath: [['$', '$'], ['\\(', '\\)']]
+     }
+    };
+    window.MathJax = {
+      loader: {load: ['[tex]/physics']},
+      tex: {packages: {'[+]': ['physics']}}
+    };
+  </script>
+  <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+  <meta charset="utf-8">
+  
+</head>
+
+<body>
+  <div class="mast">
+    <h3>Afiq Hatta's blog</h3> 
+  </div> 
+  <div class="sidebar">
+    <a href="index.html">Home</a>
+    <a href="writing.html">Writing</a> 
+    <a href="notes.html">Notes</a> 
+    <a href="about.html">About</a> 
+  </div>
+  <div class="main">
+    <div class="title">
+      <h1> 
+The Casimir Effect for Fermions
+ 
+<hr class="thin">
+</h1>
+    </div>
+     
+<h2>The classical view of an oscillator</h2> 
+<p> 
+The classical Hamiltonian for a simple harmonic oscillator 
+is given by 
+
+\[ H = \frac{1}{ 2} \frac{ p ^ 2 } { m } + \frac{ 1 } { 2} m \omega ^ 2 x ^ 2 \] 
+This is typically broken down into 
+creation and annihilation operators 
+
+\[ a = \sqrt{ \frac{ m \omega} { 2 } } \left( x + \frac{ i p }{ m \omega} \right), 
+\quad a ^ \dagger = \sqrt{ \frac{ m \omega } { 2 } } \left( x - \frac{ i p }{ m \omega} \right) \] 
+
+Imposing the canonical commutation relations imply that
+these operators have the commutation relations 
+
+\[ [ a , a^\dagger ]  =1 \] 
+
+For a single mode, we find that 
+the Hamiltonian in the single mode oscillator case 
+is given by 
+
+\[ H = \omega ( a ^ \dagegr a + \frac{ 1 } { 2} ) \] 
+
+This is what guides is for the form of the Hamiltonian 
+in quantum field theory. 
+</p> 
+
+<h2>Some Hamiltonians in Quantum Field Theory</h2> 
+
+<p> 
+In Schwartz, the free field Hamiltonian for a scalar field 
+theory is given by 
+
+\[ H = \int \frac{ d ^ 3 p }{ ( 2 \pi ) ^ 3 } \omega_ p \left( a _ p ^ \dagger a _ p + \frac{ 1 } {  2} \right) \] 
+
+In a massless theory, we have that \( \omega_p = | \mathbf { p } | \). 
+</p>
+
+<p>
+We can alternatively do this straight from 
+quantum field theory. In terms of the commutation relations 
+on the position dependent operators, we have that our position and 
+mommentum operators satisfy 
+
+\[ [ \phi ( \mathbf x ), \pi ( \mathbf y ) ] = i \delta ( \mathbf x - \mathbf y ), \quad [ a _ {\mathbf p } , a _ { \mathbf { q }} ] = ( 2 \pi) ^ 3 \delta ( 
+\mathbf{ p }  - \mathbf q ) \] 
+
+The resulting Hamiltonian looks like 
+\[ H = \frac{ 1} { 2 } \int d ^ 3 x \pi ^ 2 + ( \nabla \phi ) ^ 2 + m ^ 2 \phi ^ 2  = \int \frac{ 
+d ^ 3 p } { ( 2 \pi) ^ 3 } \omega _ p \left[ a _ p ^ \dagger a _ p + \frac{ 1 } { 2 } ( 2 \pi ) ^ 3 \delta ( 0) \right] \] 
+
+The Hamiltonian differs from the one above 
+because we have more carefully input  
+a delta function term. 
+We can seperate out the funny contribution by 
+writing out the delta function explicitly 
+in a finite volume box. 
+</p> 
+
+<p> 
+Hence, we can write out the full Hamiltonian 
+for a massless scalar field theory as 
+\[ H = \int \frac{ d ^ 3 p } { ( 2\pi ) ^ 3 } \omega_ p \left[ a ^ \dagger _ p a _ p \right] + V E_ 0 \] 
+
+Where in this case \( E _ 0 \) is the integral over all frequencies. 
+</p> 
+
+<h2> The Fermionic case </h2> 
+<p> 
+In the case where we have Fermions, 
+our Lagrangian is given by the Dirac equation 
+\[ L = \bar{ \psi} ( i \gamma ^ \mu \partial _\mu  - m ) \psi \] 
+Constructing the Hamiltonian from 
+the stress energy tensor, we find that 
+
+\[ E  = \sum _ s \int \frac{ d ^ 3 q } { ( 2 \pi ) ^ 3 } \omega_p 
+( a _ p ^ \dagger a _ p  - b _ p b _ p ^ \dagger ) \] 
+Now, note that in this case 
+we require anticommutation relations to prevent a negative unbounded energy 
+situation occuring. 
+The computation is the same as above but this time our energy 
+takes the form 
+
+\[ E  =\sum _ s \left[ \int \frac{ d ^ 3 q } { ( 2 \pi ) ^ 3 } 
+\omega_ p ( a _ p ^ \dagger a _ p - b _ p ^ \dagger b _ p )  - V E _ 0 \right] \] 
+
+Hence, in this case, the fermionic energy has opposite sign!
+ 
+</p> 
+<br> 
+<br> 
+<br> 
+
+
+  </div> 
+</body>
+</html>

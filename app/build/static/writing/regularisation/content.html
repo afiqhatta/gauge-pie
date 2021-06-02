@@ -1,0 +1,156 @@
+<h2>The Casimir effect</h2> 
+
+<p>
+If we are given a free scalar field theory, 
+then the energy is encoded in the Hamiltonian. 
+In momentum space, and in terms of the creation and 
+annihilation operators, a Klein-Gordon theory has 
+the Hamiltonian 
+
+\[ H = \int d ^ 3 k \,  \omega _ k ( a _ k ^ \dagger a _ k + \frac{ 1 } { 2 } )\]
+
+Contracting this Hamiltonian with the 
+vacuum state \( \left| 0 \right\rangle \)
+annihilates the first term with the operators, 
+but leaves us with the remaining expression 
+
+\[ E \propto \int d ^ 3 k \approx \infty \] 
+
+\( E \) here is the vacuum energy. 
+It is clear that this vacuum energy 
+can't be observable because it's infinite. 
+</p> 
+
+<p> 
+For now this is okay. But, 
+how do we change this to get some observable phsyics out of this? 
+Well, one thing that we can do 
+is to contain this oscillator in a box 
+and see what happens when we increase the size of the box. 
+</p> 
+
+<p> 
+Even after doing this, it still looks like the 
+force on the walls of this constrained system 
+is infinite, which doesn't agree with experiment at all. Thus, there's nothing wrong with the 
+actual calculation itself, but something wrong with the physics. 
+For example, with high wavelengths, these high frequency modes 
+will just pass through the walls. 
+</p> 
+
+<h2>Resolving the discrepancies with the Experiment</h2> 
+
+<p> 
+To model this, we could for one try to model the interaction 
+between the particles and the high frequency modes. 
+However, this is probably a  
+difficult thing to do. So, we can instead try to form some approximation. 
+If different approximations lead us to the same result - then we've found something significant. 
+</p>
+
+<p> 
+The approximation we will use to 
+model the high frequency modes escaping this box 
+is called a 'hard cutoff'. We model the energy contained 
+in the box assuming that our high frequency modes are surpressed somehow. 
+The first thing we could do is 
+to regulate by enforcing a limit on the frequency. 
+So, we may decide that 
+
+\[ \omega < \Lambda r, \quad \omega_ n  = \frac{ \pi }{ r} n \] 
+
+Our maximum mode in this case obeys 
+\[ n _{ max} ( r)  = \lfloor \Lambda r \rfloor \] 
+
+We derive the force from this 
+regularisation by then substituting this into 
+the expression for the energy, and then 
+differentiating that. Casimir in 1948 predicted this force 
+as 
+\[ F( a)  =  - \frac{ \pi \hbar c }{ 24 a ^ 2 } \] 
+</p> 
+
+
+<h2> Regulator independence </h2> 
+<p>
+For a wide variety of different procedures 
+in which we could have chosen to choose a regularisation scheme, 
+it turns out that for a lot of choices, we would have arrived at the same force. 
+
+Casimir shows that this is true in his 1948 paper, 
+that the Casimir force is independent of 
+the choice of regulator subject to some conditions. 
+</p>
+
+<h2> Counterterms</h2> 
+<p> 
+
+In physics, it is perfectly possible 
+for our zero point energy to be infinite, since its not 
+observable. 
+To get physics out of the zero point energy, 
+we need to place it in the context of wider space parameterised 
+by some large boundary, then take the limit of this boundary to 
+infinity. 
+</p> 
+
+<p> 
+In a box, the energy 
+can be decomposed into the extrinsic energy and the residual force. 
+In the general box, our energy as a function of 
+the size of the box is given by 
+\[ E ( r)  = \frac{ \pi } { 2 } r \Lambda ^ 2 - \frac{ \pi } { 24 r } + \dots \] 
+
+The first term represents the free space, non-observable energy. 
+We can cancel this out by adding in a counterterm, which is a 
+freely defined unnmeasurable additional term, which can 
+be used in the intermediate steps to compute physical quanties. 
+</p> 
+
+
+<h1> OOOoooooOooOo someone went to collegeee!</h1>
+<h2>Renormalising a scalar quantum field theory</h2> 
+<p> 
+Suppose we wanted to compute the 
+cross section of two particles interacting 
+in the theory where the Lagrangian looks like 
+
+\[ L = -  \frac{ 1 } { 2} \phi \box \phi  -  \frac{\lambda}{4! }  \phi ^ 4 \] 
+The second order correction to this 
+term is infinite and diverges. 
+It is a single loop diagram which diverges, and 
+is a function of the four momentum going in.  
+To make it manageable, we differentiate the integral 
+then reintegrate it. 
+</p> 
+
+<p> 
+With the second order correction, 
+our cross section is then 
+\[ M ( s )  =  - \lambda - \frac{ \lambda ^ 2 } { 32 \pi ^ 2 } \ln \frac { s } { \Lambda ^ 2 } \] 
+
+We have an infinite quantity. We resolve this 
+by realising that the 
+observed coupling occuring at a particular centre of mass 
+energy satisfies the relation, to first order 
+\[ \lambda _R  = \lambda + \frac{ \lambda ^ 2 } { 32 \pi ^ 2 } \ln \frac{ s_ 0 } { \Lambda ^ 2 } + \dots \]
+In this case, \( \lambda _ R \) is the renormalised observable quantity. 
+</p> 
+
+<p> 
+Once we write out this in terms of \( \lambda _ R \), 
+we can now solve, and get an expression in terms 
+of observable quantities.  
+</p> 
+
+<p> 
+To recap, we found that even though 
+the energy of a system in total maybe infinite, 
+we have a finite residual quantity. 
+We foudn that even though the energy of this system 
+was infinite and a function of our high energy cutoff, 
+the residual phsyics popped out as finite. The high energy cutoff was required
+to restrict ultra high frequency radiation. 
+<br> 
+<br> 
+<br>

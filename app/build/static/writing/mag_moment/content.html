@@ -1,0 +1,159 @@
+<h2> Deriving the Pauli equation from the Dirac equation</h2> 
+<p> 
+Before quantum field theory, the Pauli equation 
+could describe the evolution of electrons and other spin 1/2 particles.
+Particles with spin can be described as states with two components, 
+which are called 'doublets'. 
+These two component states can be written mathematically as 
+\[ \psi  = \begin{pmatrix} \psi _ + \\ \psi _ + \end{pmatrix} \] 
+where the evolution of each component can be solved 
+by the Pauli equation 
+
+\[ i \hbar \frac{ \partial \psi } { \partial t }  = \left[ e \phi + \frac { 1 } { 2 m } 
+\left( ( \mathbf { p } + e \mathbf { A } ) \cdot \sigma  \right) ^ 2 \right] \psi \] 
+
+</p>
+
+<p> 
+This is a matrix differential equation, so 
+we have to solve for both components. 
+In non-relativistic quantum mechanics, 
+the Pauli equation dictates the state of a particle with spin, 
+for example an electron, which can interact with a background magnetic field. 
+The Pauli equation gives rise to a natural constant, 
+the g-factor, which is a coefficient of one of the terms 
+in the equation. It implies that this g-factor is 2. 
+However, quantum field theory implies that there are 
+corrections to this term, and this has been discovered experimentally. 
+In fact, it is one of the most rigorously measured 
+quantities in modern physics. 
+</p> 
+
+<p> 
+In quantum field theory, Dirac recovered a more 
+complete equation which one can solve, to get information 
+about the evolution of spin 1/2 particles. 
+Firstly, instead of 2 component doublets, the particles 
+are now represented with 4 component <i> spinors</i>, 
+which are a slightly different type of object. 
+I will not go into details, but they are objects 
+motivated by valid 'representations' of the Lorentz group, 
+and one can write down equations to solve for for these objects as well. 
+</p> 
+
+<p> 
+Coupled to the electromagnetic field, 
+we find that just simply rearranging the Dirac equation by 
+shoving the terms to the opposite side, and multiplying by \( \gamma ^ 0 \), 
+gives us an equation which is <b>already</b> reminiscent of 
+a Schrodinger type equation 
+\[ i \partial t \psi  = \left[ \gamma ^ 0 ( m + e \gamma \cdot \mathbf A  - i \gamma \cdot \nabla ) + e \phi \right] \psi \] 
+</p> 
+
+<p>
+If we write this out explicitly in terms of the Pauli matrices, 
+we recover that the operator acting on \( \psi \), 
+which we will identify as the 'Hamiltonian', can be written 
+in terms of the momentum \( \mathbf p = - i h \nabla \) as 
+
+\[ H = \begin{pmatrix} 
+m + e \phi & \sigma \cdot ( \mathbf p + e \mathbf  { A } ) \\ 
+ - \sigma \cdot ( \mathbf p + e \mathbf A ) &  - m + e \phi \end{pmatrix} \]
+We employ a trick to 'reduce' this problem into a form 
+which only acts on the 2-component spinors. We do this by 
+squaring the Hamiltonian and preserving the leading order terms. 
+We find that the first element on the diagonal 
+of this matrix gives, after square rooting it
+
+\[ H = m c ^ 2 + e \phi + \frac{ 1 } { 2 m } ( \sigma \cdot ( \mathbf p + e \mathbf A ) ) ^ 2 \]
+</p> 
+<p> 
+If we want to compare this to the non-relativistic Pauli equation, 
+we remove that rest mass. We also can 
+work in the gauge where \( \mathbf A = \frac{ 1 } { 2 } ( \mathbf B \times \mathbf r ) \). 
+Mutliplying everything out to first order yields that 
+the non-relativistic Hamiltoinian
+gives 
+(note: one should also try this out with different Gamma matrix representations, such as the Weyl representation - I can't seem to recover the correct result though)
+
+\[ H = e \phi + \frac{1} { 2 m } ( | \mathbf { p } | ^ 2  - e \mathbf B \cdot ( \mathbf p \times \mathbf r )  - q \sigma \cdot \mathbf B ) \] 
+</p>
+
+If we, without loss of generality, 
+set the magnetic field in the direction z, we find that 
+the terms which are coupled to 
+the magnetic field in the above equation can be written in the 
+form 
+\[ H_{\text{coupling} }  = e B _z ( L _ z + g S_ z ) \] 
+\( g\) is our gyromagnetic factor, which 
+represents the ratio of our spin coupling to 
+our angular momentum coupling. 
+<h2>An alternative approach: Getting the Pauli equation from the Dirac equation</h2> 
+<p> 
+The equation itself is
+
+\[ \left[ \gamma ^ \mu \left( i \partial _ \mu  - e A _ \mu \right) - m \right] \psi  = 0 \] 
+This equation is invariant to a change of basis in terms 
+of Lorentz invariance. In the equation, \( A_ \mu \) represents 
+the potential associated with our magentic field. 
+The gamma term represents the Gamma matrices, which obey the Clifford algebra. 
+</p> 
+
+<p> 
+To solve this equation in terms of a 
+given energy, we need to convert this into an eigenvalue-like problem 
+by plugging in an ansatz for the wavefunction. 
+The differential equation is separable, so we decompose the spinors 
+into stationary solutions - and write the spinor in momentum space.  
+
+\[ \psi ( x ^ \mu) = u ( p ) e ^ { i p \cdot x } \]  
+</p> 
+
+<p> 
+Substituting this in gives us 
+the equation to solve 
+\[ \begin{pmatrix} 
+i \partial _ t  - e \phi & i \sigma \cdot \nabla  - e \sigma \cdot \mathbf { A } \\
+ - i \sigma \cdot \nabla  -  + e \sigma \cdot \mathbf { A } &  - i \partial _ t + e \phi 
+\end{pmatrix} 
+\begin{pmatrix} u _ + ( p ) e ^ { - i E p \cdot x }  \\ u _ - ( p ) e ^ { - i E p \cdot x } \end{pmatrix}  = 0  
+\]
+In the non-relativistic limit, we
+can make some simplifying assumptions. 
+When the field is weak, our energy is roughly equivalent to the 
+rest mass of the electron. Our momentum is also roughly equal to the 
+classical momentum. 
+\[ E  + e \phi \approx m c^ 2, \quad \mathbf{ p } = m \mathbf { v } \] 
+
+The system of equations which are obtained, without 
+the relativistic approximation, is 
+\[ 
+\begin{aligned} 
+ ( E  - e \phi ) u _ +  - c \sigma \cdot ( \mathbf p - e \mathbf A ) u _ -  &  = m c ^ 2 u _ + \\ 
+\end{aligned} 
+\] 
+
+The expression \( E - mc^ 2 \) is the energy that we would get from
+the classical energy of an electrically charged particle in a field. 
+In the relativistic paradigm, we have that 
+
+\[  E  = \frac{ m c^ 2 } { \sqrt { 1 - \frac{ v ^ 2 } { c ^ 2 } } + e \phi \] 
+This is the sum of our relativistic kinetic energy, as well as 
+the electromagnetic potential energy. To solve the above system, 
+we first write out \( u _ - \) as a function of \( u _ + \). 
+We should find that we get the term \( m c ^ 2 + E - e \phi \approx 2 m c ^ 2 \)
+to the first approximation where the field is weak. 
+This gives 
+\[ ( E - m c ^ 2 ) u _ +  - \frac{ | \sigma \cdot ( \mathbf { p }  - e \mathbf { A } ) | ^ 2 } { 2 m } u _ +   = e \phi u_ + \]  
+We recognise the righthand most term as the non-relativistic energy to the first approximation. 
+This leads us to the Pauli equation.
+</p> 
+
+<h2>What does the Pauli equation imply about the g-factor?</h2>
+Originally, the g factor is a ratio which is not set to two. 
+The Dirac equation implied that it was two after some approximations. 
+The Dirac equation can be written as, without coupling to an electromagnetic field,  
+\[ H  = \gamma ^ 0 ( m - i \gamma \cdot \nabla ) \] 
+<br> 
+<br>
+
