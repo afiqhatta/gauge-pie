@@ -1,0 +1,151 @@
+<!doctype html>
+
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+
+  <script src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
+  <script src="js/scripts.js"></script>
+  <link rel="stylesheet" href="static/styles.css?v=1.0">
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+  <script>
+    MathJax = {
+     tex: {
+      inlineMath: [['$', '$'], ['\\(', '\\)']]
+     }
+    };
+    window.MathJax = {
+      loader: {load: ['[tex]/physics']},
+      tex: {packages: {'[+]': ['physics']}}
+    };
+  </script>
+  <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+  <meta charset="utf-8">
+  
+</head>
+
+<body>
+  <div class="mast">
+    <h3>Afiq Hatta's blog</h3> 
+  </div> 
+  <div class="sidebar">
+    <a href="index.html">Home</a>
+    <a href="writing.html">Writing</a> 
+    <a href="notes.html">Notes</a> 
+    <a href="about.html">About</a> 
+  </div>
+  <div class="main">
+    <div class="title">
+      <h1> 
+Corrections to the magnetic moment
+ 
+<hr class="thin">
+</h1>
+    </div>
+     
+<h2> Why does the covariant derivative look the way it does? </h2> 
+<p> 
+In quantum electrodynamics, the Dirac equation 
+coupled with an electromagnetic vector potential looks like 
+\[ D _ \mu = \partial _ \mu + i e A_ \mu \] 
+Why does the coefficient in front of the vector 
+potential need to be imaginary? Why can't we have a covariant derivative 
+that looks like 
+
+\[ D_\mu = \partial _ \mu + e A _\mu \] 
+</p> 
+
+<p>
+Well, we need to make sure that 
+the equation still satisfies given a gauge transform. 
+The gauge transform has a U(1) structure, which means 
+that the spinor transformation has to be compatible with this.  
+\[\begin{aligned} 
+A _ \mu & \to A _ \mu + \partial _ \mu \chi \\
+\psi & \to \psi e ^{  - i e \chi }  
+\end{aligned} \]  
+</p> 
+
+<p> 
+The only way for this to hold means 
+in the covariant derivative, we need a \( i \) 
+attached to the vector term. 
+</p> 
+
+<h2> What needs a correction? </h2>  
+<p> 
+Given the current Dirac equation for a spinor, 
+we can write it in a form similar to the Klein-Gordon equation 
+by multiplying it by the conjugate, and we will find that 
+we will get an extra correction to the typical Klein-Gordon equation.  
+</p> 
+
+<p>
+This can be shown by some clever use of identities. 
+We can multiply the Dirac spinor equation through as follows  
+\[ \begin{aligned} 
+ 0 &= \left[ ( i \partial _\mu - e A _ \mu )( i \partial _ \nu - e A _ \nu ) \gamma ^ \mu \gamma ^ \mu - m ^ 2 \right] \psi \\
+  &= \left( \frac{ 1 } { 4} \{ i D _ \mu , iD _ \nu \} \{ \gamma^ \mu , \gamma ^ \nu \} + \frac{1 } { 4} [ i D _ \mu , i D _ \nu ] [ \gamma^ \mu , 
+\gamma^ \nu ]  - m ^ 2 \right) \psi 
+	\end{aligned}
+\] 
+
+This simplifies to a correction to what would 
+be a Klein-Gordon equation. This is 
+\[ 
+\left( (i D _ \mu )^ 2  - \frac{ e} { 2 } F _ \mu \nu \sigma ^ { \mu \nu }  - m ^ 2 \right) \psi  = 0 \] 
+We can interpret this as a difference in the covariant derivatives on spinors vs scalars.   
+The F sigma term gives us the magnetic moment, so we need to look at corrections of this form. 
+
+</p>
+
+<h2> What is the correction at tree level</h2> 
+<p> 
+A useful way to think about corrections 
+is looking at the process of a spinor interacting with an electron, 
+and decaying into another spinor. We examine processes of 
+the form 
+\[ e ^  - (p ) A_ \mu( p )  \to e ^ - ( q _ 2) \] 
+The tree level amplitude is given by the diagram with a 
+single photon ray interacting with a spinor. 
+The amplitude from this is given by 
+the vertex rule 
+
+\[ M _ 0^ \mu  = - i e \bar{ u } ( q_ 2) \gamma ^ \mu u ( q _ 1 ) \]
+With the Gordon identity, we can back out a term 
+with \( \sigma ^ { \mu \nu } \), whose coefficients 
+we can identify with the magnetic moment. 
+The Gordon identity implies that the amplitude can be written as 
+
+\[ M _ 0 ^ \mu  =  - e \frac{  q _1 ^ \mu + q _ 2 ^ \mu } { 2 m } \bar { u }( q _ 2 ) u ( q _ 1 )  - \frac{ e } { 2 m } i \bar { u } ( q _ 2 ) p _ \nu \sigma ^ { \mu \nu } u ( q _ 1 ) \]
+
+</p>
+<p> 
+In general, 
+the correction to the magnetic moment is given 
+by the sum of all graphs which involve a photon interacting with an electron.
+In general, this is given by some coefficients in front of each momentum vector. 
+At first glance, the scattering amplitude should look like 
+\[ i M ^ \mu = \bar { u } ( q _ 2) ( f_ 1 \gamma ^ \mu + f _ 2 p _ 2 ^ \mu + f _3 q _ 1 ^ \mu + f_ 4 q _ 2 ^ \mu ) u ( q _ 1 )\] 
+</p> 
+<p>
+Note that due to momentum conservation, we have that we can take out any dependence on \( p ^ \mu). 
+In addition, the Dirac equation tells us that we can write, in momentum space to first order that 
+\[ \gamma ^ \mu q _ { i \mu } u ( q _ i )  = m u ( q _ i ). \] This, in combination with 
+the Gordon identity allows us to write the most general form 
+of the scattering amplitude for this type of interaction: 
+
+\[ i M ^ \mu = ( - ie ) \bar { u }  ( q _ 2 ) \left[ F _1 ( \frac{ p ^ 2 } { m ^ 2 } ) + \frac{ i \sigma ^ { \mu \nu} }{ 2 m } p _ \nu F _ 2 ( \frac{ p ^ 2 } { m ^ 2 } ) \right] u ( q _ 1  ) \] 
+  
+We simplify this considerably using a combination of 
+the Ward identity. 
+</p>  
+<br> 
+<br> 
+<br>  
+
+
+  </div> 
+</body>
+</html>
