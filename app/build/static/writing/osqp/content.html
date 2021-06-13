@@ -1,0 +1,127 @@
+<h3> What is a quadratic program? </h3> 
+
+<p> 
+A quadratic program is an optimisation problem of the
+form 
+
+\[ 
+\begin{aligned} 
+	\text{minimize} & ( 1/ 2 ) x ^ T P x + q ^ T x \\
+	\text{subject to } & l \leq A x \leq u \\
+\end{aligned} 
+\] 
+
+In other words, we have a quantity for which we 
+want to minimise, subject to a linear set of constraints. 
+In this case, the decision variable \( x \) will be 
+of a given size \( n \in \mathbb { N } \), and we will have 
+some \( m \in \mathbb{ N } \) constraints, along with 
+\( N \) non-zero entries in the matrices \( P , A \). 
+The tuple 
+\( (N , n, m ) \) is typically a way to parametrise the 'size' of 
+the problem we want to solve. 
+</p> 
+
+<h3> What is an interior point method? </h3> 
+<p> 
+Interior point methods model the constraints in an optimisation 
+function as 'barriers', by pushing them up into the objection function, 
+finding the minimum point of this new surface, then making these barriers steep as possible. 
+</p> 
+
+<p> 
+Let's look at the one dimensional case for now. For example, if we have some function 
+\( f ( x ) \) which we want to minimse subject to a single constraint 
+\[ c ( x )  \geq 0  \] 
+we could penalise the optimisation for going above the constraint 
+by attaching a logarithmic function in the objective which
+pitches up if \( c ( x) \) approaches zero. 
+So, we could instead choose to maximise 
+\[  B ( x , \mu )  = f ( x ) - \mu \log ( c ( x) ) \] 
+And take the limit as \( \mu \to 0 \). 
+
+</p>
+
+<p> 
+To do this, we do the following procedure. 
+We rewrite the problem as 
+\[ 
+\begin{aligned} 
+\text{min } & t f ( x ) + \phi (x ) \\
+\text{subject to } & A x = b 
+\end{aligned} 
+\] 
+
+We construct a path of initial points as we take the limit of \( t \) 
+to be sufficiently large. 
+To do this, we start with some intial value \( t = t _ 0 > \), 
+and then use Newton's method to get the solution \( x ^ 0 = x ^ * ( t ) \)
+to the above problem. 
+We then use this new optimal value a the inital starting point 
+for the problem with \( t \to \lambda t \), where \( \lambda > 1 \), 
+and keep going until \( t \) is sufficiently large. 
+</p> 
+ 
+<p> 
+Interior point methods are currently the defacto algorithm 
+used in most commercial solvers. 
+</p> 
+
+<h3> Optimality conditions</h3> 
+<p> 
+We can rewrite the 
+constrained problem in terms of Lagrangian 
+multipliers, using a dual variable. 
+As usual with the Lagrangian approach,
+we will introduce \( y ) 
+which encodes the constraint as 
+
+\[ L ( x , y ) =  \( \frac{ 1 } { 2} x ^ T P x + q ^ T x + ( A x  - z ) ^ T y \] 
+
+where we have the additional constraint \( A x =z \). 
+For the optimal point, we differentiate 
+both for \( x, y \) to yield the optimality condition that 
+Differentiating the above conditions 
+
+\[ \begin{aligned} 
+Ax  &= z \\
+P x + q + A^ T y & = 0 
+\end{aligned} 
+\] 
+<h3> Advantages of the Alternating Direction Method of Multipliers routine </h3> 
+<p>  
+The alternating direction method of multipliers (ADMM) routine 
+has been popular lately due to its good convergence 
+propertires. It also is known to 
+provide decent accuracy quite cheaply. 
+However it is typically unable to detect unfeasibility in a problem, and it 
+is currently also unclear how to select optimal step size parameters to 
+get an optimal convergence rate. 
+</p>
+<h3> Solution using the alternating method of multipliers </h3> 
+<p> 
+With the ADMM method, we take a slightly different approach. 
+In the above scenario, \( x \in \mathbb{ R } ^ n \) is our control variable, 
+and \( z \in \mathbb{ R } ^ m \) encodes our constraints. 
+We reformat the problem by imposing a new constraint that 
+two auxillary variables \( \bar{ x}, \bar{z } \) are equal to 
+\( x, z \) respectively, and push the constraint \( A x  = z \) 
+into the objective function with an indicator function. 
+</p> 
+
+<p> 
+The first step of the ADMM algorithm states that 
+we have to solve the problem 
+
+\[ begin{aligned} 
+\text{minimise }  &  (1 / 2) \bar {x } ^ T P \bar {x } + q ^T \bar { x } + ( \sigma / 2 ) 
+| \bar { x }  - x ^ k | ^ 2 + ( \rho / 2 ) | \bar { z }  - z ^ k + \rho ^ { - 1} y ^ k | ^ 2  \\ 
+\text{subject to } & A \bar { x }  = \bar { z } \\
+ \end{aligned} 
+\] 
+
+</p>  
+<br> 
+<br> 
+<br> 
+
