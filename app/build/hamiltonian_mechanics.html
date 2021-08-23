@@ -1,0 +1,242 @@
+<!doctype html>
+
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+
+  <script src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
+  <script src="js/scripts.js"></script>
+  <link rel="stylesheet" href="static/styles.css?v=1.0">
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+  <script>
+    MathJax = {
+     tex: {
+      inlineMath: [['$', '$'], ['\\(', '\\)']]
+     }
+    };
+    window.MathJax = {
+      loader: {load: ['[tex]/physics']},
+      tex: {packages: {'[+]': ['physics']}}
+    };
+  </script>
+  <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+  <meta charset="utf-8">
+  
+</head>
+
+<body>
+  <div class="mast">
+    <h3>Afiq Hatta's blog</h3> 
+  </div> 
+  <div class="sidebar">
+    <a href="index.html">Home</a>
+    <a href="writing.html">Writing</a> 
+    <a href="notes.html">Notes</a> 
+    <a href="about.html">About</a> 
+  </div>
+  <div class="main">
+    <div class="title">
+      <h1> 
+Hamiltonian Functions on Manifolds
+ 
+<hr class="thin">
+</h1>
+    </div>
+     
+<h2> Hamiltonian Mechanics</h2>
+	<p>
+		Suppose we have a symplectic manifold \( ( M , \omega ) \). 
+		If we define a real function from the manifold, \( H: M \to \mathbb{ R } \), 
+		then we can construct the one form given by the differential 
+
+		\[ dH = \sum _ i \partial _ i H d x ^ i \] 
+		The symp
+ectic form \( \omega \) is a two-form which satisfies two properties - non-degeneracy 
+		and closedness. Being non-degenerate means that there is no such vector field 
+		such that 
+		\[ \iota_{X _ H } \omega = d H \] 
+	</p> 
+
+	<p> 
+		The above fact is true, because it is asking the same question as 
+		asking if there is a unique solution to the equation 
+		\[ (X _ H ^ \mu \omega _ { \mu \nu } = Y _ \nu \] 
+		which holds by the virtue of the fact that 
+		the two-form is non-degenerate. 
+		This is also equivalent to the idea of mapping the one-form 
+		\( dH \) to its respective vector using the musical isomorphism.
+	</p> 
+
+	<p> 
+		We can make the above rigourous as follows. 
+		We are asking for the existence of a map such that, given some real function 
+		\( H \) as defined above, we have that for all vector fields \( Y \in T M \), 
+		we have that 
+		\[ dH (  Y ) = \omega ( X _H , Y ) \]
+		To prove the existence, we basically define the map \( X _ H \) as above,
+		and we set the following components  
+		\[ X _ H ^ \nu  = ( d H ) _ \mu \omega ^{ \nu \mu } \]
+		In this case, the omega with raised indices denotes the inverse 
+		of the two form \( \omega \), which exists by non-degeneracy.  
+	</p> 
+
+	<p>
+		Given a vector field, we can 
+		generate some diffeomorphism with the following procedure. 
+		Given a vector field \( X _ H \), we can generate a class of diffeomorphisms 
+		parametrised by the parameter \(t  \in \mathbb{R } \), which is the solution to 
+
+		\[ \begin{cases} 
+			\pho _0 & = \text { id } _ M \\ 
+			\frac{ d \rho _ t } { dt } \circ \rho _ t ^ { -1 }  &= X _ H 
+		   \end{cases} 
+		\] 
+
+	</p> 	
+
+<h2> Isoptopies </h2> 	
+	<p> 
+		Why can we do this? We will define something 
+		that makes this clearer. An isotopy is a class of diffeomorpisms 
+		which are parametrised by some parameter \( t \in \mathbb { R } \). 
+		For a given isotopy, we can find a family of vector fields such that 
+		\[ \frac{ d \rho _ t } { dt } = v _ t \circ \rho _ t \]
+		It turns out, when \( M \) is compact, there is a one-to-one correspondence 
+		between the isotopies of \( M \), and their generating vector fields. 
+	</p> 
+	<p> 
+		This is true, by virtue of being able to map back 
+		and forth between them by uniqueness of solutions to differential equations. 
+		Given an isotopy, we find the corresponding vector field 
+		which is given by \( v _ t = \dot{ \rho} _ t \circ \rho ^ { - 1} _ t \). Given a vector field, 
+		we solve this differential equation, and we are done. 
+	</p> 
+
+	<p> 
+		For a given isotopy, we have the following formulas.
+		We can define the Lie derivative as the derivative with 
+		respect to time of applying a member of the isotopy class 
+		to a form. In the 13th chapter of Lee, this is touched on. 
+		We have Cartan's magic formula, which is quoted as 
+		\[ L_ X \omega = \iota _ X d \omega + d ( \iota_ X \omega ) \] 
+		This can be proved by induction on the degree of forms. We first prove this 
+		for zero forms. Since \( \iota _ X f = 0\), we have that 
+			\[ L _ X ( f ) = X ( f ) = \iota _ X ( df ) + 0 = \iota _ X (df ) + d ( \iota _ X f ) \]
+	</p> 
+	<p> 
+		To prove this for arbitrary k forms, 
+		we will first prove this for 1 forms. We will then work 
+		inductively. We will first assume the formula holds true for 
+		k-1 forms, and then attempt to reduce a k-form. To prove this for a 1-form, 
+		we first observe that in local coordinates, we can 
+		write any one form \( \omega = u dv \). 
+	</p> 
+
+	<p> 
+		To prove that locally, we can write one forms like this, 
+		we appeal to the following. 
+
+<h2> Symplectic reduction </h2> 
+	<p> 
+		This sectionis about reducing the number of degrees of freedom 
+		in a given system based on the size of the symmetry group it has. 
+		Suppose we have a manifold endowed with some symmetry group \( G \), 
+		in the form of a Hamiltonian G-space \( M , \omega, G , \mu \). 
+		Then, we can quotient out this space to have a reduced symplectic form and 
+		a reduced manifold. 
+	</p> 
+	<p> 
+		For example, we can reduce the complex plane
+		with a symmetry \( U ( 1) \). To do this, we construct the 
+		symplectic form from the manifold \( \mathbb{ C } ^ n \) 
+		\( \omega = \frac{ i } { 2 } \sum dz_ i \wedge d \bar { z } _ i \)
+		with a standard symplectic form. We can consider the 
+		action of \( S ^ 1 \) on this, and construct a momentum map. 
+		If we choose the moment map to be 
+		\[ \mu : \mathbb{ C } ^ n \to \mathbb{ R }, \quad z \mapsto  -\frac{ | z | ^ 2 } { 2 }  \]
+		From the 1 parameter subgroup generated by the 
+		\( S ^ 1 \) symmetry group gives the vector field 
+		\[ X ^ { \#}  = \frac{ \partial}{ \partial \theta_ 1 }  + \dots + \frac{ \partial } { \partial \theta _  n } \]
+		Now, to prove that this is a moment map, 
+		we need to show that this satisfies 
+		\[ i _ { X ^ { \# } }  = d \mu \] 
+		To do this, we first construct \( X ^ { \# } \). 
+		Starting from the vector field \(X ^ { \# } \), we 
+		work backwards and find the diffeomorphism associated with 
+		the Lie group element \( t \in S^ 1 \). Given that 
+		the generating vector field is 
+			\[ X ^ { \# } = \frac{ \partial } { \partial  \theta_ 1 } + \dots + \frac{ \partial } { \partial \theta_ n } \], 
+		we can compute the corresponding diffeomorphism
+		by solving the equation \( \dot{ \theta _ i } = 1 \). 
+	</p> 
+	<p> 
+		For each coordinate \( \theta_i\), the solution to 
+		the above differential equation can be found 
+		simply as just \( \theta_ i = t + \theta_{i0 } \), which 
+		implies that at a given, arbitrary point on 
+		the \( \mathbb { C } ^ n \) manifold, call this \(\mathbf{ z} _{init} \), 
+		we have that the evolution of this point evolves as 
+		\[ z ( t ) = e^ { it } z_{init}  = t ' z_{init} , \quad t ' \in S ^ 1 \]
+	</p> 
+	<p> 
+		Now we need to prove that the 
+		moment map satisfies the condition 
+		\[ \iota _ { X^ { \#} } \omega = d \mu \]
+		To apply the inclusion map on the 
+		wedge product, we map use of the identity 
+		for an arbitrary wedge product \[ \iota _X ( \alpha \wedge \beta ) = \iota _X \alpha \wedge \beta + ( -1) ^ p \alpha \wedge \iota_ X \beta\] 
+	</p> 
+	<p> 
+		So, to compute the interior product 
+		for the bilinear form, we use the product rule above,
+		to get that 
+		\[ \iota_X \omega = \sum \iota_ X ( r _ i dr_ i ) \wedge d \theta_ i + ( - 1) ^ n 
+			r_i ( dr_ i ) \wedge \iota _X  ( d \theta_ i ) \] 
+		The first term in the sum reduces to zero, since the element on the right of the wedge 
+		has 1-forms associated with the radial coordinate only. For the second term, 
+		it is easy to show that the contraction \( \iota_X  ( d \theta_i ) = 1 \), 
+		and so since we are dealing with one forms we have that the coefficient in front 
+		of this is negative. 
+	</p>
+	<p>	
+		With this in mind, we have a moment map. 
+		With the reduction theorem we are about to show, we can 
+		construct a reduced space by looking at the inverse of 
+		the moment map where it equals zero. The reduced space in this case 
+		is defined as the quotient of \( \mu ^ { -1 } ( 0 ) \) by 
+		the original Lie group action. In the case 
+		above, we have 
+		\[ \mu ^ { -1 } ( 0)  / S^ 1  = S^ { 2 n - 1 }  / S ^1  = \mathbb{ C } \mathbb{ P } ^ { n-1} \] 
+	</p> 		
+	<p> 
+		Now we can ask a natural question. 
+		If we reduce spaces like this with the procedure above, 
+		is the resulting reduced space a manifold? What are its properties? 
+		It turns out - the reduced space is indeed a manifold, 
+		as a result of the Marsden-Weinstein-Mayer theorem. 
+	</p> 
+
+<h2>The Marsden-Weinstein-Meyer Theorem</h2> 
+	<p> 
+		Suppose we have a hamiltonian G-space 
+		for a compact Lie group \( G\). If \( M , \omega, G, \mu \) is 
+		a Hamiltonian G-space for a compact Lie group \( G \), then 
+		if \( \iota : \mu ^ { -1 } ( 0 ) \to M \) is the inclusion 
+		map, then we have that 
+		<ul>
+			<li> The orbit space \( \mu ^ { -1 } ( 0 ) / G \) is a manifold. </li> 
+			<li> \( \pi : \mu ^ { -1 } \to M_{ red } \) is a principle G-bundle </li> 
+			<li> There is a symplectic form \( \omega _{ red } \) on the reduced manifold 
+				this satisfies the condition that \( \iota^ * \omega  = \pi ^ * \omega_{ red} \) </li>
+		</ul> 
+	</p> 
+		
+<br> 
+<br> 
+<br> 
+
+
+  </div> 
+</body>
+</html>

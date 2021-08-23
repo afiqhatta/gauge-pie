@@ -119,7 +119,7 @@ We can rewrite the
 constrained problem in terms of Lagrangian 
 multipliers, using a dual variable. 
 As usual with the Lagrangian approach,
-we will introduce \( y ) 
+we will introduce \( y \) 
 which encodes the constraint as 
 
 \[ L ( x , y ) =  \( \frac{ 1 } { 2} x ^ T P x + q ^ T x + ( A x  - z ) ^ T y \] 
@@ -159,14 +159,90 @@ into the objective function with an indicator function.
 The first step of the ADMM algorithm states that 
 we have to solve the problem 
 
-\[ begin{aligned} 
-\text{minimise }  &  (1 / 2) \bar {x } ^ T P \bar {x } + q ^T \bar { x } + ( \sigma / 2 ) 
-| \bar { x }  - x ^ k | ^ 2 + ( \rho / 2 ) | \bar { z }  - z ^ k + \rho ^ { - 1} y ^ k | ^ 2  \\ 
-\text{subject to } & A \bar { x }  = \bar { z } \\
- \end{aligned} 
-\] 
+\[  
+\text{minimise }   (1 / 2) \bar {x } ^ T P \bar {x } + q ^T \bar { x } + ( \sigma / 2 ) 
+| \bar { x }  - x ^ k | ^ 2 + ( \rho / 2 ) | \bar { z }  - z ^ k + \rho ^ { - 1} y ^ k | ^ 2   
+\]
 
-</p>  
+subject to \( A \bar { x } = \bar { z } \). 
+ 
+We solve this problem with Lagrange multipliers, 
+where the control variables are \( \bar { x } , \bar{ z } \). 
+We attach a Lagrange multiplier \( v ^ k \) to the constraint 
+\( A \bar { x }  = \bar { z  } \), which gives us the 
+system of KKT equations,  
+Typically, we can prefactorise this matrix for the whole term, and then use this factorisation 
+repeatedly  in each iteration. 
+</p> 
+
+<h3> Certifying feasibility with ADMM</h3> 
+<p> 
+In Heinz and Combettes' textbook on 
+Convex analysis, proposition 6.46 states that 
+if \( C \) is a closed conves subset of some Hilbert space \( H \), 
+then we have that the projection into the cone, \( \Pi \), 
+satisfies 
+
+\[ p = \Pi ( x ) \iff x - \Pi (x) \in N _ C ( p ) \] 
+\( N _ C ( p ) \) is the normal cone and is defined as 
+the set 
+
+\[ N _ C ( p )  = \{ u \in H \mid \sup ( C - p \mid u ) \leq 0 \] 
+</p> 
+
+<p> 
+In theorem 3.14, in the first edition of his book, 
+he shows that this is true. 
+This means that in the ADMM algorithm, 
+we find that the iterates \( z ^ k, y ^ k \), satisfy the condition 
+that they are in the right sets. 
+</p> 
+
+<h3> Active constraints </h3> 
+<p> 
+An active constraint, if there is just a single constraint, 
+is a constraint in which the optimal point would be different without it. 
+
+</p> 
+
+<h3> Pre-conditioning </h3> 
+<p> 
+Methods like these tend to have unpredictable 
+convergence rates when problems are badly scaled. 
+There is also the question of the optimal choice of parameters 
+to speed up convergence. 
+A useful measure of how inaccurate matrix inversion 
+operations are is the matrix <b>condition number</b>. 
+</p> 
+
+<p> 
+Not including round-off error 
+from floating point arithmetic, the condition number of a matrix 
+associated with solving a system such as \( A x = b\). 
+</p> 
+
+<p> 
+In general, if we have a vector 
+ \( b \), we expect some intrinsic error associated with it. 
+Let's call this error vector \( e \). More often than 
+not, we care more about how big this error vector is 
+relative to \( b \) than we do about the absolute size itself. 
+So, we can quantify the relative error as 
+
+\[ \text{rel}_{\mathbf { b } }  = \frac{ | e | }{ | b | } \] 
+Similarly, the error in the solution to the equation above relative to 
+the solution itself can be written as 
+\[ \frac{ |  { A ^ { -1 } e } | } { | A ^ { - 1} b | } / \frac{ | e | } { | b | } \] 
+This ratio motivates the definition of 
+a condition number, which is defined as 
+
+\[\kappa ( A ) = \max \{ \frac{ | A ^ { -1 } e | } { | e | } \frac{ | b | } { | A ^ { - 1} b | } \} 
+ = \max \{ \frac{ | A ^ { -1 } e | } { | e | } \} \max \{ \frac { | A x | } { | x | } \}  
+ = | A ^ {  1- } |  |A | \]  
+</p> 
+
+<p> 
+ 
 <br> 
 <br> 
 <br> 

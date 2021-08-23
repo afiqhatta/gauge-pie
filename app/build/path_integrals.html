@@ -1,0 +1,141 @@
+<!doctype html>
+
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+
+  <script src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
+  <script src="js/scripts.js"></script>
+  <link rel="stylesheet" href="static/styles.css?v=1.0">
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+  <script>
+    MathJax = {
+     tex: {
+      inlineMath: [['$', '$'], ['\\(', '\\)']]
+     }
+    };
+    window.MathJax = {
+      loader: {load: ['[tex]/physics']},
+      tex: {packages: {'[+]': ['physics']}}
+    };
+  </script>
+  <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+  <meta charset="utf-8">
+  
+</head>
+
+<body>
+  <div class="mast">
+    <h3>Afiq Hatta's blog</h3> 
+  </div> 
+  <div class="sidebar">
+    <a href="index.html">Home</a>
+    <a href="writing.html">Writing</a> 
+    <a href="notes.html">Notes</a> 
+    <a href="about.html">About</a> 
+  </div>
+  <div class="main">
+    <div class="title">
+      <h1> 
+Exercises in Path Integrals
+ 
+<hr class="thin">
+</h1>
+    </div>
+     
+<h2> Moving from the classical path to the quantum path </h2> 
+	<p>
+		In classical mechanics, we are given a Lagrangian 
+		\( L = T - V\), where \( T \) is our kinetic energy and \( V \) 
+		is our potential energy. In this scenario, we can 
+		associate an action to this Lagrangian, and solving for the path 
+		which extremises this action is the path that the particle classically takes. 
+	</p>
+	<p>
+		As we know from classical mechanics, the action associated with 
+		a Lagrangian classically is given by the integral of the Lagrangian 
+		with respect to time, where the start point and end point \( x _ A \) 
+		and \( x _ B \) are fixed at \( t _ A , t_B \) respectively. 	
+		\[  S = \int _ {t_ A} ^ { t _ B } dt  \, \, L ( x, \dot{ x } , t ) \quad , \text{ with solution given by } \frac{ \delta S } { \delta x }  =0 \] 
+		Once we solve this equation, we can then proceed to calculate the actual 
+		action. 
+	</p> 
+
+	<p>
+		In the quantum sense, we can 
+		write out the propagator between two states, as the probability amplitude 
+		that one state will evolve into another. 
+		By repeated use of the completion identity, we come to 
+		the conclusion that the propagator 
+		is proportional to the path integral 
+		\[ \langle x_ b \mid e ^ {  -i H t } \mid \rangle \]
+	</p> 
+	<p> 
+		Using the completion identity, the resulting 
+		path integral looks 
+		like a sum expression where the associated probability with a given 
+		path \( x ( t ) \) has the phase \( e ^ { i S } \) associated with it. 
+		Now, when we integrate over mamy different paths to get the propagator which 
+		looks like 
+		\[ i G( x_a, t_a, x _b, t_b )  = \int \mathbf{ D } x \, \,  e ^ {\int _ {t_ A } ^ {t_ B } dt \,  L ( x , t ) } \] 
+		Now, on average, we expect that most of these different 
+		paths with probability \( e ^ { iS } \) will cancel out due to different phase factors. 
+	</p>
+
+<h2> Why is it the case that the classical actions still dominate?</h2>  
+	<p> 
+		In general, we should not expect that a quantum correction to 
+		something classical should be that big. After all, to first order, 
+		Newton's classical laws of motion work for us - so why is there not a big change? 
+		Well, this is due to the fact many of the 
+		paths cancel out, as we shall see. 
+	<p> 
+		However, near a classical path, many of these phase factors 
+		look the same and therefore we find constructive interference to make 
+		the classical path the dominating term in the integral. 
+		To see this, we will show that paths near the path integral all have a 
+		similar phase, and therefore constructively interfere with one another. 
+		I realise this is a bit of a wishy washy argument but its a start. 
+		If we have a stationary path, then we can expand the action in terms 
+		of a Taylor expansion with functional derivatives.  
+		\[ S [ x_ c ( t ) + \delta x ( t ) ] = S [ x _ c ( t ) ] +  C \cdot \frac{ S } { \delta x } + O ( \delta x ^ 2 ) \] 
+	</p>
+	<p> 
+		More formally, this expansion is given by
+		the series of integrals 
+		\[ S [ x_ c ( t ) + \delta x ( t )  = S [ x _ c ( t ) ] + \int dt  \, \frac{ \delta S } { \delta x } \mid _ { x  = x _ c }  ( t ) \mid \delta x ( t )  \]  
+		This is to first order. Functional derivatives are in 
+		general given by the expression 
+		\[ \delta S [ f ]  = \int _ { t _A  } ^ { t _ B }  dt \, \frac { \delta S } { \delta f } \delta f  \]
+		Supposing that \( S \) is a function of \( f \) and its first derivative, 
+		we then have that \( \frac{ \delta S }{ \delta f}  = \frac{ \partial L } { \partial f }  - \frac{ d } { dt } \frac{ \partial L} { \partial \dot { f } } \) 
+		Since the classical path solves this by definition, we have that the 
+		perturbation is given by 
+		\[ S [ x _ c (t ) + \delta x ( t) \] = S [ x_c ( t ) ] + O ( \delta x ^ 2 ) \] 
+	</p>  
+	<p> 
+	
+	<p> 
+		Armed with this knowledge, 
+		we can then calculate the form of a path integral to first order 
+		for some basic systems. We know that the 
+		path which extremises the action \( S \) is only, in the classical picture, 
+		a function of the start and end points \( x _A \) and \( x _ B \). With the argument above that most 
+		of the paths cancel each other out, we can heuristically write that 
+		\[  i G ( x _ a , x _ b, t _ b, t _ a ) = \int \mathbf { D } x \, e^ { i S [ x] } = 
+			\int \mathbf{D } x \, e ^ { i S [ x _c + \delta x ] } \]
+		Because of the expansion, we can make use of the expansion above and 
+		observe that \( x _ c \) by construction is only a function of \( x _a, x_ b ,t \), 
+		so we can factor it out. So, we have that the first 
+		order correction factors out and we are left with the 
+		expression 
+		\[ df
+<br> 
+<br> 
+<br> 
+
+
+  </div> 
+</body>
+</html>

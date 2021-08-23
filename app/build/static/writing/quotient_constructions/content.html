@@ -1,0 +1,346 @@
+<h3> Some results on symplectic vector spaces</h3> 
+<p> 
+Much like the idea of orthogonal 
+subspaces in regular linear algebra, 
+we can also talk about the idea of 
+symplectic orthogonal spaces on a symplectic manifold. 
+A symplectic orthogonal of some linear subspace 
+\( Y \)
+
+\[\{  Y ^ \Omega = \{ v \in V \mid \Omega ( v, u ) = 0 , \forall u \in Y \} \] 
+
+Firstly, we can show that \( \text{dim} Y + \text{dim} Y ^ \Omega  = \text{dim} V \). 
+To do this, we can consider 
+the map \( V \to Y ^ * = \text{Hom} ( Y , \mathbb{ R } ) \), 
+where we send 
+\[ v \mapsto \Omega ( v, \cdot ) \mid _ { Y } \]
+The image of this map is \( Y ^ * \), and the kernel 
+is by definition \( Y ^ \Omega\). Since \( \text{dim}  Y ^ * = \text{dim} Y \), 
+the result follows by the rank-nullity theorem. 
+</p>  
+
+<p> 
+An immediate result of this that 
+we can bound the dimension of a subspace if it's 
+isotropic. For example, if \( Omega \mid  { Y \times Y } = 0 \), 
+then we know that \( Y \subset Y ^ \Omega \), so we can bound 
+
+\[  2 \text{dim} Y \leq  \text{dim} V \] 
+</p>
+
+<p> 
+If we have a vector subspace \( Y \) of codimension 1, 
+then we have that \( \text{dim} ( Y ^ \Omega )  = 1\). 
+So, we have that for any given \( u \in Y ^ \Omega\), 
+we get that \( \Omega( u , v)  =\lambda \Omega ( u, u )  = 0 \), 
+so 
+\[ Y \subset ( Y ^ \Omega ) ^ \Omega)  = Y \]  
+
+
+<h3>What is a symplectic manifold?</h3> 
+<p> 
+A de-Rham 2-form on a manifold \(M\) is a a map 
+defined at every point on the manifold,
+which takes product of the tangent space and sends it 
+to the real numbers in a skew-symmetric fashion. 
+In other words, it is a map \( \omega \) which is defined 
+at every point \( p \in M \) such that 
+the induced map 
+\[ \omega_ p : T _ p M \times T_ \p M \to \mathbb{ R } \] 
+is skew-symmetric. 
+</p> 
+
+<p> 
+We say that \( \omega\) is closed if the exterior derivative is zero. 
+Hence, the simplest example of a symplectic form is the following. 
+If we let \( M \) be \( \mathbb{ R } ^ { 2 n } \), with coordinates 
+\( x_ 1 , \dots x_ n , y _ 1, \dots y _ n \), then the form 
+\[ \omega_ 0 = \sum _ { i =1} ^ n dx _ i \wedge d y _ i \] 
+is a symplectic form, where the symplectic basis 
+is just the set of vectors induced by those coordinates 
+(the set of partial derivatives induced by those coordinates).
+It is easy to show that the above is closed with the 
+use of the identity 
+\[ d ( a \wedge b ) = da  \wedge b + ( - 1 ) ^ a \wedge db \] 
+  
+</p>  
+<p> 
+Darboux's theorem is that locally, any symplectic manifold 
+of dimension \( 2 n \) is symplectic to \( \mathbb[ R } ^ { 2 n } \), 
+with the symplectic form defined above.  
+<h3> Motivation and Moment maps </h3> 
+<p> 
+In terms of symplectic geometry, a momentum 
+map is a map which helps us to construct conserved 
+quantities. For example, the most famillar case 
+we know is \( \mathbb{ R } ^ 3 \). 
+If we set \( M \) to be our cotangent bundle of \( \mathbb { R } ^ 3 \),
+which represents velocities and positiosn,  
+and set our symmetries \( G \) to be translations and rotations, then 
+the moment map has 6 components which are 3 angular momenta and 3 linear momenta. 
+</p> 
+
+<p> 
+Formally, suppose we have a 
+Lie group \( G \) which acts on a manifold \( M \). 
+This Lie group is going to have an associated lie algebra \( L ( G  ) \). 
+For some vector in the Lie algebra, call it \( X \), we have 
+an induced vector field which acts on \( M \), given by 
+\( \rho ( X ) \). 
+</p>
+<p> 
+If we let \( \iota _ { \rho ( X ) } \) denote the contraction 
+of this vector field with \( \omega\), 
+then this map has a zero exterior derivative. 
+</p> 
+
+<p> 
+Suppose that the map \( \iota _ { \rho ( X)  } \omega \) is not 
+just closed, but also exact, so that 
+
+\[ \iota _ { \rho ( X) } \omega  =d H _ {X } \]
+
+Also, suppose that the map \( X \to H _ { X } \), 
+is a Lie algebra homomorphism. Then a momentum map 
+is a map \( \mu : M \to L ( G ) ^ * \), such that 
+
+\[ d ( \langle \mu, X \rangle ) = \iota _ { \rho( X ) } \omega \] 
+for all \( X  \in L ( G) \). To sense check above, 
+we note that \( \rangle \mu, X \langle \) is a function defined 
+on the manifold, so the exterior derivative of this object is 
+a one-form. Equally, we have that \( \omega \) is a two-form 
+so the contraction is also a one form. 
+ 
+</p>   
+
+<h3>Symplectic forms on cotangent bundles</h3> 
+<p> 
+There are some canonical structures we 
+can make for cotangent spaces. Recall, 
+a cotangent space \( T_ x ^ *  X\) at 
+some point \( x \) in our manifold is the 
+set of linear maps from the tangent space at that 
+point to the reals. 
+</p> 
+
+<p> 
+Since \( M \) is a manifold, 
+we can describe it with a set of coordinate charts 
+\( (U , x _ 1 , \dots , x_ n \), and at any point, we 
+have some basis 
+of differentials which form the basis of the cotangent space. 
+This basis is the set of differentials 
+\( (dx_1 ) _ x , \dots , (dx_ n)_x \). 
+</p>
+
+<p> 
+For the cotangent bundle, since we 
+parametrise the space by a covector, 
+as well as a point on the manifold,
+we can write a coordinate chart 
+and treat the cotangent bundle as 
+a \( 2n \) dimensional manifold. 
+</p> 
+
+<p>
+We can define a symplectic form 
+on the cotangent bundle, but we have to 
+be very careful that this definition is coordinate 
+independent. 
+Since we have a manifold which looks like 
+\[ \mathbb{ R } ^  { 2n } \], the first thing we can 
+try is take the product 
+
+\[ \omega = \sum _ { i = 1 } ^ n dx _ i \wedge d \xi _ i \]
+</p>
+
+<p> 
+A coordinate free way to do define the 
+symplectic 2-form is to construct what is called the 
+tautological 1-form. In physics, the tautological 1-form is a 1-form 
+used to associate velocity with momentum. Apparently, it is a way 
+to link Hamiltonian mechanics with Lagrangian mechanics but it is not 
+clear to me why yet. 
+</p>
+
+<p> 
+Just like how we can define a push and pullback of 
+between manifolds \(M , N \), we can also define 
+pull and pushbacks between the manifold itself, as 
+well as its cotangent bundle.
+</p>
+
+<p>
+\( T ^ * Q \) is a covector field on the manifold \( M \). 
+This means, at any point \( q \in Q\), there are a local 
+set of coordinates \( q _ i \), which induce a basis 
+of the tangent space given by the differentials \( \{ d q _ i \). 
+Since we can write out a covector in terms of this basis, we 
+can parametrise points \( (q, p ) \in T ^ * Q \) as \( p _ i d q ^ i \). 
+</p> 
+
+ 
+<p> 
+If we let 
+our manifolds be \( M = Q, N = T ^ * Q \), then 
+the first thing we can do is to define a 
+projection map between the two. 
+
+\[ \pi : T ^ * Q \to Q \]
+</p> 
+
+<p> 
+The whole point of this is that one 
+can show that if we have a coverctor field, the pullback 
+of this map is interpreted as a one form in its own right. 
+</p>
+<p> 
+The pushforward of a given vector field 
+\( X \) on the manifold \( T ^ * Q \) by the projection 
+\( \pi \) are just the q components of the field. 
+Similarly, the pullback just places all dp components to zero. 
+We have \( \pi_ * : T T ^ * Q \to T ^ * Q \). 
+In other words, \( X \) is first a vector field on 
+the tangent space of \( T ^ * Q \), and now its mapped to the tangent space of \( Q \). 
+</p> 
+
+<p> 
+Specifically, if we have a covector field on the manifold 
+\( Q \), we can build a vector field which 
+maps from \( T ^ * Q \to T T ^ *  Q \). Since the 
+map we want to pushforward is from \( T ^ * Q \) to \( Q \), 
+we are taking a vector field defined on \( T ^ *  Q \) 
+and redefining it to a vector field defined just on \( Q \). 
+</p> 
+
+<p> 
+In other words, we have the following maps 
+which we want to pushforward and pullback: 
+
+\[ \begin{aligned} 
+X & : T ^ * Q \to T T ^ * Q \\ 
+\pi _* X & : Q \to T Q \\ 
+\eta : Q \to T ^ * Q \\ 
+\pi ^ * \eta : T ^ * Q \to T ^ * T ^ * Q \\
+\end{aligned} 
+\] 
+
+<p> 
+At an arbitrary point, our phase space, we can write the tautological 
+one-form as 
+\[
+			
+\]  
+</p>
+
+<h3> Cancelling a pullback </h3> 
+<p> 
+This special one form has a nice property that it 
+cancels out pullbacks of covector fields. 
+So, the tautological one form is the one form characterised by this property. 
+</p> 
+
+<h3> Lagrangian submanifolds</h3> 
+<p> 
+A map between manifolds is an immersion if 
+the associated derivative of the function 
+is an injective one between the two manifolds. 
+For example, if we have a mapping which injects 
+between \( \mathbb{ R } ^ 1 \to \mathbb{ R } ^ 2 \), such as the obvious 
+inclusion map
+
+\[ f :  x \mapsto (x, 0) \] 
+
+then our derivative of this function is given by   
+the matrix operation 
+
+\[ Df_ 0  ( u ) = u \begin{pmatrix} 1 \\  0 \end{pmatrix} \] 
+where in this case \( u \in \mathbb{ R }  =\mathbf T _ 0 \mathbb { R } \)
+An embedding is a proper injective immersion, and so this 
+classifies as an embedding. 
+</p> 
+ 
+<p> 
+We wil now demonstrate that proper, injective immersions are 
+the same as embeddings with a closed image. 
+If we have an embedding \( f : X \to Y \) with a closed image in 
+\( Y \). We need to show that this is proper, 
+or that every preimage of a compact set is compact. 
+The image \( Y \) is compact. 
+</p> 
+
+<p> 
+What is the difference between an immersion and an embedding? 
+</p> 
+
+<p> 
+Conversely, if we have a proper, injective immesrion, then it is an embedding. 
+An embedding is an immersion which is a homeomorphsim onto its image. 
+In topology, an embedding between two spaces \( X , Y \) is an injective, 
+continuous map where the differential of the map 
+is an injective map between tangent spaces. 
+</p>
+ 
+
+https://math.stackexchange.com/questions/1116124/embeddings-are-precisely-proper-injective-immersions/3815684
+ 
+
+<h3> Basic symplectic geometry</h3> 
+<p> 
+If we have a smooth manifold \( M \), then the 
+two-form \( \omega \) is a symplectic form if 
+the exterior derivative \( d \omega  = 0 \), and 
+it is non degenerate. 
+</p> 
+<p> 
+A degenerate bilinear form 
+is a form such that we have a vector \( X \) 
+in which \( \omega ( X , Y )  = 0 \forall Y \). In odd dimensions, 
+skew symmetric matrices are always singular,  
+so this requirement implies that our manifold \( M \) 
+needs to have an even dimension.  
+</p> 
+
+<p> One of the simplest symplectic forms 
+we can come up with is \( \mathbb{ R } ^2 \) 
+paired with the bilinear form ... 
+</p>  
+<h3> A little more detail </h3> 
+<p> 
+We'll now define, a little more rigourously, 
+what a moment map is. If we have a symplectic manifold given by 
+\( M , \omega \), then the group 
+of symplectomorphisms is the infinite dimensional 
+Lie group which preserves 
+the two form \( \omega \). So, we have that 
+
+\[ Symp ( M , \omega)  = \{ \phi : M \to M \mid \phi ^ * \omega  = \omega \} \] 
+This is a Lie group, so it also has an associated Lie algebra. 
+
+<h3> Definitions </h3> 
+
+<p>
+A symplectic manifold is a manifold which has a skew-symmetric bilinear 
+map attached to it,  
+A Hamiltonian G-space parametrized by \( M , \omega, G, \mu \) 
+where \( G \) is a compact Lie group, is the following. 
+
+
+<h3> Examples </h3> 
+<p> 
+Let \( G = \mathbb{ R } ^ 3 \) be our Lie group, and 
+let \( \mathbb{ R } ^ 6 \) be the underlying manifold. 
+We can pair this manifold with the 
+symplectic form \( \omega  = \sum d x_ i \wedge d y _ i \). 
+Now, we have to have \( G \) act on the manifold in some way. We can
+do this by having \( R ^ \3 ) act on the manifold by translations. 
+Suppose that we have some element \( \mathbf{ a } \in \mathbb { R} ^ 3 \), 
+then, we can map this to the group of symplectomorphisms 
+by acting on the group via translations. 
+
+\[\begin{aligned} 
+ \mathbf { a } \in \mathbb{ R} ^ 3  & h\mapsto \psi _ \mathbf{ a} \in  \text{Symp} ( \mathbb{ R }^ 6, \omega ) \\
+\psi _ \mathbf { a} ( \mathbf { x} , \mathbf{ y } )  &  = ( \mathbf { x } + \mathbf { a } , \mathbf { y } )  
+\end{aligned} 
+\] 
+From this element in the Lie group, we can  

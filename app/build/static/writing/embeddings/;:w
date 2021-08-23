@@ -1,0 +1,42 @@
+<h3> Immersions and embeddings</h3> 
+
+<p> 
+We will motivate this section. 
+Then, we will define some important notions, and also look at the equivalence of closed, proper immersions with embeddings. 
+We will also touch on what a homeomorphism is, along with some examples. 
+Finally, we will go through some references on what are useful resources. 
+In particular, a Introduction to Smooth Manifolds by J. Lee is a good resource. 
+</p> 
+ 
+<p> 
+In conjuction with the article on quotient spaces, 
+I came across a piece on manifolds and submanifolds, and embeddings. 
+Embeddings are just a fancier way of 'slotting in' manifolds in smoothly in Euclidean space - 
+can a manifold be smoothly defined as a 'subset' of \( \mathbb{ R } ^ n \), for example?  
+I thought it would be interesting to do an article on this in their own right. 
+To motivate this article, we seek inspiration from cartography. 
+Take a map for example. If we wanted to construct a map  
+in 2d where the distance between any two points on the map resembles the distance 
+between the actual two points on the sphere, is this possible? 
+</p> 
+
+<p> 
+To get to grips with the above, we need to formalise under what 
+conditions manifolds can be considered 'submanifolds' of higher dimensional 
+manifolds. More importantly, we also need to think about 
+under what conditions submanifolds might be considered smooth. 
+</p>
+
+<h3> What is an immersion? </h3>
+<p>  
+An immersion is a map from the manifold to \( \mathbb{ R } ^ n \) 
+which preserves the tangent spaces when we look at the derivative at any given point. 
+For example, consider an immersion of the circle to \( \mathbb{ R } ^ 2 \). 
+If we have an mapping like 
+
+\[ f : x \mapsto ( x^ 2 , x ^ 2 ) \] 
+Is this an immersion? Well, in this case the derivative 
+at the 0 point is not injective in this case.  
+<br> 
+<br>
+<br> 

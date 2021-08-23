@@ -1,0 +1,46 @@
+<h2> The subspace topology</h2> 
+<p> 
+In the article on embeddings and immersions, 
+we had to refer to a lot of references on 
+point set topology. In particular, we had to use a 
+lot of language on subspaces and embeddings. 
+To keep us honest, I wanted to clarify some of those claims and 
+definitions in this section. 
+<p>
+
+<p>
+	The first place to start is by defining what a topology actually is, in the 
+	point topology point of view, and then to define 
+	the concepts of continuity, compactness, and Hausdorff properties in this sense. 
+</p>
+
+<p>
+	A topological space \( ( X , \tau ) \) is a set \( X \) paired with some collection of 
+	subsets \( \tau \) (whose members are called open sets), such that the open set axioms are satisfied. 
+</p> 
+
+<p> 
+	Given a map \( f \) which maps elements from one topological space to another, 
+	we can define the notion of continuity between these two spaces in terms of 
+	the language of open maps. A map \( f: X \to Y \) is defined to be continuous 
+	when every open subset \( U \subest Y \) has a preimage \( f ^ { -1 } ( U ) \) which 
+	is open in X. A preimage of a set in a target space, is the set of all elements 
+	in the original space which land in that target space.  
+</p> 
+
+<p> 
+	Since we are talking about embeddings and immersions, we 
+	need to get comfortable with the subspace topology. If we 
+	have a topological space \( X \), and a subset of \( Y \subset X \), 
+	then the subset topology is the set of open sets such that 
+
+	\[ \tau_Y = \{ U _ Y \mid U _ Y = U _ X \cap Y , \quad U _ X \in \tau _X \} \] 
+</p> 
+
+<p> 
+	In this case, the map 'inclusion map' which maps \( X \to Y \), 
+	where the domain has the subspace topology, and the range has the usual topology. 
+	The inclusion map is continuous since \( \iota ^ { -1 } ( U _ Y )  = U _ Y \cap X \in \tau _ X \). 
+</p> 
+
+

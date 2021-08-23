@@ -1,0 +1,161 @@
+<h3> Immersions and embeddings</h3> 
+
+<p> 
+We will motivate this section. 
+Then, we will define some important notions, and also look at the equivalence of closed, proper immersions with embeddings. 
+We will also touch on what a homeomorphism is, along with some examples. 
+Finally, we will go through some references on what are useful resources. 
+In particular, a Introduction to Smooth Manifolds by J. Lee is a good resource. 
+</p> 
+ 
+<p> 
+In conjuction with the article on quotient spaces, 
+I came across a piece on manifolds and submanifolds, and embeddings. 
+Embeddings are just a fancier way of 'slotting in' manifolds in smoothly in Euclidean space - 
+can a manifold be smoothly defined as a 'subset' of \( \mathbb{ R } ^ n \), for example?  
+I thought it would be interesting to do an article on this in their own right. 
+To motivate this article, we seek inspiration from cartography. 
+Take a map for example. If we wanted to construct a map  
+in 2d where the distance between any two points on the map resembles the distance 
+between the actual two points on the sphere, is this possible? 
+</p> 
+
+<p> 
+To get to grips with the above, we need to formalise under what 
+conditions manifolds can be considered 'submanifolds' of higher dimensional 
+manifolds. More importantly, we also need to think about 
+under what conditions submanifolds might be considered smooth. 
+</p>
+
+
+<h3> What is an immersion? </h3>
+<p> 
+In order to understand what happens when 
+we try to map a manifold 'into a subset' of another manifold, 
+we need to construct some sort of smooth map between them. For this purpose, 
+the language used to switch between different manifolds is useful.
+</p>
+
+<p> 
+If we have a smooth map \( \phi : M \to N \) between two manifolds, 
+then we can induce a pushforward, \( \phi _ * \), which is an 
+induced map between the tangent spaces of the manifolds at a 
+given point: 
+\[ \phi _ * : T _ p M \to T _ { \phi ( p ) N \] 
+If \( M \) and \( N \) are finite dimensional, and 
+are parametrised by coordinate systems 
+\( \{ x^\mu \} , \{ y ^ \mu \} \) respectively, then 
+the specific components of \( \phi _ * \) is just the Jacobian 
+in those coordinates. 
+\[ \( \phi \) ^ \mu _ \nu  = \frac{ \partial y ^ \mu }{ \partial x ^ \nu } \] 
+In this case, this map should be injective if we have more rows than columns. 
+</p>
+
+<p> 
+An embedding is an immersion which is injective (where the 
+map \( \phi \) specifically is injective, but also a homeomorphism onto 
+its image, where the image's open sets are defined to be the set of 
+open sets in the subspace topology of the target set. 
+The subspace topology is defined as all sets which can be written as the 
+intersection of the subset \( S \) and an open set in the topology of the 
+superset \( X \), where \( S \subset X \). j 
+</p>
+
+<p> 
+Now, it is not necessarily true that 
+an injective map whose range is restricted to its image is a homeomorphsim. 
+To be a topological embedding, we require that the inverse is continuous. 
+If we consider the map from \( f : [ 0 , 2 \pi ) \] to the unit circle, 
+we see that the function \( f \) is continuous because it is composed of 
+two continuous maps, and it is bijective. 
+However, the inverse map is not continuous since there does not exist a small 
+neighbourhood around (0, 1) such that the image of this is contained near 0. 
+The neighborhood of (0, 1) always maps to 
+a slice which contains 0 and a point arbitrarily close to \( 2 \pi \), but not points inbetween.
+Hence, it is not continuous since there does not exist a \( \delta \) such that the image of the map is contained in a small neighbourhood.  
+</p> 
+
+<p>
+Homeomorphisms preserve the two topological properties 
+of connectedness and compactness. 
+</p> 
+
+<h3> Examples of embeddings </h3> 
+<p> 
+The first example of an emebedding 
+which is easiest to get our head around is to embed the a lower dimensional 
+hyperplane of \(  \mathbb{ R } ^ n \) into \( \mathbbb{ R} ^ m \) where 
+\( n \leq m \). The Jacobian of this map is just
+the identity matrix with some extra zeros on the bottom. 
+The inclusion map is also a homeomorphism, so the inclusion map is indeed an embedding. 
+</p> 
+
+<p> 
+We have that immersions are embeddings under certain conditions. 
+These all stem from whether the injective immersion \( \phi \) is closed or not. 
+If it is a closed map, then the mapping is an embedding. 
+</p> 
+
+<h3> Embedded submanifolds </h3> 
+<p> 
+Suppose we have some embedded k-dimensional submanifold 
+of \( M \). Given that the original topology of \( M \) is structured such 
+that \( M \) is a manifold, is it then true that this k-dimensional submanifold 
+is also a topological manifold? Well, it turns out that this is 
+indeed true. 
+</p> 
+
+<p> 
+It's a good exercise to go through the logic 
+over why this is true. Suppose we have a subset given \( N \) which is 
+a k-dimensional embedded manifold. To prove that this is also a topological manifold, we 
+need to construct an atlas from an arbitrary open set 
+\( V \) to a subset of the reals. 
+Since \( N \) is a topological k embedding, we have that every point 
+has a slice chart. A slice chart is a chart of \( M \) (the surrounding manifold), 
+such that on \( M \)'s atlas, we have that \( \phi ( U \cap N \) is a k-slice of 
+\( \phi ( N ) \). This means that 
+locally this subset an be written as 
+
+\[ \phi ( U \cup N ) = \{( x_ 1, x_ 2, \dots x _ k , c_ { k + 1}, \dots c _ n ) \in \phi ( U ) \} \] 
+</p> 
+
+<p> 
+Since \( M \) is hausdorff and second countable, so is \( N \). Now,
+given some \( p \in N \), since \( N \) is an embedded 
+submanifold, there exists a slice chart \( U , \phi \), 
+such that \( p \in U \), and that \( U \cap N \) is a slice 
+of \( U  \).
+If we set \( V \) to be the neighbourhood, we have to 
+map it via a homeomorphism to a subset of \( \mathhbb{R } ^ k \). 
+To do this, we just make use of the 
+slice map and then project it down to the first \( k \) coordinates. 
+</p> 
+
+\[ \psi = \pi \circ \phi \mid_V : V \to \Im ( \phi \circ \phi \mid _ V ) \] 
+
+<p> 
+The inclusion map is a topological embedding itself 
+(a homeomorphism with respect to the subspace topology). 
+The subspace topology is defined as the set of subsets 
+in the subpsace in which there exists an open set in X 
+such that the intersection is in the oroginal topology. 
+
+To proe that the inclusion map is an embeeing, 
+we need to show that it is continuous from Y to X, 
+that it's injective, and that it's open. If we do this, 
+then it is a homeomorphism onto its image. 
+</p>  
+
+<p>  
+An immersion is a map from the manifold to \( \mathbb{ R } ^ n \) 
+which preserves the tangent spaces when we look at the derivative at any given point. 
+For example, consider an immersion of the circle to \( \mathbb{ R } ^ 2 \). 
+If we have an mapping like 
+
+\[ f : x \mapsto ( x^ 2 , x ^ 2 ) \] 
+Is this an immersion? Well, in this case the derivative 
+at the 0 point is not injective in this case.  
+<br> 
+<br>
+<br> 
