@@ -1,0 +1,34 @@
+<p><br/></p>
+<p>Hi readers! I am currently trying to work through a paper by R. D. Blandford, R. L. Znajek! The paper is entitled ‘Electromagnetic extraction of energy from Kerr black holes’, and looks at electromagnetic fields that move energy in an out of a black hole. </p>
+<p><br/></p>
+<hr />
+<p><br/></p>
+<h3>Flux going in and out of the Black Hole</h3>
+<p>In general relativity, the energy and momentum can be written in a single, chunky object. This object called the energy-momentum tensor, and it can be written as a matrix. If we have 5 coordinates, then the matrix will be a 5 by 5 matrix, where each row represents a coordinate component. This tensor is conserved, and this is expressed in the conservation law. From this, we can define flux term. Flux is a rough word to describe the component of the tensor in a specific direction. </p>
+<p><img alt="alt text" src="static/Loss-of-Energy-from-Black-Holes-bf094cc0598e45bc9272dfafb03790e0_file_0.png" /></p>
+<p>The term above is the electromagnetic energy flux. There is also another angular momentum flux. This is when we isolate the EM tensor component in the axial direction. For the electromagnetic energy flux, we are interested in flux of two directions - the radial direction (which points inwards/outwards from the origin), and the theta coordinate, which moves along lines of longitude. These two coordinates are known as the poloidal components. Explicit terms for the poloidal components for the energy flux are shown below </p>
+<p><img alt="alt text" src="static/Loss-of-Energy-from-Black-Holes-bf094cc0598e45bc9272dfafb03790e0_file_1.png" /></p>
+<p>Omega is roughly the ‘angular velocity’ of our magnetic field. The letter sigma is a characteristic length scale which depends on the angular momentum of the black hole. </p>
+<p><br/></p>
+<p><br/></p>
+<hr />
+<h3>Surfaces of Interest</h3>
+<p>There are some surfaces that we can make, by setting components of the electromagnetic tensor constant. The poloidal surface is what we get when we keep the phi coordinate constant.  The phi coordinate is the one that wraps around in the horizontal plane. If we keep it constant, we get the surface that is shown with the red arrow in the diagram below. </p>
+<p>[image is not supported]</p>
+<p>By DaveBurke - Own work, CC BY 2.5, <a href="https://commons.wikimedia.org/w/index.php?curid=1169843">https://commons.wikimedia.org/w/index.php?curid=1169843</a></p>
+<p><br/></p>
+<p>As physicists, we tend to be interested in quantities that stay constant on given surfaces. Are there any other quantities that are conserved on the poloidal surface? [1] also asserts that there is another function that is constant. This function is labelled with the Geek letter mu, and it represents the rate of change in the vector potential as we sweep across the circle along the phi axis. </p>
+<p><img alt="alt text" src="static/Loss-of-Energy-from-Black-Holes-bf094cc0598e45bc9272dfafb03790e0_file_2.png" /></p>
+<p>We can figure out the current that comes out fo a slice like this. Infinitesimally, the current that comes out of a small slice should look like the following equation. To get the full current that is expelled from the black hole, we would have to integrate over the whole set of coordinates. </p>
+<p><img alt="alt text" src="static/Loss-of-Energy-from-Black-Holes-bf094cc0598e45bc9272dfafb03790e0_file_3.png" /></p>
+<p>What does an observer see? Well, an observer rotating near the horizon will see a flux of energy entering the hole, but angular momentum leaving the hole. Now, here comes the juicy part. It is of interest to know how fast energy gets extracted from the black hole. In paper [1], it’s shown that the black holes lose energy electromagnetically at the rate </p>
+<p><img alt="alt text" src="static/Loss-of-Energy-from-Black-Holes-bf094cc0598e45bc9272dfafb03790e0_file_4.png" /></p>
+<p>The omega here is the electromagnetic angular velocity. I think this interpretation is supported since the energy can be written as omega x angular momentum, so it has the right units. To derive the equation above, we integrate the flux over the sphere. To do this, we keep the radius constant but integrate over the phi and theta components. This is shown by the expression on the left hand side. Integrating the theta coordinate from zero to pi is equivalent to integrating the field from A_e to A_p.</p>
+<p><br/></p>
+<p>Changing coordinates, this is the same as the expression on the right hand side (I am not actually sure how to prove this yet).  The determinant of the metric determines the scaling we need in the integrand. The metric g can be represented as a matrix depending on the coordinate system we use. The determinant is</p>
+<p><img alt="alt text" src="static/Loss-of-Energy-from-Black-Holes-bf094cc0598e45bc9272dfafb03790e0_file_5.png" /></p>
+<p>There is also a loss of angular momentum from the black hole. This shown in the equation </p>
+<p><img alt="alt text" src="static/Loss-of-Energy-from-Black-Holes-bf094cc0598e45bc9272dfafb03790e0_file_6.png" /></p>
+<h3>References</h3>
+<p>[1] R. D. Blandford, R. L. Znajek, Electromagnetic extraction of energy from Kerr black holes, <em>Monthly Notices of the Royal Astronomical Society</em>, Volume 179, Issue 3, July 1977, Pages 433–456</p>
+<p><br/></p>

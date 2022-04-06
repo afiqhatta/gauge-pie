@@ -1,0 +1,80 @@
+<!doctype html>
+
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+
+  <script src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
+  <script src="js/scripts.js"></script>
+  <link rel="stylesheet" href="static/styles.css?v=1.0">
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+  <script>
+    MathJax = {
+     tex: {
+      inlineMath: [['$', '$'], ['\\(', '\\)']]
+     }
+    };
+    window.MathJax = {
+      loader: {load: ['[tex]/physics']},
+      tex: {packages: {'[+]': ['physics']}}
+    };
+  </script>
+  <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+  <meta charset="utf-8">
+  
+</head>
+
+<body>
+  <div class="mast">
+    <h3>Afiq Hatta's blog</h3> 
+  </div> 
+  <div class="sidebar">
+    <a href="index.html">Home</a>
+    <a href="writing.html">Writing</a> 
+    <a href="notes.html">Notes</a> 
+    <a href="about.html">About</a> 
+  </div>
+  <div class="main">
+    <div class="title">
+      <h1> 
+Time-Crystals-Part-III-638138a563b347999a6c3e1d62c2b6e5
+ 
+<hr class="thin">
+</h1>
+    </div>
+     
+<p><br/></p>
+<p>In the previous article, we looked at eigenstates of the Hamiltonian. We wanted to find some states that obey time-translation symmetry breaking - the paper [1] shows that it’s equivalent to finding Floquet operators that have eigenstates which are not ‘short-range correlated’. Floquet theory is the study of states that are solutions to Hamiltonians that are periodic. Floquet eigenstates are natural states that correspond to energy eigenvalues of this Hamiltonian. This means that for any local operators that are located sufficiently far apart, there is no correlation over the given states. </p>
+<p><br/></p>
+<p>In an attempt to find some ground states of this Hamiltonian that are not time-translation symmetric, we need to first fudge the Hamiltonian to make it easier to work with. To break the problem down, let’s look at what happens when we constrain the values in our Hamiltonian, and try to come up with some simple cases that exhibit time-translation symmetry breaking. Mathematicians and physicists like to simply things by setting constraints. These constraints are usually designed to make the problem more soluble in some way. Then, they relax the constraints a tiny but and see what happens. If the behaviour stays the same after perturbing the constraints a tiny bit, that is evidence of something useful at work there. </p>
+<p><br/></p>
+<p><br/></p>
+<h3>Constraining the Hamiltonian for Simpler Manipulation</h3>
+<p>The following is an argument taken from paper [1], to come up with a state that breaks time-translation symmetry. First, arrange particles in a one-dimensional line, and assume that the Hilbert space consists of each particle being able to have an up-spin and down-spin. Suppose that we constrain the values in the Hamiltonian, such that the component on axis is cut-off at some fixed number h. What happens when we shrink this number h? </p>
+<p><img alt="alt text" src="Time-Crystals-Part-III-638138a563b347999a6c3e1d62c2b6e5/file_0.png" /></p>
+<p>The Hamiltonian we’re left with is then just the Hamiltonian with the z components left over. When we set the x-component to zero, we’re then left with just a reduced form </p>
+<p><img alt="alt text" src="Time-Crystals-Part-III-638138a563b347999a6c3e1d62c2b6e5/file_1.png" /></p>
+<p>This Hamiltonian has the eigenstates </p>
+<p><img alt="alt text" src="Time-Crystals-Part-III-638138a563b347999a6c3e1d62c2b6e5/file_2.png" /></p>
+<p>From this Hamiltonian, we derive a Floquet operator. If we find entangled eigenstates in a Floquet operator, then we’re done. The first term in the operator is just this Hamiltonian, but this time it drives time-evolution since it’s the exponential of the Hamiltonian. The term after it has the effect of flipping spins in our eigenstates. </p>
+<p><img alt="alt text" src="Time-Crystals-Part-III-638138a563b347999a6c3e1d62c2b6e5/file_3.png" /></p>
+<p>Why does the operator on the left hand side flip spins? The matrices in the exponent are a special kind of matrix called Pauli matrices.  In this case, the matrices are Pauli x-matrices, which is shown by the superscript <em>x </em>in the sum. They act on the Hilbert space of a one-dimensional line of particles, each prepared in a superposition of up and down spin. Consider just a single particle. We can write the Hilbert space using the up states and down states as a basis. In matrix notation, the Pauli x-matrix has values of 1 in the off-diagonal entries of this matrix. This has the effect of flipping spins: </p>
+<p><img alt="alt text" src="Time-Crystals-Part-III-638138a563b347999a6c3e1d62c2b6e5/file_4.png" /></p>
+<p>When we take the exponent of the sum of the spin, it can be shown that it’s equivalent to just arranging the operators in a big product. </p>
+<p><img alt="alt text" src="Time-Crystals-Part-III-638138a563b347999a6c3e1d62c2b6e5/file_5.png" /></p>
+<p>If we apply this onto the entire one dimensional line, we have the effect of flipping all the spins in this system. This is shown in the diagram below: </p>
+<p>[image is not supported]</p>
+<p><br/></p>
+<p>With the Floquet operator, we can derive a set of two induced eigenstates based on the eigenstates that we already have made from the Hamiltonian. It is easy to check that this gives us eigenstates that look like </p>
+<p><img alt="alt text" src="Time-Crystals-Part-III-638138a563b347999a6c3e1d62c2b6e5/file_6.png" /></p>
+<p>Thus, we have eigenstates that are not short-range correlated! The spins in different locations are entangled. This means that we’ve found time-translation symmetry breaking states. </p>
+<p><br/></p>
+<h3>References</h3>
+<p>[1] Dominic V. Else, Bela Bauer, and Chetan Nayak. Floquet Time Crystals, <a href="https://arxiv.org/abs/1603.08001">arXiv:1603.08001</a></p>
+<p><strong>[cond-mat.dis-nn]</strong></p>
+<p><br/></p>
+
+  </div> 
+</body>
+</html>

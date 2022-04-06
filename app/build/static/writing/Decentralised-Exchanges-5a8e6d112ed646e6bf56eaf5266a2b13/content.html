@@ -1,0 +1,63 @@
+<h3>Order Books</h3>
+<p>Exchanges are open places where market participants can buy and sell objects. On an exchange, an order book is a traditional mechanism that large groups of people can use to decide prices to buy and sell things to one another. An order book consists of a bid side, and an ask side. The bid side consists of the sizes and prices that market participants are willing a buy specific security for. The offer side consists of sizes and prices market participants are willing to sell a security for. </p>
+<p><br/></p>
+<p>In the example below, we have an order book of oranges. The ‘bid’ side is shown on the stack on the right-hand side. The available sizes are 10, 5 and 20 at prices of 10, 9 and 8, respectively. This means that if I held oranges and I wanted to sell them, I could theoretically sell at most ten at 10 since there are willing buyers for that size. Conversely, there will also be a range of ask sizes and ask prices representing the size and price of market participants willing to sell an object. </p>
+<p><br/></p>
+<p>I’ve drawn out this example in the picture below. If I was desperate to buy this object, I could choose to intercept the best bid at 10, and buy 2 oranges at 11 from the ask level. </p>
+<p>[image is not supported]</p>
+<hr />
+<h3>Automated Market Makers</h3>
+<p>Whilst they are among the most popular methods for price discovery, order books are not the <em>only</em> mechanism to exchange objects for a price. There are plenty of different ways market participants can price things - each having its advantages and disadvantages for market participants and the economy in general. </p>
+<p><br/></p>
+<p>This post will explore other types of exchange mechanisms in decentralised finance. One of these ways is where the price of two objects is determined by relative supply in a pool of available tokens. The exchange of these objects happens between two classes of market participants called ‘<strong>liquidity providers’</strong> and ‘<strong>liquidity takers’</strong>. Liquidity providers contribute tokens to a pool of tokens, and liquidity takers swap tokens for other tokens from this book. These pools are called liquidity pools, and the mechanisms to price these objects fall under a large class of pricing protocols called ‘automated market makers’. I illustrate a liquidity provider adding tokens to a pool in the diagram below. </p>
+<p><br/></p>
+<p>[image is not supported]</p>
+<p>The LP contributes specific quantities of token A and token B to the liquidity pool. The LT then swaps token A for token B in a particular ratio (the price) that is determined by a pricing protocol. This protocol is typically dubbed an ‘automated market maker’. In exchange for the several risks that the LP takes on for committing liquidity, a transaction fee is also embedded into the price. In a future post, I’ll elaborate on these risks further. </p>
+<p><br/></p>
+<p>Automated market makers apply formulas to price swaps based on the number of tokens (liquidity) they have. There are several types of procedures, ranging in popularity. There is a wealth of literature on each scheme’s effects, advantages, and disadvantages. These are still subjects of active research. Suppose that <strong><em>a</em></strong> and <strong><em>b</em></strong> represent the number of two different tokens - token A and token B, available on a liquidity pool. The three most popular protocols are </p>
+<ul>
+<li>
+<p>Constant product market makers  - where <strong><em>a</em></strong> x <strong><em>b </em></strong>= <strong><em>k</em></strong> = constant. </p>
+</li>
+<li>
+<p>Constant sum market makers - where <strong><em>a </em></strong>+ <strong><em>b</em></strong> = <strong><em>k</em></strong> = constant. </p>
+</li>
+<li>
+<p>Hybrid Market Makers - where some other function of <strong><em>a</em></strong> and <strong><em>b</em></strong> is held constant. </p>
+</li>
+</ul>
+<p><br/></p>
+<hr />
+<p><br/></p>
+<h3>Constant Product Market Makers</h3>
+<p>It is called an automated market maker because the price given to liquidity takers is already pre-determined. This section will describe a particular type of AMM called a ‘constant product market maker’. A constant product market maker has the constraint that the product of the number of tokens A and B must be constant. Here is an example of how a constant product market maker works. Suppose that we have a market maker that starts with 30 of token A and 10 of token B. This means that the total product of tokens remains constant at 300. </p>
+<p><img alt="alt text" src="static/Decentralised-Exchanges-5a8e6d112ed646e6bf56eaf5266a2b13_file_0.png" /></p>
+<p>Now, what is the “price” of a token on this exchange? To the first order, A’s price is just the ratio of how many B tokens you need to exchange for it. In this case, the price of token A in terms of token B would be </p>
+<p><img alt="alt text" src="static/Decentralised-Exchanges-5a8e6d112ed646e6bf56eaf5266a2b13_file_1.png" /></p>
+<p>This constraint creates a price curve, where we can plot out the two prices of each asset based on how many assets there are in the pool at a given time. This is also commonly called a bonding curve. The x-axis shows the amount of </p>
+<p>[image is not supported]</p>
+<p>We can also convert this into price space by scaling it down. If you think about it, having more of token A in the liquidity pool will decrease its price relative to B. The above curve holds true in terms of the number of contracts. However, in terms of another contract in price space, we can do the following. </p>
+<p><img alt="alt text" src="static/Decentralised-Exchanges-5a8e6d112ed646e6bf56eaf5266a2b13_file_2.png" /></p>
+<p>On the right-hand side, we have two terms in the product. The first is the price of token A in terms of another token C. The second term in the product is the price of token B relative to the token C.  If contract C was, say, the US dollar, and assuming that this value stays constant, we have that the prices of each token in USD multiplied together are constant. In this case, the tokens’ prices have an inverse relationship to one another. This looks similar to the curve above. </p>
+<p><img alt="alt text" src="static/Decentralised-Exchanges-5a8e6d112ed646e6bf56eaf5266a2b13_file_3.png" /></p>
+<p>The above is only accurate to the first order. What happens when we have someone that wants to trade with the AMM? In trading with the AMM, traders modify the values available in the liquidity pool. Well, the product of 300 must remain constant. Suppose that a trader wants to buy 5 of token A. How many tokens of B will they receive in return? Well, if this transaction takes place, we have the following equation. In this case, <strong><em>L_a</em></strong> and <strong><em>L_b</em></strong> represent the initial liquidity of tokens A and B. <strong>delta_a</strong> represents the change in the number of token A in the liquidity pool, and delta_b represents the change in the number of token B in the liquidity pool. </p>
+<p><img alt="alt text" src="static/Decentralised-Exchanges-5a8e6d112ed646e6bf56eaf5266a2b13_file_4.png" /></p>
+<p>Supposed that our liquidity taker wanted to sell some of token A in exchange of token B. The advertised price of this transaction would be L_b / L_a. However, in transacting, the liquidity taker actually is changing the ratios of the tokens in the liquidity pool, resulting in a slightly different price. The realised price is based on the ratio using these updated quantities. Suppose that the liquidity taker wanted to sell some of token A to the AMM in return for token B. This means that, solving for delta_b, we would find that they need to receive </p>
+<p><img alt="alt text" src="static/Decentralised-Exchanges-5a8e6d112ed646e6bf56eaf5266a2b13_file_5.png" /></p>
+<p>This means that the realised price of the transaction would be </p>
+<p><img alt="alt text" src="static/Decentralised-Exchanges-5a8e6d112ed646e6bf56eaf5266a2b13_file_6.png" /></p>
+<p>Now, if the size of the sell trade was large, this would mean that the denominator on the right hand side is large, and so the number of tokens in exchange would be less. The difference between this and the market price is called trade slippage. </p>
+<p><img alt="alt text" src="static/Decentralised-Exchanges-5a8e6d112ed646e6bf56eaf5266a2b13_file_7.png" /></p>
+<p>The graph below shows the trade slippage for different liquidity values of L_a. Of course, if there are more significant amounts of token A in our liquidity pool, the gradient for trade slippage is less. </p>
+<p>[image is not supported]</p>
+<p><br/></p>
+<hr />
+<p><br/></p>
+<h3>Uniswap</h3>
+<p>Uniswap is an example of a constant product market maker and was one of the first constant product market makers out there. In the case of Uniswap, liquidity providers need to initially provide equal <strong>dollar</strong> amounts of the two tokens (although this need not necessarily be the case for other AMMs). For example, suppose token A was worth 10, and token B was worth 1. If the liquidity provider wanted to provide 100 worth of liquidity to the pool, it would mean 50 of liquidity in the form of each token. This means that they would have to commit 5 tokens of token A, and 50 tokens of token B. The diagram below shows this relationship initially. </p>
+<p>[image is not supported]</p>
+<hr />
+<h3>References</h3>
+<p>[1] <a href="https://www.bis.org/publ/qtrpdf/r_qt2112v.htm">https://www.bis.org/publ/qtrpdf/r_qt2112v.htm</a></p>
+<p>[2] <a href="https://research.paradigm.xyz/amm-price-impact">https://research.paradigm.xyz/amm-price-impact</a></p>
+<p><br/></p>

@@ -1,0 +1,75 @@
+<!doctype html>
+
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+
+  <script src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
+  <script src="js/scripts.js"></script>
+  <link rel="stylesheet" href="static/styles.css?v=1.0">
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+  <script>
+    MathJax = {
+     tex: {
+      inlineMath: [['$', '$'], ['\\(', '\\)']]
+     }
+    };
+    window.MathJax = {
+      loader: {load: ['[tex]/physics']},
+      tex: {packages: {'[+]': ['physics']}}
+    };
+  </script>
+  <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+  <meta charset="utf-8">
+  
+</head>
+
+<body>
+  <div class="mast">
+    <h3>Afiq Hatta's blog</h3> 
+  </div> 
+  <div class="sidebar">
+    <a href="index.html">Home</a>
+    <a href="writing.html">Writing</a> 
+    <a href="notes.html">Notes</a> 
+    <a href="about.html">About</a> 
+  </div>
+  <div class="main">
+    <div class="title">
+      <h1> 
+Density-Functional-Theory-Part-II-3c93483afcfb4e91a149f1922622ec2b
+ 
+<hr class="thin">
+</h1>
+    </div>
+     
+<p>In the previous post, I talked about the Hamiltonian of a gas of electrons. The Hamiltonian contained three terms - the potential energy, kinetic energy, and self interaction energy. The potential energy contained an external potential term. This term encodes how the system is influenced by an external potential, shown by the term v in the equation below. </p>
+<p><img alt="alt text" src="static/Density-Functional-Theory-Part-II-3c93483afcfb4e91a149f1922622ec2b_file_0.png" /></p>
+<p>With all systems, there is a ground state. The ground state is the state in our quantum system with lowest energy. There are a few interesting things we can compute from this ground state. One quantity is the expected number of particles we might find in the ground state. In quantum field theory, there is a dedicated operator that is used to find this density. It is often called the ‘number operator’. It is the contraction of the creation </p>
+<p><img alt="alt text" src="static/Density-Functional-Theory-Part-II-3c93483afcfb4e91a149f1922622ec2b_file_1.png" /></p>
+<p>In this context however, the interpretation is slightly different. In this case, since we’re dealing with a gas of electrons, the interpretation is slightly different. Instead, we come up with a value that represents the expected density of electrons at a particular location. This means that if the value is large at some position <strong>r</strong>, there expected density of electrons at that location is high. In the paper [1], the electron density is denoted with the number n. </p>
+<p><img alt="alt text" src="static/Density-Functional-Theory-Part-II-3c93483afcfb4e91a149f1922622ec2b_file_2.png" /></p>
+<p>What is the relationship between the electron density function, and the external potential? It turns out, that there’s actually a one-to-one relationship between these two objects. It is one of the first things that are proven in the paper. If we have a different potential v’, it can’t give the same number density function has a different potential. It is not immediately obvious why this should be true. In the next paragraph, I will show why it is. </p>
+<p>[image is not supported]</p>
+<hr />
+<p><br/></p>
+<h3>Correspondence between Density and External Potentials</h3>
+<p>Suppose we have two different potentials, that are denoted by V and V’. These give rise to two different Hamiltonians, which we can label H and H’. This also gives two different ground states, which we can label psi and psi’. Suppose that everything else is the same - the interaction and kinetic terms. This means that we can relate them as follows </p>
+<p><img alt="alt text" src="static/Density-Functional-Theory-Part-II-3c93483afcfb4e91a149f1922622ec2b_file_3.png" /></p>
+<p>With this relation, we can contract this with the ground state on both sides. We then get the following relation. </p>
+<p><img alt="alt text" src="static/Density-Functional-Theory-Part-II-3c93483afcfb4e91a149f1922622ec2b_file_4.png" /></p>
+<p>The first inequality comes from the fast that psi’ is the ground state of H’. Psi is not the ground state of H’, so the energy of this state is larger than the energy of psi’. Now, suppose that these hamiltonians have the same number density. This means that we have, when contracting the density operator </p>
+<p><img alt="alt text" src="static/Density-Functional-Theory-Part-II-3c93483afcfb4e91a149f1922622ec2b_file_5.png" /></p>
+<p>This means that we get the two equations below. </p>
+<p><img alt="alt text" src="static/Density-Functional-Theory-Part-II-3c93483afcfb4e91a149f1922622ec2b_file_6.png" /></p>
+<p>In the second the equation, we switch the primes in the terms. We can do this because there is symmetry in whether we can switch the primes or not. If we add the two expressions there, it turns out that we end up getting a contradiction. </p>
+<p><img alt="alt text" src="static/Density-Functional-Theory-Part-II-3c93483afcfb4e91a149f1922622ec2b_file_7.png" /></p>
+<p>The only false assumption we made was the the density functions were the same, so this can’t be true. This means that indeed, for a particular external potential v, we essentially have a unique density function n. In the diagram below, I draw a correspondence between the two functions. </p>
+<hr />
+<h3>References</h3>
+<p>[1] <a href="https://journals.aps.org/pr/pdf/10.1103/PhysRev.136.B864">https://journals.aps.org/pr/pdf/10.1103/PhysRev.136.B864</a></p>
+
+  </div> 
+</body>
+</html>

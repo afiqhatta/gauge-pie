@@ -1,0 +1,88 @@
+<!doctype html>
+
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+
+  <script src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
+  <script src="js/scripts.js"></script>
+  <link rel="stylesheet" href="static/styles.css?v=1.0">
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+  <script>
+    MathJax = {
+     tex: {
+      inlineMath: [['$', '$'], ['\\(', '\\)']]
+     }
+    };
+    window.MathJax = {
+      loader: {load: ['[tex]/physics']},
+      tex: {packages: {'[+]': ['physics']}}
+    };
+  </script>
+  <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+  <meta charset="utf-8">
+  
+</head>
+
+<body>
+  <div class="mast">
+    <h3>Afiq Hatta's blog</h3> 
+  </div> 
+  <div class="sidebar">
+    <a href="index.html">Home</a>
+    <a href="writing.html">Writing</a> 
+    <a href="notes.html">Notes</a> 
+    <a href="about.html">About</a> 
+  </div>
+  <div class="main">
+    <div class="title">
+      <h1> 
+Phase-transitions-c422b42b04c24e3dae0fa558c841edd5
+ 
+<hr class="thin">
+</h1>
+    </div>
+     
+<p>In the previous post, I discussed how the authors of [2] arranged<img alt="alt text" src="static/Phase-transitions-c422b42b04c24e3dae0fa558c841edd5_file_3.png" />Rubidium atoms in an array, and then excite these atoms to make a checkerboard of alternating energies. How does the state look like when it's transforming into the checkerboard phase? Is there some behaviour that is interesting at the limiting area when it collapses into a checkerboard state? These questions are answered by the study of phase transitions. The numbers that govern the power-law relationships between physically observable quantities are called critical exponents. </p>
+<p><br/></p>
+<h3>Correlation lengths</h3>
+<p>One of the quantities of interest is how the correlation lengths grow as our detuning increases, and the system evolves into the checkerboard phase. To do the experiment, we first start with all the atoms in the ground state. Then, the ratio ∆/Ω is<img alt="alt text" src="static/Phase-transitions-c422b42b04c24e3dae0fa558c841edd5_file_3.png" />increased, and the correlation lengths are measured. The faster this ratio increases, the larger correlation lengths we see. There is a mechanism for how this works - it’s called the quantum Kibble-Zurek Mechanism. This mechanism describes how correlations break down when we’re near critical points. In the physical sciences, <strong>relaxation</strong> usually means the return of a perturbed system into <a href="https://en.wikipedia.org/wiki/Thermodynamic_equilibrium">equilibrium</a>. For example, we might like to see how fast an oscillating spring returns to equilbirium after a quick impulse. Each relaxation process can be categorized by a <strong>relaxation time</strong> <a href="https://en.wikipedia.org/wiki/Tau">τ</a>. </p>
+<p><br/></p>
+<hr />
+<p><br/></p>
+<h3>The Switch from an Ordered to a Disordered Phase</h3>
+<p>We want to study the transition from the disordered phase, to the ordered checkerboard phase. Before we go into the details of the actual experiment, I wanted to do a ‘simplified’ explanation assuming that we have a critical point when our order parameter is equal to zero. As the detuning goes from negative to positive, standard critical theory tells us to expect the relationship in the correlation length and the relaxation time to vary like the below. The greek Lambda in the case is our control parameter - the thing that we vary in the experiment (in this case it is ∆, but in general we can use any sort of control parameter). </p>
+<p><img alt="alt text" src="static/Phase-transitions-c422b42b04c24e3dae0fa558c841edd5_file_0.png" /></p>
+<p>The greek exponent nu here is called the critical exponent - it primarily describes how the correlations between atoms change as we move from a disordered state to an ordered state and vice versa. As the order parameter approaches zero, we find that the correlation length diverges - it implies that the local structure breaks down. Tau represents the relaxation time, and z merely is a scaling factor to relate the correlation length and the relaxation time. </p>
+<p>[image is not supported]</p>
+<hr />
+<p><br/></p>
+<h3>Sweep rates and Correlation Increases</h3>
+<p>As we increase the detuning to become more and more positive, the correlations between pairs of atoms in our increase and we phase into the checkerboard phase. This is shown in the diagram below, which visualises the correlations between atoms for a given vector displacement. As the detuning parameter becomes positive, the correlations strengthen and we fall into the checkerboard state, where the Rubidium atoms have an alternating energy levels. The diagram below is a heat-map of correlation between pairs that are displaced by a given vector on the y axis, and on the x axis. As we increase the detuning, the correlations become more intense even for atoms that are displaced at further distances from each other in the checkerboard. </p>
+<p>[image is not supported]</p>
+<p><br/></p>
+<p>Can the speed at which we build into the checkerboard phase The sweep rate of a system is how fast we change the control parameter (our detuning ∆) with respect to time. The exact expression is shown in the equation below. </p>
+<p><img alt="alt text" src="static/Phase-transitions-c422b42b04c24e3dae0fa558c841edd5_file_1.png" /></p>
+<p>In the system above, a faster sweep rate leads to a smaller correlation length. The sweep rates have an effect on how the correlation lengths grow. However, the Kibble-Zurek mechanism states that these can all be rescaled into a single curve, allowing us to find critical exponents more easily. In the graph below, we have several curves outlining the relationship between correlation length and detuning parameter. For the higher sweep rates, we see that the curve is elevated, so a quicker detuning means larger correlations. </p>
+<p><br/></p>
+<p><br/></p>
+<p>[image is not supported]</p>
+<p><br/></p>
+<h3>Obtaining the Critical Point for Detuning</h3>
+<p>There is a critical value for our control parameter ∆, where there is a phase transition. This is the point where the susceptibility of the material is at its peak. The susceptibility of a material is defined as follows. On average, the proportion of atoms in the Rydberg state can be measured. The rate of change of this proportion versus the detuning is the susceptibility. Where the susceptibility reaches is peak, is where the critical point is. </p>
+<p><img alt="alt text" src="static/Phase-transitions-c422b42b04c24e3dae0fa558c841edd5_file_2.png" /></p>
+<p>Once we have the critical point for our detuning value, we can also measure the critical exponent nu. In this paper [3], it was measured to be 0.624. This measurement is in good agreement with the predicted ν = 0.629, that is in paper [1]. </p>
+<p><br/></p>
+<p><br/></p>
+<p><br/></p>
+<p>[image is not supported]</p>
+<p><img alt="alt text" src="static/Phase-transitions-c422b42b04c24e3dae0fa558c841edd5_file_3.png" /></p>
+<p><br/></p>
+<p>[1] R. Samajdar, W. W. Ho, H. Pichler, M. D. Lukin, and S. Sachdev, Phys. Rev. Lett. 124, 103601 (2020). <a href="https://arxiv.org/pdf/1910.09548.pdf">https://arxiv.org/pdf/1910.09548.pdf</a> - Details on this computation</p>
+<p>[2] <a href="https://en.wikipedia.org/wiki/Kibble%E2%80%93Zurek_mechanism">https://en.wikipedia.org/wiki/Kibble–Zurek_mechanism</a></p>
+<p>[3] Sepehr Ebadi et al. Quantum Phases of Matter on a 256-Atom Programmable Quantum Simulator, <a href="https://arxiv.org/abs/2012.12281">arXiv:2012.12281</a> [quant-ph] </p>
+
+  </div> 
+</body>
+</html>

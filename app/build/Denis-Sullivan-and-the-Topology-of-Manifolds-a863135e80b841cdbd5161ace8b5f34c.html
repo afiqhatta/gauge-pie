@@ -1,0 +1,87 @@
+<!doctype html>
+
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+
+  <script src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
+  <script src="js/scripts.js"></script>
+  <link rel="stylesheet" href="static/styles.css?v=1.0">
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+  <script>
+    MathJax = {
+     tex: {
+      inlineMath: [['$', '$'], ['\\(', '\\)']]
+     }
+    };
+    window.MathJax = {
+      loader: {load: ['[tex]/physics']},
+      tex: {packages: {'[+]': ['physics']}}
+    };
+  </script>
+  <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+  <meta charset="utf-8">
+  
+</head>
+
+<body>
+  <div class="mast">
+    <h3>Afiq Hatta's blog</h3> 
+  </div> 
+  <div class="sidebar">
+    <a href="index.html">Home</a>
+    <a href="writing.html">Writing</a> 
+    <a href="notes.html">Notes</a> 
+    <a href="about.html">About</a> 
+  </div>
+  <div class="main">
+    <div class="title">
+      <h1> 
+Denis-Sullivan-and-the-Topology-of-Manifolds-a863135e80b841cdbd5161ace8b5f34c
+ 
+<hr class="thin">
+</h1>
+    </div>
+     
+<p>I’ve previously written about manifolds. Denis Sullivan won the Abel prize, for his work on dynamical systems and the topology of manifolds. What does it really mean to have the topology of a manifold? To understand this, we need to discuss some algebraic theory. In this post, I wanted to talk a little bit about ring theory. In particular, I wanted to discuss how we can turn a ring into a ‘localisation’, which is a weird mathematical object that looks like a fraction. </p>
+<h3><strong>Localisation </strong></h3>
+<p>A ring is an algebraic object that has multiplication and addition. More precisely, it is an abelian group that also has a multiplication operation that has an identity. For each of these operations, there is an identity element. The easiest and most ubiquitous example of a ring is the integers. Addition and multiplication are precisely those operations, and the identity elements are 0 and 1 respectively. 0 is the identity element for addition since a + 0 = a, and 1 is the identity element of the multiplicative operation since b x 1 = b.</p>
+<p><br/></p>
+<p>Localisation is a way to have the notion of a ‘denominator’ for a given ring. It is a generalisation to the concept of fractions that we’ve learnt in primary school. To localise a ring, you first take a subset that doesn’t include the zero element - this is analogous to not being able to divide by zero. This subset also needs to be multiplicative, which means that any two elements in the subset multiplied together necessarily needs to belong in the subset.</p>
+<p><img alt="alt text" src="static/Denis-Sullivan-and-the-Topology-of-Manifolds-a863135e80b841cdbd5161ace8b5f34c_file_0.png" /></p>
+<p>If we take the integers as our ring, then there are a few examples of multiplicative subsets. The primes of Z do not form a multiplicative subset since two primes multiplied together do not form a prime. However, the set of non-primes do indeed form a multiplicative subset. The powers of two form a multiplicative subset of Z, and so do the odd numbers. </p>
+<p><br/></p>
+<p>The <strong>localisation</strong> is then an equivalence class, where the equivalence relation is what you get when you multiply out two fractions together that are equal. The set of elements in a localisation are typically written in a fraction-type format. </p>
+<p><img alt="alt text" src="static/Denis-Sullivan-and-the-Topology-of-Manifolds-a863135e80b841cdbd5161ace8b5f34c_file_1.png" /></p>
+<p>The square brackets that are there show that the elements of S^-1 R are equivalence classes. Two elements are equivalent when you’d expect - it’s when the fraction can be ‘cancelled out’ into another fraction. </p>
+<p><img alt="alt text" src="static/Denis-Sullivan-and-the-Topology-of-Manifolds-a863135e80b841cdbd5161ace8b5f34c_file_2.png" /></p>
+<hr />
+<h3><strong>References </strong></h3>
+<p>[1] <a href="https://en.wikipedia.org/wiki/Localization_(commutative_algebra)">https://en.wikipedia.org/wiki/Localization_(commutative_algebra)</a></p>
+<p>[2] <a href="https://www.maths.ed.ac.uk/~v1ranick/books/gtop.pdf">https://www.maths.ed.ac.uk/~v1ranick/books/gtop.pdf</a></p>
+<p><br/></p>
+<p><br/></p>
+<p><br/></p>
+<p><br/></p>
+<p><br/></p>
+<p><br/></p>
+<p><br/></p>
+<p>We turn now to completion of rings and groups. As for rings
+we are again concerned mostly with the ring of integers for which
+we discuss the “arithmetic completions”. In the case of groups we
+consider profinite completions and for Abelian groups related formal
+completions.</p>
+<p>At the end of the Chapter we consider some examples of profinite
+groups in topology and algebra and discuss the structure of the padic units.
+Finally we consider connections between localizations and completions, deriving certain fibre squares which occur later on the CW
+complex level.</p>
+<p>The surface of a sphere and the surface of a torus, for instance, are both two-dimensional manifolds.</p>
+<p><br/></p>
+<p>Referencs </p>
+<p>[1] <a href="https://www.maths.ed.ac.uk/~v1ranick/books/gtop.pdf">https://www.maths.ed.ac.uk/~v1ranick/books/gtop.pdf</a></p>
+<p><br/></p>
+
+  </div> 
+</body>
+</html>

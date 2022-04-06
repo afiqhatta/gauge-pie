@@ -1,0 +1,22 @@
+<p>In my previous post, I described how the team behind [4] created a checkerboard of atoms with laser excitations. The paper I referenced constructed a lattice of atoms where the energy states of neighbouring atoms alternate between the ground state and an excited state state, like a checkerboard. Now that we know how to create a lattice like this, we can try to compute some interesting physical properties to check that we've created a genuine checkerboard state. Since these are quantum systems, we can't just inspect atoms one by one! Rather, we have to work probabilistically. </p>
+<h3>Correlation functions</h3>
+<p>One of the things we can do is to compute correlation functions between neighbouring lattice points, and then convince ourselves that atomic pairs are genuinely anti-correlated. Correlation functions are statistical averages of physical states at points in a lattice. One such correlation function is called the 'connected density-density correlator'. It looks at the average correlation between two atoms that are separated by <strong><em>k</em></strong> columns and <strong><em>l </em></strong>rows. </p>
+<p><img alt="alt text" src="static/Computing-Correlation-Functions-94c988c4376542e18071f1f5c2f589b7_file_0.png" /></p>
+<p>Here, the angled brackets mean expected values. The n_i's represent Rydberg operators, and the index i represents the atom in the lattice that it is referring to. In the case of a 256 atom lattice, the i's and j's range from 1 to 256. Rydberg operators are terms in the Hamiltonian which pick out when a state is in the Rydberg state - it evaluates to 1 when contracted with these states. Mathematically, we have that </p>
+<p><img alt="alt text" src="static/Computing-Correlation-Functions-94c988c4376542e18071f1f5c2f589b7_file_1.png" /></p>
+<p>If our atoms are prepared in a certain state, then the expectation value of this operator at some lattice point i is the state contracted on both sides of the this operator. Similarly, the operator n_i n _ j measures the joint probability of these states both being in the Rydberg state. </p>
+<p><img alt="alt text" src="static/Computing-Correlation-Functions-94c988c4376542e18071f1f5c2f589b7_file_2.png" /></p>
+<p>Intuitively, this number describes the correlation of two different atoms being excited simulatenously. This is a quantity of interest, and can be measured experimentally and then compared with computer simulations to see how close we are. Note that the form of the expression is also suggestive of a correlation type measurement - the numerator looks like the covariance of two random variables </p>
+<p><img alt="alt text" src="static/Computing-Correlation-Functions-94c988c4376542e18071f1f5c2f589b7_file_3.png" /></p>
+<h3>Correlation lengths</h3>
+<p>One can compute how the correlation changes as we change the lengths between atoms. In Sepehr Ebadi et al. [5], a horizontal correlation length (correlation between atoms on the same row) is calculated to be 11.1. Similarly a vertical correlation length 11.3 is computed. The paper claims that these correlation lengths are an order of magnitude larger than what has been previously made. Hence, it appears that this paper has successfully created a fairly robust anti-correlated system. </p>
+<p><br/></p>
+<p>[image is not supported]</p>
+<p>The graph above shows a line fit of the correlation function, versus the vertical and horizontal distance. The paper also examines the individual states themselves via a single state readout. </p>
+<p><br/></p>
+<h3>References</h3>
+<p>[1]  V. Lienhard, S. de L ́es ́eleuc, D. Barredo, T. Lahaye, A. Browaeys, M. Schuler, L.-P. Henry, and A. M. La ̈uchli, Phys. Rev. X 8, 021070 (2018). <a href="https://journals.aps.org/prx/pdf/10.1103/PhysRevX.8.021070">https://journals.aps.org/prx/pdf/10.1103/PhysRevX.8.021070</a></p>
+<p>[2] <a href="https://en.wikipedia.org/wiki/Expectation_value_(quantum_mechanics)">https://en.wikipedia.org/wiki/Expectation_value_(quantum_mechanics)</a></p>
+<p>[3] S. R. White, Phys. Rev. Lett. 69, 2863 (1992) - Numerical simulations of the two-dimensional array </p>
+<p>[4] Sepehr Ebadi et al. Quantum Phases of Matter on a 256-Atom Programmable Quantum Simulator, <a href="https://arxiv.org/abs/2012.12281">arXiv:2012.12281</a> [quant-ph] </p>
+<p><br/></p>

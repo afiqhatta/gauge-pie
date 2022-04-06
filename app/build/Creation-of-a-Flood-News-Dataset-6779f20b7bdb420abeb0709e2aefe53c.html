@@ -1,0 +1,102 @@
+<!doctype html>
+
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+
+  <script src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
+  <script src="js/scripts.js"></script>
+  <link rel="stylesheet" href="static/styles.css?v=1.0">
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+  <script>
+    MathJax = {
+     tex: {
+      inlineMath: [['$', '$'], ['\\(', '\\)']]
+     }
+    };
+    window.MathJax = {
+      loader: {load: ['[tex]/physics']},
+      tex: {packages: {'[+]': ['physics']}}
+    };
+  </script>
+  <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+  <meta charset="utf-8">
+  
+</head>
+
+<body>
+  <div class="mast">
+    <h3>Afiq Hatta's blog</h3> 
+  </div> 
+  <div class="sidebar">
+    <a href="index.html">Home</a>
+    <a href="writing.html">Writing</a> 
+    <a href="notes.html">Notes</a> 
+    <a href="about.html">About</a> 
+  </div>
+  <div class="main">
+    <div class="title">
+      <h1> 
+Creation-of-a-Flood-News-Dataset-6779f20b7bdb420abeb0709e2aefe53c
+ 
+<hr class="thin">
+</h1>
+    </div>
+     
+<p>In this post, I wanted to do something a little different. As most of my readers know, I usually write about science theory. However, I also love the intersection between technology, policy and government. For the past few weeks, there have been terrible floods in Malaysia that have displaced tens of thousands. </p>
+<p><br/></p>
+<p>In my opinion, the news information covering the floods was a little bit scattered. So, I wanted to write about how I used some simple web scraping to compile a data set of news based text data. There are a host of different websites that report floods, and often times these articles can carry some information that we might be able to learn from. However, the process of compiling the text and metadata from these articles into a database is not obvious at all. </p>
+<p><br/></p>
+<h3>Some Search Criteria</h3>
+<p>To start, I needed to find some general, and flood reporting websites with reliable data and accurate reporting. with a search page that returns organised links to different news articles. Some candidates were </p>
+<ul>
+<li>
+<p>The OCHA’s ReliefWeb website </p>
+</li>
+<li>
+<p>FloodList</p>
+</li>
+</ul>
+<p>A simple search on these websites allowed me to arrive at a search page with articles that just pertained to floods in Malaysia. Some websites like ReliefWeb also have advanced search options that allowed me to get a more specific set of results. </p>
+<p>I compiled a list of a few sites like these. It didn’t take too long so this kind of approach should be appropriate to get a quick, working research dataset. </p>
+<p><br/></p>
+<h3>Getting the links</h3>
+<p>The search page will contain a list of links to the relevant articles that we need. Our approach will first be to get a list of these links and then individually scrape the metadata and content of the articles themselves. These link swill be organised throughout numerous different <a href="http://pages.in">pages.</a> Our first task will be to find a way to scrape these links with some basic knowledge of html. </p>
+<p><br/></p>
+<p>The structure of a website is governed by its html. To take a peek at a website’s html, you can inspect the page by right clicking in google chrome and then clicking ‘inspect’. To inspect a certain element, just right click on that element itself. html pages are organised by sections with a ‘div’ tag. To get the list of links that you need, identify the div tag that the links are nested under. For example, in this website, the links are embedded in an div with class name ‘articles’. </p>
+<p><br/></p>
+<p>[image is not supported]</p>
+<p><br/></p>
+<p>To actually scrape the links, we use the urlopen command from the urllib package in Python and put in the link of the search page. This package does nothing more than pull the raw html text from the website. We also import the BeautifulSoup package to parse the html output and isolate the div and link elements that we want. </p>
+<p>In the get_links function, I first read in the raw html. Then, I put this raw html text in BeautifulSoup class to parse it. The findAll command then searches for content with a div tag, that is labelled with the ‘articles’ name. I then search for hyperlinks with the tag ‘a’, and then check that it’s a genuine link by checking that it starts with a https tag.</p>
+<p><br/></p>
+<p>```python
+    from urllib.request import Request, urlopen
+from bs4 import BeautifulSoup</p>
+<p>def get_links(url):
+    text = urlopen(url).read()
+    soup = BeautifulSoup(text, 'lxml')</p>
+<pre><code>link_list = []
+data = soup.findAll('div',attrs={'class':'articles'})
+for div in data:
+    links = div.findAll('a')
+    for a in links:
+        if a['href'][:5] == 'https':
+            link_list.append(a['href'])
+
+return link_list
+</code></pre>
+<p>```</p>
+<p><br/></p>
+<h3>Scraping the articles</h3>
+<p>I then just wrote a loop to scrape the articles from this list of links to get the data that I wanted. </p>
+<p><br/></p>
+<h3>Youtube</h3>
+<p>I also made a YouTube video on how I did this. It’s short, but I think it gets the idea. It is at <a href="https://www.youtube.com/watch?v=mOWOHTyUn3M">https://www.youtube.com/watch?v=mOWOHTyUn3M</a>. </p>
+<p><br/></p>
+<p><br/></p>
+
+  </div> 
+</body>
+</html>

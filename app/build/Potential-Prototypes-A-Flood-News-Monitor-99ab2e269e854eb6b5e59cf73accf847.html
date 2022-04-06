@@ -1,0 +1,114 @@
+<!doctype html>
+
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+
+  <script src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
+  <script src="js/scripts.js"></script>
+  <link rel="stylesheet" href="static/styles.css?v=1.0">
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+  <script>
+    MathJax = {
+     tex: {
+      inlineMath: [['$', '$'], ['\\(', '\\)']]
+     }
+    };
+    window.MathJax = {
+      loader: {load: ['[tex]/physics']},
+      tex: {packages: {'[+]': ['physics']}}
+    };
+  </script>
+  <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+  <meta charset="utf-8">
+  
+</head>
+
+<body>
+  <div class="mast">
+    <h3>Afiq Hatta's blog</h3> 
+  </div> 
+  <div class="sidebar">
+    <a href="index.html">Home</a>
+    <a href="writing.html">Writing</a> 
+    <a href="notes.html">Notes</a> 
+    <a href="about.html">About</a> 
+  </div>
+  <div class="main">
+    <div class="title">
+      <h1> 
+Potential-Prototypes-A-Flood-News-Monitor-99ab2e269e854eb6b5e59cf73accf847
+ 
+<hr class="thin">
+</h1>
+    </div>
+     
+<p><br/></p>
+<h3>Where I left off</h3>
+<p>In the previous post, I described how I programmed a web-scraper to pull article metadata from news articles. In particular, I used flood reports in Malaysia as an example. This metadata comprised of brief text descriptions, authors, tags and publication dates. It used html requests to select the important bits of information from structures websites, and looped over multiple urls to grab the data that I wanted.</p>
+<p><br/></p>
+<p>I deemed it useful enough, in sufficiently large quantities, to gain some intuition on flood reporting across the world. I was motivated to do this for two reasons. The first reason was anticipatory in nature. Severe typhoons and floods hit many countries in South-East Asia, and I wanted to see if there were lead-lag patterns in flood news. The second reason was more exploratory. It seemed like there was a big imbalance of media coverage on the effect of floods in the Philippines (where typhoons are common), and in Malaysia. I wanted to study this relationship a bit more rigorously - are flood reports less common in the Philippines?</p>
+<p><br/></p>
+<p>[image is not supported]</p>
+<p><br/></p>
+<p>I wanted to write some automated process to keep track of flood reporting from different websites, and then present it in a useful way. My github for this project is <a href="https://github.com/afiqhatta/orangepeel">here</a>. Firstly, I wanted to host the python scraping code somewhere on the cloud, and then use that cloud service to run periodic jobs. I also wanted my solution to be lightweight and rapidly agile for development purposes - my main priority was to just get something up and running in the first place. </p>
+<p><br/></p>
+<p>Initially, I tried fiddling a lot with some of the app engine and database services in Google Cloud. However, a lot of this stuff was overkill. I also thought that it would add up to be quite expensive. For example, I tried to use Firebase as a database to persist the metadata I was storing. It was overkill - the sheer amount of configuration and effort required to get it set up didn’t seem worth it. I prefer to work from first principles, and from scratch. It helps me learn better and think independently. </p>
+<p><br/></p>
+<h3>Automating the Metadata Scrape</h3>
+<p>The first thing was to automate our metadata scrape to run say, once a day. This should be sufficient to make this program sufficiently ‘live’ for our purposes. I ended up using a fairly simple solution - the advanced python scheduler package which I installed via pip. The main idea was to use this scheduler to load, append, and then process metadata from webscrapers. Then, save this down into something simple like a csv file. </p>
+<p><br/></p>
+<h3>Setting up a local web server on Flask</h3>
+<p>The plan was to I then hosted the code on google cloud with Flask as the framework. Flask is a python web-frame work that allows us to use python to perform some logic, and then output that logic to serve up some html files. For this project, I wrote a quick plan </p>
+<ul>
+<li>
+<p>Schedule the code to scrape news metadata</p>
+</li>
+<li>
+<p>Then, we will upload this periodically into a database. </p>
+</li>
+<li>
+<p>Following this, we will then use ajax requests to periodically call the data in set intervals. Then, we serve up the data in the form of a chart. </p>
+</li>
+</ul>
+<p><br/></p>
+<p>The first thing to do was host a minimal example with periodic updates. I wrote a scheduler which updated a text file, and then used ajax to periodically query this in the index.html file. </p>
+<p>```python
+    import os
+from flask import Flask, render_template
+from apscheduler.schedulers.background import BackgroundScheduler
+import numpy as np</p>
+<p>app = Flask(<strong>name</strong>)</p>
+<p>def sensor():
+    """ Function for test purposes. """
+    with open("static/time-log.txt", "w") as myfile:
+        myfile.write("TIME: {}".format(np.random.randint(10)))
+    print("Scheduler is alive!")</p>
+<p>@app.route("/")
+def hello_world():
+    name = os.environ.get("NAME", "World")</p>
+<pre><code>return render_template('index.html')
+</code></pre>
+<p>if <strong>name</strong> == "<strong>main</strong>":
+    sensor()
+    sched = BackgroundScheduler(daemon=True)
+    sched.add_job(sensor, 'interval', seconds=2)
+    sched.start()</p>
+<pre><code>app.run(debug=True, host="0.0.0.0", port=int(os.environ.get("PORT", 8080)))
+</code></pre>
+<p>```</p>
+<p><br/></p>
+<p>I then created a google compute instance on google cloud. To create a webserver, I needed to enable http and https connections. I also set an ingress rule on a port with TCP, and then mapped this firewall rule to my google compute instance. To quickly test whether it could serve up basic html on the internet, I hosted a quick ‘Hello World’ on apache2 server. </p>
+<p><br/></p>
+<p>On my local computer, I pushed all of my Flask code onto a github repo. I then ssh’ed into my virtual machine, and cloned the repo. To get the environment working, I used apt-get to install python, pip and some other stuff onto the virtual machine. I then ran my Flask code and voila, I could see it loading on an external ip address! </p>
+<p><br/></p>
+<h3>Quick Checks</h3>
+<p>I am a big fan of easy things that help developers test their applications along the way. To spin up a simple web server with python, you can use the builtin command</p>
+<p><code>python
+    python3 -m http.server</code></p>
+<p>This is useful if you want to check the functionality of your html or javascript! I then checked the logs of how to build this at <a href="https://console.cloud.google.com/cloud-build/builds">https://console.cloud.google.com/cloud-build/builds</a>. </p>
+
+  </div> 
+</body>
+</html>

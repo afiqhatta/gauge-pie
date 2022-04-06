@@ -1,0 +1,211 @@
+<p><br/></p>
+<p>Hi guys, today I wanted to write a quick post on my writing workflow! I’ve attached links to my github for anyone that is interested in using this solution. </p>
+<h3>The problem - writing math</h3>
+<p>Notion is a productivity app that I frequently use. The reason it’s so helpful is because it has a pretty good way to organise notes and articles - they are stored in a satisfying database format that makes it easy keep everything in one place. As I science writer, I need to be able to type math. One of the most popular ways to do this is with MathJax. MathJax is javascript that you can attach in html code and then use delimiters to write math in a TeX like style. In Notion, there is a feature that allows me to type inline MathJax code. </p>
+<p><br/></p>
+<p>However, as many scientific writers will know, there is no MathJax feature on Medium. Traditionally, writers liek me have had to use workarounds. Mathematical equations have to be typeset, screenshotted, and then pasted into Medium as an image. This is quite slow, and I wanted to create an automated solution which. When I write in Tex on Notion, I usually need to copy and paste screenshots of my Latex code back into Medium. </p>
+<p><br/></p>
+<h3>The solution</h3>
+<p>First, I found a way to programatically import my notion articles into my local drive. These were imported as markdown files. Markdown is a popular file format  If therewith mathJax code that was embedded between delimiters. Using these delimiters, I then looped through each of these code snippets and compiled them to a mini pdf. I then converted these mini pdfs into resized png files, then embedded them back into a html file to serve them on my blog. </p>
+<p><br/></p>
+<p>Here is an example of </p>
+<p><br/></p>
+<p><br/></p>
+<p><br/></p>
+<p>First, I used Notion’s api to download blocks and markdown files from my articles database that is hosted on Notion. To do this, all you have to do is import the notion_client on pip, and then enable your notion account for using their api. Then, get the database key where you keep your your articles. The line of code below imports a selected amount of recent story Id’s that I’ve written into a convenient pandas DataFrame. </p>
+<p><br/></p>
+<p>```python
+    from notion_client import Client</p>
+<p>def getRecentStoryIds(notion_key, database_key, recentStories):
+    """
+    Get recent Notion page IDs from a database.
+    :param notion_key: notion access token
+    :param database_key: database key
+    :param recentStories: the number of recent stories that need to be retrived
+    :return: list of IDs, list of file names
+    """</p>
+<pre><code>os.environ['NOTION_TOKEN'] = notion_key
+notion = Client(auth=notion_key)
+
+df = pd.DataFrame(notion.databases.query(database_key)['results'])
+recent_stories = df.sort_values(by='last_edited_time', ascending=False)[:recentStories]
+names = recent_stories.url.values
+
+return recent_stories.id.values, [item.split('/')[-1] for item in names]
+</code></pre>
+<p>```</p>
+<p><br/></p>
+<p>Then, I used the notion2md package to actually download these things into a local directory. The code below takes a list of story ids from the code above, and then downloads them. I use the os package in python to write command line commands. I then rename the downloaded markdown files with a more sensible name to make things easier for me to debug. </p>
+<p><br/></p>
+<p>```python
+    import os </p>
+<p>def exportRecentMDs(id_list, name_list):</p>
+<h1>gets a list of ids and names and then exports them to markdown files</h1>
+<pre><code>    foritem, nameinzip(id_list, name_list):
+            os.system('notion2md -i {}'.format(item))
+            os.system('mv notion2md-output/{id_name}.md notion2md-output/{name}.md'.format(id_name=item, name=name)
+</code></pre>
+<p>```</p>
+<p><br/></p>
+<h3>What to do next?</h3>
+<p>The next step was to find the TeX code in these markdown files. I used some basic regex to accomplish this task, and then compiled each mini slice of TeX code into pdfs, and then png files. The first function opens the markdown files and then returns a list of TeX code. The next functions do the conversion into a jpg with imageMagick and pdflatex. </p>
+<p><br/></p>
+<p>```python
+    def getTex(filepath):
+    # return a list of Tex strings</p>
+<pre><code>f = open(filepath, "r")
+testString = (f.read())
+pat = r'(?&lt;=\\).+?(?=\\)'  # See Note at the bottom of the answer
+
+return re.findall(pat, testString)
+</code></pre>
+<p>def outputPdf(texString, outputfile):</p>
+<pre><code>baseString = """\documentclass[preview]{standalone}
+\\usepackage{amstext}
+\\usepackage{amsmath}
+\\usepackage{amsfonts}
+\\begin{document}
+\\begin{equation}
+"""
+
+endString = """
+\end{equation}
+\end{document}
+"""
+
+testString = baseString + texString + endString
+with open('readme.tex', 'w') as f:
+    f.write(testString)
+os.system('pdflatex readme.tex')
+os.system('convert -density 300 readme.pdf -quality 90 {}'.format(outputfile))
+</code></pre>
+<p>def outputPdfScaled(texString, outputfile, scaling):</p>
+<pre><code># output scaled image of Tex file
+outputPdf(texString, outputfile)
+resize_image(outputfile, outputfile, scaling)
+</code></pre>
+<p>def getAllTex(filepath, folder, scaling):</p>
+<pre><code># save the Tex in the form of pngs
+
+strings = getTex(filepath)
+for ix, string in enumerate(strings):
+    outputPdfScaled(string, folder + '/' + 'file_{}.png'.format(ix), scaling)
+</code></pre>
+<p>```</p>
+<p><br/></p>
+<p><br/></p>
+<p><br/></p>
+<p><br/></p>
+<p><br/></p>
+<p><br/></p>
+<p><br/></p>
+<p>Autoload chrome extension </p>
+<p><a href="https://stackoverflow.com/questions/20613061/execute-my-autofill-javascript-on-chrome-extension-click">https://stackoverflow.com/questions/20613061/execute-my-autofill-javascript-on-chrome-extension-click</a></p>
+<p><a href="https://medium.com/weekly-webtips/js-implementing-auto-complete-f4c5a5d5c009">https://medium.com/weekly-webtips/js-implementing-auto-complete-f4c5a5d5c009</a></p>
+<p><br/></p>
+<p>Google chrome tutorial </p>
+<p><a href="https://developer.chrome.com/docs/extensions/mv3/getstarted/">https://developer.chrome.com/docs/extensions/mv3/getstarted/</a></p>
+<p>Basically, you have a manifest file which checks out background scripts that run. The tutorial is really good. </p>
+<p><br/></p>
+<p>This is also a good tutorial </p>
+<p><a href="https://betterprogramming.pub/the-ultimate-guide-to-building-a-chrome-extension-4c01834c63ec">https://betterprogramming.pub/the-ultimate-guide-to-building-a-chrome-extension-4c01834c63ec</a></p>
+<p><br/></p>
+<h3>How does notion store code blocks?</h3>
+<p><br/></p>
+<p><br/></p>
+<p>Notion seems to run on contenteditable nodes. </p>
+<p>The code I have wrote seems to inject the script enough </p>
+<p>To get the active tab in Chrome: </p>
+<p>[ ] </p>
+<p>Next steps</p>
+<p>The next thing to do will be to create an interface to download the Text, convert it, then insert it back into medium.</p>
+<p>I can use python/flask to generate the images. </p>
+<p>I can can then work in the autocomplete in medium, then export </p>
+<p><br/></p>
+<p>My autocomplete seems to work in Medium. Maybe I can write a script to convert and paste this in Medium. </p>
+<p>A good first step woul dbe </p>
+<p><br/></p>
+<p>[child_database is not supported]</p>
+<p><br/></p>
+<p>Solutions</p>
+<p>First solution </p>
+<ol>
+<li>
+<p>Get nodes from chrome extension </p>
+</li>
+<li>
+<p>transform into svg </p>
+</li>
+</ol>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;- It’s not so clear that the svg is easy to use </p>
+<ol>
+<li>reinsert into webpage as svg </li>
+</ol>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;- It is not obvious how to insert an image into medium </p>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;- The images seem to be instantly uploaded, so it’s slow </p>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;<br/></p>
+<p>Second solution </p>
+<ol>
+<li>
+<p>Import markdown </p>
+</li>
+<li>
+<p>Replace markdown with png links</p>
+</li>
+<li>
+<p>Export to PDF </p>
+</li>
+<li>
+<p>Copy and paste into Medium </p>
+</li>
+</ol>
+<p><br/></p>
+<p>Third solution </p>
+<ol>
+<li>
+<p>Use notion api to download the markdowns </p>
+</li>
+<li>
+<p>cycle through them and use regex </p>
+</li>
+<li>
+<p>Convert the regex to pdfs </p>
+</li>
+<li>
+<p>Open up a ‘scratch pad’ to write things down then upload </p>
+</li>
+</ol>
+<p><br/></p>
+<p>Regex matching: </p>
+<p>```plain text
+    &gt;&gt;&gt; import re</p>
+<blockquote>
+<blockquote>
+<blockquote>
+<p>pat = r'(?&lt;=[).+?(?=])'  #See Note at the bottom of the answer
+s = "foobar['infoNeededHere']ddd[andHere] [andOverHereToo[]"
+re.findall(pat, s)
+["'infoNeededHere'", 'andHere', 'andOverHereToo[']
+```</p>
+</blockquote>
+</blockquote>
+</blockquote>
+<p><br/></p>
+<p>Notion Integration key </p>
+<p>secret_M5WK7SAzNLfk0S4p3nvYCywdsfcMrfHmjbeSBmyQQ7X</p>
+<p>Key press events</p>
+<p><a href="https://stackoverflow.com/questions/596481/is-it-possible-to-simulate-key-press-events-programmatically">https://stackoverflow.com/questions/596481/is-it-possible-to-simulate-key-press-events-programmatically</a></p>
+<p><br/></p>
+<p><a href="https://www.geeksforgeeks.org/how-do-you-run-javascript-script-through-the-terminal/">https://www.geeksforgeeks.org/how-do-you-run-javascript-script-through-the-terminal/</a></p>
+<p><br/></p>
+<p>Also, it’s not possible to share notion on the web then import. </p>
+<p>It causes a problem with copy and pasting images. Probably going to have to do this via afiqhatta.com!</p>
+<p><br/></p>
+<p><br/></p>
+<p><u>In javascript, the syntax looks like () ⇒ void function. </u></p>
+<p><u>There is also a sample script that I've embedded in the code. </u></p>
+<p><u>I also possibly need to refresh the webpage once I;ve rewritten the extension!</u></p>
+<p><u>What I need to do is to save the new string as x → x + a!</u></p>
+<p><br/></p>
+<p>[link_preview is not supported]</p>
+<p><br/></p>

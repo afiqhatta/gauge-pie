@@ -1,0 +1,108 @@
+<!doctype html>
+
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+
+  <script src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
+  <script src="js/scripts.js"></script>
+  <link rel="stylesheet" href="static/styles.css?v=1.0">
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+  <script>
+    MathJax = {
+     tex: {
+      inlineMath: [['$', '$'], ['\\(', '\\)']]
+     }
+    };
+    window.MathJax = {
+      loader: {load: ['[tex]/physics']},
+      tex: {packages: {'[+]': ['physics']}}
+    };
+  </script>
+  <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+  <meta charset="utf-8">
+  
+</head>
+
+<body>
+  <div class="mast">
+    <h3>Afiq Hatta's blog</h3> 
+  </div> 
+  <div class="sidebar">
+    <a href="index.html">Home</a>
+    <a href="writing.html">Writing</a> 
+    <a href="notes.html">Notes</a> 
+    <a href="about.html">About</a> 
+  </div>
+  <div class="main">
+    <div class="title">
+      <h1> 
+Density-Functional-Theory-Full-f1c0883959c94d998565b5a1b8c754ed
+ 
+<hr class="thin">
+</h1>
+    </div>
+     
+<p>Density functional theory is a way to understand the distribution of electrons in many-body systems that are more complex than hydrogen. It is a modern miracle of much value in the study of chemistry, physics and materials science. In particular, it is primarily used to investigate the properties of the ground state, which is the state with lowest energy. The strength of DFT is that it can be used to calculate material properties without requiring other parameters unique to the material. When we model the behaviour of electrons, we need to use Schrodinger’s equation to model it, but we use a fluid-like approach. However, modelling the interactions is hard. </p>
+<p><br/></p>
+<p>For example, consider how we would typically solve a many body electron problem. As always, we start with the equations we can use to describe quantum mechanical phenomena. To do this, we would write out the Schrodinger equation </p>
+<p><br/></p>
+<p>[image is not supported]</p>
+<p>The first terms T and V represent the kinetic and external potentials respectively. The term U refers to interaction terms between particles. This interaction term is why many body problems are hard to solve - solving this PDE is not simple. This is hard to solve because we cannot split it into smaller parts. If there was no interaction term, we could split this equation as the linear sum of different equations with different variables. However, this is not the case, if say, there is a coulomb-like term between r_ 1 and r_2. </p>
+<p><br/></p>
+<p>Now, we need to find a way to find interesting properties like the ground state energy, whilst bypassing the need to solve equations like the above. To do this, we need a to construct a mathematical expression called the electron density. The electron density at a given point is meant to capture the integral of all of the probability amplitudes around it from different points. </p>
+<p><img alt="alt text" src="static/Density-Functional-Theory-Full-f1c0883959c94d998565b5a1b8c754ed_file_0.png" /></p>
+<p>In the integral, we have the probability amplitude. The psis represent <a href="http://wavefunctions.IN">wavefunctions.</a> Like all quantum mechanical systems, we have a ground state. This ground state can be represented in coordinate space by a wavefunction. If we call this wavefunction psi_0, it will also give rise to ground state number density n_0. </p>
+<p><img alt="alt text" src="static/Density-Functional-Theory-Full-f1c0883959c94d998565b5a1b8c754ed_file_1.png" /></p>
+<p>As we will show below, this relationship is invertible! If I give you a ground state wavefunction, it is easy to return a ground state electron density. However, you can also go the other way around! I’[ll demonstrate this in the next section using a paper by Kohn and Hohenberg.</p>
+<h3></h3>
+<p>Kohn and Hohenberg’s Approach</p>
+<p>In this section, I’ll be describing the kind of systems we want to model. As usual, we can start by trying to define a Hamiltonian for a gas of electrons. </p>
+<p><br/></p>
+<p>The paper by Kohn and Hohenberg describes an inhomogeneous electron gas. The paper considers the behaviour of a gas of electrons. The Hamiltonian contains three terms. The first term is the ‘kinetic’ part of the field, and it’s given by the modulus squared of the grad of the field. This is quite similar to how we might model the kinetic energy of a fluid. In the expression below, we integrate the amplitude of the grad of the field over all of space. The term phi represents a creation operator, and the complex conjugate is the corresponding annihilation operator. </p>
+<p><img alt="alt text" src="static/Density-Functional-Theory-Full-f1c0883959c94d998565b5a1b8c754ed_file_2.png" /></p>
+<p>In quantum field theory, one learns that the creation operator excites the ground state to create particles. This is akin to creation operators being applied to a ground state in a harmonic oscillator. The second term is the interaction of the field with some sort of external potential. The external potential is represented with a lower case v. </p>
+<p><img alt="alt text" src="static/Density-Functional-Theory-Full-f1c0883959c94d998565b5a1b8c754ed_file_3.png" /></p>
+<p>The final term is the interaction of the gas with itself. This is encoded with the coulomb term, which looks like 1/r. </p>
+<p><img alt="alt text" src="static/Density-Functional-Theory-Full-f1c0883959c94d998565b5a1b8c754ed_file_4.png" /></p>
+<p>The total Hamiltonian is given by the sum of these terms. </p>
+<p><img alt="alt text" src="static/Density-Functional-Theory-Full-f1c0883959c94d998565b5a1b8c754ed_file_5.png" /></p>
+<p>Like every quantum system, the system has a ground state. This ground state is the state with the lowest energy. There is a derived quantity from the ground state called the electronic density. The electronic density is given by taking the contraction of the ground state with the creation and annihilation operator. </p>
+<p><img alt="alt text" src="static/Density-Functional-Theory-Full-f1c0883959c94d998565b5a1b8c754ed_file_6.png" /></p>
+<p>One question to ask is whether the number density and the density v have some sort of mapping between each other. It turns out, that the density is indeed a unique functional of the number operator. From this, we can define the functional for the interaction and kinetic energy of the ground state. </p>
+<p><img alt="alt text" src="static/Density-Functional-Theory-Full-f1c0883959c94d998565b5a1b8c754ed_file_7.png" /></p>
+<p>In the previous post, I talked about the Hamiltonian of a gas of electrons. The Hamiltonian contained three terms - the potential energy, kinetic energy, and self interaction energy. The potential energy contained an external potential term. This term encodes how the system is influenced by an external potential, shown by the term v in the equation below. </p>
+<p><img alt="alt text" src="static/Density-Functional-Theory-Full-f1c0883959c94d998565b5a1b8c754ed_file_8.png" /></p>
+<p>With all systems, there is a ground state. The ground state is the state in our quantum system with lowest energy. There are a few interesting things we can compute from this ground state. One quantity is the expected number of particles we might find in the ground state. In quantum field theory, there is a dedicated operator that is used to find this density. It is often called the ‘number operator’. It is the contraction of the creation </p>
+<p><img alt="alt text" src="static/Density-Functional-Theory-Full-f1c0883959c94d998565b5a1b8c754ed_file_9.png" /></p>
+<p>In this context however, the interpretation is slightly different. In this case, since we’re dealing with a gas of electrons, the interpretation is slightly different. Instead, we come up with a value that represents the expected density of electrons at a particular location. This means that if the value is large at some position <strong>r</strong>, there expected density of electrons at that location is high. In the paper [1], the electron density is denoted with the number n. </p>
+<p><img alt="alt text" src="static/Density-Functional-Theory-Full-f1c0883959c94d998565b5a1b8c754ed_file_10.png" /></p>
+<p>What is the relationship between the electron density function, and the external potential? It turns out, that there’s actually a one-to-one relationship between these two objects. It is one of the first things that are proven in the paper. If we have a different potential v’, it can’t give the same number density function has a different potential. It is not immediately obvious why this should be true. In the next paragraph, I will show why it is. </p>
+<p>[image is not supported]</p>
+<hr />
+<p><br/></p>
+<h3>Correspondence between Density and External Potentials</h3>
+<p>Suppose we have two different potentials, that are denoted by V and V’. These give rise to two different Hamiltonians, which we can label H and H’. This also gives two different ground states, which we can label psi and psi’. Suppose that everything else is the same - the interaction and kinetic terms. This means that we can relate them as follows </p>
+<p><img alt="alt text" src="static/Density-Functional-Theory-Full-f1c0883959c94d998565b5a1b8c754ed_file_11.png" /></p>
+<p>With this relation, we can contract this with the ground state on both sides. We then get the following relation. </p>
+<p><img alt="alt text" src="static/Density-Functional-Theory-Full-f1c0883959c94d998565b5a1b8c754ed_file_12.png" /></p>
+<p>The first inequality comes from the fast that psi’ is the ground state of H’. Psi is not the ground state of H’, so the energy of this state is larger than the energy of psi’. Now, suppose that these hamiltonians have the same number density. This means that we have, when contracting the density operator </p>
+<p><img alt="alt text" src="static/Density-Functional-Theory-Full-f1c0883959c94d998565b5a1b8c754ed_file_13.png" /></p>
+<p>This means that we get the two equations below. </p>
+<p><img alt="alt text" src="static/Density-Functional-Theory-Full-f1c0883959c94d998565b5a1b8c754ed_file_14.png" /></p>
+<p>In the second the equation, we switch the primes in the terms. We can do this because there is symmetry in whether we can switch the primes or not. If we add the two expressions there, it turns out that we end up getting a contradiction. </p>
+<p><img alt="alt text" src="static/Density-Functional-Theory-Full-f1c0883959c94d998565b5a1b8c754ed_file_15.png" /></p>
+<p>The only false assumption we made was the the density functions were the same, so this can’t be true. This means that indeed, for a particular external potential v, we essentially have a unique density function n. In the diagram below, I draw a correspondence between the two functions. </p>
+<hr />
+<h3>References</h3>
+<p>[1] <a href="https://journals.aps.org/pr/pdf/10.1103/PhysRev.136.B864">https://journals.aps.org/pr/pdf/10.1103/PhysRev.136.B864</a></p>
+<p>[2] <a href="https://en.wikipedia.org/wiki/Harris_functional">https://en.wikipedia.org/wiki/Harris_functional</a></p>
+<hr />
+<h3>References</h3>
+<p>[1] <a href="https://journals.aps.org/pr/pdf/10.1103/PhysRev.136.B864">https://journals.aps.org/pr/pdf/10.1103/PhysRev.136.B864</a></p>
+<p><br/></p>
+
+  </div> 
+</body>
+</html>

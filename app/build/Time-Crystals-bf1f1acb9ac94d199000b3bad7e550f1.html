@@ -1,0 +1,89 @@
+<!doctype html>
+
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+
+  <script src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
+  <script src="js/scripts.js"></script>
+  <link rel="stylesheet" href="static/styles.css?v=1.0">
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+  <script>
+    MathJax = {
+     tex: {
+      inlineMath: [['$', '$'], ['\\(', '\\)']]
+     }
+    };
+    window.MathJax = {
+      loader: {load: ['[tex]/physics']},
+      tex: {packages: {'[+]': ['physics']}}
+    };
+  </script>
+  <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+  <meta charset="utf-8">
+  
+</head>
+
+<body>
+  <div class="mast">
+    <h3>Afiq Hatta's blog</h3> 
+  </div> 
+  <div class="sidebar">
+    <a href="index.html">Home</a>
+    <a href="writing.html">Writing</a> 
+    <a href="notes.html">Notes</a> 
+    <a href="about.html">About</a> 
+  </div>
+  <div class="main">
+    <div class="title">
+      <h1> 
+Time-Crystals-bf1f1acb9ac94d199000b3bad7e550f1
+ 
+<hr class="thin">
+</h1>
+    </div>
+     
+<p>In August, Google published a preprint on ArXiv, which detailed how they created a time crystal on a quantum computer. The word time-crystal sounds like it comes straight out of a sci-fi movie, and I love sci-fi movies (especially cartoons like Rick and Morty). So, I wanted to write a short post to break this down a bit. </p>
+<p><br/></p>
+<p>Let’s first define the ‘usual’ definition of a crystal. A crystal structure doesn’t have continuous translational symmetry but a discrete one. For example, imagine a piece of matter where we arrange atoms in an infinitely large square grid. Let the squares have a length of 1. This structure is called a crystal because translation in the x or y direction doesn’t leave this grid invariant by a distance smaller than 1. In other words, it doesn’t possess a continuous symmetry. Instead, it has a discrete one. A time crystal is similar, but instead of breaking translation symmetry in space, it breaks translation symmetry in time. </p>
+<p>[image is not supported]</p>
+<p>The physical interpretation of a system without time translation symmetry ‘perpetually moves’. It only makes sense to talk about quantum states when describing quantum systems. In this case, we are looking for a ground state (a state of minimal energy) that evolves with time. The state constantly moves, much like a perpetual motion machine. The diagram above is from [4] and represents the values of three spin observables of a Floquet system with time translation symmetry t → t  + T presented in the paper. The y-axis represents an average spin value. The three lines represent average spin values in the x, y and z-axis in the Floquet system presented in 4. As you can see, these observables break time translation symmetry since their values are not of period T.</p>
+<p>[image is not supported]</p>
+<p><br/></p>
+<p><br/></p>
+<hr />
+<h3>Time-Translation Symmetry Breaking</h3>
+<p>In quantum mechanics, we describe the physical system through its Hamiltonian. A Hamiltonian in quantum mechanics is an operator that corresponds to a given system’s ‘energy’. For example, a Hamiltonian might stay the same after some transformation, known as a symmetry. However, ground states - physical states with the lowest energy permissible in a quantum system - might not inherit the same symmetries possessed by the Hamiltonian. This divergence is called symmetry breaking. </p>
+<p><br/></p>
+<p>As I’ve discussed in a previous post, a simple demonstration of symmetry breaking is the Ising model. An array of atoms prepared with either up-spin or down-spin is observed in the Ising model. Whilst the Hamiltonian itself is invariant to a transformation that switches up and down spins, the minimal energy states are either all up or all down, which breaks the symmetry. There are, however, other ground states that do obey this symmetry. These are called cat-states and involve a high degree of entanglement. For example, the following state is a cat-state </p>
+<p><img alt="alt text" src="static/Time-Crystals-bf1f1acb9ac94d199000b3bad7e550f1_file_0.png" /></p>
+<p>This state is a superposition of the state with all up spins and all down spins. IN quantum computing, these states are called Greenberger–Horne–Zeilinger states [5]. The state has the same energy as either ground state, so it’s a ground state itself. However, this state is considered ‘long-range correlated’ - there is a high level of entanglement in a state prepared this way. Entanglement means that the atoms in this array are correlated to one another over repeated measurement. Practically, this high-level entanglement risks quantum decoherence with the environment. For large numbers of atoms, these kinds of states are essentially unphysical. </p>
+<p>[image is not supported]</p>
+<p><br/></p>
+<p>Symmetry breaking is a topic that is crucial in physics. A particular type of symmetry is time-translation symmetry. Time translation symmetry is when we can shift the Hamiltonian’s time by a certain amount and have it ‘look’ the same. For a quantum state, time translation symmetry would be akin to evolving the state in time and looking the same. A state is known to have short-range correlations if local operators at different points have zero correlation the farther they are placed apart. This first term correlates two operators placed at two different locations. </p>
+<p><img alt="alt text" src="static/Time-Crystals-bf1f1acb9ac94d199000b3bad7e550f1_file_1.png" /></p>
+<p><br/></p>
+<hr />
+<h3>Why Time-Translation Asymmetry looks Impossible</h3>
+<p>H represents our Hamiltonian, and psi represents an observable state in the equation below. A ground state is usually defined as a state with the lowest, definite <a href="http://energy.in">energy.</a> For a system to have a definite energy, it needs to be an eigenstate of the Hamiltonian. However, if it was an eigenstate, then the state’s expected value shouldn’t evolve throughout time. </p>
+<p><img alt="alt text" src="static/Time-Crystals-bf1f1acb9ac94d199000b3bad7e550f1_file_2.png" /></p>
+<p>In the equation above, O represents an operator - operators may represent any particular observable. For example, the operator might represent total angular momentum or angular momentum for a specific direction. On the left-hand side, this is the expected value of the change in this particular observable. Going from the first term to the following term, we use Heisenberg’s equation, which dictates how an operator evolves. The fact that the time evolution tends to zero means that the expected value of the operator in this state can’t change. Furthermore, this means that time translation asymmetry seems impossible - our observables stay the same throughout.</p>
+<p><br/></p>
+<hr />
+<h3>Floquet Time Crystals</h3>
+<p>The key to avoiding this impossibility is to make our system’ big’ such that the time to get to this steady equilibrium state is large. The observations above motivate a more precise definition of time-translation symmetry. In [4] the authors propose two equivalent definitions for time translation symmetry breaking. The set-up is as follows. Suppose we have a Hamiltonian which has a discrete-time symmetry:</p>
+<p><img alt="alt text" src="static/Time-Crystals-bf1f1acb9ac94d199000b3bad7e550f1_file_3.png" /></p>
+<p>Then, one definition of time translation symmetry breaking would be that the expected value of any observable given a time translated state is not equal to the original expected value. So, in this case, the Hamiltonian has time translation symmetry with respect to period T, but the state itself does not.</p>
+<p><img alt="alt text" src="static/Time-Crystals-bf1f1acb9ac94d199000b3bad7e550f1_file_4.png" /></p>
+<h3>References</h3>
+<p>[1] F. Wilczek, Phys. Rev. Lett. 109, 160401 (2012), arXiv:1202.2539 [quant-ph].</p>
+<p>[2] <a href="https://arxiv.org/abs/2107.13571">arXiv:2107.13571</a><strong> [quant-ph]</strong></p>
+<p>[3] <a href="https://physicsworld.com/a/time-crystals-enter-the-real-world-of-condensed-matter/">https://physicsworld.com/a/time-crystals-enter-the-real-world-of-condensed-matter/</a> </p>
+<p>[4] Dominic V. Else, Bela Bauer, and Chetan Nayak. Floquet Time Crystals</p>
+<p>[5] <a href="https://en.wikipedia.org/wiki/Greenberger%E2%80%93Horne%E2%80%93Zeilinger_state">https://en.wikipedia.org/wiki/Greenberger–Horne–Zeilinger_state</a></p>
+<p><br/></p>
+
+  </div> 
+</body>
+</html>

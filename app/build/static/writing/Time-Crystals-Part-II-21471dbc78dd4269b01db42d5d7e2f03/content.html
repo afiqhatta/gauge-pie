@@ -1,0 +1,22 @@
+<p>In my previous post, I talked about time crystals. I find time crystals fascinating not just because of their flashy name, but also because they somewhat resemble a perpetual motion machine. Because of this, I wanted to write about them in a bit more detail in this post. To quickly recap, time translation symmetry is when a particular quantity looks the ‘same’ after a translating the time coordinate. For example, suppose we have some physical quantity represented by the function P. If this quantity depends on time, then the system might have discrete time translation symmetry if it looks the same after we move a certain step in time: </p>
+<p><img alt="alt text" src="static/Time-Crystals-Part-II-21471dbc78dd4269b01db42d5d7e2f03_file_0.png" /></p>
+<p>This function P could represent any number of things. It could be a Hamiltonian, an observable quantity, or a quantum state. In the case we’ll consider below, P will be a periodic Hamiltonian that has discrete time translation symmetry.  Symmetry breaking occurs when the Hamiltonian possesses some symmetry (for example, time translation symmetry), but low energy quantum states fail to inherit it. A time crystal is a system that breaks time translation symmetry at low energy. This means that the Hamiltonian has some time translation symmetry, but the ground states themselves don’t. </p>
+<p><br/></p>
+<h3>What does the Hamiltonian look like?</h3>
+<p>To give an irrefutable example of time-translation symmetry breaking, the paper [1] first cooks up a Hamiltonian. Then, it shows that states the evolve under this Hamiltonian don’t obey time translation symmetry. The obvious, explicit condition to prove that that a state breaks time translation symmetry is by explicitly showing that the observed values are not periodic in time. However, there is another condition that is used. This condition is that the eigenstates of the system are not short range correlated. </p>
+<p><br/></p>
+<p>Being short-range correlated means that there is a low degree of entanglement between atoms at distant sites in the lattice. In [1], there is a formal definition of short-range correlation. The definition is that observables in the lattice that are position dependent, become uncorrelated at the positions are further and further away. I found this definition slightly confusing, so I will offer an example that I think aids the intuition. In the case of the Ising model, where atoms in a lattice can either be up-spin or down-spin, a short-range correlated ground state would be a configuration where all atoms are up or down. </p>
+<p><img alt="alt text" src="static/Time-Crystals-Part-II-21471dbc78dd4269b01db42d5d7e2f03_file_1.png" /></p>
+<p>On the other hand, another equally valid ground state would be superimposing the up state and the down states equally together. This state is a superposition of the fully up state and the fully down state. There is a high degree of entanglement between atoms in this lattice, and so it is not considered short-range correlated. </p>
+<p><img alt="alt text" src="static/Time-Crystals-Part-II-21471dbc78dd4269b01db42d5d7e2f03_file_2.png" /></p>
+<p>The Hamiltonian that is referenced in [1] looks like the following. In this case, we are summing over all of the atoms in the lattice, which is shown by the subscript n in the sum. For each atom in the lattice  The operators sigma are spin operators. J and h are interaction values that are chosen randomly from the interval [1/2, 3/2]. This is the Hamiltonian, and the individual states themselves will comprise of all possible combinations of up and down spin </p>
+<p><img alt="alt text" src="static/Time-Crystals-Part-II-21471dbc78dd4269b01db42d5d7e2f03_file_3.png" /></p>
+<p><br/></p>
+<h3>Demonstrating Time-Symmetry Breaking</h3>
+<p>What are the eigenstates of this system? To learn this, we let’s break the problem down and define what the eigenstates of the sigmas are.  Suppose that the eigenstates for the these operators are given by the collection of spins such that </p>
+<p><img alt="alt text" src="static/Time-Crystals-Part-II-21471dbc78dd4269b01db42d5d7e2f03_file_4.png" /></p>
+<p>To prove that this state breaks time translation symmetry, we need to find an eigenstate of the Hamiltonian which is not short-range correlated, in the sense that I’ve explained in the previous section. In the next post, I’ll explain how we do that. </p>
+<p><br/></p>
+<h3>References</h3>
+<p>[1] Dominic V. Else, Bela Bauer, and Chetan Nayak. Floquet Time Crystals</p>
+<p><br/></p>

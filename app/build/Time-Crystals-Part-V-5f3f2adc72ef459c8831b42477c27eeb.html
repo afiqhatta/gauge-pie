@@ -1,0 +1,87 @@
+<!doctype html>
+
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+
+  <script src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
+  <script src="js/scripts.js"></script>
+  <link rel="stylesheet" href="static/styles.css?v=1.0">
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+  <script>
+    MathJax = {
+     tex: {
+      inlineMath: [['$', '$'], ['\\(', '\\)']]
+     }
+    };
+    window.MathJax = {
+      loader: {load: ['[tex]/physics']},
+      tex: {packages: {'[+]': ['physics']}}
+    };
+  </script>
+  <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+  <meta charset="utf-8">
+  
+</head>
+
+<body>
+  <div class="mast">
+    <h3>Afiq Hatta's blog</h3> 
+  </div> 
+  <div class="sidebar">
+    <a href="index.html">Home</a>
+    <a href="writing.html">Writing</a> 
+    <a href="notes.html">Notes</a> 
+    <a href="about.html">About</a> 
+  </div>
+  <div class="main">
+    <div class="title">
+      <h1> 
+Time-Crystals-Part-V-5f3f2adc72ef459c8831b42477c27eeb
+ 
+<hr class="thin">
+</h1>
+    </div>
+     
+<p>In this section, we want to show that nudging the Hamiltonian and changing it a bit doesn’t change the time symmetry breaking. We need to find a local,  unitary operator that relates the perturbed eigenstates to the unperturbed eigenstates. To show that time-symmetry breaking still holds in the perturbed case, we must show that this operator is local. If we do this, there is no way to turn long-range correlated states into short-range correlated ones. </p>
+<p>In the previous post, we tried to construct an operator S that was local and that diagonalises the perturbed Floquet operator. To show that it’s local, we needed to break the operator into different regions and then show that these sub-operators don’t stray away from their designated areas. In the diagram, V represents a local perturbation to our Hamiltonian. We obtain a unitary operator S that is also local, and that evolves our Floquet operators. </p>
+<p><br/></p>
+<p>[image is not supported]</p>
+<hr />
+<h3>Fourier Expansion</h3>
+<p>The whole point of this section is to show that operator S is local. Being local means that the operator won’t perturb long-range correlated states and make them short-range correlated. If we manage to prove this, it means that our perturbed Hamiltonian still breaks time translation symmetry. So our operator S can be written in terms of matrix elements.</p>
+<p><img alt="alt text" src="static/Time-Crystals-Part-V-5f3f2adc72ef459c8831b42477c27eeb_file_0.png" /></p>
+<p>Suppose that our Hamiltonian has some eigenstate, with eigenvalue lambda. Physically, this means that an energy value of lambda is observable in our quantum system. </p>
+<p><br/></p>
+<p>Suppose now that we exponentiate the Hamiltonian to get the time evolution operator. This object is often called a Floquet operator if the Hamiltonian is periodic. This time evolution operator also has the same eigenstates. From this Floquet operator, we can also come up with induced eigenvalues. The eigenvalue is a complex number with unit modulus. In the equations below, U_H is the associated Floquet operator of the Hamiltonian. The eigenvalue of the Floquet operator is called a quasi-energy eigenvalue. It’s the exponential of the original eigenvalue of the Hamiltonian’s eigenstate. In terms of the unperturbed floquet operators, we can expand this out like the following a</p>
+<p><img alt="alt text" src="static/Time-Crystals-Part-V-5f3f2adc72ef459c8831b42477c27eeb_file_1.png" /></p>
+<p>Below, we’ve rewritten the operator in terms of the unperturbed Floquet operator. The unperturbed Floquet operator is shown below with the capital letter U. To show that this is local, we need to show somehow that these Floquet operators don’t increase the support of the operator V_X by more than a constant amount. The subscript 0 is used to show that the Hamiltonian is unperturbed. To check that this expansion is valid, we can contract the state with two eigenstates labelled i and j, and then see what we get. </p>
+<p><img alt="alt text" src="static/Time-Crystals-Part-V-5f3f2adc72ef459c8831b42477c27eeb_file_2.png" /></p>
+<p>We can verify that this is identical to the original operator that I mentioned in the previous post. In the below, applying the unperturbed operator multiple times on the eigenstates leads to having eigenvalues that are taken to powers of n in the sum. This gives a Fourier-like series.  </p>
+<p><img alt="alt text" src="static/Time-Crystals-Part-V-5f3f2adc72ef459c8831b42477c27eeb_file_3.png" /></p>
+<p>To show that the unperturbed Floquet operator doesn’t increase the support to much, let’s take a look at what happens when we put the unperturbed operator side-by-side and clone it multiple times. In the simplest case, we can see what happens when we apply the operator twice. </p>
+<p><img alt="alt text" src="static/Time-Crystals-Part-V-5f3f2adc72ef459c8831b42477c27eeb_file_4.png" /></p>
+<p>We can move the spin flips all to one side at the cost of changing some signs in the MBL Hamiltonian. This is because the MBL Hamiltonian only consists of Pauli sigma matrices and so doesn’t change the support of V_x by more than a constant amount. </p>
+<hr />
+<p><br/></p>
+<h3>The Support of a Quantum Operator</h3>
+<p>If we have an operator and know the eigenstates, then we can write it out in terms of its eigenstates and eigenvalues. </p>
+<p><img alt="alt text" src="static/Time-Crystals-Part-V-5f3f2adc72ef459c8831b42477c27eeb_file_5.png" /></p>
+<p>Then, the paper deconstructs it into a Fourier series and then proves that the coefficients in these series imply that the operator is local. In particular, we use the fact that the unperturbed Hamiltonian applied n times on operators never increases the region where the operator is non-zero by a constant amount. </p>
+<p><br/></p>
+<p>[image is not supported]</p>
+<p><br/></p>
+<p>The support of a function is the region in the domain where the function is non-zero. How does this apply in the quantum context? Well, quantum states are vectors in a Hilbert space. Quantum operators are linear maps that act on this vector space. So if we define the kernel of an operator as the set of vectors that get reduced to zero, then the support is the orthogonal complement of the kernel. </p>
+<p><img alt="alt text" src="static/Time-Crystals-Part-V-5f3f2adc72ef459c8831b42477c27eeb_file_6.png" /></p>
+<p>Now that we’ve defined the kernel, we can determine the support. The orthogonal complement of a subspace is the set of all vectors that reduce them to zero when we contract them. </p>
+<p><img alt="alt text" src="static/Time-Crystals-Part-V-5f3f2adc72ef459c8831b42477c27eeb_file_7.png" /></p>
+<hr />
+<h3>References</h3>
+<p>[1] <a href="https://en.wikipedia.org/wiki/Lieb%E2%80%93Robinson_bounds">https://en.wikipedia.org/wiki/Lieb–Robinson_bounds</a></p>
+<p>[2] <a href="https://arxiv.org/pdf/1504.00233.pdf">https://arxiv.org/pdf/1504.00233.pdf</a> - On supports of Quantum Operators </p>
+<p><br/></p>
+
+  </div> 
+</body>
+</html>

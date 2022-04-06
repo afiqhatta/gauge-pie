@@ -1,0 +1,71 @@
+<!doctype html>
+
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+
+  <script src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
+  <script src="js/scripts.js"></script>
+  <link rel="stylesheet" href="static/styles.css?v=1.0">
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+  <script>
+    MathJax = {
+     tex: {
+      inlineMath: [['$', '$'], ['\\(', '\\)']]
+     }
+    };
+    window.MathJax = {
+      loader: {load: ['[tex]/physics']},
+      tex: {packages: {'[+]': ['physics']}}
+    };
+  </script>
+  <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+  <meta charset="utf-8">
+  
+</head>
+
+<body>
+  <div class="mast">
+    <h3>Afiq Hatta's blog</h3> 
+  </div> 
+  <div class="sidebar">
+    <a href="index.html">Home</a>
+    <a href="writing.html">Writing</a> 
+    <a href="notes.html">Notes</a> 
+    <a href="about.html">About</a> 
+  </div>
+  <div class="main">
+    <div class="title">
+      <h1> 
+Density-Functional-Theory-d1f1e5d93d6d4e3b876294322ffafd47
+ 
+<hr class="thin">
+</h1>
+    </div>
+     
+<p>Density functional theory is a way to understand the distribution of electrons in systems that are more complex than hydrogen. When we model the behaviour of electrons, we need to use Schrodinger’s equation to model it, but we use a fluid-like approach. However, modelling the interactions is hard. </p>
+<p><br/></p>
+<h3>Kohn and Hohenberg’s Approach</h3>
+<p>In this section, I’ll be describing the kind of systems we want to model. As usual, we can start by trying to define a Hamiltonian for a gas of electrons. </p>
+<p><br/></p>
+<p>The paper by Kohn and Hohenberg describes an inhomogeneous electron gas. The paper considers the behaviour of a gas of electrons. The Hamiltonian contains three terms. The first term is the ‘kinetic’ part of the field, and it’s given by the modulus squared of the grad of the field. This is quite similar to how we might model the kinetic energy of a fluid. In the expression below, we integrate the amplitude of the grad of the field over all of space. The term phi represents a creation operator, and the complex conjugate is the corresponding annihilation operator. </p>
+<p><img alt="alt text" src="Density-Functional-Theory-d1f1e5d93d6d4e3b876294322ffafd47/file_0.png" /></p>
+<p>In quantum field theory, one learns that the creation operator excites the ground state to create particles. This is akin to creation operators being applied to a ground state in a harmonic oscillator. The second term is the interaction of the field with some sort of external potential. The external potential is represented with a lower case v. </p>
+<p><img alt="alt text" src="Density-Functional-Theory-d1f1e5d93d6d4e3b876294322ffafd47/file_1.png" /></p>
+<p>The final term is the interaction of the gas with itself. This is encoded with the coulomb term, which looks like 1/r. </p>
+<p><img alt="alt text" src="Density-Functional-Theory-d1f1e5d93d6d4e3b876294322ffafd47/file_2.png" /></p>
+<p>The total Hamiltonian is given by the sum of these terms. </p>
+<p><img alt="alt text" src="Density-Functional-Theory-d1f1e5d93d6d4e3b876294322ffafd47/file_3.png" /></p>
+<p>Like every quantum system, the system has a ground state. This ground state is the state with the lowest energy. There is a derived quantity from the ground state called the electronic density. The electronic density is given by taking the contraction of the ground state with the creation and annihilation operator. </p>
+<p><img alt="alt text" src="Density-Functional-Theory-d1f1e5d93d6d4e3b876294322ffafd47/file_4.png" /></p>
+<p>One question to ask is whether the number density and the density v have some sort of mapping between each other. It turns out, that the density is indeed a unique functional of the number operator. From this, we can define the functional for the interaction and kinetic energy of the ground state. </p>
+<p><img alt="alt text" src="Density-Functional-Theory-d1f1e5d93d6d4e3b876294322ffafd47/file_5.png" /></p>
+<hr />
+<h3>References</h3>
+<p>[1] <a href="https://journals.aps.org/pr/pdf/10.1103/PhysRev.136.B864">https://journals.aps.org/pr/pdf/10.1103/PhysRev.136.B864</a></p>
+<p><br/></p>
+
+  </div> 
+</body>
+</html>

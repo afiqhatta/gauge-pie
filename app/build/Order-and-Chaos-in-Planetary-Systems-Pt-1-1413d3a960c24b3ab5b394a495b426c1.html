@@ -1,0 +1,78 @@
+<!doctype html>
+
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+
+  <script src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
+  <script src="js/scripts.js"></script>
+  <link rel="stylesheet" href="static/styles.css?v=1.0">
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+  <script>
+    MathJax = {
+     tex: {
+      inlineMath: [['$', '$'], ['\\(', '\\)']]
+     }
+    };
+    window.MathJax = {
+      loader: {load: ['[tex]/physics']},
+      tex: {packages: {'[+]': ['physics']}}
+    };
+  </script>
+  <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+  <meta charset="utf-8">
+  
+</head>
+
+<body>
+  <div class="mast">
+    <h3>Afiq Hatta's blog</h3> 
+  </div> 
+  <div class="sidebar">
+    <a href="index.html">Home</a>
+    <a href="writing.html">Writing</a> 
+    <a href="notes.html">Notes</a> 
+    <a href="about.html">About</a> 
+  </div>
+  <div class="main">
+    <div class="title">
+      <h1> 
+Order-and-Chaos-in-Planetary-Systems-Pt-1-1413d3a960c24b3ab5b394a495b426c1
+ 
+<hr class="thin">
+</h1>
+    </div>
+     
+<p>In December, I enjoyed talking with Benedict Rattigan about his ideas on symmetry in nature. For those who follow my blog, you might know that I’ve written about the theme of chaos and symmetry in physics many times. This month, there will be an event at the <a href="https://www.britishmuseum.org/events/language-symmetry">British Museum</a> with a series of lectures on this topic. Leading academics will be talking about how symmetry, order and disorder plays a role in physics, biology, philosophy and more. </p>
+<p><br/></p>
+<p>There will be multiple academics presenting. In the run-up to the event, I wanted to write a collection of expository articles to highlight their work. I wrote briefly about Denis Noble’s ideas on biology a few weeks ago. Another presenter at the British Museum will be Caroline Terquem. Today, I read about some of the fascinating work on planetary dynamics that Terquem has written about with John Papaloizou. In particular, I wanted to take a look at the paper <em>“First-order mean motion resonances in two-planet systems: general analysis and observed systems”. </em>It is a phenomenon that I think represents the interplay of order and disorder quite beautifully [3]. I wanted to write this article to discuss what I learned from planetary dynamics through this lens, reading some of the first few pages. </p>
+<p><br/></p>
+<p>*In a perhaps more selfish style of writing, I wanted to write a bit more about my thought process when reading a paper like this - the questions that come to mind, and where I get confused. *</p>
+<p><br/></p>
+<h3>Mean Motion Resonances in Planets</h3>
+<p>I looked at talks and papers written by Caroline Terquem. One of the things that Professor Terquem studies are systems of planets that have a ‘clean’ ratio of time of orbit. In particular, the periods of the orbit of planets have ratios that are small integers. For example, Terquem and many others reference two of Saturn’s moons - Enceladus and Dione. It takes Dione approximately twice as long to orbit Saturn than Enceladus. In this case, the ratio would be 2:1. I found this remarkable because I wouldn’t expect a violent and chaotic process like planet formation would lead to such a finely tuned result. Even though I am not an astrophysicist myself, I was surprised when I first read about this. The only thing that rang a bell was fractional, and integer quantised values in the Hall effects from quantum mechanics. Even then, planetary systems are definitely not quantum mechanical! </p>
+<p><br/></p>
+<p>I read the paper’s abstract [3], and some questions came to mind about how this resonance might take shape. Imagine planets orbiting a star in the early stages of their creation. Sometimes, there is also a disk of gas orbiting the star itself, with the planets embedded inside - kind of like chocolate chunks in a cookie. This disk of gas, by Newton’s third law, also exerts a force on the planets. These forces also cause the orbits of these planets to alter over time. The planets might move inward, towards the star, or move outward. During this process, it appears that planets get ‘locked in’ to these nice ratios of orbit periods. When and where does this resonance occur? Does it happen only in restricted areas of the disc? (Spoiler alert: after reading a bit more, these questions and more happen to be discussed in the paper, and I will write about it in a future post!) </p>
+<p><br/></p>
+<p>True to the idea of order and disorder, the reverse can also happen. On the flip side, a system in this satisfying resonance can destabilise. This destabilisation is also an interesting question. If a system is in mean resonance, what kinds of factors can cause the planets to go out of sync? Are there any nice mathematical expressions that allow us to predict how quickly they can go out of sync? What regions of orbit in the disc does this destabilisation occur? Again, many exciting models are put forward in [3], and I wanted to write about them in a few posts.</p>
+<p><br/></p>
+<p>There are also empirical ways to observe this phenomenon. Kepler is a space telescope that uses photometry to capture the dynamics of planetary systems. The telescope works by looking at the slight dimming of stars when a planet orbits in front of them. In [2], a statistical analysis of Kepler data revealed that a small, significant portion of planets in the data had mean motion resonance. In [3], Caroline Terquem and John C. B. Papaloizou describe the dynamics of two-planet systems with an orbit period ratio of (q+1): q. They mention that the planets that Kepler captures tend to have shorter period orbits due to observational bias. These planets start further away from the star, and as they go in, they lock into this resonant pattern. </p>
+<p><br/></p>
+<h3>Governing equations</h3>
+<p>In [3], some nice properties like the eccentricity of the orbit of planets in mean motion resonance (MRR) are calculated. Eccentricity measures how squashed an orbit is. An eccentricity of zero represents a circle, and an eccentricity close to 1 represents an orbit that really looks like an oval. When a system is in MRR, the dynamics are mainly governed by functions called ‘perturbing functions’. For example, consider a system with one large mass (the central star) and two satellite planets,. A disturbing function captures the interaction of one planet to the other, whilst the central potential captures the interaction with the largest body (the star). </p>
+<p>[image is not supported]</p>
+<p><br/></p>
+<p>In this case, the acceleration of the planet M is given by the grad of a potential. The potential can be split into two parts: a central and a disturbing part. The disturbing part contains the interactions between the two planets themselves. For example, the planet m has the following equations: </p>
+<p><img alt="alt text" src="Order-and-Chaos-in-Planetary-Systems-Pt-1-1413d3a960c24b3ab5b394a495b426c1/file_0.png" /></p>
+<p>When a system is in MRR, its motion is primarily described by the disturbing function. This makes things easier to solve, and in [3], equilibrium values of the eccentricity are given. An equilbirum value is a value that is associated with a system that doesn’t change.   </p>
+<p><br/></p>
+<h3>References</h3>
+<p>[1] Unpublished Synopsis of Talks for the British Museum </p>
+<p>[2] Lissauer, J. J., “Architecture and Dynamics of Kepler’s Candidate Multiple Transiting Planet Systems”, <i>The Astrophysical Journal Supplement Series</i>, vol. 197, no. 1, 2011. doi:10.1088/0067-0049/197/1/8.</p>
+<p>[3] Caroline Terquem, John C B Papaloizou, First-order mean motion resonances in two-planet systems: general analysis and observed systems, <em>Monthly Notices of the Royal Astronomical Society</em>, Volume 482, Issue 1, January 2019, Pages 530–549, <a href="https://doi.org/10.1093/mnras/sty2693">https://doi.org/10.1093/mnras/sty2693</a></p>
+<p><br/></p>
+
+  </div> 
+</body>
+</html>

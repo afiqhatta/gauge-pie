@@ -1,0 +1,84 @@
+<!doctype html>
+
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+
+  <script src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
+  <script src="js/scripts.js"></script>
+  <link rel="stylesheet" href="static/styles.css?v=1.0">
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+  <script>
+    MathJax = {
+     tex: {
+      inlineMath: [['$', '$'], ['\\(', '\\)']]
+     }
+    };
+    window.MathJax = {
+      loader: {load: ['[tex]/physics']},
+      tex: {packages: {'[+]': ['physics']}}
+    };
+  </script>
+  <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+  <meta charset="utf-8">
+  
+</head>
+
+<body>
+  <div class="mast">
+    <h3>Afiq Hatta's blog</h3> 
+  </div> 
+  <div class="sidebar">
+    <a href="index.html">Home</a>
+    <a href="writing.html">Writing</a> 
+    <a href="notes.html">Notes</a> 
+    <a href="about.html">About</a> 
+  </div>
+  <div class="main">
+    <div class="title">
+      <h1> 
+Harnessing-Randomness-4a39ded26185449bb9cfa65d6b6e1fc1
+ 
+<hr class="thin">
+</h1>
+    </div>
+     
+<p>In a previous post I talked about the relationship of order and disorder in physics. I gave examples of order emerging from disorder, and vice-versa. The theme of order and disorder, of randomness and structure, is a topic I have discussed quite a bit with Benedict Rattigan. In line with this theme, and the upcoming exhibition on symmetry at the British Museum, I wanted to write an exposition on Denis Noble’s ideas on how order and disorder interact in <a href="http://biology.in">biology.</a> I am very much a beginner in this subject, so please do point out any errors! (Thanks Kate for helping me out). </p>
+<p><br/></p>
+<p>In biology, systems have been developed to defend against randomness. For example, neurons need to figure out how to reduce signal noise when transmitting electrical impulses, so that our brains don’t get confused. However, in other amazing scenarios, there is evidence that organisms harness randomness as a way to generate new functions, to better survive against a change in their environment. </p>
+<p><br/></p>
+<h3>Blind Stochasticity</h3>
+<p>Before I go any further, I wanted discuss the ‘neo-Darwinian’ perspective. Specifically, I wanted to touch on the neo-Darwinian interpretation of randomness in evolution. This is the idea that variation among organism is random, but not <strong>functional</strong> in its own right. By functional, I mean that it is not actively harnessed by organisms to prolong survival. The randomness serves no purpose in prolonging the survival of a set of organisms, and is very much a ‘passive’ fuel in natural selection. In my brain, I imagine that organisms first exist, and then a combination of idiosyncratic events cause variation among them. Then, via natural selection, the mutations that are naturally advantageous stick around. </p>
+<p><br/></p>
+<p>Noble gives this idea a name - blind stochasticity. It is the idea that genetic variation is random, and not actively harnessed for purpose. Mutations occur by chance, a byproduct of noise in the world around us. Natural selection then weeds out what mutations are good or bad. Noble in [1] argues a replacement for this, and references several examples of where randomness is actively harnessed instead of acting like passive fodder. </p>
+<p><br/></p>
+<h3>Randomness with a purpose</h3>
+<p>However, Noble argues that there are cases when randomness is used with purpose, rather than avoided. In <a href="https://en.wikipedia.org/wiki/Evolutionary_biology">evolutionary biology</a>, <strong>function</strong> is the reason some object or process occurred in a system that <a href="https://en.wikipedia.org/wiki/Evolved">evolved</a> through <a href="https://en.wikipedia.org/wiki/Natural_selection">natural selection</a>. In physiology, function is a purpose. In [1] Noble argues that randomness is used by organisms to generate responses to high environmental stress. I like to think of this as an ‘explore’ mode instead of an ‘exploit mode’. Also, it’s kind of like a hail-Mary - when an organism encounters a challenge, it relies on randomness more and more to try and find something that <a href="http://works.om">works</a>.  </p>
+<p><br/></p>
+<p>There are a few examples for this: </p>
+<ul>
+<li>
+<p>Cells can harness randomness, accelerate mutation and generate new functions</p>
+</li>
+<li>
+<p>Cell populations govern their own random distributions</p>
+</li>
+</ul>
+<p><br/></p>
+<p>Noble references several examples in [1]. In particular, he references a study where the random distribution of a cell population seems to retained in all parts of the distribution. In Chang et al, it was shown that cells cherry picked from extreme points in a distribution retain their ‘memory’ of the original distribution. This is interesting - you would expect that bacteria sampled on the extreme points of a distribution would have no information about whether it was bimodal or unimodal. </p>
+<p><br/></p>
+<p>Furthermore, it is also clear that under some environmental challenges, mutation rates in variable parts of the genome can be accelerated. It is as if there is some targeted process going on to speed up the rate of the genetic slot machine. Noble references two examples. Firstly, in the immune system, the mutation rate in the variable part of the genome is accelerated. </p>
+<p><br/></p>
+<p>Secondly, in bacteria, there is observed to be a five order of magnitude acceleration of reorganisations in the genome to help cope with this additional environmental stress. This is shown in [3], where the authors have studied more vigorous mutation rates in response to starvation. The most studied phenomena is the FC40 strain of <em>Escherichia </em>coli. Initially, the experiment is set up so that the coli are bred to not be able to use lactose, with episomes containing the lactose gene placed in the bacteria. When exposed to agar plates where the only source of carbon is from lactose, mutant lac+ colonies arise at a high rate. </p>
+<h3>References</h3>
+<p>[1] Noble D. 2017 Evolution viewed from physics, physiology and medicine.
+Interface Focus 7: 20160159. <a href="http://dx.doi.org/10.1098/rsfs.2016.0159">http://dx.doi.org/10.1098/rsfs.2016.0159</a></p>
+<p>[2] 21. Chang HH, Hemberg M, Barahona M, Ingber DE, Huang S. 2008 Transcriptome-wide noise controls lineage choice in mammalian progenitor cells. Nature 453, 544 – 547. (doi:10.1038/nature06965) </p>
+<p>[3] Bridges BA. 1997 Hypermutation under stress. Nature 387, 557 – 568. (doi:10.1038/42370)</p>
+<p><br/></p>
+<p><br/></p>
+
+  </div> 
+</body>
+</html>

@@ -1,0 +1,66 @@
+<p>In this post, I wanted to write an exposition on Benedict Rattigan’s ideas about the interplay of order and disorder. Benedict is a philosopher by training - his ideas on order and disorder apply in many fields ranging from physics to art. This post will be part of a series of blog posts on the subject matter. In particular, it will focus more on the physics side of the discussion (not in the least because I’m familiar with the topic).  In later posts, I hope to cover the aspects of disorder and order in different fields like biology and genetics. </p>
+<h3>In Physics, Disorder Usually gets ‘Washed out.’</h3>
+<p>A system is <strong><em>disordered</em></strong> when it exhibits two properties in physics. The first property is a high degree of sensitivity to the system’s initial conditions [1] - the system can behave much differently even with a slight change to its initial settings. Secondly, the system should have a lot of opportunities to manifest many different outcomes (like the up-down atoms on a lattice). We can build complex systems from toy models of simple objects that interact, producing chaotic phenomena that are infeasible to predict. Complex systems are all around you. For example, take the air you breathe. If we imagine each air particle as a single particle, then it’s not so hard to model the motion of these things individually, on their own. Only when we combine them do we start to see some interesting phenomena.</p>
+<p><br/></p>
+<p>Luckily, we’ve found that nature does some sneaky things that smooth out this complexity. It allows simple humans like us to model physical systems in the first place. In quantum field theory, the study of <em>renormalisation</em> helps us understand why it is possible to do physics at all. For example, the Casimir effect is a force between two plates in a vacuum. Since atoms have a finite wavelength, we shouldn’t need to model the atoms’ high energy, ultraviolet interactions with the plates. Instead of putting in the detailed physics of the plates, it is easier to employ effective approximations that wash out the short-wavelength physics. Of course, we must make questionable assumptions about which interactions and wavelengths to ‘wash out’ to work out the math. Amazingly, however, it turns that the force is entirely independent of how we chose to do this procedure. We’ve experimentally verified that this force is independent of how you model the small scale physics. </p>
+<p><br/></p>
+<p>The second sneaky thing we can do is cheat and water down complex phenomena by modelling it as a random (but well-understood) distribution! For example, it isn’t much of a stretch to imagine that the factors that govern someone’s height is sensitive to a multitude of factors. However, the large N limit is adequately described by a Gaussian distribution. This is also the case in the laws of thermodynamics - detailed computations of the micro-states get washed out in favour of smooth distributions that describe average relationships between temperatures. </p>
+<hr />
+<p><br/></p>
+<h3>You can also go the other way!</h3>
+<p>The analysis of a physical theory starts with the Lagrangian, which is a system’s kinetic energy subtracted by its potential energy. Lagrangians are usually motivated by symmetries, and their shape needs to reflect this in nature. The most apparent set of symmetries a physical theory needs to obey is the Poincaré group. The Poincaré group is, I would say, the most intuitive set of symmetry transformations in nature. The group contains transformations that we fundamentally believe do not affect physical laws: rotations, translations, and Lorentz boosts. Rotations and translations are self-explanatory — we don’t expect translations and rotations of coordinate systems to alter physical laws. In special relativity, a Lorentz boost is a transformation where we transfer to a reference frame with a different velocity while still preserving light speed. </p>
+<p><br/></p>
+<p>We also have gauge symmetry. A photon has two independent polarisations. It’s not immediately clear why nature has whittled the number of independent polarisations to just two. We will see that these two degrees of freedom are consistent with the representation theory. If the mass is zero, an irreducible representation only has two independent states. The first way to reduce degrees of freedom is to consider gauge symmetry. Gauge symmetry is when we transform the underlying base field without any change in physical laws. This is slightly different from transforming the coordinate system by an element in the Poincaré group and leaving the natural field unchanged. For example, in a Lorentz transformation, we change the coordinates, but the natural field <em>A</em> itself is a tensor, and is completely unchanged. By definition, any Lagrangian that is a scalar will remain invariant.</p>
+<p><br/></p>
+<p>Simple particles occur as excitations that respect the symmetry of the Poincaré group. Does this mean that, however, that a group of physically symmetric and elegant particles form a coherent system? Of course not. You can go the other way. Take a billiard table. With deterministic rules, you can easily create a disordered system. This is also evident in simple mechanics puzzles such as the three-legged pendulum. </p>
+<p><br/></p>
+<h3>Caught in the middle between Order and Disorder</h3>
+<p>The first section references how macroscopic physics is independent of disordered microscopic parts. However, this independence is not always the case - it is not easy to simplify certain classes of disordered systems. For example, take a simple lattice of atoms whose interaction strength is given by a number J. We can already ask many interesting questions. For example, suppose that the number J was not fixed — but random. What would the ‘minimal’ energy states look like - it is not apparent, in fact it is not even clear if there is a unique ‘rest’ state in these types of systems. This question motivates Parisi’s seminal work of symmetry breaking in spin glass models. </p>
+<p><br/></p>
+<p>There are also complex systems that exhibit common patterns across different areas of physics, but only near ‘critical points’ where they transition between states. The study of these critical phenomena is known as statistical field theory [2]. The most straightforward place to start is the workings of a magnet. Much like water can flip between a solid and a liquid state, Pierre Curie (who won the Nobel Prize in 1903) also showed that a <em>magnet</em> could undergo a similar type of phase transition. When a naturally magnetic material is sufficiently hot due to the disordered nature of the atoms, it can only become magnetic with the aid of an applied magnetic field. The spins of the electrons responsible for the magnetic qualities of the material are naturally aligned when the temperature is below the <em>Curie temperature</em>. They only align when we are above this temperature if a magnetic field is applied.</p>
+<p><br/></p>
+<p>So, the question is, what are the dynamics of the material when the temperature is <em>close</em> to the Curie temperature <em>Tc</em> ? The natural thing to look at is the material’s magnetisation and how it varies with temperature. Magnetisation is an average measure of how magnetic dipoles in a material line up. The magnetisation is denoted by the symbol <em>m</em>. There are several physical models that statistical field theory uses to predict the relationship. One such model, called the <strong>mean-field theory </strong>model [1], indicates that the relationship between magnetisation and temperature follows a square root law when we are close to the Curie temperature. </p>
+<p><br/></p>
+<p>Something even more mysterious about critical exponents is that similar exponents occur in vastly different systems. Experimentally and theoretically, it appears that these magic numbers, like the number <em>β</em> above, are <strong>seemingly independent of the actual specifics of the systems themselves</strong>. We believe this is true because there are a few examples in nature where seemingly unrelated systems have the same critical exponents.</p>
+<p><br/></p>
+<p>For example, when a liquid transforms into a gas, the Van Der Waals equation models the change of the density as a function of the temperature by the following power law:
+The critical exponent <em>β</em> =0.5 is the same as the one that links magnetisation and temperature! So here, we have two seemingly unrelated systems connected because they share the same critical exponent.</p>
+<p><br/></p>
+<h3><strong>When smoothing fails: build a quantum computer</strong></h3>
+<p>Nature behaves quantum-mechanically at small scales, and physicists wish to understand quantum states of matter better in the rare cases that they don’t wash out into something simple to understand — these are weird states of matter where atoms are strongly correlated. Our best shot is to build a program that simulates its properties with a computer. However, this is slow, difficult and inaccurate — the entangled and correlated nature of atoms in quantum matter make it difficult to create an accurate simulation. This makes it hard to get a good grasp of underlying patterns in their behaviour. Furthermore, it is counter-intuitive to simulate complex processes using a classical computer. Therefore, it is interesting to build programmable systems that are quantum in nature. Moreover, it makes our ‘computer’ closer to the systems we are trying to model. For example, is there a way to program an array of atoms that behave quantum mechanically and then observe what happens? Many approaches have been tried and tested, ranging from trapped ions and superconducting qubits.</p>
+<p><br/></p>
+<p><br/></p>
+<hr />
+<h3>A Duality Between Order and Disorder</h3>
+<p>To sum up </p>
+<ol>
+<li>
+<p>In the micro-scale, we see that systems are disordered.</p>
+</li>
+<li>
+<p>If you zoom out, these systems tend look ordered and deterministic, hence we have one side of a duality where disorder -&gt; order.</p>
+</li>
+</ol>
+<p>3</p>
+<p>Examples:</p>
+<ul>
+<li>
+<p>In renormalisation, the Casimir effect is a force that is independent of how you model the chaotic phenomena of particles.</p>
+</li>
+<li>
+<p>If you take the heights of people, heights are highly sensitive to genetic and physical conditions, but in the end it washes out to a normal distribution</p>
+</li>
+</ul>
+<p>Then, I want to emphasise that you’re building on this type of idea and expanding it to a range of different subjects.</p>
+<p><br/></p>
+<p>Now, if you’re unlucky, there may not be such a model </p>
+<p>One question </p>
+<p><br/></p>
+<h3>The British Museum</h3>
+<p>I’ve only begun to scratch the surface of this </p>
+<p><br/></p>
+<h3>References</h3>
+<p>[1] <a href="https://www.cantorsparadise.com/measuring-disorder-and-complexity-29ff068cf20c">https://www.cantorsparadise.com/measuring-disorder-and-complexity-29ff068cf20c</a></p>
+<p>[2] Nigel Goldenfeld, Phase Transitions, and the Renormalization Group, 1992</p>
+<p>[3] <a href="https://www.cantorsparadise.com/the-baffling-spin-glass-model-8307ff032d46">https://www.cantorsparadise.com/the-baffling-spin-glass-model-8307ff032d46</a></p>
+<p><br/></p>

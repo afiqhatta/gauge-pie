@@ -1,0 +1,102 @@
+<!doctype html>
+
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+
+  <script src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
+  <script src="js/scripts.js"></script>
+  <link rel="stylesheet" href="static/styles.css?v=1.0">
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+  <script>
+    MathJax = {
+     tex: {
+      inlineMath: [['$', '$'], ['\\(', '\\)']]
+     }
+    };
+    window.MathJax = {
+      loader: {load: ['[tex]/physics']},
+      tex: {packages: {'[+]': ['physics']}}
+    };
+  </script>
+  <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+  <meta charset="utf-8">
+  
+</head>
+
+<body>
+  <div class="mast">
+    <h3>Afiq Hatta's blog</h3> 
+  </div> 
+  <div class="sidebar">
+    <a href="index.html">Home</a>
+    <a href="writing.html">Writing</a> 
+    <a href="notes.html">Notes</a> 
+    <a href="about.html">About</a> 
+  </div>
+  <div class="main">
+    <div class="title">
+      <h1> 
+Order-and-Chaos-in-Planetary-Systems-ec24c8fca71042eab758ce1f4065f1a7
+ 
+<hr class="thin">
+</h1>
+    </div>
+     
+<p>For those who follow my writing, you probably know that I’ve written about the theme of chaos and symmetry in physics many times. I wanted to write a collection of expository articles to highlight work in science that highlights this relationship. I wrote briefly about Denis Noble’s ideas on biology a few weeks ago. Today, I read about some of the fascinating work on planetary dynamics that Terquem has written about with John Papaloizou. In particular, I wanted to take a look at the paper <em>“First-order mean motion resonances in two-planet systems: general analysis and observed systems”. </em>It is a phenomenon that I think represents the interplay of order and disorder quite beautifully [3]. I wanted to write this article to discuss what I learned from planetary dynamics through this lens, reading some of the first few pages.</p>
+<p><br/></p>
+<hr />
+<h3>Mean Motion Resonances in Planets</h3>
+<p>One of the things that Professor Terquem studies are systems of planets that have a ‘clean’ ratio of time of orbit. In particular, the periods of the orbit of some planets around a central body have ratios that are small integers. For example, Terquem and many others reference two of Saturn’s moons - Enceladus and Dione. It takes Dione approximately twice as long to orbit Saturn than Enceladus. In this case, the ratio would be 2:1. I found this remarkable because I wouldn’t expect a violent and chaotic process like planet formation to lead to a finely tuned result. Even though I am not an astrophysicist myself, I was surprised when I first read about this. The only thing that rang a bell was fractional and integer quantised values in the Hall effects from quantum mechanics. Even then, planetary systems are not quantum mechanical! </p>
+<p><br/></p>
+<p>I read the paper’s abstract [3], and some questions came to mind about how this resonance might take shape. Imagine planets orbiting a star in the early stages of their creation. Sometimes, there is also a disk of gas orbiting the star itself, with the planets embedded inside - kind of like chocolate chunks in a cookie. By Newton’s third law, this disk of gas also exerts a force on the planets. These forces also cause the orbits of these planets to alter over time. The planets might move inward, towards the star, or move outward. During this process, it appears that planets get ‘locked in’ to these nice ratios of orbit periods. When and where does this resonance occur? Does it happen only in restricted areas of the disc? (Spoiler alert: after reading a bit more, these questions and more happen to be discussed in the paper, and I will write about it in a future post!) </p>
+<p><br/></p>
+<p>True to the idea of order and disorder, the reverse can also happen. On the flip side, a system in this satisfying resonance can destabilise. This destabilisation is also an interesting question. If a system is in mean resonance, what kinds of factors can cause the planets to go out of sync? Are there any nice mathematical expressions that allow us to predict how quickly they can go out of sync? What regions of orbit in the disc does this destabilisation occur? Again, many exciting models are put forward in [3], and I wanted to write about them in a few posts.</p>
+<p><br/></p>
+<p>There are also practical ways to observe this phenomenon. Kepler is a space telescope that uses photometry to capture the dynamics of planetary systems. The telescope works by looking at the slight dimming of stars when a planet orbits in front of them. In [2], a statistical analysis of Kepler data revealed that a small, significant portion of planets in the data had mean motion resonance. In [3], Caroline Terquem and John C. B. Papaloizou describe the dynamics of two-planet systems with an orbit period ratio of (q+1): q. They mention that the planets that Kepler captures tend to have shorter period orbits due to observational bias. These planets start further away from the star, and as they go in, they lock into this resonant pattern. </p>
+<p><br/></p>
+<h3>Governing equations</h3>
+<p>In [3], some nice properties like the eccentricity of the orbit of planets in mean motion resonance (MRR) are calculated. Eccentricity measures how squashed an orbit is. An eccentricity of zero represents a circle, and an eccentricity close to 1 means a trajectory that looks like an oval. When a system is in MRR, the dynamics are mainly governed by ‘perturbing functions’. For example, consider a system with one large mass (the central star) and two satellite planets. A disturbing function captures the interaction of one planet to the other, whilst the central potential captures the interaction with the largest body (the star). </p>
+<p>[image is not supported]</p>
+<p><br/></p>
+<p>In this case, the acceleration of the planet M is given by the grad of a potential. The potential can be split into two parts: central and disturbing. The disturbing part contains the interactions between the two planets themselves. For example, the planet m has the following equations: </p>
+<p><img alt="alt text" src="static/Order-and-Chaos-in-Planetary-Systems-ec24c8fca71042eab758ce1f4065f1a7_file_0.png" /></p>
+<p>When a system is in MRR, its motion is primarily described by the disturbing function. This partition makes things easier to solve, and in [3], equilibrium values of the eccentricity are given. An equilibrium value is a value that is associated with a system that doesn’t change.   </p>
+<p><br/></p>
+<p>One of the many things she studies is how planets move in and out of ‘mean motion resonance’. Consider two planets and a large star in a mini solar system. </p>
+<hr />
+<p><br/></p>
+<h3>More On The Math</h3>
+<p>So, we’ve learned that mean motion resonance is when the time it takes for one planet's orbit is in a small, integer ratio to another planet. In this section, I wanted to explain some of the math presented in [3]. How do we even begin to model a system with one star and two planets? There are gravitational forces between these objects, so we expect that any equations we come up with will be tricky to solve. To start from the first principles, we know that the motion of the two orbiting plants come from taking the grad of the potential. In this case, the acceleration of the planet M is given by the grad of a potential. The potential can be split into two parts: central and disturbing. The disturbing part contains the interactions between the two planets themselves, and the central part models the interaction with the star. The central potential is easy, so let’s write that down first. </p>
+<p><br/></p>
+<p>The central potential below is the first planet’s potential and its interaction with the star. The radius r represents the distance of the small planet to the central star. <em>m</em> is the mass of the planet itself. M_star is the mass of the star. G is the gravitational constant. This central potential is what you’d expect to find in a typical problem involving the gravity of two massive bodies. </p>
+<p><img alt="alt text" src="static/Order-and-Chaos-in-Planetary-Systems-ec24c8fca71042eab758ce1f4065f1a7_file_1.png" /></p>
+<p>The disturbing function is a little tricky, and it’s coordinate dependent. It captures the interaction between the two planets themselves. For the planet m, the disturbing function is </p>
+<p><img alt="alt text" src="static/Order-and-Chaos-in-Planetary-Systems-ec24c8fca71042eab758ce1f4065f1a7_file_2.png" /></p>
+<p>The first term encodes the interaction of the inner planet with the outer planet. As you can see, the radius in the denominator is the distance between the inner planet and the outer planet. The second term is coordinate dependent. The first term is the direct term, and the second is the indirect term. The central and disturbing potentials are entirely similar for the second planet, except with the terms switched. </p>
+<p><br/></p>
+<hr />
+<h3>Finding equations of motion</h3>
+<p>When things get complicated, it helps break things down into smaller parts. We break down the disturbing function into pieces that we already understand about orbits with only two bodies. An excellent slideshow captures some of the main points in orbital dynamics [2]. In orbit, there are a few terms that characterise its shape. In the diagram below, <em>a</em> represents the semi-major axis, e represents the eccentricity. The two opposite points on the wings are called the apocentre and the pericentre. The omega with a bar represents the angle between the pericentre and the reference direction of the planet. </p>
+<p><br/></p>
+<p>[image is not supported]</p>
+<p><br/></p>
+<p>From these geometrical characteristics, we have a few derived quantities. The mean motion is the number of revolutions. It is the primary quantity of study when talking about mean motion resonances. Tau is the time where the orbiting planet hits the pericentre, and from this, we can derive two quantities called the mean longitude and the mean longitude. </p>
+<p><img alt="alt text" src="static/Order-and-Chaos-in-Planetary-Systems-ec24c8fca71042eab758ce1f4065f1a7_file_3.png" /></p>
+<p>It turns out that the disturbing functions can be written as a big Taylor expansion that is a function of terms involving the semi-major axes, eccentricity, reference angle and mean longitude. Resonant terms are terms that involve angular quantities, like the mean longitude. Secular terms are slowly varying and don’t depend on the mean longitude. Schematically, we have that </p>
+<p><br/></p>
+<p><img alt="alt text" src="static/Order-and-Chaos-in-Planetary-Systems-ec24c8fca71042eab758ce1f4065f1a7_file_4.png" /></p>
+<p>There is an essential mathematical quantity in orbital mechanics called eccentricity. In [3], some nice properties like the eccentricity of the orbit of planets in mean motion resonance (MRR) are calculated. Eccentricity measures how squashed an orbit is. An eccentricity of zero represents a circle, and an eccentricity close to 1 means the trajectory that looks like an oval. The eccentricity of an orbit can also be larger than one. If this is the case, the orbit is no longer closed and is a parabola instead - like a comet swerving around a plant once. </p>
+<p><br/></p>
+<hr />
+<p><br/></p>
+<h3>References</h3>
+<p>[1] Unpublished Synopsis of Talks for the British Museum </p>
+<p>[2] Lissauer, J. J., “Architecture and Dynamics of Kepler’s Candidate Multiple Transiting Planet Systems”, <i>The Astrophysical Journal Supplement Series</i>, vol. 197, no. 1, 2011. doi:10.1088/0067-0049/197/1/8.</p>
+<p>[3] Caroline Terquem, John C B Papaloizou, First-order mean motion resonances in two-planet systems: general analysis and observed systems, <em>Monthly Notices of the Royal Astronomical Society</em>, Volume 482, Issue 1, January 2019, Pages 530–549, <a href="https://doi.org/10.1093/mnras/sty2693">https://doi.org/10.1093/mnras/sty2693</a></p>
+<p><br/></p>
+
+  </div> 
+</body>
+</html>
