@@ -1,0 +1,119 @@
+<!doctype html>
+
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+
+  <script src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
+  <script src="js/scripts.js"></script>
+  <link rel="stylesheet" href="static/styles.css?v=1.0">
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+  <script>
+    MathJax = {
+     tex: {
+      inlineMath: [['$', '$'], ['\\(', '\\)']]
+     }
+    };
+    window.MathJax = {
+      loader: {load: ['[tex]/physics']},
+      tex: {packages: {'[+]': ['physics']}}
+    };
+  </script>
+  <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+  <meta charset="utf-8">
+  
+</head>
+
+<body>
+  <div class="mast">
+    <h3>Afiq Hatta's blog</h3> 
+  </div> 
+  <div class="sidebar">
+    <a href="index.html">Home</a>
+    <a href="writing.html">Writing</a> 
+    <a href="notes.html">Notes</a> 
+    <a href="about.html">About</a> 
+  </div>
+  <div class="main">
+    <div class="title">
+      <h1> 
+Ideas-in-Topology-and-Physics-94d54b66bad344e8b66bb017be77e634
+ 
+<hr class="thin">
+</h1>
+    </div>
+     
+<p>Why we need holes for monopoles to exist. </p>
+<p>Interesting topics </p>
+<ul>
+<li>
+<p>Quantum anomalies </p>
+</li>
+<li>
+<p>Magnetic monopoles </p>
+</li>
+</ul>
+<p><br/></p>
+<p><br/></p>
+<h3>Magnetic Monopoles</h3>
+<p>In this post, I wanted to write about how the shapes of different spaces can dictate what kind of physical objects can exist. In particular, I wanted to talk about how we can construct magnetic monopoles in the correct geometric setting. In regular, classical electromagnetism, we refer to Maxwell’s equations to tell us what is, and what is not, physically possible. Owing to the fact that the divergence of a magnetic field is necessarily zero, a magnetic monopole cannot exist. The divergence of a magnetic field is what we get when we add up the partial derivative of the x-component with respect to x, the partial derivative of the y-component with respect to y, and so on. </p>
+<p><img alt="alt text" src="static/Ideas-in-Topology-and-Physics-94d54b66bad344e8b66bb017be77e634_file_0.png" /></p>
+<p>Why is this true? A monopole requires non-zero flux coming out of it - it acts like a source. This can be shown fairly easily by considering what kind of flux a magnetic monopole would need to give out. For a monopole to exist, it needs to be a ‘source’, such that the divergence of the field is non-zero. In other words, with stokes theorem we need </p>
+<p><img alt="alt text" src="static/Ideas-in-Topology-and-Physics-94d54b66bad344e8b66bb017be77e634_file_1.png" /></p>
+<p>Why does the divergence of the magnetic field vanish? This is a mathematical consequence of how we can construct the gauge potential. However, this law can be circumvented provided we work on non-standard topology. To construct such a monopole, we need to consider a slightly different space. Previously, we were just working with standard Euclidean space R^3 Consider a magnetic monopole, and the space R^3 - {0}. Topologically, this space is homotopically equivalent to the sphere embedded in three dimensions. </p>
+<p><img alt="alt text" src="static/Ideas-in-Topology-and-Physics-94d54b66bad344e8b66bb017be77e634_file_2.png" /></p>
+<hr />
+<h3>Stitching together two Gauge fields</h3>
+<p>Electromagnetism is a theory with U(1) gauge symmetry. This means that the physical theory doesn’t change up to transformations that look like  The homotopy of this space is isomorphic to S^2, and we want to attach a U(1) bundle to it.  We can construct a fibre bundle to be non-trivial, so that it doesn’t just look like the cross product </p>
+<p><img alt="alt text" src="static/Ideas-in-Topology-and-Physics-94d54b66bad344e8b66bb017be77e634_file_3.png" /></p>
+<p>It is possible to construct a non-trivial fibre bundle, since S_2 is non-contractible. To do this, we define two separate gauge fields on the North and South hemispheres. S_2 is covered by two separate hemispheres, which we can make overlapping by slightly extending the equators. On the intersection, we can define what we call a transition function, which has values on the equator. </p>
+<p><img alt="alt text" src="static/Ideas-in-Topology-and-Physics-94d54b66bad344e8b66bb017be77e634_file_4.png" /></p>
+<p>On these sections, we can define local gauge potentials. Following the Wu-Yang forms, we need to chose a set of gauge potentials that also give us the magnetic monopole. Through a tedious calculation, the reader can verify that the below choice of gauge potential works </p>
+<p><img alt="alt text" src="static/Ideas-in-Topology-and-Physics-94d54b66bad344e8b66bb017be77e634_file_5.png" /></p>
+<p>[image is not supported]</p>
+<p>On the intersection, the gauge potentials themselves are related to each other via a transition function. This transition function needs to be well defined, in the sense that a quantisation needs to be fulfilled. Let <em>t</em>NS be the transition function defined on the equator <em>U</em>N ∩ <em>U</em>S. Then, we require that </p>
+<p><img alt="alt text" src="static/Ideas-in-Topology-and-Physics-94d54b66bad344e8b66bb017be77e634_file_6.png" /></p>
+<p>The transition function therefore has the general form below, for it to be a member of U(1). The form of the transition function is that of a phase, much like the phases that could be applied to a wave function. The relation between the North and South hemispheres gives us a clue as to how to construct the exact form of the transition function.  Substituting in the form of the vector potentials, we first make the ansatz that the transition function takes the form of the phase. The relation that we find is that </p>
+<p><img alt="alt text" src="static/Ideas-in-Topology-and-Physics-94d54b66bad344e8b66bb017be77e634_file_7.png" /></p>
+<p>However, for t to be well defined, we require that the function remain the same up to equivalence if we were to change phi by 2 pi. So, this gives us a quantisation condition </p>
+<p><img alt="alt text" src="static/Ideas-in-Topology-and-Physics-94d54b66bad344e8b66bb017be77e634_file_8.png" /></p>
+<hr />
+<p><br/></p>
+<h3>Chern-Simons Theories</h3>
+<p>In the previous posts, I’ve discussed the concept of symmetry in physics. One particular group of symmetries that is easy to start with is the U(1) group, whose elements consists of complex numbers with unit length. The manifold that is associated with the U(1) group is the unit circle, which makes it a Lie group since the unit circle locally looks like one-dimensional Euclidean space. The most obvious theories that stem from a U(1) symmetry are electromagnetism and quantum electrodynamics. Among U(1) gauge theories, there are other interesting models that we can explore. All we really need is for the Lagrangian of the gauge potential A to exhibit some degree of invariance one way or another. Along the way, we might need to impose constraints. </p>
+<p><br/></p>
+<p>The gauge transformations in U(1) are shown below. The vector A is a one-form, and is what we call the gauge potential. The wavefunction on the right transforms as if it is multiplied by a phase. </p>
+<p><img alt="alt text" src="static/Ideas-in-Topology-and-Physics-94d54b66bad344e8b66bb017be77e634_file_9.png" /></p>
+<p>Recall that the electromagnetic tensor is constructed from the gauge potential my taking the exterior derivative below. In general, this object is called a ‘field strength’ tensor, and its importance is not exclusive to just electromagnetic theory on its own. </p>
+<p><img alt="alt text" src="static/Ideas-in-Topology-and-Physics-94d54b66bad344e8b66bb017be77e634_file_10.png" /></p>
+<p>The  gauge potential is a one-form, which means that we can write it as the linear combination of differential forms. In components, we have that the term for the gauge potential. This is shown below  </p>
+<p><img alt="alt text" src="static/Ideas-in-Topology-and-Physics-94d54b66bad344e8b66bb017be77e634_file_11.png" /></p>
+<p>It’s easy to show that the electromagnetic tensor is invariant under U(1) gauge transformations. In previous posts, I’ve discussed the Lagrangian for electromagnetism that gives rise to Maxwell’s equations. But, this is by no means the only model we can construct. One of the most interesting forms is that of the Chern Simons term, whose Lagrangian depends not on the electromagnetic tensor, but the gauge potential itself. Chern-Simons forms have a wide range of applicability in everything from topological quantum field theory to condensed matter physics. </p>
+<p><br/></p>
+<hr />
+<h3>What does the Chern-Simons form look like?</h3>
+<p>To simplify our analysis, we will work in two spatial dimensions and one time dimension. </p>
+<p><img alt="alt text" src="static/Ideas-in-Topology-and-Physics-94d54b66bad344e8b66bb017be77e634_file_12.png" /></p>
+<p>In the terms above, the left expression is the Maxwell term, which we all know and love. Notice that it has no dependence on the gauge potential A, which means that the term is already gauge invariant out-of-the-box. The expression on the right is the Chern Simons term, which by contract does indeed depend on the gauge potential term A. This implies that in general, we wouldn’t expect it to be gauge invariant. What is also interesting is that there is a number <strong>k</strong> attached as the coefficient. As we will see later, this number <strong>k</strong> has to be quantised. </p>
+<p><br/></p>
+<p>To see why this is, we need to consider a gauge transformation of L_CS and see what happens. Whilst I won’t go into too much technical detail, we will start by considering a gauge transformation that looks like winding. To do this, we consider a gauge transformation that just looks like the time component is winding round a circle. Why is it possible to make time periodic? We can Wick rotate and re-parametrise time  this way. </p>
+<p><img alt="alt text" src="static/Ideas-in-Topology-and-Physics-94d54b66bad344e8b66bb017be77e634_file_13.png" /></p>
+<p>With this gauge transformation, it implies that the A_0 component of the gauge potential is actually thought to be periodic itself. An explicit computation of the action under this gauge transformation shows that it translates by 2 pi multiplied by an integer quantity - specifically the level itself. One of the things that we need to do in this calculation (although I will not do it here), is to calculate a minimal flux in a small region, that we would get from this Chern-Simons term. This is called flux quantisation, and can be examined by what happens when we integrate charge around a magnetic monopole. Considering this small flux, we get to the result that the Chern-Simons term on this small region evaluates to the expression below </p>
+<p><img alt="alt text" src="static/Ideas-in-Topology-and-Physics-94d54b66bad344e8b66bb017be77e634_file_14.png" /></p>
+<p>Now, it is the partition function that is physical, and hence all we need is that the level of a Chern-Simons term needs to be an integer. </p>
+<p><img alt="alt text" src="static/Ideas-in-Topology-and-Physics-94d54b66bad344e8b66bb017be77e634_file_15.png" /></p>
+<p>Now, the useful thing about the Chern-Simons term is that instead of writing it as a term on a 3 dimensions, we can write it as a boundary term of a space in 4 dimensions. The term on the left is the original is the Chern Simons term on the 3d space. </p>
+<p><br/></p>
+<p><br/></p>
+<p><br/></p>
+<h3>Yang-Mills Theory</h3>
+<p>Yang-Mills theory is an SU(2) gauge theory. SU(2) is the Lie group of special unitary matrices of dimension two. If we attach SU(2) on the base space R^4, then we have a fibre bundle. R^4 is contractible, which implies the existence of just one gauge potential  - not two like in the case of magnetic monopoles. </p>
+<p>SU(2) is generated by 3 elements, and so we can write our single gauge potential in the form </p>
+<p><img alt="alt text" src="static/Ideas-in-Topology-and-Physics-94d54b66bad344e8b66bb017be77e634_file_16.png" /></p>
+<p>From this, we can define the field strength tensor, as well as the Yang Mills action. </p>
+<p><br/></p>
+
+  </div> 
+</body>
+</html>
